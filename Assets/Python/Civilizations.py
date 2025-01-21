@@ -1433,10 +1433,10 @@ dExtraAIUnits = CivDict({
 		iShock: 2,
 	},
 	iTimurids: {
-		iWork: 1,
-		iCityAttack: 4,
-		iHarass: 4,
-		iSiege: 7,
+		iWork: 2,
+		iCityAttack: 6,
+		iHarass: 6,
+		iSiege: 8,
 		iMissionary: 1,
 	},
 	iAztecs: {
@@ -1626,7 +1626,7 @@ dSpecificAIStartingUnits = CivDict({
 		iTagmata: 4,
 	},
 	iTimurids: {
-		iKeshik: 10,
+		iKeshik: 12,
 	}
 }, {})
 
