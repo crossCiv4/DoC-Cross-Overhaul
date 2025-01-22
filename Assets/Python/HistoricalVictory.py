@@ -173,7 +173,7 @@ dGoals = {
 		All(
 			Wonders(iGreatSphinx, iPyramids),
 			CultureAmount(500),
-			by=-900,
+			by=-1500,
 		),
 		Control(
 			plots.region(rNubia).named(NUBIA),

@@ -467,7 +467,7 @@ minor_cities = [
 	#MinorCity(-2050, iIndependent, (118, 49), "Sanxingdui", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1}, adjective="TXT_KEY_ADJECTIVE_SHU"),
 	#MinorCity(-1830, iBarbarian, (124, 52), "Daliang", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1}, adjective="TXT_KEY_ADJECTIVE_WEI"),
 	MinorCity(-1830, iBarbarian, (126, 53), "Linzi", iPopulation=1, iCiv=iChina, units={iBase: 2}, adjective="TXT_KEY_ADJECTIVE_QI"),
-	MinorCity(-2200, iIndependent2, tJerusalem, "Yerushalayim", iPopulation=1, iCiv=iBabylonia, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_ISRAELITE"),
+	MinorCity(-2200, iBarbarian, tJerusalem, "Yerushalayim", iPopulation=1, iCiv=iBabylonia, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_ISRAELITE"),
 	MinorCity(-2000, iIndependent, (85, 47), "Sur", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1, iCounter: 1}, adjective="TXT_KEY_CIV_PHOENICIA_ADJECTIVE"),
 	MinorCity(-1200, iBarbarian, (72, 55), "Daorson", iPopulation=2, iCiv=iMinoans, units={iAttack: 2}, adjective="TXT_KEY_ADJECTIVE_ILLYRIAN"),
 	MinorCity(-1200, iIndependent2, (89, 53), "Tushpa", iPopulation=2, iCiv=iHittites, units={iDefend: 3, iCounter: 2}, adjective="TXT_KEY_ADJECTIVE_ARMENIAN"),
