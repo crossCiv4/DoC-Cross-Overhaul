@@ -842,7 +842,7 @@ CIVICS
 	* Egalitarianism (Sociology, high): +2 research per specialist, double artist slots, cannot use slaves
 * Economy
 	* Reciprocity (low)
-	* Redistribution (Arithmetics, medium): +25% food in capital, -25% trade route yield, double production for Granary
+	* Redistribution (Arithmetics, high): +25% food in capital, -50% trade route yield, double production for Granary
 	* Merchant Trade (Currency, low): +1 trade route, +1 commerce from Merchant, +1 happiness from Oasis
 	* Regulated Trade (Guilds, high): +50% commerce in capital, +1 commerce from Workshop, Plantation, Slave Plantation, double production for Customs House
 	* Free Enterprise (Economics, low): +50% corporation commerce, +50% trade route yield, double merchant slots

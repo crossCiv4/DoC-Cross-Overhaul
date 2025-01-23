@@ -686,11 +686,11 @@
 			<TechPrereq>TECH_ARITHMETICS</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Redistribution.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
-			<Upkeep>UPKEEP_MEDIUM</Upkeep>
+			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<TradeYieldModifiers>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>-25</iYield>
+				<iYield>-50</iYield>
 			</TradeYieldModifiers>
 			<CapitalYieldModifiers>
 				<iYield>25</iYield>

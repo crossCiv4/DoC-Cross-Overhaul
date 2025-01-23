@@ -250,6 +250,7 @@ void CvPlayerAI::AI_reset(bool bConstructor)
 		m_aiAverageCommerceExchange[iI] = 0;
 	}
 	m_iAverageGreatPeopleMultiplier = 0;
+	m_iAverageTradeMultiplier = 0; // Leoreth
 	m_iAveragesCacheTurn = -1;
 
 	m_iStrategyHash = 0;
@@ -10190,6 +10191,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 
 	bool bWarPlan;
 	int iConnectedForeignCities;
+	int iTradeCommerceModifier;
 	int iTotalReligonCount;
 	int iHighestReligionCount;
 	int iWarmongerPercent;
@@ -10300,10 +10302,13 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		}
 	}
 
-	iValue += ((kCivic.getTradeRoutes() * std::max(0, iConnectedForeignCities - getNumCities() * 3) * 8) + (getNumCities() * 2));
+	iTradeCommerceModifier = AI_averageTradeMultiplier() * std::max(AI_averageCommerceMultiplier(COMMERCE_GOLD), AI_averageCommerceMultiplier(COMMERCE_RESEARCH)) * AI_yieldWeight(YIELD_COMMERCE) / 100;
+
+	//iValue += ((kCivic.getTradeRoutes() * std::max(0, iConnectedForeignCities - getNumCities() * 3) * 8) + (getNumCities() * 2));
+	iValue += kCivic.getTradeRoutes() * std::min(getNumCities(), iConnectedForeignCities) * iTradeCommerceModifier * 6 / 100 / 100;
 	iValue += -((kCivic.isNoForeignTrade()) ? (iConnectedForeignCities * /*3*/ 4) : 0);
 	iValue -= kCivic.isNoForeignTradeModifier() ? (iConnectedForeignCities * 3 / 2) : 0; // Leoreth
-	iValue += (100 + kCivic.getDefensivePactTradeModifier()) * iConnectedForeignCities * AI_yieldWeight(YIELD_COMMERCE) * 2 / 100; // Leoreth
+	iValue += (100 + kCivic.getDefensivePactTradeModifier()) * std::min(getNumCities(), iConnectedForeignCities) * iTradeCommerceModifier * 2 / 100 / 100 / 100; // Leoreth
 	if (kCivic.isNoCorporations())
 	{
 		iValue -= countHeadquarters() * (40 + 3 * getNumCities());
@@ -14467,6 +14472,7 @@ void CvPlayerAI::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iStrategyHashCacheTurn);
 	pStream->Read(&m_iAveragesCacheTurn);
 	pStream->Read(&m_iAverageGreatPeopleMultiplier);
+	pStream->Read(&m_iAverageTradeMultiplier); // Leoreth
 
 	pStream->Read(NUM_YIELD_TYPES, m_aiAverageYieldMultiplier);
 	pStream->Read(NUM_COMMERCE_TYPES, m_aiAverageCommerceMultiplier);
@@ -14549,6 +14555,7 @@ void CvPlayerAI::write(FDataStreamBase* pStream)
 	pStream->Write(m_iStrategyHashCacheTurn);
 	pStream->Write(m_iAveragesCacheTurn);
 	pStream->Write(m_iAverageGreatPeopleMultiplier);
+	pStream->Write(m_iAverageTradeMultiplier); // Leoreth
 
 	pStream->Write(NUM_YIELD_TYPES, m_aiAverageYieldMultiplier);
 	pStream->Write(NUM_COMMERCE_TYPES, m_aiAverageCommerceMultiplier);
@@ -16847,6 +16854,15 @@ int CvPlayerAI::AI_averageGreatPeopleMultiplier() const
 	return m_iAverageGreatPeopleMultiplier;
 }
 
+int CvPlayerAI::AI_averageTradeMultiplier() const
+{
+	if (m_iAveragesCacheTurn != GC.getGameINLINE().getGameTurn())
+	{
+		AI_calculateAverages();
+	}
+	return m_iAverageTradeMultiplier;
+}
+
 //"100 eCommerce is worth (return) raw YIELD_COMMERCE
 int CvPlayerAI::AI_averageCommerceExchange(CommerceTypes eCommerce) const
 {
@@ -16879,6 +16895,7 @@ void CvPlayerAI::AI_calculateAverages() const
 		m_aiAverageCommerceMultiplier[iI] = 0;
 	}
 	m_iAverageGreatPeopleMultiplier = 0;
+	m_iAverageTradeMultiplier = 0;
 
 	iTotalPopulation = 0;
 
@@ -16896,6 +16913,7 @@ void CvPlayerAI::AI_calculateAverages() const
 			m_aiAverageCommerceMultiplier[iI] += iPopulation * pLoopCity->getTotalCommerceRateModifier((CommerceTypes)iI);
 		}
 		m_iAverageGreatPeopleMultiplier += iPopulation * pLoopCity->getTotalGreatPeopleRateModifier();
+		m_iAverageTradeMultiplier += iPopulation * (pLoopCity->getTradeRouteModifier() + pLoopCity->getForeignTradeRouteModifier());
 	}
 
 
@@ -16913,6 +16931,8 @@ void CvPlayerAI::AI_calculateAverages() const
 		}
 		m_iAverageGreatPeopleMultiplier /= iTotalPopulation;
 		FAssert(m_iAverageGreatPeopleMultiplier > 0);
+		m_iAverageTradeMultiplier /= iTotalPopulation;
+		FAssert(m_iAverageTradeMultiplier > 0);
 	}
 	else
 	{
@@ -16925,6 +16945,7 @@ void CvPlayerAI::AI_calculateAverages() const
 			m_aiAverageCommerceMultiplier[iI] = 100;
 		}
 		m_iAverageGreatPeopleMultiplier = 100;
+		m_iAverageTradeMultiplier = 100;
 	}
 
 
