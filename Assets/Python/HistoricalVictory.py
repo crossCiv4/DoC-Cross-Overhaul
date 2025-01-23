@@ -182,8 +182,8 @@ dGoals = {
 		),
 		All(
 			Wonders(iGreatLibrary, iGreatLighthouse),
-			CultureAmount(5000),
-			by=-100,
+			CultureAmount(6000),
+			by=-200,
 		),
 	),
 	iBabylonia: (
