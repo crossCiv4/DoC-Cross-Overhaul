@@ -307,7 +307,7 @@ dConquestChecker = {
 	tConquestRomeCelts[0]: lambda tConquest: checkConquest(tConquest, tDummyConquestRomeHoldingRome),
 	tConquestMongolsBaghdad[0]: lambda tConquest: checkConquest(tConquest, tConquestMongolsPersia),
 	tConquestMacedonPunjab[0]: lambda tConquest: checkConquest(tConquest, tConquestMacedonPersia),
-	tConquestAssyriaEgypt: lambda tConquest: checkConquest(tConquest, tConquestAssyriaLevant),
+	tConquestAssyriaEgypt[0]: lambda tConquest: checkConquest(tConquest, tConquestAssyriaLevant),
 	tConquestSpainMoors[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
 	tConquestRomeDacia[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
 }
