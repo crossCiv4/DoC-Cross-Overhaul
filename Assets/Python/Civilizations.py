@@ -834,7 +834,7 @@ dStartingUnits = CivDict({
 	iParthia : {
 		iSettle: 2,
 		iWork: 2,
-		iDefend: 4,
+		iDefend: 5,
 		iAttack: 2,
 		iShock: 3,
 		iSiege: 2,
@@ -1308,9 +1308,9 @@ dStartingUnits = CivDict({
 
 dExtraAIUnits = CivDict({
 	iAssyria : {
-		iCounter: 2,
+		#iCounter: 2,
 		iDefend: 2,
-		iSiege: 3,
+		iSiege: 1,
 	},
 	iHittites : {
 		iAttack: 1,
@@ -1353,7 +1353,7 @@ dExtraAIUnits = CivDict({
 		iMissionary: 1,
 	},
 	iKushans: {
-		iShockCity: 3,
+		iShockCity: 2,
 		iCityAttack: 2,
 		iSiege: 3,
 	},

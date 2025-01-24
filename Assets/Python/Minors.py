@@ -461,14 +461,14 @@ class Barbarians(object):
 
 
 minor_cities = [
-	MinorCity(-2800, iIndependent2, tSusa, "Shushan", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_ELAMITE"),
+	MinorCity(-2900, iIndependent2, tSusa, "Shushan", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_ELAMITE"),
 	# MinorCity(-3000, iIndependent, (90, 45), "Unug", iPopulation=1, iCiv=iBabylonia, units={iDefend: 2}, iCulture=10, adjective="TXT_KEY_ADJECTIVE_SUMERIAN"),
-	MinorCity(-2100, iIndependent2, (85, 50), "Ugarit", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1, iWork: 1}, iCulture=15, adjective="TXT_KEY_ADJECTIVE_MARIOTE"),
+	MinorCity(-2100, iIndependent, (85, 50), "Ugarit", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1, iWork: 1}, iCulture=15, adjective="TXT_KEY_ADJECTIVE_MARIOTE"),
 	#MinorCity(-2050, iIndependent, (118, 49), "Sanxingdui", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1}, adjective="TXT_KEY_ADJECTIVE_SHU"),
 	#MinorCity(-1830, iBarbarian, (124, 52), "Daliang", iPopulation=2, iCiv=iChina, units={iDefend: 1, iBase: 1}, adjective="TXT_KEY_ADJECTIVE_WEI"),
 	MinorCity(-1830, iBarbarian, (126, 53), "Linzi", iPopulation=1, iCiv=iChina, units={iBase: 2}, adjective="TXT_KEY_ADJECTIVE_QI"),
 	MinorCity(-2200, iBarbarian, tJerusalem, "Yerushalayim", iPopulation=1, iCiv=iBabylonia, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_ISRAELITE"),
-	MinorCity(-2000, iIndependent, (85, 47), "Sur", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1, iCounter: 1}, adjective="TXT_KEY_CIV_PHOENICIA_ADJECTIVE"),
+	MinorCity(-2000, iBarbarian, (85, 47), "Sur", iPopulation=1, iCiv=iBabylonia, units={iDefend: 1, iCounter: 1}, adjective="TXT_KEY_CIV_PHOENICIA_ADJECTIVE"),
 	MinorCity(-1200, iBarbarian, (72, 55), "Daorson", iPopulation=2, iCiv=iMinoans, units={iAttack: 2}, adjective="TXT_KEY_ADJECTIVE_ILLYRIAN"),
 	MinorCity(-1200, iIndependent2, (89, 53), "Tushpa", iPopulation=2, iCiv=iHittites, units={iDefend: 3, iCounter: 2}, adjective="TXT_KEY_ADJECTIVE_ARMENIAN"),
 	MinorCity(-1000, iBarbarian, tDelhi, "Indraprastha", iPopulation=1, iCiv=iHarappa, units={iDefend: 1, iCounter: 1}, bIgnoreRuins=True, condition=lambda: not player(iHarappa).isHuman(), adjective="TXT_KEY_ADJECTIVE_VEDIC"),
