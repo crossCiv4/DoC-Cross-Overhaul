@@ -74,6 +74,7 @@ dResourcesDict = {
 	(90, 18)  : (400,   iSugar),	# Madagascar
 	(99, 43)  : (400,   iCotton),   # Sindh
 	(79, 53)  : (550,   iSilk),     # Anatolia
+	(73, 46)  : (500,	iClam), 	# Cyrenaica
 	(92, 47)  : (600,   iCitrus),   # Persia
 	(81, 30)  : (600,   iBanana),   # Central Africa
 	(76, 27)  : (600,   iBanana),   # Central Africa
@@ -358,6 +359,12 @@ dCivGroupResourcesDict = {
 
 
 @handler("BeginGameTurn")
+def removeResources():
+	for x, y in dRemovedResources[game.getGameTurn()]:
+		removeResource(x, y)
+
+
+@handler("BeginGameTurn")
 def createResources():
 	for (x, y), iResource in dResources[game.getGameTurn()]:
 		createResource(x, y, iResource)
@@ -383,10 +390,7 @@ def removeColombianJungle(iPlayer):
 
 
 @handler("BeginGameTurn")
-def removeResources():
-	for x, y in dRemovedResources[game.getGameTurn()]:
-		removeResource(x, y)
-
+def createFeatures():
 	for tile, iFeature in dFeatures[game.getGameTurn()]:
 		plot(tile).setFeatureType(iFeature, 0)
 

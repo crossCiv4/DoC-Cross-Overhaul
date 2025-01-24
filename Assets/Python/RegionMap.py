@@ -36,9 +36,9 @@ tSpreadFactors = (
 },
 # Orthodoxy
 {
-	iCore :		[rRuthenia, rEthiopia, rGreece, rCaucasus],
+	iCore :		[rRuthenia, rRussia, rEthiopia, rGreece, rCaucasus],
 	iHistorical : 	[rBalkans, rAnatolia, rLevant, rMesopotamia, rEgypt, rNubia, rEuropeanArctic, rUrals, rSiberia],
-	iPeriphery : 	[rMaghreb, rItaly, rPonticSteppe, rCrimea, rAmericanArctic, rCentralAsianSteppe],
+	iPeriphery : 	[rMaghreb, rItaly, rVolga, rPonticSteppe, rCrimea, rAmericanArctic, rCentralAsianSteppe],
 	iMinority :	[rBaltics, rPoland, rPersia, rKhorasan, rTransoxiana, rTarimBasin, rNorthChina],
 },
 # Catholicism
@@ -51,14 +51,14 @@ tSpreadFactors = (
 # Protestantism
 {
 	iCore :			[rBritain, rLowerGermany, rDenmark, rNorway, rSweden, rAtlanticSeaboard, rMidwest, rOntario, rGreatPlains, rDeepSouth, rMaritimes],
-	iHistorical :	[rCalifornia, rCascadia, rAmericanArctic, rAustralia],
-	iPeriphery :	[rFrance, rOceania, rCape, rZambezi, rSahel, rSwahiliCoast, rBaltics],
+	iHistorical :	[rBaltics, rCalifornia, rCascadia, rAmericanArctic, rAustralia],
+	iPeriphery :	[rFrance, rOceania, rCape, rZambezi, rSahel, rSwahiliCoast],
 	iMinority : 	[rPoland, rCentralEurope, rBrazil, rKorea]
 },
 # Islam
 {
 	iCore : 		[rArabia, rMesopotamia, rEgypt, rLevant],
-	iHistorical : 	[rPersia, rKhorasan, rSindh, rPunjab, rTransoxiana, rMaghreb, rIndonesia, rSahel, rSahara, rHornOfAfrica, rHinduKush],
+	iHistorical : 	[rPersia, rKhorasan, rSindh, rPunjab, rTransoxiana, rMaghreb, rIndonesia, rSahel, rSahara, rHornOfAfrica, rHinduKush, rVolga],
 	iPeriphery : 	[rNubia, rIberia, rAnatolia, rBalkans, rHindustan, rRajputana, rBengal, rDeccan, rPonticSteppe, rCrimea, rCentralAsianSteppe, rSwahiliCoast, rCaucasus, rTarimBasin, rYemenOman],
 	iMinority : 	[rUrals, rSiberia, rMongolia],
 },

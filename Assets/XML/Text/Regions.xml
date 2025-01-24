@@ -805,6 +805,22 @@
 		<Italian>Yemen and Oman</Italian>
 		<Spanish>Yemen and Oman</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REGION_87</Tag>
+		<English>Russia</English>
+		<French>Russia</French>
+		<German>Russia</German>
+		<Italian>Russia</Italian>
+		<Spanish>Russia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REGION_88</Tag>
+		<English>Volga</English>
+		<French>Volga</French>
+		<German>Volga</German>
+		<Italian>Volga</Italian>
+		<Spanish>Volga</Spanish>
+	</TEXT>
 	
 	<TEXT>
 		<Tag>TXT_KEY_REGION_100</Tag>

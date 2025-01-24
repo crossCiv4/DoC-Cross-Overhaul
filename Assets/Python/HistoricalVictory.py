@@ -942,7 +942,7 @@ dGoals = {
 			plots.region(rBritain),
 			plots.region(rDenmark),
 			plots.region(rNorway),
-			plots.regions(rPoland, rBaltics, rRuthenia, rCrimea).named(EASTERN_EUROPE),
+			plots.regions(rPoland, rBaltics, rRuthenia, rCrimea, rRussia).named(EASTERN_EUROPE),
 			at=1940,
 		),
 		EraFirstDiscover((iIndustrial, 8), (iGlobal, 8)),
