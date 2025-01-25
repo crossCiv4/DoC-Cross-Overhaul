@@ -192,7 +192,7 @@ dGoals = {
 		All(
 			PopulationCount(16),
 			CultureAmount(2000),
-			by=-700,
+			by=-660,
 		),
 	),
 	iHarappa: (

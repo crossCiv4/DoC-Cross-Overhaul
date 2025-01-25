@@ -10,6 +10,7 @@ lCivilizations = [
 	),
 	Civilization(
 		iBabylonia,
+		lCivics=[iDespotism],
 		techs=techs.of(iPottery, iPastoralism, iAgriculture, iMythology, iProperty)
 	),
 	Civilization(

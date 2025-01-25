@@ -194,6 +194,7 @@ lCivilizations = [
 	# this doesn't do anything because it is set in Scenario3000BC
 	Civilization(
 		iBabylonia,
+		lCivics=[iDespotism],
 		techs=techs.of(iPottery, iPastoralism, iAgriculture, iMythology, iProperty)
 	),
 	# this doesn't do anything because it is set in Scenario3000BC
@@ -2516,6 +2517,7 @@ dBuildingPreferences = {
 		iHimejiCastle: -30,
 		iBorobudur: -30,
 		iBrandenburgGate: -30,
+		iIshtarGate: -30,
 	},
 	iVietnam: {
 		iGreatWall: -30,	
