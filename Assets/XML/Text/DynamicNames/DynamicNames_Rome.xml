@@ -215,27 +215,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ROMAN_NAME_PERSIA</Tag>
-		<English>Parthia</English>
-		<French>
-			<Text>Parthie</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Parthia:Parthia:Parthia</Text>
-			<Gender>Female:Female:Female</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Partia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Parthia</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<English>Persis</English>
+		<French>Persis</French>
+		<German>Persis</German>
+		<Italian>Persis</Italian>
+		<Spanish>Persis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ROMAN_NAME_MACEDONIA</Tag>
+		<English>Macedonia</English>
+		<French>Macedonia</French>
+		<German>Macedonia</German>
+		<Italian>Macedonia</Italian>
+		<Spanish>Macedonia</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ROMAN_NAME_PHOENICIA</Tag>

@@ -211,7 +211,7 @@ lCivilizations = [
 	),
 	Civilization(
 		iXia,
-		iGold=50,
+		iGold=100,
 		lCivics=[iDespotism],
 		techs=techs.column(2).without(iSailing, iSeafaring, iSmelting).including(iProperty, iCeremony)
 	),
@@ -731,7 +731,7 @@ dStartingUnits = CivDict({
 	},
 	iXia: {
 		iSettle: 1,
-		iWork: 1,
+		iWork: 2,
 		iBase: 2,
 	},
 	iShu: {
