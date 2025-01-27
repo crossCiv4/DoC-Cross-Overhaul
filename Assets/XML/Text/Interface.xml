@@ -2463,6 +2463,14 @@
 		<Spanish>[ICON_BULLET]Can Capture and Trade Slaves</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIVIC_GREAT_SPY_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Great Spy Emergence</English>
+		<French>[ICON_BULLET]%D1_Mod%% Great Spy Emergence</French>
+		<German>[ICON_BULLET]%D1_Mod%% Great Spy Emergence</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% Great Spy Emergence</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% Great Spy Emergence</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_PAGAN_RELIGION</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires %s1[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]N&#233;cessite : %s1[COLOR_REVERT]</French>

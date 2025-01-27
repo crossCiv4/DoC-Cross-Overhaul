@@ -418,6 +418,9 @@ public:
 	int getDomesticGreatGeneralRateModifier() const;																																// Exposed to Python
 	void changeDomesticGreatGeneralRateModifier(int iChange);
 
+	int getGreatSpyRateModifier() const;	// Exposed to Python
+	void changeGreatSpyRateModifier(int iChange);
+
 	int getStateReligionGreatPeopleRateModifier() const;																									// Exposed to Python
 	void changeStateReligionGreatPeopleRateModifier(int iChange);
 
@@ -1387,6 +1390,7 @@ protected:
 	int m_iGreatPeopleRateModifier;
 	int m_iGreatGeneralRateModifier;
 	int m_iDomesticGreatGeneralRateModifier;
+	int m_iGreatSpyRateModifier;
 	int m_iStateReligionGreatPeopleRateModifier;
 	int m_iMaxGlobalBuildingProductionModifier;
 	int m_iMaxTeamBuildingProductionModifier;

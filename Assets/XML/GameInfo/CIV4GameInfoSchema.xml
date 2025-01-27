@@ -675,6 +675,7 @@
 	<ElementType name="iAIWeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iGreatPeopleRateModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iGreatGeneralRateModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iGreatSpyRateModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iDomesticGreatGeneralRateModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iStateReligionGreatPeopleRateModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iDistanceMaintenanceModifier" content="textOnly" dt:type="int"/>
@@ -880,6 +881,7 @@
 		<element type="iGreatPeopleRateModifier" minOccurs="0"/>
 		<element type="iGreatGeneralRateModifier" minOccurs="0"/>
 		<element type="iDomesticGreatGeneralRateModifier" minOccurs="0"/>
+		<element type="iGreatSpyRateModifier" minOccurs="0"/>
 		<element type="iStateReligionGreatPeopleRateModifier" minOccurs="0"/>
 		<element type="iDistanceMaintenanceModifier" minOccurs="0"/>
 		<element type="iNumCitiesMaintenanceModifier" minOccurs="0"/>

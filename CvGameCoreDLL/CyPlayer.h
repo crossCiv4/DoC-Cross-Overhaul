@@ -251,6 +251,7 @@ public:
 	int getGreatPeopleRateModifier();
 	int getGreatGeneralRateModifier();
 	int getDomesticGreatGeneralRateModifier();
+	int getGreatSpyRateModifier();
 	int getStateReligionGreatPeopleRateModifier();
 
 	int getMaxGlobalBuildingProductionModifier();

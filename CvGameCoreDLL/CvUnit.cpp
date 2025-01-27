@@ -6848,7 +6848,10 @@ bool CvUnit::awardSpyExperience(TeamTypes eTargetTeam, EspionageMissionTypes eMi
 	changeExperience(iExperience);
 	testPromotionReady();
 
-	GET_PLAYER(getOwner()).changeEspionageExperience(iExperience);
+	CvPlayer& kPlayer = GET_PLAYER(getOwner());
+
+	int iGreatSpyExperienceMod = 100 + kPlayer.getGreatSpyRateModifier();
+	kPlayer.changeEspionageExperience((iGreatSpyExperienceMod * iExperience) / 100);
 
 	return true;
 }

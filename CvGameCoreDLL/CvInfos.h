@@ -1369,6 +1369,7 @@ public:
 	int getGreatPeopleRateModifier() const;				// Exposed to Python
 	int getGreatGeneralRateModifier() const;				// Exposed to Python
 	int getDomesticGreatGeneralRateModifier() const;				// Exposed to Python
+	int getGreatSpyRateModifier() const;
 	int getStateReligionGreatPeopleRateModifier() const;				// Exposed to Python
 	int getDistanceMaintenanceModifier() const;				// Exposed to Python
 	int getNumCitiesMaintenanceModifier() const;				// Exposed to Python
@@ -1481,6 +1482,7 @@ protected:
 	int m_iGreatPeopleRateModifier;
 	int m_iGreatGeneralRateModifier;
 	int m_iDomesticGreatGeneralRateModifier;
+	int m_iGreatSpyRateModifier;
 	int m_iStateReligionGreatPeopleRateModifier;
 	int m_iDistanceMaintenanceModifier;
 	int m_iNumCitiesMaintenanceModifier;

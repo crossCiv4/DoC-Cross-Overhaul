@@ -1055,6 +1055,12 @@ int CyPlayer::getDomesticGreatGeneralRateModifier()
 	return m_pPlayer ? m_pPlayer->getDomesticGreatGeneralRateModifier() : -1;
 }
 
+int CyPlayer::getGreatSpyRateModifier()
+{
+	return m_pPlayer ? m_pPlayer->getGreatSpyRateModifier() : -1;
+}
+
+
 int CyPlayer::getStateReligionGreatPeopleRateModifier()
 {
 	return m_pPlayer ? m_pPlayer->getStateReligionGreatPeopleRateModifier() : -1;

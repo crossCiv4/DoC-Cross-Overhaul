@@ -9813,6 +9813,15 @@ void CvPlayer::changeDomesticGreatGeneralRateModifier(int iChange)
 	m_iDomesticGreatGeneralRateModifier += iChange;
 }
 
+int CvPlayer::getGreatSpyRateModifier() const
+{
+	return m_iGreatSpyRateModifier;
+}
+
+void CvPlayer::changeGreatSpyRateModifier(int iChange)
+{
+	m_iGreatSpyRateModifier += iChange;
+}
 
 int CvPlayer::getStateReligionGreatPeopleRateModifier() const
 {
@@ -18278,6 +18287,7 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange)
 
 	changeGreatPeopleRateModifier(GC.getCivicInfo(eCivic).getGreatPeopleRateModifier() * iChange);
 	changeGreatGeneralRateModifier(GC.getCivicInfo(eCivic).getGreatGeneralRateModifier() * iChange);
+	changeGreatSpyRateModifier(GC.getCivicInfo(eCivic).getGreatSpyRateModifier() * iChange);
 	changeDomesticGreatGeneralRateModifier(GC.getCivicInfo(eCivic).getDomesticGreatGeneralRateModifier() * iChange);
 	changeStateReligionGreatPeopleRateModifier(GC.getCivicInfo(eCivic).getStateReligionGreatPeopleRateModifier() * iChange);
 	changeDistanceMaintenanceModifier(GC.getCivicInfo(eCivic).getDistanceMaintenanceModifier() * iChange);
@@ -18576,6 +18586,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iGreatPeopleRateModifier);
 	pStream->Read(&m_iGreatGeneralRateModifier);
 	pStream->Read(&m_iDomesticGreatGeneralRateModifier);
+	pStream->Read(&m_iGreatSpyRateModifier);
 	pStream->Read(&m_iStateReligionGreatPeopleRateModifier);
 	pStream->Read(&m_iMaxGlobalBuildingProductionModifier);
 	pStream->Read(&m_iMaxTeamBuildingProductionModifier);
@@ -19004,6 +19015,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream->Write(m_iGreatPeopleRateModifier);
 	pStream->Write(m_iGreatGeneralRateModifier);
 	pStream->Write(m_iDomesticGreatGeneralRateModifier);
+	pStream->Write(m_iGreatSpyRateModifier);
 	pStream->Write(m_iStateReligionGreatPeopleRateModifier);
 	pStream->Write(m_iMaxGlobalBuildingProductionModifier);
 	pStream->Write(m_iMaxTeamBuildingProductionModifier);

@@ -5743,6 +5743,7 @@ m_iAIWeight(0),
 m_iGreatPeopleRateModifier(0),
 m_iGreatGeneralRateModifier(0),
 m_iDomesticGreatGeneralRateModifier(0),
+m_iGreatSpyRateModifier(0),
 m_iStateReligionGreatPeopleRateModifier(0),
 m_iDistanceMaintenanceModifier(0),
 m_iNumCitiesMaintenanceModifier(0),
@@ -5904,6 +5905,11 @@ int CvCivicInfo::getGreatGeneralRateModifier() const
 int CvCivicInfo::getDomesticGreatGeneralRateModifier() const
 {
 	return m_iDomesticGreatGeneralRateModifier;
+}
+
+int CvCivicInfo::getGreatSpyRateModifier() const
+{
+	return m_iGreatSpyRateModifier;
 }
 
 int CvCivicInfo::getStateReligionGreatPeopleRateModifier() const
@@ -6417,6 +6423,7 @@ void CvCivicInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iGreatPeopleRateModifier);
 	stream->Read(&m_iGreatGeneralRateModifier);
 	stream->Read(&m_iDomesticGreatGeneralRateModifier);
+	stream->Read(&m_iGreatSpyRateModifier);
 	stream->Read(&m_iStateReligionGreatPeopleRateModifier);
 	stream->Read(&m_iDistanceMaintenanceModifier);
 	stream->Read(&m_iNumCitiesMaintenanceModifier);
@@ -6598,6 +6605,7 @@ void CvCivicInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iGreatPeopleRateModifier);
 	stream->Write(m_iGreatGeneralRateModifier);
 	stream->Write(m_iDomesticGreatGeneralRateModifier);
+	stream->Write(m_iGreatSpyRateModifier);
 	stream->Write(m_iStateReligionGreatPeopleRateModifier);
 	stream->Write(m_iDistanceMaintenanceModifier);
 	stream->Write(m_iNumCitiesMaintenanceModifier);
@@ -6718,6 +6726,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_iGreatPeopleRateModifier, "iGreatPeopleRateModifier");
 	pXML->GetChildXmlValByName(&m_iGreatGeneralRateModifier, "iGreatGeneralRateModifier");
 	pXML->GetChildXmlValByName(&m_iDomesticGreatGeneralRateModifier, "iDomesticGreatGeneralRateModifier");
+	pXML->GetChildXmlValByName(&m_iGreatSpyRateModifier, "iGreatSpyRateModifier");
 	pXML->GetChildXmlValByName(&m_iStateReligionGreatPeopleRateModifier, "iStateReligionGreatPeopleRateModifier");
 	pXML->GetChildXmlValByName(&m_iDistanceMaintenanceModifier, "iDistanceMaintenanceModifier");
 	pXML->GetChildXmlValByName(&m_iNumCitiesMaintenanceModifier, "iNumCitiesMaintenanceModifier");
