@@ -332,8 +332,8 @@ dRemovedFeaturesDict = {
 	(98, 58)  : 1600, # Transoxiana
 	(96, 56)  : 1600, # Transoxiana
 	(97, 57)  : 1600, # Transoxiana
-	(81, 70)  : 1700, # Ingria
-	(80, 69)  : 1700, # Ingria
+	(81, 70)  : 1300, # Ingria
+	(80, 69)  : 1300, # Ingria
 }
 
 dChangedTerrainDict = {
