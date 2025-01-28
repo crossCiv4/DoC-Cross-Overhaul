@@ -632,7 +632,7 @@ iIroquois : 1770,
 iArmenia : 1050,
 iMinoans: -1130,
 iParthia: 650,
-iGhorids: 1400,
+iGhorids: 1370,
 }, 2020)
 
 # Leoreth: determine neighbour lists from pairwise neighbours for easier lookup
