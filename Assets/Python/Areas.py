@@ -39,7 +39,7 @@ iNorse :		(68, 75), # Nidaros
 iTurks :		(104, 58), # Orduqent
 iArabia :		(85, 47), # Damascus
 iTibet :		(113, 48), # Lhasa
-iMoors :		(56, 48), # Cadiz
+iMoors :		(58, 49), # Granada
 iJava :			(126, 25), # Trowulan
 iSpain :		(57, 52), # Madrid
 iFrance :		(61, 60), # Paris

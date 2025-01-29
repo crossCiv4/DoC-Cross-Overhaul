@@ -5150,6 +5150,7 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
+				<City>Garnatah</City>	
 				<!-- Mauretania -->
 				<City>Tanjah</City>				<!-- Tingis/Tangier -->
 				<City>Sabta</City>				<!-- Abyla/Septem/Ceuta -->
