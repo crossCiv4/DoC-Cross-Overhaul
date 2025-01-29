@@ -1241,7 +1241,7 @@ dStartingUnits = CivDict({
 	},
 	iAmerica: {
 		iSettle: 6,
-		iWork: 4,
+		iWork: 5,
 		iSkirmish: 2,
 		iAttack: 4,
 		iSiege: 2,
@@ -1453,7 +1453,7 @@ dExtraAIUnits = CivDict({
 	},
 	iAmerica: {
 		iDefend: 4,
-		iWork: 8,
+		iWork: 10,
 		iSettle: 4,
 	},
 	iArgentina: {
@@ -2369,6 +2369,8 @@ dTechPreferences = {
 		iCivilLiberties: 30,
 		iHumanities: 30,
 		iChemistry: 15,
+		iRailroad: 10,
+		iBiology: 5, 
 	},
 	iGermany : {
 		iEngine: 20,
