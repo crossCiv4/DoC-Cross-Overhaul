@@ -282,6 +282,14 @@
 		<Spanish>Germanic</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_POMERANIAN</Tag>
+		<English>Pomeranian</English>
+		<French>Pomeranian</French>
+		<German>Pomeranian</German>
+		<Italian>Pomeranian</Italian>
+		<Spanish>Pomeranian</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_GIRIJAN</Tag>
 		<English>Girijan</English>
 		<French>Girijan</French>

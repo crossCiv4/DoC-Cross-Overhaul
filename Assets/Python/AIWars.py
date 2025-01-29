@@ -239,6 +239,13 @@ tCreteBR = (79, 48)
 
 tConquestItalyCrete = (46, iItaly, iByzantium, tCreteTL, tCreteBR, 1, iItalyCreteYear, 10)
 
+
+iSwedenPomeraniaYear = 1630
+tPomeraniaTL = (67, 63)
+tPomeraniaBR = (72, 65)
+
+tConquestSwedenPomerania = (47, iSweden, iHolyRome, tPomeraniaTL, tPomeraniaBR, 2, iSwedenPomeraniaYear, 5)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -285,6 +292,7 @@ lConquests = [
 	#tConquestChinaShu,
 	tConquestRomeDacia,
 	tConquestItalyCrete,
+	tConquestSwedenPomerania,
 ]
 
 dConquestChecker = {
