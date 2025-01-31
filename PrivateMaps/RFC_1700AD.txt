@@ -4382,98 +4382,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=63
+	ImprovementType=IMPROVEMENT_HAMLET
 	RouteType=ROUTE_ROAD
-	BeginUnit
-		UnitType=UNIT_CUIRASSIER
-		UnitOwner=CIVILIZATION_GERMANY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_CUIRASSIER
-		UnitOwner=CIVILIZATION_GERMANY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_GERMANY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_GERMANY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_GERMANY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_GERMANY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_GERMANY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_GERMANY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_GERMANY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_GERMANY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_BOMBARD
-		UnitOwner=CIVILIZATION_GERMANY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_BOMBARD
-		UnitOwner=CIVILIZATION_GERMANY
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_BOMBARD
-		UnitOwner=CIVILIZATION_GERMANY
-	EndUnit
-	BeginCity
-		CityOwner=CIVILIZATION_GERMANY
-		CityName=Berlin
-		CityPopulation=10
-		BuildingType=BUILDING_PALACE
-		BuildingType=BUILDING_BARRACKS
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_TANNERY
-		BuildingType=BUILDING_LIBRARY
-		BuildingType=BUILDING_AQUEDUCT
-		BuildingType=BUILDING_THEATRE
-		BuildingType=BUILDING_MARKET
-		BuildingType=BUILDING_JAIL
-		BuildingType=BUILDING_BATH
-		BuildingType=BUILDING_FORGE
-		BuildingType=BUILDING_CASTLE
-		BuildingType=BUILDING_PHARMACY
-		BuildingType=BUILDING_POST_OFFICE
-		BuildingType=BUILDING_UNIVERSITY
-		BuildingType=BUILDING_STAR_FORT
-		BuildingType=BUILDING_ESTATE
-		BuildingType=BUILDING_JEWISH_TEMPLE
-		BuildingType=BUILDING_PROTESTANT_TEMPLE
-		BuildingType=BUILDING_PROTESTANT_SHRINE
-		BuildingType=BUILDING_ACADEMY
-		BuildingType=BUILDING_SAINT_THOMAS_CHURCH
-		BuildingType=BUILDING_AMBER_ROOM
-		ReligionType=RELIGION_JUDAISM
-		ReligionType=RELIGION_PROTESTANTISM
-		HolyCityReligionType=RELIGION_PROTESTANTISM
-		BeginCulture
-			Civilization=CIVILIZATION_GERMANY, Culture=250
-		EndCulture
-		YearFounded=1200
-		PreviousOwner=CIVILIZATION_HOLY_ROMAN
-	EndCity
 EndPlot
 BeginPlot
 	x=69,y=64
+	RouteType=ROUTE_ROAD
 	ImprovementType=IMPROVEMENT_HAMLET
 EndPlot
 BeginPlot
@@ -4601,8 +4515,95 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=63
-	ImprovementType=IMPROVEMENT_HAMLET
 	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CUIRASSIER
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CUIRASSIER
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BOMBARD
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BOMBARD
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BOMBARD
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GERMANY
+		CityName=Berlin
+		CityPopulation=10
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_THEATRE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_BATH
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_CASTLE
+		BuildingType=BUILDING_PHARMACY
+		BuildingType=BUILDING_POST_OFFICE
+		BuildingType=BUILDING_UNIVERSITY
+		BuildingType=BUILDING_STAR_FORT
+		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_JEWISH_TEMPLE
+		BuildingType=BUILDING_PROTESTANT_TEMPLE
+		BuildingType=BUILDING_PROTESTANT_SHRINE
+		BuildingType=BUILDING_ACADEMY
+		BuildingType=BUILDING_SAINT_THOMAS_CHURCH
+		BuildingType=BUILDING_AMBER_ROOM
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_PROTESTANTISM
+		HolyCityReligionType=RELIGION_PROTESTANTISM
+		BeginCulture
+			Civilization=CIVILIZATION_GERMANY, Culture=250
+		EndCulture
+		YearFounded=1200
+		PreviousOwner=CIVILIZATION_HOLY_ROMAN
+	EndCity
 EndPlot
 BeginPlot
 	x=70,y=64

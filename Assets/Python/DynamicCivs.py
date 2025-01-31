@@ -2627,7 +2627,7 @@ def leader(iPlayer):
 	elif iCiv == iPortugal:
 		if iEra >= iIndustrial: return iMaria
 		
-		if tPlayer.isHasTech(iCartography): return iJoao
+		if iEra >= iRenaissance or tPlayer.isHasTech(iCartography): return iJoao
 		
 	elif iCiv == iInca:
 		if iEra >= iIndustrial: return iCastilla

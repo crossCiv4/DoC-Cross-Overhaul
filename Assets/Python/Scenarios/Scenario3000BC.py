@@ -5,7 +5,7 @@ from Core import *
 lCivilizations = [
 	Civilization(
 		iEgypt,
-		lCivics=[iMonarchy, iRedistribution, iDeification],
+		lCivics=[iMonarchy, iSlavery, iRedistribution, iDeification],
 		techs=techs.of(iMining, iMasonry, iPottery, iAgriculture, iMythology)
 	),
 	Civilization(

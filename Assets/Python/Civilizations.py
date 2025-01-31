@@ -188,7 +188,7 @@ lCivilizations = [
 	# this doesn't do anything because it is set in Scenario3000BC
 	Civilization(
 		iEgypt,
-		lCivics=[iMonarchy, iRedistribution, iDeification],
+		lCivics=[iMonarchy, iSlavery, iRedistribution, iDeification],
 		techs=techs.of(iMining, iMasonry, iPottery, iAgriculture, iMythology)
 	),
 	# this doesn't do anything because it is set in Scenario3000BC
@@ -293,7 +293,7 @@ lCivilizations = [
 		iChina,
 		iGold=250,
 		iAdvancedStartPoints=100,
-		lCivics=[iDespotism, iSlavery, iRedistribution, iHegemony],
+		lCivics=[iDespotism, iSlavery, iRedistribution, iDeification, iHegemony],
 		techs=techs.column(4).including(iGeneralship).without(iShipbuilding, iNavigation)
 	),
 	Civilization(
@@ -542,7 +542,7 @@ lCivilizations = [
 		iGold=100,
 		iAdvancedStartPoints=80,
 		iStateReligion=iCatholicism,
-		lCivics=[iElective, iVassalage, iManorialism, iMerchantTrade, iClergy],
+		lCivics=[iElective, iVassalage, iManorialism, iMerchantTrade, iClergy, iHegemony],
 		techs=techs.column(6).including(iFeudalism, iFortification, iCivilService, iTheology)
 	),
 	Civilization(
@@ -550,7 +550,7 @@ lCivilizations = [
 		iGold=200,
 		iAdvancedStartPoints=60,
 		iStateReligion=iCatholicism,
-		lCivics=[iMonarchy, iVassalage, iManorialism, iMerchantTrade, iClergy, iThalassocracy],
+		lCivics=[iMonarchy, iVassalage, iManorialism, iMerchantTrade, iMonasticism, iThalassocracy],
 		techs=techs.column(7).including(iCommune, iPatronage, iCompass, iDoctrine)
 	),
 	Civilization(
@@ -571,7 +571,7 @@ lCivilizations = [
 		iMongols,
 		iGold=250,
 		iAdvancedStartPoints=50,
-		lCivics=[iElective, iVassalage, iSlavery, iMerchantTrade, iHegemony],
+		lCivics=[iElective, iVassalage, iSlavery, iMerchantTrade, iSyncretism, iHegemony],
 		techs=techs.column(7).including(iPaper, iCompass).without(iTheology)
 	),
 	Civilization(
@@ -593,7 +593,7 @@ lCivilizations = [
 		iGold=200,
 		iAdvancedStartPoints=100,
 		iStateReligion=iProtestantism,
-		lCivics=[iElective, iVassalage, iManorialism, iRegulatedTrade, iClergy, iHegemony],
+		lCivics=[iElective, iVassalage, iManorialism, iMerchantTrade, iClergy, iHegemony],
 		techs=techs.column(8)
 	),
 	Civilization(
@@ -776,7 +776,7 @@ dStartingUnits = CivDict({
 		iCounter: 1,
 		iSettleSea: 1,
 		iFerry: 1,
-		iEscort: 1,
+		iEscort: 2,
 	},
 	iPolynesia: {
 		iSettle: 1,
@@ -1329,7 +1329,7 @@ dExtraAIUnits = CivDict({
 	},
 	iPhoenicia: {
 		iSettleSea: 2,
-		iEscort: 1,
+		iEscort: 2,
 	},
 	iGreece: {
 		iSettleSea: 2,
@@ -1423,6 +1423,9 @@ dExtraAIUnits = CivDict({
 	iInca: {
 		iCityAttack: 2,
 		iSettle: 1,
+	},
+	iSweden: {
+		iSettleSea: 1,
 	},
 	iOttomans: {
 		iAttack: 4,
@@ -2196,7 +2199,7 @@ dTechPreferences = {
 		iHeritage: 15,
 	},
 	iEngland : {
-		iExploration: 10,
+		iExploration: 15,
 		iFirearms: 20,
 		iReplaceableParts: 30,
 		iLogistics: 15,
@@ -2246,6 +2249,8 @@ dTechPreferences = {
 		iHeritage: 20,
 		iStatecraft: 20,
 		iLabourUnions: 20,
+		iCartography: -30,
+		iExploration: -30,
 	},
 	iSwahili : {
 		iCompass: 30,
@@ -2261,7 +2266,7 @@ dTechPreferences = {
 	},
 	iPortugal : {
 		iCartography: 30,
-		iExploration: 15,
+		iExploration: 30,
 		iGeography: 50,
 		iCompass: 50,
 		iGunpowder: 40,

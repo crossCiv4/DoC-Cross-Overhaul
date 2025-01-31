@@ -10306,7 +10306,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	iTradeCommerceModifier = AI_averageTradeMultiplier() * std::max(AI_averageCommerceMultiplier(COMMERCE_GOLD), AI_averageCommerceMultiplier(COMMERCE_RESEARCH)) * AI_yieldWeight(YIELD_COMMERCE) / 100;
 
 	//iValue += ((kCivic.getTradeRoutes() * std::max(0, iConnectedForeignCities - getNumCities() * 3) * 8) + (getNumCities() * 2));
-	iValue += kCivic.getTradeRoutes() * std::min(getNumCities(), iConnectedForeignCities) * iTradeCommerceModifier * 6 / 100 / 100;
+	iValue += kCivic.getTradeRoutes() * std::min(getNumCities(), iConnectedForeignCities) * iTradeCommerceModifier / 1000;
 	iValue += -((kCivic.isNoForeignTrade()) ? (iConnectedForeignCities * /*3*/ 4) : 0);
 	iValue -= kCivic.isNoForeignTradeModifier() ? (iConnectedForeignCities * 3 / 2) : 0; // Leoreth
 	iValue += (100 + kCivic.getDefensivePactTradeModifier()) * std::min(getNumCities(), iConnectedForeignCities) * iTradeCommerceModifier * 2 / 100 / 100 / 100; // Leoreth
@@ -10490,12 +10490,12 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	{
 		iTempValue = 0;
 
-		iTempValue += ((kCivic.getYieldModifier(iI) * getNumCities()) / 2);
-		iTempValue += ((kCivic.getCapitalYieldModifier(iI) * 3) / 4);
+		iTempValue += (kCivic.getYieldModifier(iI) * getNumCities()) / 2;
+		iTempValue += kCivic.getCapitalYieldModifier(iI) / std::max(1, getNumCities());
 
 		if (pCapital)
 		{
-			iTempValue += ((kCivic.getCapitalYieldModifier(iI) * pCapital->getBaseYieldRate((YieldTypes)iI)) / 80);
+			iTempValue += (kCivic.getCapitalYieldModifier(iI) * pCapital->getBaseYieldRate((YieldTypes)iI)) / (30 * std::max(1, getNumCities()));
 		}
 		//iTempValue += ((kCivic.getTradeYieldModifier(iI) * getNumCities()) / 11);
 
@@ -10512,7 +10512,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		}
 
 		iTempValue += iTradeYield * kCivic.getTradeYieldModifier(iI) / 100;
-		iTempValue += iTradeYield * kCivic.getVassalTradeModifier() * GET_TEAM(getTeam()).getVassalCount() / 10 / 100;
+		iTempValue += iTradeYield * kCivic.getVassalTradeModifier() * GET_TEAM(getTeam()).getVassalCount() / 3 / 100;
 
 		for (iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
 		{

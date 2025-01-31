@@ -907,6 +907,8 @@ def getCivicStability(iPlayer, civics=None):
 
 	iCurrentEra = player(iPlayer).getCurrentEra()
 	iStability = 0
+
+	#FIXME: this should be a dictionary
 	
 	if iTotalitarianism in civics:
 		if iStateParty in civics: iStability += 5
@@ -916,7 +918,8 @@ def getCivicStability(iPlayer, civics=None):
 		if iDemocracy in civics: iStability -= 3
 		if iConstitution in civics: iStability -= 5
 		if iSecularism in civics: iStability += 2
-		if (iSyncretism, iMonasticism) in civics: iStability -= 3
+		if iSyncretism in civics: iStability -= 3
+		if iMonasticism in civics: iStability -= 3
 		if iHegemony in civics: iStability += 2
 		
 	if iCentralPlanning in civics:
@@ -931,29 +934,36 @@ def getCivicStability(iPlayer, civics=None):
 		if iColonialism in civics: iStability -= 3
 		
 	if iIndividualism in civics:
-		if (iRepublic, iDemocracy) in civics: iStability += 2
+		if iRepublic in civics: iStability += 2
+		if iDemocracy in civics: iStability += 2
 		if iFreeEnterprise in civics: iStability += 3
 		if iCentralPlanning in civics: iStability -= 5
-		if (iRegulatedTrade, iPublicWelfare) in civics: iStability -= 2
+		if iRegulatedTrade in civics: iStability -= 2
+		if iPublicWelfare in civics: iStability -= 2
 		if iSecularism in civics: iStability += 2
 		if iFanaticism in civics: iStability -= 3
 		
 	if iTheocracy in civics:
-		if (iIndividualism, iEgalitarianism) in civics: iStability -= 3
+		if iIndividualism in civics: iStability -= 3
+		if iEgalitarianism in civics: iStability -= 3
 		
 	if iDeification in civics:
-		if (iRepublic, iDemocracy) in civics: iStability -= 3
+		if iDemocracy in civics: iStability -= 3
+		if iRepublic in civics: iStability -= 3
 		
 		if iCurrentEra <= iClassical:
 			if iRedistribution in civics: iStability += 2
 			if iSlavery in civics: iStability += 2
 		
 	if iVassalage in civics:
-		if (iIndividualism, iEgalitarianism) in civics: iStability -= 5
-		if (iFreeEnterprise, iCentralPlanning, iPublicWelfare) in civics: iStability -= 3
-		if iThalassocracy in civics: iStability += 2
-		
-		if iCurrentEra == iMedieval:
+		if iIndividualism in civics: iStability -= 5
+		if iEgalitarianism in civics: iStability -= 5
+	
+		if iFreeEnterprise in civics: iStability -= 3
+		if iCentralPlanning in civics: iStability -= 3
+		if iPublicWelfare in civics: iStability -= 3
+
+		if iCurrentEra < iRenaissance:
 			if iMonarchy in civics: iStability += 2
 			if iManorialism in civics: iStability += 3
 			
@@ -961,19 +971,19 @@ def getCivicStability(iPlayer, civics=None):
 		if iCitizenship in civics: iStability += 2
 		if iVassalage in civics: iStability -= 3
 		if iMerchantTrade in civics: iStability += 2
-		if iHegemony in civics: iStability -= 3
 	
 	if iTheocracy in civics:
-		if (iStateParty, iDemocracy) in civics: iStability -= 5
+		if iStateParty in civics: iStability -= 5
+		if iDemocracy in civics: iStability -= 5
 		if iDeification in civics: iStability += 2
 		if iSyncretism in civics: iStability -= 3
 		if iFanaticism in civics: iStability += 5
 		if iSecularism in civics: iStability -= 5
 		
 	if iBureaucracy in civics:
-		if iDemocracy in civics: iStability -= 5
 		if iRegulatedTrade in civics: iStability += 3
 		if iClergy in civics: iStability += 2
+		if iElective in civics: iStability -= 5
 		
 		if iCurrentEra == iRenaissance:
 			if iMonarchy in civics: iStability += 2
@@ -983,7 +993,6 @@ def getCivicStability(iPlayer, civics=None):
 		if iStratocracy in civics: iStability += 2
 		if iCitizenship in civics: iStability -= 3
 		if iRedistribution in civics: iStability += 1
-		if iMerchantTrade in civics: iStability -= 1
 		if iFreeEnterprise in civics: iStability -= 3
 
 		if iCurrentEra <= iClassical:
@@ -993,7 +1002,8 @@ def getCivicStability(iPlayer, civics=None):
 	if iCasteSystem in civics:
 		if iClergy in civics: iStability += 2
 		if iSecularism in civics: iStability -= 3
-		if (iStateParty, iDemocracy) in civics: iStability -= 3
+		if iStateParty in civics: iStability -= 3
+		if iDemocracy in civics: iStability -= 3
 		
 	if iMultilateralism in civics:
 		if iDespotism in civics: iStability -= 3
@@ -1002,42 +1012,61 @@ def getCivicStability(iPlayer, civics=None):
 		if iFanaticism in civics: iStability -= 3
 		
 	if iMonarchy in civics:
-		if (iClergy, iMonasticism) in civics: iStability += 2
+		if iClergy in civics: iStability += 2
+		if iMonasticism in civics: iStability += 2
 		if iVassalage in civics: iStability += 2
 		
 	if iElective in civics:
-		if (iBureaucracy, iRedistribution) in civics: iStability -= 5
 		if iMerchantTrade in civics: iStability += 2
 		
 	if iConstitution in civics:
 		if iDemocracy in civics: iStability += 2
 		if iIndividualism in civics: iStability += 2
+		if iFanaticism in civics: iStability -= 3
 		
 	if iRegulatedTrade in civics:
 		if iManorialism in civics: iStability += 2
 		if iColonialism in civics: iStability += 2
 		
 	if iIsolationism in civics:
-		if (iMerchantTrade, iFreeEnterprise) in civics: iStability -= 4
-		if (iRegulatedTrade, iCentralPlanning) in civics: iStability += 3
+		if iMerchantTrade in civics: iStability -= 4
+		if iFreeEnterprise in civics: iStability -= 4
+
+		if iCentralPlanning in civics: iStability += 3
+		if iRegulatedTrade in civics: iStability += 3
+
 		if iBureaucracy in civics: iStability += 3
 	
 	if iPublicWelfare in civics:
 		if iDemocracy in civics: iStability += 2
 		if iSlavery in civics: iStability -= 2
 	
-	if iMerchantTrade in civics:
-		if iThalassocracy in civics: iStability += 2
-	
 	if iHegemony in civics:
+		if iMonarchy in civics: iStability += 2
+		if iDespotism in civics: iStability += 2
 		if iStratocracy in civics: iStability += 2
 
 	if iMonasticism in civics:
 		if iBureaucracy in civics: iStability -= 2
 
 	if iFreeEnterprise in civics:
-		if (iManorialism, iCasteSystem, iMonasticism) in civics: iStability -= 3
+		if iManorialism in civics: iStability -= 3
+		if iCasteSystem in civics: iStability -= 3
+		if iMonasticism in civics: iStability -= 3
+
+
+	if iRedistribution in civics:
+		if iVassalage in civics: iStability -= 2
+		if iManorialism in civics: iStability -= 2
+		if iElective in civics: iStability -= 5
 		
+	if iThalassocracy in civics: 
+		if iMerchantTrade in civics: iStability += 2
+		if iRegulatedTrade in civics: iStability += 2
+		if iRepublic in civics: iStability += 2
+		if iCitizenship in civics: iStability += 2
+		if iManorialism in civics: iStability -= 2
+
 	return iStability
 
 def sigmoid(x):

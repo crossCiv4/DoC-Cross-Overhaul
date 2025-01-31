@@ -7974,7 +7974,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_MERCHANT_TRADE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_MONARCHY</FavoriteCivic>
 			<FavoriteReligion>RELIGION_CONFUCIANISM</FavoriteReligion>
 			<Traits/>
 			<Flavors>
@@ -16225,7 +16225,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_HEGEMONY</FavoriteCivic>
+			<FavoriteCivic>CIVIC_MONARCHY</FavoriteCivic>
 			<FavoriteReligion>RELIGION_ZOROASTRIANISM</FavoriteReligion>
 			<Traits/>
 			<Flavors>
@@ -16786,7 +16786,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_CITIZENSHIP</FavoriteCivic>
+			<FavoriteCivic>CIVIC_HEGEMONY	</FavoriteCivic>
 			<FavoriteReligion>RELIGION_ZOROASTRIANISM</FavoriteReligion>
 			<Traits/>
 			<Flavors>
@@ -49862,7 +49862,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_MERCHANT_TRADE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_ELECTIVE</FavoriteCivic>
 			<FavoriteReligion>RELIGION_ORTHODOXY</FavoriteReligion>
 			<Traits/>
 			<Flavors>
@@ -54248,7 +54248,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_REGULATED_TRADE</FavoriteCivic>
+			<FavoriteCivic>CIVIC_MERCHANT_TRADE</FavoriteCivic>
 			<FavoriteReligion>RELIGION_CATHOLICISM</FavoriteReligion>
 			<Traits/>
 			<Flavors>
@@ -80824,7 +80824,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>10</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_REDISTRIBUTION</FavoriteCivic>
+			<FavoriteCivic>CIVIC_MONARCHY</FavoriteCivic>
 			<FavoriteReligion>RELIGION_ZOROASTRIANISM</FavoriteReligion>
 			<Traits/>
 			<Flavors>
