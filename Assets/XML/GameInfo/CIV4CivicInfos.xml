@@ -392,7 +392,7 @@
 			<iStateReligionBuildingProductionModifier>25</iStateReligionBuildingProductionModifier>
 			<StateReligionBuildingYields>
 				<iYield>0</iYield>
-				<iYield>2</iYield>
+				<iYield>1</iYield>
 			</StateReligionBuildingYields>
 		</CivicInfo>
 		<CivicInfo>
@@ -1022,6 +1022,10 @@
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<bStateReligion>1</bStateReligion>
 			<iStateReligionGreatPeopleRateModifier>25</iStateReligionGreatPeopleRateModifier>
+			<StateReligionBuildingYields>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</StateReligionBuildingYields>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDINGCLASS_CATHOLIC_TEMPLE</BuildingType>
@@ -1227,16 +1231,6 @@
 			<bNoNonStateReligionSpread>1</bNoNonStateReligionSpread>
 			<iNonStateReligionHappiness>-1</iNonStateReligionHappiness>
 			<iShrineIncomeLimitChange>10</iShrineIncomeLimitChange>
-			<SpecialistTypeExtraYields>
-				<SpecialistTypeExtraYield>
-					<SpecialistType>SPECIALIST_GREAT_PRIEST</SpecialistType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>2</iYield>
-						<iYield>4</iYield>
-					</YieldChanges>
-				</SpecialistTypeExtraYield>
-			</SpecialistTypeExtraYields>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
