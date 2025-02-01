@@ -2487,6 +2487,8 @@ def leader(iPlayer):
 
 	elif iCiv == iChinaS:
 		if iEra >= iIndustrial: return iChiangKaishek
+
+		if bResurrected and year() >= (1830): return iChiangKaishek
 		
 		if year() >= year(1120): return iGaozong
 

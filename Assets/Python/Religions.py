@@ -1,6 +1,7 @@
 from RFCUtils import *
 from Locations import *
 from Core import *
+from Civics import *
 
 from Events import handler, popup_handler
 
@@ -200,6 +201,54 @@ def spreadIslamIndonesia():
 		if spreadCity:
 			spreadCity.spreadReligion(iIslam)
 
+@handler("BeginGameTurn")
+def spreadCatholicismInJapan():
+	if not game.isReligionFounded(iCatholicism): 
+		return
+
+	if not turn().between(1550, 1700): 
+		return
+	
+	if not periodic(3): 
+		return
+	
+	civic = civics(iJapan)
+	if civic.iTerritory == iIsolationism:
+		return
+	
+	japaneseCities = cities.region(rJapan)
+	potentialCities = japaneseCities.where(lambda c: not c.isHasReligion(iCatholicism))
+	
+	iMaxCitiesMultiplier = 2
+	if player(iJapan).getStateReligion() == iCatholicism: iMaxCitiesMultiplier = 5
+	
+	if len(potentialCities) * iMaxCitiesMultiplier >= len(japaneseCities):
+		spreadCity = potentialCities.random()
+		if spreadCity:
+			spreadCity.spreadReligion(iCatholicism)
+
+
+@handler("BeginGameTurn")
+def spreadProtestantismInEastAsia():
+	if not game.isReligionFounded(iProtestantism): 
+		return
+
+	if not turn().between(1800, 1930): 
+		return
+	
+	if not periodic(10): 
+		return
+	
+	asianCities = cities.region(rSouthChina, rKorea)
+	potentialCities = asianCities.where(lambda c: not c.isHasReligion(iProtestantism))
+	
+	iMaxCitiesMultiplier = 2
+	if player(iChinaS).getStateReligion() == iProtestantism or player(iChina).getStateReligion() == iProtestantism: iMaxCitiesMultiplier = 5
+	
+	if len(potentialCities) * iMaxCitiesMultiplier >= len(asianCities):
+		spreadCity = potentialCities.random()
+		if spreadCity:
+			spreadCity.spreadReligion(iProtestantism)
 
 @handler("techAcquired")
 def checkReformation(iTech, iTeam, iPlayer):
