@@ -610,7 +610,11 @@ def getUnitsForRole(iPlayer, iRole, bUnique=True):
 	
 	elif iRole == iAssaultSea:
 		for _ in range(infos.unit(iUnit).getCargoSpace()):
-			units.append(getUnitForRole(iPlayer, iAttack, bUnique=bUnique))
+			# civs that prefer cavalry naval assault spawns
+			if civ(iPlayer) in [iEngland]:
+				units.append(getUnitForRole(iPlayer, iShock, bUnique=bUnique))
+			else:
+				units.append(getUnitForRole(iPlayer, iAttack, bUnique=bUnique))
 	
 	return units
 
@@ -807,6 +811,9 @@ def canRespawn(iCiv):
 		
 	# Qin (China) cannot respawn if Xia (Zhou) is alive and vice-versa
 	if exclusive(iCiv, iChina, iXia):
+		return False
+	
+	if exclusive(iSaxons, iEngland):
 		return False
 			
 	return True

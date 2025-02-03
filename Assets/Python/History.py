@@ -18,6 +18,8 @@ dRelocatedCapitals = CivDict({
 	iMamluks : tCairo,
 	iGhorids: tDelhi,
 	iTimurids: tDelhi,
+	iEngland: tLondon,
+	iSaxons: tLondon,
 })
 
 dCapitalInfrastructure = CivDict({

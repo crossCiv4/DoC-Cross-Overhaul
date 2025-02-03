@@ -1242,6 +1242,7 @@ enum CivilizationTypes		// Exposed to Python
 	ROME,
 	RUS,
 	RUSSIA,
+	SAXONS,
 	SHU,
 	SPAIN,
 	SWAHILI,
@@ -1384,7 +1385,7 @@ enum LeaderHeadTypes			// Exposed to Python
 	PHILIP,
 	FRANCO,
 
-	ALFRED,
+	WILLIAM_THE_CONQUEROR,
 	ELIZABETH,
 	VICTORIA,
 	CHURCHILL,
@@ -1494,6 +1495,8 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	SHAKA,
 	NELSON_MANDELA,
+
+	ALFRED,
 
 	NUM_LEADERHEADS
 };

@@ -97,6 +97,7 @@ dResourcesDict = {
 	(62, 32)  : (1000,  iBanana),   # West Africa
 	(116, 42) : (1000,  iOpium),    # Burma
 	(117, 45) : (1000,  iOpium),    # Burma
+	(59, 66)  : (1100,  iFish),		# England
 	(83, 24)  : (1100,  iSugar),	# Nigeria
 	(83, 19)  : (1100,  iSugar),	# Mozambique
 	(92, 60)  : (1200,  iSilk),     # Volga Delta
@@ -327,7 +328,6 @@ dRemovedFeaturesDict = {
 	(88, 46)  : 1050, # Mesopotamia
 	(63, 65)  : 1500, # Netherlands
 	(62, 64)  : 1500, # Netherlands
-	(62, 65)  : 1500, # Netherlands
 	(99, 59)  : 1600, # Transoxiana
 	(98, 58)  : 1600, # Transoxiana
 	(96, 56)  : 1600, # Transoxiana

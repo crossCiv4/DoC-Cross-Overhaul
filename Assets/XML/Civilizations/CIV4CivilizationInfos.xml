@@ -1991,7 +1991,7 @@
 			<PaganReligion>PAGAN_RELIGION_DRUIDISM</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>ENG</Identifier>
-			<StartingYear>820</StartingYear>
+			<StartingYear>1035</StartingYear>
 			<LoadingTimes>
 				<LoadingTime>6</LoadingTime>
 				<LoadingTime>2</LoadingTime>
@@ -2084,7 +2084,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 				<Leader>
-					<LeaderName>LEADER_ALFRED</LeaderName>
+					<LeaderName>LEADER_WILLIAM_CONQUEROR</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -6693,6 +6693,104 @@
 			<DerivativeCiv>CIVILIZATION_RUS</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_RUSSIA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_RUSSIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_SAXONS</Type>
+			<Description>TXT_KEY_CIV_ANGLO-SAXONS_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_ANGLO-SAXONS_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_ANGLO-SAXONS_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_SAXONS_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_SAXONS</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_SAXONS</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_ASATRU</PaganReligion>
+			<Impact>IMPACT_CRITICAL</Impact>
+			<Identifier>SAX</Identifier>
+			<StartingYear>430</StartingYear>
+			<LoadingTimes>
+				<LoadingTime>5</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+			</LoadingTimes>
+			<Rating>
+				<Trade>2</Trade>
+				<Production>4</Production>
+				<Culture>2</Culture>
+				<Growth>3</Growth>
+				<Start>3</Start>
+			</Rating>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Cambridge</City>
+				<City>Hastings</City>
+				<City>Coventry</City>
+				<City>Cardiff</City>
+				<City>Liverpool</City>
+				<City>Dover</City>
+				<City>Brighton</City>
+				<City>Leeds</City>
+				<City>Reading</City>
+				<City>Gloucester</City>
+				<City>Bristol</City>
+				<City>Leicester</City>
+				<City>Ipswich</City>
+				<City>Portsmouth</City>
+				<City>Berwick</City>
+				<City>Middlesbrough</City>
+				<City>Sheffield</City>
+				<City>Lancaster</City>
+				<City>Blackpool</City>
+				<City>Hull</City>
+			</Cities>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_JAIL</BuildingClassType>
+					<BuildingType>BUILDING_SAXON_MOOT_HILL</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_ASATRU_HOF</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_SWORDSMAN</UnitClassType>
+					<UnitType>UNIT_SAXON_THANE</UnitType>
+				</Unit>
+			</Units>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_CHIEFDOM</CivicType>
+				<CivicType>CIVIC_PERSONALISM</CivicType>
+				<CivicType>CIVIC_TRADITIONALISM</CivicType>
+				<CivicType>CIVIC_RECIPROCITY</CivicType>
+				<CivicType>CIVIC_ANIMISM</CivicType>
+				<CivicType>CIVIC_KINSHIP</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_ALFRED</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_ENGLAND</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_HOLY_ROMAN_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_HOLY_ROMAN_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_SHU</Type>

@@ -6892,6 +6892,20 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 				}
 			}
 
+			// Saxon UP: +1 commerce, +1 production on forest tiles
+			if (getOwnerINLINE() != NO_PLAYER && GET_PLAYER(getOwnerINLINE()).getCivilizationType() == SAXONS)
+			{
+				if (eYield == YIELD_COMMERCE || eYield == YIELD_PRODUCTION)
+				{
+					switch (getFeatureType())
+					{
+					case FEATURE_FOREST:
+						iYield += 1;
+						break;
+					}
+				}
+			}
+
 			// Prambanan effect: +1 production on islands
 			if (eTeam != NO_TEAM && GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHasBuildingEffect((BuildingTypes)PRAMBANAN))
 			{

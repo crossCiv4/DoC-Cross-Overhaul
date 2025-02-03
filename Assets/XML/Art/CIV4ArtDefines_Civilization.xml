@@ -480,5 +480,11 @@
 			<Path>Art/Interface/TeamColor/FlagDECAL_Hausa.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_SAXONS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/saxons.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Saxons.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>		
 	</CivilizationArtInfos>
 </Civ4ArtDefines>

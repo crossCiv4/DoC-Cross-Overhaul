@@ -1305,4 +1305,20 @@
 		<Italian>25% chance to create a friendly copy of a defeated unit</Italian>
 		<Spanish>25% chance to create a friendly copy of a defeated unit</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SAX_TITLE</Tag>
+		<English>The Power of Irminsul:</English>
+		<French>The Power of Irminsul:</French>
+		<German>The Power of Irminsul:</German>
+		<Italian>The Power of Irminsul:</Italian>
+		<Spanish>The Power of Irminsul:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SAX</Tag>
+		<English>Forests yield extra [ICON_COMMERCE] and [ICON_PRODUCTION]</English>
+		<French>Forests yield extra [ICON_COMMERCE] and [ICON_PRODUCTION]</French>
+		<German>Forests yield extra [ICON_COMMERCE] and [ICON_PRODUCTION]</German>
+		<Italian>Forests yield extra [ICON_COMMERCE] and [ICON_PRODUCTION]</Italian>
+		<Spanish>Forests yield extra [ICON_COMMERCE] and [ICON_PRODUCTION]</Spanish>
+	</TEXT>
 </Civ4GameText>

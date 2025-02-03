@@ -496,7 +496,7 @@ dForeignNames = deepdict({
 })
 
 lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria]
-lRepublicAdj = [iBabylonia, iRome, iMoors, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina]
+lRepublicAdj = [iBabylonia, iRome, iMoors, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons]
 
 lSocialistRepublicOf = [iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia]
 lSocialistRepublicAdj = [iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina]
@@ -602,7 +602,8 @@ dStartingLeaders = [
 	iJava : iHayamWuruk,
 	iSpain : iIsabella,
 	iFrance : iCharlemagne,
-	iEngland : iAlfred,
+	iEngland : iWilliamConqueror,
+	iSaxons: iAlfred,
 	iHolyRome : iBarbarossa,
 	iBurma : iAnawrahta,
 	iRus : iYaroslav,
@@ -2220,7 +2221,10 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 			
 	elif iCiv == iEngland:
-		if capital not in cities.core(iEngland):
+		if iEra == iMedieval and len(cities.region(rBritain).owner(iEngland)) == 0:
+			return "TXT_KEY_CIV_FRENCH_ENGLAND"
+
+		if iEra > iMedieval and capital not in cities.core(iEngland):
 			return "TXT_KEY_CIV_ENGLAND_EXILE"
 			
 		if iEra == iMedieval and player(iFrance).isExisting() and team(iFrance).isAVassal() and civ(master(iFrance)) == iEngland:

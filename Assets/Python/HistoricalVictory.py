@@ -73,6 +73,7 @@ EASTER_ISLAND = "TXT_KEY_VICTORY_NAME_EASTER_ISLAND"
 EASTERN_EUROPE = "TXT_KEY_VICTORY_NAME_EASTERN_EUROPE"
 EGYPT = "TXT_KEY_VICTORY_NAME_EGYPT"
 EGYPT_COASTAL = "TXT_KEY_VICTORY_NAME_EGYPT_COASTAL"
+ENGLAND  = "TXT_KEY_VICTORY_NAME_ENGLAND"
 ELAM = "TXT_KEY_VICTORY_NAME_ELAM"
 EUROPE = "TXT_KEY_VICTORY_NAME_EUROPE"
 GAUL = "TXT_KEY_VICTORY_NAME_GAUL"
@@ -540,6 +541,23 @@ dGoals = {
 			plots.rectangle(tAndalusia).named(ANDALUSIA),
 			plots.region(rItaly),
 			at=1450,
+		),
+	),
+	iSaxons: (
+		# Defeat Charlemagne --> Shed the Blood of the Frankish Men
+		All(
+			AreaNoStateReligion(plots.region(rLowerGermany), iOrthodoxy, at=810),
+			DefeatedUnits(civs(iFrance), 5, by=810),
+		),
+
+		#Thanes
+		UnitCombatLevelCount(UnitCombatTypes.UNITCOMBAT_MELEE, 5, 3, by=1066),
+
+		# Conquer & survive the conquests of Britain
+		All(
+			Control(plots.rectangle(tEngland).named(ENGLAND), at=750),
+			Control(plots.rectangle(tEngland).named(ENGLAND), at=900),
+			Control(plots.rectangle(tEngland).named(ENGLAND), at=1200),
 		),
 	),
 	iFrance: (

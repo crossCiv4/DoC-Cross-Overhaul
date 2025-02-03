@@ -1142,6 +1142,18 @@
 		<Spanish>William III</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_WILLIAM_CONQUEROR</Tag>
+		<English>William the Conqueror</English>
+		<French>
+			<Text>Guillaume le conqu&#233;rant</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>William the Conqueror</German>
+		<Italian>William the Conqueror</Italian>
+		<Spanish>William the Conqueror</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_GEORGE_I</Tag>
 		<English>George I</English>
 		<French>

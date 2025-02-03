@@ -35,15 +35,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ENGLAND_PEOPLES</Tag>
-		<English>Anglo-Saxon Peoples</English>
+		<English>Norman Peoples</English>
 		<French>
-			<Text>Peuplades anglo-saxonnes</Text>
+			<Text>Peuplades normandes</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Anglo-Saxon Peoples</German>
-		<Italian>Anglo-Saxon Peoples</Italian>
-		<Spanish>Anglo-Saxon Peoples</Spanish>
+		<German>Norman Peoples</German>
+		<Italian>Norman Peoples</Italian>
+		<Spanish>Norman Peoples</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ENGLAND_DEFAULT</Tag>

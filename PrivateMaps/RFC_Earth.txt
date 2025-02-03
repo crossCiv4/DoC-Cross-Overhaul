@@ -25562,6 +25562,7 @@ BeginPlot
 	x=57,y=66
 	RiverNSDirection=0
 	isWOfRiver
+	BonusType=BONUS_COAL
 	FeatureType=FEATURE_FOREST, FeatureVariety=4
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -26027,7 +26028,6 @@ BeginPlot
 	x=58,y=67
 	isNOfRiver
 	RiverWEDirection=1
-	BonusType=BONUS_COAL
 	FeatureType=FEATURE_FOREST, FeatureVariety=4
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -26470,7 +26470,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=66
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -27807,7 +27806,6 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	TerrainType=TERRAIN_LAGOON
-	FeatureType=FEATURE_MARSH, FeatureVariety=2
 	PlotType=2
 EndPlot
 BeginPlot

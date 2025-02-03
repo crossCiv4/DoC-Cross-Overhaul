@@ -3350,6 +3350,22 @@
 		<Spanish>Ribat</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SAXON_MOOT_HILL</Tag>
+		<English>Moot Hill</English>
+		<French>Moot Hill</French>
+		<German>Moot Hill</German>
+		<Italian>Moot Hill</Italian>
+		<Spanish>Moot Hill</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SAXON_MOOT_HILL_PEDIA</Tag>
+		<English>A Moot hill is a hill or mound historically used as a meeting place. In early mediaeval Britain, such hills were used for moots, meetings of local people to settle local business. Among other things, proclamations might be read; decisions might be taken; court cases might be settled at a moot. Although some moot hills were naturally occurring features or had been created long before as burial mounds, others were purpose-built.</English>
+		<French>A Moot hill is a hill or mound historically used as a meeting place. In early mediaeval Britain, such hills were used for moots, meetings of local people to settle local business. Among other things, proclamations might be read; decisions might be taken; court cases might be settled at a moot. Although some moot hills were naturally occurring features or had been created long before as burial mounds, others were purpose-built.</French>
+		<German>A Moot hill is a hill or mound historically used as a meeting place. In early mediaeval Britain, such hills were used for moots, meetings of local people to settle local business. Among other things, proclamations might be read; decisions might be taken; court cases might be settled at a moot. Although some moot hills were naturally occurring features or had been created long before as burial mounds, others were purpose-built.</German>
+		<Italian>A Moot hill is a hill or mound historically used as a meeting place. In early mediaeval Britain, such hills were used for moots, meetings of local people to settle local business. Among other things, proclamations might be read; decisions might be taken; court cases might be settled at a moot. Although some moot hills were naturally occurring features or had been created long before as burial mounds, others were purpose-built.</Italian>
+		<Spanish>A Moot hill is a hill or mound historically used as a meeting place. In early mediaeval Britain, such hills were used for moots, meetings of local people to settle local business. Among other things, proclamations might be read; decisions might be taken; court cases might be settled at a moot. Although some moot hills were naturally occurring features or had been created long before as burial mounds, others were purpose-built.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_</Tag>
 		<English></English>
 		<French></French>

@@ -3937,5 +3937,15 @@
 			<KFM/>
 			<Button>Art/Structures/Buildings/EU4_Forts/Forts African/ribat.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SAXON_MOOT_HILL</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.2</fScale>
+			<fInterfaceScale>0.32</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Moot_Hill/Amber College.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Moot_Hill/moot_hill.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

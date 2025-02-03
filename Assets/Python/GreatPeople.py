@@ -66,7 +66,8 @@ def getAlias(iCiv, iType, iEra):
 	elif iCiv == iChinaS or iCiv == iShu or iCiv == iXia: return iChina
 	elif iCiv == iGhorids: return iTimurids
 	elif iCiv == iKhazars: return iTurks
-	elif iCiv == iNigeria: return iMali
+	elif iCiv == iNigeria or iCiv == iZulu: return iMali
+	elif iCiv == iSaxons: return iEngland
 	
 	return iCiv
 	

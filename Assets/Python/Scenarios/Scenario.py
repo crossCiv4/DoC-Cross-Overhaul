@@ -86,6 +86,7 @@ LEADER_DATES = {
 	iLouis: 1650,
 	iNapoleon: 1800,
 	iDeGaulle: 1950,
+	iWilliamConqueror: 1035,
 	iAlfred: 880,
 	iElizabeth: 1560,
 	iVictoria: 1840,

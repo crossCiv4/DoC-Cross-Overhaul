@@ -738,6 +738,14 @@
 		<Spanish>Scottish</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_PICTISH</Tag>
+		<English>Pictish</English>
+		<French>Pictish</French>
+		<German>Pictish</German>
+		<Italian>Pictish</Italian>
+		<Spanish>Pictish</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_SCYTHIAN</Tag>
 		<English>Scythian</English>
 		<French>Scythian</French>

@@ -41,6 +41,7 @@ lExpansionCivs = [
 	iChina,
 	iAssyria,
 	iFrance,
+	iEngland,
 ]
 
 lIndependenceCivs = [
@@ -55,6 +56,7 @@ lIndependenceCivs = [
 	iGreece,
 	iGhorids,
 	iByzantium,
+	iHolyRome,
 ]
 
 lDynamicReligionCivs = [
@@ -497,15 +499,23 @@ class Birth(object):
 			self.area += additionalPlots
 			self.area = self.area.unique()
 
+		# idem but HRE with France. We use the middle of France as the comparison point
+		elif self.iCiv == iHolyRome:
+			closerCities = cities.owner(iFrance).where(lambda city: real_distance(city, self.location) <= real_distance(city, (61, 57)))
+			additionalPlots = closerCities.plots().expand(2).where(lambda p: p.getOwner() == player(iFrance).getID())
+
+			self.area += additionalPlots
+			self.area = self.area.unique()
+
 		# I'm not sure this does anything? It has a duplicate in flip()
-		if self.iCiv == iRussia:
+		elif self.iCiv == iRussia:
 			if player(iRussia).isHuman() or player(iRus).isHuman():
 				self.area = self.area.without(plots.rectangle(tNovgorod))
 		
-		if self.iCiv == iMexico:
+		elif self.iCiv == iMexico:
 			self.area = self.area.where(lambda p: p.isPlayerCore(self.iPlayer) or not owner(p, iAmerica))
 		
-		if self.iCiv == iCanada:
+		elif self.iCiv == iCanada:
 			self.area += cities.regions(rOntario, rQuebec, rMaritimes).where(lambda city: city.getX() < plots.capital(iCanada).getX()).where(lambda city: civ(city) in [iFrance, iEngland, iAmerica]).plots().expand(2).where(lambda p: not p.isCore(p.getOwner()))
 			self.area = self.area.unique()
 		

@@ -2556,6 +2556,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 2;
 		//aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
 		break;
+	case SAXONS:
 	case ENGLAND:
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 5;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
@@ -2732,6 +2733,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		{
 		case FRANCE:
 		case SPAIN:
+		case SAXONS:
 		case ENGLAND:
 		case PORTUGAL:
 		case NETHERLANDS:

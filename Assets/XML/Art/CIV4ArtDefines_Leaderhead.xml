@@ -711,7 +711,7 @@
 			<BackgroundKFM>art/LeaderHeads/NasserFINAL/fdr_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_ALFRED</Type>
+			<Type>ART_DEF_LEADER_WILLIAM_CONQUEROR</Type>
 			<Button>Art/LeaderHeads/Harold/Harold.dds</Button>
 			<NIF>art/LeaderHeads/Harold/ragnar_lodbrok.nif</NIF>
 			<KFM>art/LeaderHeads/Harold/ragnar_lodbrok.kfm</KFM>
@@ -1285,6 +1285,14 @@
 			<KFM>Art/Leaderheads/Ho Chi Minh/genghis_khan.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/Ho Chi Minh/HoChiMinh.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Ho Chi Minh/genghis_khan_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ALFRED</Type>
+			<Button>Art/Leaderheads/alfred/alfred.dds</Button>
+			<NIF>Art/Leaderheads/alfred/brennus.nif</NIF>
+			<KFM>Art/Leaderheads/alfred/brennus.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/alfred/brennus_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/alfred/brennus_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

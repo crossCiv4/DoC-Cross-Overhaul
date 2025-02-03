@@ -2628,6 +2628,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=66
+	BonusType=BONUS_FISH
 	ImprovementType=IMPROVEMENT_FISHING_BOATS
 EndPlot
 BeginPlot

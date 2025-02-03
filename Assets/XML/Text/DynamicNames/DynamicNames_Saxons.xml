@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANGLO-SAXONS_DESC</Tag>
+		<English>The Anglo-Saxons</English>
+		<French>The Anglo-Saxons</French>
+		<German>The Anglo-Saxons</German>
+		<Italian>The Anglo-Saxons</Italian>
+		<Spanish>The Anglo-Saxons</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANGLO-SAXONS_PEOPLES</Tag>
+		<English>Anglo-Saxon Peoples</English>
+		<French>
+			<Text>Peuplades anglo-saxonnes</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Anglo-Saxon Peoples</German>
+		<Italian>Anglo-Saxon Peoples</Italian>
+		<Spanish>Anglo-Saxon Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANGLO-SAXONS_ADJECTIVE</Tag>
+		<English>Anglo-Saxon</English>
+		<French>Anglo-Saxon</French>
+		<German>Anglo-Saxon</German>
+		<Italian>Anglo-Saxon</Italian>
+		<Spanish>Anglo-Saxon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANGLO-SAXONS_SHORT_DESC</Tag>
+		<English>Anglo-Saxons</English>
+		<French>Anglo-Saxons</French>
+		<German>Anglo-Saxons</German>
+		<Italian>Anglo-Saxons</Italian>
+		<Spanish>Anglo-Saxons</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANGLO-SAXONS_DEFAULT</Tag>
+		<English>%s2 Petty Kingdoms</English>
+		<French>%s2 Petty Kingdoms</French>
+		<German>%s2 Petty Kingdoms</German>
+		<Italian>%s2 Petty Kingdoms</Italian>
+		<Spanish>%s2 Petty Kingdoms</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANGLO-SAXONS_REPUBLIC</Tag>
+		<English>%s2 Moot</English>
+		<French>%s2 Moot</French>
+		<German>%s2 Moot</German>
+		<Italian>%s2 Moot</Italian>
+		<Spanish>%s2 Moot</Spanish>
+	</TEXT>
+</Civ4GameText>

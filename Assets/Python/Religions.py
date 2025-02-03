@@ -239,7 +239,7 @@ def spreadProtestantismInEastAsia():
 	if not periodic(10): 
 		return
 	
-	asianCities = cities.region(rSouthChina, rKorea)
+	asianCities = cities.regions(rSouthChina, rKorea)
 	potentialCities = asianCities.where(lambda c: not c.isHasReligion(iProtestantism))
 	
 	iMaxCitiesMultiplier = 2

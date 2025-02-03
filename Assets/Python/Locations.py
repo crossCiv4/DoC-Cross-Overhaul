@@ -55,6 +55,9 @@ iCanadianEastWestBorder = 8
 # Assyria conquest goal: to own Elam (the region around Susa)
 tElam = ((92, 45), (93, 47))
 
+# Saxon goal: hold this area
+tEngland = ((57, 62),	(59, 67))
+
 ### Tiles ###
 
 tAngkor = (121, 37)
@@ -85,3 +88,4 @@ tTrebizond = (86, 54)
 tMycenae = (75, 50)
 tDelhi = (105, 46)
 tVaranasi = (108, 44)
+tLondon= (58, 64)

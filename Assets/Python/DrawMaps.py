@@ -8,13 +8,13 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 79
+iNumCivs = 80
 (iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iByzantium, iCanada, 
 iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, iGhorids,
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, iKhazars,
 iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iMaya, iMexico, iMinoans, iMongols, iMoors, 
 iTimurids, iNetherlands, iNigeria, iNorse, iNubia, iOttomans, iParthia, iPersia, iPoland, iPolynesia, iPortugal, 
-iRome, iRus, iRussia, iShu, iSpain, iSwahili, iSweden, iThailand, iTibet, iToltecs, 
+iRome, iRus, iRussia, iSaxons, iShu, iSpain, iSwahili, iSweden, iThailand, iTibet, iToltecs, 
 iTurks, iVietnam, iXia, iZulu, iIndependent, iIndependent2, iNative, iMinor, iBarbarian) = range(iNumCivs)
 
 iNumRegions = 87
@@ -96,6 +96,7 @@ dCivNames = {
 	iGhorids: "Ghorids",
 	iNigeria: "Nigeria",
 	iZulu: "Zulu",
+	iSaxons: "Saxons",
 }
 
 dReligionNames = {
@@ -157,6 +158,7 @@ iMalays :		((119, 24),	(128, 28)),
 iMoors :		((56, 44),	(61, 50)),
 iSpain :		((54, 51),	(59, 54)),
 iFrance :		((59, 56),	(63, 62)),
+iSaxons :		((57, 62),	(59, 67)),
 iKhmer :		((120, 34),	(123, 38)),
 iEngland :		((56, 63),	(59, 67)),
 iHolyRome :		((64, 59),	(70, 63)),
