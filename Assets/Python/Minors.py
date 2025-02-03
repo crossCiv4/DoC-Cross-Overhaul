@@ -514,7 +514,7 @@ minor_cities = [
 	#MinorCity(700, iIndependent2, (71, 36), "Njimi", iPopulation=1, iCiv=iArabia, units={iHarass: 1}, adjective="TXT_KEY_ADJECTIVE_KANURI"),
 	#MinorCity(750, iIndependent, (91, 60), "Atil", iPopulation=2, iCiv=iTurks, units={iHarass: 3}, adjective="TXT_KEY_ADJECTIVE_KHAZAR"),
 	MinorCity(800, iNative, (30, 34), u"Bacatá", iPopulation=1, iCiv=iInca, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_MUISCA"),
-	MinorCity(430, iIndependent, (56, 71), "Inbhir Nis", iPopulation=2, iCiv=iCelts, units={iDefend: 1, iCounter: 3}, buildings=[iWalls, iMenhir], condition=lambda: not player(iCelts).isExisting() and not player(iCelts).isHuman(), adjective="TXT_KEY_ADJECTIVE_PICTISH"),
+	MinorCity(430, iIndependent, (56, 71), "Inbhir Nis", iPopulation=2, iCiv=iCelts, units={iDefend: 2, iHarass: 1, iCounter: 3}, buildings=[iWalls, iMenhir], condition=lambda: not player(iCelts).isExisting() and not player(iCelts).isHuman(), adjective="TXT_KEY_ADJECTIVE_PICTISH"),
 	MinorCity(820, iBarbarian, (70, 65), "Szczecin", iPopulation=2, iCiv=iPoland, units={iAttack: 2, iSkirmish: 2}, adjective="TXT_KEY_ADJECTIVE_POMERANIAN"),
 	MinorCity(530, iIndependent, (54, 65), u"Áth Cliath", iPopulation=1, iCiv=iCelts, units={iDefend: 2}, condition=lambda: not player(iCelts).isExisting() and not player(iCelts).isHuman(), adjective="TXT_KEY_ADJECTIVE_IRISH"),
 	MinorCity(860, iBarbarian, (76, 59), u"Kolozsvár", iPopulation=3, iCiv=iTurks, units={iHarass: 3}, adjective="TXT_KEY_ADJECTIVE_MAGYAR"),
