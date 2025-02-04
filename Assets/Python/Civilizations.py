@@ -1116,13 +1116,13 @@ dStartingUnits = CivDict({
 		iMissionary: 3,
 	},
 	iPoland: {
-		iSettle: 2,
+		iSettle: 3,
 		iWork: 2,
-		iDefend: 1,
+		iDefend: 3,
 		iAttack: 2,
 		iShock: 2,
 		iSiege: 1,
-		iMissionary: 1,
+		iMissionary: 2,
 	},
 	iPortugal: {
 		iSettle: 1,
@@ -1643,6 +1643,9 @@ dSpecificAIStartingUnits = CivDict({
 	},
 	iTimurids: {
 		iKeshik: 12,
+	},
+	iParthia: {
+		iHorseArcher: 2,
 	}
 }, {})
 

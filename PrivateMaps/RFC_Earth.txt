@@ -31829,6 +31829,7 @@ BeginPlot
 	x=71,y=63
 	RiverNSDirection=0
 	isWOfRiver
+	BonusType=BONUS_COPPER
 	FeatureType=FEATURE_FOREST, FeatureVariety=4
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -32308,7 +32309,7 @@ BeginPlot
 	x=72,y=63
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_COPPER
+	BonusType=BONUS_WHEAT
 	FeatureType=FEATURE_FOREST, FeatureVariety=4
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
