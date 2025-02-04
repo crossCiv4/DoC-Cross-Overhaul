@@ -558,26 +558,12 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_NORSE
+		UnitOwner=CIVILIZATION_BARBARIAN
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_NORSE
+		CityOwner=CIVILIZATION_BARBARIAN
 		CityName=Roskilde
 		CityPopulation=2
-		YearFounded=570
-	EndCity
-EndPlot
-BeginPlot
-	x=68,y=72
-	RouteType=ROUTE_ROAD
-	BeginUnit
-		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_NORSE
-	EndUnit
-	BeginCity
-		CityOwner=CIVILIZATION_NORSE
-		CityName=Oslo
-		CityPopulation=1
 		YearFounded=570
 	EndCity
 EndPlot
@@ -585,18 +571,17 @@ BeginPlot
 	x=68,y=75
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_NORSE
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_BARBARIAN
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_NORSE
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_BARBARIAN
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_NORSE
+		CityOwner=CIVILIZATION_BARBARIAN
 		CityName=Nidaróss
 		CityPopulation=2
-		BuildingType=BUILDING_PALACE
 		YearFounded=550
 	EndCity
 EndPlot

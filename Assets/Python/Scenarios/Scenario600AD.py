@@ -104,13 +104,6 @@ lCivilizations = [
 		techs=techs.column(6).without(iPolitics, iScholarship)
 	),
 	Civilization(
-		iNorse,
-		iGold=150,
-		lCivics=[iElective, iSlavery, iMerchantTrade, iThalassocracy],
-		lEnemies=[iIndependent, iIndependent2],
-		techs=techs.column(6).without(iEthics)
-	),
-	Civilization(
 		iTurks,
 		iGold=100,
 		lCivics=[iDespotism, iSlavery, iMerchantTrade, iHegemony],

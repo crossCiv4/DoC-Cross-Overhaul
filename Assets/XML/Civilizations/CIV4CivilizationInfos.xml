@@ -5485,7 +5485,7 @@
 			<PaganReligion>PAGAN_RELIGION_ASATRU</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>NOR</Identifier>
-			<StartingYear>545</StartingYear>
+			<StartingYear>770</StartingYear>
 			<LoadingTimes>
 				<LoadingTime>4</LoadingTime>
 				<LoadingTime>0</LoadingTime>

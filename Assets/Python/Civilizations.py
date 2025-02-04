@@ -425,12 +425,6 @@ lCivilizations = [
 		techs=techs.column(5).including(iNobility, iSteel, iArchitecture, iArtisanry)
 	),
 	Civilization(
-		iNorse, 
-		iGold=150,
-		lCivics=[iElective, iSlavery, iMerchantTrade, iThalassocracy],
-		techs=techs.column(6).without(iScholarship, iEthics)
-	),
-	Civilization(
 		iTurks,
 		iGold=100,
 		lCivics=[iDespotism, iSlavery, iMerchantTrade, iHegemony],
@@ -483,6 +477,12 @@ lCivilizations = [
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iTheocracy, iSlavery, iMerchantTrade, iClergy, iHegemony],
 		techs=techs.column(6).including(iMachinery, iAlchemy, iTheology)
+	),
+	Civilization(
+		iNorse, 
+		iGold=200,
+		lCivics=[iElective, iSlavery, iMerchantTrade, iThalassocracy],
+		techs=techs.column(6)
 	),
 	Civilization(
 		iHolyRome,
@@ -937,8 +937,8 @@ dStartingUnits = CivDict({
 	iSaxons: {
 		iSettle: 1,
 		iWork: 2,
-		iDefend: 3,
-		iCounter: 2,
+		iDefend: 4,
+		iCounter: 3,
 		iAttack: 1,
 		iSiege: 1,
 		iSettleSea: 1,
@@ -977,8 +977,7 @@ dStartingUnits = CivDict({
 		iWork: 2,
 		iSettleSea: 2,
 		iDefend: 2,
-		iExplore: 1,
-		iAssaultSea: 2,
+		iAssaultSea: 3,
 		iWorkerSea: 2,
 	},
 	iTurks: {

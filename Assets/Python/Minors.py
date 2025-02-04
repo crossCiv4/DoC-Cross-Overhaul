@@ -610,7 +610,7 @@ barbarians = [
 	Barbarians(300, 1500, {iCamelArcher: 1}, ((86, 38), (91, 45)), 10, NOMADS, target_area=((77, 39), (91, 50)), adjective="TXT_KEY_ADJECTIVE_BEDOUIN"),
 	Barbarians(340, 440, {iSwordsman: 3, iAxeman: 4, iCatapult: 1}, ((59, 59), (65, 65)), 3, INVADERS, target_area=((59, 55), (66, 63)), iAlternativeCiv=iFrance, adjective="TXT_KEY_ADJECTIVE_FRANKISH"),
 	Barbarians(330, 430, {iSwordsman: 3, iSavaran: 2, iCatapult: 1}, ((64, 59), (75, 65)), 3, INVADERS, target_area=((58, 52), (71, 62)), adjective="TXT_KEY_ADJECTIVE_VANDAL"),
-	Barbarians(350, 530, {iSwordsman: 2, iHorseArcher: 1, iAxeman: 2, iCatapult: 1}, ((66, 53), (73, 66)), 3, INVADERS, target_area=((65, 51), (70, 57)), adjective="TXT_KEY_ADJECTIVE_OSTROGOTHIC"),
+	Barbarians(350, 530, {iSwordsman: 2, iHorseArcher: 1, iAxeman: 2, iCatapult: 1}, ((70, 58), (72, 61)), 3, INVADERS, target_area=((65, 51), (70, 57)), adjective="TXT_KEY_ADJECTIVE_OSTROGOTHIC"),
 	Barbarians(340, 420, {iSwordsman: 3, iAxeman: 2, iCatapult: 1}, ((65, 60), (70, 64)), 3, INVADERS, target_area=((54, 49), (62, 58)), iAlternativeCiv=iSpain, adjective="TXT_KEY_ADJECTIVE_VISIGOTHIC"),
 	Barbarians(350, 450, {iOghuz: 5, iCatapult: 1, iSwordsman: 1}, ((61, 57), (77, 62)), 2, INVADERS, target_area=((57, 51), (71, 61)), adjective="TXT_KEY_ADJECTIVE_HUNNIC", promotions=(iMobility,)),
 	Barbarians(350, 540, {iOghuz: 5}, ((93, 53), (100, 60)), 1, INVADERS, target_area=((92, 44), (102, 52)), adjective="TXT_KEY_ADJECTIVE_HUNA", iAlternativeCiv=iTurks, promotions=(iMobility, iDesertAdaptation, iSteppeAdaptation)), # Hephtalites
