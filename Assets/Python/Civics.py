@@ -96,7 +96,7 @@ def isRepublic(iPlayer):
 	if civic.iGovernment == iDemocracy:
 		return True
 	
-	if civic.iGovernment in [iDespotism, iRepublic, iElective] and civic.iLegitimacy == iConstitution:
+	if civic.iGovernment in [iDespotism, iRepublic, iElective] and (civic.iLegitimacy == iConstitution or civic.iTerritory == iNationhood):
 		return True
 	
 	return False

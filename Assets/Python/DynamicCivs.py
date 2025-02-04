@@ -1061,6 +1061,9 @@ def specificName(iPlayer):
 			return "TXT_KEY_CIV_CHINA_QING"
 
 	elif iCiv == iChinaS:
+		if bResurrected and year() >= year(1830):
+			return "TXT_KEY_CIV_WU_FASCIST"
+
 		if bEmpire and not player(iChina).isExisting():
 			if iEra >= iRenaissance:
 				return "TXT_KEY_CIV_CHINA_MING"
@@ -1433,6 +1436,9 @@ def specificAdjective(iPlayer):
 				return "TXT_KEY_CIV_CHINA_QIN"			
 
 	elif iCiv == iChinaS:
+		if bResurrected and year() >= year(1830):
+			return "TXT_KEY_CIV_CHINA_ADJECTIVE"
+
 		if bMonarchy:
 			if iEra == iMedieval and tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder):
 				return "TXT_KEY_CIV_WU_SONG"
@@ -2492,7 +2498,7 @@ def leader(iPlayer):
 	elif iCiv == iChinaS:
 		if iEra >= iIndustrial: return iChiangKaishek
 
-		if bResurrected and year() >= (1830): return iChiangKaishek
+		if bResurrected and year() >= year(1830): return iChiangKaishek
 		
 		if year() >= year(1120): return iGaozong
 
