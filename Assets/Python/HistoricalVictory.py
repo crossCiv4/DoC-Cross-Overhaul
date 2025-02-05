@@ -717,7 +717,7 @@ dGoals = {
 			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupMiddleEast).named(MIDDLE_EAST)),
 			at=970,
 		),
-		GoldenAges(3, by=1250),
+		TradeRouteCount(9, by=1350),
 		All(
 			BuildingCount(iOrthodoxCathedral, 1),
 			BuildingCount(iJewishCathedral, 1),
