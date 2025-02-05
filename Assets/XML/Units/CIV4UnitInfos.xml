@@ -3416,16 +3416,6 @@
 			<iCultureGarrison>5</iCultureGarrison>
 			<iAsset>2</iAsset>
 			<iPower>6</iPower>
-			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_AMPHIBIOUS</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_CITY_RAIDER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-			</FreePromotions>
 			<UnitClassAttackMods>
 				<UnitClassAttackMod>
 					<UnitClassType>UNITCLASS_ARCHER</UnitClassType>

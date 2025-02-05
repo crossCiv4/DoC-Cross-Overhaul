@@ -1385,8 +1385,12 @@ dExtraAIUnits = CivDict({
 	},
 	iFrance: {
 		iAttack: 5,
-		iDefend: 3,
+		iDefend: 6,
 		iShock: 2,
+	},
+	iEngland: {
+		iShock: 1,
+		iDefend: 1,
 	},
 	iMalays: {
 		iDefend: 2,

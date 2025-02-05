@@ -1206,7 +1206,11 @@ def specificName(iPlayer):
 				return "TXT_KEY_CIV_TURKS_UZBEKISTAN"
 				
 			return capitalName(iPlayer)
-		
+
+	elif iCiv == iSaxons:
+		if tPlayer.isHasTech(iFeudalism):
+			return "TXT_KEY_CIV_ENGLAND_SHORT_DESC"
+
 	elif iCiv == iArabia:
 		if bResurrected:
 			return "TXT_KEY_CIV_ARABIA_SAUDI"
@@ -1671,6 +1675,9 @@ def specificAdjective(iPlayer):
 			return infos.civ(iKhmer).getAdjective(0)
 			
 	elif iCiv == iEngland:
+		if player(iSaxons).isAlive() or (iEra == iMedieval and len(cities.region(rBritain).owner(iEngland))) == 0:
+			return "TXT_KEY_CIV_ENGLAND_NORMAN_ADJECTIVE"
+
 		if getColumn(iPlayer) >= 11 and 1 < cities.region(rBritain) <= cities.region(rBritain).owner(iPlayer):
 			return "TXT_KEY_CIV_ENGLAND_BRITISH"
 			
@@ -2225,9 +2232,13 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			
 		if not player(iHolyRome).isExisting() and iEra == iMedieval:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
-			
+	
+	elif iCiv == iSaxons:
+		if tPlayer.isHasTech(iFeudalism):
+			return "TXT_KEY_KINGDOM_OF"
+
 	elif iCiv == iEngland:
-		if iEra == iMedieval and len(cities.region(rBritain).owner(iEngland)) == 0:
+		if player(iSaxons).isAlive() or (iEra == iMedieval and len(cities.region(rBritain).owner(iEngland))) == 0:
 			return "TXT_KEY_CIV_FRENCH_ENGLAND"
 
 		if iEra > iMedieval and capital not in cities.core(iEngland):

@@ -46,6 +46,18 @@
 		<Spanish>Norman Peoples</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_ENGLAND_NORMAN_ADJECTIVE</Tag>
+		<English>Norman</English>
+		<French>
+			<Text>normand:normande:normands:normandes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Norman</German>
+		<Italian>Norman</Italian>
+		<Spanish>Norman</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_ENGLAND_DEFAULT</Tag>
 		<English>Kingdom of %s1</English>
 		<French>
