@@ -144,8 +144,9 @@ def spreadReligionsRegionally():
 	spreadReligionToRegion(iJudaism, [rMesopotamia, rAnatolia, rEgypt], 600, 1000, 15)
 	spreadReligionToRegion(iJudaism, [rOntario, rMaritimes, rAtlanticSeaboard, rMidwest], 1850, 1950, 10)
 
-	spreadReligionToRegion(iIslam, [rHinduKush, rTransoxiana, rKhorasan], 850, 1300, 6)
-	spreadReligionToRegion(iShia, [rPersia, rTransoxiana, rKhorasan, rDeccan, rRajputana, rYemenOman], 915, 1550, 6)
+	spreadReligionToRegion(iOrthodoxy, [rRuthenia, rRussia, rPonticSteppe], 990, 1190, 6, 1)
+	spreadReligionToRegion(iIslam, [rHinduKush, rTransoxiana, rKhorasan, rCentralAsianSteppe, rVolga, rPonticSteppe, rTarimBasin], 750, 1300, 6, 1)
+	spreadReligionToRegion(iShia, [rPersia, rTransoxiana, rKhorasan, rDeccan, rRajputana, rYemenOman], 915, 1550, 6, 1)
 
 @handler("BeginGameTurn")
 def spreadHinduismSoutheastAsia():
@@ -310,7 +311,7 @@ def selectHolyCity(area, tPreferredCity = None, bAIOnly = True):
 	return None
 
 	
-def spreadReligionToRegion(iReligion, lRegions, iStartDate, iEndDate, iInterval):
+def spreadReligionToRegion(iReligion, lRegions, iStartDate, iEndDate, iInterval, iRatio=2):
 	if not game.isReligionFounded(iReligion): return
 	if turn() < year(iStartDate) or turn() > iEndDate: return
 	
@@ -319,7 +320,7 @@ def spreadReligionToRegion(iReligion, lRegions, iStartDate, iEndDate, iInterval)
 	regionCities = cities.regions(*lRegions)
 	religionCities = regionCities.religion(iReligion)
 	
-	if 2 * len(religionCities) < len(regionCities):
+	if iRatio * len(religionCities) < len(regionCities):
 		spreadCity = regionCities.where(lambda city: not city.isHasReligion(iReligion) and player(city.getOwner()).getSpreadType(plot(city), iReligion) > ReligionSpreadTypes.RELIGION_SPREAD_NONE).random()
 		if spreadCity:
 			spreadCity.spreadReligion(iReligion)

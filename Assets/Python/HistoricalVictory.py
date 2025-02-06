@@ -715,15 +715,10 @@ dGoals = {
 			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupEurope).named(EUROPE)),
 			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=civs(iChina, iChinaS, iXia, iShu).named(CHINA)),
 			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupMiddleEast).named(MIDDLE_EAST)),
-			at=970,
+			by=970,
 		),
-		TradeRouteCount(9, by=1350),
-		All(
-			BuildingCount(iOrthodoxCathedral, 1),
-			BuildingCount(iJewishCathedral, 1),
-			BuildingCount(sum(iIslamicCathedral, iShiaCathedral).named(ISLAMIC_CATHEDRAL), 1),
-			by=1350,
-		),
+		TradeRouteCount(12, by=970),
+		BuildingCount(iJewishCathedral, 1, by=1350),
 	),
 	iBulgaria: (
 		All(

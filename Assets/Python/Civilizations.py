@@ -452,7 +452,7 @@ lCivilizations = [
 		iStateReligion=iJudaism,
 		iAdvancedStartPoints=25,
 		lCivics=[iElective, iSlavery, iMerchantTrade],
-		techs=techs.column(5).including(iNobility, iSteel).without(iEngineering, iPhilosophy, iNavigation)
+		techs=techs.column(5).including(iNobility, iSteel, iPolitics).without(iEngineering, iPhilosophy, iNavigation)
 	),
 	Civilization(
 		iBulgaria,
