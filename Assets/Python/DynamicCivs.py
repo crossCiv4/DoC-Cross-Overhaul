@@ -2750,10 +2750,11 @@ def leaderName(iPlayer):
 				return "TXT_KEY_LEADER_KANGXI"
 	
 	elif iCiv == iShu:
-		if not bResurrected:
-			return "TXT_KEY_LEADER_CANCONG"
-		else:
-			return "TXT_KEY_LEADER_LIU_BEI"
+		if iLeader == iLiuBei:
+			if not bResurrected:
+				return "TXT_KEY_LEADER_CANCONG"
+			else:
+				return "TXT_KEY_LEADER_LIU_BEI"
 				
 	elif iCiv == iDravidia:
 		if iLeader == iKrishnaDevaRaya:

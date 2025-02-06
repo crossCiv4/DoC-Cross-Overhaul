@@ -84010,7 +84010,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_LIU_BEI</Type> <!-- similar to Sun Quan-->
-			<Description>TXT_KEY_LEADER_LIU_BEI</Description>
+			<Description>TXT_KEY_LEADER_CANCONG</Description>
 			<Civilopedia>TXT_KEY_LEADER_LIU_BEI_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_LIU_BEI</ArtDefineTag>
 			<iWonderConstructRand>30</iWonderConstructRand>
