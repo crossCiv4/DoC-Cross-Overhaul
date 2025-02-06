@@ -136,6 +136,7 @@ dResourcesDict = {
 	(37, 41)  : (1600,  iCocoa),    # Antilles
 	(96, 19)  : (1600,  iSugar),	# Mauritius
 	(123, 24) : (1600,  iTea),		# Java
+	(71, 66)  : (1630,  iFish),		# Stettin
 	(24, 57)  : (1650,  iPig),      # Midwest
 	(30, 61)  : (1650,  iPig),      # Ontario
 	(42, 25)  : (1650,  iSugar),	# Central Brazil

@@ -4901,6 +4901,10 @@ BeginPlot
 	ImprovementType=IMPROVEMENT_FORT
 EndPlot
 BeginPlot
+	x=71,y=66
+	BonusType=BONUS_FISH
+EndPlot
+BeginPlot
 	x=71,y=68
 	ImprovementType=IMPROVEMENT_VILLAGE
 EndPlot

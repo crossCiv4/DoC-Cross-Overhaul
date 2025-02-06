@@ -8567,7 +8567,7 @@
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
@@ -8597,7 +8597,7 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 				<SpecialistCount>
-					<SpecialistType>SPECIALIST_GREAT_STATESMAN</SpecialistType>
+					<SpecialistType>SPECIALIST_STATESMAN</SpecialistType>
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>

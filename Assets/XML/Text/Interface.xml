@@ -3746,11 +3746,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HAPPY_FEATURES</Tag>
-		<English>+%d1_Change[ICON_HAPPY]: "We prosper close to Oases!"</English>
-		<French>+%d1_Change[ICON_HAPPY]: "We prosper close to Oases!"</French>
-		<German>+%d1_Change[ICON_HAPPY]: "We prosper close to Oases!"</German>
-		<Italian>+%d1_Change[ICON_HAPPY]: "We prosper close to Oases!"</Italian>
-		<Spanish>+%d1_Change[ICON_HAPPY]: "We prosper close to Oases!"</Spanish>
+		<English>+%d1_Change[ICON_HAPPY]: "Some terrain features are making us prosper!"</English>
+		<French>+%d1_Change[ICON_HAPPY]: "Some terrain features are making us prosper!"</French>
+		<German>+%d1_Change[ICON_HAPPY]: "Some terrain features are making us prosper!"</German>
+		<Italian>+%d1_Change[ICON_HAPPY]: "Some terrain features are making us prosper!"</Italian>
+		<Spanish>+%d1_Change[ICON_HAPPY]: "Some terrain features are making us prosper!"</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_</Tag>
