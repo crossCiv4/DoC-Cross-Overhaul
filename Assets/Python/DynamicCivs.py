@@ -139,7 +139,7 @@ dSpecificVassalTitles = deepdict({
 		iByzantium : "TXT_KEY_CIV_FRENCH_BYZANTIUM",
 		iNorse : "TXT_KEY_CIV_FRANCE_DEPARTEMENTS_OF",
 		iArabia : "TXT_KEY_MANDATE_OF",
-		iEngland : "TXT_KEY_CIV_FRENCH_ENGLAND",
+		#iEngland : "TXT_KEY_CIV_DUCHY_NORMANDY",
 		iSpain : "TXT_KEY_CIV_FRENCH_SPAIN",
 		iHolyRome : "TXT_KEY_CIV_FRENCH_HOLY_ROME",
 		iPoland : "TXT_KEY_CIV_FRENCH_POLAND",
@@ -1010,6 +1010,9 @@ def vassalName(iPlayer, iMaster):
 	if iCiv == iNetherlands:
 		return short(iPlayer)
 
+	if iMasterCiv == iFrance and iCiv == iEngland and len(cities.region(rFrance).owner(iEngland)) > 0:
+		return "TXT_KEY_CIV_DUCHY_NORMANDY"
+
 	sSpecificName = dForeignNames[iMasterCiv].get(iCiv)
 	if sSpecificName:
 		return sSpecificName
@@ -1675,7 +1678,7 @@ def specificAdjective(iPlayer):
 			return infos.civ(iKhmer).getAdjective(0)
 			
 	elif iCiv == iEngland:
-		if player(iSaxons).isAlive() or (iEra == iMedieval and len(cities.region(rBritain).owner(iEngland))) == 0:
+		if player(iSaxons).isAlive() or (iEra == iMedieval and len(cities.region(rBritain).owner(iEngland)) == 0):
 			return "TXT_KEY_CIV_ENGLAND_NORMAN_ADJECTIVE"
 
 		if getColumn(iPlayer) >= 11 and 1 < cities.region(rBritain) <= cities.region(rBritain).owner(iPlayer):
@@ -2238,8 +2241,8 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_KINGDOM_OF"
 
 	elif iCiv == iEngland:
-		if player(iSaxons).isAlive() or (iEra == iMedieval and len(cities.region(rBritain).owner(iEngland))) == 0:
-			return "TXT_KEY_CIV_FRENCH_ENGLAND"
+		if player(iSaxons).isAlive() or (iEra == iMedieval and len(cities.region(rBritain).owner(iEngland)) == 0):
+			return "TXT_KEY_CIV_DUCHY_NORMANDY"
 
 		if iEra > iMedieval and capital not in cities.core(iEngland):
 			return "TXT_KEY_CIV_ENGLAND_EXILE"
