@@ -809,6 +809,9 @@ def onPeriodChange(iPlayer, iPeriod):
 		if iPeriod == iPeriodMughals:
 			setShort(iPlayer, text("TXT_KEY_CIV_MUGHALS_SHORT_DESC"))
 			setAdjective(iPlayer, text("TXT_KEY_CIV_MUGHALS_ADJECTIVE"))
+		elif iPeriod == iPeriodPakistan:
+			setShort(iPlayer, text("TXT_KEY_CIV_PAKISTAN_SHORT_DESC"))
+			setAdjective(iPlayer, text("TXT_KEY_CIV_PAKISTAN_ADJECTIVE"))
 
 	if iCiv == iRus:
 		if iPeriod == iPeriodUkraine:
@@ -2339,7 +2342,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_CIV_AZTECS_ALTEPETL"
 				
 	elif iCiv == iTimurids:
-		if bResurrected:
+		if player(iCiv).getPeriod() == iPeriodPakistan:
 			if bEmpire:
 				return "TXT_KEY_EMPIRE_OF"
 		

@@ -148,6 +148,12 @@ def onResurrection(iPlayer):
 		if year() >= year(1950):
 			setPeriod(iCiv, iPeriodSouthAfrica)
 
+	elif iCiv == iTimurids:
+		if year() < year(1900):
+			setPeriod(iCiv, iPeriodMughals)
+		else:
+			setPeriod(iCiv, iPeriodPakistan)
+
 
 @handler("cityAcquired")
 def onCityAcquired(iOwner, iPlayer, city, bConquest):

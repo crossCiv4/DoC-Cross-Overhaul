@@ -93,6 +93,7 @@ iPeriodVijayanagara :	(106, 37),	# Vijayanagara
 iPeriodAustria :		(72, 59),	# Vienna
 iPeriodMughals :		tDelhi,  # Delhi
 iPeriodUkraine :		(81, 62), # Kyiv
+iPeriodPakistan:		(102, 49) # Taxila / Islamabad
 }
 
 # new capital locations if changed during the game
@@ -360,12 +361,11 @@ iPeriodAustria : 					((69, 58),	(72, 61)),
 iPeriodLateInca :					((28, 20),	(34, 25)),
 iPeriodModernItaly : 				((65, 53),	(70, 57)),
 iPeriodYuan : 						((117, 56),	(127, 62)),
-iPeriodPakistan : 					((100, 46),	(103, 49)),
+iPeriodPakistan : 					((99, 43),	(103, 50)),
 iPeriodOttomanConstantinople : 		((77, 50),	(87, 55)),
 iPeriodModernGermany : 				((65, 61),	(69, 65)),
 iPeriodMughals : 					((100, 45),	(107, 49)),
 iPeriodModernIndia : 				((103, 37),	(110, 46)),
-#iPeriodPakistan: 					something
 iPeriodUkraine : 					((80, 58),	(84, 62)),
 iPeriodSouthAfrica : 				((71, 11),  (81, 17)),
 }
@@ -382,6 +382,7 @@ iPeriodModernItaly :			[(65, 53)],
 iPeriodOttomanConstantinople :	[(86, 50), (87, 50)],
 iPeriodModernGermany :			[(69, 61)],
 iPeriodModernIndia :			[(103, 43), (103, 44), (103, 45), (103, 46), (104, 46)],
+iPeriodPakistan :				[(102, 43), (103, 43), (103, 44)]
 })
 
 ### Respawn area ###
@@ -397,7 +398,7 @@ iByzantium :((75, 52),	(80, 55)),
 iTurks :	((94, 53),	(101, 58)),
 iMoors :	((56, 43),	(61, 47)),
 iInca :		((27, 21),	(32, 28)),
-iTimurids :	((99, 42),	(104, 50)), # Pakistan
+iTimurids :	((99, 42),	(103, 50)), # Pakistan
 iOttomans :	((78, 51),	(87, 55)),
 iPhoenicia:	((63, 43),  (70, 48)), # Tunisia, Hafsids
 iPersia :	((92, 43),	(95, 50)),
