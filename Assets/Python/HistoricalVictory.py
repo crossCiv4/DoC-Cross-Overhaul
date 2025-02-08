@@ -682,7 +682,7 @@ dGoals = {
 	),
 	iHolyRome: (
 		All(
-			BuildingCount(iCatholicShrine, 1, at=1000),
+			BuildingCount(iCatholicShrine, 1, at=1050),
 			BuildingCount(iOrthodoxShrine, 1, at=1200),
 			BuildingCount(iProtestantShrine, 1, at=1550),
 		),
