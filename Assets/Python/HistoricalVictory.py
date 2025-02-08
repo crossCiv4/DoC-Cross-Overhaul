@@ -737,8 +737,8 @@ dGoals = {
 			CitySpecialistCount(start(iBulgaria).named(TARNOVO), great_people(), 2, at=1280),
 		),
 		All(
-			AreaNoStateReligion(plots.regions(rCentralEurope, rBalkans), iIslam),		
-			AreaNoStateReligion(plots.regions(rCentralEurope, rBalkans), iShia),		
+			AreaNoStateReligion(plots.regions(rCentralEurope, rBalkans).named(BALKANS), iIslam),		
+			AreaNoStateReligion(plots.regions(rCentralEurope, rBalkans).named(BALKANS), iShia),		
 			BuildingCount(iOrthodoxCathedral, 2),
 			at=1500,
 		),
