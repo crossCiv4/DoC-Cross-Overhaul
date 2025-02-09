@@ -404,9 +404,9 @@ lCivilizations = [
 	),
 	Civilization(
 		iFrance,
-		iGold=200,
+		iGold=150,
 		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(6).without(iScholarship, iArchitecture)
+		techs=techs.column(6).without(iScholarship, iArchitecture, iArtisanry)
 	),
 	Civilization(
 		iMalays,
