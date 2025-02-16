@@ -491,9 +491,9 @@ class Birth(object):
 			self.area = self.area.unique()
 		
 		# simplified version of the above that only applies to Rome
-		# also consider the "capital" to be Rome even if that isn't the case
+		# also consider the "capital" to be Milan even if that isn't the case
 		if self.iCiv == iByzantium:
-			closerCities = cities.owner(iRome).where(lambda city: real_distance(city, self.location) <= real_distance(city, tRome))
+			closerCities = cities.owner(iRome).where(lambda city: real_distance(city, self.location) <= real_distance(city, (66, 57)))
 			additionalPlots = closerCities.plots().expand(2).where(lambda p: p.getOwner() == player(iRome).getID())
 
 			self.area += additionalPlots
