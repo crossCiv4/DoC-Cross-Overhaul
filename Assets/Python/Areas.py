@@ -12,7 +12,7 @@ iBabylonia :	(90, 45), # Ur
 iHarappa :		(102, 47), # Harappa
 iAssyria :		(89, 50), # Ash-shur
 iChina :		(121, 52), # Chang'an
-iChinaS:		(129, 50), # Wu
+iChinaS:		(127, 50), # Wu
 iShu:			(118, 49), # Chengdu
 iXia:			(121, 52), # Chang'an 
 iHittites :		(83, 54), # Hattusha
@@ -47,7 +47,7 @@ iEngland :		(58, 61), # Cherbourg
 iHolyRome :		(68, 60), # Regensburg
 iBurma :		(117, 42), # Bagan
 iRus :			(81, 62), # Kyiv
-iVietnam : 		(128, 48), # Kuaiji --> in south-eastern China, initially
+iVietnam : 		(128, 45), # Quanzhou --> in south-eastern China, initially
 iSwahili :		(84, 23), # Kilwa
 iPoland :		(74, 61), # Krakow
 iPortugal :		(54, 50), # Lisboa
@@ -392,7 +392,7 @@ iHittites:	((79, 51),  (81, 54)),
 iAssyria :	((85, 49),	(90, 51)),
 iChina :	((120, 51),	(129, 58)),
 iChinaS :	((124, 43),	(131, 50)),
-iShu :		((117, 46),	(122, 49)),
+iShu :		((117, 45),	(122, 49)),
 iCelts :	((52, 64),	(56, 67)),
 iByzantium :((75, 52),	(80, 55)),
 iTurks :	((94, 53),	(101, 58)),

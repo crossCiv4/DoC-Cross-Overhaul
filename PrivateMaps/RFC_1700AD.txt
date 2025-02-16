@@ -11076,6 +11076,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=121,y=40
+	BonusType=BONUS_PIG
+	BonusVarietyType=BONUS_PIG_FURRY
 	ImprovementType=IMPROVEMENT_PASTURE
 EndPlot
 BeginPlot
@@ -11265,6 +11267,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=122,y=43
+	BonusType=BONUS_CITRUS
 	ImprovementType=IMPROVEMENT_ORCHARD
 	RouteType=ROUTE_ROAD
 EndPlot

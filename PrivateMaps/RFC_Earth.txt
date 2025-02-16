@@ -54765,8 +54765,6 @@ BeginPlot
 	x=121,y=40
 	isNOfRiver
 	RiverWEDirection=1
-	BonusType=BONUS_PIG
-	BonusVarietyType=BONUS_PIG_FURRY
 	FeatureType=FEATURE_FOREST, FeatureVariety=3
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -55260,7 +55258,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=122,y=43
-	BonusType=BONUS_CITRUS
 	FeatureType=FEATURE_RAINFOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -58565,6 +58562,7 @@ EndPlot
 BeginPlot
 	x=129,y=48
 	FeatureType=FEATURE_FOREST, FeatureVariety=3
+	BonusType=BONUS_RICE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -59026,7 +59024,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=130,y=48
-	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -59493,6 +59490,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=131,y=49
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot

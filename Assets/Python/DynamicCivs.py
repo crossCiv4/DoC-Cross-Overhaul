@@ -1477,6 +1477,10 @@ def specificAdjective(iPlayer):
 		else:
 			return "TXT_KEY_CIV_ZULU_SHONA"
 
+	elif iCiv == iCelts:
+		if bResurrected:
+			return "TXT_KEY_CIV_CELTS_SCOTS_IRISH_ADJECTIVE"
+
 	elif iCiv == iArmenia:
 		if bResurrected and iEra == iMedieval:
 			return "TXT_KEY_CIV_ARMENIA_GEORGIAN"
@@ -1984,6 +1988,21 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 	elif iCiv == iAssyria:
 		if bResurrected and (iReligion == iOrthodoxy or iReligion == iCatholicism):
 			return "TXT_KEY_CIV_ASSYRIA_PRINCIPALITY_OF"
+
+	elif iCiv == iCelts:
+		if bResurrected:
+			if tPlayer.isHasTech(iFeudalism):
+				return "TXT_KEY_KINGDOM_ADJECTIVE"
+			else:
+				return "TXT_KEY_CIV_CELTS_PETTY_KINGDOMS"
+			
+		# stops being chiefdoms if has law
+		if tPlayer.isHasTech(iLaw):
+			if bEmpire:
+				return "TXT_KEY_EMPIRE_ADJECTIVE"
+				
+			if bCityStates:
+				return "TXT_KEY_CITY_STATES_ADJECTIVE"
 
 	elif iCiv == iSweden:
 		if team(iNorse).isAVassal() and civ(master(iNorse)) == iSweden:
@@ -2729,7 +2748,7 @@ def leader(iPlayer):
 			return iNelsonMandela
 		
 	elif iCiv == iCelts:
-		if bResurrected or iEra >= iMedieval:
+		if bResurrected:
 			return iBrianBoru
 		
 	elif iCiv == iVietnam:
@@ -2797,5 +2816,9 @@ def leaderName(iPlayer):
 				return "TXT_KEY_LEADER_DAVID_IV"
 			else:
 				return "TXT_KEY_LEADER_ASHOT"
+	
+	elif iCiv == iPersia:
+		if iLeader == iAbbas:
+			return "TXT_KEY_LEADER_YAQUB_SAFFAR"
 
 	return None
