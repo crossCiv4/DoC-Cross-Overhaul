@@ -652,7 +652,7 @@ lCivilizations = [
 		iGold=600,
 		iAdvancedStartPoints=200,
 		iStateReligion=iProtestantism,
-		lCivics=[iRepublic, iBureaucracy, iManorialism, iRegulatedTrade, iClergy, iColonialism],
+		lCivics=[iRepublic, iCitizenship, iManorialism, iRegulatedTrade, iClergy, iColonialism],
 		techs=techs.column(10).including(iCombinedArms, iUrbanPlanning)
 	),
 	Civilization(
@@ -661,14 +661,14 @@ lCivilizations = [
 		iAdvancedStartPoints=200,
 		iStateReligion=iProtestantism,
 		lCivics=[iMonarchy, iBureaucracy, iManorialism, iRegulatedTrade, iClergy, iHegemony],
-		techs=techs.column(11).without(iGeography, iCivilLiberties)
+		techs=techs.column(11).including(iReplaceableParts, iMeasurement)
 	),
 	Civilization(
 		iAmerica,
 		iGold=2000,
 		iAdvancedStartPoints=300,
 		iStateReligion=iProtestantism,
-		lCivics=[iDemocracy, iConstitution, iIndividualism, iFreeEnterprise, iSecularism, iIsolationism],
+		lCivics=[iDemocracy, iConstitution, iIndividualism, iRegulatedTrade, iSecularism, iColonialism],
 		techs=techs.column(12).including(iRepresentation, iChemistry, iBiology)
 	),
 	Civilization(
@@ -677,7 +677,7 @@ lCivilizations = [
 		iAdvancedStartPoints=100,
 		iStateReligion=iCatholicism,
 		lCivics=[iDemocracy, iConstitution, iIndividualism, iFreeEnterprise, iSecularism, iNationhood],
-		techs=techs.column(12).including(iRepresentation, iNationalism)
+		techs=techs.column(12).including(iRepresentation, iNationalism, iChemistry, iBiology)
 	),
 	Civilization(
 		iMexico,
@@ -685,7 +685,7 @@ lCivilizations = [
 		iAdvancedStartPoints=100,
 		iStateReligion=iCatholicism,
 		lCivics=[iDespotism, iConstitution, iIndividualism, iRegulatedTrade, iClergy, iNationhood],
-		techs=techs.column(12).including(iRepresentation, iNationalism)
+		techs=techs.column(12).including(iRepresentation, iNationalism, iChemistry, iBiology)
 	),
 	Civilization(
 		iZulu,
@@ -699,7 +699,7 @@ lCivilizations = [
 		iAdvancedStartPoints=150,
 		iStateReligion=iCatholicism,
 		lCivics=[iDespotism, iConstitution, iIndividualism, iRegulatedTrade, iClergy, iNationhood],
-		techs=techs.column(12).including(iRepresentation, iNationalism)
+		techs=techs.column(12).including(iRepresentation, iNationalism, iBiology, iChemistry, iMetallurgy)
 	),
 	Civilization(
 		iBrazil,
@@ -707,7 +707,7 @@ lCivilizations = [
 		iAdvancedStartPoints=200,
 		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iConstitution, iSlavery, iFreeEnterprise, iClergy, iColonialism],
-		techs=techs.column(12).including(iRepresentation, iNationalism, iBiology)
+		techs=techs.column(12).including(iRepresentation, iNationalism, iBiology, iChemistry, iMetallurgy)
 	),
 	Civilization(
 		iCanada,
@@ -715,7 +715,7 @@ lCivilizations = [
 		iAdvancedStartPoints=250,
 		iStateReligion=iCatholicism,
 		lCivics=[iDemocracy, iConstitution, iIndividualism, iFreeEnterprise, iSecularism, iNationhood],
-		techs=techs.column(13).including(iBallistics, iEngine, iRailroad, iJournalism)
+		techs=techs.column(13).including(iBallistics, iEngine, iRailroad, iJournalism, iElectricity, iLabourUnions)
 	),
 ]
 

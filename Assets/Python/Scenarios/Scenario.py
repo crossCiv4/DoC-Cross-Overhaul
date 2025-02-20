@@ -170,6 +170,7 @@ RELIGION_FOUNDING_DATES = {
 	iTaoism: -400,
 	iZoroastrianism: -600,
 	iShia: 680,
+	iMarxism: 1848,
 }
 
 WONDER_ORIGINAL_BUILDERS = {

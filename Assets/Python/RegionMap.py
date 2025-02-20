@@ -90,7 +90,7 @@ tSpreadFactors = (
 {
 	iCore :			[rPersia],
 	iHistorical : 	[rKhorasan, rTransoxiana, rHinduKush],
-	iPeriphery : 	[rMesopotamia, rTransoxiana, rLevant, rCaucasus, rAnatolia, rYemenOman],
+	iPeriphery : 	[rMesopotamia, rLevant, rCaucasus, rAnatolia, rYemenOman],
 	iMinority : 	[rSindh, rPunjab],
 },
 # Shia
@@ -99,5 +99,12 @@ tSpreadFactors = (
 	iHistorical : 	[rMaghreb, rLevant, rEgypt, rKhorasan, rCaucasus, rRajputana, rSwahiliCoast, rHinduKush],
 	iPeriphery : 	[rNubia, rAnatolia, rBalkans, rHindustan, rBengal, rCentralAsianSteppe, rSindh, rPunjab, rArabia, rTransoxiana, rSahel],
 	iMinority : 	[rUrals, rSiberia, rTarimBasin, rMongolia, rIberia, rDeccan, rPonticSteppe, rCrimea, rHornOfAfrica, rSahara, rIndonesia],
+},
+# Marxism
+{
+	iCore : 		[rLowerGermany, rRuthenia, rRussia],
+	iHistorical : 	[rFrance, rBritain, rIreland, rCentralEurope, rBalkans, rDenmark, rBaltics, rBrazil, rNewGranada, rQuebec, rSwahiliCoast, rNorthChina, rSouthChina, rManchuria, rSiberia, rIberia, rMongolia, rCaucasus, rGreatLakes, rPoland, rDravida, rCrimea],
+	iPeriphery : 	[rNorway, rSweden, rCaribbean, rAtlanticSeaboard, rCalifornia, rMidwest, rOntario, rSahel, rHornOfAfrica, rHindustan, rAndes, rCongo, rGreece, rPunjab, rSindh, rAridoamerica, rMaghreb, rIndonesia, rKhorasan, rDeccan, rLevant, rCascadia],
+	iMinority : 	[rJapan, rPhilippines, rPersia, rHinduKush, rEgypt, rAnatolia, rAustralia, rMesoamerica, rDeepSouth, rTarimBasin, rArabia, rTibet, rYemenOman, rRajputana, rNubia, rMaritimes, rAmericanArctic, rCape],
 },
 )

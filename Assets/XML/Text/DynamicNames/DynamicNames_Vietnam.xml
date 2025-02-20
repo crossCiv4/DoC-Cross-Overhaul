@@ -34,6 +34,14 @@
 		<Spanish>Vietnam</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_VIETNAM_REPUBLIC</Tag>
+		<English>Republic of Vietnam</English>
+		<French>Republic of Vietnam</French>
+		<German>Republic of Vietnam</German>
+		<Italian>Republic of Vietnam</Italian>
+		<Spanish>Republic of Vietnam</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_VIETNAM_DEFAULT</Tag>
 		<English>Dai Viet</English>
 		<French>Dai Viet</French>

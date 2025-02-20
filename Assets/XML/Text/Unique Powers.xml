@@ -1283,11 +1283,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_NIG</Tag>
-		<English>Can capture slaves from any civ at a 25% rate. Natives are still captured at the default 50% rate</English>
-		<French>Can capture slaves from any civ at a 25% rate. Natives are still captured at the default 50% rate</French>
-		<German>Can capture slaves from any civ at a 25% rate. Natives are still captured at the default 50% rate</German>
-		<Italian>Can capture slaves from any civ at a 25% rate. Natives are still captured at the default 50% rate</Italian>
-		<Spanish>Can capture slaves from any civ at a 25% rate. Natives are still captured at the default 50% rate</Spanish>
+		<English>Can capture slaves from any civ at a 20% rate. Natives are still captured at the default 33% rate</English>
+		<French>Can capture slaves from any civ at a 20% rate. Natives are still captured at the default 33% rate</French>
+		<German>Can capture slaves from any civ at a 20% rate. Natives are still captured at the default 33% rate</German>
+		<Italian>Can capture slaves from any civ at a 20% rate. Natives are still captured at the default 33% rate</Italian>
+		<Spanish>Can capture slaves from any civ at a 20% rate. Natives are still captured at the default 33% rate</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ZUL_TITLE</Tag>

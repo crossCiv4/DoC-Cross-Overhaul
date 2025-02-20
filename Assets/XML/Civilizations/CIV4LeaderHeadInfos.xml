@@ -6840,8 +6840,8 @@
 			<iAtPeaceAttitudeChangeLimit>1</iAtPeaceAttitudeChangeLimit>
 			<iSameReligionAttitudeChange>1</iSameReligionAttitudeChange>
 			<iSameReligionAttitudeDivisor>10</iSameReligionAttitudeDivisor>
-			<iSameReligionAttitudeChangeLimit>2</iSameReligionAttitudeChangeLimit>
-			<iDifferentReligionAttitudeChange>0</iDifferentReligionAttitudeChange>
+			<iSameReligionAttitudeChangeLimit>6</iSameReligionAttitudeChangeLimit>
+			<iDifferentReligionAttitudeChange>-4</iDifferentReligionAttitudeChange>
 			<iDifferentReligionAttitudeDivisor>-5</iDifferentReligionAttitudeDivisor>
 			<iDifferentReligionAttitudeChangeLimit>-1</iDifferentReligionAttitudeChangeLimit>
 			<iBonusTradeAttitudeDivisor>50</iBonusTradeAttitudeDivisor>
@@ -6876,7 +6876,7 @@
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_STATE_PARTY</FavoriteCivic>
-			<FavoriteReligion>NONE</FavoriteReligion>
+			<FavoriteReligion>RELIGION_MARXISM</FavoriteReligion>
 			<Traits/>
 			<Flavors>
 				<Flavor>
@@ -50919,12 +50919,12 @@
 			<iAtWarAttitudeChangeLimit>5</iAtWarAttitudeChangeLimit>
 			<iAtPeaceAttitudeDivisor>50</iAtPeaceAttitudeDivisor>
 			<iAtPeaceAttitudeChangeLimit>1</iAtPeaceAttitudeChangeLimit>
-			<iSameReligionAttitudeChange>0</iSameReligionAttitudeChange>
+			<iSameReligionAttitudeChange>1</iSameReligionAttitudeChange>
 			<iSameReligionAttitudeDivisor>10</iSameReligionAttitudeDivisor>
-			<iSameReligionAttitudeChangeLimit>0</iSameReligionAttitudeChangeLimit>
-			<iDifferentReligionAttitudeChange>0</iDifferentReligionAttitudeChange>
-			<iDifferentReligionAttitudeDivisor>-10</iDifferentReligionAttitudeDivisor>
-			<iDifferentReligionAttitudeChangeLimit>0</iDifferentReligionAttitudeChangeLimit>
+			<iSameReligionAttitudeChangeLimit>6</iSameReligionAttitudeChangeLimit>
+			<iDifferentReligionAttitudeChange>-4</iDifferentReligionAttitudeChange>
+			<iDifferentReligionAttitudeDivisor>-5</iDifferentReligionAttitudeDivisor>
+			<iDifferentReligionAttitudeChangeLimit>-1</iDifferentReligionAttitudeChangeLimit>
 			<iBonusTradeAttitudeDivisor>50</iBonusTradeAttitudeDivisor>
 			<iBonusTradeAttitudeChangeLimit>2</iBonusTradeAttitudeChangeLimit>
 			<iOpenBordersAttitudeDivisor>25</iOpenBordersAttitudeDivisor>
@@ -50957,7 +50957,7 @@
 			<iVassalPowerModifier>30</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_NATIONHOOD</FavoriteCivic>
-			<FavoriteReligion>RELIGION_CONFUCIANISM</FavoriteReligion>
+			<FavoriteReligion>RELIGION_MARXISM</FavoriteReligion>
 			<Traits/>
 			<Flavors>
 				<Flavor>
@@ -65806,8 +65806,8 @@
 			<iAtPeaceAttitudeChangeLimit>1</iAtPeaceAttitudeChangeLimit>
 			<iSameReligionAttitudeChange>1</iSameReligionAttitudeChange>
 			<iSameReligionAttitudeDivisor>10</iSameReligionAttitudeDivisor>
-			<iSameReligionAttitudeChangeLimit>2</iSameReligionAttitudeChangeLimit>
-			<iDifferentReligionAttitudeChange>0</iDifferentReligionAttitudeChange>
+			<iSameReligionAttitudeChangeLimit>6</iSameReligionAttitudeChangeLimit>
+			<iDifferentReligionAttitudeChange>-4</iDifferentReligionAttitudeChange>
 			<iDifferentReligionAttitudeDivisor>-5</iDifferentReligionAttitudeDivisor>
 			<iDifferentReligionAttitudeChangeLimit>-1</iDifferentReligionAttitudeChangeLimit>
 			<iBonusTradeAttitudeDivisor>50</iBonusTradeAttitudeDivisor>
@@ -65842,7 +65842,7 @@
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_CENTRAL_PLANNING</FavoriteCivic>
-			<FavoriteReligion>NONE</FavoriteReligion>
+			<FavoriteReligion>RELIGION_MARXISM</FavoriteReligion>
 			<Traits/>
 			<Flavors>
 				<Flavor>

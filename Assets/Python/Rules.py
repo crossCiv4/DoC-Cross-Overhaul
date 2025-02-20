@@ -148,19 +148,19 @@ def captureSlaves(winningUnit, losingUnit):
 	# enslave natives if your civic is slavery or colonialism regardless of era
 	if civ(losingUnit) == iNative:
 		if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
-			captureUnit(losingUnit, winningUnit, iSlave, 50)
+			captureUnit(losingUnit, winningUnit, iSlave, 33)
 		return
 	
-	# Nigeria UP: can always capture slaves from any civ at 25% rate (natives still at 50%)
+	# Nigeria UP: can always capture slaves from any civ at 20% rate (natives still at default rate)
 	if civ(winningUnit) == iNigeria:
 		if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
-			captureUnit(losingUnit, winningUnit, iSlave, 25)
+			captureUnit(losingUnit, winningUnit, iSlave, 20)
 		return
 
 	# also enslave barbarians but at a lesser rate
 	if civ(losingUnit) == iBarbarian:
 		if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
-			captureUnit(losingUnit, winningUnit, iSlave, 15)
+			captureUnit(losingUnit, winningUnit, iSlave, 10)
 		return
 
 @handler("combatResult")

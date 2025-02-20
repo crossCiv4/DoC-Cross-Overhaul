@@ -700,6 +700,10 @@ def calculateStability(iPlayer):
 		
 	elif iStateReligion == iBuddhism:
 		if iMonasticism in civics: iCivicEraTechStability += 2
+
+	elif iStateReligion == iMarxism:
+		if iStateParty in civics: iCivicEraTechStability += 2
+		if iCentralPlanning in civics: iCivicEraTechStability += 2
 		
 	if not player(iPlayer).isHuman() and iCivicEraTechStability < 0: iCivicEraTechStability /= 2
 	

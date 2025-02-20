@@ -329,6 +329,25 @@
 		<Italian>Shi'ite</Italian>
 		<Spanish>Shi'ite</Spanish>
 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_MARXISM</Tag>
+		<English>Marxism</English>
+		<French>Marxism</French>
+		<German>Marxism</German>
+		<Italian>Marxism</Italian>
+		<Spanish>Marxism</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_MARXISM_ADJECTIVE</Tag>
+		<English>Marxist</English>
+		<French>Marxist</French>
+		<German>Marxist</German>
+		<Italian>Marxist</Italian>
+		<Spanish>Marxist</Spanish>
+	</TEXT>
+
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_REFORMATION</Tag>
 		<English>[ICON_BULLET]Founding Protestantism triggers the Reformation</English>

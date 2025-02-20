@@ -3947,5 +3947,25 @@
 			<KFM/>
 			<Button>Art/Structures/Buildings/Moot_Hill/moot_hill.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MARXISM_MONASTERY</Type>
+			<LSystem>LSYSTEM_1x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.5</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Workers_Council_from_eu3_east_Admiralty/east_admiralty.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Workers_Council_from_eu3_east_Admiralty/soviet_btn.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MARXISM_SHRINE</Type>
+			<LSystem>LSYSTEM_2x4</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.65</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Workers_Conference_from_eu3_east_Courthouse/east_courthouse.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Workers_Conference_from_eu3_east_Courthouse/comintern_btn.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

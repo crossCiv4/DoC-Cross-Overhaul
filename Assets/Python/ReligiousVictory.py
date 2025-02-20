@@ -61,24 +61,28 @@ dGoals = {
 	iIslam: (
 		ReligionSpreadPercent(iIslam, 40),
 		CitySpecialistCount(holy_city(iIslam), great_people(), 7, subject=STATE_RELIGION),
-		BuildingCount(religious_buildings(shrine).named(SHRINES), 5),
+		BuildingCount(religious_buildings(shrine).named(SHRINES), 6, subject=STATE_RELIGION),
 	),
 	iShia: (
 		NoStateReligion(iIslam),
 		ReligionSpreadPercent(iShia, 30),
-		BuildingCount(religious_buildings(shrine).named(SHRINES), 5),
+		BuildingCount((iShiaShrine, 1), (iIslamicShrine, 1)),
 	),
 	iProtestantism: (
 		FirstDiscover(iCivilLiberties, iSocialContract, iEconomics),
 		SpecialistCount((iSpecialistGreatMerchant, 5), (iSpecialistGreatEngineer, 5), subject=STATE_RELIGION, iReligion=iProtestantism),
 		StateReligionPercent(iProtestantism, 50, bSecular=True),
 	),
+	iMarxism: (
+		AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 10, iReligion=iMarxism),
+		ReligionSpreadPercent(iMarxism, 50, bSecular=True),
+		FirstDiscover(iTranshumanism),
+	),
 	iPaganVictory: (
 		BuildingCount(iPaganTemple, 25, subject=WORLD),
 		NoReligionPercent(50),
 	),
 	iSecularVictory: (
-		BuildingCount(religious_buildings(cathedral).named(CATHEDRALS), 7, desc_key=FIRST_SECULAR_GOAL),
 		All(
 			BuildingCount(iUniversity, 25, subject=SECULAR),
 			SpecialistCount(

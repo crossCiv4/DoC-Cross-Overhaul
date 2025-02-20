@@ -1027,22 +1027,23 @@ iGermany : 3
 })
 
 # initialise religion variables to religion indices from XML
-iNumReligions = 11
-(iJudaism, iOrthodoxy, iCatholicism, iProtestantism, iIslam, iHinduism, iBuddhism, iConfucianism, iTaoism, iZoroastrianism, iShia) = range(iNumReligions)
+iNumReligions = 12
+(iJudaism, iOrthodoxy, iCatholicism, iProtestantism, iIslam, iHinduism, iBuddhism, iConfucianism, iTaoism, iZoroastrianism, iShia, iMarxism) = range(iNumReligions)
 
 #Persecution preference
 tPersecutionPreference = (
-(iHinduism, iBuddhism, iTaoism, iConfucianism, iZoroastrianism, iIslam, iShia, iProtestantism, iCatholicism, iOrthodoxy), # Judaism
-(iIslam, iShia, iProtestantism, iCatholicism, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism, iConfucianism), # Orthodoxy
-(iIslam, iShia, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism, iConfucianism), # Catholicism
-(iIslam, iShia, iCatholicism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism, iConfucianism), # Protestantism
-(iShia, iHinduism, iProtestantism, iCatholicism, iOrthodoxy, iJudaism, iTaoism, iConfucianism, iZoroastrianism, iBuddhism), # Islam (Sunni)
-(iIslam, iShia, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iTaoism, iConfucianism, iBuddhism), # Hinduism
-(iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iTaoism, iIslam, iShia, iConfucianism, iHinduism), # Buddhism
-(iIslam, iShia, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism), # Confucianism
-(iIslam, iShia, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iConfucianism), # Taoism
-(iIslam, iShia, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iBuddhism, iHinduism, iTaoism, iConfucianism), # Zoroastrianism
-(iIslam, iHinduism, iProtestantism, iCatholicism, iOrthodoxy, iJudaism, iTaoism, iConfucianism, iZoroastrianism, iBuddhism), # Shia
+(iHinduism, iBuddhism, iTaoism, iConfucianism, iMarxism, iZoroastrianism, iIslam, iShia, iProtestantism, iCatholicism, iOrthodoxy), # Judaism
+(iMarxism, iIslam, iShia, iProtestantism, iCatholicism, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism, iConfucianism), # Orthodoxy
+(iMarxism, iIslam, iShia, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism, iConfucianism), # Catholicism
+(iIslam, iShia, iMarxism, iCatholicism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism, iConfucianism), # Protestantism
+(iMarxism, iShia, iHinduism, iProtestantism, iCatholicism, iOrthodoxy, iJudaism, iTaoism, iConfucianism, iZoroastrianism, iBuddhism), # Islam (Sunni)
+(iMarxism, iIslam, iShia, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iTaoism, iConfucianism, iBuddhism), # Hinduism
+(iMarxism, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iTaoism, iIslam, iShia, iConfucianism, iHinduism), # Buddhism
+(iMarxism, iIslam, iShia, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism), # Confucianism
+(iMarxism, iIslam, iShia, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iConfucianism), # Taoism
+(iMarxism, iIslam, iShia, iCatholicism, iProtestantism, iOrthodoxy, iJudaism, iBuddhism, iHinduism, iTaoism, iConfucianism), # Zoroastrianism
+(iMarxism, iIslam, iHinduism, iProtestantism, iCatholicism, iOrthodoxy, iJudaism, iTaoism, iConfucianism, iZoroastrianism, iBuddhism), # Shia
+(iOrthodoxy, iCatholicism, iProtestantism, iIslam, iShia, iJudaism, iZoroastrianism, iHinduism, iBuddhism, iTaoism, iConfucianism), # Marxism
 )
 
 # pagan religions
@@ -1085,10 +1086,10 @@ iTranshumanism) = range(iNumTechs)
 
 # initialise unit variables to unit indices from XML
 
-iNumUnits = 249
+iNumUnits = 250
 (iLion, iBear, iPanther, iWolf, iSettler, iCityBuilder, iPioneer, iWorker, iRomanWorker, iPunjabiWorker, iLabourer, 
 iMadeireiro, iScout, iExplorer, iBandeirante, iSpy, iReligiousPersecutor, iJewishMissionary, iOrthodoxMissionary, iCatholicMissionary, iProtestantMissionary, 
-iIslamicMissionary, iShiaMissionary, iHinduMissionary, iBuddhistMissionary, iConfucianMissionary, iTaoistMissionary, iZoroastrianMissionary, iWarrior, iNativeWarrior, iMilitia, iXiaLevy, iAxeman, 
+iIslamicMissionary, iShiaMissionary, iHinduMissionary, iBuddhistMissionary, iConfucianMissionary, iTaoistMissionary, iZoroastrianMissionary, iMarxismMissionary, iWarrior, iNativeWarrior, iMilitia, iXiaLevy, iAxeman, 
 iLightSwordsman, iMycenaeanMyrmidon, iVulture, iDogSoldier, iOathsworn, iSwordsman, iThane, iJaguar, iLegion, iComitatus, iGallicWarrior, iPendekar, iAucac, 
 iShotelai, iHeavySwordsman, iGallowglass, iSamurai, iHuscarl, iGhazi, iDruzhina, iPombos, iSpearman, iPhalanx, iAzmaru, iHoplite, 
 iSacredBand, iImmortal, iNativeRaider, iImpi, iHeavySpearman, iGhuridVeteranSpears, iThematicSpearman, iTagmata, iKyundaw, iPikeman, iLandsknecht, iArquebusier, iFirelancer, iTercio, 
@@ -1163,13 +1164,13 @@ iColdStoragePlant, iGrainSilo, iNewsPress, iIndustrialPark, iCinema, iHospital, 
 iBroadcastTower, iIntelligenceAgency, iElectricalGrid, iAirport, iBunker, iBombShelters, iHydroPlant, iSecurityBureau, iStadium, iContainerTerminal, 
 iNuclearPlant, iSupercomputer, iHotel, iRecyclingCenter, iLogisticsCenter, iSolarPlant, iFiberNetwork, iAutomatedFactory, iVerticalFarm) = range(iNumBuildings)
 
-iNumReligiousBuildings = 45
+iNumReligiousBuildings = 47
 iFirstReligiousBuilding = iNumBuildings
 iNumBuildings += iNumReligiousBuildings
 (iJewishTemple, iJewishCathedral, iJewishMonastery, iJewishShrine, iOrthodoxTemple, iOrthodoxCathedral, iOrthodoxMonastery, iOrthodoxShrine, iCatholicTemple, iCatholicCathedral, 
 iCatholicMonastery, iCatholicShrine, iProtestantTemple, iProtestantCathedral, iProtestantMonastery, iProtestantShrine, iIslamicTemple, iIslamicCathedral, iIslamicMonastery, iIslamicShrine, iShiaTemple, iShiaCathedral, iShiaMonastery, iShiaShrine, 
 iHinduTemple, iHinduCathedral, iHinduMonastery, iHinduShrine, iBuddhistTemple, iBuddhistCathedral, iBuddhistMonastery, iBuddhistShrine, iConfucianTemple, iConfucianCathedral, 
-iConfucianMonastery, iConfucianMonasteryShu, iConfucianShrine, iTaoistTemple, iTaoistCathedral, iTaoistMonastery, iTaoistShrine, iZoroastrianTemple, iZoroastrianCathedral, iZoroastrianMonastery, iZoroastrianShrine) = range(iFirstReligiousBuilding, iNumBuildings)
+iConfucianMonastery, iConfucianMonasteryShu, iConfucianShrine, iTaoistTemple, iTaoistCathedral, iTaoistMonastery, iTaoistShrine, iZoroastrianTemple, iZoroastrianCathedral, iZoroastrianMonastery, iZoroastrianShrine, iMarxismMonastery, iMarxismShrine) = range(iFirstReligiousBuilding, iNumBuildings)
 
 iNumNationalWonders = 19
 iFirstNationalWonder = iNumBuildings

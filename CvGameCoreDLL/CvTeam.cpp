@@ -2752,37 +2752,13 @@ int CvTeam::getCivilizationResearchModifier() const
 
 	iCivModifier = GET_PLAYER(getLeaderID()).getModifier(MODIFIER_RESEARCH_COST);
 
-	// nerf late game China
-	if (GET_PLAYER(getLeaderID()).getCivilizationType() == CHINA)
-	{
-		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 20;
-	}
-	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == YANGTZE_CHINA)
-	{
-		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 20;
-	}
 	// buff late game Japan
-	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == JAPAN)
+	if (GET_PLAYER(getLeaderID()).getCivilizationType() == JAPAN)
 	{
 		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_INDUSTRIAL)
 		{
 			iCivModifier += isHuman() ? -20 : -40;
 		}
-	}
-	// nerf late game Mughals
-	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == TIMURIDS)
-	{
-		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 20;
-	}
-	// nerf late game Moors
-	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == MOORS)
-	{
-		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 20;
-	}
-	// nerf mid game Carthage
-	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == CARTHAGE)
-	{
-		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_MEDIEVAL) iCivModifier += 20;
 	}
 
 	return iCivModifier;

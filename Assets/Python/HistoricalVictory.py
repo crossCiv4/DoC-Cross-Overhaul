@@ -137,6 +137,7 @@ WORLD_COASTLINES = "TXT_KEY_VICTORY_NAME_WORLD_COASTLINES"
 # building descriptors
 SHRINES = "TXT_KEY_VICTORY_NAME_SHRINES"
 TEMPLES = "TXT_KEY_VICTORY_NAME_TEMPLES"
+HINDU_BUDDHIST_BUILDINGS = "TXT_KEY_VICTORY_NAME_HINDU_BUDDHIST_BUILDINGS"
 CHRISTIAN_CATHEDRALS = "TXT_KEY_VICTORY_NAME_CHRISTIAN_CATHEDRALS"
 STATE_RELIGION_CATHEDRAL = "TXT_KEY_VICTORY_NAME_STATE_RELIGION_CATHEDRAL"
 ORTHODOX_WONDERS = "TXT_KEY_VICTORY_NAME_ORTHODOX_WONDERS"
@@ -321,12 +322,11 @@ dGoals = {
 			CityBuilding(city(tBabylon).named(BABYLON), iPalace),
 			CultureAmount(10000),
 			at=1,
-		)
-		
+		),
 	),
 	iIndia: (
 		BuildingCount((iHinduShrine, 1), (iBuddhistShrine, 1), at=100),
-		BuildingCount(religious_buildings(temple).named(TEMPLES), 25, by=700),
+		BuildingCount(sum(iHinduTemple, iBuddhistTemple, iHinduMonastery, iBuddhistMonastery, iHinduCathedral, iBuddhistCathedral, iHinduShrine, iBuddhistShrine).named(HINDU_BUDDHIST_BUILDINGS), 25, by=700),
 		PopulationPercent(20, at=1200),
 	),
 	iPhoenicia: (

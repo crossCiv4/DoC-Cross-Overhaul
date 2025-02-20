@@ -1066,14 +1066,6 @@ def specificName(iPlayer):
 		if bEmpire and (bResurrected and iEra >= iRenaissance) or scenario() == i1700AD:
 			return "TXT_KEY_CIV_CHINA_QING"
 
-	elif iCiv == iChinaS:
-		if bResurrected and year() >= year(1830):
-			return "TXT_KEY_CIV_WU_FASCIST"
-
-		if bEmpire and not player(iChina).isExisting():
-			if iEra >= iRenaissance:
-				return "TXT_KEY_CIV_CHINA_MING"
-
 	elif iCiv == iShu:
 		if bResurrected:
 			if not (bEmpire and not player(iChina).isExisting()):
@@ -2043,7 +2035,11 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_KINGDOM_ADJECTIVE"
 
 	elif iCiv == iChinaS:
-		if bMonarchy:
+		if bResurrected and year() >= year(1830):
+			if bMonarchy:
+				return "TXT_KEY_CIV_WU_FASCIST"
+
+		elif bMonarchy:
 			if bEmpire:		
 				if not player(iChina).isExisting() and iEra == iRenaissance:
 					return "TXT_KEY_EMPIRE_OF" # Great Ming

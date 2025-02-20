@@ -2314,6 +2314,7 @@ enum ReligionTypes				// Exposed to Python
 	TAOISM,
 	ZOROASTRIANISM,
 	SHIA,
+	MARXISM,
 	NUM_RELIGIONS,
 };
 

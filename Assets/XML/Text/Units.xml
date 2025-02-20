@@ -2302,6 +2302,14 @@
 		<Spanish>[COLOR_UNIT_TEXT]Magus[COLOR_REVERT] ([COLOR_UNIT_TEXT]Zoroastrian Missionaries[COLOR_REVERT]) can spread [COLOR_HIGHLIGHT_TEXT]Zoroastrianism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MARXISM_MISSIONARY</Tag>
+		<English>Marxist Political Theorist</English>
+		<French>Marxist Political Theorist</French>
+		<German>Marxist Political Theorist</German>
+		<Italian>Marxist Political Theorist</Italian>
+		<Spanish>Marxist Political Theorist</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPREAD_REQUIRES_GEOGRAPHY</Tag>
 		<English>[ICON_BULLET]Can Only Spread in Historical Regions for [LINK=literal]%s1[\LINK] or if it is the Prevalent State Religion</English>
 		<French>[ICON_BULLET]Peut seulement propager la religion : [LINK=literal]%s1[\LINK] dans ses r&#233;gions historiques ou s'il s'agit de la religion d'&#201;tat dominante</French>

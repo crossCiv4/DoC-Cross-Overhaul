@@ -10837,6 +10837,20 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		}
 	}
 
+	if (getLastStateReligion() == MARXISM)
+	{
+		// Orthodox Christian states have an aversion to caste system
+		if (eCivic == CIVIC_CENTRAL_PLANNING || eCivic == CIVIC_STATE_PARTY || eCivic == CIVIC_FANATICISM || eCivic == CIVIC_PUBLIC_WELFARE)
+		{
+			iValue *= 2;
+		}
+
+		if (eCivic == CIVIC_CASTE_SYSTEM || eCivic == CIVIC_MANORIALISM || eCivic == CIVIC_VASSALAGE || eCivic == CIVIC_THEOCRACY || eCivic == CIVIC_MONARCHY || eCivic == CIVIC_FREE_ENTERPRISE)
+		{
+			iValue /= 2;
+		}
+	}
+
 	// Leoreth: boost some modern civics as soon as available
 	switch (eCivic)
 	{
@@ -10848,6 +10862,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	case CIVIC_FREE_ENTERPRISE:
 	case CIVIC_CENTRAL_PLANNING:
 	case CIVIC_NATIONHOOD:
+	case CIVIC_DEMOCRACY:
 		iValue *= 6;
 		iValue /= 5;
 		break;

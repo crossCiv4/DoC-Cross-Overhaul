@@ -183,6 +183,14 @@
 			<DefaultUnit>UNIT_SHIA_MISSIONARY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
+			<Type>UNITCLASS_MARXISM_MISSIONARY</Type>
+			<Description>TXT_KEY_UNIT_MARXISM_MISSIONARY</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<DefaultUnit>UNIT_MARXISM_MISSIONARY</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
 			<Type>UNITCLASS_WARRIOR</Type>
 			<Description>TXT_KEY_UNIT_WARRIOR</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>

@@ -3365,6 +3365,25 @@
 		<Italian>A Moot hill is a hill or mound historically used as a meeting place. In early mediaeval Britain, such hills were used for moots, meetings of local people to settle local business. Among other things, proclamations might be read; decisions might be taken; court cases might be settled at a moot. Although some moot hills were naturally occurring features or had been created long before as burial mounds, others were purpose-built.</Italian>
 		<Spanish>A Moot hill is a hill or mound historically used as a meeting place. In early mediaeval Britain, such hills were used for moots, meetings of local people to settle local business. Among other things, proclamations might be read; decisions might be taken; court cases might be settled at a moot. Although some moot hills were naturally occurring features or had been created long before as burial mounds, others were purpose-built.</Spanish>
 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MARXISM_SHRINE</Tag>
+		<English>The Communist International</English>
+		<French>The Communist International</French>
+		<German>The Communist International</German>
+		<Italian>The Communist International</Italian>
+		<Spanish>The Communist International</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MARXISM_MONASTERY</Tag>
+		<English>Worker's Council</English>
+		<French>Worker's Council</French>
+		<German>Worker's Council</German>
+		<Italian>Worker's Council</Italian>
+		<Spanish>Worker's Council</Spanish>
+	</TEXT>
+
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_</Tag>
 		<English></English>

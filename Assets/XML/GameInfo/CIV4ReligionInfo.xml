@@ -350,10 +350,42 @@
 			</StateReligionCommerces>
 			<Button>Art/Interface/Buttons/Religions/Shia.dds</Button>
 			<TechButton>Art/Interface/Buttons/TechTree/Doctrine.dds</TechButton>
-			<GenericTechButton>,Art/Interface/Buttons/TechTree/Islam.dds,Art/Interface/Buttons/Beyond the Sword_Atlas.dds,6,3</GenericTechButton>
+			<GenericTechButton>Art/Interface/Buttons/TechTree/Doctrine.dds</GenericTechButton>
 			<MovieFile>Art/Movies/Religion/Islam/Isl_Found.nif</MovieFile>
 			<MovieSound>AS2D_BUILD_ISLAMIC_MOVIE</MovieSound>
 			<Sound>AS2D_BUILD_ISLAMIC</Sound>
+		</ReligionInfo>
+		<ReligionInfo>
+			<Type>RELIGION_MARXISM</Type>
+			<Description>TXT_KEY_RELIGION_MARXISM</Description>
+			<Adjective>TXT_KEY_RELIGION_MARXISM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_RELIGION_MARXISM_PEDIA</Civilopedia>
+			<TechPrereq>TECH_LABOUR_UNIONS</TechPrereq>
+			<FreeUnitClass>UNITCLASS_MARXISM_MISSIONARY</FreeUnitClass>
+			<iFreeUnits>1</iFreeUnits>
+			<iSpreadFactor>180</iSpreadFactor>
+			<bProselytizing>1</bProselytizing>
+			<GlobalReligionCommerces>
+				<iGlobalReligionCommerce>1</iGlobalReligionCommerce>
+				<iGlobalReligionCommerce>0</iGlobalReligionCommerce>
+				<iGlobalReligionCommerce>0</iGlobalReligionCommerce>
+			</GlobalReligionCommerces>
+			<HolyCityCommerces>
+				<iHolyCityCommerce>0</iHolyCityCommerce>
+				<iHolyCityCommerce>0</iHolyCityCommerce>
+				<iHolyCityCommerce>3</iHolyCityCommerce>
+			</HolyCityCommerces>
+			<StateReligionCommerces>
+				<iStateReligionCommerce>0</iStateReligionCommerce>
+				<iStateReligionCommerce>0</iStateReligionCommerce>
+				<iStateReligionCommerce>1</iStateReligionCommerce>
+			</StateReligionCommerces>
+			<Button>Art/Interface/Buttons/Religions/Marxism.dds</Button>
+			<TechButton>Art/Interface/Buttons/TechTree/Labour_Unions.dds</TechButton>
+			<GenericTechButton>Art/Interface/Buttons/TechTree/Labour_Unions.dds</GenericTechButton>
+			<MovieFile></MovieFile>
+			<MovieSound></MovieSound>
+			<Sound>AS2D_BUILD_UNIVERSITY</Sound>
 		</ReligionInfo>
 	</ReligionInfos>
 </Civ4ReligionInfo>

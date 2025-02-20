@@ -347,7 +347,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=45
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
@@ -566,7 +566,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=44
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
@@ -575,7 +575,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=52
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
@@ -735,7 +735,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=43
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
@@ -934,7 +934,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=42
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
@@ -1197,7 +1197,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=34
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 EndPlot
 BeginPlot
 	x=39,y=40
@@ -1292,7 +1292,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=19
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 EndPlot
 BeginPlot
 	x=42,y=20
@@ -1300,7 +1300,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=21
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 EndPlot
 BeginPlot
 	x=42,y=31
@@ -1308,11 +1308,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=21
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 EndPlot
 BeginPlot
 	x=43,y=22
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 EndPlot
 BeginPlot
 	x=43,y=31
@@ -1422,19 +1422,19 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=22
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 EndPlot
 BeginPlot
 	x=46,y=25
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 EndPlot
 BeginPlot
 	x=46,y=27
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 EndPlot
 BeginPlot
 	x=46,y=30
-	ImprovementType=IMPROVEMENT_SLAVE_PLANTATION
+	ImprovementType=IMPROVEMENT_PLANTATION
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
