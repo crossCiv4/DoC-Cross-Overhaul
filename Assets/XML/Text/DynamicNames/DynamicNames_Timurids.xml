@@ -193,8 +193,9 @@
 		<Italian>Timurid</Italian>
 		<Spanish>Timurid</Spanish>
 	</TEXT>
+
 	<TEXT>
-		<Tag>TXT_KEY_CIV_MUGHALS_SHORT_DESC</Tag>
+		<Tag>TXT_KEY_CIV_MUGHALS_NAME</Tag>
 		<English>Mughals</English>
 		<French>
 			<Text>Moghols</Text>
@@ -204,6 +205,14 @@
 		<German>Moguln</German>
 		<Italian>Mughals</Italian>
 		<Spanish>Mughals</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MUGHALS_SHORT_DESC</Tag>
+		<English>Hindustan</English>
+		<French>Hindustan</French>
+		<German>Hindustan</German>
+		<Italian>Hindustan</Italian>
+		<Spanish>Hindustan</Spanish>
 	</TEXT>
 
 	<TEXT>

@@ -29422,17 +29422,17 @@
 			<iTechTradeKnownPercent>60</iTechTradeKnownPercent>
 			<iMaxGoldTradePercent>5</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
-			<iMaxWarRand>100</iMaxWarRand>
+			<iMaxWarRand>60</iMaxWarRand>
 			<iMaxWarNearbyPowerRatio>120</iMaxWarNearbyPowerRatio>
-			<iMaxWarDistantPowerRatio>100</iMaxWarDistantPowerRatio>
+			<iMaxWarDistantPowerRatio>90</iMaxWarDistantPowerRatio>
 			<iMaxWarMinAdjacentLandPercent>1</iMaxWarMinAdjacentLandPercent>
 			<iLimitedWarRand>40</iLimitedWarRand>
-			<iLimitedWarPowerRatio>120</iLimitedWarPowerRatio>
+			<iLimitedWarPowerRatio>130</iLimitedWarPowerRatio>
 			<iDogpileWarRand>50</iDogpileWarRand>
-			<iMakePeaceRand>40</iMakePeaceRand>
+			<iMakePeaceRand>80</iMakePeaceRand>
 			<iDeclareWarTradeRand>40</iDeclareWarTradeRand>
-			<iDemandRebukedSneakProb>60</iDemandRebukedSneakProb>
-			<iDemandRebukedWarProb>10</iDemandRebukedWarProb>
+			<iDemandRebukedSneakProb>20</iDemandRebukedSneakProb>
+			<iDemandRebukedWarProb>50</iDemandRebukedWarProb>
 			<iRazeCityProb>0</iRazeCityProb>
 			<iBuildUnitProb>40</iBuildUnitProb>
 			<iBaseAttackOddsChange>6</iBaseAttackOddsChange>
@@ -29482,8 +29482,8 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_NATIONHOOD</FavoriteCivic>
-			<FavoriteReligion>RELIGION_CATHOLICISM</FavoriteReligion>
+			<FavoriteCivic>CIVIC_STRATOCRACY</FavoriteCivic>
+			<FavoriteReligion>NONE</FavoriteReligion>
 			<Traits/>
 			<Flavors>
 				<Flavor>
@@ -30041,7 +30041,7 @@
 			<iVassalPowerModifier>-20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_NATIONHOOD</FavoriteCivic>
-			<FavoriteReligion>RELIGION_CATHOLICISM</FavoriteReligion>
+			<FavoriteReligion>NONE</FavoriteReligion>
 			<Traits/>
 			<Flavors>
 				<Flavor>
@@ -46010,7 +46010,7 @@
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_COLONIALISM</FavoriteCivic>
-			<FavoriteReligion>RELIGION_PROTESTANTISM</FavoriteReligion>
+			<FavoriteReligion>NONE</FavoriteReligion>
 			<Traits/>
 			<Flavors>
 				<Flavor>
@@ -73613,7 +73613,7 @@
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_MULTILATERALISM</FavoriteCivic>
-			<FavoriteReligion>RELIGION_PROTESTANTISM</FavoriteReligion>
+			<FavoriteReligion>NONE</FavoriteReligion>
 			<Traits/>
 			<Flavors>
 				<Flavor>
@@ -78052,7 +78052,7 @@
 			<iVassalPowerModifier>-20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_PUBLIC_WELFARE</FavoriteCivic>
-			<FavoriteReligion>RELIGION_CATHOLICISM</FavoriteReligion>
+			<FavoriteReligion>NONE</FavoriteReligion>
 			<Traits/>
 			<Flavors>
 				<Flavor>
