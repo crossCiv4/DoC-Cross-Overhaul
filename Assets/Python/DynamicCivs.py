@@ -654,7 +654,7 @@ dStartingLeaders = [
 	iKorea : iSejong,
 	iNorse : iChristian,
 	iJapan : iOdaNobunaga,
-	iTurks : iTamerlane,
+	iTurks : iAlpArslan,
 	iSpain : iPhilip,
 	iFrance : iLouis,
 	iEngland : iVictoria,
@@ -2608,10 +2608,6 @@ def leader(iPlayer):
 		if iReligion in lChristianity or year() >= year(1000): return iChristian
 		
 	elif iCiv == iTurks:
-		if bResurrected: return iTamerlane
-		
-		if year() >= year(1700): return iTamerlane
-	
 		if year() >= year(1000) or pPlayer.getPeriod() == iPeriodSeljuks: return iAlpArslan
 		
 	#elif iCiv == iArabia:

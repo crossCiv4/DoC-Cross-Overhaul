@@ -62,7 +62,7 @@ lCivilizations = [
 	),
 	Civilization(
 		iTurks, # Uzbeks
-		iLeader=iTamerlane,
+		iLeader=iAlpArslan,
 		iGold=50,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iVassalage, iSlavery, iMerchantTrade, iClergy, iHegemony],
