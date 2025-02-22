@@ -876,7 +876,7 @@ dGoals = {
 			ConqueredCities(1, bControl=False, inside=plots.region(rPunjab)),
 			by=1500
 		),
-		Wonders(iRedFort, iShalimarGardens, iTajMahal, iGurEAmir, by=1660),
+		Wonders(iRedFort, iShalimarGardens, iTajMahal, iGurEAmir),
 		CultureAmount(50000, at=1750),
 	),
 	iThailand: (

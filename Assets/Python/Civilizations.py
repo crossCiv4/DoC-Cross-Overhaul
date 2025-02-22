@@ -631,7 +631,7 @@ lCivilizations = [
 		iGold=800,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iVassalage, iSlavery, iRegulatedTrade, iSyncretism, iHegemony],
-		techs=techs.column(7).including(iCommune, iCropRotation, iPaper, iDoctrine, iGunpowder)
+		techs=techs.column(8).including(iGunpowder)
 	),
 	Civilization(
 		iIroquois,

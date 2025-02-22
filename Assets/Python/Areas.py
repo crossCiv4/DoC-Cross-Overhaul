@@ -105,6 +105,7 @@ iMongols :	(125, 56),	# Khanbaliq
 iOttomans :	(79, 55),	# Istanbul
 iEngland :	(58, 64),	# London
 iSaxons :	(58, 64),	# London
+iGhorids:	(105, 46),	# Delhi
 })
 
 # new capital locations on respawn

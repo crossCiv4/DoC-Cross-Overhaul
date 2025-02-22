@@ -86,7 +86,7 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_MUGHALS_DEFAULT</Tag>
+		<Tag>TXT_KEY_CIV_HINDUSTAN_DEFAULT</Tag>
 		<English>%s2 Empire</English>
 		<French>
 			<Text>Empire %s2</Text>
@@ -110,7 +110,7 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_MUGHALS_FASCIST</Tag>
+		<Tag>TXT_KEY_CIV_HINDUSTAN_FASCIST</Tag>
 		<English>%s2 Military Government</English>
 		<French>
 			<Text>Gouvernement militaire %s2</Text>
