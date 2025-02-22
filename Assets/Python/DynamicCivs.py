@@ -2812,5 +2812,10 @@ def leaderName(iPlayer):
 	elif iCiv == iPersia:
 		if iLeader == iAbbas:
 			return "TXT_KEY_LEADER_YAQUB_SAFFAR"
+	
+	elif iCiv == iTurks:
+		if player(iPlayer).getPeriod() == iPeriodUzbeks:
+			if iLeader == iAlpArslan:
+				return "TXT_KEY_LEADER_ABDULLAH_KHAN"
 
 	return None
