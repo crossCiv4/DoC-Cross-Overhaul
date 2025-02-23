@@ -1014,8 +1014,8 @@ dGoals = {
 			by=1920,
 		),
 		All(
-			Control((plots.regions(rMaritimes, rQuebec, rOntario) + plots.regions(rGreatPlains, rCascadia).where(lambda p: p.getY() >= iCanadianNorthSouthBorder) + plots.region(rAmericanArctic).where(lambda p: p.getX() >= iCanadianEastWestBorder)).named(CITIES_IN_CANADA)),
-			AreaPercent((plots.regions(rMaritimes, rQuebec, rOntario) + plots.regions(rGreatPlains, rCascadia).where(lambda p: p.getY() >= iCanadianNorthSouthBorder) + plots.region(rAmericanArctic).where(lambda p: p.getX() >= iCanadianEastWestBorder)).named(CANADIAN_TERRITORY), 50),
+			Control((plots.regions(rMaritimes, rQuebec, rOntario) + plots.regions(rGreatPlains, rCascadia).where(lambda p: p.getY() >= iCanadaSouthernBorder) + plots.region(rAmericanArctic).where(lambda p: iCanadaWesternBorder <= p.getX() <= iCanadaEasternBorder)).named(CITIES_IN_CANADA)),
+			AreaPercent((plots.regions(rMaritimes, rQuebec, rOntario) + plots.regions(rGreatPlains, rCascadia).where(lambda p: p.getY() >= iCanadaSouthernBorder) + plots.region(rAmericanArctic).where(lambda p: iCanadaWesternBorder <= p.getX() <= iCanadaEasternBorder)).named(CANADIAN_TERRITORY), 50),
 			NoCityConquered(),
 			by=1950,
 		),

@@ -373,6 +373,8 @@ public:
 	int AI_getUnitEnabledValue(UnitTypes eUnit) const;
 	bool AI_enablesUnitWonder(UnitClassTypes eUnitClass, int iPathLength) const;
 
+	bool AI_willUseNukes(PlayerTypes eTarget, bool bOffensive) const;
+
 	// for serialization
   virtual void read(FDataStreamBase* pStream);
   virtual void write(FDataStreamBase* pStream);

@@ -19872,3 +19872,48 @@ bool CvPlayerAI::AI_enablesUnitWonder(UnitClassTypes eUnitClass, int iPathLength
 
 	return false;
 }
+
+bool CvPlayerAI::AI_willUseNukes(PlayerTypes eOtherPlayer, bool bOffensive) const
+{
+	if (!GET_PLAYER(eOtherPlayer).isAlive())
+	{
+		return false;
+	}
+
+	if (GET_PLAYER(eOtherPlayer).isBarbarian())
+	{
+		return false;
+	}
+
+	if (GET_PLAYER(eOtherPlayer).isMinorCiv())
+	{
+		return false;
+	}
+
+	if (!atWar(getTeam(), GET_PLAYER(eOtherPlayer).getTeam()))
+	{
+		return false;
+	}
+
+	if (AI_getMemoryCount(eOtherPlayer, MEMORY_NUKED_US) > 0)
+	{
+		return true;
+	}
+
+	if (AI_getAttitude(eOtherPlayer) > ATTITUDE_FURIOUS)
+	{
+		return false;
+	}
+
+	if (GET_TEAM(getTeam()).AI_getAtWarCounter(GET_PLAYER(eOtherPlayer).getTeam()) <= getTurns(5))
+	{
+		return false;
+	}
+
+	if (!bOffensive)
+	{
+		return true;
+	}
+
+	return GET_TEAM(getTeam()).AI_endWarVal(GET_PLAYER(eOtherPlayer).getTeam()) >= GET_TEAM(GET_PLAYER(eOtherPlayer).getTeam()).AI_endWarVal(getTeam()) * 2;
+}

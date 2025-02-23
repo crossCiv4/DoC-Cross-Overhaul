@@ -923,9 +923,15 @@ class SlaveTrade(AbstractStatefulAlert):
 	def onBeginActivePlayerTurn(self, argsList):
 		if not Civ4lertsOpt.isShowSlaveTradeAlert():
 			return
+		
 		if len(self.maxSlaveTrade) == 0:
 			return
+		
 		playerID = PlayerUtil.getActivePlayerID()
+		
+		if not gc.getPlayer(playerID).canBuySlaves():
+			return
+		
 		for rival in TradeUtil.getSlaveTradePartners(playerID):
 			rivalID = rival.getID()
 			oldMaxSlaveTrade = self._getMaxSlaveTrade(playerID, rivalID)

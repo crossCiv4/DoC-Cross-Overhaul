@@ -18320,11 +18320,11 @@ int CvCity::calculateCultureCost(CvPlot* pPlot, bool bOrdering) const
 	int iCost = pPlot->calculateCultureCost();
 	int iExtraCost = 0;
 
-	int iDistance = std::max(plotDistance(getX(), getY(), pPlot->getX(), pPlot->getY()), GC.getMap().calculatePathDistance(plot(), pPlot, MOVE_IGNORE_DANGER | MOVE_THROUGH_ENEMY));
+	int iDistance = std::max(plotDistance(getX(), getY(), pPlot->getX(), pPlot->getY()), GC.getMap().calculatePathDistance(plot(), pPlot));
 
 	if (bOrdering)
 	{
-		if (pPlot->getBonusType() < 0 && iCost >= 15)
+		if (pPlot->getBonusType() == NO_BONUS && iCost >= 15)
 		{
 			iExtraCost += 100;
 		}

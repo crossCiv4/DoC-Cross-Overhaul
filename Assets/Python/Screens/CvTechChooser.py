@@ -355,6 +355,7 @@ class CvTechChooser:
 			for iRoute in xrange(gc.getNumRouteInfos()):
 				if gc.getRouteInfo(iRoute).getTechMovementChange(iTech) != 0:
 					self.TechEffects[iTech].append(("RouteMovement", iRoute))
+					break
 
 			if TechInfo.isBridgeBuilding():
 				self.TechEffects[iTech].append(("BridgeBuilding", -1))

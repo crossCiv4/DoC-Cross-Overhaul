@@ -16542,13 +16542,19 @@ bool CvUnitAI::AI_nuke()
 {
 	PROFILE_FUNC();
 
-	if (GET_PLAYER((PlayerTypes)getOwnerINLINE()).isMinorCiv())
+	if (GET_PLAYER(getOwnerINLINE()).isMinorCiv() || GET_PLAYER(getOwnerINLINE()).isBarbarian())
 	{
 		return false;
 	}
 
-	CvCity* pNukedCity = AI_nukeTarget();
+	CvPlot* pNukedPlot = AI_defensiveNukeTarget();
+	if (pNukedPlot != NULL)
+	{
+		getGroup()->pushMission(MISSION_NUKE, pNukedPlot->getX_INLINE(), pNukedPlot->getY_INLINE());
+		return true;
+	}
 
+	CvCity* pNukedCity = AI_offensiveNukeTarget();
 	if (pNukedCity != NULL)
 	{
 		getGroup()->pushMission(MISSION_NUKE, pNukedCity->getX_INLINE(), pNukedCity->getY_INLINE());
@@ -16559,10 +16565,68 @@ bool CvUnitAI::AI_nuke()
 }
 
 // Leoreth
-CvCity* CvUnitAI::AI_nukeTarget()
+CvPlot* CvUnitAI::AI_defensiveNukeTarget() const
+{
+	CvCity* pLoopCity;
+	CvPlot* pLoopPlot;
+	CvPlot* pBestPlot;
+	PlayerTypes eOtherPlayer;
+	int iValue;
+	int iBestValue;
+	int iLoop;
+	int iI;
+	int iDX, iDY;
+
+	pBestPlot = NULL;
+
+	iBestValue = 10;
+
+	for (pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
+	{
+		if (pLoopCity->isCore(getOwnerINLINE()) && !pLoopCity->AI_isDefended(10))
+		{
+			for (int iI = 0; iI < MAX_PLAYERS; iI++)
+			{
+				eOtherPlayer = (PlayerTypes)iI;
+
+				if (GET_PLAYER(getOwnerINLINE()).AI_willUseNukes(eOtherPlayer, false))
+				{
+					for (iDX = -2; iDX <= 2; iDX++)
+					{
+						for (iDY = -2; iDY <= 2; iDY++)
+						{
+							pLoopPlot = plotXY(pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE(), iDX, iDY);
+
+							if (pLoopPlot != NULL)
+							{
+								if (canNukeAt(plot(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE()))
+								{
+									iValue = pLoopPlot->plotCount(PUF_isPlayer, iI);
+
+									if (iValue > iBestValue)
+									{
+										iBestValue = iValue;
+										pBestPlot = pLoopPlot;
+										FAssert(pBestPlot->getTeam() != getTeam());
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	return pBestPlot;
+}
+
+// Leoreth
+CvCity* CvUnitAI::AI_offensiveNukeTarget() const
 {
 	CvCity* pLoopCity;
 	CvCity* pBestCity;
+	PlayerTypes eOtherPlayer;
 	int iValue;
 	int iBestValue;
 	int iLoop;
@@ -16574,25 +16638,21 @@ CvCity* CvUnitAI::AI_nukeTarget()
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isBarbarian())
-		{
-			if (isEnemy(GET_PLAYER((PlayerTypes)iI).getTeam()))
-			{
-				if (GET_PLAYER(getOwnerINLINE()).AI_getAttitude((PlayerTypes)iI) == ATTITUDE_FURIOUS)
-				{
-					for (pLoopCity = GET_PLAYER((PlayerTypes)iI).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER((PlayerTypes)iI).nextCity(&iLoop))
-					{
-						if (canNukeAt(plot(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE()))
-						{
-							iValue = AI_nukeValue(pLoopCity);
+		eOtherPlayer = (PlayerTypes)iI;
 
-							if (iValue > iBestValue)
-							{
-								iBestValue = iValue;
-								pBestCity = pLoopCity;
-								FAssert(pBestCity->getTeam() != getTeam());
-							}
-						}
+		if (GET_PLAYER(getOwnerINLINE()).AI_willUseNukes(eOtherPlayer, true))
+		{
+			for (pLoopCity = GET_PLAYER(eOtherPlayer).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(eOtherPlayer).nextCity(&iLoop))
+			{
+				if (canNukeAt(plot(), pLoopCity->getX_INLINE(), pLoopCity->getY_INLINE()))
+				{
+					iValue = AI_nukeValue(pLoopCity);
+
+					if (iValue > iBestValue)
+					{
+						iBestValue = iValue;
+						pBestCity = pLoopCity;
+						FAssert(pBestCity->getTeam() != getTeam());
 					}
 				}
 			}
@@ -16601,6 +16661,44 @@ CvCity* CvUnitAI::AI_nukeTarget()
 
 	return pBestCity;
 }
+
+
+CvCity* CvUnitAI::AI_offensiveSatelliteTarget() const
+{
+	CvCity* pLoopCity;
+	PlayerTypes eOtherPlayer;
+	int iI;
+	int iValue;
+	int iLoop;
+
+	CvCity* pBestCity = NULL;
+	int iBestValue = 0;
+
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	{
+		eOtherPlayer = (PlayerTypes)iI;
+
+		if (isEnemy(GET_PLAYER(eOtherPlayer).getTeam()))
+		{
+			for (pLoopCity = GET_PLAYER(eOtherPlayer).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(eOtherPlayer).nextCity(&iLoop))
+			{
+				if (canSatelliteAttack(pLoopCity->plot()))
+				{
+					iValue = pLoopCity->plot()->plotCount(PUF_isUnitAIType, UNITAI_SATELLITE, -1, eOtherPlayer);
+
+					if (iValue > iBestValue)
+					{
+						iBestValue = iValue;
+						pBestCity = pLoopCity;
+					}
+				}
+			}
+		}
+	}
+
+	return pBestCity;
+}
+
 
 bool CvUnitAI::AI_nukeRange(int iRange)
 {
@@ -17553,7 +17651,7 @@ int CvUnitAI::AI_pillageValue(CvPlot* pPlot, int iBonusValueThreshold)
 }
 
 
-int CvUnitAI::AI_nukeValue(CvCity* pCity)
+int CvUnitAI::AI_nukeValue(CvCity* pCity) const
 {
 	PROFILE_FUNC();
 	FAssertMsg(pCity != NULL, "City is not assigned a valid value");
@@ -18697,21 +18795,18 @@ bool CvUnitAI::AI_satelliteAttackMove()
 		return false;
 	}
 
-	CvCity* pNukeTarget = AI_nukeTarget();
+	CvCity* pNukeTarget = AI_offensiveSatelliteTarget();
 
 	if (pNukeTarget != NULL)
 	{
-		if (canSatelliteAttack(pNukeTarget->plot()))
+		if (!atPlot(pNukeTarget->plot()))
 		{
-			if (!atPlot(pNukeTarget->plot()))
-			{
-				getGroup()->pushMission(MISSION_MOVE_TO, pNukeTarget->getX(), pNukeTarget->getY());
-				return true;
-			}
-
-			getGroup()->pushMission(MISSION_SATELLITE_ATTACK);
+			getGroup()->pushMission(MISSION_MOVE_TO, pNukeTarget->getX(), pNukeTarget->getY());
 			return true;
 		}
+
+		getGroup()->pushMission(MISSION_SATELLITE_ATTACK);
+		return true;
 	}
 
 	return false;

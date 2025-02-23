@@ -1655,6 +1655,15 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		pOldCity->changeReligionYieldChange(GET_PLAYER(eOldOwner).getStateReligion(),(YieldTypes)iI, -GET_PLAYER(eOldOwner).getReligionYieldChange((YieldTypes)iI));
 	}
 
+	// Leoreth: undo specially coded city specific wonder effects if the previous owner had it, so they do not get copied
+	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	{
+		if (GET_PLAYER(eOldOwner).isHasBuildingEffect((BuildingTypes)iI))
+		{
+			GET_PLAYER(eOldOwner).processBuildingForCity((BuildingTypes)iI, pOldCity, -1);
+		}
+	}
+
 	std::vector<BuildingYieldChange> aBuildingYieldChange;
 	std::vector<BuildingCommerceChange> aBuildingCommerceChange;
 	BuildingChangeArray aBuildingHappyChange;
@@ -7135,7 +7144,7 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 	{
 		for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 		{
-			pLoopCity->changeCommerceRateModifier(COMMERCE_CULTURE, pLoopCity->getBuildingDefense() * iChange);
+			processBuildingForCity(eBuilding, pLoopCity, iChange);
 		}
 	}
 
@@ -7205,14 +7214,7 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 	{
 		for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 		{
-			for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
-			{
-				CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iJ);
-				if (kBuilding.getReligionType() == JUDAISM)
-				{
-					pLoopCity->changeBuildingCommerceChange((BuildingClassTypes)kBuilding.getBuildingClassType(), COMMERCE_GOLD, 2 * iChange);
-				}
-			}
+			processBuildingForCity(eBuilding, pLoopCity, iChange);
 		}
 	}
 
@@ -7221,7 +7223,7 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 	{
 		for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 		{
-			pLoopCity->changeHealRate(10 * iChange);
+			processBuildingForCity(eBuilding, pLoopCity, iChange);
 		}
 	}
 
@@ -7255,6 +7257,35 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 				changeExtraBuildingHappiness((BuildingTypes)iI, kBuilding.getHealth());
 			}
 		}
+	}
+}
+
+
+void CvPlayer::processBuildingForCity(BuildingTypes eBuilding, CvCity* pCity, int iChange) const
+{
+	// Himeji Castle
+	if (eBuilding == HIMEJI_CASTLE)
+	{
+		pCity->changeCommerceRateModifier(COMMERCE_CULTURE, pCity->getBuildingDefense() * iChange);
+	}
+
+	// Old Synagogue
+	else if (eBuilding == OLD_SYNAGOGUE)
+	{
+		for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+		{
+			CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iJ);
+			if (kBuilding.getReligionType() == JUDAISM)
+			{
+				pCity->changeBuildingCommerceChange((BuildingClassTypes)kBuilding.getBuildingClassType(), COMMERCE_GOLD, 2 * iChange);
+			}
+		}
+	}
+
+	// Las Lajas Sanctuary
+	else if (eBuilding == LAS_LAJAS_SANCTUARY)
+	{
+		pCity->changeHealRate(10 * iChange);
 	}
 }
 

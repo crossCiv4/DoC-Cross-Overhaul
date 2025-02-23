@@ -269,7 +269,12 @@ scenario1700AD = Scenario(
 		iGermany: "TXT_KEY_CIV_HOLY_ROMAN_DESC",
 	},
 	
-	dOwnedTiles = {},
+	dOwnedTiles = {
+		iFrance: [(59, 55)],
+		iPortugal: [(53, 52), (54, 52), (55, 52), (55, 51), (55, 50), (54, 48)],
+		iRussia: [(82, 64)],
+		iNetherlands: [(62, 62)],
+	},
 	iCultureTurns = 100,
 	
 	dRevealed = {

@@ -339,7 +339,7 @@ def conquistadors(iTeamX, iHasMetTeamY):
 
 @handler("firstContact")
 def firstContactMongolConquerors(iTeamX, iHasMetTeamY):
-	if civ(iHasMetTeamY) == iMongols and not player(iMongols).isHuman():
+	if civ(iHasMetTeamY) == iMongols and not player(iMongols).isHuman() and since(player(iMongols).getLastBirthTurn()) >= 2:
 		mongolConquerors(iTeamX)
 
 
@@ -668,7 +668,8 @@ def giveColonists(iPlayer):
 	pPlayer = player(iPlayer)
 	pTeam = team(iPlayer)
 	iCiv = civ(iPlayer)
-	
+	iMiddleAtlantic = 45
+
 	if pPlayer.isExisting() and not pPlayer.isHuman() and iCiv in dMaxColonistsPreIndustrial:
 		if pTeam.isHasTech(iExploration) and data.players[iPlayer].iColonistsAlreadyGivenPreIndustrial < dMaxColonistsPreIndustrial[iCiv]:
 			sourceCities = cities.core(iCiv).owner(iPlayer)
@@ -685,7 +686,7 @@ def giveColonists(iPlayer):
 				if colonialCities:
 					sourceCities = colonialCities
 					
-			city = sourceCities.coastal().random()
+			city = sourceCities.coastal().minimum(lambda city: abs(city.getX() - iMiddleAtlantic))
 			if city:
 				tSeaPlot = findSeaPlots(city, 1, iCiv)
 				if not tSeaPlot: tSeaPlot = city

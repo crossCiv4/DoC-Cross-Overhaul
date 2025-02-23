@@ -346,11 +346,14 @@ class CultureLevelCityCount(ThresholdRequirement):
 	def value_func(self, city):
 		return city.getCultureLevel()
 	
+	def sort_value_func(self, city):
+		return city.getCulture(city.getOwner())
+	
 	def valid_city(self, city):
 		return self.value_func(city) >= self.iCultureLevel
 		
 	def progress_entries(self, iPlayer):
-		best_cities = cities.owner(iPlayer).highest(self.iRequired, self.value_func)
+		best_cities = cities.owner(iPlayer).highest(self.iRequired, self.sort_value_func)
 		
 		if not best_cities:
 			yield "%s %s" % (indicator(False), text("TXT_KEY_VICTORY_PROGRESS_NO_CITIES"))

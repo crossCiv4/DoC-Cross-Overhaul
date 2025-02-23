@@ -6,12 +6,19 @@ from Civics import *
 from Events import handler, popup_handler
 
 
-# initialise coordinates
+## CONSTANTS
+
+lJudaismFoundRegions = [rEgypt, rLevant, rMesopotamia]
+lJudaismEuropeRegions = [rIberia, rFrance, rLowerGermany, rCentralEurope, rPoland, rItaly, rBritain, rRuthenia, rBalkans]
+lJudaismMiddleEastRegions = [rLevant, rMesopotamia, rAnatolia, rEgypt]
+lJudaismNewWorldRegions = [rOntario, rMaritimes, rAtlanticSeaboard, rMidwest, rCalifornia]
 
 dCatholicPreference = CivDict({
 iEgypt		: 80,
+iNubia		: 80,
 iGreece		: 80,
 iMacedon	: 80,
+iCelts		: 90,
 iRome		: 95,
 iEthiopia	: 80,
 iByzantium	: 90,
@@ -21,9 +28,11 @@ iSpain		: 95,
 iFrance		: 75,
 iEngland	: 30,
 iHolyRome	: 55,
+iRus		: 70,
 iPoland		: 80,
 iPortugal	: 95,
 iItaly		: 90,
+iSweden		: 10,
 iRussia		: 80,
 iCongo		: 80,
 iGermany	: 25,
@@ -34,6 +43,9 @@ iMamluks	: 80,
 
 def getCatholicPreference(iPlayer):
 	return dCatholicPreference[iPlayer]
+
+
+## HANDLERS
 	
 
 @handler("buildingBuilt")	
@@ -145,9 +157,9 @@ def checkSchism(iGameTurn):
 
 @handler("BeginGameTurn")
 def spreadReligionsRegionally():
-	spreadReligionToRegion(iJudaism, [rIberia, rFrance, rLowerGermany, rCentralEurope, rPoland, rItaly, rBritain, rRuthenia, rBalkans], 1000, 1800, 10)
-	spreadReligionToRegion(iJudaism, [rMesopotamia, rAnatolia, rEgypt], 600, 1000, 15)
-	spreadReligionToRegion(iJudaism, [rOntario, rMaritimes, rAtlanticSeaboard, rMidwest], 1850, 1950, 10)
+	spreadReligionToRegion(iJudaism, lJudaismEuropeRegions, 1000, 1800, 10)
+	spreadReligionToRegion(iJudaism, lJudaismMiddleEastRegions, 600, 1000, 15)
+	spreadReligionToRegion(iJudaism, lJudaismNewWorldRegions, 1850, 1950, 10)
 
 	spreadReligionToRegion(iOrthodoxy, [rRuthenia, rRussia, rPonticSteppe], 990, 1190, 6, 1)
 	spreadReligionToRegion(iIslam, [rHinduKush, rTransoxiana, rKhorasan, rCentralAsianSteppe, rVolga, rPonticSteppe, rTarimBasin], 750, 1300, 6, 1)
@@ -292,6 +304,9 @@ def lateReligionFounding(iTech):
 				
 	for iReligion in range(iNumReligions):
 		checkLateReligionFounding(iReligion, iTech)
+
+
+## IMPLEMENTATION
 
 
 def foundReligion(location, iReligion):

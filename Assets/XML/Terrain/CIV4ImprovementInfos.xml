@@ -2527,6 +2527,10 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>
+					<TerrainType>TERRAIN_STEPPE</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
 					<TerrainType>TERRAIN_TUNDRA</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>

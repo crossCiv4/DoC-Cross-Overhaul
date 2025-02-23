@@ -49,8 +49,9 @@ tWestAfrica = ((54, 31), (65, 40))
 lAndeanRoadExceptions = [(28, 33), (21, 32)]
 
 # second Canadian goal: control all cities and 90% of the territory in Canada without ever conquering a city by 1950 AD
-iCanadianNorthSouthBorder = 62
-iCanadianEastWestBorder = 8
+iCanadaSouthernBorder = 62
+iCanadaWesternBorder = 8
+iCanadaEasternBorder = 40
 
 # Assyria conquest goal: to own Elam (the region around Susa)
 tElam = ((92, 45), (93, 47))

@@ -51,10 +51,12 @@ def motherlandCallsEffect(winningUnit, losingUnit):
 				message(iLoser, 'TXT_KEY_BUILDING_MOTHERLAND_CALLS_EFFECT', losingUnit.getName(), city.getName())
 
 
-@handler("cityGrowth")
-def orientalPearlTowerOnGrowth(city):
-	if city.isHasBuildingEffect(iOrientalPearlTower):
-		orientalPearlTowerEffect(city)
+@handler("EndPlayerTurn")
+def orientalPearlTowerOnEndPlayerTurn(iGameTurn, iPlayer):
+	if player(iPlayer).isHasBuildingEffect(iOrientalPearlTower):
+		wonder_city = cities.owner(iPlayer).building(iOrientalPearlTower).one()
+		if wonder_city:
+			orientalPearlTowerEffect(wonder_city)
 
 
 @handler("buildingBuilt")
@@ -109,10 +111,12 @@ def porcelainTowerEffect(city, iBuilding):
 		player(city).updateTradeRoutes()
 
 
-@handler("cityGrowth")
-def empireStateBuildingOnGrowth(city):
-	if city.isHasBuildingEffect(iEmpireStateBuilding):
-		empireStateBuildingEffect(city)
+@handler("EndPlayerTurn")
+def empireStateBuildingOnEndTurn(iGameTurn, iPlayer):
+	if player(iPlayer).isHasBuildingEffect(iEmpireStateBuilding):
+		wonder_city = cities.owner(iPlayer).building(iEmpireStateBuilding).one()
+		if wonder_city:
+			empireStateBuildingEffect(wonder_city)
 	
 
 @handler("buildingBuilt")

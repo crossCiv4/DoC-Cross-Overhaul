@@ -681,7 +681,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=61
-	ImprovementType=IMPROVEMENT_COTTAGE
+	ImprovementType=IMPROVEMENT_PASTURE
 EndPlot
 BeginPlot
 	x=31,y=14
@@ -880,7 +880,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=61
-	ImprovementType=IMPROVEMENT_HAMLET
+	ImprovementType=IMPROVEMENT_PASTURE
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
@@ -11913,11 +11913,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=126,y=50
-	ImprovementType=IMPROVEMENT_PASTURE
+	ImprovementType=IMPROVEMENT_HAMLET
 EndPlot
 BeginPlot
 	x=126,y=51
-	ImprovementType=IMPROVEMENT_WATERMILL
+	ImprovementType=IMPROVEMENT_PASTURE
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot

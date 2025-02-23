@@ -226,7 +226,7 @@ protected:
 
 	bool AI_defendPlot(CvPlot* pPlot);
 	int AI_pillageValue(CvPlot* pPlot, int iBonusValueThreshold = 0);
-	int AI_nukeValue(CvCity* pCity);
+	int AI_nukeValue(CvCity* pCity) const;
 	bool AI_canPillage(CvPlot& kPlot) const;
 
 	int AI_searchRange(int iRange);
@@ -255,7 +255,9 @@ protected:
 	bool AI_canGroupWithAIType(UnitAITypes eUnitAI) const;
 	bool AI_allowGroup(const CvUnit* pUnit, UnitAITypes eUnitAI) const;
 
-	CvCity* AI_nukeTarget();
+	CvCity* AI_offensiveSatelliteTarget() const;
+	CvCity* AI_offensiveNukeTarget() const;
+	CvPlot* AI_defensiveNukeTarget() const;
 
 	// added so under cheat mode we can call protected functions for testing
 	friend class CvGameTextMgr;
