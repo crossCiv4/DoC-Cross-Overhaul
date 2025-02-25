@@ -411,7 +411,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_COMBAT2</PromotionPrereqOr1>
 			<PromotionPrereqOr2>PROMOTION_DRILL2</PromotionPrereqOr2>
-			<TechPrereq>TECH_GENERALSHIP</TechPrereq>
+			<TechPrereq>TECH_SELECTIVE_BREEDING</TechPrereq>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_HEAVY_CAVALRY</UnitCombatType>
@@ -1142,6 +1142,7 @@
 			<Description>TXT_KEY_PROMOTION_CITYRAIDER3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_CITY_RAIDER2</PromotionPrereqOr1>
+			<TechPrereq>TECH_LIMB_PROTECTION</TechPrereq>
 			<iCityAttack>30</iCityAttack>
 			<UnitCombatMods>
 				<UnitCombatMod>
@@ -1272,6 +1273,7 @@
 			<Description>TXT_KEY_PROMOTION_DRILL2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_DRILL1</PromotionPrereqOr1>
+			<TechPrereq>TECH_DISCIPLINE</TechPrereq>
 			<iFirstStrikesChange>1</iFirstStrikesChange>
 			<iCollateralDamageProtection>20</iCollateralDamageProtection>
 			<UnitCombats>

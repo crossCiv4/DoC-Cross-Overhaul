@@ -192,11 +192,11 @@
 			<Description>TXT_KEY_CIVIC_ELECTIVE</Description>
 			<Civilopedia>TXT_KEY_CIVIC_ELECTIVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_ELECTIVE_STRATEGY</Strategy>
-			<TechPrereq>TECH_POLITICS</TechPrereq>
+			<TechPrereq>TECH_CONSENSUS</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Elective.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
-			<Upkeep>NONE</Upkeep>
-			<iBaseFreeUnits>20</iBaseFreeUnits>
+			<Upkeep>UPKEEP_LOW</Upkeep>
+			<iBaseFreeUnits>10</iBaseFreeUnits>
 			<iFreeUnitsPopulationPercent>8</iFreeUnitsPopulationPercent>
 			<UnimprovedTileYields>
 				<iYield>0</iYield>
@@ -342,7 +342,7 @@
 			<Description>TXT_KEY_CIVIC_VASSALAGE</Description>
 			<Civilopedia>TXT_KEY_CIVIC_VASSALAGE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_VASSALAGE_STRATEGY</Strategy>
-			<TechPrereq>TECH_FEUDALISM</TechPrereq>
+			<TechPrereq>TECH_NOBILITY</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Vassalage.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
@@ -866,7 +866,7 @@
 			<TradeYieldModifiers>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>50</iYield>
+				<iYield>25</iYield>
 			</TradeYieldModifiers>
 			<SpecialistValids>
 				<SpecialistValid>
@@ -1204,7 +1204,7 @@
 			<Description>TXT_KEY_CIVIC_FANATICISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_FANATICISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_FANATICISM_STRATEGY</Strategy>
-			<TechPrereq>TECH_DOCTRINE</TechPrereq>
+			<TechPrereq>TECH_RELIGIOUS_ORDERS</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Fanaticism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
@@ -1420,7 +1420,7 @@
 			<TechPrereq>TECH_EXPLORATION</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Colonialism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
-			<Upkeep>UPKEEP_MEDIUM</Upkeep>
+			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iColonyMaintenanceModifier>-50</iColonyMaintenanceModifier>
 			<bColonialSlavery>1</bColonialSlavery>
 			<DomainExperienceModifiers>

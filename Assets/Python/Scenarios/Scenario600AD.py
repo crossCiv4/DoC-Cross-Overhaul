@@ -12,7 +12,7 @@ lCivilizations = [
 		iGold=300,
 		iStateReligion=iConfucianism,
 		lCivics=[iDespotism, iCitizenship, iManorialism, iMerchantTrade, iSyncretism, iHegemony],
-		techs=techs.column(6).including(iMachinery, iAlchemy, iCivilService).without(iNobility)
+		techs=techs.column(6).including(iMachinery, iAlchemy, iCivilService).without(iRecurveBow)
 	),
 	Civilization(
 		iNubia,
@@ -108,7 +108,7 @@ lCivilizations = [
 		iGold=100,
 		lCivics=[iDespotism, iSlavery, iMerchantTrade, iHegemony],
 		lEnemies=[iIndependent, iIndependent2],
-		techs=techs.column(5).including(iNobility, iSteel).without(iNavigation, iMedicine, iPhilosophy)
+		techs=techs.column(5).including(iRecurveBow, iSteel).without(iNavigation, iMedicine, iPhilosophy)
 	),
 	Civilization(
 		iNative,

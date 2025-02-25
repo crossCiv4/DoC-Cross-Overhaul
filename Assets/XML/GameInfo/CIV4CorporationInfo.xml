@@ -339,7 +339,7 @@
 			<Type>CORPORATION_HANSEATIC_LEAGUE</Type>
 			<Description>TXT_KEY_HANSEATIC_LEAGUE</Description>
 			<Civilopedia>TXT_KEY_HANSEATIC_LEAGUE_PEDIA</Civilopedia>
-			<TechPrereq>TECH_GUILDS</TechPrereq>
+			<TechPrereq>TECH_COMPASS</TechPrereq>
 			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>
@@ -376,7 +376,7 @@
 			<Type>CORPORATION_KNIGHTS_TEMPLAR</Type>
 			<Description>TXT_KEY_KNIGHTS_TEMPLAR</Description>
 			<Civilopedia>TXT_KEY_KNIGHTS_TEMPLAR_PEDIA</Civilopedia>
-			<TechPrereq>TECH_FEUDALISM</TechPrereq>
+			<TechPrereq>TECH_RELIGIOUS_ORDERS</TechPrereq>
 			<FreeUnitClass>NONE</FreeUnitClass>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>

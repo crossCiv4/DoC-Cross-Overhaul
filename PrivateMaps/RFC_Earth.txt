@@ -23748,12 +23748,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=50
+	BonusType=BONUS_CRAB
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=51
-	BonusType=BONUS_CRAB
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -32275,7 +32275,7 @@ EndPlot
 BeginPlot
 	x=72,y=58
 	BonusType=BONUS_PIG
-	TerrainType=TERRAIN_STEPPE
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32740,14 +32740,14 @@ BeginPlot
 	x=73,y=57
 	RiverNSDirection=2
 	isWOfRiver
-	TerrainType=TERRAIN_STEPPE
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=73,y=58
 	RiverNSDirection=2
 	isWOfRiver
-	TerrainType=TERRAIN_STEPPE
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32755,7 +32755,7 @@ BeginPlot
 	RiverNSDirection=2
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
-	TerrainType=TERRAIN_STEPPE
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33218,18 +33218,18 @@ BeginPlot
 	x=74,y=57
 	isNOfRiver
 	RiverWEDirection=1
-	TerrainType=TERRAIN_STEPPE
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=58
 	BonusType=BONUS_HORSE
-	TerrainType=TERRAIN_STEPPE
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=59
-	TerrainType=TERRAIN_STEPPE
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33715,7 +33715,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=59
-	TerrainType=TERRAIN_STEPPE
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -54802,6 +54802,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	TerrainType=TERRAIN_GRASS
+	BonusType=BONUS_CITRUS
 	PlotType=1
 EndPlot
 BeginPlot

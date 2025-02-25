@@ -381,7 +381,7 @@
 		<BuildInfo>
 			<Type>BUILD_LUMBERMILL</Type>
 			<Description>TXT_KEY_BUILD_LUMBERMILL</Description>
-			<PrereqTech>TECH_STEEL</PrereqTech>
+			<PrereqTech>TECH_SPRING_STEEL</PrereqTech>
 			<iTime>800</iTime>
 			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -1009,7 +1009,7 @@
 		<BuildInfo>
 			<Type>BUILD_FORT</Type>
 			<Description>TXT_KEY_BUILD_FORT</Description>
-			<PrereqTech>TECH_GENERALSHIP</PrereqTech>
+			<PrereqTech>TECH_FORTIFICATION</PrereqTech>
 			<iTime>1000</iTime>
 			<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>

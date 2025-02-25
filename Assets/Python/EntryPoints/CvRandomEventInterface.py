@@ -1833,7 +1833,7 @@ def canTriggerTheHuns(argsList):
 			
 #   At least one civ on the board must know Horseback Riding.
 	bFoundValid = false
-	iTech = CvUtil.findInfoTypeNum(gc.getTechInfo, gc.getNumTechInfos(), 'TECH_NOBILITY')
+	iTech = CvUtil.findInfoTypeNum(gc.getTechInfo, gc.getNumTechInfos(), 'TECH_RECURVE_BOW')
 	for iPlayer in range(gc.getMAX_CIV_PLAYERS()):			
 		loopPlayer = gc.getPlayer(iPlayer)
 		if loopPlayer.isAlive():

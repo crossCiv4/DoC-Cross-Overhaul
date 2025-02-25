@@ -2374,9 +2374,6 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 	case EGYPT:
 		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
-		if (GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)FEUDALISM))
-			aiUnitAIVal[UNITAI_SETTLE] /= 3;
-		break;
 	case BABYLONIA:
 		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;

@@ -550,7 +550,7 @@ def isUnitOfRole(iUnit, iRole):
 	elif iRole == iCounter:
 		return iCombatType == UnitCombatTypes.UNITCOMBAT_MELEE and unit.getUnitCombatModifier(UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY) > 0
 	elif iRole in [iShock, iShockCity]:
-		return iCombatType == UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY and iUnit != iWarElephant or iUnit == iKeshik
+		return iCombatType == UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY and (iUnit != iWarElephant and iUnit != iTemplar) or iUnit == iKeshik
 	elif iRole == iHarass:
 		return iCombatType == UnitCombatTypes.UNITCOMBAT_LIGHT_CAVALRY and not iUnit == iKeshik
 	elif iRole == iWorkerSea:
@@ -609,10 +609,13 @@ def getUnitsForRole(iPlayer, iRole, bUnique=True):
 			units.append(getUnitForRole(iPlayer, iDefend, bUnique=bUnique))
 	
 	elif iRole == iAssaultSea:
-		for _ in range(infos.unit(iUnit).getCargoSpace()):
-			# civs that prefer cavalry naval assault spawns
+		for i in range(infos.unit(iUnit).getCargoSpace()):
+			# civs that prefer cavalry + siege naval assault spawns
 			if civ(iPlayer) in [iEngland]:
-				units.append(getUnitForRole(iPlayer, iShock, bUnique=bUnique))
+				if i % 3 == 0:
+					units.append(getUnitForRole(iPlayer, iSiege, bUnique=bUnique))
+				else:
+					units.append(getUnitForRole(iPlayer, iShock, bUnique=bUnique))
 			else:
 				units.append(getUnitForRole(iPlayer, iAttack, bUnique=bUnique))
 	

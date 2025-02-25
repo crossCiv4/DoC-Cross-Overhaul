@@ -1206,7 +1206,7 @@ def specificName(iPlayer):
 			return capitalName(iPlayer)
 
 	elif iCiv == iSaxons:
-		if tPlayer.isHasTech(iFeudalism):
+		if tPlayer.isHasTech(iNobility):
 			return "TXT_KEY_CIV_ENGLAND_SHORT_DESC"
 
 	elif iCiv == iArabia:
@@ -1983,7 +1983,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 
 	elif iCiv == iCelts:
 		if bResurrected:
-			if tPlayer.isHasTech(iFeudalism):
+			if tPlayer.isHasTech(iNobility):
 				return "TXT_KEY_KINGDOM_ADJECTIVE"
 			else:
 				return "TXT_KEY_CIV_CELTS_PETTY_KINGDOMS"
@@ -2255,7 +2255,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 	
 	elif iCiv == iSaxons:
-		if tPlayer.isHasTech(iFeudalism):
+		if tPlayer.isHasTech(iNobility):
 			return "TXT_KEY_KINGDOM_OF"
 
 	elif iCiv == iEngland:
@@ -2587,7 +2587,7 @@ def leader(iPlayer):
 	elif iCiv == iJapan:
 		if iEra >= iIndustrial: return iMeiji
 		
-		if tPlayer.isHasTech(iFeudalism): return iOdaNobunaga
+		if tPlayer.isHasTech(iNobility): return iOdaNobunaga
 		
 	elif iCiv == iEthiopia:
 		if iEra >= iIndustrial: return iMenelik

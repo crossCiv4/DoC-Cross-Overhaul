@@ -3903,7 +3903,7 @@
 			<Strategy>TXT_KEY_BUILDING_WHARF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_WHARF</ArtDefineTag>
-			<PrereqTech>TECH_COMPASS</PrereqTech>
+			<PrereqTech>TECH_LATEEN_SAILS</PrereqTech>
 			<bWater>1</bWater>
 			<iCost>80</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -3936,7 +3936,7 @@
 			<Strategy>TXT_KEY_BUILDING_RUS_VOLOK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RUS_VOLOK</ArtDefineTag>
-			<PrereqTech>TECH_NAVIGATION</PrereqTech>
+			<PrereqTech>TECH_LATEEN_SAILS</PrereqTech>
 			<bRiver>1</bRiver>
 			<iCost>80</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -9203,7 +9203,7 @@
 			<Strategy>TXT_KEY_BUILDING_ADMINISTRATIVE_CENTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ADMINISTRATIVE_CENTER</ArtDefineTag>
-			<PrereqTech>TECH_POLITICS</PrereqTech>
+			<PrereqTech>TECH_CONSENSUS</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bGovernmentCenter>1</bGovernmentCenter>
 			<iCost>-1</iCost>
@@ -10464,7 +10464,7 @@
 			<OrPrereqReligion>RELIGION_TAOISM</OrPrereqReligion>
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
 			<PrereqTech>TECH_ARITHMETICS</PrereqTech>
-			<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
+			<ObsoleteTech>TECH_NOBILITY</ObsoleteTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
@@ -10678,7 +10678,7 @@
 			<StateReligion>RELIGION_ZOROASTRIANISM</StateReligion>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
-			<ObsoleteTech>TECH_POLITICS</ObsoleteTech>
+			<ObsoleteTech>TECH_CONSENSUS</ObsoleteTech>
 			<FreeBuilding>BUILDINGCLASS_MONUMENT</FreeBuilding>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -11843,7 +11843,7 @@
 			<StateReligion>RELIGION_CATHOLICISM</StateReligion>
 			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
 			<MaxStartEra>ERA_MEDIEVAL</MaxStartEra>
-			<PrereqTech>TECH_ETHICS</PrereqTech>
+			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
 			<ObsoleteTech>TECH_JOURNALISM</ObsoleteTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -12362,7 +12362,7 @@
 			<StateReligion>RELIGION_BUDDHISM</StateReligion>
 			<PrereqReligion>RELIGION_BUDDHISM</PrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
-			<PrereqTech>TECH_FEUDALISM</PrereqTech>
+			<PrereqTech>TECH_NOBILITY</PrereqTech>
 			<ObsoleteTech>TECH_MACHINE_TOOLS</ObsoleteTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -12858,7 +12858,7 @@
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<OrPrereqReligion>RELIGION_SHIA</OrPrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
-			<PrereqTech>TECH_FORTIFICATION</PrereqTech>
+			<PrereqTech>TECH_RELIGIOUS_ORDERS</PrereqTech>
 			<ObsoleteTech>TECH_COMBINED_ARMS</ObsoleteTech>
 			<FreeBuilding>BUILDINGCLASS_CASTLE</FreeBuilding>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_ENGINEER</GreatPeopleUnitClass>
@@ -12920,7 +12920,7 @@
 			<StateReligion>RELIGION_ORTHODOXY</StateReligion>
 			<PrereqReligion>RELIGION_ORTHODOXY</PrereqReligion>
 			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
-			<PrereqTech>TECH_GUILDS</PrereqTech>
+			<PrereqTech>TECH_FORTIFICATION</PrereqTech>
 			<ObsoleteTech>TECH_GEOLOGY</ObsoleteTech>
 			<PrereqBonuses>BONUS_INCENSE</PrereqBonuses>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_PROPHET</GreatPeopleUnitClass>
@@ -13046,7 +13046,7 @@
 			<StateReligion>RELIGION_CATHOLICISM</StateReligion>
 			<PrereqReligion>RELIGION_CATHOLICISM</PrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
-			<PrereqTech>TECH_COMMUNE</PrereqTech>
+			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -13336,7 +13336,7 @@
 			<StateReligion>RELIGION_SHIA</StateReligion>
 			<PrereqReligion>RELIGION_SHIA</PrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
-			<PrereqTech>TECH_COMPASS</PrereqTech>
+			<PrereqTech>TECH_RELIGIOUS_ORDERS</PrereqTech>
 			<ObsoleteTech>TECH_COMBINED_ARMS</ObsoleteTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>

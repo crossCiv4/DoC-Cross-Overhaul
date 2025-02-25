@@ -455,6 +455,14 @@
 			<DefaultUnit>UNIT_LANCER</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
+			<Type>UNITCLASS_TEMPLAR</Type>
+			<Description>TXT_KEY_UNIT_TEMPLAR</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultUnit>UNIT_TEMPLAR</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
 			<Type>UNITCLASS_CUIRASSIER</Type>
 			<Description>TXT_KEY_UNIT_CUIRASSIER</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>

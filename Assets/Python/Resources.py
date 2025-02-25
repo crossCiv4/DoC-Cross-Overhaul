@@ -90,8 +90,7 @@ dResourcesDict = {
 	(89, 46)  : (700,   iSugar),	# Mesopotamia
 	(78, 41)  : (700,   iSugar),	# Egypt
 	(113, 44) : (800,   iOpium),	# Bengal
-	(122, 49) : (800,   iCitrus),	# Vietnam
-	(121, 40) : (800,   iPig),	# Vietnam
+	(121, 40) : (800,   iPig),		# Vietnam
 	(82, 40)  : (900,   iIron),		# Egypt
 	(101, 50) : (900,   iHorse),	# Punjab
 	(73, 25)  : (1000,  iBanana),   # Congo

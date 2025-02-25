@@ -639,7 +639,7 @@ iArmenia : 1050,
 iMinoans: -1130,
 iParthia: 650,
 iGhorids: 1370,
-iSaxons: 1050,
+#iSaxons: 1050,
 }, 2020)
 
 # Leoreth: determine neighbour lists from pairwise neighbours for easier lookup
@@ -681,7 +681,7 @@ iBulgaria: [(1170, 1250), (1848,2020)],
 iKhazars: [(1300, 1550)],
 iMoors : [(1220, 1750), (1940, 2020)], # Marinids / Ziyanids
 iJava : [(720, 1650), (1940, 2020)],
-iSpain : [(1150, 1300), (1700, 2020)],
+iSpain : [(1150, 1600), (1815, 2020)],
 iEngland : [(1200, 2020)],
 iHolyRome : [(1800, 2020)],
 iBurma : [(850, 1885), (1950, 2020)],
@@ -1060,15 +1060,16 @@ iNumCorporations = 11
 
 # initialise tech variables to unit indices from XML
 
-iNumTechs = 141
+iNumTechs = 148
 (iTanning, iMining, iPottery, iPastoralism, iAgriculture, iMythology, iSailing,
 iSmelting, iMasonry, iLeverage, iProperty, iCeremony, iDivination, iSeafaring,
 iAlloys, iConstruction, iRiding, iArithmetics, iWriting, iCalendar, iShipbuilding,
 iBloomery, iCement, iMathematics, iContract, iLiterature, iPriesthood, iNavigation,
 iGeneralship, iEngineering, iAesthetics, iCurrency, iLaw, iPhilosophy, iMedicine,
-iNobility, iSteel, iArchitecture, iArtisanry, iPolitics, iScholarship, iEthics,
-iFeudalism, iFortification, iMachinery, iAlchemy, iGuilds, iCivilService, iTheology,
-iCommune, iCropRotation, iPaper, iCompass, iPatronage, iEducation, iDoctrine,
+iRecurveBow, iSteel, iArchitecture, iArtisanry, iPolitics, iScholarship, iEthics,
+iNobility, iSpringSteel, iFortification, iLateenSails, iConsensus, iCivilService, iTheology,
+iSelectiveBreeding, iLimbProtection, iMachinery, iAlchemy, iGuilds, iCropRotation, iDoctrine,
+iCommune, iDiscipline, iPaper, iCompass, iPatronage, iEducation, iReligiousOrders,
 iGunpowder, iCompanies, iFinance, iCartography, iHumanities, iPrinting, iJudiciary,
 iFirearms, iLogistics, iExploration, iOptics, iAcademia, iStatecraft, iHeritage,
 iCombinedArms, iEconomics, iGeography, iScientificMethod, iUrbanPlanning, iCivilLiberties, iHorticulture,
@@ -1086,7 +1087,7 @@ iTranshumanism) = range(iNumTechs)
 
 # initialise unit variables to unit indices from XML
 
-iNumUnits = 250
+iNumUnits = 251
 (iLion, iBear, iPanther, iWolf, iSettler, iCityBuilder, iPioneer, iWorker, iRomanWorker, iPunjabiWorker, iLabourer, 
 iMadeireiro, iScout, iExplorer, iBandeirante, iSpy, iReligiousPersecutor, iJewishMissionary, iOrthodoxMissionary, iCatholicMissionary, iProtestantMissionary, 
 iIslamicMissionary, iShiaMissionary, iHinduMissionary, iBuddhistMissionary, iConfucianMissionary, iTaoistMissionary, iZoroastrianMissionary, iMarxismMissionary, iWarrior, iNativeWarrior, iMilitia, iXiaLevy, iAxeman, 
@@ -1098,7 +1099,7 @@ iMehalSefari, iGrenadier, iRocketeer, iGrenzer, iAlbionLegion, iAntiTank, iInfan
 iNavySeal, iParatrooper, iMechanizedInfantry, iArcher, iNanmanArcher, iAsharittuBowman, iMedjay, iNativeArcher, iSkirmisher, iVishap, iHolkan, iAtlatl, 
 iKelebolo, iLongbowman, iPatiyodha, iRattanArcher, iCrossbowman, iNaffatun, iChokonu, iBalestriere, iChariot, iWarChariot, iHuluganni, 
 iCidainh, iHorseman, iHausaCavalry, iCompanion, iNumidianCavalry, iAsvaka, iCamelRider, iHorseArcher, iKonnik, iMangudai, iKhampa, iOghuz, 
-iCamelArcher, iLancer, iKhazarNobleLancer, iMamlukCavalry, iVaru, iSavaran, iFarari, iMobileGuard, iKeshik, iCataphract, iChangSuek, iPistolier, 
+iCamelArcher, iTemplar, iLancer, iKhazarNobleLancer, iMamlukCavalry, iVaru, iSavaran, iFarari, iMobileGuard, iKeshik, iCataphract, iChangSuek, iPistolier, 
 iHakkapeliitta, iMountedBrave, iCamelGunner, iZamburak, iCuirassier, iGendarme, iConquistador, iWingedHussar, iSowar, iHussar, iCossack, 
 iLlanero, iDragoon, iCassay, iGrenadierCavalry, iCavalry, iRural, iWarElephant, iBallistaElephant, iTank, iPanzer, 
 iMainBattleTank, iGunship, iCatapult, iSiegeRam, iBallista, iTrebuchet, iBombard, iSiegeEngineer, iHwacha, iLantaka, iSiegeElephant, 

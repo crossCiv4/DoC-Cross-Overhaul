@@ -3169,6 +3169,115 @@
 	</TEXT>
 
 
+	<TEXT>
+		<Tag>TXT_KEY_TECH_RECURVE_BOW</Tag>
+		<English>Recurve Bow</English>
+		<French>Recurve Bow</French>
+		<German>Recurve Bow</German>
+		<Italian>Recurve Bow</Italian>
+		<Spanish>Recurve Bow</Spanish>
+	</TEXT>
+
+		<TEXT>
+		<Tag>TXT_KEY_TECH_RECURVE_BOW_QUOTE</Tag>
+		<English>TXT_KEY_TECH_RECURVE_BOW_QUOTE</English>
+		<French>TXT_KEY_TECH_RECURVE_BOW_QUOTE</French>
+		<German>TXT_KEY_TECH_RECURVE_BOW_QUOTE</German>
+		<Italian>TXT_KEY_TECH_RECURVE_BOW_QUOTE</Italian>
+		<Spanish>TXT_KEY_TECH_RECURVE_BOW_QUOTE</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_RECURVE_BOW_PEDIA</Tag>
+		<English>TXT_KEY_TECH_RECURVE_BOW_PEDIA</English>
+		<French>TXT_KEY_TECH_RECURVE_BOW_PEDIA</French>
+		<German>TXT_KEY_TECH_RECURVE_BOW_PEDIA</German>
+		<Italian>TXT_KEY_TECH_RECURVE_BOW_PEDIA</Italian>
+		<Spanish>TXT_KEY_TECH_RECURVE_BOW_PEDIA</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_CONSENSUS</Tag>
+		<English>Consensus</English>
+		<French>Consensus</French>
+		<German>Consensus</German>
+		<Italian>Consensus</Italian>
+		<Spanish>Consensus</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_CONSENSUS_QUOTE</Tag>
+		<English>TXT_KEY_TECH_CONSENSUS_QUOTE</English>
+		<French>TXT_KEY_TECH_CONSENSUS_QUOTE</French>
+		<German>TXT_KEY_TECH_CONSENSUS_QUOTE</German>
+		<Italian>TXT_KEY_TECH_CONSENSUS_QUOTE</Italian>
+		<Spanish>TXT_KEY_TECH_CONSENSUS_QUOTE</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_CONSENSUS_PEDIA</Tag>
+		<English>TXT_KEY_TECH_CONSENSUS_PEDIA</English>
+		<French>TXT_KEY_TECH_CONSENSUS_PEDIA</French>
+		<German>TXT_KEY_TECH_CONSENSUS_PEDIA</German>
+		<Italian>TXT_KEY_TECH_CONSENSUS_PEDIA</Italian>
+		<Spanish>TXT_KEY_TECH_CONSENSUS_PEDIA</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_SPRING_STEEL</Tag>
+		<English>Spring Steel</English>
+		<French>Spring Steel</French>
+		<German>Spring Steel</German>
+		<Italian>Spring Steel</Italian>
+		<Spanish>Spring Steel</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_LATEEN_SAILS</Tag>
+		<English>Lateen Sails</English>
+		<French>Lateen Sails</French>
+		<German>Lateen Sails</German>
+		<Italian>Lateen Sails</Italian>
+		<Spanish>Lateen Sails</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_LIMB_PROTECTION</Tag>
+		<English>Limb Protection</English>
+		<French>Limb Protection</French>
+		<German>Limb Protection</German>
+		<Italian>Limb Protection</Italian>
+		<Spanish>Limb Protection</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_SELECTIVE_BREEDING</Tag>
+		<English>Selective Breeding</English>
+		<French>Selective Breeding</French>
+		<German>Selective Breeding</German>
+		<Italian>Selective Breeding</Italian>
+		<Spanish>Selective Breeding</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_DISCIPLINE</Tag>
+		<English>Discipline</English>
+		<French>Discipline</French>
+		<German>Discipline</German>
+		<Italian>Discipline</Italian>
+		<Spanish>Discipline</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_RELIGIOUS_ORDERS</Tag>
+		<English>Religious Orders</English>
+		<French>Religious Orders</French>
+		<German>Religious Orders</German>
+		<Italian>Religious Orders</Italian>
+		<Spanish>Religious Orders</Spanish>
+	</TEXT>
+
 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOBILITY</Tag>

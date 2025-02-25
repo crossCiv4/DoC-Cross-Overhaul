@@ -2865,6 +2865,20 @@
 		<Italian>[COLOR_UNIT_TEXT]Camel Archers[COLOR_REVERT] don't receive defensive bonuses, can withdraw from combat, have a combat bonus on open terrain, have a bonus against [COLOR_UNIT_TEXT]Heavy Cavalry Units[COLOR_REVERT] units, have a combat bonus in [COLOR_HIGHLIGHT_TEXT]Desert[COLOR_REVERT] and begin with the [COLOR_HIGHLIGHT_TEXT]Desert Adaptation[COLOR_REVERT] promotion.</Italian>
 		<Spanish>[COLOR_UNIT_TEXT]Camel Archers[COLOR_REVERT] don't receive defensive bonuses, can withdraw from combat, have a combat bonus on open terrain, have a bonus against [COLOR_UNIT_TEXT]Heavy Cavalry Units[COLOR_REVERT] units, have a combat bonus in [COLOR_HIGHLIGHT_TEXT]Desert[COLOR_REVERT] and begin with the [COLOR_HIGHLIGHT_TEXT]Desert Adaptation[COLOR_REVERT] promotion.</Spanish>
 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TEMPLAR</Tag>
+		<English>Templar</English>
+		<French>
+			<Text>Templier</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Templar</German>
+		<Italian>Templar</Italian>
+		<Spanish>Templar</Spanish>
+	</TEXT>
+
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_GUNNER</Tag>
 		<English>Camel Gunner</English>

@@ -15,11 +15,11 @@ dCompanyTechs = {
 	iOilIndustry      : [iEconomics, iRefining],
 	iLuxuryIndustry   : [iEconomics, iConsumerism],
 	iComputerIndustry : [iEconomics, iComputers],
-	iHanseaticLeague  : [iGuilds],
-	iKnightsTemplar   : [iFeudalism],
+	iHanseaticLeague  : [iCompass],
+	iKnightsTemplar   : [iNobility],
 }
 
-tCompaniesLimit = (16, 20, 24, 16, 20, 20, 10, 16, 20, 12, 9) # kind of arbitrary currently, see how this plays out
+tCompaniesLimit = (16, 20, 24, 16, 20, 20, 10, 16, 20, 11, 9) # kind of arbitrary currently, see how this plays out
 
 dCompanyExpiry = defaultdict({
 	iSilkRoute : 1450,
@@ -189,7 +189,7 @@ def getCityValue(city, iCompany):
 
 	elif iCompany == iHanseaticLeague:
 		if city.isCoastal(20):
-			iValue += 2
+			iValue += 10
 	
 	# penalty for silk route if coastal (mitigatable by harbor)
 	if iCompany == iSilkRoute:
@@ -202,7 +202,7 @@ def getCityValue(city, iCompany):
 			iValue -= 1
 	if iCompany == iHanseaticLeague:
 		if owner.getStateReligion() in [iProtestantism, iCatholicism, iOrthodoxy]:
-			iValue += 1
+			iValue += 3
 	if iCompany == iKnightsTemplar:
 		if not owner.getStateReligion() in [iCatholicism]:
 			return -1

@@ -11158,7 +11158,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=121,y=45
-	ImprovementType=IMPROVEMENT_WINDMILL
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
 	x=121,y=47
@@ -11267,8 +11268,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=122,y=43
-	BonusType=BONUS_CITRUS
-	ImprovementType=IMPROVEMENT_ORCHARD
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot

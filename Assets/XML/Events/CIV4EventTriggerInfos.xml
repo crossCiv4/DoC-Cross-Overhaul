@@ -563,7 +563,7 @@
 			<OrPreReqs/>
 			<AndPreReqs/>
 			<ObsoleteTechs>
-				<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_NOBILITY</ObsoleteTech>
 				<ObsoleteTech>TECH_FORTIFICATION</ObsoleteTech>
 				<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 				<ObsoleteTech>TECH_ALCHEMY</ObsoleteTech>
@@ -2088,7 +2088,7 @@
 			<PrereqEvents/>
 			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<OrPreReqs>
-				<PrereqTech>TECH_FEUDALISM</PrereqTech>
+				<PrereqTech>TECH_NOBILITY</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs/>
 			<ObsoleteTechs/>
@@ -3587,7 +3587,7 @@
 			<OrPreReqs>
 				<ObsoleteTech>TECH_FORTIFICATION</ObsoleteTech>
 				<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
-				<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_NOBILITY</ObsoleteTech>
 				<ObsoleteTech>TECH_ARCHITECTURE</ObsoleteTech>
 				<ObsoleteTech>TECH_GUILDS</ObsoleteTech>
 				<ObsoleteTech>TECH_CIVIL_SERVICE</ObsoleteTech>
@@ -5445,7 +5445,7 @@
 				<PrereqTech>TECH_PASTORALISM</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_FEUDALISM</PrereqTech>
+				<PrereqTech>TECH_NOBILITY</PrereqTech>
 			</AndPreReqs>
 			<ObsoleteTechs/>
 			<bRecurring>0</bRecurring>
@@ -7522,7 +7522,7 @@
 			</OrPreReqs>
 			<AndPreReqs/>
 			<ObsoleteTechs>
-				<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_NOBILITY</ObsoleteTech>
 				<ObsoleteTech>TECH_FORTIFICATION</ObsoleteTech>
 				<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 				<ObsoleteTech>TECH_ALCHEMY</ObsoleteTech>
@@ -8630,7 +8630,7 @@
 			</OrPreReqs>
 			<AndPreReqs/>
 			<ObsoleteTechs>
-				<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_NOBILITY</ObsoleteTech>
 				<ObsoleteTech>TECH_FORTIFICATION</ObsoleteTech>
 				<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 				<ObsoleteTech>TECH_ALCHEMY</ObsoleteTech>
@@ -13599,7 +13599,7 @@
 			<OrPreReqs>
 				<ObsoleteTech>TECH_FORTIFICATION</ObsoleteTech>
 				<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
-				<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_NOBILITY</ObsoleteTech>
 				<ObsoleteTech>TECH_ARCHITECTURE</ObsoleteTech>
 				<ObsoleteTech>TECH_GUILDS</ObsoleteTech>
 				<ObsoleteTech>TECH_CIVIL_SERVICE</ObsoleteTech>
@@ -14372,7 +14372,7 @@
 			</OrPreReqs>
 			<AndPreReqs/>
 			<ObsoleteTechs>
-				<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_NOBILITY</ObsoleteTech>
 				<ObsoleteTech>TECH_FORTIFICATION</ObsoleteTech>
 				<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 				<ObsoleteTech>TECH_ALCHEMY</ObsoleteTech>
@@ -14463,7 +14463,7 @@
 			<OrPreReqs/>
 			<AndPreReqs/>
 			<ObsoleteTechs>
-				<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_NOBILITY</ObsoleteTech>
 				<ObsoleteTech>TECH_FORTIFICATION</ObsoleteTech>
 				<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 				<ObsoleteTech>TECH_ALCHEMY</ObsoleteTech>
@@ -14551,7 +14551,7 @@
 				<PrereqTech>TECH_SHIPBUILDING</PrereqTech>
 			</AndPreReqs>
 			<ObsoleteTechs>
-				<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_NOBILITY</ObsoleteTech>
 				<ObsoleteTech>TECH_FORTIFICATION</ObsoleteTech>
 				<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 				<ObsoleteTech>TECH_ALCHEMY</ObsoleteTech>
@@ -14642,7 +14642,7 @@
 			<OrPreReqs/>
 			<AndPreReqs/>
 			<ObsoleteTechs>
-				<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_NOBILITY</ObsoleteTech>
 				<ObsoleteTech>TECH_FORTIFICATION</ObsoleteTech>
 				<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
 				<ObsoleteTech>TECH_ALCHEMY</ObsoleteTech>
@@ -14895,7 +14895,7 @@
 			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<OrPreReqs/>
 			<AndPreReqs>
-				<PrereqTech>TECH_FEUDALISM</PrereqTech>
+				<PrereqTech>TECH_NOBILITY</PrereqTech>
 			</AndPreReqs>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_COMBINED_ARMS</ObsoleteTech>
@@ -17769,8 +17769,7 @@
 			<bPrereqEventPlot>0</bPrereqEventPlot>
 			<OrPreReqs/>
 			<AndPreReqs>
-				<PrereqTech>TECH_FEUDALISM</PrereqTech>
-				<!-- <PrereqTech>TECH_GUILDS</PrereqTech> -->
+				<PrereqTech>TECH_RELIGIOUS_ORDERS</PrereqTech>
 			</AndPreReqs>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_HUMANITIES</ObsoleteTech>

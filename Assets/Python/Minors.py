@@ -495,7 +495,7 @@ minor_cities = [
 	MinorCity(-500, iNative, (19, 41), "Danibaan", iPopulation=2, iCiv=iMaya, units={iSkirmish: 1}, adjective="TXT_KEY_ADJECTIVE_ZAPOTEC"),
 	MinorCity(-600, iBarbarian, (121, 42), "Thang Long", iPopulation=2, iCiv=iVietnam, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_NANYUE"),
 	MinorCity(-490, iBarbarian, (66, 57), "Melpum", iPopulation=2, iCiv=iCelts, units={iHarass: 2}, adjective="TXT_KEY_ADJECTIVE_CELTIC"),
-	MinorCity(-280, iBarbarian, (57, 52), "Vaccaei", iPopulation=1, iCiv=iCelts, units={iSkirmish: 1}, iCulture=1, adjective="TXT_KEY_ADJECTIVE_CELTIBERIAN"),
+	MinorCity(-280, iBarbarian, (59, 53), "Iruna", iPopulation=1, iCiv=iCelts, units={iSkirmish: 1}, iCulture=1, adjective="TXT_KEY_ADJECTIVE_CELTIBERIAN"),
 	MinorCity(-250, iBarbarian, (60, 47), "Shigan", iPopulation=2, iCiv=iPhoenicia, units={iShock: 4}, adjective="TXT_KEY_ADJECTIVE_BERBER"),
 	MinorCity(-150, iIndependent2, (112, 57), "Jiaohe", iPopulation=1, iCiv=iChina, units={iHarass: 1}, adjective="TXT_KEY_ADJECTIVE_TOCHARIAN"),
 	MinorCity(-75, iIndependent, (105, 55), "Kash", iPopulation=2, iCiv=iKushans, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_UIGHUR"),
