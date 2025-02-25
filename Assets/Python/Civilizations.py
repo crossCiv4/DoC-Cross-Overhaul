@@ -294,7 +294,7 @@ lCivilizations = [
 		iGold=250,
 		iAdvancedStartPoints=100,
 		lCivics=[iDespotism, iSlavery, iRedistribution, iDeification, iHegemony],
-		techs=techs.column(4).including(iGeneralship).without(iShipbuilding, iNavigation)
+		techs=techs.column(4).without(iShipbuilding, iNavigation, iCement)
 	),
 	Civilization(
 		iRome,
@@ -373,7 +373,7 @@ lCivilizations = [
 		iStateReligion=iTaoism,
 		lCivics=[iMonarchy, iCasteSystem, iRedistribution, iSyncretism, iHegemony],
 		lEnemies=[iChina, iIndependent, iIndependent2],
-		techs=techs.column(5).including(iArtisanry, iScholarship, iSteel, iPolitics)
+		techs=techs.column(5).including(iArtisanry, iScholarship, iSteel)
 	),
 	Civilization(
 		iMali,
@@ -406,7 +406,7 @@ lCivilizations = [
 		iFrance,
 		iGold=150,
 		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(5).including(iEthics, iArtisanry)
+		techs=techs.column(5).including(iPolitics, iEthics, iArtisanry)
 	),
 	Civilization(
 		iMalays,
@@ -482,7 +482,7 @@ lCivilizations = [
 		iNorse, 
 		iGold=200,
 		lCivics=[iElective, iSlavery, iMerchantTrade, iThalassocracy],
-		techs=techs.column(6).including(iLateenSails, iConsensus)
+		techs=techs.column(6).including(iLateenSails, iConsensus, iNobility)
 	),
 	Civilization(
 		iHolyRome,
@@ -490,7 +490,7 @@ lCivilizations = [
 		iAdvancedStartPoints=150,
 		iStateReligion=iCatholicism,
 		lCivics=[iElective, iVassalage, iManorialism, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(6).including(iSpringSteel, iCivilService, iNobility, iTheology)
+		techs=techs.column(6).including(iSpringSteel, iCivilService, iNobility, iTheology, iFortification)
 	),
 	Civilization(
 		iBurma,
@@ -542,7 +542,7 @@ lCivilizations = [
 		iAdvancedStartPoints=80,
 		iStateReligion=iCatholicism,
 		lCivics=[iElective, iVassalage, iManorialism, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(7).including(iDoctrine, iReligiousOrders, iGuilds),
+		techs=techs.column(7).including(iDoctrine, iReligiousOrders, iGuilds, iSelectiveBreeding),
 	),
 	Civilization(
 		iEngland,
@@ -559,7 +559,7 @@ lCivilizations = [
 		iAdvancedStartPoints=60,
 		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iVassalage, iManorialism, iMerchantTrade, iMonasticism, iThalassocracy],
-		techs=techs.column(8).including(iReligiousOrders)
+		techs=techs.column(8).including(iEducation, iReligiousOrders)
 	),
 	Civilization(
 		iInca,
@@ -573,7 +573,7 @@ lCivilizations = [
 		iAdvancedStartPoints=100,
 		iStateReligion=iCatholicism,
 		lCivics=[iRepublic, iCitizenship, iManorialism, iMerchantTrade, iClergy],
-		techs=techs.column(8).including(iCommune, iReligiousOrders)
+		techs=techs.column(8).including(iCommune, iEducation, iReligiousOrders)
 	),
 	Civilization(
 		iMongols,
@@ -1179,8 +1179,10 @@ dStartingUnits = CivDict({
 	iThailand: {
 		iSettle: 1,
 		iWork: 2,
-		iCounter: 2,
-		iShock: 2,
+		iCounter: 3,
+		iShock: 3,
+		iSiege: 2,
+		iCityAttack: 1,
 		iMissionary: 1,
 	},
 	iSweden: {
@@ -1716,7 +1718,6 @@ dAIAlwaysTrain = CivDict({
 dNeverTrain = CivDict({
 	iCongo: [iCrossbowman],
 	iNigeria: [iCrossbowman],
-	iSaxons: [iHeavySpearman],
 }, [])
 
 def createSpecificUnits(iPlayer, tile):
@@ -1811,7 +1812,7 @@ dTechPreferences = {
 		iSeafaring: -20,
 	},
 	iChina : {
-		iAesthetics: 20,
+		iAesthetics: 40,
 		iContract: 40,
 		iGunpowder: 20,
 		iPrinting: 20,
@@ -2097,7 +2098,7 @@ dTechPreferences = {
 		iCivilService: 15,
 		iReplaceableParts: 15,
 		iFirearms: 20,
-		iExploration: 20,
+		iExploration: 10,
 		iLogistics: 15,
 		iPatronage: 20,
 		iMeasurement: 20,
@@ -2186,7 +2187,7 @@ dTechPreferences = {
 	iSpain : {
 		iNobility: 25,
 		iMachinery: 25,
-		iCartography: 30,
+		iCartography: 10,
 		iExploration: 10,
 		iCompass: 50,
 		iFirearms: 15,
@@ -2272,10 +2273,10 @@ dTechPreferences = {
 		iSocialContract: 15,
 	},
 	iPortugal : {
-		iCartography: 30,
-		iExploration: 30,
-		iGeography: 50,
-		iCompass: 50,
+		iCartography: 15,
+		iExploration: 15,
+		iGeography: 15,
+		iCompass: 30,
 		iGunpowder: 40,
 		iFirearms: 25,
 		iCompanies: 30,

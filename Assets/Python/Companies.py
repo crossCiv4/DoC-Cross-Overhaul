@@ -175,11 +175,15 @@ def getCityValue(city, iCompany):
 	
 	elif iCompany == iHanseaticLeague:
 		if city.getRegionID() in [rLowerGermany, rDenmark, rSweden, rPoland, rBaltics]:
-			iValue += 5
-		elif city.getRegionID() not in [rNorway, rBritain, rFrance, rRuthenia]:
+			iValue += 12
+		elif city.getRegionID() in [rNorway, rBritain, rRussia]:
+			iValue += 9
+		elif city.getRegionID() not in [rFrance]:
 			return -1
 	elif iCompany == iKnightsTemplar:
-		if city.getRegionID() in [rBritain, rFrance, rIberia, rItaly, rGreece, rAnatolia, rLevant, rEgypt, rMaghreb, rBalkans]:
+		if city.getRegionID() in [rIberia, rItaly, rGreece, rAnatolia, rLevant, rEgypt, rMaghreb, rBalkans]:
+			iValue += 12
+		elif city.getRegionID() in [rBritain, rFrance]:
 			iValue += 4
 	
 	# fishing industry - coastal cities only

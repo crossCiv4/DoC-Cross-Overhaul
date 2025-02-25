@@ -478,8 +478,8 @@ def tradingCompany(iTech, iTeam, iPlayer):
 	iCiv = civ(iPlayer)
 
 	dCivTechMappings = CivDict({
-		iSpain: [iFirearms, iOptics],
-		iPortugal: [iFirearms, iOptics, iEconomics, iGeography],
+		iSpain: [iOptics, iExploration],
+		iPortugal: [iExploration, iOptics, iEconomics, iGeography],
 		iFrance: [iGeography, iReplaceableParts, iMeasurement, iEngine],
 		iEngland: [iGeography, iReplaceableParts, iMeasurement, iMicrobiology, iEngine, iPneumatics],
 		iNetherlands: [iEconomics, iGeography, iReplaceableParts, iHorticulture],
@@ -532,7 +532,7 @@ def stabilizeAustria(iPlayer):
 
 		if iHolyRomanPlayer >= 0 and stability(iHolyRomanPlayer) < iStabilityShaky:
 			data.setStabilityLevel(iHolyRomanPlayer, iStabilityShaky)
-			
+
 
 ### FLIP ###
 
@@ -547,6 +547,11 @@ def flipMoorishMaghreb(iPlayer):
 			makeUnit(iPlayer, iSettler, city)
 			makeUnit(iPlayer, iWorker, city)
 
+@handler("flip")
+def stabilizeAustriaAfterGermany(iPlayer):
+	if civ(iPlayer) == iGermany:
+		if player(iHolyRome).isExisting():
+			data.players[iHolyRome].iNumPreviousCities = player(iHolyRome).getNumCities()
 
 @handler("flip")
 def stabilizeRomeAfterByzantium(iPlayer):

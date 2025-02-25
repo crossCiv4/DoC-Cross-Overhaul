@@ -1215,7 +1215,7 @@
 			<Description>TXT_KEY_PROMOTION_GARRISON3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_CITY_GARRISON2</PromotionPrereqOr1>
-			<TechPrereq>TECH_CIVIL_SERVICE</TechPrereq>
+			<TechPrereq>TECH_CONSENSUS</TechPrereq>
 			<iCityDefense>30</iCityDefense>
 			<UnitCombatMods>
 				<UnitCombatMod>

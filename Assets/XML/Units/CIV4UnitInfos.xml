@@ -6985,6 +6985,7 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
+			<iPlainsDefense>25</iPlainsDefense>
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_ARQUEBUSIER</Class>
@@ -10543,7 +10544,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COMMUNE</PrereqTech>
-			<iCost>60</iCost>
+			<iCost>70</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iMoves>1</iMoves>
@@ -13295,7 +13296,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON</BonusType>
 			</PrereqBonuses>
-			<iCost>100</iCost>
+			<iCost>95</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iMoves>2</iMoves>
@@ -13624,7 +13625,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON</BonusType>
 			</PrereqBonuses>
-			<iCost>120</iCost>
+			<iCost>110</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iMoves>1</iMoves>
@@ -13832,7 +13833,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_NOBILITY</PrereqTech>
-			<iCost>100</iCost>
+			<iCost>90</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iMoves>2</iMoves>
@@ -13948,7 +13949,7 @@
 			<PrereqTech>TECH_NOBILITY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
 			<PrereqBonuses/>
-			<iCost>100</iCost>
+			<iCost>95</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iMoves>2</iMoves>
@@ -14052,7 +14053,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_SELECTIVE_BREEDING</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
-			<iCost>100</iCost>
+			<iCost>95</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iMoves>3</iMoves>
@@ -14278,7 +14279,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_NOBILITY</PrereqTech>
 			<BonusType>BONUS_IVORY</BonusType>
-			<iCost>100</iCost>
+			<iCost>95</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iMoves>2</iMoves>
@@ -20442,7 +20443,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqTech>TECH_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_OPTICS</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER</BonusType>
 				<BonusType>BONUS_IRON</BonusType>
@@ -20521,7 +20522,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqTech>TECH_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_OPTICS</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER</BonusType>
 				<BonusType>BONUS_IRON</BonusType>

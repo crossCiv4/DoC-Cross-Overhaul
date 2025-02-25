@@ -353,7 +353,7 @@ def spreadReligionToRegion(iReligion, lRegions, iStartDate, iEndDate, iInterval,
 def schism(orthodoxCapital, catholicCapital, replace, distant, message):
 
 	# create shrine in the Catholic holy city
-	catholicCapital.setNumRealBuilding(iCatholicShrine, 1)
+	# catholicCapital.setNumRealBuilding(iCatholicShrine, 1)
 
 	replace += distant.where(lambda city: distance(city, catholicCapital) <= distance(city, orthodoxCapital))
 	for city in replace:

@@ -999,7 +999,7 @@ dGoals = {
 		ResourceTradeGold(3000, by=1950),
 	),
 	iBrazil: (
-		ImprovementCount((iSlavePlantation, 12), (iPasture, 4), at=1880),
+		ImprovementCount((iPlantation, 12), (iPasture, 4), at=1880),
 		Wonders(iWembley, iCristoRedentor, iItaipuDam),
 		All(
 			ImprovementCount(iForestPreserve, 30),
