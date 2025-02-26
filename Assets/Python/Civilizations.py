@@ -549,7 +549,6 @@ lCivilizations = [
 		iGold=400,
 		iAdvancedStartPoints=50,
 		iStateReligion=iCatholicism,
-		lEnemies=[iSaxons],
 		lCivics=[iMonarchy, iVassalage, iManorialism, iMerchantTrade, iClergy, iHegemony],
 		techs=techs.column(7).including(iDoctrine, iSelectiveBreeding, iMachinery, iGuilds, iReligiousOrders)
 	),
@@ -2199,6 +2198,8 @@ dTechPreferences = {
 		iHeritage: 15,
 		iReligiousOrders: 15,
 		iSelectiveBreeding: 15,
+		iCivilLiberties: -15,
+		iCombinedArms: 10,
 	},
 	iSaxons : {
 		iNobility: 10,

@@ -533,6 +533,12 @@ def stabilizeAustria(iPlayer):
 		if iHolyRomanPlayer >= 0 and stability(iHolyRomanPlayer) < iStabilityShaky:
 			data.setStabilityLevel(iHolyRomanPlayer, iStabilityShaky)
 
+@handler("birth")
+def normanInvasionOfBritain(iPlayer):
+	if civ(iPlayer) == iEngland:
+		enemyCities = cities.region(rBritain).notowner(iEngland).where(lambda city: team(iPlayer).canDeclareWar(city.getTeam()))
+		for iEnemy in enemyCities.owners():
+			team(iPlayer).declareWar(iEnemy, True, WarPlanTypes.WARPLAN_LIMITED)
 
 ### FLIP ###
 
