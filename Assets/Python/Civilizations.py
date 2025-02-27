@@ -293,7 +293,7 @@ lCivilizations = [
 		iChina,
 		iGold=250,
 		iAdvancedStartPoints=100,
-		lCivics=[iDespotism, iSlavery, iRedistribution, iDeification, iHegemony],
+		lCivics=[iDespotism, iSlavery, iRedistribution, iDeification],
 		techs=techs.column(4).without(iShipbuilding, iNavigation, iCement)
 	),
 	Civilization(
@@ -2205,14 +2205,17 @@ dTechPreferences = {
 	iEngland : {
 		iExploration: 15,
 		iFirearms: 20,
-		iReplaceableParts: 5,
+		iPhysics: 10,
+		iMeasurement: 20,
+		iReplaceableParts: 15,
 		iLogistics: 15,
 		iAcademia: 25,
 		iCivilLiberties: 25,
 		iEducation: 15,
 		iGuilds: 15,
-		iChemistry: 15,
+		iChemistry: 20,
 		iPrinting: 15,
+		iLabourUnions: 10,
 	},
 	iHolyRome : {
 		iSelectiveBreeding: 10,
@@ -2361,7 +2364,7 @@ dTechPreferences = {
 	},
 	iOttomans : {
 		iGunpowder: 25,
-		iFirearms: 30,
+		iFirearms: 40,
 		iCombinedArms: 20,
 		iJudiciary: 20,
 	},
@@ -2383,7 +2386,8 @@ dTechPreferences = {
 		iHumanities: 30,
 		iChemistry: 15,
 		iRailroad: 5,
-		iBiology: 5, 
+		iBiology: 5,
+		iMeasurement: 10,
 	},
 	iGermany : {
 		iEngine: 20,
@@ -2395,8 +2399,10 @@ dTechPreferences = {
 		iSociology: 20,
 		iSynthetics: 20,
 		iFission: 12,
+		iLabourUnions: 25,
 	},
 	iAmerica : {
+		iBallistics: 5,
 		iRailroad: 30,
 		iRepresentation: 30,
 		iEconomics: 20,

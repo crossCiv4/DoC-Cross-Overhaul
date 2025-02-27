@@ -6583,7 +6583,7 @@
 			<Type>UNIT_ARQUEBUSIER</Type>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ARQUEBUSIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ARQUEBUSIER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ARQUEBUSIER_STRATEGY</Strategy>
@@ -6682,7 +6682,7 @@
 			<Type>UNIT_CHINESE_FIRELANCER</Type>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CHINESE_FIRELANCER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHINESE_FIRELANCER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_CHINESE_FIRELANCER_STRATEGY</Strategy>
@@ -6894,7 +6894,7 @@
 			<Type>UNIT_RUSSIAN_STRELETS</Type>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RUSSIAN_STRELETS</Description>
 			<Civilopedia>TXT_KEY_UNIT_RUSSIAN_STRELETS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_RUSSIAN_STRELETS_STRATEGY</Strategy>
@@ -6997,7 +6997,7 @@
 			<Type>UNIT_OTTOMAN_JANISSARY</Type>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_OTTOMAN_JANISSARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_OTTOMAN_JANISSARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_OTTOMAN_JANISSARY_STRATEGY</Strategy>
@@ -7223,7 +7223,7 @@
 			<Type>UNIT_IRANIAN_QIZILBASH</Type>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
+			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_IRANIAN_QIZILBASH</Description>
 			<Civilopedia>TXT_KEY_UNIT_IRANIAN_QIZILBASH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_IRANIAN_QIZILBASH_STRATEGY</Strategy>
