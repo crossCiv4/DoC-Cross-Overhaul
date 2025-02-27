@@ -1395,6 +1395,7 @@ dExtraAIUnits = CivDict({
 		iDefend: 1,
 		iSiege: 1,
 		iCityAttack: 1,
+		iAssaultSea: 1,
 	},
 	iMalays: {
 		iDefend: 2,
@@ -2101,10 +2102,12 @@ dTechPreferences = {
 		iAcademia: 20,
 		iEducation: 15,
 		iNobility: 15,
-		iChemistry: 15,
+		iChemistry: 35,
 		iSociology: 15,
 		iFission: 12,
 		iReligiousOrders: 15,
+		iNationalism: 15,
+		iBallistics: -5,
 		iSelectiveBreeding: 15,
 	},
 	iMalays : {
@@ -2229,6 +2232,9 @@ dTechPreferences = {
 		iOptics: 15,
 		iFission: 12,
 		iEconomics: -10,
+		iRailroad: -10,
+		iChemistry: 15,
+		iReplaceableParts: 5,
 	},
 	iBurma : {
 		iLogistics: 20,

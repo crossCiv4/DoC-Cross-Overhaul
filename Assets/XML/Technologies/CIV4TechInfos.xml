@@ -3457,7 +3457,7 @@
 			<Description>TXT_KEY_TECH_MACHINE_TOOLS</Description>
 			<Civilopedia>TXT_KEY_TECH_MACHINE_TOOLS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>2800</iCost>
+			<iCost>3000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_INDUSTRIAL</Era>
 			<iAsset>52</iAsset>
@@ -3490,7 +3490,7 @@
 			<Description>TXT_KEY_TECH_THERMODYNAMICS</Description>
 			<Civilopedia>TXT_KEY_TECH_THERMODYNAMICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>2900</iCost>
+			<iCost>3000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_INDUSTRIAL</Era>
 			<iAsset>52</iAsset>
@@ -3523,7 +3523,7 @@
 			<Description>TXT_KEY_TECH_METALLURGY</Description>
 			<Civilopedia>TXT_KEY_TECH_METALLURGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>2700</iCost>
+			<iCost>2800</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_INDUSTRIAL</Era>
 			<iAsset>52</iAsset>
@@ -3561,7 +3561,7 @@
 			<Description>TXT_KEY_TECH_CHEMISTRY</Description>
 			<Civilopedia>TXT_KEY_TECH_CHEMISTRY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<iCost>2400</iCost>
+			<iCost>2500</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_INDUSTRIAL</Era>
 			<iAsset>52</iAsset>
@@ -3716,7 +3716,7 @@
 			<Description>TXT_KEY_TECH_BALLISTICS</Description>
 			<Civilopedia>TXT_KEY_TECH_BALLISTICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>3200</iCost>
+			<iCost>3300</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_INDUSTRIAL</Era>
 			<iAsset>56</iAsset>
@@ -3756,7 +3756,7 @@
 			<Description>TXT_KEY_TECH_ENGINE</Description>
 			<Civilopedia>TXT_KEY_TECH_ENGINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>3000</iCost>
+			<iCost>3100</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_INDUSTRIAL</Era>
 			<iAsset>60</iAsset>
@@ -3797,7 +3797,7 @@
 			<Description>TXT_KEY_TECH_RAILROAD</Description>
 			<Civilopedia>TXT_KEY_TECH_RAILROAD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>3100</iCost>
+			<iCost>3200</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_INDUSTRIAL</Era>
 			<iAsset>56</iAsset>
@@ -3995,7 +3995,7 @@
 			<Description>TXT_KEY_TECH_PNEUMATICS</Description>
 			<Civilopedia>TXT_KEY_TECH_PNEUMATICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<iCost>3500</iCost>
+			<iCost>3550</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_INDUSTRIAL</Era>
 			<iAsset>60</iAsset>
@@ -4033,7 +4033,7 @@
 			<Description>TXT_KEY_TECH_ASSEMBLY_LINE</Description>
 			<Civilopedia>TXT_KEY_TECH_ASSEMBLY_LINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>3750</iCost>
+			<iCost>3800</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_INDUSTRIAL</Era>
 			<FirstFreeUnitClass>UNITCLASS_GREAT_ENGINEER</FirstFreeUnitClass>

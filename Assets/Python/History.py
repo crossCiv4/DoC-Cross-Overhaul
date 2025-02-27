@@ -538,7 +538,7 @@ def normanInvasionOfBritain(iPlayer):
 	if civ(iPlayer) == iEngland:
 		enemyCities = cities.region(rBritain).notowner(iEngland).where(lambda city: team(iPlayer).canDeclareWar(city.getTeam()))
 		for iEnemy in enemyCities.owners():
-			team(iPlayer).declareWar(iEnemy, True, WarPlanTypes.WARPLAN_LIMITED)
+			team(iPlayer).declareWar(iEnemy, True, WarPlanTypes.WARPLAN_TOTAL)
 
 ### FLIP ###
 
