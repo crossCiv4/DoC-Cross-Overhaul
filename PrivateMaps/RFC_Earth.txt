@@ -41626,6 +41626,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=49
+	BonusType=BONUS_DEER
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
