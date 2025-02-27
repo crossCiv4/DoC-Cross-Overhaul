@@ -18457,17 +18457,20 @@ struct cultureCompare
 // Leoreth
 void CvCity::updateCultureCosts()
 {
-	//setNextCoveredPlot(0, true);
+	int iI = 0;
+	int iCumulativeCosts = 0;
+	int iCurrentCosts;
+	CvPlot* plot;
 
-	std::vector<int> plots;
-	std::vector<int> openPlots;
-
-	int iI;
 	for (iI = 0; iI < getNextCoveredPlot(); iI++)
 	{
-		plots.push_back(m_aiCulturePlots[iI]);
+		plot = GC.getMap().plotByIndex(m_aiCulturePlots[iI]);
+		iCurrentCosts = (plot != NULL) ? calculateCultureCost(plot) : 0;
+		iCumulativeCosts += iCurrentCosts;
+		m_aiCultureCosts[iI] = iCumulativeCosts; 
 	}
 
+	std::vector<int> openPlots;
 	for (iI = getNextCoveredPlot(); iI < NUM_CITY_PLOTS_3; iI++)
 	{
 		openPlots.push_back(m_aiCulturePlots[iI]);
@@ -18477,16 +18480,8 @@ void CvCity::updateCultureCosts()
 	cmp.city = this;
 	std::sort(openPlots.begin(), openPlots.end(), cmp);
 
+	iI = getNextCoveredPlot();
 	for (std::vector<int>::iterator it = openPlots.begin(); it != openPlots.end(); ++it)
-	{
-		plots.push_back(*it);
-	}
-
-	iI = 0;
-	int iCumulativeCosts = 0;
-	int iCurrentCosts;
-	CvPlot* plot;
-	for (std::vector<int>::iterator it = plots.begin(); it != plots.end(); ++it)
 	{
 		m_aiCulturePlots[iI] = *it;
 		plot = GC.getMap().plotByIndex(*it);

@@ -8455,7 +8455,7 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-		<EventInfo>
+		<!--<EventInfo>
 			<Type>EVENT_APPLESEED_1</Type>
 			<Description>TXT_KEY_EVENT_APPLESEED_1</Description>
 			<LocalInfoText/>
@@ -8540,7 +8540,7 @@
 			<PythonHelp/>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
-		</EventInfo>
+		</EventInfo>-->
 		<EventInfo>
 			<Type>EVENT_MINING_ACCIDENT_1</Type>
 			<Description>TXT_KEY_EVENT_MINING_ACCIDENT_1</Description>

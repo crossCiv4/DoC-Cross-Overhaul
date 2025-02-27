@@ -308,15 +308,27 @@ def colonialConquest(iPlayer, tPlot):
 	elif iCiv in [iFrance, iEngland]:
 		iNumUnits = 3
 		
-	iExp = 0
-	if not player(iPlayer).isHuman(): iExp = 2
-	
-	# TODO: this lacks additional experience
+
+	# before replaceable parts (pikemen, musketeers)
 	dConquerorUnits = {
-		iAttack: 2*iNumUnits,
+		iDefend: 1,
+		iCounter: iNumUnits,
+		iAttack: iNumUnits,
+		iShockCity: 1,
 		iSiege: iNumUnits,
 	}
-	createRoleUnits(iPlayer, targetPlot, dConquerorUnits.items())
+
+	# after replaceable parts (musketeers, pistoleers, cuirassiers)
+	if team(iPlayer).isHasTech(iReplaceableParts):
+		dConquerorUnits = {
+			iDefend: iNumUnits * 2,
+			iHarass: 1,
+			iShockCity: 1,
+			iSiege: iNumUnits,
+		}
+
+	lUnits = createRoleUnits(iPlayer, targetPlot, dConquerorUnits.items())
+	lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
 
 # used: CvRandomEventInterface, History
 # this shouldn't be here

@@ -5027,7 +5027,7 @@
 			<PythonCanDoUnit/>
 			<PythonCallback/>
 		</EventTriggerInfo>
-		<EventTriggerInfo>
+		<!--<EventTriggerInfo>
 			<Type>EVENTTRIGGER_APPLESEED</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_APPLESEED</Text>
@@ -5114,7 +5114,7 @@
 			<PythonCanDoCity/>
 			<PythonCanDoUnit/>
 			<PythonCallback/>
-		</EventTriggerInfo>
+		</EventTriggerInfo> -->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MINING_ACCIDENT</Type>
 			<WorldNewsTexts>
