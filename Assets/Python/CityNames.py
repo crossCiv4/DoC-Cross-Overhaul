@@ -8,7 +8,7 @@ from DynamicCivs import getColumn
 
 ### CONSTANTS ###
 
-iNumLanguages = 54
+iNumLanguages = 55
 (iLangAmerican, iLangArabic, iLangBabylonian, iLangBurmese, iLangByzantine, 
 iLangCeltic, iLangChinese, iLangCongolese, iLangDutch, iLangEgyptian, 
 iLangEgyptianArabic, iLangEnglish, iLangEthiopian, iLangFrench, iLangGerman, 
@@ -18,7 +18,7 @@ iLangMayan, iLangMongolian, iLangNahuatl, iLangNorse, iLangNubian,
 iLangPersian, iLangPhoenician, iLangPolish, iLangPolynesian, iLangPortuguese, 
 iLangQuechua, iLangRussian, iLangSpanish, iLangSwedish, iLangThai, 
 iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian, 
-iLangArmenian, iLangDanish, iLangParthian, iLangVedic, iLangUkrainian, iLangNanman, iLangAncientChinese, iLangSaxon, iLangPakistani) = range(iNumLanguages)
+iLangArmenian, iLangDanish, iLangParthian, iLangVedic, iLangUkrainian, iLangNanman, iLangAncientChinese, iLangSaxon, iLangPakistani, iLangBrazilPortuguese) = range(iNumLanguages)
 
 dLanguages = CivDict({
 	iEgypt:	[iLangEgyptian],
@@ -83,7 +83,7 @@ dLanguages = CivDict({
 	iArgentina: [iLangSpanish],
 	iMexico: [iLangSpanish],
 	iColombia: [iLangSpanish],
-	iBrazil: [iLangPortuguese, iLangSpanish],
+	iBrazil: [iLangBrazilPortuguese, iLangPortuguese, iLangSpanish],
 	iCanada: [iLangAmerican, iLangEnglish, iLangFrench],
 	iBulgaria: [iLangRuthenian, iLangByzantine, iLangRussian], # Bulgarian/Balkans language later
 	iMamluks: [iLangEgyptianArabic, iLangArabic, iLangTurkish],
@@ -160,7 +160,8 @@ dLanguageNames = {
 	iLangNanman: "Nanman",
 	iLangAncientChinese: "AncientChinese",
 	iLangSaxon: "Saxon",
-	iLangPakistani: "Pakistani"
+	iLangPakistani: "Pakistani",
+	iLangBrazilPortuguese: "BrazilPortuguese",
 }
 
 dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames[iLanguage])) for iLanguage in range(iNumLanguages))

@@ -118,7 +118,7 @@ iEthiopia :	(84, 32),	# Addis Ababa
 iJapan :	(140, 54),	# Tokyo
 iTurks : 	(97, 49),	# Herat
 iMoors :	(57, 44),	# Marrakesh
-iHolyRome :	(71, 59),	# Vienna
+iHolyRome :	(72, 59),	# Vienna
 iInca :		(28, 25),	# Lima
 iItaly :	(68, 53),	# Rome
 iTimurids :	(99, 43),	# Karachi --> Pakistan period

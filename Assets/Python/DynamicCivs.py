@@ -1033,6 +1033,9 @@ def republicName(iPlayer):
 	
 	if iCiv == iTurks: return "TXT_KEY_CIV_TURKS_UZBEKISTAN"
 
+	# "Republic of China"
+	if iCiv == iChinaS: return "TXT_KEY_CIV_CHINA_SHORT_DESC"
+
 	return short(iPlayer)
 	
 def peoplesName(iPlayer):

@@ -292,10 +292,9 @@ dGoals = {
 		FirstDiscover(iEthics),
 		CityCount(
 			(plots.region(rIberia), 1),
-			(plots.region(rItaly), 1),
-			(plots.region(rFrance).named(GAUL), 1),
+			(plots.region(rItaly), 2),
 			(plots.regions(rAnatolia).named(ANATOLIA), 1),
-			(plots.region(rEgypt).named(EGYPT), 1),
+			(plots.region(rMaghreb).named(MAGHREB), 1),
 			(plots.regions(rCrimea).named(CRIMEA), 1),
 			at=-400,
 		),
