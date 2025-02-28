@@ -490,7 +490,7 @@ lCivilizations = [
 		iAdvancedStartPoints=150,
 		iStateReligion=iCatholicism,
 		lCivics=[iElective, iVassalage, iManorialism, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(6).including(iSpringSteel, iCivilService, iNobility, iTheology, iFortification)
+		techs=techs.column(6).including(iCivilService, iNobility, iTheology, iConsensus)
 	),
 	Civilization(
 		iBurma,
@@ -2243,6 +2243,7 @@ dTechPreferences = {
 		iRailroad: -10,
 		iChemistry: 15,
 		iReplaceableParts: 5,
+		iSociology: 15,
 	},
 	iBurma : {
 		iLogistics: 20,
@@ -2313,9 +2314,12 @@ dTechPreferences = {
 		iFinance: 25,
 		iOptics: 25,
 		iPatronage: 30,
-		iHumanities: 3^0,
+		iHumanities: 30,
 		iAcademia: 25,
 		iFission: 12,
+		iChemistry: 25,
+		iLabourUnions: 15,
+		iAssemblyLine: -10,
 	},
 	iTimurids : {
 		iHumanities: 20,
