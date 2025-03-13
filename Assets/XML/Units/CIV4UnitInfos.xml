@@ -20439,6 +20439,9 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_OPTICS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_GUNPOWDER</PrereqTech>
+			</TechTypes>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER</BonusType>
 				<BonusType>BONUS_IRON</BonusType>
@@ -20518,6 +20521,9 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqTech>TECH_OPTICS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_GUNPOWDER</PrereqTech>
+			</TechTypes>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER</BonusType>
 				<BonusType>BONUS_IRON</BonusType>
