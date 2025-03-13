@@ -76,7 +76,7 @@ dGoals = {
 	iMarxism: (
 		AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 10, iReligion=iMarxism),
 		ReligionSpreadPercent(iMarxism, 50, bSecular=True),
-		FirstDiscover(iTranshumanism),
+		FirstDiscover(iUnifiedTheory, iArtificialIntelligence),
 	),
 	iPaganVictory: (
 		BuildingCount(iPaganTemple, 25, subject=WORLD),
