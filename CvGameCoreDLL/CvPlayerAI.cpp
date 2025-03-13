@@ -10303,10 +10303,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		}
 	}
 
-	iTradeCommerceModifier = AI_averageTradeMultiplier() * std::max(AI_averageCommerceMultiplier(COMMERCE_GOLD), AI_averageCommerceMultiplier(COMMERCE_RESEARCH)) * AI_yieldWeight(YIELD_COMMERCE) / 100;
+	iTradeCommerceModifier = (100 + AI_averageTradeMultiplier()) * std::max(AI_averageCommerceMultiplier(COMMERCE_GOLD), AI_averageCommerceMultiplier(COMMERCE_RESEARCH)) / 100;
 
-	//iValue += ((kCivic.getTradeRoutes() * std::max(0, iConnectedForeignCities - getNumCities() * 3) * 8) + (getNumCities() * 2));
-	iValue += kCivic.getTradeRoutes() * std::min(getNumCities(), iConnectedForeignCities) * iTradeCommerceModifier / 1000;
+	iValue += kCivic.getTradeRoutes() * (std::max(0, iConnectedForeignCities - getNumCities() * 3) + getNumCities() * 2) * 3 * iTradeCommerceModifier / 100;
 	iValue += -((kCivic.isNoForeignTrade()) ? (iConnectedForeignCities * /*3*/ 4) : 0);
 	iValue -= kCivic.isNoForeignTradeModifier() ? (iConnectedForeignCities * 3 / 2) : 0; // Leoreth
 	iValue += (100 + kCivic.getDefensivePactTradeModifier()) * std::min(getNumCities(), iConnectedForeignCities) * iTradeCommerceModifier * 2 / 100 / 100 / 100; // Leoreth
@@ -10387,7 +10386,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 /* orginal bts code
 		iValue += (getNumCities() * 9 * AI_getHappinessWeight(isCivic(eCivic) ? -iTempValue : iTempValue, 1)) / 100;
 */
-		iValue += (getNumCities() * 9 * AI_getHappinessWeight(iTempValue, 1)) / 100; // Rhye
+		iValue += (getNumCities() * 9 * AI_getHappinessWeight(iTempValue, 1, true)) / 100; // Rhye
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
@@ -10490,8 +10489,8 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	{
 		iTempValue = 0;
 
-		iTempValue += (kCivic.getYieldModifier(iI) * getNumCities()) / 2;
-		iTempValue += kCivic.getCapitalYieldModifier(iI) / std::max(1, getNumCities());
+		iTempValue += ((kCivic.getYieldModifier(iI) * getNumCities()) / 2);
+		iTempValue += ((kCivic.getCapitalYieldModifier(iI) * 3) / 8);
 
 		if (pCapital)
 		{
@@ -10682,7 +10681,8 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 					iTempValue += AI_yieldWeight(YIELD_PRODUCTION) * (GC.getHurryInfo((HurryTypes)iI).isUnits() && bWarPlan ? 2 : 1) * iGoldRate / GC.getHurryInfo((HurryTypes)iI).getGoldPerProduction() / 100;
 				}
 			}
-			iTempValue += (GC.getHurryInfo((HurryTypes)iI).getProductionPerPopulation() * getNumCities() * (bWarPlan ? 2 : 1)) / 5;
+			//iTempValue += (GC.getHurryInfo((HurryTypes)iI).getProductionPerPopulation() * getNumCities() * (bWarPlan ? 2 : 1)) / 5;
+			iTempValue += (GC.getHurryInfo((HurryTypes)iI).getProductionPerPopulation() * getNumCities() * (bWarPlan ? 2 : 1)) / 4;
 			iValue += iTempValue;
 			
 		}
@@ -19167,7 +19167,7 @@ int CvPlayerAI::AI_getPlotCanalValue(CvPlot* pPlot) const
 //This returns a positive number equal approximately to the sum
 //of the percentage values of each unit (there is no need to scale the output by iHappy)
 //100 * iHappy means a high value.
-int CvPlayerAI::AI_getHappinessWeight(int iHappy, int iExtraPop) const
+int CvPlayerAI::AI_getHappinessWeight(int iHappy, int iExtraPop, bool bClampToHalf) const
 {
 	int iWorstHappy = 0;
 	int iBestHappy = 0;
@@ -19185,10 +19185,16 @@ int CvPlayerAI::AI_getHappinessWeight(int iHappy, int iExtraPop) const
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
 		int iCityHappy = pLoopCity->happyLevel() - pLoopCity->unhappyLevel(iExtraPop);
+		int iCityHappyChange = iHappy;
+
+		if (bClampToHalf && iHappy > 0)
+		{
+			iCityHappyChange = std::min(iHappy, pLoopCity->getPopulation() / 2);
+		}
 
 		iCityHappy -= std::max(0, pLoopCity->getCommerceHappiness());
 		int iHappyNow = iCityHappy;
-		int iHappyThen = iCityHappy + iHappy;
+		int iHappyThen = iCityHappy + iCityHappyChange;
 
 		//Integration
 		int iTempValue = (((100 * iHappyThen - 10 * iHappyThen * iHappyThen)) - (100 * iHappyNow - 10 * iHappyNow * iHappyNow));

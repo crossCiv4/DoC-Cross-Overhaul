@@ -453,7 +453,7 @@ protected:
 	int AI_getStrategyHash() const;
 	void AI_calculateAverages() const;
 	
-	int AI_getHappinessWeight(int iHappy, int iExtraPop) const;
+	int AI_getHappinessWeight(int iHappy, int iExtraPop, bool bClampToHalf = false) const;
 	int AI_getHealthWeight(int iHealth, int iExtraPop) const;
 	
 	void AI_convertUnitAITypesForCrush();

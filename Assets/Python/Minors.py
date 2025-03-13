@@ -551,6 +551,7 @@ barbarians = [
 	Barbarians(-3000, -850, {iPanther: 1}, ((101, 33), (113, 45)), 10, ANIMALS),
 	Barbarians(-3000, -850, {iLion: 1}, ((101, 33), (113, 45)), 10, ANIMALS),
 	Barbarians(-3000, -1500, {iWarrior: 2}, ((79, 56), (103, 62)), 8, NOMADS, target_area=((83, 44), (104, 51)), adjective="TXT_KEY_ADJECTIVE_INDO_EUROPEAN"),
+	Barbarians(-2000, -1400, {iChariot: 1}, ((98, 45), (102, 52)), 8, INVADERS, target_area=((99, 42), (104, 50)), adjective="TXT_KEY_ADJECTIVE_INDO_ARYAN"),
 	Barbarians(-2000, -1500, {iWarrior: 2}, ((120, 42), (129, 50)), 7, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"),
 	Barbarians(-1800, -1400, {iWarrior: 2}, ((90, 47), (93, 51)), 9, INVADERS, adjective="TXT_KEY_ADJECTIVE_KASSITE"),
 	Barbarians(-1800, -1400, {iChariot: 1}, ((82, 44), (84, 45)), 6, INVADERS, target_area=((77, 39), (80, 44)), adjective="TXT_KEY_ADJECTIVE_HYKSOS"),

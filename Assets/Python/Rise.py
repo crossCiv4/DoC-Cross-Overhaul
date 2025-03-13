@@ -915,12 +915,6 @@ class Birth(object):
 		if self.player.getNumCities() == 0:
 			return
 		
-		if self.team.isAVassal():
-			return
-		
-		if self.team.getAtWarCount(True) > 0:
-			return
-		
 		if self.iExpansionTurns < 0:
 			return
 		
@@ -936,6 +930,12 @@ class Birth(object):
 		
 		self.iExpansionDelay -= 1
 		self.iExpansionTurns -= 1
+		
+		if self.team.isAVassal():
+			return
+		
+		if self.team.getAtWarCount(True) > 0:
+			return
 		
 		if self.iExpansionDelay >= 0:
 			return

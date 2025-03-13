@@ -9,6 +9,7 @@ from datetime import timedelta
 RISE_LOG = "Rise.log"
 TECH_LOG = "Tech.log"
 RELATIONS_LOG = "Relations.log"
+CIVICS_LOG = "Civics.log"
 
 TIMER = None
 TECHS = None
@@ -193,6 +194,19 @@ def format_attitude_info(relations, iAttitude):
 	return "%s: %d (%s)" % (infos.attitude(iAttitude).getText(), len(attitude_relations), str(attitude_relations))
 
 
+#@handler("BeginGameTurn")
+def log_civics(iGameTurn):
+	if every(10):
+		civics("CIVICS %s\n", format_date(game.getGameTurnYear()))
+		for iCategory in range(6):
+			log_civic_category(iCategory)
+
+
+def log_civic_category(iCategory):
+	civic_counts = ["%s: %d (%d)" % (infos.civic(iCivic).getText(), players.major().alive().count(lambda p: player(p).getCivics(iCategory) == iCivic), players.major().alive().count(lambda p: player(p).canDoCivics(iCivic))) for iCivic in range(iNumCivics) if infos.civic(iCivic).getCivicOptionType() == iCategory]
+	civics("%s\n%s\n\n", gc.getCivicOptionInfo(iCategory).getText().upper(), itemize(civic_counts, item_char="", linebreak_char="\n"))
+
+
 def log(file, message, *format):
 	fileLog(file, str(message % format))
 
@@ -207,3 +221,7 @@ def tech(message, *format):
 
 def relations(message, *format):
 	log(RELATIONS_LOG, message, *format)
+
+
+def civics(message, *format):
+	log(CIVICS_LOG, message, *format)

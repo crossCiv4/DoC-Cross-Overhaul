@@ -172,8 +172,8 @@ def stacktrace():
 	print '\n'.join('File "%s", line %d, in %s' % (line[0], line[1], line[2]) for line in extract_stack())
 
 
-def itemize(iterable, format_func = lambda x: x, item_char = bullet):
-	return item_char + (newline + item_char).join(format_func(i) for i in iterable)
+def itemize(iterable, format_func=lambda x: x, item_char=bullet, linebreak_char=newline):
+	return item_char + (linebreak_char + item_char).join(format_func(i) for i in iterable)
 
 
 def autoplay():

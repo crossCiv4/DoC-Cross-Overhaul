@@ -378,12 +378,12 @@
 		<Spanish>Hyksos</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_INDO_SCYTHIAN</Tag>
-		<English>Indo-Scythian</English>
-		<French>Indo-Scythian</French>
-		<German>Indo-Scythian</German>
-		<Italian>Indo-Scythian</Italian>
-		<Spanish>Indo-Scythian</Spanish>
+		<Tag>TXT_KEY_ADJECTIVE_INDO_ARYAN</Tag>
+		<English>Indo-Aryan</English>
+		<French>Indo-Aryan</French>
+		<German>Indo-Aryan</German>
+		<Italian>Indo-Aryan</Italian>
+		<Spanish>Indo-Aryan</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_INDO_EUROPEAN</Tag>
@@ -392,6 +392,14 @@
 		<German>Indo-European</German>
 		<Italian>Indo-European</Italian>
 		<Spanish>Indo-European</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_INDO_SCYTHIAN</Tag>
+		<English>Indo-Scythian</English>
+		<French>Indo-Scythian</French>
+		<German>Indo-Scythian</German>
+		<Italian>Indo-Scythian</Italian>
+		<Spanish>Indo-Scythian</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_IRANIAN</Tag>
