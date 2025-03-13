@@ -12645,6 +12645,11 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion) const
 
 bool CvUnit::canAcquirePromotionAny() const
 {
+	if (isFound())
+	{
+		return false;
+	}
+
 	int iI;
 
 	for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)

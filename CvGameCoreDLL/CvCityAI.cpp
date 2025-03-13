@@ -1055,6 +1055,29 @@ void CvCityAI::AI_chooseProduction()
     	}
     }
 
+	int iMinFoundValue = kPlayer.AI_getMinFoundValue();
+	if (bDanger)
+	{
+		iMinFoundValue *= 3;
+		iMinFoundValue /= 2;
+	}
+
+
+	// Leoreth: in the late game we need to be more proactive about settling before considering other buildings
+	if (iNumSettlers <= 1 && iNumSettlers < iMaxSettlers && GET_PLAYER(getOwnerINLINE()).AI_getNumTrainAIUnits(UNITAI_SETTLE) == 0)
+	{
+		if (GET_PLAYER(getOwnerINLINE()).getCurrentEra() >= ERA_RENAISSANCE)
+		{
+			if (iAreaBestFoundValue > iMinFoundValue && iAreaBestSettlerValue >= 5)
+			{
+				if (AI_chooseUnit(UNITAI_SETTLE))
+				{
+					return;
+				}
+			}
+		}
+	}
+
     if (bMaybeWaterArea && !isIndependent())
 	{
 		if (kPlayer.AI_getNumTrainAIUnits(UNITAI_ATTACK_SEA) + kPlayer.AI_getNumTrainAIUnits(UNITAI_PIRATE_SEA) + kPlayer.AI_getNumTrainAIUnits(UNITAI_RESERVE_SEA) < 3)
@@ -1220,13 +1243,6 @@ void CvCityAI::AI_chooseProduction()
 				return;
 			}
 		}
-	}
-
-	int iMinFoundValue = kPlayer.AI_getMinFoundValue();
-	if (bDanger)
-	{
-		iMinFoundValue *= 3;
-		iMinFoundValue /= 2;
 	}
 
 	if (!bGetBetterUnits && (bIsCapitalArea) && (iAreaBestFoundValue < (iMinFoundValue * 2)))
@@ -2705,6 +2721,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_ICBM] *= 2;
 		break;
 	case AMERICA:
+		aiUnitAIVal[UNITAI_SETTLE] *= 5;
 		aiUnitAIVal[UNITAI_RESERVE] *= 2;
 		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
 		aiUnitAIVal[UNITAI_ICBM] *= 2;

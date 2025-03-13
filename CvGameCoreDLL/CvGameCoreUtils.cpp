@@ -2562,6 +2562,7 @@ void getMissionAIString(CvWString& szString, MissionAITypes eMissionAI)
 	case MISSIONAI_CARRIER: szString = L"MISSIONAI_CARRIER"; break;
 	case MISSIONAI_PICKUP: szString = L"MISSIONAI_PICKUP"; break;
 	case MISSIONAI_CIRCUMNAVIGATE: szString = L"MISSIONAI_CIRCUMNAVIGATE"; break;
+	case MISSIONAI_REBUILD: szString = L"MISSIONAI_REBUILD"; break;
 
 	default: szString = CvWString::format(L"UNKOWN_MISSION_AI(%d)", eMissionAI); break;
 	}

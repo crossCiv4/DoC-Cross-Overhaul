@@ -249,6 +249,7 @@ dResourcesDict = {
 	(10, 54)  : (1850,  iSilver),   # Nevada
 	(16, 54)  : (1860,  iGold),     # Colorado
 	(12, 60)  : (1860,  iSilver),   # Idaho
+	(11, 52)  : (1900,  iCow),		# Arizona
 	(138, 9)  : (1900,  iWheat),    # Victoria
 	(26, 49)  : (1900,  iCitrus),   # Florida
 	(83, 29)  : (1900,  iTea),      # Kenya

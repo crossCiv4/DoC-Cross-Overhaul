@@ -3010,7 +3010,7 @@ def getHelpCrusadeAgainstAgainstHeathensWithAnotherCatholic(argsList):
 # 	iEvent = argsList[0]
 # 	kTriggeredData = argsList[1]
 	
-# 	iReligion = kTriggeredData.ePlayer
+# 	iReligion = kTriggeredData.eReligion
 # 	if iReligion == iCatholicism:
 # 		iReligion = iOrthodoxy
 	

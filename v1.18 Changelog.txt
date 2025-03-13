@@ -158,7 +158,7 @@ CIVILIZATIONS
 		* Sacred Band (Spearman): +25% city strength, starts with Amphibious
 		* Numidian Cavalry (Horseman): can enter desert, +25% city strength, +50% against melee units, starts with Disengage I and Desert Adaptation
 	* Unique Building: Glassmaker (Jeweller): requires Contract, +50% trade route yield, +1 merchant slot
-	* Unique Power: Mercenaries: Can always hurry units with gold and pays half the cost and no extra upkeep for hurried units
+	* Unique Power: Mercenaries: Can always hurry units with gold and pays no extra upkeep for hurried units
 	* Unique Historical Victory:
 		* Control five Dye resources and have 15 trade routes by 300 BC
 		* Build a Palace and the Great Cothon in Carthage by 400 BC and control Italy and Iberia by 100 BC

@@ -2081,6 +2081,7 @@ enum MissionAITypes		// Exposed to Python
 	MISSIONAI_CARRIER,
 	MISSIONAI_PICKUP,
 	MISSIONAI_CIRCUMNAVIGATE, // Leoreth
+	MISSIONAI_REBUILD, // Leoreth
 };
 
 // any additions need to be reflected in GlobalTypes.xml

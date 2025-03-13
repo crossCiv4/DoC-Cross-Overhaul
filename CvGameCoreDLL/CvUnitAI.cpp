@@ -1245,12 +1245,6 @@ void CvUnitAI::AI_settleMove()
 		}
 	}
 
-	// Leoreth: rebuild move
-	if (AI_rebuildMove(2 * GET_PLAYER(getOwnerINLINE()).getProductionNeeded(getUnitType())))
-	{
-		return;
-	}
-
 	if (!GC.getGameINLINE().isOption(GAMEOPTION_ALWAYS_PEACE) && !GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI) && !getGroup()->canDefend())
 	{
 		if (AI_retreatToCity())
@@ -1299,6 +1293,12 @@ void CvUnitAI::AI_settleMove()
 	}
 
 	if (AI_safety())
+	{
+		return;
+	}
+
+	// Leoreth: rebuild move
+	if (AI_rebuildMove(2 * GET_PLAYER(getOwnerINLINE()).getProductionNeeded(getUnitType())))
 	{
 		return;
 	}
@@ -11913,7 +11913,7 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 						}
 
 						// Leoreth: never attack independent cities outside of war map
-						if (GET_PLAYER(pLoopPlot->getOwnerINLINE()).isIndependent() && !GET_PLAYER(getOwnerINLINE()).isMinorCiv() && !GET_PLAYER(getOwnerINLINE()).isBarbarian())
+						if (pLoopPlot->isOwned() && GET_PLAYER(pLoopPlot->getOwnerINLINE()).isIndependent() && !GET_PLAYER(getOwnerINLINE()).isMinorCiv() && !GET_PLAYER(getOwnerINLINE()).isBarbarian())
 						{
 							if (iRange > 1 && pLoopPlot->getWarValue(getOwnerINLINE()) == 0)
 							{
@@ -16574,7 +16574,6 @@ CvPlot* CvUnitAI::AI_defensiveNukeTarget() const
 	int iValue;
 	int iBestValue;
 	int iLoop;
-	int iI;
 	int iDX, iDY;
 
 	pBestPlot = NULL;
@@ -16667,7 +16666,6 @@ CvCity* CvUnitAI::AI_offensiveSatelliteTarget() const
 {
 	CvCity* pLoopCity;
 	PlayerTypes eOtherPlayer;
-	int iI;
 	int iValue;
 	int iLoop;
 
@@ -18815,36 +18813,30 @@ bool CvUnitAI::AI_satelliteAttackMove()
 
 bool CvUnitAI::AI_rebuildMove(int iMinimumCost)
 {
-	if (plot()->isCity())
-	{
-		if (plot()->getPlotCity()->getRebuildProduction() >= iMinimumCost)
-		{
-			getGroup()->pushMission(MISSION_REBUILD);
-			return true;
-		}
-	}
-
 	CvCity* pBestCity = NULL;
 	int iBestProduction = 0;
 
 	int iLoop, iCurrentProduction;
 	for (CvCity* pLoopCity = GET_PLAYER(getOwnerINLINE()).firstCity(&iLoop); pLoopCity != NULL; pLoopCity = GET_PLAYER(getOwnerINLINE()).nextCity(&iLoop))
 	{
-		if (!atPlot(pLoopCity->plot()))
+		if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_REBUILD) == 0)
 		{
-			iCurrentProduction = pLoopCity->getRebuildProduction();
-
-			if (iCurrentProduction >= iMinimumCost && iCurrentProduction > iBestProduction)
+			if (generatePath(pLoopCity->plot(), MOVE_SAFE_TERRITORY, true))
 			{
-				pBestCity = pLoopCity;
-				iBestProduction = iCurrentProduction;
+				iCurrentProduction = pLoopCity->getRebuildProduction();
+
+				if (iCurrentProduction >= iMinimumCost && iCurrentProduction > iBestProduction)
+				{
+					pBestCity = pLoopCity;
+					iBestProduction = iCurrentProduction;
+				}
 			}
 		}
 	}
 
 	if (pBestCity != NULL)
 	{
-		getGroup()->pushMission(MISSION_MOVE_TO, pBestCity->getX(), pBestCity->getY());
+		getGroup()->pushMission(MISSION_MOVE_TO, pBestCity->getX(), pBestCity->getY(), MOVE_SAFE_TERRITORY, false, false, MISSIONAI_REBUILD);
 		return true;
 	}
 

@@ -4,6 +4,9 @@ from Locations import *
 
 lHappinessResources = [iResource for iResource in infos.bonuses() if infos.bonus(iResource).getHappiness() > 0]
 
+# third Phoenician goal: reveal 50% of the African coast by 1 AD
+lAfricanCoastRegions = [rRegion for rRegion in lAfrica if rRegion != rMadagascar]
+
 # first Norse goal: control a European core in 1050 AD
 lNorseTargets = [plots.core(iCiv) for iCiv in dCivGroups[iCivGroupEurope] if iCiv != iNorse and dBirth[iCiv] <= 1050]
 
@@ -339,10 +342,10 @@ dGoals = {
 			Control(
 				plots.rectangle(tPhoenicianItaly).without(lPhoenicianItalyExceptions).named(ITALY),
 				plots.region(rIberia),
-				by=-150
+				at=-150
 			),
 		),
-		RevealedPercent(plots.all().water().adjacent_regions(*lAfrica).named(AFRICAN_COAST), 50, by=1),
+		RevealedPercent(plots.all().sea().adjacent_regions(*lAfricanCoastRegions).named(AFRICAN_COAST), 60, by=1),
 	),
 	iPolynesia: (
 		Settle(
@@ -884,8 +887,8 @@ dGoals = {
 		AllowOnly(plots.regions(rDravida, rDeccan, rBengal, rIndochina, rIndonesia).named(SOUTH_ASIA), civs(*lSouthAsianCivs).named(LOCAL), at=1900),
 	),
 	iSweden: (
-		CultureCover(plots.all().adjacent_region(rBalticSea).land().named(BALTIC_SEA_REGION), by=1650),
-		StateReligionCount(group(iCivGroupEurope).named(EUROPEAN), iProtestantism, 6, by=1700),
+		StateReligionCount(group(iCivGroupEurope).named(EUROPEAN), iProtestantism, 6, by=1650),
+		CultureCover(plots.all().adjacent_region(rBalticSea).land().named(BALTIC_SEA_REGION), by=1700),
 		HappiestTurns(50, by=1980),
 	),
 	iRussia: (

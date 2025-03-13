@@ -452,3 +452,15 @@ def markLocationAreas():
 			tBL, tTR = getCorners(area)
 			createLandmark(tBL, name)
 			createLandmark(tTR, name)
+
+
+def markCitySites(identifier):
+	index = 0
+	while True:
+		plot = player(identifier).AI_getCitySite(index)
+		
+		if not plot or plot.isNone():
+			break
+		
+		createLandmark(plot, name(identifier))
+		index += 1

@@ -203,9 +203,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_CAR</Tag>
-		<English>Can always hurry units with gold and pays half the cost and no extra upkeep for hurried units</English>
+		<English>Can always hurry units with gold and pays no extra upkeep for hurried units</English>
 		<French>L'acc&#233;l&#233;ration des unit&#233;s est toujours disponible et co&#251;te deux fois moins cher ; pas de co&#251;t d'entretien suppl&#233;mentaire pour ces unit&#233;s</French>
-		<German>Kann immer Einheiten mit Gold beschleunigen und bezahlt halbe Kosten und keinen zus&#228;tzlicher Unterhalt f&#252;r beschleunigte Einheiten</German>
+		<German>Kann immer Einheiten mit Gold beschleunigen und bezahlt keinen zus&#228;tzlicher Unterhalt f&#252;r beschleunigte Einheiten</German>
 		<Italian>Dimezzati i costi di assunzione e mantenimento dei mercenari</Italian>
 		<Spanish>Se reducen a la mitad los costes de contrataci&#243;n y mantenimiento de mercenarios</Spanish>
 	</TEXT>

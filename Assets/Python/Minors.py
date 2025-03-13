@@ -679,6 +679,7 @@ barbarians = [
 	Barbarians(1400, 1550, {iArcher: 2}, ((21, 49), (27, 54)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_MUSCOGEE"),
 	Barbarians(1400, 1750, {iNativeRaider: 2, iLightSwordsman: 3, iCatapult: 1}, ((73, 15), (78, 20)), 8, CLOSE_INVADERS, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_BANTU", promotions=(iDesertAdaptation,)),
 	Barbarians(1415, 1550, {iGhazi: 2, iBombard: 1, iMobileGuard: 1}, ((86, 31), (88, 33)), 5, CLOSE_INVADERS, target_area=((82, 33), (85, 36)), iAlternativeCiv=iArabia, adjective="TXT_KEY_ADJECTIVE_ADAL", promotions=(iDesertAdaptation,)),
+	#Barbarians(1400, 1550, {iLongbowman: 2}, ((21, 49), (27, 54)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_MUSCOGEE"),
 	Barbarians(1400, 1650, {iKeshik: 2}, ((105, 58), (115, 64)), 8, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_OIRAT", iAlternativeCiv=iMongols, promotions=(iDesertAdaptation,)),
 	Barbarians(1450, 1600, {iSkirmisher: 1}, ((33, 12), (34, 16)), 15, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_MAPUCHE"),
 	Barbarians(1450, 1700, {iGalleass: 2}, ((125, 44), (134, 57)), 12, PIRATES, adjective="TXT_KEY_ADJECTIVE_WOKOU"),

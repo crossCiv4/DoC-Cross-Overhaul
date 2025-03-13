@@ -6173,12 +6173,6 @@ int CvCity::getHurryGold(HurryTypes eHurry, int iHurryCost) const
 
 	iGold = (iHurryCost * GC.getHurryInfo(eHurry).getGoldPerProduction());
 	
-	// Phoenician UP: -50% mercenary cost
-	if (getCivilizationType() == CARTHAGE && GC.getHurryInfo(eHurry).isUnits())
-	{
-		iGold /= 2;
-	}
-
 	return std::max(1, iGold);
 }
 

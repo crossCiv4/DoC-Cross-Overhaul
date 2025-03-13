@@ -4148,7 +4148,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=56
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=1
 EndPlot
 BeginPlot
@@ -4577,7 +4577,7 @@ BeginPlot
 	x=10,y=52
 	RiverNSDirection=2
 	isWOfRiver
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -4597,7 +4597,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=56
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=1
 EndPlot
 BeginPlot
@@ -5921,8 +5921,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=52
-	TerrainType=TERRAIN_DESERT
-	PlotType=0
+	TerrainType=TERRAIN_SEMIDESERT
+	PlotType=1
 EndPlot
 BeginPlot
 	x=13,y=53
@@ -5954,8 +5954,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=57
-	TerrainType=TERRAIN_SEMIDESERT
-	PlotType=0
+	TerrainType=TERRAIN_PLAINS
+	PlotType=1
 EndPlot
 BeginPlot
 	x=13,y=58
@@ -39201,6 +39201,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=28
+	FeatureType=FEATURE_CAPE, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot

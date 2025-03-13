@@ -23252,14 +23252,19 @@ int CvPlayer::getNewCityProductionValue() const
 int CvPlayer::getGrowthThreshold(int iPopulation) const
 {
 	int iThreshold;
+	int iMultiplier = GC.getDefineINT("CITY_GROWTH_MULTIPLIER");
 
-	iThreshold = (GC.getDefineINT("BASE_CITY_GROWTH_THRESHOLD") + (iPopulation * GC.getDefineINT("CITY_GROWTH_MULTIPLIER")));
+	iThreshold = GC.getDefineINT("BASE_CITY_GROWTH_THRESHOLD");
+	iThreshold += iPopulation * iMultiplier;
+	if (iPopulation > 10) iThreshold += (iPopulation - 10) * iMultiplier;
+	if (iPopulation > 20) iThreshold += (iPopulation - 10) * iMultiplier;
+	if (iPopulation > 30) iThreshold += (iPopulation - 10) * 2 * iMultiplier;
 
 	iThreshold *= GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getGrowthPercent();
 	iThreshold /= 100;
 
-	iThreshold *= GC.getEraInfo(GC.getGameINLINE().getStartEra()).getGrowthPercent();
-	iThreshold /= 100;
+	//iThreshold *= GC.getEraInfo(GC.getGameINLINE().getStartEra()).getGrowthPercent();
+	//iThreshold /= 100;
 
 	if (!isHuman() && !isBarbarian())
 	{
@@ -23268,8 +23273,8 @@ int CvPlayer::getGrowthThreshold(int iPopulation) const
 
 		//Rhye
 		//iThreshold *= std::max(0, ((GC.getHandicapInfo(GC.getGameINLINE().getHandicapType()).getAIPerEraModifier() * getCurrentEra()) + 100));
-		iThreshold *= std::max(0, ((-1 * getCurrentEra()) + 100));
-		iThreshold /= 100;
+		//iThreshold *= std::max(0, ((-1 * getCurrentEra()) + 100));
+		//iThreshold /= 100;
 	}
 
 	iThreshold *= getModifier(MODIFIER_GROWTH_THRESHOLD);
