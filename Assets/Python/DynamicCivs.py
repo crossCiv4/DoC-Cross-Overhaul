@@ -2698,8 +2698,12 @@ def leader(iPlayer):
 		if year() > year(dBirth[iIran]): return iAkbar
 		
 	elif iCiv == iRussia:
+		if isCommunist(iPlayer):
+			return iStalin
+
 		if iEra >= iIndustrial:
-			if not bMonarchy: return iStalin
+			if tPlayer.isHasTech(iLabourUnions):
+				return iStalin
 			
 			return iAlexanderI
 			

@@ -42,6 +42,14 @@
 		<Spanish>%s2 Kingdom</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_JAVA_REPUBLIC</Tag>
+		<English>Republic of Indonesia</English>
+		<French>Republic of Indonesia</French>
+		<German>Republic of Indonesia</German>
+		<Italian>Republic of Indonesia</Italian>
+		<Spanish>Republic of Indonesia</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_INDONESIA_MATARAM</Tag>
 		<English>Mataram</English>
 		<French>Mataram</French>

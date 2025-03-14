@@ -63,6 +63,7 @@ dPeriodNames = {
 	iPeriodMughals:					"Mughals",
 	iPeriodModernIndia:				"Modern_India",
 	iPeriodUkraine:					"Ukraine",
+	iPeriodSouthAfrica:				"South_Africa",
 }
 
 
