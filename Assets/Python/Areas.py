@@ -412,6 +412,7 @@ iMongols :	((108, 55),	(125, 64)),
 iVietnam :	((120, 39),	(123, 42)),
 iBulgaria:	((73, 55),	(78, 57)),
 iFrance:	((56, 55),	(64, 61)),
+iNubia :	((78, 36),	(82, 39)),
 })
 
 dRespawnAreaExceptions = CivDict({
