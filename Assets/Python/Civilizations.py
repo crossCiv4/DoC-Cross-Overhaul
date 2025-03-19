@@ -432,7 +432,7 @@ lCivilizations = [
 	),
 	Civilization(
 		iArabia,
-		iGold=300,
+		iGold=600,
 		iAdvancedStartPoints=150,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iTheocracy, iSlavery, iMerchantTrade, iClergy, iHegemony],
@@ -990,10 +990,11 @@ dStartingUnits = CivDict({
 		iSettle: 2,
 		iWork: 5,
 		iDefend: 1,
-		iShock: 4,
-		iAttack: 5,
-		iHarass: 2,
-		iSiege: 3,
+		iShock: 7,
+		iAttack: 7,
+		iHarass: 5,
+		iSiege: 6,
+		iCounter: 3,
 	},
 	iTibet: {
 		iSettle: 1,
@@ -1407,11 +1408,6 @@ dExtraAIUnits = CivDict({
 		iCityAttack: 2,
 	},
 	iArabia: {
-		iShock: 3,
-		iAttack: 2,
-		iHarass: 3,
-		iCounter: 1,
-		iSiege: 3,
 		iWork: 3,
 	},
 	iBulgaria: {

@@ -616,7 +616,7 @@ dGoals = {
 		),
 	),
 	iArabia: (
-		CompleteEra(iMedieval, by=1200),
+		CompleteEra(iMedieval, by=1350),
 		Control(
 			plots.region(rEgypt).named(EGYPT),
 			plots.region(rMaghreb).named(MAGHREB),
@@ -624,7 +624,7 @@ dGoals = {
 			plots.regions(rLevant, rMesopotamia).named(MESOPOTAMIA),
 			plots.regions(rPersia, rKhorasan).named(PERSIA),
 			subject=VASSALS,
-			at=1350,
+			by=1350,
 		),
 		ReligionSpreadPercent(iIslam, 30),
 	),
