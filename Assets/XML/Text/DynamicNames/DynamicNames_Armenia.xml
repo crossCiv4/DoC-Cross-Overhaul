@@ -89,4 +89,20 @@
 		<Italian>Georgian</Italian>
 		<Spanish>Georgian</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_REPUBLIC</Tag>
+		<English>Republic of Armenia</English>
+		<French>Republic of Armenia</French>
+		<German>Republic of Armenia</German>
+		<Italian>Republic of Armenia</Italian>
+		<Spanish>Republic of Armenia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_COMMUNIST</Tag>
+		<English>Armenian Socialist Republic</English>
+		<French>Armenian Socialist Republic</French>
+		<German>Armenian Socialist Republic</German>
+		<Italian>Armenian Socialist Republic</Italian>
+		<Spanish>Armenian Socialist Republic</Spanish>
+	</TEXT>
 </Civ4GameText>

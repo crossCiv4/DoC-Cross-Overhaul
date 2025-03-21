@@ -41,4 +41,28 @@
 		<Italian>Bagan Kingdom</Italian>
 		<Spanish>Bagan Kingdom</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BURMA_REPUBLIC</Tag>
+		<English>Republic of the Union of Myanmar</English>
+		<French>Republic of the Union of Myanmar</French>
+		<German>Republic of the Union of Myanmar</German>
+		<Italian>Republic of the Union of Myanmar</Italian>
+		<Spanish>Republic of the Union of Myanmar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BURMA_FASCIST</Tag>
+		<English>Union of Burma</English>
+		<French>Union of Burma</French>
+		<German>Union of Burma</German>
+		<Italian>Union of Burma</Italian>
+		<Spanish>Union of Burma</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BURMA_COMMUNIST</Tag>
+		<English>Socialist Republic of the Union of Burma</English>
+		<French>Socialist Republic of the Union of Burma</French>
+		<German>Socialist Republic of the Union of Burma</German>
+		<Italian>Socialist Republic of the Union of Burma</Italian>
+		<Spanish>Socialist Republic of the Union of Burma</Spanish>
+	</TEXT>
 </Civ4GameText>

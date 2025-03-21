@@ -1895,7 +1895,7 @@ def republicTitle(iPlayer):
 		if isControlled(iPlayer, plots.regions(rNewGranada, rAndes)):
 			return "TXT_KEY_CIV_COLOMBIA_FEDERATION_ANDES"
 	
-	if iCiv == iMamluks: return key(iPLayer, "ARAB_REPUBLIC_OF")
+	if iCiv == iMamluks: return key(iPlayer, "ARAB_REPUBLIC_OF")
 
 	if pPlayer.getStateReligion() == iIslam or  pPlayer.getStateReligion() == iShia:
 		if iCiv == iOttomans: return key(iPlayer, "ISLAMIC_REPUBLIC")
