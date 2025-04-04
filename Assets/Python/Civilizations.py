@@ -427,7 +427,7 @@ lCivilizations = [
 	Civilization(
 		iTurks,
 		iGold=150,
-		iAdvancedStartPoints=100,
+		iAdvancedStartPoints=150,
 		lCivics=[iDespotism, iSlavery, iMerchantTrade, iHegemony],
 		techs=techs.column(5).including(iRecurveBow, iArtisanry, iSteel, iPolitics).without(iEngineering, iPhilosophy, iShipbuilding, iNavigation)
 	),
@@ -981,9 +981,9 @@ dStartingUnits = CivDict({
 		iWorkerSea: 2,
 	},
 	iTurks: {
-		iSettle: 6,
-		iWork: 3,
-		iDefend: 4,
+		iSettle: 7,
+		iWork: 4,
+		iDefend: 6,
 		iCounter: 2,
 		iHarass: 10,
 		iExplore: 1,

@@ -603,17 +603,17 @@ dGoals = {
 		All(
 			LandPercent(5),
 			PillageCount(25),
-			by=1190,
+			by=1200,
 		),
 		All(
 			RouteConnection(NamedList(iRouteRoad).named(LAND_BASED_TRADE), plots.regions(rNorthChina, rSouthChina).named(CITY_IN_CHINA), plots.regions(rEgypt, rLevant, rAnatolia).coastal().named(MEDITERRANEAN_PORT), start_owners=True),
-			CorporationCount(iSilkRoute, 14),
-			by=1190,
+			CorporationCount(iSilkRoute, 10),
+			by=1200,
 		),
 		DifferentCities(
 			CityCultureLevel(capital().named(CAPITAL), iCultureLevelDeveloping, by=900),
-			CityCultureLevel(capital().named(DIFFERENT_CAPITAL), iCultureLevelRefined, by=1100),
-			CityCultureLevel(capital().named(ANOTHER_CAPITAL), iCultureLevelInfluential, by=1400),
+			CityCultureLevel(capital().named(DIFFERENT_CAPITAL), iCultureLevelRefined, by=1200),
+			CityCultureLevel(capital().named(ANOTHER_CAPITAL), iCultureLevelInfluential, by=1500),
 		),
 	),
 	iArabia: (
