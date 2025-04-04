@@ -807,11 +807,9 @@
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<TradeYieldModifiers>
 				<iYield>0</iYield>
-				<iYield>15</iYield>
-				<iYield>0</iYield>
+				<iYield>25</iYield>
+				<iYield>-10</iYield>
 			</TradeYieldModifiers>
-			<bNoForeignTrade>1</bNoForeignTrade>
-			<iTradeRoutes>1</iTradeRoutes>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
