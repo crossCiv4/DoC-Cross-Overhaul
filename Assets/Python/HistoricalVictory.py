@@ -879,7 +879,7 @@ dGoals = {
 			by=1500
 		),
 		Wonders(iRedFort, iShalimarGardens, iTajMahal, iGurEAmir),
-		CultureAmount(50000, at=1750),
+		CultureAmount(50000, by=1750),
 	),
 	iThailand: (
 		OpenBorderCount(10, at=1650),
