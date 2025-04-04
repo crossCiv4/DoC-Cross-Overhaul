@@ -299,6 +299,7 @@ dRemovedResourcesDict = {
 	(66, 48)  :  600, # Wine in Tunis
 	(68, 45)  :  600, # Wheat in Tripoli
 	(100, 50) : 1100, # Silver in Bactria
+	(99, 52)  : 1200, # Millet in Bactria
 	(79, 39)  : 1200, # Cotton in Nubia
 	(78, 56)  : 1300, # Silk in Thrace
 	(75, 58)  : 1400, # Gold in Transylvania

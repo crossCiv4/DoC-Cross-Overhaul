@@ -44739,6 +44739,7 @@ EndPlot
 BeginPlot
 	x=99,y=52
 	TerrainType=TERRAIN_PLAINS
+	BonusType=BONUS_MILLET
 	PlotType=2
 EndPlot
 BeginPlot
