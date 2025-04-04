@@ -126,8 +126,9 @@ def isWonder(iBuilding):
 	return isWorldWonderClass(infos.building(iBuilding).getBuildingClassType())
 
 
-def log_with_trace(context):
-	print "%s called near:" % context
+def log_with_trace(context = ""):
+	if context:
+		print "%s called near:" % context
 	stacktrace()
 
 
@@ -1040,6 +1041,14 @@ class EntityCollection(object):
 	def minimum(self, metric):
 		return find_min(self.entities(), metric).result
 		
+	def where_maximum(self, metric):
+		iMaximum = find_max(self.entities(), metric).value
+		return self.where(lambda e: metric(e) == iMaximum)
+	
+	def where_minimum(self, metric):
+		iMinimum = find_min(self.entities(), metric).value
+		return self.where(lambda e: metric(e) == iMinimum)
+		
 	def rank(self, key, metric):
 		sorted_keys = sort(self._keys, lambda k: metric(self._factory(k)), True)
 		return sorted_keys.index(key)
@@ -1302,7 +1311,11 @@ class Locations(EntityCollection):
 			raise Exception("Expected instance of Locations, received: %s" % locations)
 			
 		permutations = [(x, y) for x in self.shuffle().entities() for y in locations.shuffle().entities()]
-		return find_min(permutations, lambda (x, y): distance(x, y)).result
+		result = find_min(permutations, lambda (x, y): distance(x, y)).result
+		if not result:
+			return None, None
+		
+		return result
 	
 	def closest_all(self, locations):
 		closest = self.closest_pair(locations)

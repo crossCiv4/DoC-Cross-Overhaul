@@ -323,6 +323,8 @@ void CyGamePythonInterface()
 
 		.def("getFirstDiscovered", &CyGame::getFirstDiscovered, "int (int iTech)")
 		.def("getFirstDiscoveredTech", &CyGame::getFirstDiscoveredTurn, "int (int iTech)")
+
+		.def("getMedianTechValue", &CyGame::getMedianTechValue, "int ()")
 		;
 
 	python::class_<CyDeal>("CyDeal")

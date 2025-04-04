@@ -1362,7 +1362,8 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 		}
 	}
 
-	iValue += (((iCost / 2) * (iPossibleKnownCount - iKnownCount)) / iPossibleKnownCount);
+	//iValue += (((iCost / 2) * (iPossibleKnownCount - iKnownCount)) / iPossibleKnownCount);
+	iValue += (((iCost) * (iPossibleKnownCount - iKnownCount)) / iPossibleKnownCount); // Leoreth: increase tech spread impact
 
 	iValue *= std::max(0, (GC.getTechInfo(eTech).getAITradeModifier() + 100));
 	iValue /= 100;
@@ -1500,8 +1501,11 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam, bool bIgnor
 	if (eAttitude < ATTITUDE_FRIENDLY)
 	{
 		// Leoreth: used to be /2 instead of *2/3
-		if ((GC.getGameINLINE().getTeamRank(getID()) < (GC.getGameINLINE().countCivTeamsEverAlive() * 2 / 3)) ||
-			  (GC.getGameINLINE().getTeamRank(eTeam) < (GC.getGameINLINE().countCivTeamsEverAlive() * 2 / 3)))
+		//if ((GC.getGameINLINE().getTeamRank(getID()) < (GC.getGameINLINE().countCivTeamsEverAlive() * 2 / 3)) ||
+		//	  (GC.getGameINLINE().getTeamRank(eTeam) < (GC.getGameINLINE().countCivTeamsEverAlive() * 2 / 3)))
+		
+		// Leoreth: use tech rank instead
+		if (GC.getGameINLINE().getTechRank(eTeam) < GC.getGameINLINE().countCivTeamsAlive() * 2 / 3)
 		{
 			iNoTechTradeThreshold = AI_noTechTradeThreshold();
 
@@ -1515,12 +1519,6 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam, bool bIgnor
 		}
 
 		iTechTradeKnownPercent = AI_techTradeKnownPercent();
-
-		// Leoreth: make AIs less willing to share lesser known techs across the board (exception: Japanese UP)
-		if (GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).getCivilizationType() != JAPAN)
-		{
-			iTechTradeKnownPercent = std::min(iTechTradeKnownPercent + 10, 60);
-		}
 
 		iTechTradeKnownPercent *= std::max(0, (GC.getHandicapInfo(GET_TEAM(eTeam).getHandicapType()).getTechTradeKnownModifier() + 100));
 		iTechTradeKnownPercent /= 100;

@@ -471,6 +471,33 @@ BeginPlot
 	EndCity
 EndPlot
 BeginPlot
+	x=67,y=48
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SPEARMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Carthago
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_HARBOR
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=10
+		EndCulture
+		YearFounded=-900
+		PreviousOwner=CIVILIZATION_PHOENICIA
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
 	x=67,y=54
 	RouteType=ROUTE_ROMAN_ROAD
 EndPlot

@@ -339,7 +339,7 @@ def conquistadors(iTeamX, iHasMetTeamY):
 
 @handler("firstContact")
 def firstContactMongolConquerors(iTeamX, iHasMetTeamY):
-	if civ(iHasMetTeamY) == iMongols and not player(iMongols).isHuman() and since(player(iMongols).getLastBirthTurn()) >= 2:
+	if not scenarioStartTurn() and civ(iHasMetTeamY) == iMongols and not player(iMongols).isHuman() and since(player(iMongols).getLastBirthTurn()) >= 2:
 		mongolConquerors(iTeamX)
 
 
@@ -541,6 +541,49 @@ def normanInvasionOfBritain(iPlayer):
 			team(iPlayer).declareWar(iEnemy, True, WarPlanTypes.WARPLAN_TOTAL)
 
 ### FLIP ###
+
+# script added by Leoreth that I don't need due to my Arabia changes
+# @handler("flip")
+# def createArabArmies(iPlayer):
+# 	if civ(iPlayer) == iArabia:
+# 		bBaghdad = civ(plot(tBaghdad)) == iArabia
+# 		bCairo = civ(plot(tCairo)) == iArabia
+
+# 		lCities = []
+
+# 		if bBaghdad: lCities.append(tBaghdad)
+# 		if bCairo: lCities.append(tCairo)
+
+# 		tCapital = random_entry(lCities)
+
+# 		if tCapital:
+# 			if not player(iArabia).isHuman():
+# 				relocateCapital(iArabia, tCapital)
+# 				makeUnits(iArabia, iMobileGuard, tCapital, 3)
+# 				makeUnits(iArabia, iGhazi, tCapital, 2)
+# 			makeUnits(iArabia, iMobileGuard, tCapital, 2)
+# 			makeUnits(iArabia, iGhazi, tCapital, 2)
+
+# 		if bBaghdad:
+# 			makeUnit(iArabia, iSettler, tBaghdad)
+# 			makeUnit(iArabia, iWorker, tBaghdad)
+
+# 		if bCairo:
+# 			makeUnit(iArabia, iSettler, tCairo)
+# 			makeUnit(iArabia, iWorker, tCairo)
+			
+# 		if len(lCities) < 2:
+# 			makeUnits(iArabia, iSettler, tMecca, 2 - len(lCities))
+# 			makeUnits(iArabia, iWorker, tMecca, 2 - len(lCities))
+
+# 		if not player(iArabia).isHuman() and bBaghdad:
+# 			makeUnits(iArabia, iSpearman, tBaghdad, 2)
+		
+# 		coastal_city = cities.owner(iArabia).coastal().adjacent_region(rMediterraneanSea).random()
+# 		if coastal_city:
+# 			createRoleUnit(iArabia, coastal_city, iEscort, 2)
+# 			createRoleUnit(iArabia, coastal_city, iExploreSea, 1)
+# 			createRoleUnit(iArabia, coastal_city, iFerry, 1)
 
 @handler("flip")
 def flipMoorishMaghreb(iPlayer):

@@ -1380,3 +1380,8 @@ int CyGame::getFirstDiscoveredTurn(int iTech)
 {
 	return m_pGame ? m_pGame->getFirstDiscoveredTurn((TechTypes)iTech) : -1;
 }
+
+int CyGame::getMedianTechValue()
+{
+	return m_pGame ? m_pGame->getMedianTechValue() : -1;
+}

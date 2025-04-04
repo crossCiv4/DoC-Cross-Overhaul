@@ -664,7 +664,7 @@ def calculateStability(iPlayer):
 		elif iCurrentEra >= iIndustrial: iCivicEraTechStability -= 5
 		
 	if iIsolationism in civics:
-		if iCurrentEra >= iIndustrial: iCivicEraTechStability -= (iCurrentEra - iRenaissance) * 3
+		if iCurrentEra >= iGlobal: iCivicEraTechStability -= (iCurrentEra - iRenaissance) * 4
 		
 	if tPlayer.isHasTech(iRepresentation):
 		if (iRepublic, iDemocracy) not in civics and (iStratocracy, iConstitution) not in civics: iCivicEraTechStability -= 5

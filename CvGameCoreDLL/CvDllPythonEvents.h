@@ -48,6 +48,7 @@ public:
 	void reportCityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pOldCity, bool bConquest, bool bTrade);
 	void reportCityAcquiredAndKept(PlayerTypes ePlayer, CvCity* pCity);
 	void reportCityLost(CvCity *pCity);
+	void reportCityGifted(CvCity* pCity); // Leoreth
 	void reportCultureExpansion(CvCity *pCity, PlayerTypes ePlayer);
 	void reportCityGrowth(CvCity *pCity, PlayerTypes ePlayer);
 	void reportCityProduction(CvCity *pCity, PlayerTypes ePlayer);

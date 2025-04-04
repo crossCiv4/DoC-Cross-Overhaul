@@ -2734,7 +2734,8 @@ int CvTeam::getResearchCost(TechTypes eTech, bool bModifiers) const
 		int iModifier = 100;
 
 		iModifier += getPopulationResearchModifier();
-		iModifier += getTechLeaderModifier();
+		//iModifier += getTechLeaderModifier();
+		iModifier += getTechDifferenceModifier();
 		iModifier += getSpreadResearchModifier(eTech);
 		iModifier += getTurnResearchModifier();
 		iModifier += getModernizationResearchModifier(eTech); // Leoreth: Japanese UP (Modernization)
@@ -2778,6 +2779,8 @@ int CvTeam::getScenarioResearchModifier() const
 int CvTeam::getPopulationResearchModifier() const
 {
 	int iModifier = 0;
+
+	return 0;
 
 	int iMultiplier;
 	int iNumCities = getNumCities();
@@ -2866,6 +2869,48 @@ int CvTeam::getTechLeaderModifier() const
 
 			iModifier += 10 * iSurplus;
 		}
+	}
+
+	return iModifier;
+}
+
+int CvTeam::getTechDifferenceModifier() const
+{
+	if (GC.getGameINLINE().getGameTurn() <= GET_PLAYER(getLeaderID()).getInitialBirthTurn() + getTurns(20))
+	{
+		return 0;
+	}
+
+	if (GC.getGameINLINE().getMedianTechValue() == 0)
+	{
+		return 0;
+	}
+
+	if (GC.getGameINLINE().countCivTeamsAlive() < 8)
+	{
+		return 0;
+	}
+
+	if (countContacts() * 5 < GC.getGameINLINE().countCivTeamsAlive())
+	{
+		return 0;
+	}
+	
+
+	int iRelativeTechValue = 100 * getTotalTechValue() / GC.getGameINLINE().getMedianTechValue();
+	int iModifier = 0;
+
+	if (iRelativeTechValue > 125)
+	{
+		iModifier += (iRelativeTechValue - 125) / 5;
+		iModifier *= 10;
+	}
+	else if (iRelativeTechValue < 80)
+	{
+		iModifier += (iRelativeTechValue - 80) / 5;
+		iModifier *= 10;
+
+		iModifier = std::max(iModifier, -50);
 	}
 
 	return iModifier;
@@ -7303,4 +7348,22 @@ bool CvTeam::isAllied(TeamTypes eTeam) const
 	}
 
 	return false;
+}
+
+int CvTeam::countContacts() const
+{
+	int iNumContacts = 0;
+
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
+	{
+		if (GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv())
+		{
+			if (canContact((TeamTypes)iI))
+			{
+				iNumContacts++;
+			}
+		}
+	}
+
+	return iNumContacts;
 }

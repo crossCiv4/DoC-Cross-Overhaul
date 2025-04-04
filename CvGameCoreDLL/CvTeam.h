@@ -92,6 +92,7 @@ public:
 	int getScenarioResearchModifier() const;
 	int getCivilizationResearchModifier() const;
 	int getTechLeaderModifier() const;
+	int getTechDifferenceModifier() const;
 	int getSpreadResearchModifier(TechTypes eTech) const;
 	int getTurnResearchModifier() const;
 	int getModernizationResearchModifier(TechTypes eTech) const;
@@ -375,6 +376,7 @@ public:
 	std::set<TeamTypes> determineDefensivePactPartners(std::set<TeamTypes> visited) const;
 
 	bool isAllied(TeamTypes eTeam) const;
+	int countContacts() const;
 
 	virtual void AI_init() = 0;
 	virtual void AI_reset(bool bConstructor) = 0;

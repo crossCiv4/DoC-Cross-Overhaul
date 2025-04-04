@@ -475,6 +475,9 @@ public:
 	int getTechRank(TeamTypes eTeam) const;
 	void setTechRank(int iRank, TeamTypes eTeam);
 
+	int getMedianTechValue() const;
+	void setMedianTechValue(int iValue);
+
 	DllExport virtual void read(FDataStreamBase* pStream);
 	DllExport virtual void write(FDataStreamBase* pStream);
 	DllExport virtual void writeReplay(FDataStreamBase& stream, PlayerTypes ePlayer);
@@ -678,6 +681,7 @@ protected:
 	char* m_aiCivPeriod;
 	char* m_aiFirstDiscovered;
 	int* m_aiFirstDiscoveredTurn;
+	int m_iMedianTechValue;
 
 	int* m_paiUnitCreatedCount;
 	int* m_paiUnitClassCreatedCount;

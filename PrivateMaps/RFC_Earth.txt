@@ -3303,6 +3303,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=62
+	BonusType=BONUS_COAL
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -18465,6 +18466,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=13
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -38800,7 +38802,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=38
-	BonusType=BONUS_CLAM
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot

@@ -315,19 +315,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EIFFEL_TOWER_HELP</Tag>
-		<English>[ICON_BULLET]Golden Ages consume at most three Great People</English>
-		<French>[ICON_BULLET]Les &#226;ges d'or consomment un maximum de trois personnages illustres</French>
-		<German>[ICON_BULLET]Goldene Zeitalter verbrauchen h&#246;chstens drei gro&#223;e Pers&#246;nlichkeiten</German>
-		<Italian>[ICON_BULLET]Golden Ages consume at most three Great People</Italian>
-		<Spanish>[ICON_BULLET]Golden Ages consume at most three Great People</Spanish>
+		<English>[ICON_BULLET]Golden Ages consume one fewer Great Person</English>
+		<French>[ICON_BULLET]Golden Ages consume one fewer Great Person</French>
+		<German>[ICON_BULLET]Goldene Zeitalter verbrauchen eine gro&#223;e Pers&#246;nlichkeit weniger</German>
+		<Italian>[ICON_BULLET]Golden Ages consume one fewer Great Person</Italian>
+		<Spanish>[ICON_BULLET]Golden Ages consume one fewer Great Person</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EIFFEL_TOWER_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also limits the amount of great people consumed in a golden age to 3. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</English>
-		<French>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also limits the amount of great people consumed in a golden age to 3. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</French>
-		<German>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also limits the amount of great people consumed in a golden age to 3. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</German>
-		<Italian>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also limits the amount of great people consumed in a golden age to 3. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</Italian>
-		<Spanish>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also limits the amount of great people consumed in a golden age to 3. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</Spanish>
+		<English>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</English>
+		<French>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</French>
+		<German>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</German>
+		<Italian>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</Italian>
+		<Spanish>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLOSSUS_STRATEGY</Tag>
@@ -2371,11 +2371,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDENS_BY_THE_BAY_HELP</Tag>
-		<English>[ICON_BULLET]+1[ICON_HAPPY] per [ICON_HEALTHY] provided by buildings</English>
-		<French>[ICON_BULLET]+1[ICON_HAPPY] per [ICON_HEALTHY] provided by buildings</French>
-		<German>[ICON_BULLET]+1[ICON_HAPPY] per [ICON_HEALTHY] provided by buildings</German>
-		<Italian>[ICON_BULLET]+1[ICON_HAPPY] per [ICON_HEALTHY] provided by buildings</Italian>
-		<Spanish>[ICON_BULLET]+1[ICON_HAPPY] per [ICON_HEALTHY] provided by buildings</Spanish>
+		<English>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</English>
+		<French>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</French>
+		<German>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</German>
+		<Italian>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</Italian>
+		<Spanish>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDENS_BY_THE_BAY_STRATEGY</Tag>

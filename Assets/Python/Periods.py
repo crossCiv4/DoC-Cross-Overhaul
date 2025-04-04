@@ -23,6 +23,7 @@ dPeriods1700AD = {
 	iMoors : iPeriodMorocco,
 	iSpain : iPeriodSpain,
 	iHolyRome : iPeriodAustria,
+	iEngland : iPeriodUnitedKingdom,
 	iInca : iPeriodPeru,
 	iOttomans : iPeriodOttomanConstantinople,
 	iTimurids: iPeriodMughals,
@@ -52,6 +53,8 @@ dPeriodNames = {
 	iPeriodMorocco:					"Morocco",
 	iPeriodSpain:					"Spain",
 	iPeriodAustria:					"Austria",
+	iPeriodUnitedKingdom:			"United_Kingdom",
+	iPeriodGreatBritain:			"Great_Britain",
 	iPeriodYuan:					"Yuan",
 	iPeriodPeru:					"Peru",
 	iPeriodLateInca:				"Late_Inca",
@@ -164,6 +167,12 @@ def onCityAcquired(iOwner, iPlayer, city, bConquest):
 	if iCiv == iSpain:
 		if not cities.owner(iMoors).region(rIberia):
 			setPeriod(iSpain, iPeriodSpain)
+	
+	if iCiv == iEngland:
+		if player(iPlayer).getCurrentEra() == iIndustrial and city in cities.regions(rBritain, rIreland) and cities.regions(rBritain, rIreland).all(lambda city: city.getOwner() == iPlayer):
+			setPeriod(iEngland, iPeriodGreatBritain)
+		elif player(iPlayer).getCurrentEra() >= iRenaissance and city in cities.region(rBritain) and cities.region(rBritain).all(lambda city: city.getOwner() == iPlayer):
+			setPeriod(iEngland, iPeriodUnitedKingdom)
 
 	if iCiv == iOttomans:
 		if city.at(*tConstantinople):
@@ -263,8 +272,21 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 		if iEra == iIndustrial:
 			setPeriod(iJapan, iPeriodMeiji)
 	
+	if iCiv == iEngland:
+		if iEra == iRenaissance:
+			if cities.region(rBritain).all(lambda city: city.getOwner() == iPlayer):
+				setPeriod(iEngland, iPeriodUnitedKingdom)
+		
+		elif iEra == iIndustrial:
+			if cities.regions(rBritain, rIreland).all(lambda city: city.getOwner() == iPlayer):
+				setPeriod(iEngland, iPeriodGreatBritain)
+		
+		elif iEra == iGlobal:
+			if player(iPlayer).getPeriod() == iPeriodGreatBritain:
+				setPeriod(iEngland, iPeriodUnitedKingdom)
+	
 	if iCiv == iInca:
-		if player(iCiv).getPeriod() == -1:
+		if player(iPlayer).getPeriod() == -1:
 			if iEra == iRenaissance:
 				setPeriod(iInca, iPeriodLateInca)
 	

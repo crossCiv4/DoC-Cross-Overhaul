@@ -4,6 +4,7 @@ from DynamicCivs import *
 from Locations import *
 from RFCUtils import *
 from Slots import *
+from Scenarios import *
 
 from Events import events, handler
 from Collapse import completeCollapse
@@ -133,6 +134,11 @@ def initCamera():
 	plot(dCapitals[active()]).cameraLookAt()
 
 
+@handler("GameStart")
+def cleanupGreatWall():
+	getScenario().greatWall.cleanup()
+
+
 @handler("BeginGameTurn")
 def checkBirths():
 	for birth in data.births:
@@ -254,7 +260,7 @@ def moveOutAttackers(bWar, iAttacker, iDefender):
 
 
 @handler("changeWar")
-def createExpansionUnits(bWar, iAttacker, iDefender):
+def createExpansionArmies(bWar, iAttacker, iDefender):
 	if not bWar:
 		return
 	
@@ -288,13 +294,17 @@ def createExpansionUnits(bWar, iAttacker, iDefender):
 			if not player(iAttacker).isHuman():
 				iExtraAI = 1
 		
+		createExpansionUnits(iAttacker, iDefender, spawn, defender_closest, iExtraAI, iExtraTargets)
+
+
+def createExpansionUnits(iAttacker, iDefender, tile, closest, iExtraAI, iExtraTargets):
 		dExpansionUnits = {
 			iAttack: 2 + iExtraAI + iExtraTargets,
 			iSiege: 1 + 2*iExtraAI + iExtraTargets,
 		}
-		createRoleUnits(iAttacker, spawn, dExpansionUnits.items())
+		createRoleUnits(iAttacker, tile, dExpansionUnits.items())
 		
-		message(iDefender, "TXT_KEY_MESSAGE_EXPANSION_UNITS", player(iAttacker).getCivilizationDescription(0), defender_closest.getName(), color=iRed, location=spawn, button=infos.civ(player(iAttacker).getCivilizationType()).getButton())
+		message(iDefender, "TXT_KEY_MESSAGE_EXPANSION_UNITS", player(iAttacker).getCivilizationDescription(0), closest.getName(), color=iRed, location=tile, button=infos.civ(player(iAttacker).getCivilizationType()).getButton())
 
 
 @handler("changeWar")
@@ -607,10 +617,12 @@ class Birth(object):
 		# for AI, reveal nearby settler targets to improve settler AI
 		if not self.isHuman():
 			iRevealRange = 15
+			land_plots = plots.all().land()
 			# pre-medieval colonizer civs get a buff to the range at which cities are revealed
 			if self.iCiv == iPhoenicia or self.iCiv == iGreece:
 				iRevealRange = 50
-			revealed += plots.all().land().where(lambda p: p.getSettlerValue(self.iCiv) >= 10).where(lambda p: distance(self.location, p) <= iRevealRange).expand(2)
+			revealed += land_plots.where(lambda p: p.getSettlerValue(self.iCiv) >= 10).where(lambda p: distance(self.location, p) <= iRevealRange).expand(2)
+			revealed += land_plots.where(lambda p: p.getExpansion() == self.iPlayer).expand(1)
 		
 		# reveal tiles
 		for plot in revealed:
@@ -934,23 +946,34 @@ class Birth(object):
 		if self.team.isAVassal():
 			return
 		
-		if self.team.getAtWarCount(True) > 0:
-			return
-		
 		if self.iExpansionDelay >= 0:
 			return
-		
+			
 		if not self.isHuman() and expansionCities:
-			targets = expansionCities.owners().without(self.iPlayer).where(self.team.canDeclareWar).where(self.player.canContact).where(lambda p: not player(p).isBirthProtected())
-			minors, majors = targets.split(is_minor)
+			minors, majors = expansionCities.owners().without(self.iPlayer).split(is_minor)
+			
+			majors = majors.where(self.team.canDeclareWar).where(self.player.canContact).where(lambda p: not player(p).isBirthProtected())
 		
 			for iMinor in minors.where(lambda p: not self.team.isAtWar(p)):
 				self.team.declareWar(player(iMinor).getTeam(), False, WarPlanTypes.WARPLAN_LIMITED)
 	
-			if majors and majors.none(self.team.isAtWar):
+			if majors and self.team.getAtWarCount(True) > 0:
 				target = expansionCities.where(lambda city: not is_minor(city)).closest_all(cities.owner(self.iPlayer))
 				self.team.declareWar(target.getTeam(), True, WarPlanTypes.WARPLAN_TOTAL)
-
+				
+				self.iExpansionDelay = rand(turns(5)) + 1
+			
+			elif minors:
+				target, attacker_closest = expansionCities.where(is_minor).where_surrounding(lambda city: not units.at(city).owner(self.iPlayer)).where_maximum(lambda city: plot_(city).getPlayerWarValue(self.iPlayer)).closest_pair(cities.owner(self.iPlayer))
+				
+				if target:
+					defender_closest = cities.owner(target.getOwner()).closest(attacker_closest)
+					spawn = possibleSpawnsBetween(attacker_closest, defender_closest, 1).closest(defender_closest)
+		
+					createExpansionUnits(self.iPlayer, target.getOwner(), spawn, defender_closest, iExtraAI=0, iExtraTargets=0)
+				
+					self.iExpansionDelay = 2
+				
 	def checkIncompatibleCivs(self):
 		if self.iCiv not in dClearedForBirth:
 			return
@@ -1103,8 +1126,9 @@ class Birth(object):
 		team(iOwner).declareWar(self.player.getTeam(), False, WarPlanTypes.WARPLAN_ATTACKED_RECENT)
 	
 	def flippedArea(self):
-		if self.iCiv == iEngland and player(iCelts).isHuman():
-			return plots.birth(self.iPlayer, extended=False)
+		if self.iCiv == iEngland and not self.isHuman():
+			area = plots.birth(self.iPlayer) + plots.region(rBritain).where(lambda p: not p.isOwned() or is_minor(p.getOwner()))
+			return area.unique()
 		
 		if self.iCiv == iRussia and (player(iRussia).isHuman() or player(iRus).isHuman()):
 			return plots.birth(self.iPlayer).without(plots.rectangle(tNovgorod))

@@ -436,8 +436,9 @@ dGoals = {
 	iEthiopia: (
 		ResourceCount(iIncense, 5, by=400),
 		All(
+			StateReligion(iOrthodoxy),
 			SpecialistCount(iSpecialistGreatProphet, 5),
-			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 10, iStateReligion=sum(iOrthodoxy, iCatholicism).named(CHRISTIAN)),
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 8, iStateReligion=sum(iOrthodoxy, iCatholicism).named(CHRISTIAN)),
 			by=1200,
 		),
 		All(
@@ -576,7 +577,7 @@ dGoals = {
 			TradeRouteCommerce(1600, by=1000),
 			TradeRouteCommerce(8000, by=1500),
 		),
-		ResourceCount(different(happiness_resources()).named(DIFFERENT_HAPPINESS_RESOURCES), 14, by=1300),
+		ResourceCount(different(happiness_resources()).named(DIFFERENT_HAPPINESS_RESOURCES), 12, by=1300),
 		CityBuilding(area_city(tMalaya).named(MALAYAN_CITY), iHinduCathedral, iBuddhistCathedral, iIslamicCathedral, by=1500),
 	),
 	iJapan: (

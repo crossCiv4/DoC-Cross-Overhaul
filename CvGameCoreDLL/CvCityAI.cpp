@@ -3413,7 +3413,7 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 				// Leoreth: Gardens by the Bay
 				if (eBuilding == GARDENS_BY_THE_BAY)
 				{
-					iBuildingHappiness += getBuildingGoodHealth();
+					iBuildingHappiness += getBuildingGoodHealth() > 0 ? 1 : 0;
 				}
 
 				if (iBuildingHappiness != 0)

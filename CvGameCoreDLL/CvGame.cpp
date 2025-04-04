@@ -516,6 +516,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	m_iInitWonders = 0;
 	m_iAIAutoPlay = 0;
 	m_iCircumnavigated = -1; //Rhye
+	m_iMedianTechValue = 0; // Leoreth
 
 	// Leoreth: graphics paging
 	m_iXResolution = 1024;
@@ -2320,6 +2321,11 @@ void CvGame::updateTechRanks()
 	for (std::vector<TeamTypes>::iterator it = techRankedTeams.begin(); it != techRankedTeams.end(); ++it)
 	{
 		setTechRank(iIndex++, *it);
+
+		if (iIndex == countCivTeamsAlive() / 2)
+		{
+			setMedianTechValue(GET_TEAM(*it).getTotalTechValue());
+		}
 	}
 }
 
@@ -2331,6 +2337,16 @@ void CvGame::setTechRank(int iRank, TeamTypes eTeam)
 int CvGame::getTechRank(TeamTypes eTeam) const
 {
 	return m_aiTechRankTeam[(int)eTeam];
+}
+
+void CvGame::setMedianTechValue(int iValue)
+{
+	m_iMedianTechValue = iValue;
+}
+
+int CvGame::getMedianTechValue() const
+{
+	return m_iMedianTechValue;
 }
 
 
@@ -8749,6 +8765,7 @@ void CvGame::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iInitWonders);
 	pStream->Read(&m_iAIAutoPlay);
 	pStream->Read(&m_iCircumnavigated); //Rhye
+	pStream->Read(&m_iMedianTechValue); // Leoreth
 
 	// m_uiInitialTime not saved
 
@@ -9021,6 +9038,7 @@ void CvGame::write(FDataStreamBase* pStream)
 	pStream->Write(m_iInitWonders);
 	pStream->Write(m_iAIAutoPlay);
 	pStream->Write(m_iCircumnavigated); //Rhye
+	pStream->Write(m_iMedianTechValue);
 
 	// m_uiInitialTime not saved
 

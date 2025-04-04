@@ -878,6 +878,10 @@ public:
 	int getFeatureHappiness(FeatureTypes eIndex) const;																								// Exposed to Python
 	void changeFeatureHappiness(FeatureTypes eIndex, int iChange);
 
+	// Leoreth
+	int getSpecialistExtraCount(SpecialistTypes eSpecialist) const;
+	void changeSpecialistExtraCount(SpecialistTypes eSpecialist, int iChange);
+
 	int getUnitClassCount(UnitClassTypes eIndex) const;																								// Exposed to Python
 	bool isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra = 0) const;														// Exposed to Python
 	void changeUnitClassCount(UnitClassTypes eIndex, int iChange);
@@ -1278,7 +1282,7 @@ public:
 
 	bool isTolerating(ReligionTypes eReligion) const;
 	bool isDistantSpread(const CvCity* pCity, ReligionTypes eReligion) const;
-	ReligionSpreadTypes getSpreadType(CvPlot* pPlot, ReligionTypes eReligion, bool bDistant = false) const;
+	ReligionSpreadTypes getSpreadType(CvPlot* pPlot, ReligionTypes eReligion, bool bDistant = false, bool bRemove = false) const;
 
 	int getStabilityParameter(ParameterTypes eParameter) const;
 	void setStabilityParameter(ParameterTypes eParameter, int iNewValue);
@@ -1589,6 +1593,7 @@ protected:
 	int** m_paiExtraBuildingYield;
 	int** m_paiExtraBuildingCommerce;
 	int* m_paiFeatureHappiness;
+	int* m_paiSpecialistExtraCounts; // Leoreth
 	int* m_paiUnitClassCount;
 	int* m_paiUnitClassMaking;
 	int* m_paiBuildingClassCount;

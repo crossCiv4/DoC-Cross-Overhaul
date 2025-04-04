@@ -617,7 +617,7 @@ lCivilizations = [
 		iGold=300,
 		iAdvancedStartPoints=100,
 		iStateReligion=iIslam,
-		lCivics=[iDespotism, iTheocracy, iSlavery, iMerchantTrade, iFanaticism, iHegemony],
+		lCivics=[iDespotism, iTheocracy, iSlavery, iMerchantTrade, iSyncretism, iHegemony],
 		techs=techs.column(8).including(iCommune, iPaper, iReligiousOrders, iGunpowder)
 	),
 	Civilization(
@@ -674,7 +674,7 @@ lCivilizations = [
 	Civilization(
 		iArgentina,
 		iGold=1200,
-		iAdvancedStartPoints=100,
+		iAdvancedStartPoints=400,
 		iStateReligion=iCatholicism,
 		lCivics=[iDemocracy, iConstitution, iIndividualism, iFreeEnterprise, iSecularism, iNationhood],
 		techs=techs.column(13).including(iRepresentation, iNationalism, iChemistry, iBiology)
@@ -696,7 +696,7 @@ lCivilizations = [
 	Civilization(
 		iColombia,
 		iGold=750,
-		iAdvancedStartPoints=150,
+		iAdvancedStartPoints=200,
 		iStateReligion=iCatholicism,
 		lCivics=[iDespotism, iConstitution, iIndividualism, iRegulatedTrade, iClergy, iNationhood],
 		techs=techs.column(13).including(iRepresentation, iNationalism, iBiology, iChemistry, iMetallurgy)
@@ -1274,10 +1274,11 @@ dStartingUnits = CivDict({
 	},
 	iArgentina: {
 		iSettle: 2,
-		iWork: 2,
-		iAttack: 1,
+		iWork: 3,
+		iAttack: 3,
 		iDefend: 2,
 		iSiege: 2,
+		iShock: 2,
 		iMissionary: 1,
 		iFerry: 1,
 		iEscort: 2,
@@ -1478,6 +1479,7 @@ dExtraAIUnits = CivDict({
 		iDefend: 4,
 		iWork: 10,
 		iSettle: 4,
+		iSiege: 2,
 	},
 	iArgentina: {
 		iDefend: 3,
@@ -2566,6 +2568,9 @@ dBuildingPreferences = {
 		iGreatWall: -30,	
 	},
 	iNubia: {
+		iPyramids: 20,
+		iGreatSphinx: 20,
+
 		iPalaceOfMinos: -20,
 		iOracle: -20,
 		iHangingGardens: -20,
@@ -2801,6 +2806,7 @@ dBuildingPreferences = {
 		iMezquita: 15,
 		iMountAthos: -20,
 		iHagiaSophia: -20,
+		iOldSynagogue: -30,
 	},
 	iSaxons : {
 		iTradingCompanyBuilding: 50,

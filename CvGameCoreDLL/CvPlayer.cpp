@@ -80,6 +80,7 @@ CvPlayer::CvPlayer()
 	m_paiExtraBuildingHealth = NULL;
 	m_paiBuildingProductionModifiers = NULL; // Leoreth
 	m_paiFeatureHappiness = NULL;
+	m_paiSpecialistExtraCounts = NULL; // Leoreth
 	m_paiUnitClassCount = NULL;
 	m_paiUnitClassMaking = NULL;
 	m_paiBuildingClassCount = NULL;
@@ -345,6 +346,7 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiExtraBuildingHealth);
 	SAFE_DELETE_ARRAY(m_paiBuildingProductionModifiers); // Leoreth
 	SAFE_DELETE_ARRAY(m_paiFeatureHappiness);
+	SAFE_DELETE_ARRAY(m_paiSpecialistExtraCounts); // Leoreth
 	SAFE_DELETE_ARRAY(m_paiUnitClassCount);
 	SAFE_DELETE_ARRAY(m_paiUnitClassMaking);
 	SAFE_DELETE_ARRAY(m_paiBuildingClassCount);
@@ -810,9 +812,12 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		FAssertMsg(0 < GC.getNumSpecialistInfos(), "GC.getNumSpecialistInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
 		FAssertMsg(m_paiSpecialistValidCount==NULL, "about to leak memory, CvPlayer::m_paiSpecialistValidCount");
 		m_paiSpecialistValidCount = new int[GC.getNumSpecialistInfos()];
+		FAssertMsg(m_paiSpecialistExtraCounts == NULL, "about to leak memory, CvPlayer::m_paiSpecialistExtraSlots");
+		m_paiSpecialistExtraCounts = new int[GC.getNumSpecialistInfos()];
 		for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 		{
 			m_paiSpecialistValidCount[iI] = 0;
+			m_paiSpecialistExtraCounts[iI] = 0;
 		}
 
 		FAssertMsg(0 < GC.getNumTechInfos(), "GC.getNumTechInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
@@ -1875,6 +1880,8 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 	iCaptureGold *= 100 + getCaptureGoldModifier();
 	iCaptureGold /= 100;
+
+	iCaptureGold = getTurns(iCaptureGold);
 	
 	changeGold(iCaptureGold);
 
@@ -3073,7 +3080,7 @@ void CvPlayer::doTurn()
 	}
 
 	CvEventReporter::getInstance().endPlayerTurn( GC.getGameINLINE().getGameTurn(),  getID());
-	m_bTurnPlayed = 1; //Rhye
+	m_bTurnPlayed = true; //Rhye
 }
 
 
@@ -6001,6 +6008,12 @@ void CvPlayer::found(int iX, int iY)
 			foundReligion(eReligion, eReligion, true);
 		}
 	}
+
+	// Leoreth
+	if (isHuman() && getNumCities() == 1)
+	{
+		m_bTurnPlayed = false;
+	}
 }
 
 
@@ -7193,6 +7206,11 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 			if (!pLoopUnit->canFight() && pLoopUnit->getDomainType() == DOMAIN_LAND)
 			{
 				pLoopUnit->setHasPromotion(PROMOTION_MORALE, iChange > 0);
+
+				if (iChange > 0)
+				{
+					pLoopUnit->changeMoves(GC.getMOVE_DENOMINATOR());
+				}
 			}
 		}
 	}
@@ -7254,7 +7272,7 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 			CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
 			if (kBuilding.getHealth() > 0)
 			{
-				changeExtraBuildingHappiness((BuildingTypes)iI, kBuilding.getHealth());
+				changeExtraBuildingHappiness((BuildingTypes)iI, iChange);
 			}
 		}
 	}
@@ -8915,10 +8933,10 @@ int CvPlayer::unitsRequiredForGoldenAge() const
 {
 	int iNumUnitGoldenAges = getNumUnitGoldenAges();
 
-	// Leoreth: Eiffel Tower effect: golden age cost capped at 3 GPs
+	// Leoreth: Eiffel Tower effect: golden age requires one fewer great person
 	if (isHasBuildingEffect((BuildingTypes)EIFFEL_TOWER))
 	{
-		iNumUnitGoldenAges = std::min(iNumUnitGoldenAges, 1);
+		iNumUnitGoldenAges = std::max(0, iNumUnitGoldenAges - 1);
 	}
 
 	return (GC.getDefineINT("BASE_GOLDEN_AGE_UNITS") + (iNumUnitGoldenAges * GC.getDefineINT("GOLDEN_AGE_UNITS_MULTIPLIER")));
@@ -13458,6 +13476,28 @@ void CvPlayer::changeFeatureHappiness(FeatureTypes eIndex, int iChange)
 		m_paiFeatureHappiness[eIndex] = (m_paiFeatureHappiness[eIndex] + iChange);
 
 		updateFeatureHappiness();
+	}
+}
+
+
+int CvPlayer::getSpecialistExtraCount(SpecialistTypes eSpecialist) const
+{
+	FAssertMsg(eSpecialist >= 0, "eSpecialist is expected to be non-negative (invalid index)");
+	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist is expected to be within maximum bounds (invalid index)");
+	return m_paiSpecialistExtraCounts[eSpecialist];
+}
+
+
+void CvPlayer::changeSpecialistExtraCount(SpecialistTypes eSpecialist, int iChange)
+{
+	FAssertMsg(eSpecialist >= 0, "eSpecialist is expected to be non-negative (invalid index)");
+	FAssertMsg(eSpecialist < GC.getNumSpecialistInfos(), "eSpecialist is expected to be within maximum bounds (invalid index)");
+
+	if (iChange != 0)
+	{
+		m_paiSpecialistExtraCounts[eSpecialist] += iChange;
+
+		AI_makeAssignWorkDirty();
 	}
 }
 
@@ -18426,6 +18466,7 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange)
 	for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		changeSpecialistValidCount(((SpecialistTypes)iI), ((GC.getCivicInfo(eCivic).isSpecialistValid(iI)) ? iChange : 0));
+		changeSpecialistExtraCount((SpecialistTypes)iI, GC.getCivicInfo(eCivic).getSpecialistCount(iI));
 	}
 
 	for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
@@ -18792,6 +18833,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	pStream->Read(GC.getNumBuildingInfos(), m_paiExtraBuildingHealth);
 	pStream->Read(GC.getNumBuildingInfos(), m_paiBuildingProductionModifiers); // Leoreth
 	pStream->Read(GC.getNumFeatureInfos(), m_paiFeatureHappiness);
+	pStream->Read(GC.getNumSpecialistInfos(), m_paiSpecialistExtraCounts); // Leoreth
 	pStream->Read(GC.getNumUnitClassInfos(), m_paiUnitClassCount);
 	pStream->Read(GC.getNumUnitClassInfos(), m_paiUnitClassMaking);
 	pStream->Read(GC.getNumBuildingClassInfos(), m_paiBuildingClassCount);
@@ -19222,6 +19264,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 	pStream->Write(GC.getNumBuildingInfos(), m_paiExtraBuildingHealth);
 	pStream->Write(GC.getNumBuildingInfos(), m_paiBuildingProductionModifiers); // Leoreth
 	pStream->Write(GC.getNumFeatureInfos(), m_paiFeatureHappiness);
+	pStream->Write(GC.getNumSpecialistInfos(), m_paiSpecialistExtraCounts); // Leoreth
 	pStream->Write(GC.getNumUnitClassInfos(), m_paiUnitClassCount);
 	pStream->Write(GC.getNumUnitClassInfos(), m_paiUnitClassMaking);
 	pStream->Write(GC.getNumBuildingClassInfos(), m_paiBuildingClassCount);
@@ -24964,13 +25007,13 @@ bool CvPlayer::isTolerating(ReligionTypes eReligion) const
 	return false;
 }
 
-ReligionSpreadTypes CvPlayer::getSpreadType(CvPlot* pPlot, ReligionTypes eReligion, bool bDistant) const
+ReligionSpreadTypes CvPlayer::getSpreadType(CvPlot* pPlot, ReligionTypes eReligion, bool bDistant, bool bRemove) const
 {
 	bool bStateReligion = getStateReligion() == eReligion;
-	bool bPromoted = bStateReligion || isTolerating(eReligion);
+	bool bPromoted = bStateReligion || (isTolerating(eReligion) && isStateReligion());
 	int iSpreadFactor = pPlot->getSpreadFactor(eReligion);
 
-	if (!bStateReligion && isNoNonStateReligionSpread()) return RELIGION_SPREAD_NONE;
+	if (!bRemove && !bStateReligion && isNoNonStateReligionSpread()) return RELIGION_SPREAD_NONE;
 
 	if ((isMinorCiv() || isBarbarian()) && iSpreadFactor <= REGION_SPREAD_MINORITY) return RELIGION_SPREAD_NONE;
 

@@ -783,6 +783,16 @@
 	<ElementType name="SpecialistValids" content="eltOnly">
 		<element type="SpecialistValid" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<!-- Leoreth start -->
+	<ElementType name="iCount" content="textOnly" dt:type="int"/>
+	<ElementType name="SpecialistCount" content="eltOnly">
+		<element type="SpecialistType"/>
+		<element type="iCount"/>
+	</ElementType>
+	<ElementType name="SpecialistCounts" content="eltOnly">
+		<element type="SpecialistCount" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<!-- Leoreth end -->
 	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="iHappinessChange" content="textOnly" dt:type="int"/>
 	<ElementType name="BuildingHappinessChange" content="eltOnly">

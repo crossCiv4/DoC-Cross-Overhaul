@@ -1880,6 +1880,12 @@
 						<iYield>1</iYield>
 					</YieldChanges>
 				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_OLIVES</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
 			</BonusYieldChanges>
 			<Flavors>
 				<Flavor>
@@ -4807,7 +4813,6 @@
 			<Strategy>TXT_KEY_BUILDING_ESTATE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ESTATE</ArtDefineTag>
-			<FreeStartEra>ERA_GLOBAL</FreeStartEra>
 			<PrereqTech>TECH_HORTICULTURE</PrereqTech>
 			<iCost>150</iCost>
 			<iConquestProb>50</iConquestProb>
@@ -4863,7 +4868,6 @@
 			<Strategy>TXT_KEY_BUILDING_MUGHAL_DURBAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MUGHAL_DURBAR</ArtDefineTag>
-			<FreeStartEra>ERA_GLOBAL</FreeStartEra>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<iCost>150</iCost>
 			<iConquestProb>50</iConquestProb>
@@ -4925,7 +4929,6 @@
 			<Strategy>TXT_KEY_BUILDING_COLOMBIAN_HACIENDA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COLOMBIAN_HACIENDA</ArtDefineTag>
-			<FreeStartEra>ERA_GLOBAL</FreeStartEra>
 			<PrereqTech>TECH_HORTICULTURE</PrereqTech>
 			<iCost>150</iCost>
 			<iConquestProb>50</iConquestProb>
@@ -5164,7 +5167,6 @@
 			<Strategy>TXT_KEY_BUILDING_COURTHOUSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COURTHOUSE</ArtDefineTag>
-			<FreeStartEra>ERA_GLOBAL</FreeStartEra>
 			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
 			<iCost>200</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5209,7 +5211,6 @@
 			<Strategy>TXT_KEY_BUILDING_ENGLISH_EXCHEQUER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENGLISH_EXCHEQUER</ArtDefineTag>
-			<FreeStartEra>ERA_GLOBAL</FreeStartEra>
 			<PrereqTech>TECH_JUDICIARY</PrereqTech>
 			<iCost>150</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5255,7 +5256,6 @@
 			<Strategy>TXT_KEY_BUILDING_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FACTORY</ArtDefineTag>
-			<FreeStartEra>ERA_DIGITAL</FreeStartEra>
 			<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
 			<iCost>250</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5295,7 +5295,6 @@
 			<Strategy>TXT_KEY_BUILDING_GERMAN_ASSEMBLY_PLANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GERMAN_ASSEMBLY_PLANT</ArtDefineTag>
-			<FreeStartEra>ERA_DIGITAL</FreeStartEra>
 			<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
 			<iCost>250</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5353,7 +5352,6 @@
 			<Strategy>TXT_KEY_BUILDING_JAPANESE_ZAIBATSU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_JAPANESE_ZAIBATSU</ArtDefineTag>
-			<FreeStartEra>ERA_DIGITAL</FreeStartEra>
 			<PrereqTech>TECH_MACHINE_TOOLS</PrereqTech>
 			<iCost>125</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5531,7 +5529,6 @@
 			<Strategy>TXT_KEY_BUILDING_RAILWAY_STATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RAILWAY_STATION</ArtDefineTag>
-			<FreeStartEra>ERA_DIGITAL</FreeStartEra>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_COAL</Bonus>

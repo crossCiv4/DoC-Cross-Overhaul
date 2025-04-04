@@ -488,6 +488,22 @@ class RouteConnection(Requirement):
 		return self.valid_owner(plot, evaluator) and (plot.isCity() or plot.getRouteType() in self.routes)
 
 
+# TODO: test
+class StateReligion(Requirement):
+	
+	TYPES = (RELIGION,)
+	
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_ADOPT"
+	
+	def __init__(self, iStateReligion, **options):
+		Requirement.__init__(self, iStateReligion, **options)
+		
+		self.iStateReligion = iStateReligion
+	
+	def fulfilled(self, evaluator):
+		return evaluator.any(lambda p: player(p).getStateReligion() == self.iStateReligion)
+
+
 # Third Protestant URV goal
 class StateReligionPercent(Requirement):
 

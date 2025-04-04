@@ -58,6 +58,14 @@
 		<Spanish> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Empire Size:[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TECH_DIFFERENCE</Tag>
+		<English> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</English>
+		<French> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</French>
+		<German> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</German>
+		<Italian> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</Italian>
+		<Spanish> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITS_CONTRACTED_OUT</Tag>
 		<English>Units Contracted Out</English>
 		<French>Unit&#233;s sous contrat</French>
@@ -3751,6 +3759,14 @@
 		<German>+%d1_Change[ICON_HAPPY]: "Some terrain features are making us prosper!"</German>
 		<Italian>+%d1_Change[ICON_HAPPY]: "Some terrain features are making us prosper!"</Italian>
 		<Spanish>+%d1_Change[ICON_HAPPY]: "Some terrain features are making us prosper!"</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_SPECIALIST_COUNT</Tag>
+		<English>[ICON_BULLET]%D1_Change slots for[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change slots for[SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change slots for[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change slots for[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change slots for[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_</Tag>

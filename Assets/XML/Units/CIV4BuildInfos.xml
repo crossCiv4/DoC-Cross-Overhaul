@@ -1279,6 +1279,28 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
+			<Type>BUILD_DEFORESTATION_SAVANNA</Type>
+			<Description>TXT_KEY_BUILD_REMOVE_SAVANNA</Description>
+			<iTime>0</iTime>
+			<EntityEvent>ENTITY_EVENT_CHOP</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_SAVANNA</FeatureType>
+					<PrereqTech>TECH_ALLOYS</PrereqTech>
+					<iTime>200</iTime>
+					<iProduction>30</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey>KB_C</HotKey>
+			<bAltDown>1</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>,Art/Interface/Buttons/Builds/BuildChopDown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,8</Button>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_FARM_DEFORESTATION</Type>
 			<Description>TXT_KEY_BUILD_FARM</Description>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>

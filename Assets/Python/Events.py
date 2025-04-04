@@ -8,10 +8,15 @@ from GoalHandlers import event_handler_registry
 
 victory_handlers = appenddict()
 
+logged_events = []
+
 
 def handler(event):
 	def handler_decorator(func):
 		arg_names = inspect.getargspec(func)[0]
+		
+		if event in logged_events:
+			func = log(func)
 		
 		def handler_func(args):
 			return func(*args[:len(arg_names)])

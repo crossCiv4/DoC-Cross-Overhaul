@@ -213,6 +213,11 @@ void CvEventReporter::cityLost( CvCity *pCity)
 	m_kPythonEventMgr.reportCityLost(pCity);
 }
 
+void CvEventReporter::cityGifted(CvCity* pCity)
+{
+	m_kPythonEventMgr.reportCityGifted(pCity);
+}
+
 void CvEventReporter::cultureExpansion( CvCity *pCity, PlayerTypes ePlayer )
 {
 	m_kPythonEventMgr.reportCultureExpansion(pCity, ePlayer);

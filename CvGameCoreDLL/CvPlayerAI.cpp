@@ -515,7 +515,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				bool bKilled = false;
 				if (!bNoDisband)
 				{
-					if (pLoopUnit->canFight())
+					if (pLoopUnit->canFight() && !pLoopUnit->isFound()) // Leoreth: do not disband American pioneers
 					{
 						int iExp = pLoopUnit->getExperience();
 						CvCity* pPlotCity = pLoopUnit->plot()->getPlotCity();
@@ -1915,6 +1915,15 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 	if (iOwnedTiles > 14 && iSettlerMapValue < 10)
 	{
 		return 0;
+	}
+
+	// Leoreth: prevent Europeans from expanding into the Americas again
+	if (getCivilizationType() == SPAIN || getCivilizationType() == FRANCE)
+	{
+		if (GC.getGameINLINE().getGameTurn() >= getTurnForYear(1800) && (pPlot->getRegionGroup() == REGION_GROUP_NORTH_AMERICA || pPlot->getRegionGroup() == REGION_GROUP_SOUTH_AMERICA))
+		{
+			return 0;
+		}
 	}
 
 	iBadTile = 0;

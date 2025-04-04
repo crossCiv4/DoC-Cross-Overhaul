@@ -167,6 +167,7 @@ dResourcesDict = {
 	(18, 52)  : (1700,  iHorse),    # Comanche
 	(20, 55)  : (1700,  iHorse),    # Missouri
 	(15, 59)  : (1700,  iHorse),    # Wyoming
+	(16, 63)  : (1700,  iHorse),    # Alberta
 	(33, 35)  : (1700,  iHorse),    # Venezuela
 	(37, 12)  : (1700,  iHorse),    # Argentina
 	(81, 71)  : (1700,  iDeer),     # Ingria
@@ -413,9 +414,10 @@ def changeConquerorPlotTypes(iConquerorPlayer, iTargetPlayer):
 		plot(tile).setPlotType(type, True, True)
 
 
-@handler("cityAcquiredAndKept")
-def spreadCivGroupResourcesOnConquest(iPlayer, city):
-	spreadCivGroupResources(city)
+@handler("cityAcquired")
+def spreadCivGroupResourcesOnConquest(iOwner, iPlayer, city, bConquest):
+	if bConquest:
+		spreadCivGroupResources(city)
 
 
 @handler("cityBuilt")

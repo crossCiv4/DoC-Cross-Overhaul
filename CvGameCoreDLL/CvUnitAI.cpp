@@ -5378,9 +5378,7 @@ void CvUnitAI::AI_settlerSeaMove()
 	int iWorkerCount = getUnitAICargo(UNITAI_WORKER);
 
 	if ((iSettlerCount > 0) && (isFull() ||
-			((getUnitAICargo(UNITAI_CITY_DEFENSE) > 0) &&
-			 (getUnitAICargo(UNITAI_WORKER) > 0) &&
-			 (GET_PLAYER(getOwnerINLINE()).AI_unitTargetMissionAIs(this, MISSIONAI_LOAD_SETTLER) == 0))))
+			 (GET_PLAYER(getOwnerINLINE()).AI_unitTargetMissionAIs(this, MISSIONAI_LOAD_SETTLER) == 0)))
 	{
 		if (AI_settlerSeaTransport())
 		{
@@ -5429,8 +5427,8 @@ void CvUnitAI::AI_settlerSeaMove()
 		}
 	}
 
-	// Leoreth: if we have a settler, pick up a defender
-	if (iSettlerCount > 0)
+	// Leoreth: if we have a settler, pick up a defender - not America because Pioneer can defend itself
+	if (iSettlerCount > 0 && getCivilizationType() != AMERICA)
 	{
 		if (AI_pickup(UNITAI_CITY_DEFENSE))
 		{
@@ -13504,6 +13502,14 @@ bool CvUnitAI::AI_settlerSeaTransport()
 	{
 		FAssert(!(pBestPlot->isImpassable()));
 
+		if (pBestFoundPlot->area()->getNumTiles() > 1)
+		{
+			if ((getUnitAICargo(UNITAI_CITY_DEFENSE) == 0 || getUnitAICargo(UNITAI_WORKER) == 0) && getCivilizationType() != AMERICA)
+			{
+				return false;
+			}
+		}
+
 		if ((pBestPlot == pBestFoundPlot) || (stepDistance(pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), pBestFoundPlot->getX_INLINE(), pBestFoundPlot->getY_INLINE()) == 1))
 		{
 			if (atPlot(pBestFoundPlot))
@@ -13586,6 +13592,14 @@ bool CvUnitAI::AI_settlerSeaTransport()
 	if ((pBestPlot != NULL) && (pBestFoundPlot != NULL))
 	{
 		FAssert(!(pBestPlot->isImpassable()));
+
+		if (pBestFoundPlot->area()->getNumTiles() > 1)
+		{
+			if ((getUnitAICargo(UNITAI_CITY_DEFENSE) == 0 || getUnitAICargo(UNITAI_WORKER) == 0) && getCivilizationType() != AMERICA)
+			{
+				return false;
+			}
+		}
 
 		if ((pBestPlot == pBestFoundPlot) || (stepDistance(pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), pBestFoundPlot->getX_INLINE(), pBestFoundPlot->getY_INLINE()) == 1))
 		{
@@ -16633,7 +16647,7 @@ CvCity* CvUnitAI::AI_offensiveNukeTarget() const
 
 	pBestCity = NULL;
 
-	iBestValue = 0;
+	iBestValue = 25; // Leoreth: threshold so we don't target useless cities
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -17659,6 +17673,12 @@ int CvUnitAI::AI_nukeValue(CvCity* pCity) const
 		return 0;
 	}
 
+	// Leoreth: avoid targeting own culture
+	if (pCity->calculateCulturePercent(getOwnerINLINE()) >= 20)
+	{
+		return 0;
+	}
+
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
@@ -17678,6 +17698,9 @@ int CvUnitAI::AI_nukeValue(CvCity* pCity) const
 	iValue += std::max(0, pCity->getPopulation() - 10);
 
 	iValue += ((pCity->getPopulation() * (100 + pCity->calculateCulturePercent(pCity->getOwnerINLINE()))) / 100);
+
+	// Leoreth: consider buildings
+	iValue += pCity->getNumBuildings() / 2;
 
 	iValue += -(GET_PLAYER(getOwnerINLINE()).AI_getAttitudeVal(pCity->getOwnerINLINE()) / 3);
 
@@ -18836,7 +18859,13 @@ bool CvUnitAI::AI_rebuildMove(int iMinimumCost)
 
 	if (pBestCity != NULL)
 	{
-		getGroup()->pushMission(MISSION_MOVE_TO, pBestCity->getX(), pBestCity->getY(), MOVE_SAFE_TERRITORY, false, false, MISSIONAI_REBUILD);
+		if (!atPlot(pBestCity->plot()))
+		{
+			getGroup()->pushMission(MISSION_MOVE_TO, pBestCity->getX(), pBestCity->getY(), MOVE_SAFE_TERRITORY, false, false, MISSIONAI_REBUILD);
+			return true;
+		}
+
+		getGroup()->pushMission(MISSION_REBUILD);
 		return true;
 	}
 

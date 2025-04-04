@@ -747,11 +747,10 @@ def createSettlers(iPlayer, iTargetCities, bGrantCapital=True):
 def createMissionaries(iPlayer, iNumUnits, iReligion=None):
 	if not iReligion:
 		iReligion = player(iPlayer).getStateReligion()
-		
+	
 	if iReligion < 0:
-		iNumUnits = 0
-		
-	if not game.isReligionFounded(iReligion):
+		iNumUnits = 0	
+	elif not game.isReligionFounded(iReligion):
 		iNumUnits = 0
 	
 	return makeUnits(iPlayer, missionary(iReligion), plots.capital(iPlayer), iNumUnits)

@@ -11293,7 +11293,12 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 			{
 				SpecialBuildingTypes eSpecialBuilding = ((SpecialBuildingTypes)(GC.getBuildingInfo((BuildingTypes)(GC.getUnitInfo(eUnit).getPrereqBuilding())).getSpecialBuildingType()));
 
-				if ((eSpecialBuilding == NO_SPECIALBUILDING) || !(GET_PLAYER(getOwnerINLINE()).isSpecialBuildingNotRequired(eSpecialBuilding)))
+				if (eSpecialBuilding == NO_SPECIALBUILDING)
+				{
+					return false;
+				}
+
+				if (!GET_PLAYER(getOwnerINLINE()).isSpecialBuildingNotRequired(eSpecialBuilding) && (GC.getSpecialBuildingInfo(eSpecialBuilding).getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getSpecialBuildingInfo(eSpecialBuilding).getObsoleteTech())))
 				{
 					return false;
 				}

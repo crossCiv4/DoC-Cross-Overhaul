@@ -1524,8 +1524,14 @@ void CvCity::doTask(TaskTypes eTask, int iData1, int iData2, bool bOption, bool 
 		}
 		else
 		{
+			CvPlot* pPlot = plot();
 			GET_PLAYER((PlayerTypes)iData1).acquireCity(this, false, true, true);
 			GET_PLAYER(getOwnerINLINE()).updateMaintenance(); // Leoreth
+
+			if (pPlot->isCity())
+			{
+				CvEventReporter::getInstance().cityGifted(pPlot->getPlotCity());
+			}
 		}
 		break;
 
@@ -4163,7 +4169,7 @@ bool CvCity::canConscript(bool bForce) const
 		// Turkish UP: extra conscript requires non-state religion
 		if (getCivilizationType() == OTTOMANS && GET_PLAYER(getOwnerINLINE()).getConscriptCount() - GET_PLAYER(getOwnerINLINE()).getMaxConscript() >= -2)
 		{
-			if (!GET_PLAYER(getOwnerINLINE()).isStateReligion())
+			if (GET_PLAYER(getOwnerINLINE()).getStateReligion() == NO_RELIGION)
 			{
 				if (getReligionCount() == 0)
 				{
@@ -13026,6 +13032,9 @@ int CvCity::getMaxSpecialistCount(SpecialistTypes eIndex, bool bIgnoreCivic) con
 		iMaxSpecialistCount *= 2;
 	}
 
+	// Leoreth: extra specialist slots
+	iMaxSpecialistCount += GET_PLAYER(getOwnerINLINE()).getSpecialistExtraCount(eIndex);
+
 	return iMaxSpecialistCount;
 }
 
@@ -18314,7 +18323,7 @@ int CvCity::calculateCultureCost(CvPlot* pPlot, bool bOrdering) const
 	int iCost = pPlot->calculateCultureCost();
 	int iExtraCost = 0;
 
-	int iDistance = std::max(plotDistance(getX(), getY(), pPlot->getX(), pPlot->getY()), GC.getMap().calculatePathDistance(plot(), pPlot));
+	int iDistance = std::max(plotDistance(getX(), getY(), pPlot->getX(), pPlot->getY()), GC.getMap().calculatePathDistance(plot(), pPlot, MOVE_IGNORE_DANGER | MOVE_THROUGH_ENEMY));
 
 	if (bOrdering)
 	{
@@ -18761,8 +18770,8 @@ struct disappearingReligionCompare
 
 		if (city != NULL)
 		{
-			iLeftValue += GET_PLAYER(city->getOwnerINLINE()).getSpreadType(city->plot(), eLeftReligion) * 3;
-			iRightValue += GET_PLAYER(city->getOwnerINLINE()).getSpreadType(city->plot(), eRightReligion) * 3;
+			iLeftValue += GET_PLAYER(city->getOwnerINLINE()).getSpreadType(city->plot(), eLeftReligion, false, true) * 3;
+			iRightValue += GET_PLAYER(city->getOwnerINLINE()).getSpreadType(city->plot(), eRightReligion, false, true) * 3;
 
 			iLeftValue += city->getReligionInfluence(eLeftReligion);
 			iRightValue += city->getReligionInfluence(eRightReligion);
@@ -18796,7 +18805,7 @@ ReligionTypes CvCity::disappearingReligion(ReligionTypes eNewReligion, bool bCon
 		eReligion = (ReligionTypes)iI;
 		if (eReligion != eNewReligion && GET_PLAYER(getOwnerINLINE()).isStateReligion() && GET_PLAYER(getOwnerINLINE()).getStateReligion() != eReligion)
 		{
-			if (isHasReligion(eReligion) && !isHolyCity(eReligion) && GET_PLAYER(getOwnerINLINE()).getSpreadType(plot(), eReligion) == RELIGION_SPREAD_NONE)
+			if (isHasReligion(eReligion) && !isHolyCity(eReligion) && GET_PLAYER(getOwnerINLINE()).getSpreadType(plot(), eReligion, false, true) == RELIGION_SPREAD_NONE)
 			{
 				religions.push_back(eReligion);
 			}
@@ -18816,7 +18825,7 @@ ReligionTypes CvCity::disappearingReligion(ReligionTypes eNewReligion, bool bCon
 	int iMaxReligions = std::max(2, 1 + getPopulation() / 5);
 
 	ReligionSpreadTypes eCurrentSpread;
-	ReligionSpreadTypes eNewReligionSpread = eNewReligion != NO_RELIGION ? GET_PLAYER(getOwnerINLINE()).getSpreadType(plot(), eNewReligion) : RELIGION_SPREAD_MINORITY;
+	ReligionSpreadTypes eNewReligionSpread = eNewReligion != NO_RELIGION ? GET_PLAYER(getOwnerINLINE()).getSpreadType(plot(), eNewReligion, false, true) : RELIGION_SPREAD_MINORITY;
 	religions.clear();
 
 	if (bConquest || getReligionCount() > iMaxReligions)
@@ -18826,7 +18835,7 @@ ReligionTypes CvCity::disappearingReligion(ReligionTypes eNewReligion, bool bCon
 			eReligion = (ReligionTypes)iI;
 			if (eReligion != eNewReligion && isHasReligion(eReligion) && GET_PLAYER(getOwnerINLINE()).getStateReligion() != eReligion)
 			{
-				eCurrentSpread = GET_PLAYER(getOwnerINLINE()).getSpreadType(plot(), eReligion);
+				eCurrentSpread = GET_PLAYER(getOwnerINLINE()).getSpreadType(plot(), eReligion, false, true);
 				if (eCurrentSpread <= eNewReligionSpread)
 				{
 					religions.push_back(eReligion);

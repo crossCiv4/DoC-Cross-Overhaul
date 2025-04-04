@@ -130,6 +130,16 @@ def americanPioneerAbility(city):
 			createRoleUnit(iPlayer, city, iWork, 1)
 
 
+### CITY GIFTED ###
+
+
+@handler("cityGifted")
+def giftedCityDefenders(city):
+	if not player(city).isHuman():
+		iNumDefenders = max(2, 1 + player(city).getCurrentEra() / 2)
+		createGarrisons(city, city.getOwner(), iNumDefenders)
+
+
 ### COMBAT RESULT ###
 		
 @handler("combatResult")
@@ -422,12 +432,12 @@ def immigration():
 		targetCity.changeCulture(iSourcePlayer, iCultureChange, False)
 		
 		# chance to spread religions in source city
-		lReligions = [iReligion for iReligion in range(iNumReligions) if sourceCity.isHasReligion(iReligion) and not targetCity.isHasReligion(iReligion)]
-		if player(iSourcePlayer).getStateReligion() in lReligions:
-			lReligions.append(player(iSourcePlayer).getStateReligion())
+		#lReligions = [iReligion for iReligion in range(iNumReligions) if sourceCity.isHasReligion(iReligion) and not targetCity.isHasReligion(iReligion)]
+		#if player(iSourcePlayer).getStateReligion() in lReligions:
+		#	lReligions.append(player(iSourcePlayer).getStateReligion())
 		
-		if rand(1, 4) <= len(lReligions):
-			targetCity.setHasReligion(random_entry(lReligions), True, True, True)
+		#if rand(1, 4) <= len(lReligions):
+		#	targetCity.setHasReligion(random_entry(lReligions), True, True, True)
 					
 		# notify affected players
 		message(iSourcePlayer, 'TXT_KEY_UP_EMIGRATION', sourceCity.getName(), event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, button=infos.unit(iSettler).getButton(), color=iYellow, location=sourceCity)

@@ -5814,6 +5814,7 @@ m_paiBuildingHappinessChanges(NULL),
 m_paiBuildingHealthChanges(NULL),
 m_paiBuildingProductionModifiers(NULL), //Leoreth
 m_paiFeatureHappinessChanges(NULL),
+m_paiSpecialistCounts(NULL), // Leoreth
 m_paiDomainExperienceModifiers(NULL), // Leoreth
 m_pabHurry(NULL),
 m_pabSpecialBuildingNotRequired(NULL),
@@ -5847,6 +5848,7 @@ CvCivicInfo::~CvCivicInfo()
 	SAFE_DELETE_ARRAY(m_paiBuildingHealthChanges);
 	SAFE_DELETE_ARRAY(m_paiBuildingProductionModifiers); //Leoreth
 	SAFE_DELETE_ARRAY(m_paiFeatureHappinessChanges);
+	SAFE_DELETE_ARRAY(m_paiSpecialistCounts); // Leoreth
 	SAFE_DELETE_ARRAY(m_paiDomainExperienceModifiers); // Leoreth
 	SAFE_DELETE_ARRAY(m_pabHurry);
 	SAFE_DELETE_ARRAY(m_pabSpecialBuildingNotRequired);
@@ -6323,6 +6325,14 @@ int CvCivicInfo::getFeatureHappinessChanges(int i) const
 }
 
 // Leoreth
+int CvCivicInfo::getSpecialistCount(int i) const
+{
+	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	return m_paiSpecialistCounts ? m_paiSpecialistCounts[i] : -1;
+}
+
+// Leoreth
 int CvCivicInfo::getDomainExperienceModifier(int i) const
 {
 	FAssertMsg(i < NUM_DOMAIN_TYPES, "Index out of bounds");
@@ -6541,6 +6551,11 @@ void CvCivicInfo::read(FDataStreamBase* stream)
 	stream->Read(GC.getNumFeatureInfos(), m_paiFeatureHappinessChanges);
 
 	// Leoreth
+	SAFE_DELETE_ARRAY(m_paiSpecialistCounts);
+	m_paiSpecialistCounts = new int[GC.getNumSpecialistInfos()];
+	stream->Read(GC.getNumSpecialistInfos(), m_paiSpecialistCounts);
+
+	// Leoreth
 	SAFE_DELETE_ARRAY(m_paiDomainExperienceModifiers);
 	m_paiDomainExperienceModifiers = new int[NUM_DOMAIN_TYPES];
 	stream->Read(NUM_DOMAIN_TYPES, m_paiDomainExperienceModifiers);
@@ -6680,6 +6695,7 @@ void CvCivicInfo::write(FDataStreamBase* stream)
 	stream->Write(GC.getNumBuildingClassInfos(), m_paiBuildingHealthChanges);
 	stream->Write(GC.getNumBuildingClassInfos(), m_paiBuildingProductionModifiers); //Leoreth
 	stream->Write(GC.getNumFeatureInfos(), m_paiFeatureHappinessChanges);
+	stream->Write(GC.getNumSpecialistInfos(), m_paiSpecialistCounts); // Leoreth
 	stream->Write(NUM_DOMAIN_TYPES, m_paiDomainExperienceModifiers); // Leoreth
 	stream->Write(GC.getNumHurryInfos(), m_pabHurry);
 	stream->Write(GC.getNumSpecialBuildingInfos(), m_pabSpecialBuildingNotRequired);
@@ -6888,6 +6904,9 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_paiBuildingProductionModifiers, "BuildingProductionModifiers", sizeof(GC.getBuildingClassInfo((BuildingClassTypes)0)), GC.getNumBuildingClassInfos());
 
 	pXML->SetVariableListTagPair(&m_paiFeatureHappinessChanges, "FeatureHappinessChanges", sizeof(GC.getFeatureInfo((FeatureTypes)0)), GC.getNumFeatureInfos());
+
+	// Leoreth
+	pXML->SetVariableListTagPair(&m_paiSpecialistCounts, "SpecialistCounts", sizeof(GC.getSpecialistInfo((SpecialistTypes)0)), GC.getNumSpecialistInfos());
 
 	// Leoreth
 	pXML->SetVariableListTagPair(&m_paiDomainExperienceModifiers, "DomainExperienceModifiers", sizeof(GC.getDomainInfo((DomainTypes)0)), NUM_DOMAIN_TYPES);

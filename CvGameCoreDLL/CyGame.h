@@ -335,6 +335,8 @@ public:
 	int getFirstDiscovered(int iTech);
 	int getFirstDiscoveredTurn(int iTech);
 
+	int getMedianTechValue();
+
 protected:
 	CvGame* m_pGame;
 };
