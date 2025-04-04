@@ -600,14 +600,14 @@ dGoals = {
 	),
 	iTurks: (
 		All(
-			LandPercent(7),
-			PillageCount(20),
-			by=900,
+			LandPercent(5),
+			PillageCount(25),
+			by=1190,
 		),
 		All(
 			RouteConnection(NamedList(iRouteRoad).named(LAND_BASED_TRADE), plots.regions(rNorthChina, rSouthChina).named(CITY_IN_CHINA), plots.regions(rEgypt, rLevant, rAnatolia).coastal().named(MEDITERRANEAN_PORT), start_owners=True),
 			CorporationCount(iSilkRoute, 14),
-			by=1100,
+			by=1190,
 		),
 		DifferentCities(
 			CityCultureLevel(capital().named(CAPITAL), iCultureLevelDeveloping, by=900),

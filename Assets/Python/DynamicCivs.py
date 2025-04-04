@@ -1131,7 +1131,7 @@ def specificName(iPlayer):
 		return "TXT_KEY_CIV_POLYNESIA_TONGA"
 		
 	elif iCiv == iDravidia:
-		if getColumn(iPlayer) >= 11 or scenario() == i1700AD:
+		if getColumn(iPlayer) >= 12 or scenario() == i1700AD:
 			return "TXT_KEY_CIV_DRAVIDIA_MYSORE"
 			
 		if getColumn(iPlayer) >= 9:
@@ -1269,7 +1269,7 @@ def specificName(iPlayer):
 			return "TXT_KEY_CIV_FRANCE_FRANCIA"
 			
 	elif iCiv == iEngland:
-		if getColumn(iPlayer) >= 11 and 1 < cities.region(rBritain) <= cities.region(rBritain).owner(iPlayer):
+		if getColumn(iPlayer) >= 12 and 1 < cities.region(rBritain) <= cities.region(rBritain).owner(iPlayer):
 			return "TXT_KEY_CIV_ENGLAND_GREAT_BRITAIN"
 			
 	elif iCiv == iHolyRome:
@@ -1317,7 +1317,7 @@ def specificName(iPlayer):
 			return "TXT_KEY_CIV_NETHERLANDS_BELGIUM"
 			
 	elif iCiv == iGermany:
-		if getColumn(iPlayer) <= 14 and pPlayer.isExisting() and (not player(iHolyRome).isExisting() or not team(iHolyRome).isVassal(iPlayer)):
+		if getColumn(iPlayer) <= 13 and pPlayer.isExisting() and (not player(iHolyRome).isExisting() or not team(iHolyRome).isVassal(iPlayer)):
 			return "TXT_KEY_CIV_GERMANY_PRUSSIA"
 	
 def adjective(iPlayer, bIgnoreVassal = False):
@@ -1683,7 +1683,7 @@ def specificAdjective(iPlayer):
 		if player(iSaxons).isAlive() or (iEra == iMedieval and len(cities.region(rBritain).owner(iEngland)) == 0):
 			return "TXT_KEY_CIV_ENGLAND_NORMAN_ADJECTIVE"
 
-		if getColumn(iPlayer) >= 11 and 1 < cities.region(rBritain) <= cities.region(rBritain).owner(iPlayer):
+		if getColumn(iPlayer) >= 12 and 1 < cities.region(rBritain) <= cities.region(rBritain).owner(iPlayer):
 			return "TXT_KEY_CIV_ENGLAND_BRITISH"
 			
 	elif iCiv == iHolyRome:
@@ -1749,7 +1749,7 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_NETHERLANDS_BELGIAN"
 			
 	elif iCiv == iGermany:
-		if getColumn(iPlayer) <= 14 and player(iHolyRome).isExisting() and not team(iHolyRome).isVassal(iPlayer):
+		if getColumn(iPlayer) <= 13 and player(iHolyRome).isExisting() and not team(iHolyRome).isVassal(iPlayer):
 			return "TXT_KEY_CIV_GERMANY_PRUSSIAN"
 	
 ### Title methods ###
@@ -2271,7 +2271,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		if iEra == iMedieval and player(iFrance).isExisting() and team(iFrance).isAVassal() and civ(master(iFrance)) == iEngland:
 			return "TXT_KEY_CIV_ENGLAND_ANGEVIN_EMPIRE"
 			
-		if getColumn(iPlayer) >= 11:
+		if getColumn(iPlayer) >= 12:
 			if bEmpire:
 				return "TXT_KEY_EMPIRE_ADJECTIVE"
 		
@@ -2632,7 +2632,7 @@ def leader(iPlayer):
 		if any(data.dFirstContactConquerors.values()): return iPhilip
 		
 	elif iCiv == iFrance:
-		if iEra >= iGlobal: return iDeGaulle
+		if getColumn(iPlayer) >= 17: return iDeGaulle
 		
 		if iEra >= iIndustrial: return iNapoleon
 		
@@ -2726,7 +2726,7 @@ def leader(iPlayer):
 	elif iCiv == iGermany:
 		if isFascist(iPlayer): return iHitler
 		
-		if getColumn(iPlayer) >= 14: return iBismarck
+		if getColumn(iPlayer) >= 15: return iBismarck
 		
 	elif iCiv == iAmerica:
 		if iEra >= iGlobal: return iRoosevelt

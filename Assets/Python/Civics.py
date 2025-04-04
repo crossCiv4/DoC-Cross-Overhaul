@@ -1,4 +1,5 @@
 from Core import *
+from RFCUtils import createMissionaries
 
 
 lCityStatesStart = [iRome, iPhoenicia, iGreece, iIndia, iMaya, iAztecs, iMinoans]
@@ -66,18 +67,24 @@ def notcivics(*civics):
 	return tuple(iCivic for iCivic in infos.civics() if infos.civic(iCivic).getCivicOptionType() == iCategory and iCivic not in civics)
 
 def isCommunist(iPlayer):
+	isCommunist = False
 	civic = civics(iPlayer)
+	pPlayer = player(iPlayer)
 	
 	if civic.iLegitimacy == iVassalage:
-		return False
-	
-	if civic.iEconomy == iCentralPlanning:
-		return True
-	
-	if civic.iGovernment == iStateParty and civic.iSociety != iTotalitarianism and civic.iEconomy not in [iMerchantTrade, iFreeEnterprise]:
-		return True
+		isCommunist = False
+	elif civic.iEconomy == iCentralPlanning:
+		isCommunist = True
+	elif civic.iGovernment == iStateParty and civic.iSociety != iTotalitarianism and civic.iEconomy not in [iMerchantTrade, iFreeEnterprise]:
+		isCommunist = True
 		
-	return False
+	# force Marxism on communist states
+	if isCommunist and not pPlayer.isHuman() and pPlayer.getStateReligion() != iMarxism and pPlayer.getConversionTimer() > 0 and not iSecularism in civics:
+		pPlayer.setLastStateReligion(iMarxism)
+		pPlayer.setConversionTimer(10)
+		createMissionaries(iPlayer, 3, iMarxism)
+
+	return isCommunist
 	
 def isFascist(iPlayer):
 	civic = civics(iPlayer)
