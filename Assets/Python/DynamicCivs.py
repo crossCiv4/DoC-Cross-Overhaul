@@ -204,7 +204,7 @@ dSpecificVassalTitles = deepdict({
 		iByzantium : "TXT_KEY_CIV_MONGOL_BYZANTIUM",
 		iRussia : "TXT_KEY_CIV_MONGOL_RUSSIA",
 		iOttomans : "TXT_KEY_CIV_MONGOL_OTTOMANS",
-		iTimurids : "TXT_KEY_CIV_MONGOL_MUGHALS",
+		iGhorids : "TXT_KEY_CIV_MONGOL_NAME_GHURIDS"
 	},
 	iTimurids : {
 		iDravidia : "TXT_KEY_CIV_DECCAN_SULTANATES",
@@ -490,7 +490,7 @@ dForeignNames = deepdict({
 		iPersia : "TXT_KEY_CIV_RUSSIAN_NAME_PERSIA",
 	},
 	iMongols : {
-		iTurks : "TXT_KEY_CIV_MONGOL_NAME_TURKS"
+		iTimurids : "TXT_KEY_CIV_MONGOL_MUGHALS",
 	},
 	iOttomans : {
 		iPoland : "TXT_KEY_CIV_OTTOMAN_NAME_POLAND",

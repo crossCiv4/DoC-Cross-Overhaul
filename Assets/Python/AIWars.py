@@ -131,9 +131,10 @@ tConquestSuiUnification = (18, iChina, iChinaS, tSouthChinaTL, tSouthChinaBR, 3,
 
 iArabCarthageConquestYear = 670
 tTunisiaTL = (66, 44)
-tTunisiaBR = (69, 48)
+tTunisiaBR = (75, 48)
 
-tConquestArabiaCarthage = (23, iArabia, iPhoenicia, tTunisiaTL, tTunisiaBR, 2, iArabCarthageConquestYear, 10)
+# now includes Benghazi
+tConquestArabiaCarthage = (23, iArabia, iPhoenicia, tTunisiaTL, tTunisiaBR, 3, iArabCarthageConquestYear, 10)
 
 iArabPersiaConquestYear = 650
 tArabsPersiaTL = (92, 43)
@@ -201,7 +202,7 @@ tMongolsBaghdadBR = (90, 49)
 tConquestMongolsBaghdad = (38, iMongols, iArabia, tMongolsBaghdadTL, tMongolsBaghdadBR, 1, iMongolsBaghdadYear, 5)
 
 iFatamidEgyptYear = 969
-tConquestFatamidEgypt = (39, iMamluks, iArabia, tEgyptTL, tEgyptBR, 2, iFatamidEgyptYear, 10)
+tConquestFatamidEgypt = (39, iMamluks, iArabia, tEgyptTL, tEgyptBR, 3, iFatamidEgyptYear, 10)
 
 
 iMongolsKievYear = 1240

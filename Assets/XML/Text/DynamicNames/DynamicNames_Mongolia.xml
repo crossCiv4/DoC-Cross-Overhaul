@@ -266,7 +266,7 @@
 		<Spanish>Ilkhanate of Syria</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_MONGOL_BYZANTIUM</Tag>
+		<Tag>TXT_KEY_CIV_MONGOL_OTTOMANS</Tag>
 		<English>Khanate of Anatolia</English>
 		<French>
 			<Text>Khanat d'Anatolie</Text>
@@ -322,7 +322,19 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_MONGOL_MUGHALS</Tag>
+		<Tag>TXT_KEY_CIV_MONGOL_BYZANTIUM</Tag>
+		<English>Khanate of Rum</English>
+		<French>
+			<Text>Khanat de Rum</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Khanate of Rum</German>
+		<Italian>Khanate of Rum</Italian>
+		<Spanish>Khanate of Rum</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MONGOL_NAME_GHURIDS</Tag>
 		<English>Khanate of Delhi</English>
 		<French>
 			<Text>Khanat de Delhi</Text>
@@ -346,7 +358,7 @@
 		<Spanish>Mongol</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_MONGOL_NAME_TURKS</Tag>
+		<Tag>TXT_KEY_CIV_MONGOL_MUGHALS</Tag>
 		<English>Moghulistan</English>
 		<French>
 			<Text>Mogholistan</Text>

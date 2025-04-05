@@ -1033,6 +1033,7 @@ iFrance : 8,
 iEngland : 7,
 iPortugal : 7, 
 iNetherlands : 6,
+iSaxons: 6,
 })
 
 dMaxColonistsIndustrial = CivDict({
