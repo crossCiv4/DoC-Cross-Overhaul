@@ -2390,11 +2390,13 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 	case EGYPT:
 		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
+		aiUnitAIVal[UNITAI_SETTLE] *= 3;
+		aiUnitAIVal[UNITAI_SETTLE] /= 2;
+		break;
 	case BABYLONIA:
 		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
 		aiUnitAIVal[UNITAI_ATTACK] *= 2;
-        aiUnitAIVal[UNITAI_SETTLE] /= 50;
 		break;
 	case HARAPPA:
 		aiUnitAIVal[UNITAI_SETTLE] *= 3;
@@ -2403,7 +2405,6 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		break;
 	case ASSYRIA:
 		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
-		aiUnitAIVal[UNITAI_SETTLE] /= 50;
 		break;
 	case NUBIA:
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 3;
@@ -2530,12 +2531,15 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 3;
 		break;
 	case ARABIA:
-	case MAMLUKS:
 		aiUnitAIVal[UNITAI_ATTACK] *= 2;
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 3;
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
 		aiUnitAIVal[UNITAI_MISSIONARY] *= 2;
 		aiUnitAIVal[UNITAI_ICBM] *= 2;
+		break;
+	case MAMLUKS:
+		aiUnitAIVal[UNITAI_ATTACK] *= 2;
+		aiUnitAIVal[UNITAI_MISSIONARY] *= 2;
 		break;
 	case TIBET:
 		aiUnitAIVal[UNITAI_MISSIONARY] *= 5;
@@ -2545,6 +2549,13 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_ATTACK_SEA] *= 2;
 		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 3;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 5;
+		break;
+	case TUNIS:
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
+		//aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
+		//aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
+		aiUnitAIVal[UNITAI_PIRATE_SEA] *= 2;
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
 		break;
 	case MOORS:
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;

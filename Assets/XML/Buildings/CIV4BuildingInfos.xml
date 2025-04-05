@@ -3242,12 +3242,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_FORGE</BuildingClass>
-			<Type>BUILDING_SHU_BRONZEWORKS</Type>
-			<Description>TXT_KEY_BUILDING_SHU_BRONZEWORKS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SHU_BRONZEWORKS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SHU_BRONZEWORKS_STRATEGY</Strategy>
+			<Type>BUILDING_XIA_BRONZEWORKS</Type>
+			<Description>TXT_KEY_BUILDING_XIA_BRONZEWORKS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_XIA_BRONZEWORKS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_XIA_BRONZEWORKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SHU_BRONZEWORKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_XIA_BRONZEWORKS</ArtDefineTag>
 			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
 			<PrereqTech>TECH_ALLOYS</PrereqTech>
 			<iCost>110</iCost>
@@ -4310,6 +4310,48 @@
 					<bNeededInCity>1</bNeededInCity>
 				</BuildingClassNeeded>
 			</BuildingClassNeededs>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+		</BuildingInfo>
+		<BuildingInfo>
+		<BuildingClass>BUILDINGCLASS_CUSTOM_HOUSE</BuildingClass>
+			<Type>BUILDING_TUNISIAN_SLAVE_MARKET</Type>
+			<Description>TXT_KEY_BUILDING_TUNISIAN_SLAVE_MARKET</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TUNISIAN_SLAVE_MARKET_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TUNISIAN_SLAVE_MARKET_STRATEGY</Strategy>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_TUNISIAN_SLAVE_MARKET</ArtDefineTag>
+			<PrereqTech>TECH_COMPANIES</PrereqTech>
+			<iCost>180</iCost>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iMinAreaSize>-1</iMinAreaSize>
+			<iConquestProb>0</iConquestProb>
+			<iForeignTradeRouteModifier>50</iForeignTradeRouteModifier>
+			<iAsset>5</iAsset>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_MARKETPLACE</ConstructSound>
+			<BuildingClassNeededs>
+				<BuildingClassNeeded>
+					<BuildingClassType>BUILDINGCLASS_HARBOR</BuildingClassType>
+					<bNeededInCity>1</bNeededInCity>
+				</BuildingClassNeeded>
+			</BuildingClassNeededs>
+			<FreeSpecialistCounts>
+				<FreeSpecialistCount>
+					<SpecialistType>SPECIALIST_SLAVE</SpecialistType>
+					<iFreeSpecialistCount>1</iFreeSpecialistCount>
+				</FreeSpecialistCount>
+			</FreeSpecialistCounts>
+			<UnitCombatFreeExperiences>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_NAVAL</UnitCombatType>
+					<iExperience>2</iExperience>
+				</UnitCombatFreeExperience>
+			</UnitCombatFreeExperiences>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -8551,13 +8593,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_CONFUCIAN_MONASTERY</BuildingClass>
-			<Type>BUILDING_WU_CONFUCIAN_MONASTERY</Type>
+			<Type>BUILDING_SHU_CONFUCIAN_MONASTERY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CONFUCIAN_MONASTERY_SHU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONFUCIAN_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CONFUCIAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIAN_MONASTERY_WU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIAN_MONASTERY_SHU</ArtDefineTag>
 			<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
 			<PrereqReligion>RELIGION_CONFUCIANISM</PrereqReligion>
 			<iCost>60</iCost>

@@ -29459,6 +29459,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=47
+	BonusType=BONUS_COPPER
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=1
 EndPlot

@@ -2254,6 +2254,18 @@
 		<Spanish>Confucian Scholar</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_CONFUCIAN_MISSIONARY_SHU</Tag>
+		<English>Shu Confucian Scholar</English>
+		<French>
+			<Text>&#201;rudit confuc&#233;en</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Konfuzianischer Gelehrter</German>
+		<Italian>Confucian Scholar</Italian>
+		<Spanish>Confucian Scholar</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONFUCIAN_MISSIONARY_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Scholars[COLOR_REVERT] ([COLOR_UNIT_TEXT]Confucian Missionaries[COLOR_REVERT]) can spread [COLOR_HIGHLIGHT_TEXT]Confucianism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</English>
 		<French>[COLOR_UNIT_TEXT]Scholars[COLOR_REVERT] ([COLOR_UNIT_TEXT]Confucian Missionaries[COLOR_REVERT]) can spread [COLOR_HIGHLIGHT_TEXT]Confucianism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</French>
@@ -3845,6 +3857,22 @@
 		<German>Viet Cong</German>
 		<Italian>Viet Cong</Italian>
 		<Spanish>Viet Cong</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BERBER_FARIS</Tag>
+		<English>Berber Faris</English>
+		<French>Berber Faris</French>
+		<German>Berber Faris</German>
+		<Italian>Berber Faris</Italian>
+		<Spanish>Berber Faris</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_UNIT_GRENADINE_CROSSBOWMAN</Tag>
+		<English>Grenadine Crossbowman</English>
+		<French>Grenadine Crossbowman</French>
+		<German>Grenadine Crossbowman</German>
+		<Italian>Grenadine Crossbowman</Italian>
+		<Spanish>Grenadine Crossbowman</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>

@@ -13502,14 +13502,6 @@ bool CvUnitAI::AI_settlerSeaTransport()
 	{
 		FAssert(!(pBestPlot->isImpassable()));
 
-		if (pBestFoundPlot->area()->getNumTiles() > 1)
-		{
-			if ((getUnitAICargo(UNITAI_CITY_DEFENSE) == 0 || getUnitAICargo(UNITAI_WORKER) == 0) && getCivilizationType() != AMERICA)
-			{
-				return false;
-			}
-		}
-
 		if ((pBestPlot == pBestFoundPlot) || (stepDistance(pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), pBestFoundPlot->getX_INLINE(), pBestFoundPlot->getY_INLINE()) == 1))
 		{
 			if (atPlot(pBestFoundPlot))

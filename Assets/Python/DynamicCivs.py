@@ -96,6 +96,7 @@ dSpecificVassalTitles = deepdict({
 		iGreece : "TXT_KEY_CIV_BYZANTINE_GREECE",
 		iMacedon: "TXT_KEY_CIV_BYZANTINE_MACEDON",
 		iPhoenicia : "TXT_KEY_CIV_BYZANTINE_CARTHAGE",
+		iTunis : "TXT_KEY_CIV_BYZANTINE_CARTHAGE",
 		iPersia : "TXT_KEY_CIV_BYZANTINE_PERSIA",
 		iRome : "TXT_KEY_CIV_BYZANTINE_ROME",
 		iSpain : "TXT_KEY_CIV_BYZANTINE_SPAIN",
@@ -108,10 +109,13 @@ dSpecificVassalTitles = deepdict({
 	},
 	iArabia : {
 		iOttomans : "TXT_KEY_CIV_ARABIAN_OTTOMANS",
+		iTunis : "TXT_KEY_CIV_IFRIQIYA_EMIRATE",
+		iPhoenicia : "TXT_KEY_CIV_IFRIQIYA_EMIRATE",
 	},
 	iMoors : {
 		iArabia : "TXT_KEY_CIV_MOORISH_ARABIA",
 		iMali : "TXT_KEY_CIV_MOORISH_MALI",
+		iTunis : "TXT_KEY_CIV_IFRIQIYA_EMIRATE",
 	},
 	iSpain : {
 		iPhoenicia : "TXT_KEY_CIV_SPANISH_CARTHAGE",
@@ -174,6 +178,7 @@ dSpecificVassalTitles = deepdict({
 		iOttomans : "TXT_KEY_MANDATE_OF",
 		iAmerica : "TXT_KEY_CIV_ENGLISH_AMERICA",
 		iNigeria: "TXT_KEY_CIV_ENGLISH_NIGERIA",
+		iTunis: "TXT_KEY_CIV_TUNIS_PROTECTORATE",
 	},
 	iHolyRome : {
 		iItaly : "TXT_KEY_CIV_HOLY_ROMAN_ITALY",
@@ -224,7 +229,8 @@ dSpecificVassalTitles = deepdict({
 		iArabia : "TXT_KEY_CIV_OTTOMAN_ARABIA",
 		iRussia : "TXT_KEY_CIV_OTTOMAN_RUSSIA",
 		iBulgaria: "TXT_KEY_CIV_OTTOMAN_BULGARIA_RUMELIA",
-		iKhazars: "TXT_KEY_CIV_OTTOMAN_KHAZARS"
+		iKhazars: "TXT_KEY_CIV_OTTOMAN_KHAZARS",
+		iTunis: "TXT_KEY_CIV_OTTOMAN_TUNIS",
 	},
 	iNetherlands : {
 		iMali : "TXT_KEY_CIV_DUTCH_MALI",
@@ -495,10 +501,10 @@ dForeignNames = deepdict({
 	},
 })
 
-lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria]
+lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis]
 lRepublicAdj = [iBabylonia, iRome, iMoors, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons]
 
-lSocialistRepublicOf = [iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia]
+lSocialistRepublicOf = [iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis]
 lSocialistRepublicAdj = [iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina]
 
 lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria]
@@ -639,6 +645,7 @@ dStartingLeaders = [
 	iGhorids: iTughluq,
 	iNigeria: iHummay,
 	iZulu : iShaka,
+	iTunis: iAbuFaris,
 },
 # 600 AD
 {
@@ -714,9 +721,6 @@ def onVassalState(iMaster, iVassal):
 		data.civs[iVassalCiv].iResurrections += 1
 		checkNameChange(iVassal)
 		checkAdjectiveChange(iVassal)
-
-	if iVassalCiv == iPhoenicia and (player(iVassalCiv).getStateReligion() == iIslam or player(iMasterCiv).getStateReligion() == iIslam):
-		game.setPeriod(iVassalCiv, iPeriodTunisia)
 	
 	checkName(iVassal)
 
@@ -771,9 +775,6 @@ def onPeriodChange(iPlayer, iPeriod):
 		if iPeriod == iPeriodCarthage:
 			checkNameChange(iPlayer)
 			checkAdjectiveChange(iPlayer)
-		elif iPeriod == iPeriodTunisia:
-			setShort(iPlayer, text("TXT_KEY_CIV_CARTHAGE_TUNIS"))
-			setAdjective(iPlayer, text("TXT_KEY_CIV_CARTHAGE_TUNIS_ADJECTIVE"))
 	
 	if iCiv == iNorse:
 		if iPeriod == iPeriodDenmark:
@@ -1113,10 +1114,6 @@ def specificName(iPlayer):
 	elif iCiv == iNubia:
 		if iEra <= iClassical:
 			return "TXT_KEY_CIV_NUBIA_KUSH"
-
-	elif iCiv == iPhoenicia:
-		if player(iCiv).getPeriod() == iPeriodTunisia:
-			return "TXT_KEY_CIV_CARTHAGE_TUNIS"
 
 	elif iCiv == iPolynesia:
 		if isCurrentCapital(iPlayer, "Kaua'i", "O'ahu", "Maui"):
@@ -1543,10 +1540,6 @@ def specificAdjective(iPlayer):
 	elif iCiv == iParthia:
 		if getColumn(iPlayer) >= 6:
 			return "TXT_KEY_CIV_PERSIA_SASSANID"
-
-	elif iCiv == iPhoenicia:
-		if player(iCiv).getPeriod() == iPeriodTunisia:
-			return "TXT_KEY_CIV_CARTHAGE_TUNIS_ADJECTIVE"
 
 	elif iCiv == iPolynesia:
 		if isCurrentCapital(iPlayer, "Manu'a"):
@@ -2558,12 +2551,6 @@ def leader(iPlayer):
 			return iDarius
 			
 	elif iCiv == iPhoenicia:
-		if player(iCiv).getPeriod() == iPeriodTunisia: return iAbuFaris
-
-		if (iReligion == iIslam or iReligion == iShia) and player(iCiv).getPeriod() != iPeriodTunisia:
-			game.setPeriod(iCiv, iPeriodTunisia)
-			return iAbuFaris
-
 		if capital.getRegionID() not in [rMesopotamia, rAnatolia, rLevant]: return iHannibal
 		
 	elif iCiv == iRome:

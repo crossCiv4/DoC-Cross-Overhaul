@@ -1289,10 +1289,6 @@
 					<LeaderName>LEADER_HIRAM</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
-				<Leader>
-					<LeaderName>LEADER_ABU_FARIS</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_SPAIN</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_CARTHAGE_SELECT</CivilizationSelectionSound>
@@ -5199,8 +5195,12 @@
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_PRIVATEER</UnitClassType>
-					<UnitType>UNIT_MOORISH_CORSAIR</UnitType>
+					<UnitClassType>UNITCLASS_HORSEMAN</UnitClassType>
+					<UnitType>UNIT_BERBER_FARIS</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
+					<UnitType>UNIT_GRENADINE_CROSSBOWMAN</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>
@@ -6857,7 +6857,7 @@
 				</Building>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_CONFUCIAN_MONASTERY</BuildingClassType>
-					<BuildingType>BUILDING_WU_CONFUCIAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_SHU_CONFUCIAN_MONASTERY</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
@@ -7699,6 +7699,89 @@
 			<CivilizationActionSound>AS3D_AZTEC_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
+			<Type>CIVILIZATION_TUNIS</Type>
+			<Description>TXT_KEY_CIV_TUNIS_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_TUNIS_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_TUNIS_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_TUNIS_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_CARMINE_YELLOW</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_TUNIS</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EASTERN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_BAALISM</PaganReligion>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
+			<Identifier>TUN</Identifier>
+			<StartingYear>1050</StartingYear>
+			<LoadingTimes>
+				<LoadingTime>10</LoadingTime>
+				<LoadingTime>5</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+			</LoadingTimes>
+			<Rating>
+				<Trade>4</Trade>
+				<Production>2</Production>
+				<Culture>2</Culture>
+				<Growth>3</Growth>
+				<Start>3</Start>
+			</Rating>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Tunis</City>
+			</Cities>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_CUSTOM_HOUSE</BuildingClassType>
+					<BuildingType>BUILDING_TUNISIAN_SLAVE_MARKET</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_BAALIST_TEMPLE</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSEMAN</UnitClassType>
+					<UnitType>UNIT_BERBER_FARIS</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_PRIVATEER</UnitClassType>
+					<UnitType>UNIT_MOORISH_CORSAIR</UnitType>
+				</Unit>
+			</Units>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_CHIEFDOM</CivicType>
+				<CivicType>CIVIC_PERSONALISM</CivicType>
+				<CivicType>CIVIC_TRADITIONALISM</CivicType>
+				<CivicType>CIVIC_RECIPROCITY</CivicType>
+				<CivicType>CIVIC_ANIMISM</CivicType>
+				<CivicType>CIVIC_KINSHIP</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_ABU_FARIS</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_ARABIA</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_ARABIA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_ARABIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
 			<Type>CIVILIZATION_TURKS</Type>
 			<Description>TXT_KEY_CIV_TURKS_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_TURKS_SHORT_DESC</ShortDescription>
@@ -7948,7 +8031,7 @@
 				</Building>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_FORGE</BuildingClassType>
-					<BuildingType>BUILDING_SHU_BRONZEWORKS</BuildingType>
+					<BuildingType>BUILDING_XIA_BRONZEWORKS</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>

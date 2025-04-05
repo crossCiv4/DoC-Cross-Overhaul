@@ -1321,4 +1321,20 @@
 		<Italian>Forests yield extra [ICON_COMMERCE] and [ICON_PRODUCTION]</Italian>
 		<Spanish>Forests yield extra [ICON_COMMERCE] and [ICON_PRODUCTION]</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_TUN_TITLE</Tag>
+		<English>The Power of Piracy:</English>
+		<French>The Power of Piracy:</French>
+		<German>The Power of Piracy:</German>
+		<Italian>The Power of Piracy:</Italian>
+		<Spanish>The Power of Piracy:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_TUN</Tag>
+		<English>Corsairs can enslave units</English>
+		<French>Corsairs can enslave units</French>
+		<German>Corsairs can enslave units</German>
+		<Italian>Corsairs can enslave units</Italian>
+		<Spanish>Corsairs can enslave units</Spanish>
+	</TEXT>
 </Civ4GameText>

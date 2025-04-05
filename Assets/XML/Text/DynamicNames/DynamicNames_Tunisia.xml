@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_DESC</Tag>
+		<English>The Tunisians</English>
+		<French>The Tunisians</French>
+		<German>The Tunisians</German>
+		<Italian>The Tunisians</Italian>
+		<Spanish>The Tunisians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_PEOPLES</Tag>
+		<English>Ifriqiyan Peoples</English>
+		<French>Ifriqiyan Peoples</French>
+		<German>Ifriqiyan Peoples</German>
+		<Italian>Ifriqiyan Peoples</Italian>
+		<Spanish>Ifriqiyan Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_ADJECTIVE</Tag>
+		<English>
+			<Text>Tunisian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</English>
+		<French>
+			<Text>tunisien:tunisienne:tunisiens:tunisiennes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>
+			Tunisian
+		</German>
+		<Italian>
+			Tunisian
+		</Italian>
+		<Spanish>
+			Tunisian
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_SHORT_DESC</Tag>
+		<English>
+			<Text>Tunis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</English>
+		<French>
+			<Text>Tunis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tunis</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tunis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tunis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_DEFAULT</Tag>
+		<English>Kingdom of Tunisia</English>
+		<French>Kingdom of Tunisia</French>
+		<German>Kingdom of Tunisia</German>
+		<Italian>Kingdom of Tunisia</Italian>
+		<Spanish>Kingdom of Tunisia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_PROTECTORATE</Tag>
+		<English>Protectorate of Tunisia</English>
+		<French>Protectorate of Tunisia</French>
+		<German>Protectorate of Tunisia</German>
+		<Italian>Protectorate of Tunisia</Italian>
+		<Spanish>Protectorate of Tunisia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OTTOMAN_TUNIS</Tag>
+		<English>Eyalet of Tunis</English>
+		<French>Eyalet of Tunis</French>
+		<German>Eyalet of Tunis</German>
+		<Italian>Eyalet of Tunis</Italian>
+		<Spanish>Eyalet of Tunis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IFRIQIYA_EMIRATE</Tag>
+		<English>Emirate of Ifriqiya</English>
+		<French>Emirate of Ifriqiya</French>
+		<German>Emirate of Ifriqiya</German>
+		<Italian>Emirate of Ifriqiya</Italian>
+		<Spanish>Emirate of Ifriqiya</Spanish>
+	</TEXT>
+</Civ4GameText>

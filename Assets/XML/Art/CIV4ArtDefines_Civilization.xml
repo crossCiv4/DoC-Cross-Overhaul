@@ -485,6 +485,12 @@
 			<Button>Art/Interface/Buttons/Civilizations/saxons.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Saxons.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
-		</CivilizationArtInfo>		
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_TUNIS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/tunis.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Tunis.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
 	</CivilizationArtInfos>
 </Civ4ArtDefines>

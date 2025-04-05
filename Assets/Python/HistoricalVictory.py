@@ -646,6 +646,16 @@ dGoals = {
 			CitySpecialistCount(capital().named(CAPITAL), sum(iSpecialistGreatProphet, iSpecialistGreatScientist, iSpecialistGreatEngineer), 4),
 			by=1300,
 		),
+		EraFirstDiscover((iMedieval, 4), (iRenaissance, 8)),
+	),
+	iTunis: (
+		AreaPercent(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), 15, by=1500),
+		All(
+			RazeCount(2),
+			PillageCount(20),
+			SlaveTradeGold(1000),
+			by=1500,
+		),
 		PiracyGold(3000, by=1650),
 	),
 	iJava: (

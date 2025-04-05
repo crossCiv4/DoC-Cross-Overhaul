@@ -9,7 +9,6 @@ dEvacuatePeriods = {
 }
 
 dPeriods600AD = {
-	iPhoenicia : iPeriodTunisia,
 	iCelts : iPeriodInsularCelts,
 }
 
@@ -62,7 +61,6 @@ dPeriodNames = {
 	iPeriodPakistan:				"Pakistan",
 	iPeriodOttomanConstantinople:	"Ottoman_Constantinople",
 	iPeriodModernGermany:			"Modern_Germany",
-	iPeriodTunisia:					"Tunisia",
 	iPeriodMughals:					"Mughals",
 	iPeriodModernIndia:				"Modern_India",
 	iPeriodUkraine:					"Ukraine",
@@ -140,10 +138,6 @@ def onResurrection(iPlayer):
 	elif iCiv == iMongols:
 		setPeriod(iCiv, -1)
 
-	elif iCiv == iPhoenicia:
-		if game.isReligionFounded(iIslam):
-			setPeriod(iPhoenicia, iPeriodTunisia)
-
 	elif iCiv == iRus:
 		# Ukraine needs a modern leader too
 		setPeriod(iCiv, iPeriodUkraine)
@@ -203,9 +197,7 @@ def onCityBuilt(city):
 	iOwnerCiv = civ(iOwner)
 
 	if iOwnerCiv == iPhoenicia:
-		if player(iOwnerCiv).getPeriod() == iPeriodTunisia:
-			return
-		elif city.getRegionID in lEurope + lAfrica:
+		if city.getRegionID in lEurope + lAfrica:
 			setPeriod(iPhoenicia, iPeriodCarthage)
 
 
@@ -229,9 +221,7 @@ def onCapitalMoved(city):
 	iOwnerCiv = civ(iOwner)
 	
 	if iOwnerCiv == iPhoenicia:
-		if player(iOwnerCiv).getPeriod() == iPeriodTunisia:
-			return
-		elif city.getRegionID() in lEurope + lAfrica:
+		if city.getRegionID() in lEurope + lAfrica:
 			setPeriod(iPhoenicia, iPeriodCarthage)
 		else:
 			setPeriod(iPhoenicia, -1)

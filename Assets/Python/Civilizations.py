@@ -554,6 +554,13 @@ lCivilizations = [
 		techs=techs.column(7).including(iDoctrine, iSelectiveBreeding, iMachinery, iGuilds, iReligiousOrders)
 	),
 	Civilization(
+		iTunis,
+		iGold=250,
+		iStateReligion=iIslam,
+		lCivics=[iMonarchy, iSlavery, iMerchantTrade, iClergy, iVassalage, iThalassocracy],
+		techs=techs.column(7).including(iDoctrine, iMachinery, iGuilds, iReligiousOrders)
+	),
+	Civilization(
 		iPortugal,
 		iGold=200,
 		iAdvancedStartPoints=60,
@@ -779,10 +786,11 @@ dStartingUnits = CivDict({
 	},
 	iPhoenicia: {
 		iSettle: 1,
-		iWork: 3,
+		iWork: 2,
 		iDefend: 1,
 		iCounter: 1,
 		iSettleSea: 1,
+		iWorkerSea: 1,
 		iFerry: 1,
 		iEscort: 2,
 	},
@@ -824,7 +832,7 @@ dStartingUnits = CivDict({
 	},
 	iRome: {
 		iSettle: 1,
-		iWork: 3,
+		iWork: 2,
 		iDefend: 3,
 		iAttack: 8,
 		iSiege: 4,
@@ -856,7 +864,7 @@ dStartingUnits = CivDict({
 	iDravidia: {
 		iSettle: 1,
 		iSettleSea: 1,
-		iWork: 2,
+		iWork: 1,
 		iDefend: 1,
 		iAttack: 2,
 		iMissionary: 1,
@@ -942,7 +950,7 @@ dStartingUnits = CivDict({
 		iAttack: 1,
 		iSiege: 1,
 		iSettleSea: 1,
-		iAssaultSea: 2,
+		iAssaultSea: 1,
 		iWorkerSea: 1,
 	},
 	iFrance: {
@@ -977,7 +985,7 @@ dStartingUnits = CivDict({
 		iWork: 2,
 		iSettleSea: 2,
 		iDefend: 2,
-		iAssaultSea: 3,
+		iAssaultSea: 2,
 		iWorkerSea: 2,
 	},
 	iTurks: {
@@ -1015,17 +1023,14 @@ dStartingUnits = CivDict({
 		iMissionary: 2,
 	},
 	iMoors: {
-		iSettle: 2,
+		iSettle: 4,
 		iWork: 1,
 		iDefend: 1,
-		iAttack: 2,
 		iCounter: 2,
-		iHarass: 2,
 		iMissionary: 2,
 		iWorkerSea: 1,
 		iFerry: 1,
 		iEscort: 1,
-		# if human Spain or Moors: 1 Crossbowman
 	},
 	iJava : {
 		iSettle: 1,
@@ -1090,7 +1095,7 @@ dStartingUnits = CivDict({
 	},
 	iSwahili: {
 		iSettle: 1,
-		iWork: 3,
+		iWork: 1,
 		iWorkerSea: 2,
 		iDefend: 1,
 		iSkirmish: 2,
@@ -1106,6 +1111,14 @@ dStartingUnits = CivDict({
 		iAttack: 4,
 		iSiege: 4,
 		iMissionary: 2,
+	},
+	iTunis: {
+		iSettle: 2,
+		iWork: 2,
+		iDefend: 1,
+		iSiege: 1,
+		iFerry: 2,
+		iEscort: 2,
 	},
 	iGhorids: {
 		iSettle: 1,
@@ -1189,7 +1202,7 @@ dStartingUnits = CivDict({
 	},
 	iSweden: {
 		iSettle: 2,
-		iWork: 3,
+		iWork: 2,
 		iCounter: 3,
 		iDefend: 2,
 		iAttack: 2,
@@ -1353,10 +1366,10 @@ dExtraAIUnits = CivDict({
 	iPhoenicia: {
 		iSettleSea: 2,
 		iEscort: 2,
+		iWorkerSea: 1,
 	},
 	iGreece: {
 		iSettleSea: 2,
-		iWork: 2,
 		iWorkerSea: 4,
 		iEscort: 1,
 	},
@@ -1393,6 +1406,9 @@ dExtraAIUnits = CivDict({
 		iAttack: 3,
 		iDefend: 5,
 		iShock: 2,
+	},
+	iMoors: {
+		iSettle: 2,
 	},
 	iEngland: {
 		iShockCity: 2,
@@ -1748,6 +1764,10 @@ def createSpecificUnits(iPlayer, tile):
 		makeUnits(iPlayer, iKeshik, tile, 12)
 	elif iCiv == iRus:
 		makeUnits(iPlayer, iHuscarl, tile, 3)
+	elif iCiv == iMoors:
+		makeUnits(iPlayer, iBerberFaris, tile, 4)
+	elif iCiv == iTunis:
+		makeUnits(iPlayer, iBerberFaris, tile, 3)
 
 dSpecificAdditionalUnits = CivDict({
 	iEthiopia: {
@@ -2160,6 +2180,11 @@ dTechPreferences = {
 		iCartography: -30,
 		iExploration: -30,
 	},
+	iTunis : {
+		iOptics: 20,
+		iGunpowder: 20,
+		iExploration: -50,
+	},
 	iTibet : {
 		iPhilosophy: 30,
 		iEngineering: 20,
@@ -2467,6 +2492,7 @@ dDefaultWonderPreferences = {
 	iNetherlands: -12,
 	iAmerica: -12,
 	iSaxons: -15,
+	iTunis: -10,
 }
 
 dBuildingPreferences = {
@@ -2768,6 +2794,10 @@ dBuildingPreferences = {
 	iMamluks: {
 		iBurjKhalifa: 40,
 		iAlamut: 30,
+	},
+	iTunis: {
+		iHouseOfWisdom: 5,
+		# other wonder preferences...
 	},
 	iTibet : {
 		iPotalaPalace: 40,

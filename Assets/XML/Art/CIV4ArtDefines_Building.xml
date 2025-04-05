@@ -278,6 +278,16 @@
 			<Button>,Art/Interface/Buttons/Buildings/Bank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,6,8</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TUNISIAN_SLAVE_MARKET</Type>
+			<LSystem>LSYSTEM_4x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.7</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/EU3_Arabic_Admiralty/arab_admiralty.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/EU3_Arabic_Admiralty/slave_market.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DRYDOCK</Type>
 			<LSystem>LSYSTEM_COAST</LSystem>
 			<bAnimated>0</bAnimated>
@@ -1948,7 +1958,7 @@
 			<Button>Art/Structures/Buildings/china_commandery/china_commandery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SHU_BRONZEWORKS</Type>
+			<Type>ART_DEF_BUILDING_XIA_BRONZEWORKS</Type>
 			<LSystem>LSYSTEM_2x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.7</fScale>
@@ -1958,7 +1968,7 @@
 			<Button>Art/Structures/Buildings/EU3_FarEast_Workshop/bronze_workshop_btn.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CONFUCIAN_MONASTERY_WU</Type>
+			<Type>ART_DEF_BUILDING_CONFUCIAN_MONASTERY_SHU</Type>
 			<LSystem>LSYSTEM_2x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.7</fScale>

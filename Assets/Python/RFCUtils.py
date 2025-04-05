@@ -616,8 +616,9 @@ def getUnitsForRole(iPlayer, iRole, bUnique=True):
 	
 	if iRole == iSettleSea:
 		units.append(getUnitForRole(iPlayer, iSettle, bUnique=bUnique))
+		units.append(getUnitForRole(iPlayer, iWork, bUnique=bUnique))
 		
-		for _ in range(infos.unit(iUnit).getCargoSpace()-1):
+		for _ in range(infos.unit(iUnit).getCargoSpace()-2):
 			units.append(getUnitForRole(iPlayer, iDefend, bUnique=bUnique))
 	
 	elif iRole == iAssaultSea:

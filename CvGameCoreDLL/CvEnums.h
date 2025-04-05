@@ -1251,6 +1251,7 @@ enum CivilizationTypes		// Exposed to Python
 	TIBET,
 	TIMURIDS,
 	TOLTECS,
+	TUNIS,
 
 	TURKS,
 	VIETNAM,

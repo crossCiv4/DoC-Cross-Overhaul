@@ -155,6 +155,10 @@ def captureSlaves(winningUnit, losingUnit):
 		captureUnit(losingUnit, winningUnit, iSlave, 100)
 		return
 	
+	if civ(winningUnit) == iTunis and winningUnit.getUnitType() == iCorsair and player(winningUnit).canUseSlaves():
+		captureUnit(losingUnit, winningUnit, iSlave, 100)
+		return
+	
 	# enslave natives if your civic is slavery or colonialism regardless of era
 	if civ(losingUnit) == iNative:
 		if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():

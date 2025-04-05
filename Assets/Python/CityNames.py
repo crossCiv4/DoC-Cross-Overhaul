@@ -96,6 +96,7 @@ dLanguages = CivDict({
 	iKhazars: [iLangTurkish, iLangRussian, iLangMongolian],
 	iNigeria: [iLangMande, iLangArabic],
 	iZulu: [iLangMande, iLangEnglish],
+	iTunis: [iLangArabic, iLangEgyptianArabic, iLangMande],
 
 }, [])
 
@@ -281,9 +282,6 @@ def getSpecialLanguages(identifier):
 	if iCiv == iInca:
 		if data.civs[iCiv].iResurrections > 0:
 			return [iLangSpanish]
-	elif iCiv == iPhoenicia:
-		if player(iCiv).getPeriod() == iPeriodTunisia:
-			return [iLangArabic]
 	elif iCiv == iPersia and (player(identifier).getStateReligion() == iShia or player(identifier).getStateReligion() == iIslam):
 		return [iLangFarsi, iLangArabic, iLangPersian]
 	elif iCiv == iNorse:

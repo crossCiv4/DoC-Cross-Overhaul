@@ -3334,7 +3334,7 @@
 		<Spanish>[TAB]Shahabuddin Muhammad Ghori had no offspring, but he treated his Turkic slaves as his sons, who were trained both as soldiers and administrators and provided with the best possible education. Many of his competent and loyal slaves rose to positions of importance in Shahabuddin Ghori's army and government.[PARAGRAPH:1]When a courtier lamented that the Sultan had no male heirs, Shahabuddin Ghori retorted:[PARAGRAPH:1]"Other monarchs may have one son, or two sons; I have thousands of sons, my Turkish slaves who will be the heirs of my dominions, and who, after me, will take care to preserve my name in the Khutbah throughout these territories."[PARAGRAPH:1]Shahabuddin Ghori's prediction proved true. After his assassination, his Empire was divided amongst his slaves. It was one of those slaves, Qutbuddin Aibak, who founded the Delhi-based dynasty that would rule India for the next 300 years.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SHU_BRONZEWORKS</Tag>
+		<Tag>TXT_KEY_BUILDING_XIA_BRONZEWORKS</Tag>
 		<English>Bronzeworks</English>
 		<French>Bronzeworks</French>
 		<German>Bronzeworks</German>
@@ -3382,6 +3382,15 @@
 		<German>Worker's Council</German>
 		<Italian>Worker's Council</Italian>
 		<Spanish>Worker's Council</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TUNISIAN_SLAVE_MARKET</Tag>
+		<English>Slave Market</English>
+		<French>Slave Market</French>
+		<German>Slave Market</German>
+		<Italian>Slave Market</Italian>
+		<Spanish>Slave Market</Spanish>
 	</TEXT>
 
 	<TEXT>

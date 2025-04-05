@@ -112,10 +112,8 @@ def createNorseTemple(city):
 	
 @handler("cityBuilt")
 def createCarthaginianDefenses(city):
-	if at(city, tCarthage) and civ(city) == iPhoenicia and not player(city).isHuman():					
-		makeUnit(iPhoenicia, iWorkboat, tCarthage, UnitAITypes.UNITAI_WORKER_SEA)
-		makeUnit(iPhoenicia, iGalley, direction(tCarthage, DirectionTypes.DIRECTION_NORTHWEST), UnitAITypes.UNITAI_SETTLER_SEA)
-		makeUnit(iPhoenicia, iSettler, direction(tCarthage, DirectionTypes.DIRECTION_NORTHWEST), UnitAITypes.UNITAI_SETTLE)
+	if at(city, tCarthage) and civ(city) == iPhoenicia and not player(city).isHuman():		
+		giveEarlyColonists(iPhoenicia, tCarthage)
 		
 		if player(iRome).isHuman():
 			city.setHasRealBuilding(iWalls, True)
@@ -499,6 +497,14 @@ def removeOrthodoxyFromAnatolia(iPlayer):
 
 
 ### BIRTH ###
+
+@handler("birth")
+def removeSeaPeopleBoatsOnPhoenicianSpawn(iPlayer):
+	# by the start of the Iron Age, we want all Sea Peoples ships to be deleted so they don't kill Punic and Greek boats
+	if civ(iPlayer) == iPhoenicia:
+		lRegions = [rGreece, rLevant, rEgypt, rAnatolia, rBalkans, rItaly]
+		for unit in plots.regions(*lRegions).units().owner(iBarbarian).domain(DomainTypes.DOMAIN_SEA):
+			unit.kill(False, -1)
 
 @handler("birth")
 def romanRelations(iPlayer):
