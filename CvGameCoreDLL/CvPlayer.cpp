@@ -24669,6 +24669,24 @@ int CvPlayer::countVassalCities() const
 	return iNumCities;
 }
 
+// Leoreth
+int CvPlayer::countCoastalCities() const
+{
+	int iNumCoastalCities = 0;
+
+	int iLoop;
+	CvCity* pLoopCity;
+	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	{
+		if (pLoopCity->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()))
+		{
+			iNumCoastalCities++;
+		}
+	}
+
+	return iNumCoastalCities;
+}
+
 int CvPlayer::countHappinessBonuses() const
 {
 	int iNumBonuses = 0;

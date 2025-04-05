@@ -1275,6 +1275,7 @@ public:
 
 	int countColonies() const;
 	int countVassalCities() const;
+	int countCoastalCities() const;
 	int countHappinessBonuses() const;
 	int countRequiredSlaves() const;
 	CvCity* findSlaveCity() const;

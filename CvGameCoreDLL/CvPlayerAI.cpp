@@ -10634,6 +10634,8 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		iValue += iTempValue;
 	}
 
+	int iNumCoastalCities = countCoastalCities();
+
 	for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
 	{
 		BuildingTypes eBuilding = (BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iI);
@@ -10654,7 +10656,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		{
 			if (getNumCities() > 0 && canConstruct(eBuilding))
 			{
-				iValue += (kBuilding.getAdvisorType() == ADVISOR_ECONOMY || kBuilding.getAdvisorType() == ADVISOR_SCIENCE ? 2 : 1) * kBuilding.getProductionCost() * kCivic.getBuildingProductionModifier(iI) * (getNumCities() - getBuildingClassCount((BuildingClassTypes)iI)) / (getNumCities()) / 100 / 120;
+				iValue += (kBuilding.getAdvisorType() == ADVISOR_ECONOMY || kBuilding.getAdvisorType() == ADVISOR_SCIENCE ? 2 : 1) * kBuilding.getProductionCost() * kCivic.getBuildingProductionModifier(iI) * std::max(0, (kBuilding.isWater() ? iNumCoastalCities : getNumCities()) - getBuildingClassCount((BuildingClassTypes)iI)) / (getNumCities()) / 100 / 120;
 			}
 		}
 
