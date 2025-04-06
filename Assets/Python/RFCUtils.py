@@ -995,8 +995,9 @@ def freeCargo(identifier, tile):
 def captureUnit(pLosingUnit, pWinningUnit, iUnit, iChance):
 	if pLosingUnit.isAnimal(): 
 		return
-	
-	if pLosingUnit.getDomainType() != DomainTypes.DOMAIN_LAND: 
+
+	# Tunis UP
+	if civ(pWinningUnit) != iTunis and pLosingUnit.getDomainType() != DomainTypes.DOMAIN_LAND: 
 		return
 	
 	if infos.unit(pLosingUnit).getCombat() == 0: 
@@ -1009,7 +1010,12 @@ def captureUnit(pLosingUnit, pWinningUnit, iUnit, iChance):
 		if iUnit not in [iSlave, iWorker, iAztecSlave]:
 			unitAI = UnitAITypes.UNITAI_ATTACK
 
-		makeUnit(iPlayer, iUnit, pWinningUnit, unitAI)
+		if civ(pWinningUnit) == iTunis and pLosingUnit.getDomainType() == DomainTypes.DOMAIN_SEA:
+			# naval slave capture goes to the capital
+			makeUnit(iPlayer, iUnit, plots.capital(iPlayer), unitAI)
+		else:
+			makeUnit(iPlayer, iUnit, pWinningUnit, unitAI)
+
 		message(pWinningUnit.getOwner(), 'TXT_KEY_UP_ENSLAVE_WIN', sound='SND_REVOLTEND', event=1, button=infos.unit(iUnit).getButton(), color=8, location=pWinningUnit)
 		message(pLosingUnit.getOwner(), 'TXT_KEY_UP_ENSLAVE_LOSE', sound='SND_REVOLTEND', event=1, button=infos.unit(iUnit).getButton(), color=7, location=pWinningUnit)
 		

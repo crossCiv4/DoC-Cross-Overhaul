@@ -20836,7 +20836,6 @@
 					<iUnitClassMod>50</iUnitClassMod>
 				</UnitClassDefenseMod>
 			</UnitClassDefenseMods>
-			<iCargo>2</iCargo>
 			<iAsset>3</iAsset>
 			<iPower>8</iPower>
 			<UnitMeshGroups>

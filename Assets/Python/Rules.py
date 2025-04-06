@@ -144,6 +144,11 @@ def giftedCityDefenders(city):
 		
 @handler("combatResult")
 def captureSlaves(winningUnit, losingUnit):
+	# Tunis UP
+	if civ(winningUnit) == iTunis and winningUnit.getDomainType() == DomainTypes.DOMAIN_SEA and player(winningUnit).canUseSlaves():
+		captureUnit(losingUnit, winningUnit, iSlave, 33)
+		return
+
 	if plot(winningUnit).isWater() and freeCargo(winningUnit, winningUnit) <= 0:
 		return
 
@@ -152,10 +157,6 @@ def captureSlaves(winningUnit, losingUnit):
 		return
 	
 	if civ(losingUnit) == iNative and winningUnit.getUnitType() == iBandeirante and player(winningUnit).canUseSlaves():
-		captureUnit(losingUnit, winningUnit, iSlave, 100)
-		return
-	
-	if civ(winningUnit) == iTunis and winningUnit.getUnitType() == iCorsair and player(winningUnit).canUseSlaves():
 		captureUnit(losingUnit, winningUnit, iSlave, 100)
 		return
 	

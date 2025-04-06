@@ -1331,10 +1331,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_TUN</Tag>
-		<English>Corsairs can enslave units</English>
-		<French>Corsairs can enslave units</French>
-		<German>Corsairs can enslave units</German>
-		<Italian>Corsairs can enslave units</Italian>
-		<Spanish>Corsairs can enslave units</Spanish>
+		<English>Naval units can enslave units</English>
+		<French>Naval units can enslave units</French>
+		<German>Naval units can enslave units</German>
+		<Italian>Naval units can enslave units</Italian>
+		<Spanish>Naval units can enslave units</Spanish>
 	</TEXT>
 </Civ4GameText>

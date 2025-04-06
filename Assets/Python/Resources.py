@@ -93,6 +93,7 @@ dResourcesDict = {
 	(121, 40) : (800,   iPig),		# Vietnam
 	(82, 40)  : (900,   iIron),		# Egypt
 	(101, 50) : (900,   iHorse),	# Punjab
+	(67, 46)  : (900,   iHorse),	# Tunis
 	(73, 25)  : (1000,  iBanana),   # Congo
 	(70, 30)  : (1000,  iBanana),   # Cameroon
 	(62, 32)  : (1000,  iBanana),   # West Africa

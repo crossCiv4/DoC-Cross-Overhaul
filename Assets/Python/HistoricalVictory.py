@@ -649,14 +649,14 @@ dGoals = {
 		EraFirstDiscover((iMedieval, 4), (iRenaissance, 8)),
 	),
 	iTunis: (
-		AreaPercent(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), 15, by=1500),
+		AreaPercent(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), 18, by=1500),
 		All(
-			RazeCount(2),
+			RazeCount(1),
 			PillageCount(20),
 			SlaveTradeGold(1000),
-			by=1500,
+			by=1650,
 		),
-		PiracyGold(3000, by=1650),
+		PiracyGold(3000, by=1750),
 	),
 	iJava: (
 		Wonders(iPrambanan, iBorobudur, by=1100),
