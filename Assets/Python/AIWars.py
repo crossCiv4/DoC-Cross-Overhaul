@@ -134,7 +134,7 @@ tTunisiaTL = (66, 44)
 tTunisiaBR = (75, 48)
 
 # now includes Benghazi
-tConquestArabiaCarthage = (23, iArabia, iPhoenicia, tTunisiaTL, tTunisiaBR, 3, iArabCarthageConquestYear, 10)
+tConquestArabiaCarthage = (23, iArabia, iPhoenicia, tTunisiaTL, tTunisiaBR, 3, iArabCarthageConquestYear, 15)
 
 iArabPersiaConquestYear = 650
 tArabsPersiaTL = (92, 43)
@@ -252,6 +252,9 @@ tGermanyCharlemagneBR = (70, 65)
 
 tConquestFranceGermanyCharlemagne = (48, iFrance, iSaxons, tGermanyCharlemagneTL, tGermanyCharlemagneBR, 3, iCharlemagneYear, 5)
 
+iArabEgyptConquestYear = 645
+tConquestArabiaEgypt = (49, iArabia, iEgypt, tEgyptTL, tEgyptBR, 2, iArabEgyptConquestYear, 10)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -299,7 +302,8 @@ lConquests = [
 	tConquestRomeDacia,
 	tConquestItalyCrete,
 	tConquestSwedenPomerania,
-	tConquestFranceGermanyCharlemagne
+	tConquestFranceGermanyCharlemagne,
+	#tConquestArabiaEgypt, --> not useful since Arabia flips Egypt, but used as a check for the conquest of Carthage, so Byz can block it by conquering a city in Egypt
 ]
 
 dConquestChecker = {
@@ -325,6 +329,7 @@ dConquestChecker = {
 	tConquestAssyriaEgypt[0]: lambda tConquest: checkConquest(tConquest, tConquestAssyriaLevant),
 	tConquestSpainMoors[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
 	tConquestRomeDacia[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
+	tConquestArabiaCarthage[0]: lambda tConquest: checkConquest(tConquest, tConquestArabiaEgypt),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):

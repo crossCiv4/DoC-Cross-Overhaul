@@ -485,7 +485,7 @@ minor_cities = [
 	MinorCity(-750, iIndependent2, tTrebizond, "Trapezous", iPopulation=2, iCiv=iGreece, units={iDefend: 1}, condition=lambda: player(iGreece).isExisting() and not player(iGreece).isHuman(),  adjective="TXT_KEY_CIV_GREECE_ADJECTIVE"),
 	MinorCity(-680, iIndependent, (92, 50), "Hagmatana", iPopulation=3, iCiv=iAssyria, units={iDefend: 2, iShock: 2}, iCulture=15, adjective="TXT_KEY_ADJECTIVE_MEDIAN"),
 	MinorCity(-600, iIndependent, (97, 53), "Margu", iPopulation=1, iCiv=iPersia, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_SOGDIAN"),
-	MinorCity(-650, iIndependent2, tGades, "Gadir", iPopulation=2, iCiv=iPhoenicia, units={iDefend: 1, iCounter:1, iWork: 1}, condition=lambda: not player(iPhoenicia).isHuman(), adjective="TXT_KEY_CIV_PHOENICIA_ADJECTIVE"),
+	#MinorCity(-650, iIndependent2, tGades, "Gadir", iPopulation=2, iCiv=iPhoenicia, units={iDefend: 1, iCounter:1, iWork: 1}, condition=lambda: not player(iPhoenicia).isHuman(), adjective="TXT_KEY_CIV_PHOENICIA_ADJECTIVE"),
 	MinorCity(-650, iIndependent, tPella, "Aigai", iPopulation=2, iCiv=iGreece, units={iDefend: 1, iCounter:1, iWork: 1}, adjective="TXT_KEY_CIV_MACEDON_ADJECTIVE"), 
 	MinorCity(-600, iBarbarian, (125, 43), "Panyu", iPopulation=2, iCiv=iShu, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_NANYUE"),
 	MinorCity(-750, iBarbarian, (128, 48), "Kuaiji", iPopulation=2, iCiv=iShu, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_NANYUE"),
