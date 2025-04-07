@@ -392,7 +392,7 @@ lCivilizations = [
 	Civilization(
 		iVandals,
 		iGold=100,
-		lEnemies=[iRome, iIndependent, iIndependent2],
+		lEnemies=[iRome, iPhoenicia, iIndependent, iIndependent2],
 		lCivics=[iMonarchy, iSlavery, iRedistribution, iDeification, iThalassocracy],
 		techs=techs.column(5).including(iPolitics, iArtisanry, iSteel)
 	),
