@@ -3874,6 +3874,16 @@
 		<Italian>Grenadine Crossbowman</Italian>
 		<Spanish>Grenadine Crossbowman</Spanish>
 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VANDAL_PIRATE</Tag>
+		<English>Vandal Pirate</English>
+		<French>Vandal Pirate</French>
+		<German>Vandal Pirate</German>
+		<Italian>Vandal Pirate</Italian>
+		<Spanish>Vandal Pirate</Spanish>
+	</TEXT>
+
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
 		<English></English>

@@ -1254,6 +1254,7 @@ enum CivilizationTypes		// Exposed to Python
 	TUNIS,
 
 	TURKS,
+	VANDALS,
 	VIETNAM,
 	XIA,
 	ZULU,

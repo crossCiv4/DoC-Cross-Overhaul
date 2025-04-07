@@ -8,14 +8,14 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 81
+iNumCivs = 82
 (iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iByzantium, iCanada, 
 iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, iGhorids,
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, iKhazars,
 iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iMaya, iMexico, iMinoans, iMongols, iMoors, 
 iTimurids, iNetherlands, iNigeria, iNorse, iNubia, iOttomans, iParthia, iPersia, iPoland, iPolynesia, iPortugal, 
 iRome, iRus, iRussia, iSaxons, iShu, iSpain, iSwahili, iSweden, iThailand, iTibet, iToltecs, iTunis,
-iTurks, iVietnam, iXia, iZulu, iIndependent, iIndependent2, iNative, iMinor, iBarbarian) = range(iNumCivs)
+iTurks, iVandals, iVietnam, iXia, iZulu, iIndependent, iIndependent2, iNative, iMinor, iBarbarian) = range(iNumCivs)
 
 iNumRegions = 89
 (rBritain, rIreland, rFrance, rIberia, rItaly, rLowerGermany, rCentralEurope, rBalkans, rGreece, rPoland,
@@ -98,6 +98,7 @@ dCivNames = {
 	iZulu: "Zulu",
 	iSaxons: "Saxons",
 	iTunis: "Tunis",
+	iVandals: "Vandals",
 }
 
 dReligionNames = {
@@ -191,6 +192,7 @@ iArmenia:		((88, 52),  (90, 55)),
 iNigeria:		((70, 32),  (72, 37)),
 iZulu:			((78, 11),  (81, 17)),
 iTunis:			((64, 45),	(70, 48)),
+iVandals:		((64, 45),	(66, 48)),
 }
 
 dCoreAreaExceptions = {

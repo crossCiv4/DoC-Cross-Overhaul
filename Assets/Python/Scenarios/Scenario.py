@@ -156,6 +156,7 @@ LEADER_DATES = {
 	iHummay: 1085,
 	iShaka: 1816,
 	iNelsonMandela: 1994,
+	iGaiseric: 428,
 }
 
 RELIGION_FOUNDING_DATES = {

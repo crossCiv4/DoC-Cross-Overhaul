@@ -68,7 +68,7 @@ def mongolUP(iOwner, iPlayer, city, bConquest):
 @handler("combatResult")
 def norseUP(winningUnit, losingUnit):
 	iWinner = winningUnit.getOwner()
-	if (civ(iWinner) == iNorse and year() <= year(1500)) or winningUnit.getUnitType() == iCorsair:
+	if (civ(iWinner) == iNorse and year() <= year(1500)) or winningUnit.getUnitType() in [iCorsair, iVandalPirate]:
 		if infos.unit(losingUnit).getDomainType() == DomainTypes.DOMAIN_SEA:
 			iGold = scale(infos.unit(losingUnit).getProductionCost() / 2)
 			player(iWinner).changeGold(iGold)
@@ -185,3 +185,13 @@ def kushanPower(unit, iReligion, bSuccess):
 				iGold = scale(20 + distance(capital_city, spread_city))
 				message(unit.getOwner(), "TXT_KEY_UP_SYNCRETISM_EFFECT", iGold, infos.religion(iReligion).getText(), spread_city.getName(), location=spread_city, button=infos.religion(iReligion).getButton())
 				player(unit.getOwner()).changeGold(iGold)
+
+#Free pirate unit with each conquered city
+@handler("cityAcquired")
+def VandalPower(iOwner, iPlayer, city, bConquest):
+	if civ(iPlayer) == iVandals and bConquest:
+		if city.plot().isCoastalLand():
+			if team(iPlayer).isHasTech(iOptics):
+				makeUnits(iVandals, iPrivateer, city, 1, UnitAITypes.UNITAI_PIRATE_SEA)
+			else:
+				makeUnits(iVandals, iVandalPirate, city, 1, UnitAITypes.UNITAI_PIRATE_SEA)

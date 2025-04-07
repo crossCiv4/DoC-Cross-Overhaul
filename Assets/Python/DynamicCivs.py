@@ -258,8 +258,11 @@ dSpecificVassalTitles = deepdict({
 		iArgentina : "TXT_KEY_CIV_BRAZILIAN_ARGENTINA",
 	},
 	iSweden : {
-		iNorse: "TXT_KEY_CIV_SWEDISH_NORSE"
-	}
+		iNorse: "TXT_KEY_CIV_SWEDISH_NORSE",
+	},
+	iRome : {
+		iVandals: "TXT_KEY_CIV_ROMAN_VANDALS",
+	},
 })
 
 dMasterTitles = {
@@ -531,6 +534,7 @@ dEmpireThreshold = {
 	iRussia : 8,
 	iBulgaria: 4,
 	iHittites: 3,
+	iSpain: 7,
 }
 
 lChristianity = [iCatholicism, iOrthodoxy, iProtestantism]
@@ -646,6 +650,7 @@ dStartingLeaders = [
 	iNigeria: iHummay,
 	iZulu : iShaka,
 	iTunis: iAbuFaris,
+	iVandals: iGaiseric,
 },
 # 600 AD
 {
@@ -1290,7 +1295,7 @@ def specificName(iPlayer):
 			
 	elif iCiv == iItaly:
 		if not bResurrected and not bEmpire and not bCityStates:
-			if isCurrentCapital(iPlayer, "Fiorenza"):
+			if isCurrentCapital(iPlayer, "Fiorenza") or isCurrentCapital(iPlayer, "Firenze"):
 				return "TXT_KEY_CIV_ITALY_TUSCANY"
 				
 			return capitalName(iPlayer)
@@ -1646,7 +1651,7 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_MOORS_MOROCCAN"
 			
 	elif iCiv == iSpain:
-		if year() < year(dBirth[iMoors]):
+		if year() < year(dBirth[iMoors]) + 50:
 			return "TXT_KEY_ADJECTIVE_VISIGOTHIC"
 
 		bSpain = not player(iMoors).isExisting() or not player(iMoors).getCapitalCity() in plots.region(rIberia)
@@ -2231,11 +2236,17 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_EMPIRE_ADJECTIVE"	
 			
 	elif iCiv == iSpain:
-		if bEmpire and iEra > iMedieval:
-			return "TXT_KEY_EMPIRE_ADJECTIVE"
-			
-		if iEra == iMedieval and isCurrentCapital(iPlayer, "Barcelona", "Valencia"):
-			return "TXT_KEY_CIV_SPAIN_CROWN_OF"
+		if year() < year(dBirth[iMoors]) + 50:
+			if bEmpire:
+				return "TXT_KEY_EMPIRE_ADJECTIVE"
+			elif bMonarchy:
+				return "TXT_KEY_KINGDOM_ADJECTIVE"
+		else:
+			if bEmpire and iEra > iMedieval:
+				return "TXT_KEY_EMPIRE_ADJECTIVE"
+				
+			if iEra == iMedieval and isCurrentCapital(iPlayer, "Barcelona", "Valencia"):
+				return "TXT_KEY_CIV_SPAIN_CROWN_OF"
 			
 	elif iCiv == iFrance:
 		if not capital in cities.core(iFrance):

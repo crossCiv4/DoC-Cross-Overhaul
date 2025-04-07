@@ -2753,6 +2753,10 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_CITY_COUNTER] /= 2;
 		aiUnitAIVal[UNITAI_PILLAGE] *= 2;
 		break;
+	case VANDALS:
+		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
+		aiUnitAIVal[UNITAI_PILLAGE] *= 2;
+		break;
 	default:
 		break;
 	}

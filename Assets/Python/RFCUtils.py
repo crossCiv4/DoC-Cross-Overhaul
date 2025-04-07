@@ -623,14 +623,15 @@ def getUnitsForRole(iPlayer, iRole, bUnique=True):
 	
 	elif iRole == iAssaultSea:
 		for i in range(infos.unit(iUnit).getCargoSpace()):
-			# civs that prefer cavalry + siege naval assault spawns
-			if civ(iPlayer) in [iEngland]:
-				if i % 3 == 0:
-					units.append(getUnitForRole(iPlayer, iSiege, bUnique=bUnique))
-				else:
-					units.append(getUnitForRole(iPlayer, iShock, bUnique=bUnique))
+			# every 3rd unit should be siege
+			if i % 3 == 0:
+				units.append(getUnitForRole(iPlayer, iSiege, bUnique=bUnique))
 			else:
-				units.append(getUnitForRole(iPlayer, iAttack, bUnique=bUnique))
+				# cavalry-preferring civs
+				if civ(iPlayer) in [iEngland]:
+					units.append(getUnitForRole(iPlayer, iShock, bUnique=bUnique))
+				else:
+					units.append(getUnitForRole(iPlayer, iAttack, bUnique=bUnique))
 	
 	return units
 

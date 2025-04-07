@@ -1550,7 +1550,16 @@
 		<Italian>Abdullah Khan</Italian>
 		<Spanish>Abdullah Khan</Spanish>
 	</TEXT>
-	
+
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GAISERIC</Tag>
+		<English>Gaiseric</English>
+		<French>Gaiseric</French>
+		<German>Gaiseric</German>
+		<Italian>Gaiseric</Italian>
+		<Spanish>Gaiseric</Spanish>
+	</TEXT>
+
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>

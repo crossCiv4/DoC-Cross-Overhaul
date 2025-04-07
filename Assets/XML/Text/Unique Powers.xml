@@ -1337,4 +1337,20 @@
 		<Italian>Naval units can enslave units</Italian>
 		<Spanish>Naval units can enslave units</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_VDL_TITLE</Tag>
+		<English>The Power of Naval Requisition:</English>
+		<French>The Power of Naval Requisition:</French>
+		<German>The Power of Naval Requisition:</German>
+		<Italian>The Power of Naval Requisition:</Italian>
+		<Spanish>The Power of Naval Requisition:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_VDL</Tag>
+		<English>Grants free pirate unit on city conquest</English>
+		<French>Grants free pirate unit on city conquest</French>
+		<German>Grants free pirate unit on city conquest</German>
+		<Italian>Grants free pirate unit on city conquest</Italian>
+		<Spanish>Grants free pirate unit on city conquest</Spanish>
+	</TEXT>
 </Civ4GameText>

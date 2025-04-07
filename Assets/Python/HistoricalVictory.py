@@ -658,6 +658,27 @@ dGoals = {
 		),
 		PiracyGold(3000, by=1750),
 	),
+	iVandals: (
+		All(
+			PiracyGold(200),
+			RaidGold(200),
+			PillageCount(5),
+			Control(plots.region(rMaghreb).named(MAGHREB)),
+			by=600,
+		),
+		All(
+			PiracyGold(300),
+			RaidGold(300),
+			PillageCount(10),
+			DefeatedUnits(civs(iRome, iByzantium, iArabia), 10),
+			UnitCombatLevelCount(UnitCombatTypes.UNITCOMBAT_NAVAL, 3, 2),
+			by=750,
+		),	
+		All(
+			CityBuilding(city(tCarthage).named(CARTHAGE), iPalace),
+			CityCultureLevel(capital().named(CAPITAL), iCultureLevelDeveloping),
+		)
+	),
 	iJava: (
 		Wonders(iPrambanan, iBorobudur, by=1100),
 		HappyCityPopulation(75, by=1350),

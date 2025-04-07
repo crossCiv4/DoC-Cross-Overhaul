@@ -390,6 +390,13 @@ lCivilizations = [
 		techs=techs.column(5).including(iArchitecture, iPolitics, iEthics, iArtisanry, iLateenSails)
 	),
 	Civilization(
+		iVandals,
+		iGold=100,
+		lEnemies=[iRome, iIndependent, iIndependent2],
+		lCivics=[iMonarchy, iSlavery, iRedistribution, iDeification, iThalassocracy],
+		techs=techs.column(5).including(iPolitics, iArtisanry, iSteel)
+	),
+	Civilization(
 		iSaxons,
 		iGold=100,
 		lEnemies=[iRome, iIndependent, iIndependent2],
@@ -956,11 +963,11 @@ dStartingUnits = CivDict({
 	iFrance: {
 		iSettle: 3,
 		iWork: 2,
-		iDefend: 4,
+		iDefend: 3,
 		iCounter: 3,
-		iAttack: 3,
-		iSiege: 1,
-		iShock: 1,
+		iAttack: 2,
+		iSiege: 2,
+		iShock: 2,
 	},
 	iMalays: {
 		iSettle: 1,
@@ -1005,6 +1012,8 @@ dStartingUnits = CivDict({
 		iHarass: 5,
 		iSiege: 6,
 		iCounter: 3,
+		iEscort: 1,
+		iFerry: 1,
 	},
 	iTibet: {
 		iSettle: 1,
@@ -1041,6 +1050,13 @@ dStartingUnits = CivDict({
 		iEscort: 2,
 		iWorkerSea: 1,
 		iMissionary: 1,
+	},
+	iVandals: {
+		iSettle: 1,
+		iWork: 1,
+		iCounter: 1,
+		iShockCity: 2,
+		iEscort: 1,
 	},
 	iSpain: {
 		iSettle: 2,
@@ -1401,9 +1417,17 @@ dExtraAIUnits = CivDict({
 		iAttack: 3,
 		iSiege: 1,
 	},
+	iVandals: {
+		iWork: 1,
+		iDefend: 1,
+		iCounter: 1,
+		iEscort: 2,
+		iFerry: 3,
+	},
 	iFrance: {
 		iAttack: 3,
-		iDefend: 5,
+		iCounter: 1,
+		iDefend: 4,
 		iShock: 2,
 	},
 	iMoors: {
@@ -1427,6 +1451,7 @@ dExtraAIUnits = CivDict({
 	},
 	iArabia: {
 		iWork: 3,
+		iEscort: 2,
 	},
 	iBulgaria: {
 		iAttack: 1,
@@ -1524,7 +1549,11 @@ dHumanStartingUnits = CivDict({
 		iSettler: 1,
 		iDefend: 1,
 		iCounter: 2,
-	}
+	},
+	# humans get units on boats, AI gets them pre-placed in Tangiers
+	iVandals: {
+		iAssaultSea: 3,
+	},
 }, {})
 
 dAdditionalUnits = CivDict({
@@ -1758,7 +1787,7 @@ def createSpecificUnits(iPlayer, tile):
 	elif iCiv == iParthia:
 		makeUnits(iPlayer, iHorseArcher, tile, 5)
 	elif iCiv == iFrance:
-		makeUnits(iPlayer, iAxeman, tile, 6)
+		makeUnits(iPlayer, iAxeman, tile, 5)
 	elif iCiv == iTimurids:
 		makeUnits(iPlayer, iKeshik, tile, 12)
 	elif iCiv == iRus:
@@ -1767,6 +1796,13 @@ def createSpecificUnits(iPlayer, tile):
 		makeUnits(iPlayer, iBerberFaris, tile, 4)
 	elif iCiv == iTunis:
 		makeUnits(iPlayer, iBerberFaris, tile, 3)
+	elif iCiv == iVandals and not player(iPlayer).isHuman():
+		landingPlot = (59,46)
+		makeUnits(iPlayer, iArcher, landingPlot, 4)
+		makeUnits(iPlayer, iSavaran, landingPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+		makeUnits(iPlayer, iAxeman, landingPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY).promotion(infos.type("PROMOTION_MEDIC1"))
+		makeUnits(iPlayer, iSwordsman, landingPlot, 5, UnitAITypes.UNITAI_ATTACK_CITY).promotion(infos.type("PROMOTION_CITY_RAIDER1"))
+		makeUnits(iPlayer, iCatapult, landingPlot, 4, UnitAITypes.UNITAI_ATTACK_CITY).promotion(infos.type("PROMOTION_CITY_RAIDER1"), infos.type("PROMOTION_ACCURACY"))
 
 dSpecificAdditionalUnits = CivDict({
 	iEthiopia: {

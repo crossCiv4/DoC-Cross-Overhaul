@@ -3394,6 +3394,15 @@
 	</TEXT>
 
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_VANDAL_SHIPYARD</Tag>
+		<English>Shipyard</English>
+		<French>Shipyard</French>
+		<German>Shipyard</German>
+		<Italian>Shipyard</Italian>
+		<Spanish>Shipyard</Spanish>
+	</TEXT>
+
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_</Tag>
 		<English></English>
 		<French></French>

@@ -97,6 +97,7 @@ dLanguages = CivDict({
 	iNigeria: [iLangMande, iLangArabic],
 	iZulu: [iLangMande, iLangEnglish],
 	iTunis: [iLangArabic, iLangEgyptianArabic, iLangMande],
+	iVandals: [iLangByzantine, iLangGerman, iLangLatin],
 
 }, [])
 

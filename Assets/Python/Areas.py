@@ -83,6 +83,7 @@ iNigeria:		(71, 36), # Njimi
 iZulu:			(79, 17), # Great Zimbabwe
 iSaxons:		(66, 65), # Hamburg (Bornhoved)
 iTunis :		(67, 48), # Tunis (Carthage)
+iVandals :		(56, 48), # Cadiz
 })
 
 dPeriodCapitals = {
@@ -107,6 +108,7 @@ iOttomans :	(79, 55),	# Istanbul
 iEngland :	(58, 64),	# London
 iSaxons :	(58, 64),	# London
 iGhorids:	(105, 46),	# Delhi
+iVandals :	(67, 48),	# Carthage
 })
 
 # new capital locations on respawn
@@ -181,6 +183,7 @@ iTimurids :		((96, 52),	(102, 58)),
 iVietnam :		((120, 41), (129, 48)),
 iSaxons:		((65, 64),	(67, 68)),
 iEngland:		((57, 61),	(61, 63)),
+iVandals:		((55, 47),	(58, 49)),
 })
 
 dBirthAreaExceptions = CivDict({
@@ -310,6 +313,7 @@ iKhazars:		((86, 57),  (92, 61)),
 iNigeria:		((70, 32),  (72, 37)),
 iZulu:			((78, 13),  (81, 19)),
 iTunis:			((66, 45),  (70, 48)),
+iVandals:		((66, 46),	(67, 48)),
 })
 
 dCoreAreaExceptions = CivDict({

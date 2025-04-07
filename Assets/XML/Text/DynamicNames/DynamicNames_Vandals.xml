@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_DESC</Tag>
+		<English>The Vandals</English>
+		<French>Les Vandales</French>
+		<German>The Vandals</German>
+		<Italian>The Vandals</Italian>
+		<Spanish>The Vandals</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_PEOPLES</Tag>
+		<English>Vandal Peoples</English>
+		<French>Vandal Peoples</French>
+		<German>Vandal Peoples</German>
+		<Italian>Vandal Peoples</Italian>
+		<Spanish>Vandal Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_ADJECTIVE</Tag>
+		<English>Vandal</English>
+		<French>Vandal</French>
+		<German>Vandal</German>
+		<Italian>Vandal</Italian>
+		<Spanish>Vandal</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_SHORT_DESC</Tag>
+		<English>Vandals</English>
+		<French>Vandals</French>
+		<German>Vandals</German>
+		<Italian>Vandals</Italian>
+		<Spanish>Vandals</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_DEFAULT</Tag>
+		<English>Kingdom of the Vandals and Alans</English>
+		<French>Kingdom of the Vandals and Alans</French>
+		<German>Kingdom of the Vandals and Alans</German>
+		<Italian>Kingdom of the Vandals and Alans</Italian>
+		<Spanish>Kingdom of the Vandals and Alans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_REPUBLIC</Tag>
+		<English>Republic of the Vandals and Alans</English>
+		<French>Republic of the Vandals and Alans</French>
+		<German>Republic of the Vandals and Alans</German>
+		<Italian>Republic of the Vandals and Alans</Italian>
+		<Spanish>Republic of the Vandals and Alans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_COMMUNIST</Tag>
+		<English>People's Republic of the Vandals and Alans</English>
+		<French>People's Republic of the Vandals and Alans</French>
+		<German>People's Republic of the Vandals and Alans</German>
+		<Italian>People's Republic of the Vandals and Alans</Italian>
+		<Spanish>People's Republic of the Vandals and Alans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ROMAN_VANDALS</Tag>
+		<English>Vandal Foederati</English>
+		<French>Vandal Foederati</French>
+		<German>Vandal Foederati</German>
+		<Italian>Vandal Foederati</Italian>
+		<Spanish>Vandal Foederati</Spanish>
+	</TEXT>
+</Civ4GameText>

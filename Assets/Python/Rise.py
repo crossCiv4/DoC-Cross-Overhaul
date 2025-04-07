@@ -58,6 +58,7 @@ lIndependenceCivs = [
 	iGhorids,
 	iByzantium,
 	iHolyRome,
+	iVandals,
 ]
 
 lDynamicReligionCivs = [
@@ -833,6 +834,11 @@ class Birth(object):
 					if len(cities.region(rMaghreb).owner(iBlockerCiv)) != 0:
 						return False
 		
+		# Fatimids, Tunis require Vandals not to hold Carthage
+		if self.iCiv == iMamluks or self.iCiv == iTunis:
+			if player(iVandals).isExisting() and civ(plot(tCarthage)) == iVandals:
+				return False
+
 		# Mexico requires Aztecs to be dead
 		if self.iCiv == iMexico:
 			if player(iAztecs).isExisting():
@@ -885,8 +891,12 @@ class Birth(object):
 		if not self.isHuman():
 			self.player.setAlive(True, True)
 		
-		self.area = plots.birth(self.iPlayer) + plots.core(self.iPlayer)
-		self.area = self.area.unique()
+		# certain civs don't spawn in their core, and so they shouldn't purge the culture there on birth
+		if self.iCiv == iEngland or self.iCiv == iVandals:
+			self.area = plots.birth(self.iPlayer)
+		else:
+			self.area = plots.birth(self.iPlayer) + plots.core(self.iPlayer)
+			self.area = self.area.unique()
 
 	def prepare(self):
 		events.fireEvent("prepareBirth", self.iCiv)
@@ -1126,13 +1136,11 @@ class Birth(object):
 		team(iOwner).declareWar(self.player.getTeam(), False, WarPlanTypes.WARPLAN_ATTACKED_RECENT)
 	
 	def flippedArea(self):
-		if self.iCiv == iEngland and not self.isHuman():
-			area = plots.birth(self.iPlayer) + plots.region(rBritain).where(lambda p: not p.isOwned() or is_minor(p.getOwner()))
-			return area.unique()
-		
 		if self.iCiv == iRussia and (player(iRussia).isHuman() or player(iRus).isHuman()):
 			return plots.birth(self.iPlayer).without(plots.rectangle(tNovgorod))
-	
+		elif self.iCiv == iVandals or self.iCiv == iEngland:
+			return plots.birth(self.iPlayer)
+
 		return self.isIndependence() and self.area or plots.birth(self.iPlayer)
 	
 	def flip(self):

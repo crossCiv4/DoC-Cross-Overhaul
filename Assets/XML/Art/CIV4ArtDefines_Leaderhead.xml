@@ -1294,5 +1294,13 @@
 			<NoShaderNIF>Art/Leaderheads/alfred/brennus_noshader.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/alfred/brennus_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_GAISERIC</Type>
+			<Button>Art/Leaderheads/Gaiseric/Gaiseric.dds</Button>
+			<NIF>Art/Leaderheads/Gaiseric/Gilgamesh.nif</NIF>
+			<KFM>Art/Leaderheads/Gaiseric/Gilgamesh.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Gaiseric/Gilgamesh_NONSHADER.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Gaiseric/Gilgamesh_Backgrnd.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

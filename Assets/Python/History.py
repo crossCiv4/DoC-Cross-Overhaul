@@ -20,6 +20,7 @@ dRelocatedCapitals = CivDict({
 	iTimurids: tDelhi,
 	iEngland: tLondon,
 	iSaxons: tLondon,
+	iVandals: tCarthage,
 })
 
 dCapitalInfrastructure = CivDict({
@@ -113,15 +114,8 @@ def createNorseTemple(city):
 @handler("cityBuilt")
 def createCarthaginianDefenses(city):
 	if at(city, tCarthage) and civ(city) == iPhoenicia and not player(city).isHuman():		
-		giveEarlyColonists(iPhoenicia, tCarthage)
-		
 		if player(iRome).isHuman():
 			city.setHasRealBuilding(iWalls, True)
-			
-			makeUnits(iPhoenicia, iArcher, tCarthage, 2, UnitAITypes.UNITAI_CITY_DEFENSE)
-			makeUnits(iPhoenicia, iNumidianCavalry, tCarthage, 3)
-			makeUnits(iPhoenicia, iWarElephant, tCarthage, 2, UnitAITypes.UNITAI_CITY_COUNTER)
-
 
 @handler("cityBuilt")
 def createColonialWorker(city):
@@ -187,14 +181,22 @@ def checkEarlyColonists():
 		offset = turns(data.iSeed % 3)
 		# the foundation of Carthage
 		if year() == year(-800) - offset:
-			# even the player gets this event!
 			pPlayer = player(iPhoenicia)
 			if pPlayer.isExisting():
 				message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
-				makeUnit(iPhoenicia, iSettler, tCarthage)
+
+				if not pPlayer.isHuman():
+					makeUnit(iPhoenicia, iSettler, tGades)
+					makeUnits(iPhoenicia, iSacredBand, tGades, 2)
+					makeUnits(iPhoenicia, iNumidianCavalry, tGades, 2)
+					makeUnits(iPhoenicia, iWorker, tGades, 2, UnitAITypes.UNITAI_WORKER)
+
+				# even the player gets the Carthage part of this event!
 				makeUnits(iPhoenicia, iSacredBand, tCarthage, 3)
 				makeUnits(iPhoenicia, iWorker, tCarthage, 2, UnitAITypes.UNITAI_WORKER)
 				makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
+				makeUnits(iPhoenicia, iNumidianCavalry, tCarthage, 2)
+
 		elif year() == year(-825) - offset:
 			giveEarlyColonists(iGreece)
 		elif year() == year(-800) - offset:
