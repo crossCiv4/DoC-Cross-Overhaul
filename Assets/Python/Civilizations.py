@@ -1153,6 +1153,7 @@ dStartingUnits = CivDict({
 		iEscort: 1,
 		iCounter: 2,
 		iAttack: 2,
+		iDefend: 1,
 	},
 	iGhorids: {
 		iSettle: 1,
@@ -1489,6 +1490,14 @@ dExtraAIUnits = CivDict({
 	iPoland: {
 		iCounter: 2,
 	},
+	iMorocco: {
+		iWork: 1,
+		iEscort: 1,
+		iCounter: 2,
+		iAssaultSea: 2,
+		iDefend: 1,
+		iWorkerSea: 1,
+	},
 	iMongols: {
 		iDefend: 3,
 		iAttack: 3,
@@ -1816,7 +1825,7 @@ def createSpecificUnits(iPlayer, tile):
 	elif iCiv == iMorocco:
 		makeUnits(iPlayer, iCamelLancer, tile, 5)
 		if not player(iPlayer).isHuman():
-			makeUnits(iPlayer, iCamelLancer, tile, 2)
+			makeUnits(iPlayer, iCamelLancer, tile, 5)
 	elif iCiv == iVandals and not player(iPlayer).isHuman():
 		landingPlot = (59,46)
 		makeUnits(iPlayer, iArcher, landingPlot, 4)

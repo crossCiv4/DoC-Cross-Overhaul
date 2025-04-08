@@ -828,16 +828,14 @@ class Birth(object):
 		# Moors & Fatimids cannot spawn if Arabia has never conquered one of the cities of the Maghreb
 		# OR Carthage, Romans and Byzantines don't hold any cities in the Maghreb
 		# if autoplay, spawn them anyway, as not having them around does more damage to the timeline
-		if self.iCiv == iMoors or self.iCiv == iMamluks:
-			if not autoplay() and cities.regions(rMaghreb).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()]):
-				for iBlockerCiv in [iPhoenicia, iRome, iByzantium]:
+		if self.iCiv in [iMoors, iMamluks, iTunis, iMorocco]:
+			if not autoplay() and cities.regions(rMaghreb).none(lambda city: 
+					iArabia in [city.getCivilizationType(), city.getPreviousCiv()] or
+					iMoors in [city.getCivilizationType(), city.getPreviousCiv()] or
+					iTunis in [city.getCivilizationType(), city.getPreviousCiv()]):
+				for iBlockerCiv in [iPhoenicia, iRome, iByzantium, iVandals]:
 					if len(cities.region(rMaghreb).owner(iBlockerCiv)) != 0:
 						return False
-		
-		# Fatimids, Tunis require Vandals not to hold Carthage
-		if self.iCiv == iMamluks or self.iCiv == iTunis:
-			if player(iVandals).isExisting() and civ(plot(tCarthage)) == iVandals:
-				return False
 
 		# Mexico requires Aztecs to be dead
 		if self.iCiv == iMexico:
