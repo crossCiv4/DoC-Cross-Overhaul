@@ -620,8 +620,11 @@ class Birth(object):
 			iRevealRange = 15
 			region_plots = plots.all().land().where(lambda p: p.getRegionGroup() == plot_(self.location).getRegionGroup())
 			# pre-medieval colonizer civs get a buff to the range at which cities are revealed
-			if self.iCiv == iPhoenicia or self.iCiv == iGreece:
+			# and see plots on all continents
+			if self.iCiv in [iPhoenicia, iGreece]:
 				iRevealRange = 50
+				region_plots = plots.all().land()
+
 			revealed += region_plots.where(lambda p: p.getSettlerValue(self.iCiv) >= 10).where(lambda p: distance(self.location, p) <= iRevealRange).expand(2)
 			revealed += region_plots.where(lambda p: p.getExpansion() == self.iPlayer).expand(1)
 		
