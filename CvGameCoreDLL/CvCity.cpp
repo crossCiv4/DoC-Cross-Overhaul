@@ -18300,7 +18300,7 @@ bool CvCity::canSlaveJoin() const
 
 	// Cross: colonialism civic only allows slaves in the colonies
 	// whereas "slavery" civic allows slavery anywhere
-	if (GET_PLAYER(getOwnerINLINE()).isColonialSlavery() && !isColony()) return false;
+	if (GET_PLAYER(getOwnerINLINE()).isColonialSlavery() && !GET_PLAYER(getOwnerINLINE()).isSlavery() && !isColony()) return false;
 
 	int iNumSlaves = getFreeSpecialistCount(SPECIALIST_SLAVE);
 	return (2 * iNumSlaves < getPopulation());
