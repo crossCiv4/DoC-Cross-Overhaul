@@ -1631,8 +1631,9 @@ def specificAdjective(iPlayer):
 				return "TXT_KEY_CIV_TURKS_SHAYBANID"
 			
 			return "TXT_KEY_CIV_TURKS_UZBEK"
-		if capital in plots.regions(rCaucasus, rPonticSteppe, rCrimea):
-			return "TXT_KEY_CIV_TURKS_KHAZAR"
+
+		if iReligion == iIslam and not tPlayer.isHasTech(iNobility):
+			return "TXT_KEY_CIV_TURKS_SAMANID"
 		
 		if isControlled(iPlayer, plots.regions(rPersia, rKhorasan)):
 			return "TXT_KEY_CIV_TURKS_SELJUK"
