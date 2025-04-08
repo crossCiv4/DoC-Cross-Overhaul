@@ -1302,5 +1302,13 @@
 			<NoShaderNIF>Art/Leaderheads/Gaiseric/Gilgamesh_NONSHADER.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Gaiseric/Gilgamesh_Backgrnd.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MOHAMMED_V</Type>
+			<Button>Art/Leaderheads/Hassan/Hassan.dds</Button>
+			<NIF>Art/Leaderheads/Hassan/napoleon.nif</NIF>
+			<KFM>Art/Leaderheads/Hassan/napoleon.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Hassan/napoleon_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Hassan/napoleon_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

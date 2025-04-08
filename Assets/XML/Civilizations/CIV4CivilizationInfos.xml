@@ -5127,7 +5127,7 @@
 			<ArtDefineTag>ART_DEF_CIVILIZATION_MOORS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EASTERN</UnitArtStyleType>
-			<PaganReligion>PAGAN_RELIGION_ANUNNAKI</PaganReligion>
+			<PaganReligion>PAGAN_RELIGION_BAALISM</PaganReligion>
 			<Impact>IMPACT_SIGNIFICANT</Impact>
 			<Identifier>MOO</Identifier>
 			<StartingYear>720</StartingYear>
@@ -5190,7 +5190,7 @@
 				</Building>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
-					<BuildingType>BUILDING_HUBAL_TEMPLE</BuildingType>
+					<BuildingType>BUILDING_BAALIST_TEMPLE</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
@@ -5230,12 +5230,126 @@
 					<LeaderName>LEADER_RAHMAN</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_ARABIA</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_ARABIA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_ARABIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_MOROCCO</Type>
+			<Description>TXT_KEY_CIV_MOROCCO_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_MOROCCO_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_MOROCCO_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_MOROCCO_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_RED_GREEN</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_MOROCCO</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EASTERN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_BAALISM</PaganReligion>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
+			<Identifier>MOR</Identifier>
+			<StartingYear>1070</StartingYear>
+			<LoadingTimes>
+				<LoadingTime>6</LoadingTime>
+				<LoadingTime>1</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+			</LoadingTimes>
+			<Rating>
+				<Trade>2</Trade>
+				<Production>2</Production>
+				<Culture>2</Culture>
+				<Growth>3</Growth>
+				<Start>3</Start>
+			</Rating>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Merrakesh</City>	
+				<!-- Mauretania -->
+				<City>Tanjah</City>				<!-- Tingis/Tangier -->
+				<City>Sabta</City>				<!-- Abyla/Septem/Ceuta -->
+				<City>Tamuda</City>				<!-- Tetouan -->
+				<City>Banasa</City>
+				<City>Walili</City>				<!-- Volubilis -->
+				<!-- Numidia -->
+				<City>Rusicada</City>			<!-- Skikda -->
+				<City>Timgad</City>				<!-- Batna -->
+				<City>Thugga</City>				<!-- Dougga -->
+				<!-- Interior -->
+				<City>Ghadames</City>
+				<City>Sijilmasa</City>
+				<City>Tamanrasset</City>
+				<City>Abalessa</City>
+				<!-- Arab Conquest -->
+				<City>Kairouan</City>
+				<!-- Morocco -->
+				<City>Anfa</City>				<!-- Casablanca -->
+				<City>Fez</City>
+				<City>Meknes</City>
+				<City>Aghmat</City>
+				<!-- Almoravid -->
+				<City>Rabat</City>
+				<City>Tagrart</City>			<!-- Tlemsen/Timinsan -->
+				<!-- Almohad -->
+				<City>Algiers</City>
+				<City>Uhran</City>				<!-- Oran -->
+				<City>Mahdia</City>
+				<!-- Later Cities -->
+				<City>Ghardaia</City>
+				<City>Tindouf</City>
+				<City>Oujda</City>
+				<City>Safi</City>
+				<City>Agadir</City>
+			</Cities>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_STAR_FORT</BuildingClassType>
+					<BuildingType>BUILDING_MOROCCAN_KASBAH</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_BAALIST_TEMPLE</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_CAMEL_RIDER</UnitClassType>
+					<UnitType>UNIT_CAMEL_LANCER</UnitType>
+				</Unit>
+			</Units>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_CHIEFDOM</CivicType>
+				<CivicType>CIVIC_PERSONALISM</CivicType>
+				<CivicType>CIVIC_TRADITIONALISM</CivicType>
+				<CivicType>CIVIC_RECIPROCITY</CivicType>
+				<CivicType>CIVIC_ANIMISM</CivicType>
+				<CivicType>CIVIC_KINSHIP</CivicType>
+			</InitialCivics>
+			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_YAQUB</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_MOHAMMED_V</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_ARABIA</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_MOORS</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_ARABIA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_ARABIA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>

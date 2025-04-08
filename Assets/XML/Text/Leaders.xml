@@ -1561,6 +1561,15 @@
 	</TEXT>
 
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_MOHAMMED_V</Tag>
+		<English>Mohammed V</English>
+		<French>Mohammed V</French>
+		<German>Mohammed V</German>
+		<Italian>Mohammed V</Italian>
+		<Spanish>Mohammed V</Spanish>
+	</TEXT>
+
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>
 		<French></French>

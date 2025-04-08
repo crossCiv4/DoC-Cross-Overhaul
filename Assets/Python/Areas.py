@@ -72,18 +72,19 @@ iBrazil :		(44, 20), # Rio de Janeiro
 iCanada :		(31, 61), # Montreal
 iBulgaria:      (77, 56), # Tarnovo
 iMamluks :		(67, 48), # Tunis
-iMacedon:		(75, 54), # Pella
-iIroquois:		(30, 59), # "Mohawk"
-iArmenia:		(89, 53), # Dvin
-iParthia:		(94, 51), # Hekatompylos / Komis
-iMinoans:		(78, 48), # Knossos
-iGhorids:		(99, 49), # Ghazni
-iKhazars:		(91, 60), # Atil / Itil
-iNigeria:		(71, 36), # Njimi
-iZulu:			(79, 17), # Great Zimbabwe
-iSaxons:		(66, 65), # Hamburg (Bornhoved)
+iMacedon :		(75, 54), # Pella
+iIroquois :		(30, 59), # "Mohawk"
+iArmenia :		(89, 53), # Dvin
+iParthia :		(94, 51), # Hekatompylos / Komis
+iMinoans :		(78, 48), # Knossos
+iGhorids :		(99, 49), # Ghazni
+iKhazars :		(91, 60), # Atil / Itil
+iNigeria :		(71, 36), # Njimi
+iZulu :			(79, 17), # Great Zimbabwe
+iSaxons :		(66, 65), # Hamburg (Bornhoved)
 iTunis :		(67, 48), # Tunis (Carthage)
 iVandals :		(56, 48), # Cadiz
+iMorocco :		(56, 48), # Cadiz
 })
 
 dPeriodCapitals = {
@@ -120,7 +121,6 @@ iCelts :	(54, 65),	# Dublin
 iEthiopia :	(84, 32),	# Addis Ababa
 iJapan :	(140, 54),	# Tokyo
 iTurks : 	(97, 49),	# Herat
-iMoors :	(57, 44),	# Marrakesh
 iHolyRome :	(72, 59),	# Vienna
 iInca :		(28, 25),	# Lima
 iItaly :	(68, 53),	# Rome
@@ -130,6 +130,7 @@ iMamluks :	(79, 43),	# Cairo
 iKhazars :	(86, 59),	# Azov
 iEngland :	(58, 64),	# London
 iSaxons :	(58, 64),	# London
+iMorocco :	(57, 44),	# Merrakesh
 })
 
 ### Birth Area ###
@@ -181,9 +182,10 @@ iMamluks :		((63, 43),  (70, 48)), # Tunisia
 iGhorids :		((97, 46),  (100, 51)),
 iTimurids :		((96, 52),	(102, 58)),
 iVietnam :		((120, 41), (129, 48)),
-iSaxons:		((65, 64),	(67, 68)),
-iEngland:		((57, 61),	(61, 63)),
-iVandals:		((55, 47),	(58, 49)),
+iSaxons :		((65, 64),	(67, 68)),
+iEngland :		((57, 61),	(61, 63)),
+iVandals :		((55, 47),	(58, 49)),
+iMorocco :		((56, 42),  (59, 49)),
 })
 
 dBirthAreaExceptions = CivDict({
@@ -219,6 +221,7 @@ iCanada :		[(6, 68), (7, 65), (7, 66), (7, 67), (7, 68), (8, 59), (8, 60), (9, 5
 iGreece :		[(120, 40)],
 iVietnam:		[(120, 45), (121, 45), (122, 45), (123, 45), (120, 46), (121, 46), (122, 46), (123, 46), (120, 47), (121, 47), (122, 47), (123, 47), (120, 48), (121, 48), (122, 48), (123, 48)],
 iPortugal:		[(54, 48), (55, 48)],
+iMorocco :		[(57, 48), (57, 49), (58, 48), (58, 49), (59, 48), (59, 49)], 
 }, [])
 
 dExtendedBirthArea = CivDict({
@@ -313,7 +316,8 @@ iKhazars:		((86, 57),  (92, 61)),
 iNigeria:		((70, 32),  (72, 37)),
 iZulu:			((78, 13),  (81, 19)),
 iTunis:			((66, 45),  (70, 48)),
-iVandals:		((66, 46),	(67, 48)),
+iVandals:		((66, 46),  (67, 48)),
+iMorocco:       ((56, 43),  (59, 46)),
 })
 
 dCoreAreaExceptions = CivDict({
@@ -363,7 +367,6 @@ iPeriodByzantineConstantinople :	((75, 50),	(79, 55)),
 iPeriodMeiji : 						((134, 49),	(140, 59)),
 iPeriodSeljuks : 					((92, 48),	(98, 53)),
 iPeriodSaudi :						((84, 38),	(90, 43)),
-iPeriodMorocco : 					((56, 43),	(60, 47)),
 iPeriodSpain : 						((54, 48),	(59, 54)),
 iPeriodAustria : 					((69, 58),	(72, 61)),
 iPeriodLateInca :					((28, 20),	(34, 25)),

@@ -19,7 +19,6 @@ dPeriods1700AD = {
 	iDravidia : iPeriodVijayanagara,
 	iNorse : iPeriodDenmark,
 	iTurks : iPeriodUzbeks,
-	iMoors : iPeriodMorocco,
 	iSpain : iPeriodSpain,
 	iHolyRome : iPeriodAustria,
 	iEngland : iPeriodUnitedKingdom,
@@ -49,7 +48,6 @@ dPeriodNames = {
 	iPeriodNorway:					"Norway",
 	iPeriodUzbeks:					"Uzbeks",
 	iPeriodSaudi:					"Saudi",
-	iPeriodMorocco:					"Morocco",
 	iPeriodSpain:					"Spain",
 	iPeriodAustria:					"Austria",
 	iPeriodUnitedKingdom:			"United_Kingdom",
@@ -185,10 +183,6 @@ def onCityAcquired(iOwner, iPlayer, city, bConquest):
 	if iOwnerCiv == iCelts or city.getPreviousCiv() == iCelts:
 		if player(iCelts).getNumCities() > 0 and cities.core(iCelts).owner(iCelts).count() == 0:
 			setPeriod(iCelts, iPeriodInsularCelts)
-	
-	if iOwnerCiv == iMoors:
-		if not cities.owner(iMoors).region(rIberia):
-			setPeriod(iMoors, iPeriodMorocco)
 
 	
 @handler("firstCity")
@@ -229,10 +223,6 @@ def onCapitalMoved(city):
 	elif iOwnerCiv == iNorse:
 		if player(iOwner).getCurrentEra() >= iRenaissance:
 			setPeriod(iNorse, getNorsePeriod(iOwner))
-	
-	elif iOwnerCiv == iMoors:
-		if player(iOwner).getCurrentEra() >= iRenaissance and city.getRegionID() != rIberia:
-			setPeriod(iMoors, iPeriodMorocco)
 
 
 @handler("techAcquired")
@@ -247,16 +237,6 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 	if iCiv == iNorse:
 		if iEra >= iRenaissance:
 			setPeriod(iNorse, getNorsePeriod(iPlayer))
-	
-	if iCiv == iMoors:
-		if iEra >= iRenaissance:
-			if player(iMoors).getPeriod() == -1 and player(iPlayer).getCapitalCity().getRegionID() != rIberia :
-				setPeriod(iMoors, iPeriodMorocco)
-
-	if iCiv == iSpain:
-		if iEra >= iRenaissance:
-			if player(iMoors).isExisting() and player(iMoors).getPeriod() == -1 and cities.owner(iMoors).region(rIberia).none():
-				setPeriod(iMoors, iPeriodMorocco)
 	
 	if iCiv == iJapan:
 		if iEra == iIndustrial:

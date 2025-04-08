@@ -195,3 +195,9 @@ def VandalPower(iOwner, iPlayer, city, bConquest):
 				makeUnits(iVandals, iPrivateer, city, 1, UnitAITypes.UNITAI_PIRATE_SEA)
 			else:
 				makeUnits(iVandals, iVandalPirate, city, 1, UnitAITypes.UNITAI_PIRATE_SEA)
+
+#Free camel lancer with each conquered city
+@handler("cityAcquired")
+def VandalPower(iOwner, iPlayer, city, bConquest):
+	if civ(iPlayer) == iMorocco and bConquest and player(iPlayer).getCurrentEra() < iRenaissance:
+		makeUnits(iMorocco, iCamelLancer, city, 1, UnitAITypes.UNITAI_ATTACK_CITY)

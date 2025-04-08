@@ -476,6 +476,32 @@ dForeignNames = deepdict({
 		iSpain : "TXT_KEY_CIV_ARABIAN_NAME_SPAIN",
 		iPortugal : "TXT_KEY_CIV_ARABIAN_NAME_PORTUGAL",
 	},
+	iMorocco : {
+		iEgypt : "TXT_KEY_CIV_ARABIAN_NAME_EGYPT",
+		iBabylonia : "TXT_KEY_CIV_ARABIAN_NAME_BABYLONIA",
+		iPersia : "TXT_KEY_CIV_ARABIAN_NAME_PERSIA",
+		iPhoenicia : "TXT_KEY_CIV_ARABIAN_NAME_CARTHAGE",
+		iRome : "TXT_KEY_CIV_ARABIAN_NAME_ROME",
+		iEthiopia : "TXT_KEY_CIV_ARABIAN_NAME_ETHIOPIA",
+		iByzantium : "TXT_KEY_CIV_ARABIAN_NAME_BYZANTIUM",
+		iArabia : "TXT_KEY_CIV_ARABIAN_NAME_ARABIA",
+		iMoors : "TXT_KEY_CIV_ARABIAN_NAME_MOORS",
+		iSpain : "TXT_KEY_CIV_ARABIAN_NAME_SPAIN",
+		iPortugal : "TXT_KEY_CIV_ARABIAN_NAME_PORTUGAL",
+	},
+	iTunis : {
+		iEgypt : "TXT_KEY_CIV_ARABIAN_NAME_EGYPT",
+		iBabylonia : "TXT_KEY_CIV_ARABIAN_NAME_BABYLONIA",
+		iPersia : "TXT_KEY_CIV_ARABIAN_NAME_PERSIA",
+		iPhoenicia : "TXT_KEY_CIV_ARABIAN_NAME_CARTHAGE",
+		iRome : "TXT_KEY_CIV_ARABIAN_NAME_ROME",
+		iEthiopia : "TXT_KEY_CIV_ARABIAN_NAME_ETHIOPIA",
+		iByzantium : "TXT_KEY_CIV_ARABIAN_NAME_BYZANTIUM",
+		iArabia : "TXT_KEY_CIV_ARABIAN_NAME_ARABIA",
+		iMoors : "TXT_KEY_CIV_ARABIAN_NAME_MOORS",
+		iSpain : "TXT_KEY_CIV_ARABIAN_NAME_SPAIN",
+		iPortugal : "TXT_KEY_CIV_ARABIAN_NAME_PORTUGAL",
+	},
 	iSpain : {
 		iKhmer : "TXT_KEY_CIV_SPANISH_NAME_KHMER",
 		iAztecs : "TXT_KEY_CIV_SPANISH_NAME_AZTECS",
@@ -504,10 +530,10 @@ dForeignNames = deepdict({
 	},
 })
 
-lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis]
+lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis, iMorocco]
 lRepublicAdj = [iBabylonia, iRome, iMoors, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons]
 
-lSocialistRepublicOf = [iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis]
+lSocialistRepublicOf = [iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis, iMorocco]
 lSocialistRepublicAdj = [iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina]
 
 lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria]
@@ -651,6 +677,7 @@ dStartingLeaders = [
 	iZulu : iShaka,
 	iTunis: iAbuFaris,
 	iVandals: iGaiseric,
+	iMorocco: iYaqub,
 },
 # 600 AD
 {
@@ -798,11 +825,6 @@ def onPeriodChange(iPlayer, iPeriod):
 	
 	if iCiv == iTurks:
 		if iPeriod == iPeriodUzbeks:
-			checkNameChange(iPlayer)
-			checkAdjectiveChange(iPlayer)
-	
-	if iCiv == iMoors:
-		if iPeriod == iPeriodMorocco:
 			checkNameChange(iPlayer)
 			checkAdjectiveChange(iPlayer)
 			
@@ -1407,6 +1429,18 @@ def specificAdjective(iPlayer):
 		if bResurrected:
 			return "TXT_KEY_CIV_TATARS_ADJECTIVE"
 
+	elif iCiv == iMorocco:
+		if year() < year(dBirth[iPortugal]):
+			return "TXT_KEY_CIV_MOROCCO_ALMORAVID"
+		elif year() < year(dBirth[iRussia]):
+			return "TXT_KEY_CIV_MOROCCO_ALMOHAD"
+		elif year() < year(dBirth[iIroquois]):
+			return "TXT_KEY_CIV_MOROCCO_MARINID"
+		elif year() < year(dBirth[iNetherlands]):
+			return "TXT_KEY_CIV_MOROCCO_WATTASID"
+		elif getColumn(iPlayer) < 12:
+			return "TXT_KEY_CIV_MOROCCO_SAADI"
+
 	elif iCiv == iIndia:
 		if bMonarchy and not bCityStates and (iEra >= iMedieval or bEmpire):
 			if iEra >= iRenaissance:
@@ -1651,7 +1685,7 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_MOORS_MOROCCAN"
 			
 	elif iCiv == iSpain:
-		if year() < year(dBirth[iMoors]) + 50:
+		if year() < year(dBirth[iMoors] + 50):
 			return "TXT_KEY_ADJECTIVE_VISIGOTHIC"
 
 		bSpain = not player(iMoors).isExisting() or not player(iMoors).getCapitalCity() in plots.region(rIberia)
@@ -1792,7 +1826,7 @@ def islamicTitle(iPlayer):
 		return
 
 	if iReligion == iIslam or iReligion == iShia:
-		if iCiv in [iSwahili, iAssyria, iMamluks, iArabia] or (iCiv == iGhorids and year() < year(dBirth[iMongols])):
+		if iCiv in [iSwahili, iAssyria, iMamluks, iArabia] or (iCiv == iGhorids and year() < year(dBirth[iMongols])) or (iCiv == iMorocco and getColumn(iPlayer) < 12):
 			if bTheocracy:
 				return "TXT_KEY_CALIPHATE_ADJECTIVE"
 			if bEmpire:
@@ -2616,8 +2650,8 @@ def leader(iPlayer):
 	elif iCiv == iTibet:
 		if year() >= year(1500): return iLobsangGyatso
 		
-	elif iCiv == iMoors:
-		if player(iPlayer).getNumCities() > 0 and not capital in plots.region(rIberia): return iYaqub
+	elif iCiv == iMorocco:
+		if iEra >= iIndustrial: return iMohammedV
 		
 	elif iCiv == iJava:
 		if iEra >= iGlobal: return iSuharto

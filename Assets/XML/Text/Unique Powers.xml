@@ -1353,4 +1353,21 @@
 		<Italian>Grants free pirate unit on city conquest</Italian>
 		<Spanish>Grants free pirate unit on city conquest</Spanish>
 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_MOR_TITLE</Tag>
+		<English>The Power of Counter Crusade:</English>
+		<French>The Power of Counter Crusade:</French>
+		<German>Die Macht der Counter Crusade:</German>
+		<Italian>The Power of Counter Crusade:</Italian>
+		<Spanish>The Power of Counter Crusade:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MOR</Tag>
+		<English>Grants free camel lancer on city conquest until the Renaissance</English>
+		<French>Grants free camel lancer on city conquest until the Renaissance</French>
+		<German>Grants free camel lancer on city conquest until the Renaissance</German>
+		<Italian>Grants free camel lancer on city conquest until the Renaissance</Italian>
+		<Spanish>Grants free camel lancer on city conquest until the Renaissance</Spanish>
+	</TEXT>
 </Civ4GameText>

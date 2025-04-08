@@ -635,11 +635,11 @@ dGoals = {
 		CitySpecialistCount(start(iTibet).named(LHASA), iSpecialistGreatProphet, 7, by=1700),
 	),
 	iMoors: (
-		All(
-			CityCount(plots.region(rMaghreb).named(MAGHREB), 4),
-			ConqueredCities(3, inside=plots.region(rIberia).named(IBERIA)),
-			ConqueredCities(2, inside=plots.rectangle(tWestAfrica).named(WEST_AFRICA)),
-			at=1200,
+		Control(
+			plots.region(rMaghreb).named(MAGHREB),
+			plots.region(rIberia).named(IBERIA),
+			subject=VASSALS,
+			by=909,
 		),
 		All(
 			Wonder(iMezquita),
@@ -657,6 +657,16 @@ dGoals = {
 			by=1650,
 		),
 		PiracyGold(3000, by=1750),
+	),
+	iMorocco: (
+		All(
+			CityCount(plots.region(rMaghreb).named(MAGHREB), 4),
+			ConqueredCities(3, inside=plots.region(rIberia).named(IBERIA)),
+			ConqueredCities(2, inside=plots.rectangle(tWestAfrica).named(WEST_AFRICA)),
+			by=1350,
+		),
+		DefeatedUnits(civs(iSpain, iPortugal, iFrance), 30),
+		ReligionSpreadPercent(iIslam, 30),
 	),
 	iVandals: (
 		All(
@@ -815,7 +825,7 @@ dGoals = {
 		All(
 			AreaNoStateReligion(plots.regions(rMaghreb, rEgypt, rLevant, rMesopotamia, rArabia, rYemenOman).named(ARAB_LANDS), iCatholicism),
 			AreaNoStateReligion(plots.regions(rMaghreb, rEgypt, rLevant, rMesopotamia, rArabia, rYemenOman).named(ARAB_LANDS), iOrthodoxy),
-			AllowOnly(plots.regions(rEgypt, rLevant, rMesopotamia, rArabia, rYemenOman).named(ARAB_LANDS), group(iCivGroupMiddleEast).named(MIDDLE_EASTERN)),
+			AllowOnly(plots.regions(rMaghreb, rEgypt, rLevant, rMesopotamia, rArabia, rYemenOman).named(ARAB_LANDS), group(iCivGroupMiddleEast).named(MIDDLE_EASTERN)),
 			at=1300,	
 		),
 		All(

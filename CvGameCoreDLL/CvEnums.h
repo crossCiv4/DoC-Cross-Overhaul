@@ -1227,6 +1227,7 @@ enum CivilizationTypes		// Exposed to Python
 	MINOANS,
 	MONGOLS,
 	MOORS,
+	MOROCCO,
 
 	NETHERLANDS,
 	NIGERIA,
@@ -3672,7 +3673,7 @@ enum PeriodTypes
 {
 	NO_PERIOD = -1,
 
-	PERIOD_LATE_INCA = 20,
+	PERIOD_LATE_INCA = 19,
 };
 
 // Leoreth

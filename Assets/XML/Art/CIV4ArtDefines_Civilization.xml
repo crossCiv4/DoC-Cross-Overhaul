@@ -498,5 +498,11 @@
 			<Path>Art/Interface/TeamColor/FlagDECAL_Vandals.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_MOROCCO</Type>
+			<Button>Art/Interface/Buttons/Civilizations/morocco.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Morocco.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
 	</CivilizationArtInfos>
 </Civ4ArtDefines>

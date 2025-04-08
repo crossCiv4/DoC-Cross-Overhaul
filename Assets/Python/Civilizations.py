@@ -568,6 +568,14 @@ lCivilizations = [
 		techs=techs.column(7).including(iDoctrine, iMachinery, iGuilds, iReligiousOrders)
 	),
 	Civilization(
+		iMorocco,
+		iGold=150,
+		iStateReligion=iIslam,
+		lEnemies=[iSpain, iMoors],
+		lCivics=[iDespotism, iSlavery, iMerchantTrade, iFanaticism, iVassalage, iHegemony],
+		techs=techs.column(7).including(iDoctrine, iMachinery, iGuilds, iReligiousOrders)
+	),
+	Civilization(
 		iPortugal,
 		iGold=200,
 		iAdvancedStartPoints=60,
@@ -1032,7 +1040,7 @@ dStartingUnits = CivDict({
 		iMissionary: 2,
 	},
 	iMoors: {
-		iSettle: 4,
+		iSettle: 3,
 		iWork: 1,
 		iDefend: 1,
 		iCounter: 2,
@@ -1134,6 +1142,15 @@ dStartingUnits = CivDict({
 		iSiege: 1,
 		iFerry: 2,
 		iEscort: 2,
+	},
+	iMorocco: {
+		iSettle: 2,
+		iWork: 1,
+		iSiege: 2,
+		iAssaultSea: 1,
+		iEscort: 1,
+		iCounter: 2,
+		iAttack: 2,
 	},
 	iGhorids: {
 		iSettle: 1,
@@ -1429,9 +1446,6 @@ dExtraAIUnits = CivDict({
 		iCounter: 1,
 		iDefend: 4,
 		iShock: 2,
-	},
-	iMoors: {
-		iSettle: 2,
 	},
 	iEngland: {
 		iShockCity: 2,
@@ -1755,6 +1769,7 @@ dAlwaysTrain = CivDict({
 	iBrazil: [iGrenadier],
 	iNigeria: [iHausaCavalry],
 	iZulu: [iImpi],
+	iMorocco: [iCamelLancer],
 }, [])
 
 dAIAlwaysTrain = CivDict({
@@ -1796,6 +1811,10 @@ def createSpecificUnits(iPlayer, tile):
 		makeUnits(iPlayer, iBerberFaris, tile, 4)
 	elif iCiv == iTunis:
 		makeUnits(iPlayer, iBerberFaris, tile, 3)
+	elif iCiv == iMorocco:
+		makeUnits(iPlayer, iCamelLancer, tile, 5)
+		if not player(iPlayer).isHuman():
+			makeUnits(iPlayer, iCamelLancer, tile, 2)
 	elif iCiv == iVandals and not player(iPlayer).isHuman():
 		landingPlot = (59,46)
 		makeUnits(iPlayer, iArcher, landingPlot, 4)
@@ -2220,6 +2239,12 @@ dTechPreferences = {
 		iGunpowder: 20,
 		iExploration: -50,
 	},
+	iMorocco : {
+		iExploration: -30,
+		iCartography: -30,
+		iAlchemy: 10,
+		iReplaceableParts: -10,
+	},
 	iTibet : {
 		iPhilosophy: 30,
 		iEngineering: 20,
@@ -2528,6 +2553,7 @@ dDefaultWonderPreferences = {
 	iAmerica: -12,
 	iSaxons: -15,
 	iTunis: -10,
+	iMorocco: -15,
 }
 
 dBuildingPreferences = {
@@ -2831,6 +2857,10 @@ dBuildingPreferences = {
 		iAlamut: 30,
 	},
 	iTunis: {
+		iHouseOfWisdom: 5,
+		# other wonder preferences...
+	},
+	iMorocco: {
 		iHouseOfWisdom: 5,
 		# other wonder preferences...
 	},

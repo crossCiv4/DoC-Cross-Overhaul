@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_DESC</Tag>
+		<English>The Moroccans</English>
+		<French>Les Marocains</French>
+		<German>The Moroccans</German>
+		<Italian>The Moroccans</Italian>
+		<Spanish>The Moroccans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_PEOPLES</Tag>
+		<English>Mauretanian Peoples</English>
+		<French>Mauretanian Peoples</French>
+		<German>Mauretanian Peoples</German>
+		<Italian>Mauretanian Peoples</Italian>
+		<Spanish>Mauretanian Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_ADJECTIVE</Tag>
+		<English>Moroccan</English>
+		<French>
+			<Text>marocain:marocaine:marocains:marocaines</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Moroccan</German>
+		<Italian>Moroccan</Italian>
+		<Spanish>Moroccan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_SHORT_DESC</Tag>
+		<English>Morocco</English>
+		<French>
+			<Text>Maroc</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Morocco</German>
+		<Italian>Morocco</Italian>
+		<Spanish>Morocco</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_DEFAULT</Tag>
+		<English>Mauretanian Kingdom</English>
+		<French>Mauretanian Kingdom</French>
+		<German>Mauretanian Kingdom</German>
+		<Italian>Mauretanian Kingdom</Italian>
+		<Spanish>Mauretanian Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_SHORT_DESC</Tag>
+		<English>Morocco</English>
+		<French>Morocco</French>
+		<German>Morocco</German>
+		<Italian>Morocco</Italian>
+		<Spanish>Morocco</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_ALMORAVID</Tag>
+		<English>Almoravid</English>
+		<French>Almoravid</French>
+		<German>Almoravid</German>
+		<Italian>Almoravid</Italian>
+		<Spanish>Almoravid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_ALMOHAD</Tag>
+		<English>Almohad</English>
+		<French>almohade</French>
+		<German>Almohad</German>
+		<Italian>Almohad</Italian>
+		<Spanish>Almohad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_MARINID</Tag>
+		<English>Marinid</English>
+		<French>Marinid</French>
+		<German>Marinid</German>
+		<Italian>Marinid</Italian>
+		<Spanish>Marinid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_WATTASID</Tag>
+		<English>Wattasid</English>
+		<French>Wattasid</French>
+		<German>Wattasid</German>
+		<Italian>Wattasid</Italian>
+		<Spanish>Wattasid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_SAADI</Tag>
+		<English>Saadi</English>
+		<French>Saadi</French>
+		<German>Saadi</German>
+		<Italian>Saadi</Italian>
+		<Spanish>Saadi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOROCCO_FASCIST</Tag>
+		<English>%s2 State</English>
+		<French>
+			<Text>&#201;tat %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>%s2 State</German>
+		<Italian>%s2 State</Italian>
+		<Spanish>%s2 State</Spanish>
+	</TEXT>
+</Civ4GameText>

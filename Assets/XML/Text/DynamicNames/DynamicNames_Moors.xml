@@ -3,15 +3,15 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOORS_DESC</Tag>
-		<English>The Moors</English>
+		<English>The Andalusians</English>
 		<French>
-			<Text>Les Maures</Text>
+			<Text>Les Andalusiens</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>The Moors</German>
-		<Italian>The Moors</Italian>
-		<Spanish>The Moors</Spanish>
+		<German>The Andalusians</German>
+		<Italian>The Andalusians</Italian>
+		<Spanish>The Andalusians</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOORS_PEOPLES</Tag>
@@ -24,30 +24,6 @@
 		<German>Andalusian Peoples</German>
 		<Italian>Andalusian Peoples</Italian>
 		<Spanish>Andalusian Peoples</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MOROCCO_SHORT_DESC</Tag>
-		<English>Morocco</English>
-		<French>
-			<Text>Maroc</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Morocco</German>
-		<Italian>Morocco</Italian>
-		<Spanish>Morocco</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MOROCCO_ADJECTIVE</Tag>
-		<English>Moroccan</English>
-		<French>
-			<Text>marocain:marocaine:marocains:marocaines</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>Moroccan</German>
-		<Italian>Moroccan</Italian>
-		<Spanish>Moroccan</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOORS_DEFAULT</Tag>
@@ -74,30 +50,6 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_MOROCCO_DEFAULT</Tag>
-		<English>Kingdom of %s1</English>
-		<French>
-			<Text>Royaume du %s1</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Kingdom of %s1</German>
-		<Italian>Kingdom of %s1</Italian>
-		<Spanish>Kingdom of %s1</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MOROCCO_FASCIST</Tag>
-		<English>%s2 State</English>
-		<French>
-			<Text>&#201;tat %s2</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>%s2 State</German>
-		<Italian>%s2 State</Italian>
-		<Spanish>%s2 State</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_MOORS_FASCIST</Tag>
 		<English>%s2 State</English>
 		<French>
@@ -122,64 +74,16 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_MOORS_ALMOHAD</Tag>
-		<English>Almohad</English>
-		<French>almohade</French>
-		<German>Almohad</German>
-		<Italian>Almohad</Italian>
-		<Spanish>Almohad</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MOORS_ALMORAVID</Tag>
-		<English>Almoravid</English>
-		<French>Almoravid</French>
-		<German>Almoravid</German>
-		<Italian>Almoravid</Italian>
-		<Spanish>Almoravid</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MOORS_SAADI</Tag>
-		<English>Saadi</English>
-		<French>Saadi</French>
-		<German>Saadi</German>
-		<Italian>Saadi</Italian>
-		<Spanish>Saadi</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MOORS_MOROCCO</Tag>
-		<English>Morocco</English>
-		<French>
-			<Text>Maroc</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Morocco</German>
-		<Italian>Morocco</Italian>
-		<Spanish>Morocco</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MOORS_MOROCCAN</Tag>
-		<English>Moroccan</English>
-		<French>
-			<Text>marocain:marocaine:marocains:marocaines</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>Moroccan</German>
-		<Italian>Moroccan</Italian>
-		<Spanish>Moroccan</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_MOORS_TAIFAS</Tag>
-		<English>Andalusian Taifas</English>
+		<English>%s2 Taifas</English>
 		<French>
-			<Text>Ta&#239;fas andalouses</Text>
+			<Text>Ta&#239;fas %s2</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Andalusian Taifas</German>
-		<Italian>Andalusian Taifas</Italian>
-		<Spanish>Andalusian Taifas</Spanish>
+		<German>%s2 Taifas</German>
+		<Italian>%s2 Taifas</Italian>
+		<Spanish>%s2 Taifas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOORISH_ARABIA</Tag>
@@ -231,15 +135,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOORS_ADJECTIVE</Tag>
-		<English>Moorish</English>
+		<English>Andalusian</English>
 		<French>
-			<Text>maure:maure:maures:maures</Text>
+			<Text>andalusien:andalusienne:andalusiens:andalusiennes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
-		<German>Moorish</German>
-		<Italian>Moorish</Italian>
-		<Spanish>Moorish</Spanish>
+		<German>Andalusian</German>
+		<Italian>Andalusian</Italian>
+		<Spanish>Andalusian</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOORS_SHORT_DESC</Tag>

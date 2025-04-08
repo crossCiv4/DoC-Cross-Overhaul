@@ -4906,6 +4906,34 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_STAR_FORT</BuildingClass>
+			<Type>BUILDING_MOROCCAN_KASBAH</Type>
+			<Description>TXT_KEY_BUILDING_MOROCCAN_KASBAH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MOROCCAN_KASBAH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MOROCCAN_KASBAH_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_MOROCCAN_KASBAH</ArtDefineTag>
+			<PrereqTech>TECH_URBAN_PLANNING</PrereqTech>
+			<bCenterInCity>1</bCenterInCity>
+			<iCost>135</iCost>
+			<iConquestProb>0</iConquestProb>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iMinAreaSize>-1</iMinAreaSize>
+			<iUnignorableBombardDefense>50</iUnignorableBombardDefense>
+			<iAsset>2</iAsset>
+			<iPower>2</iPower>
+			<iHappiness>1</iHappiness>
+			<FreePromotion>PROMOTION_DESERT_ADAPTATION</FreePromotion>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_CASTLE</ConstructSound>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+		</BuildingInfo>
+		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_ESTATE</BuildingClass>
 			<Type>BUILDING_ESTATE</Type>
 			<Description>TXT_KEY_BUILDING_ESTATE</Description>

@@ -3403,6 +3403,19 @@
 	</TEXT>
 
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MOROCCAN_KASBAH</Tag>
+		<English>Kasbah</English>
+		<French>
+			<Text>Kasbah</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kasbah</German>
+		<Italian>Kasbah</Italian>
+		<Spanish>Kasbah</Spanish>
+	</TEXT>
+
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_</Tag>
 		<English></English>
 		<French></French>

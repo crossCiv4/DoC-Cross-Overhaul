@@ -2846,6 +2846,14 @@
 		<Spanish>[COLOR_UNIT_TEXT]Camel Riders[COLOR_REVERT] don't receive defensive bonuses, can withdraw from combat, have a combat penalty in cities, have a bonus against [COLOR_UNIT_TEXT]Siege Units[COLOR_REVERT] and [COLOR_UNIT_TEXT]Heavy Cavalry Units[COLOR_REVERT] units, have a flank attack against [COLOR_UNIT_TEXT]Catapult[COLOR_REVERT] units, have a combat bonus in [COLOR_HIGHLIGHT_TEXT]Desert[COLOR_REVERT] and begin with the [COLOR_HIGHLIGHT_TEXT]Desert Adaptation[COLOR_REVERT] promotion.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_CAMEL_LANCER</Tag>
+		<English>Camel Lancer</English>
+		<French>Camel Lancer</French>
+		<German>Camel Lancer</German>
+		<Italian>Camel Lancer</Italian>
+		<Spanish>Camel Lancer</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_ARCHER</Tag>
 		<English>Camel Archer</English>
 		<French>

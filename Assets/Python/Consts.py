@@ -15,11 +15,11 @@ iNumPlayers = gc.getMAX_PLAYERS()
 # civilizations, not players
 # also increment iNUmCivs in DrawMaps.py (and add the civ identifier in the list as well)
 # also increment NUM_CIVS in CvRhyes.h
-iNumCivs = 82
+iNumCivs = 83
 (iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iByzantium, iCanada, 
 iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, iGhorids,
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, iKhazars,
-iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iMaya, iMexico, iMinoans, iMongols, iMoors, 
+iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iMaya, iMexico, iMinoans, iMongols, iMoors, iMorocco,
 iNetherlands, iNigeria, iNorse, iNubia, iOttomans, iParthia, iPersia, iPoland, iPolynesia, iPortugal, 
 iRome, iRus, iRussia, iSaxons, iShu, iSpain, iSwahili, iSweden, iThailand, iTibet, iTimurids, iToltecs, iTunis,
 iTurks, iVandals, iVietnam, iXia, iZulu, iIndependent, iIndependent2, iNative, iMinor, iBarbarian) = tuple(Civ(i) for i in range(iNumCivs))
@@ -80,6 +80,7 @@ lBirthOrder = [
 	iPoland,
     iEngland,
     iTunis,
+    iMorocco,
 	iPortugal,
 	iInca,
 	iItaly,
@@ -119,9 +120,9 @@ iNumCivGroups = 6
 dCivGroups = {
 iCivGroupEurope : [iGreece, iRome, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iItaly, iPoland, iPortugal, iSweden, iRussia, iNetherlands, iGermany, iBulgaria, iMacedon, iArmenia, iByzantium, iSaxons, iVandals],
 iCivGroupAsia : [iIndia, iChina, iChinaS, iShu, iXia, iHarappa, iPolynesia, iPersia, iJapan, iDravidia, iKushans, iKorea, iKhmer, iMalays, iJava, iTibet, iBurma, iVietnam, iMongols, iTimurids, iThailand, iRussia, iTurks, iGhorids, iKhazars],
-iCivGroupMiddleEast : [iEgypt, iBabylonia, iAssyria, iHittites, iPersia, iKushans, iArabia, iMoors, iOttomans, iPhoenicia, iTurks, iIran, iMamluks, iParthia, iTunis],
-iCivGroupMediterranean : [iEgypt, iGreece, iPhoenicia, iRome, iByzantium, iFrance, iArabia, iMoors, iSpain, iPortugal, iItaly, iOttomans, iMamluks, iMacedon, iMinoans, iTunis],
-iCivGroupAfrica : [iEgypt, iNubia, iPhoenicia, iEthiopia, iMali, iNigeria, iMoors, iSwahili, iCongo, iMamluks, iZulu, iTunis],
+iCivGroupMiddleEast : [iEgypt, iBabylonia, iAssyria, iHittites, iPersia, iKushans, iArabia, iMoors, iOttomans, iPhoenicia, iTurks, iIran, iMamluks, iParthia, iTunis, iMorocco],
+iCivGroupMediterranean : [iEgypt, iGreece, iPhoenicia, iRome, iByzantium, iFrance, iArabia, iMoors, iSpain, iPortugal, iItaly, iOttomans, iMamluks, iMacedon, iMinoans, iTunis, iMorocco],
+iCivGroupAfrica : [iEgypt, iNubia, iPhoenicia, iEthiopia, iMali, iNigeria, iMoors, iSwahili, iCongo, iMamluks, iZulu, iTunis, iMorocco],
 iCivGroupAmerica : [iMaya, iToltecs, iInca, iAztecs, iAmerica, iArgentina, iMexico, iColombia, iBrazil, iCanada, iIroquois],
 }
 
@@ -132,7 +133,7 @@ iNumTechGroups = 5
 
 dTechGroups = {
 iTechGroupWestern : [iRome, iGreece, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iPoland, iPortugal, iItaly, iSweden, iRussia, iNetherlands, iGermany, iAmerica, iArgentina, iMexico, iColombia, iBrazil, iCanada, iBulgaria, iMacedon, iSaxons],
-iTechGroupMiddleEast : [iEgypt, iBabylonia, iHarappa, iAssyria, iHittites, iIndia, iPhoenicia, iPersia, iKushans, iArabia, iMoors, iOttomans, iTimurids, iDravidia, iTurks, iIran, iMamluks, iArmenia, iParthia, iMinoans, iGhorids, iKhazars, iTunis, iVandals],
+iTechGroupMiddleEast : [iEgypt, iBabylonia, iHarappa, iAssyria, iHittites, iIndia, iPhoenicia, iPersia, iKushans, iArabia, iMoors, iOttomans, iTimurids, iDravidia, iTurks, iIran, iMamluks, iArmenia, iParthia, iMinoans, iGhorids, iKhazars, iTunis, iVandals, iMorocco],
 iTechGroupFarEast : [iChina, iChinaS, iShu, iXia, iKorea, iKhmer, iMalays, iJapan, iJava, iTibet, iBurma, iVietnam, iMongols, iThailand],
 iTechGroupNativeAmerica : [iPolynesia, iMaya, iToltecs, iInca, iAztecs, iIroquois],
 iTechGroupAfrica : [iZulu, iNigeria, iMali, iCongo, iEthiopia, iNubia, iSwahili],
@@ -442,6 +443,10 @@ lNeighbours = [
     (iVandals, iPhoenicia),
     (iVandals, iSpain),
     (iVandals, iRome),
+    (iMorocco, iTunis),
+    (iMorocco, iMoors),
+    (iMorocco, iSpain),
+    (iMorocco, iPortugal),
 ]
 
 lInfluences = [
@@ -523,6 +528,9 @@ lInfluences = [
     (iVandals, iTunis),
     (iVandals, iMamluks),
     (iVandals, iPortugal),
+    (iMorocco, iVandals),
+    (iMorocco, iFrance),
+    (iMorocco, iItaly),
 ]
 
 dBirth = CivDict({
@@ -581,6 +589,7 @@ iGhorids: 977,
 iPoland : 1025,
 iEngland : 1035,
 iTunis: 1050, # When Zirids become independent from Fatimids
+iMorocco: 1070, # founding of Marrakesh
 iPortugal : 1130,
 iInca : 1150,
 iItaly : 1167,
@@ -738,7 +747,8 @@ iParthia : [(200, 550)],
 iGhorids : [(1220, 1400)],
 iZulu : [(1815, 1880), (1950, 2020)],
 iSaxons: [(870, 1020)],
-iTunis: [(1230, 1500), (1950, 2020)]
+iTunis: [(1230, 1500), (1950, 2020)],
+iMorocco: [(1500, 1800), (1955, 2020)],
 }, [])
 
 dAggressionLevel = CivDict({
@@ -798,6 +808,7 @@ iMinoans: 1,
 iGhorids: 2,
 iSaxons: 2,
 iTunis: 2,
+iMorocco: 2,
 }, 0)
 
 dWarOnFlipProbability = CivDict({
@@ -878,6 +889,7 @@ iZulu: 50,
 iSaxons: 50,
 iTunis: 50,
 iVandals: 50,
+iMorocco: 50,
 }, 0)
 
 # the probability out of 100 (and other factors like "Nationalism")
@@ -956,8 +968,9 @@ iMinoans : 5,
 iGhorids : 6,
 iZulu : 4,
 iSaxons: 4,
-iTunis: 8,
+iTunis: 4,
 iVandals: 1, # no respawns at the moment
+iMorocco: 4,
 })
 
 dPatienceThreshold = CivDict({
@@ -1038,6 +1051,7 @@ iZulu: 35,
 iSaxons: 35,
 iTunis: 35,
 iVandals: 25,
+iMorocco: 35,
 }, 100)
 
 dMaxColonistsPreIndustrial = CivDict({
@@ -1119,7 +1133,7 @@ iTranshumanism) = range(iNumTechs)
 
 # initialise unit variables to unit indices from XML
 
-iNumUnits = 255
+iNumUnits = 256
 (iLion, iBear, iPanther, iWolf, iSettler, iCityBuilder, iPioneer, iWorker, iRomanWorker, iPunjabiWorker, iLabourer, 
 iMadeireiro, iScout, iExplorer, iBandeirante, iSpy, iReligiousPersecutor, iJewishMissionary, iOrthodoxMissionary, iCatholicMissionary, iProtestantMissionary, 
 iIslamicMissionary, iShiaMissionary, iHinduMissionary, iBuddhistMissionary, iConfucianMissionary, iShuConfucianMissionary, iTaoistMissionary, iZoroastrianMissionary, iMarxismMissionary, iWarrior, iNativeWarrior, iMilitia, iXiaLevy, iAxeman, 
@@ -1130,7 +1144,7 @@ iStrelets, iJanissary, iOromoWarrior, iQizilbash, iMohawkCatholic, iMohawkProtes
 iMehalSefari, iGrenadier, iRocketeer, iGrenzer, iAlbionLegion, iAntiTank, iInfantry, iVietCong, iSamInfantry, iMobileSam, iMarine, 
 iNavySeal, iParatrooper, iMechanizedInfantry, iArcher, iNanmanArcher, iAsharittuBowman, iMedjay, iNativeArcher, iSkirmisher, iVishap, iHolkan, iAtlatl, 
 iKelebolo, iLongbowman, iPatiyodha, iRattanArcher, iCrossbowman, iNaffatun, iChokonu, iBalestriere, iGrenadineCrossbowman, iChariot, iWarChariot, iHuluganni, 
-iCidainh, iHorseman, iHausaCavalry, iCompanion, iNumidianCavalry, iAsvaka, iBerberFaris, iCamelRider, iHorseArcher, iKonnik, iMangudai, iKhampa, iOghuz, 
+iCidainh, iHorseman, iHausaCavalry, iCompanion, iNumidianCavalry, iAsvaka, iBerberFaris, iCamelRider, iCamelLancer, iHorseArcher, iKonnik, iMangudai, iKhampa, iOghuz, 
 iCamelArcher, iTemplar, iLancer, iKhazarNobleLancer, iMamlukCavalry, iSavaran, iFarari, iMobileGuard, iKeshik, iCataphract, iChangSuek, iPistolier, 
 iHakkapeliitta, iMountedBrave, iCamelGunner, iZamburak, iCuirassier, iGendarme, iConquistador, iWingedHussar, iSowar, iHussar, iCossack, 
 iLlanero, iDragoon, iCassay, iGrenadierCavalry, iCavalry, iRural, iWarElephant, iVaru, iBallistaElephant, iTank, iPanzer, 
@@ -1181,7 +1195,7 @@ iNumBonusVarieties = 19
 iGemsEmeralds, iSheepLlama, iSheepBlack, iCowBrown, iPigFurry, iIvoryAfrican, iCitrusOranges, iCrabShrimp) = range(iNumBonuses, iNumBonuses + iNumBonusVarieties)
 
 # if you increase this, increment BEGIN_WONDERS	in CvRhyes.h
-iNumBuildings = 156
+iNumBuildings = 157
 (iPalace, iChineseUniquePowerPalace, iIroquoisAssemblyHall, iBarracks, iSlaveBarracks, iHellenisticColony, iKalliu, iSoldattorp, iIkhanda, iGranary, iAnaktora, iCommandery, iTannery, iLonghouse, iPaganTemple, iWeaver, iStan, iMbwadi, 
 iMonument, iObelisk, iMenhir, iStele, iCandi, iEdict, iMalae, iMudbrickPyramid, iTotemPole, iWalls, iMountainWatch,
 iDun, iStable, iPoloField, iOrtege, iLibrary, iEdubba, iTaixue, iKyaung, iCalmecac, iHarbor, iVandalShipyard, iAqueduct, 
@@ -1190,7 +1204,7 @@ iBallCourt, iCharreadaArena, iSambadrome, iGarden, iLighthouse, iKhazarTradePost
 iMarket, iForum, iCaravanserai, iWangara, iFloatingMarket, iJail, iMootHill, iDivan, iKatorga, iBath, iReservoir, 
 iHammam, iForge, iBronzeworks, iBloomeryBuilding, iArtStudio, iCastle, iQalaat, iCitadel, iIslandFort, iPharmacy, iAlchemist, 
 iGrocer, iPostOffice, iRibat, iTambo, iWharf, iVolok, iCoffeehouse, iSalon, iBank, iConstabulary, iMountedPolice, iCustomsHouse, 
-iFeitoria, iTunisSlaveMarket, iUniversity, iSeowon, iGompa, iCivicSquare, iGopuram, iRathaus, iSejmik, iSewer, iStarFort, 
+iFeitoria, iTunisSlaveMarket, iUniversity, iSeowon, iGompa, iCivicSquare, iGopuram, iRathaus, iSejmik, iSewer, iStarFort, iKasbah,
 iEstate, iMausoleum, iHacienda, iDrydock, iLevee, iPolder, iObservatory, iWarehouse, iCourthouse, iExchequer, 
 iFactory, iAssemblyPlant, iZaibatsu, iDistillery, iPark, iBagh, iCoalPlant, iRailwayStation, iLaboratory, iAbattoir, 
 iColdStoragePlant, iGrainSilo, iNewsPress, iIndustrialPark, iCinema, iHospital, iSupermarket, iPublicTransportation, iDepartmentStore, iMall, 
@@ -1368,14 +1382,14 @@ iVictorySecularism = 11
 
 
 #leaders
-iNumLeaders = 160
+iNumLeaders = 161
 (iLeaderBarbarian, iNativeLeader, iIndependentLeader, iRamesses, iCleopatra, iSargon, iHammurabi, iWentAntu,
 iAshurbanipal, iNasirAlDawla, iQinShiHuang, iTaizong, iHongwu, iMao, iSunQuan, iGaozong, iChiangKaishek, iMursili, iPericles, iAlexanderTheGreat, iGeorge, iAsoka, 
 iChandragupta, iShivaji, iGandhi, iHiram, iHannibal, iAbuFaris, iTaharqa, iAhoeitu, iCyrus, iDarius, iMithridates, iKhosrow, 
 iBrennus, iBrianBoru, iJuliusCaesar, iAugustus, iPacal, iRajendra, iKrishnaDevaRaya, iEzana, iZaraYaqob, iMenelik, iTopiltzin, 
 iKanishka, iWangKon, iSejong, iSuryavarman, iMansaMusa, iJustinian, iBasil, iCharlemagne, iLouis, iNapoleon, 
 iDeGaulle, iSriJayanasa, iTunPerak, iKammu, iOdaNobunaga, iMeiji, iRagnar, iChristian, iGerhardsen, iBumin, 
-iAlpArslan, iTamerlane, iHarun, iAlMuizz, iSaladin, iBaibars, iNasser, iSimeon, iSongtsen, iLobsangGyatso, iRahman, iYaqub, iHayamWuruk, iSuharto, 
+iAlpArslan, iTamerlane, iHarun, iAlMuizz, iSaladin, iBaibars, iNasser, iSimeon, iSongtsen, iLobsangGyatso, iRahman, iYaqub, iMohammedV, iHayamWuruk, iSuharto, 
 iIsabella, iPhilip, iFranco, iWilliamConqueror, iElizabeth, iVictoria, iChurchill, iBarbarossa, iCharles, iFrancis, 
 iAnawrahta, iBayinnaung, iYaroslav, iLeLoi, iHoChiMinh, iDawud, iCasimir, iSobieski, iPilsudski, iWalesa, iAfonso, 
 iJoao, iMaria, iHuaynaCapac, iCastilla, iLorenzo, iCavour, iMussolini, iGenghisKhan, iKublaiKhan, iMontezuma, 
@@ -1391,10 +1405,10 @@ dResurrectionLeaders = CivDict({
 })
 
 # update DLL constants when this changes
-iNumPeriods = 29
+iNumPeriods = 28
 (iPeriodMing, iPeriodMaratha, iPeriodModernGreece, iPeriodCarthage, iPeriodInsularCelts,
 iPeriodVijayanagara, iPeriodByzantineConstantinople, iPeriodSeljuks, iPeriodMeiji, iPeriodDenmark, 
-iPeriodNorway, iPeriodUzbeks, iPeriodSaudi, iPeriodMorocco, iPeriodSpain, 
+iPeriodNorway, iPeriodUzbeks, iPeriodSaudi, iPeriodSpain, 
 iPeriodAustria, iPeriodUnitedKingdom, iPeriodGreatBritain,iPeriodYuan, iPeriodPeru, 
 iPeriodLateInca, iPeriodModernItaly, iPeriodPakistan, iPeriodOttomanConstantinople, iPeriodModernGermany, 
 iPeriodMughals, iPeriodModernIndia, iPeriodUkraine, iPeriodSouthAfrica) = range(iNumPeriods)

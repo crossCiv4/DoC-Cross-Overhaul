@@ -3977,5 +3977,15 @@
 			<KFM/>
 			<Button>Art/Structures/Buildings/Workers_Conference_from_eu3_east_Courthouse/comintern_btn.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MOROCCAN_KASBAH</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.7</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/EU4_Forts/Forts Mideastern/fort2.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/EU4_Forts/Forts Mideastern/kasbah.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>
