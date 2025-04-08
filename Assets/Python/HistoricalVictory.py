@@ -635,12 +635,15 @@ dGoals = {
 		CitySpecialistCount(start(iTibet).named(LHASA), iSpecialistGreatProphet, 7, by=1700),
 	),
 	iMoors: (
-		Control(
-			plots.region(rMaghreb).named(MAGHREB),
-			plots.region(rIberia).named(IBERIA),
-			subject=VASSALS,
-			by=909,
+		All(
+			CityCount(plots.region(rMaghreb).named(MAGHREB), 3),
+			Control(
+				plots.region(rIberia).named(IBERIA),
+				subject=VASSALS,
+				by=909,
+			)
 		),
+
 		All(
 			Wonder(iMezquita),
 			CitySpecialistCount(capital().named(CAPITAL), sum(iSpecialistGreatProphet, iSpecialistGreatScientist, iSpecialistGreatEngineer), 4),
@@ -660,7 +663,7 @@ dGoals = {
 	),
 	iMorocco: (
 		All(
-			CityCount(plots.region(rMaghreb).named(MAGHREB), 4),
+			Control(plots.region(rMaghreb).named(MAGHREB)),
 			ConqueredCities(3, inside=plots.region(rIberia).named(IBERIA)),
 			ConqueredCities(2, inside=plots.rectangle(tWestAfrica).named(WEST_AFRICA)),
 			by=1350,
