@@ -18572,6 +18572,23 @@ int CvPlayerAI::AI_bestCitySiteSettlerValue(int iAreaID) const
 	return iBestValue;
 }
 
+int CvPlayerAI::AI_bestAdjacentCitySiteSettlerValue(int iWaterAreaID) const
+{
+	std::vector<int>::iterator it;
+	int iBestValue = 0;
+
+	for (it = m_aiAICitySites.begin(); it != m_aiAICitySites.end(); it++)
+	{
+		CvPlot* pCitySitePlot = GC.getMapINLINE().plotByIndex((*it));
+		if (pCitySitePlot->isAdjacentToArea(iWaterAreaID))
+		{
+			iBestValue = std::max(iBestValue, pCitySitePlot->getFoundValue(getID()));
+		}
+	}
+
+	return iBestValue;
+}
+
 int CvPlayerAI::AI_getNumAreaCitySites(int iAreaID, int& iBestValue) const
 {
 	std::vector<int>::iterator it;
@@ -18609,8 +18626,6 @@ int CvPlayerAI::AI_getNumAdjacentAreaCitySites(int iWaterAreaID, int iExcludeAre
 		}
 	}
 	return iCount;
-
-
 }
 
 CvPlot* CvPlayerAI::AI_getCitySite(int iIndex) const

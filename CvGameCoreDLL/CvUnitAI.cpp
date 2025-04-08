@@ -5361,6 +5361,12 @@ void CvUnitAI::AI_settlerSeaMove()
 {
 	PROFILE_FUNC();
 
+	// Leoreth: otherwise they try to found the capital
+	if (GET_PLAYER(getOwnerINLINE()).getNumCities() == 0)
+	{
+		return;
+	}
+
 	bool bEmpty = !getGroup()->hasCargo();
 	if (bEmpty)
 	{
@@ -13501,6 +13507,19 @@ bool CvUnitAI::AI_settlerSeaTransport()
 	if ((pBestPlot != NULL) && (pBestFoundPlot != NULL))
 	{
 		FAssert(!(pBestPlot->isImpassable()));
+
+		if (getCivilizationType() != AMERICA && !isFull())
+		{
+			if (getUnitAICargo(UNITAI_CITY_DEFENSE) == 0 && pBestFoundPlot->area()->getNumOwnedTiles() > 0)
+			{
+				return false;
+			}
+
+			if (getUnitAICargo(UNITAI_WORKER) == 0 && pBestFoundPlot->area()->getNumAIUnits(getOwnerINLINE(), UNITAI_WORKER) < pBestFoundPlot->area()->getCitiesPerPlayer(getOwnerINLINE()))
+			{
+				return false;
+			}
+		}
 
 		if ((pBestPlot == pBestFoundPlot) || (stepDistance(pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), pBestFoundPlot->getX_INLINE(), pBestFoundPlot->getY_INLINE()) == 1))
 		{

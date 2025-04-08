@@ -741,7 +741,7 @@ void CvCityAI::AI_chooseProduction()
     int iTargetCulturePerTurn = AI_calculateTargetCulturePerTurn();
 
 	int iAreaBestSettlerValue = kPlayer.AI_bestCitySiteSettlerValue(pArea->getID());
-	int iWaterAreaBestSettlerValue = pWaterArea ? kPlayer.AI_bestCitySiteSettlerValue(pWaterArea->getID()) : 0;
+	int iWaterAreaBestSettlerValue = pWaterArea ? kPlayer.AI_bestAdjacentCitySiteSettlerValue(pWaterArea->getID()) : 0;
 
     int iAreaBestFoundValue;
     int iNumAreaCitySites = kPlayer.AI_getNumAreaCitySites(getArea(), iAreaBestFoundValue);
@@ -1104,6 +1104,15 @@ void CvCityAI::AI_chooseProduction()
 			if (iAreaBestFoundValue == 0 || iWaterAreaBestFoundValue > iAreaBestFoundValue
     			|| (iWaterPercent > 60 && GC.getGameINLINE().getSorenRandNum(4, "AI Train Early Sea Explore or Settler") == 0))
 			{
+				// Leoreth: if stuck on an island, we need to settle elsewhere
+				if (iNumSettlers == 0 && iWaterAreaBestSettlerValue >= 10 && area()->getNumUnownedTiles() <= 1 && GET_PLAYER(getOwnerINLINE()).AI_getNumTrainAIUnits(UNITAI_SETTLE) == 0)
+				{
+					if (AI_chooseUnit(UNITAI_SETTLE))
+					{
+						return;
+					}
+				}
+
 				if (kPlayer.AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_EXPLORE_SEA) == 0)
 				{
 					if (AI_chooseUnit(UNITAI_EXPLORE_SEA))
@@ -1111,7 +1120,7 @@ void CvCityAI::AI_chooseProduction()
 						return;
 					}
 				}
-				if (kPlayer.AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_SETTLER_SEA) == 0)
+				if (iNumSettlers > 0 && kPlayer.AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_SETTLER_SEA) == 0)
 				{
 					if (AI_chooseUnit(UNITAI_SETTLER_SEA))
 					{

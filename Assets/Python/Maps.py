@@ -462,5 +462,5 @@ def markCitySites(identifier):
 		if not plot or plot.isNone():
 			break
 		
-		createLandmark(plot, name(identifier))
+		createLandmark(plot, "%s (%d): %d" % (name(identifier), index, plot.getFoundValue(player(identifier).getID())))
 		index += 1
