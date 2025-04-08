@@ -1279,7 +1279,7 @@ def specificName(iPlayer):
 			if not player(iPortugal).isExisting() or not player(iPortugal).getCapitalCity() in plots.region(rIberia):
 				return "TXT_KEY_CIV_SPAIN_IBERIA"
 			
-		if isCurrentCapital(iPlayer, "Barcelona", "Valencia"):
+		if isCurrentCapital(iPlayer, "Barcelona", "Valencia", "Pamplona", "Cartagena"):
 			return "TXT_KEY_CIV_SPAIN_ARAGON"
 		
 		if isCurrentCapital(iPlayer, "Oviedo"):
@@ -1669,20 +1669,6 @@ def specificAdjective(iPlayer):
 				relocateCapital(iArabia, tBaghdad)
 
 			return "TXT_KEY_CIV_ARABIA_ABBASID"
-			
-	elif iCiv == iMoors:
-		if bEmpire:
-			if iEra == iMedieval:
-				if bTheocracy:
-					return "TXT_KEY_CIV_MOORS_ALMORAVID"
-					
-				return "TXT_KEY_CIV_MOORS_ALMOHAD"
-				
-			elif iEra == iRenaissance:
-				return "TXT_KEY_CIV_MOORS_SAADI"
-			
-		if not capital in plots.region(rIberia):
-			return "TXT_KEY_CIV_MOORS_MOROCCAN"
 			
 	elif iCiv == iSpain:
 		if year() < year(dBirth[iMoors] + 50):
