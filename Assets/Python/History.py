@@ -339,7 +339,8 @@ def conquistadors(iTeamX, iHasMetTeamY):
 
 @handler("firstContact")
 def firstContactMongolConquerors(iTeamX, iHasMetTeamY):
-	if not scenarioStartTurn() and civ(iHasMetTeamY) == iMongols and not player(iMongols).isHuman() and since(player(iMongols).getLastBirthTurn()) >= 2:
+	# only triggers if Mongols are not resurrected (Dzungaria etc), and at least 2 turns after birth
+	if not scenarioStartTurn() and civ(iHasMetTeamY) == iMongols and data.civs[iMongols].iResurrections == 0 and not player(iMongols).isHuman() and since(year(dBirth[iMongols])) >= 2:
 		mongolConquerors(iTeamX)
 
 
