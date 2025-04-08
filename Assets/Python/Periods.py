@@ -157,7 +157,7 @@ def onCityAcquired(iOwner, iPlayer, city, bConquest):
 	iOwnerCiv = civ(iOwner)
 	
 	if iCiv == iSpain:
-		if not cities.owner(iMoors).region(rIberia):
+		if isSpainPeriod(iPlayer):
 			setPeriod(iSpain, iPeriodSpain)
 	
 	if iCiv == iEngland:

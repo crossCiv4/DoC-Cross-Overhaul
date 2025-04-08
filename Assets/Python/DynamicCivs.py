@@ -26,7 +26,6 @@ dDefaultInsertNames = {
 	iDravidia : "TXT_KEY_CIV_DRAVIDIA_TAMIL_NADU",
 	iMaya : "TXT_KEY_CIV_MAYA_YUCATAN",
 	iThailand : "TXT_KEY_CIV_THAILAND_SIAM",
-	iMoors : "TXT_KEY_CIV_MOORS_MOROCCO",
 	#iTimurids : "TXT_KEY_CIV_MUGHALS_DELHI",
 	iHarappa : "TXT_KEY_CIV_HARAPPA_INDUS",
 }
@@ -35,7 +34,6 @@ dDefaultInsertAdjectives = {
 	iNorse : "TXT_KEY_CIV_NORSE_SCANDINAVIAN",
 	iKhmer : "TXT_KEY_CIV_KHMER_KAMPUCHEAN",
 	iThailand : "TXT_KEY_CIV_THAILAND_SIAMESE",
-	iMoors : "TXT_KEY_CIV_MOORS_MOROCCAN",
 }
 
 dSpecificVassalTitles = deepdict({
@@ -1251,10 +1249,7 @@ def specificName(iPlayer):
 			return "TXT_KEY_CIV_KHMER_CAMBODIA"
 			
 	elif iCiv == iMoors:	
-		if capital in plots.region(rIberia):
-			return capitalName(iPlayer)
-			
-		return "TXT_KEY_CIV_MOORS_MOROCCO"
+		return capitalName(iPlayer)
 			
 	elif iCiv == iGhorids:
 		# around 1200, rule breaks down into "Emirate/Sultanate of X" realms
@@ -1674,8 +1669,8 @@ def specificAdjective(iPlayer):
 		if year() < year(dBirth[iMoors] + 50):
 			return "TXT_KEY_ADJECTIVE_VISIGOTHIC"
 
-		bSpain = not player(iMoors).isExisting() or not player(iMoors).getCapitalCity() in plots.region(rIberia)
-	
+		bSpain = isSpainPeriod(iPlayer)
+
 		if bSpain:
 			if not player(iPortugal).isExisting() or master(iPortugal) == iPlayer or not player(iPortugal).getCapitalCity() in plots.region(rIberia):
 				return "TXT_KEY_CIV_SPAIN_IBERIAN"
