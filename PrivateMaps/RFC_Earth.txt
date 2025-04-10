@@ -38818,7 +38818,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=41
-	BonusType=BONUS_CAMEL
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=1
 EndPlot
@@ -39729,7 +39728,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=39
-	BonusType=BONUS_INCENSE
+	BonusType=BONUS_CAMEL
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
@@ -40193,6 +40192,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=38
+	BonusType=BONUS_INCENSE
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -40643,7 +40643,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=36
-	BonusType=BONUS_MILLET
+	BonusType=BONUS_COFFEE
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=1
 EndPlot
@@ -41107,6 +41107,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=36
+	BonusType=BONUS_MILLET
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
