@@ -257,6 +257,13 @@ lCivilizations = [
 		techs=techs.column(3).including(iBloomery)
 	),
 	Civilization(
+		iYemen,
+		iGold=50,
+		iStateReligion=iJudaism,
+		lCivics=[iDespotism, iSlavery],
+		techs=techs.column(3).without(iShipbuilding, iConstruction, iArithmetics)
+	),
+	Civilization(
 		iPersia,
 		iGold=200,
 		iAdvancedStartPoints=200,
@@ -574,6 +581,13 @@ lCivilizations = [
 		lEnemies=[iSpain, iMoors],
 		lCivics=[iDespotism, iSlavery, iMerchantTrade, iFanaticism, iVassalage, iHegemony],
 		techs=techs.column(7).including(iDoctrine, iMachinery, iGuilds, iReligiousOrders)
+	),
+	Civilization(
+		iOman,
+		iGold=200,
+		iStateReligion=iShia,
+		lCivics=[iMonarchy, iSlavery, iMerchantTrade, iMonasticism, iTheocracy, iThalassocracy],
+		techs=techs.column(8).without(iLimbProtection)
 	),
 	Civilization(
 		iPortugal,
@@ -1017,7 +1031,6 @@ dStartingUnits = CivDict({
 		iDefend: 1,
 		iShock: 7,
 		iAttack: 7,
-		iHarass: 5,
 		iSiege: 6,
 		iCounter: 3,
 		iEscort: 1,
@@ -1155,6 +1168,22 @@ dStartingUnits = CivDict({
 		iAttack: 2,
 		iDefend: 1,
 	},
+	iYemen: {
+		iSettle: 1,
+		iMissionary: 1,
+		iWork: 1,
+		iDefend: 1,
+		iCounter: 1,
+	},
+	iOman: {
+		iSettle: 1,
+		iDefend: 1,
+		iWork: 1,
+		iFerry: 1,
+		iEscort: 1,
+		iCounter: 1,
+		iHarass: 1,
+	},
 	iGhorids: {
 		iSettle: 1,
 		iWork: 3,
@@ -1178,7 +1207,7 @@ dStartingUnits = CivDict({
 		iSettleSea: 1,
 		iWork: 1,
 		iDefend: 4,
-		iCounter: 2,
+		iCounter: 3,
 		iMissionary: 1,
 		iWorkerSea: 2,
 		iEscort: 2,
@@ -1826,6 +1855,8 @@ def createSpecificUnits(iPlayer, tile):
 		makeUnits(iPlayer, iCamelLancer, tile, 5)
 		if not player(iPlayer).isHuman():
 			makeUnits(iPlayer, iCamelLancer, tile, 5)
+	elif iCiv == iArabia:
+		makeUnits(iPlayer, iCamelArcher, tile, 8)
 	elif iCiv == iVandals and not player(iPlayer).isHuman():
 		landingPlot = (59,46)
 		makeUnits(iPlayer, iArcher, landingPlot, 4)
@@ -2256,6 +2287,16 @@ dTechPreferences = {
 		iAlchemy: 10,
 		iReplaceableParts: -10,
 	},
+	iYemen : {
+		iCurrency: 30,
+		iTheology: 10,
+		iDoctrine: 15,
+	},
+	iOman : {
+		iOptics: 20,
+		iGunpowder: 20,
+		iExploration: -50,
+	},
 	iTibet : {
 		iPhilosophy: 30,
 		iEngineering: 20,
@@ -2565,6 +2606,8 @@ dDefaultWonderPreferences = {
 	iSaxons: -15,
 	iTunis: -10,
 	iMorocco: -15,
+	iYemen: -15,
+	iOman: -15,
 }
 
 dBuildingPreferences = {
@@ -2873,6 +2916,15 @@ dBuildingPreferences = {
 	},
 	iMorocco: {
 		iHouseOfWisdom: 5,
+		# other wonder preferences...
+	},
+	iYemen: {
+		iAlKhazneh: 25,
+		iOldSynagogue: 5,
+		# other wonder preferences...
+	},
+	iOman: {
+		iTopkapiPalace: -10,
 		# other wonder preferences...
 	},
 	iTibet : {

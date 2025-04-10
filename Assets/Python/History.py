@@ -21,6 +21,7 @@ dRelocatedCapitals = CivDict({
 	iEngland: tLondon,
 	iSaxons: tLondon,
 	iVandals: tCarthage,
+	iYemen:	(89, 35), # Adan
 })
 
 dCapitalInfrastructure = CivDict({
@@ -485,6 +486,8 @@ def tradingCompany(iTech, iTeam, iPlayer):
 		iFrance: [iGeography, iReplaceableParts, iMeasurement, iEngine],
 		iEngland: [iGeography, iReplaceableParts, iMeasurement, iMicrobiology, iEngine, iPneumatics],
 		iNetherlands: [iEconomics, iGeography, iReplaceableParts, iHorticulture],
+		iOman: [iFirearms],
+		iYemen: [iCompanies],
 	})
 	
 	if iCiv in dCivTechMappings.keys() and iTech in dCivTechMappings[iCiv]:

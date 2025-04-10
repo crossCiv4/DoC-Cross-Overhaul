@@ -499,6 +499,14 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_IMAMATE_OF</Tag>
+		<English>Imamate of %s1</English>
+		<French>Imamate of %s1</French>
+		<German>Imamate of %s1</German>
+		<Italian>Imamate of %s1</Italian>
+		<Spanish>Imamate of %s1</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CONFEDERACY_ADJECTIVE</Tag>
 		<English>%s2 Confederacy</English>
 		<French>Conf&#233;d&#233;ration %s2</French>

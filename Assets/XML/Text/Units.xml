@@ -3367,11 +3367,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PORTUGUESE_BANDEIRANTE_HELP</Tag>
-		<English>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK]</English>
-		<French>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Capture d'[LINK=UNIT_SLAVE]esclaves[\LINK] garantie</French>
-		<German>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK]</German>
-		<Italian>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK]</Spanish>
+		<English>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK][NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK]</English>
+		<French>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK][NEWLINE][ICON_BULLET]Capture d'[LINK=UNIT_SLAVE]esclaves[\LINK] garantie</French>
+		<German>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK][NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK]</German>
+		<Italian>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK][NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK][NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PORTUGUESE_BANDEIRANTE_STRATEGY</Tag>
@@ -3891,7 +3891,50 @@
 		<Italian>Vandal Pirate</Italian>
 		<Spanish>Vandal Pirate</Spanish>
 	</TEXT>
-
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_OMANI_BAGHLAH</Tag>
+		<English>Baghlah</English>
+		<French>
+			<Text>Baghlah</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Baghlah</German>
+		<Italian>Baghlah</Italian>
+		<Spanish>Baghlah</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_OMANI_SLAVER</Tag>
+		<English>Slave Hunter</English>
+		<French>Slave Hunter</French>
+		<German>Slave Hunter</German>
+		<Italian>Slave Hunter</Italian>
+		<Spanish>Slave Hunter</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INCENSE_MERCHANT</Tag>
+		<English>Incense Merchant</English>
+		<French>Incense Merchant</French>
+		<German>Incense Merchant</German>
+		<Italian>Incense Merchant</Italian>
+		<Spanish>Incense Merchant</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_INCENSE_MERCHANT_HELP</Tag>
+		<English>[ICON_BULLET]Income from trading missions</English>
+		<French>[ICON_BULLET]Income from trading missions</French>
+		<German>[ICON_BULLET]Income from trading missions</German>
+		<Italian>[ICON_BULLET]Income from trading missions</Italian>
+		<Spanish>[ICON_BULLET]Income from trading missions</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ZAYDI_TRIBESMAN</Tag>
+		<English>Zaydi Tribesman</English>
+		<French>Zaydi Tribesman</French>
+		<German>Zaydi Tribesman</German>
+		<Italian>Zaydi Tribesman</Italian>
+		<Spanish>Zaydi Tribesman</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
 		<English></English>

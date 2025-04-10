@@ -1342,6 +1342,48 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_WALLS</BuildingClass>
+			<Type>BUILDING_YEMENI_TOWER_HOUSE</Type>
+			<Description>TXT_KEY_BUILDING_YEMENI_TOWER_HOUSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_YEMENI_TOWER_HOUSE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_YEMENI_TOWER_HOUSE_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_YEMENI_TOWER_HOUSE</ArtDefineTag>
+			<ObsoleteTech>TECH_BALLISTICS</ObsoleteTech>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
+			<bCenterInCity>1</bCenterInCity>
+			<iCost>50</iCost>
+			<iConquestProb>100</iConquestProb>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iMinAreaSize>-1</iMinAreaSize>
+			<iDefense>50</iDefense>
+			<iBombardDefense>50</iBombardDefense>
+			<YieldChanges>
+				<iYield>1</iYield>
+				<iYield>1</iYield>
+			</YieldChanges>
+			<iAsset>1</iAsset>
+			<iPower>2</iPower>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_WALLS</ConstructSound>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_STONE</BonusType>
+					<iProductonModifier>100</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+			</Flavors>
+		</BuildingInfo>
+		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_STABLE</BuildingClass>
 			<Type>BUILDING_STABLE</Type>
 			<Description>TXT_KEY_BUILDING_STABLE</Description>
@@ -2550,6 +2592,37 @@
 					</YieldChanges>
 				</BonusYieldChange>
 			</BonusYieldChanges>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+		</BuildingInfo>
+		<BuildingInfo>
+			<BuildingClass>BUILDINGCLASS_LIGHTHOUSE</BuildingClass>
+			<Type>BUILDING_OMANI_COASTAL_OUTPOST</Type>
+			<Description>TXT_KEY_BUILDING_OMANI_COASTAL_OUTPOST</Description>
+			<Civilopedia>TXT_KEY_BUILDING_OMANI_COASTAL_OUTPOST_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_OMANI_COASTAL_OUTPOST_STRATEGY</Strategy>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_OMANI_COASTAL_OUTPOST</ArtDefineTag>
+			<FreeStartEra>ERA_INDUSTRIAL</FreeStartEra>
+			<PrereqTech>TECH_NAVIGATION</PrereqTech>
+			<bWater>1</bWater>
+			<iCost>80</iCost>
+			<iAdvancedStartCost>100</iAdvancedStartCost>
+			<iMinAreaSize>15</iMinAreaSize>
+			<iConquestProb>60</iConquestProb>
+			<iTradeRoutes>1</iTradeRoutes>
+			<iAsset>4</iAsset>
+			<SeaPlotYieldChanges>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+				<iYield>0</iYield>
+			</SeaPlotYieldChanges>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<ConstructSound>AS2D_BUILD_LIGHTHOUSE</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>

@@ -948,6 +948,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_GLOBAL_TRADE_MISSION</Tag>
+		<English>%s1 %s2</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_POPULATION_CITY_COUNT</Tag>
 		<English>%s2 cities with a population of %s1</English>
 		<French></French>
@@ -1761,6 +1769,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_TRADE_MISSION</Tag>
 		<English>Trade missions to %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_GLOBAL_TRADE_MISSION</Tag>
+		<English>Trade missions</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -3877,6 +3893,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_ACCOMPLISHED</Tag>
 		<English>Accomplished:</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_RED_SEA_REGION</Tag>
+		<English>the Red Sea Region</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

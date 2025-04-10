@@ -606,5 +606,11 @@
 			<ColorTypeSecondary>COLOR_PLAYER_SKY_BLUE_TEXT</ColorTypeSecondary>
 			<TextColorType>COLOR_PLAYER_SKY_BLUE_TEXT</TextColorType>
 		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_OMAN_BLUEYELLOW</Type>
+			<ColorTypePrimary>COLOR_PLAYER_OMAN_BLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_OMAN_YELLOW</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_OMAN_BLUE</TextColorType>
+		</PlayerColorInfo>
 	</PlayerColorInfos>
 </Civ4PlayerColorInfos>

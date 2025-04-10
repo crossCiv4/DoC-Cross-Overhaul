@@ -1370,4 +1370,36 @@
 		<Italian>Grants free camel lancer on city conquest until the Renaissance</Italian>
 		<Spanish>Grants free camel lancer on city conquest until the Renaissance</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_OMA_TITLE</Tag>
+		<English>The Power of the Zanzibar Sultans:</English>
+		<French>The Power of the Zanzibar Sultans:</French>
+		<German>The Power of the Zanzibar Sultans:</German>
+		<Italian>The Power of the Zanzibar Sultans:</Italian>
+		<Spanish>The Power of the Zanzibar Sultans:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_OMA</Tag>
+		<English>Colonies gain +1 [ICON_TRADE] route per culture level</English>
+		<French>Colonies gain +1 [ICON_TRADE] route per culture level</French>
+		<German>Colonies gain +1 [ICON_TRADE] route per culture level</German>
+		<Italian>Colonies gain +1 [ICON_TRADE] route per culture level</Italian>
+		<Spanish>Colonies gain +1 [ICON_TRADE] route per culture level</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_YEM_TITLE</Tag>
+		<English>The Power of Arabia Felix:</English>
+		<French>The Power of Arabia Felix:</French>
+		<German>The Power of Arabia Felix:</German>
+		<Italian>The Power of Arabia Felix:</Italian>
+		<Spanish>The Power of Arabia Felix:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_YEM</Tag>
+		<English>+1 [ICON_FOOD] from deserts and semideserts</English>
+		<French>+1 [ICON_FOOD] from deserts and semideserts</French>
+		<German>+1 [ICON_FOOD] from deserts and semideserts</German>
+		<Italian>+1 [ICON_FOOD] from deserts and semideserts</Italian>
+		<Spanish>+1 [ICON_FOOD] from deserts and semideserts</Spanish>
+	</TEXT>
 </Civ4GameText>

@@ -358,6 +358,14 @@
 		<Spanish>Territory of Chad</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_FRENCH_MOORS</Tag>
+		<English>Protectorate of Andalusia</English>
+		<French>Protectorat de l'Andalousie</French>
+		<German>Protectorate of Andalusia</German>
+		<Italian>Protectorate of Andalusia</Italian>
+		<Spanish>Protectorate of Andalusia</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_FRENCH_POLAND</Tag>
 		<English>Duchy of Warsaw</English>
 		<French>

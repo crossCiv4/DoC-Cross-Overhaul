@@ -14090,6 +14090,12 @@ int CvCity::getTradeRoutes() const
 		iTradeRoutes += 1;
 	}
 
+	// Oman UP: +1 trade route in colonies per culture level.
+	if (isColony() && getCivilizationType() == OMAN)
+	{
+		iTradeRoutes += getCultureLevel();
+	}
+
 	return std::min(iTradeRoutes, GC.getDefineINT("MAX_TRADE_ROUTES"));
 }
 

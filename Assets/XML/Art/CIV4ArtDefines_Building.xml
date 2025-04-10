@@ -3987,5 +3987,25 @@
 			<KFM/>
 			<Button>Art/Structures/Buildings/EU4_Forts/Forts Mideastern/kasbah.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_YEMENI_TOWER_HOUSE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.42</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/tower house/tower_house.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/tower_house.dds,Art/Interface/Buttons/soi_buildings.dds,5,7</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OMANI_COASTAL_OUTPOST</Type>
+			<LSystem>LSYSTEM_HARBOR</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.9</fScale>
+			<fInterfaceScale>1.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Coastal Outpost/Harbor.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/omani_port.dds,Art/Interface/Buttons/soi_buildings.dds,3,6</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

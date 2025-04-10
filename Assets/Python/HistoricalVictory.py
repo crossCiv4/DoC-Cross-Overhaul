@@ -136,6 +136,7 @@ COLONIAL = "TXT_KEY_VICTORY_NAME_COLONIAL"
 INDIAN_TRADE_ROUTE = "TXT_KEY_VICTORY_NAME_INDIAN_TRADE_ROUTE"
 MEDITERRANEAN_PORT = "TXT_KEY_VICTORY_NAME_MEDITERRANEAN_PORT"
 WORLD_COASTLINES = "TXT_KEY_VICTORY_NAME_WORLD_COASTLINES"
+RED_SEA_REGION = "TXT_KEY_VICTORY_NAME_RED_SEA_REGION"
 
 # building descriptors
 SHRINES = "TXT_KEY_VICTORY_NAME_SHRINES"
@@ -670,6 +671,21 @@ dGoals = {
 		),
 		DefeatedUnits(civs(iSpain, iPortugal, iFrance), 30),
 		ReligionSpreadPercent(iIslam, 30),
+	),
+	iOman: (
+		ConqueredCities(3, civs=group(iCivGroupEurope).named(EUROPEAN), outside=plots.regions(*lEurope).named(EUROPE), by=1750),
+		SpecialistCount(iSpecialistSlave, 15, by=1870),
+		TradeRouteCount(50),
+	),
+	iYemen: (
+		GlobalTradeMissionCount(30, by=620),
+		Found(iShia),
+		All(
+			ResourceCount(iCoffee, 5),
+			ResourceCount(iIncense, 5),
+			ResourceCount(iSpices, 1),
+			by=1500,
+		),
 	),
 	iVandals: (
 		All(

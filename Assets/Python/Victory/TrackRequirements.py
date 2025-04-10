@@ -765,6 +765,31 @@ class TradeMissionCount(TrackRequirement):
 			trade_mission = plural(trade_mission)
 		
 		return [trade_mission]
+	
+class GlobalTradeMissionCount(TrackRequirement):
+
+	TYPES = (COUNT,)
+	
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_CONDUCT"
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_GLOBAL_TRADE_MISSION"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_GLOBAL_TRADE_MISSION"
+	
+	def __init__(self, iRequired, **options):
+		TrackRequirement.__init__(self, iRequired, **options)
+		
+		self.handle("tradeMission", self.check_trade_mission)
+		
+	def check_trade_mission(self, goal, (x, y), iGold):
+		self.increment()
+		goal.check()
+	
+	def additional_formats(self):
+		trade_mission = text("TXT_KEY_VICTORY_TRADE_MISSION")
+		
+		if self.bPlural:
+			trade_mission = plural(trade_mission)
+		
+		return [trade_mission]
 
 
 class TradeRouteCommerce(TrackRequirement):

@@ -7288,6 +7288,15 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			}
 		}
 
+		// Yemen UP: +1 food from desert and semidesert.
+		if (eCivilization == YEMEN)
+		{
+			if ((getTerrainType() == TERRAIN_DESERT || getTerrainType() == TERRAIN_SEMIDESERT) && eYield == YIELD_FOOD)
+			{
+				iYield += 1;
+			}
+		}
+
 		// Leoreth: Ethiopian UP: +1 food on hill tiles that yield at least one food
 		if (eCivilization == ETHIOPIA)
 		{

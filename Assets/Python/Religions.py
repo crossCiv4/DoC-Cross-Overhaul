@@ -157,6 +157,7 @@ def checkSchism(iGameTurn):
 
 @handler("BeginGameTurn")
 def spreadReligionsRegionally():
+	spreadReligionToRegion(iJudaism, [rYemenOman], -1000, 500, 10, 1)
 	spreadReligionToRegion(iJudaism, lJudaismEuropeRegions, 1000, 1800, 10)
 	spreadReligionToRegion(iJudaism, lJudaismMiddleEastRegions, 600, 1000, 15)
 	spreadReligionToRegion(iJudaism, lJudaismNewWorldRegions, 1850, 1950, 10)

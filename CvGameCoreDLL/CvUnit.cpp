@@ -6523,7 +6523,8 @@ int CvUnit::getTradeGold(const CvPlot* pPlot) const
 		return 0;
 	}
 
-	iGold = (m_pUnitInfo->getBaseTrade() + (m_pUnitInfo->getTradeMultiplier() * ((pCapitalCity != NULL) ? pCity->calculateTradeProfit(pCapitalCity) : 0)));
+	// trade value should be Our Capital --> Their City and not the other way around
+	iGold = (m_pUnitInfo->getBaseTrade() + (m_pUnitInfo->getTradeMultiplier() * ((pCapitalCity != NULL) ? pCapitalCity->calculateTradeProfitTimes100(pCity) : 0))/100);
 
 	// Leoreth: to help Mali
 	if (GET_PLAYER(getOwnerINLINE()).getStateReligion() != NO_RELIGION && pCity->isHolyCity(GET_PLAYER(getOwnerINLINE()).getStateReligion()) && iGold < 2000)

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_DESC</Tag>
+		<English>The Omanis</English>
+		<French>The Omanis</French>
+		<German>The Omanis</German>
+		<Italian>The Omanis</Italian>
+		<Spanish>The Omanis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_PEOPLES</Tag>
+		<English>Omani Peoples</English>
+		<French>Omani Peoples</French>
+		<German>Omani Peoples</German>
+		<Italian>Omani Peoples</Italian>
+		<Spanish>Omani Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_ADJECTIVE</Tag>
+		<English>Omani</English>
+		<French>Omani</French>
+		<German>Omani</German>
+		<Italian>Omani</Italian>
+		<Spanish>Omani</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_SHORT_DESC</Tag>
+		<English>Oman</English>
+		<French>Oman</French>
+		<German>Oman</German>
+		<Italian>Oman</Italian>
+		<Spanish>Oman</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+</Civ4GameText>

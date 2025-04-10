@@ -145,6 +145,8 @@ dCultureMods = CivDict({
 	iBarbarian: 30,
 	iIroquois: 100,
 	iArmenia: 100,
+	iYemen: 90,
+	iOman: 100,
 }, default=100)
 
 dUnitUpkeepMods = CivDict({
@@ -229,6 +231,8 @@ dUnitUpkeepMods = CivDict({
 	iBarbarian: 100,
 	iIroquois: 100,
 	iArmenia: 100,
+	iYemen: 115,
+	iOman: 110,
 }, default=100)
 
 dResearchCostMods = CivDict({
@@ -313,6 +317,8 @@ dResearchCostMods = CivDict({
 	iBarbarian: 110,
 	iIroquois: 70,
 	iArmenia: 110,
+	iYemen: 105,
+	iOman: 105,
 }, default=100)
 
 dDistanceMaintenanceMods = CivDict({
@@ -397,6 +403,8 @@ dDistanceMaintenanceMods = CivDict({
 	iBarbarian: 20,
 	iIroquois: 80,
 	iArmenia: 110,
+	iYemen: 120,
+	iOman: 100,
 }, default=100)
 
 dColonyMaintenanceMods = CivDict({
@@ -481,6 +489,8 @@ dColonyMaintenanceMods = CivDict({
 	iBarbarian: 20,
 	iIroquois: 100,
 	iArmenia: 150,
+	iYemen: 90,
+	iOman: 90,
 }, default=100)
 
 dCitiesMaintenanceMods = CivDict({
@@ -565,6 +575,8 @@ dCitiesMaintenanceMods = CivDict({
 	iBarbarian: 30,
 	iIroquois: 85,
 	iArmenia: 100,
+	iYemen: 100,
+	iOman: 100,
 }, default=100)
 
 dCivicUpkeepMods = CivDict({
@@ -649,6 +661,8 @@ dCivicUpkeepMods = CivDict({
 	iBarbarian: 70,
 	iIroquois: 80,
 	iArmenia: 90,
+	iYemen: 110,
+	iOman: 110,
 }, default=100)
 
 dHealthMods = CivDict({
@@ -733,6 +747,8 @@ dHealthMods = CivDict({
 	iBarbarian: 0,
 	iIroquois: 3,
 	iArmenia: 2,
+	iYemen: 2,
+	iOman: 2,
 }, default=2)
 
 dUnitCostMods = CivDict({
@@ -817,6 +833,8 @@ dUnitCostMods = CivDict({
 	iBarbarian: 140,
 	iIroquois: 80,
 	iArmenia: 110,
+	iYemen: 120,
+	iOman: 110,
 }, default=100)
 
 dWonderCostMods = CivDict({
@@ -901,6 +919,8 @@ dWonderCostMods = CivDict({
 	iBarbarian: 100,
 	iIroquois: 100,
 	iArmenia: 100,
+	iYemen: 100,
+	iOman: 100,
 }, default=100)
 
 dBuildingCostMods = CivDict({
@@ -985,6 +1005,8 @@ dBuildingCostMods = CivDict({
 	iBarbarian: 100,
 	iIroquois: 80,
 	iArmenia: 90,
+	iYemen: 100,
+	iOman: 100,
 }, default=100)
 
 dInflationRateMods = CivDict({
@@ -1069,6 +1091,8 @@ dInflationRateMods = CivDict({
 	iBarbarian: 95,
 	iIroquois: 75,
 	iArmenia: 95,
+	iYemen: 115,
+	iOman: 110,
 }, default=100)
 
 dGreatPeopleThresholdMods = CivDict({
@@ -1153,6 +1177,8 @@ dGreatPeopleThresholdMods = CivDict({
 	iBarbarian: 100,
 	iIroquois: 85,
 	iArmenia: 90,
+	iYemen: 100,
+	iOman: 100,
 }, default=100)
 
 dGrowthThresholdMods = CivDict({
@@ -1237,6 +1263,8 @@ dGrowthThresholdMods = CivDict({
 	iBarbarian: 125,
 	iIroquois: 75,
 	iArmenia: 90,
+	iYemen: 115,
+	iOman: 105,
 }, default=100)
 
 tModifiers = (dCultureMods, dUnitUpkeepMods, dResearchCostMods, dDistanceMaintenanceMods, dColonyMaintenanceMods, dCitiesMaintenanceMods, dCivicUpkeepMods, dHealthMods, dUnitCostMods, dWonderCostMods, dBuildingCostMods, dInflationRateMods, dGreatPeopleThresholdMods, dGrowthThresholdMods)

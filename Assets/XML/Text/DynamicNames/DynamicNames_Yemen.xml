@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_DESC</Tag>
+		<English>The Yemenis</English>
+		<French>The Yemenis</French>
+		<German>The Yemenis</German>
+		<Italian>The Yemenis</Italian>
+		<Spanish>The Yemenis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_PEOPLES</Tag>
+		<English>Yemeni Peoples</English>
+		<French>Yemeni Peoples</French>
+		<German>Yemeni Peoples</German>
+		<Italian>Yemeni Peoples</Italian>
+		<Spanish>Yemeni Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_ADJECTIVE</Tag>
+		<English>Yemeni</English>
+		<French>Yemeni</French>
+		<German>Yemeni</German>
+		<Italian>Yemeni</Italian>
+		<Spanish>Yemeni</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_SHORT_DESC</Tag>
+		<English>Yemen</English>
+		<French>Yemen</French>
+		<German>Yemen</German>
+		<Italian>Yemen</Italian>
+		<Spanish>Yemen</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_DEFAULT</Tag>
+		<English>%s2 Kingdom</English>
+		<French>%s2 Kingdom</French>
+		<German>%s2 Kingdom</German>
+		<Italian>%s2 Kingdom</Italian>
+		<Spanish>%s2 Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_HIMYAR_ADJECTIVE</Tag>
+		<English>Himyarite</English>
+		<French>Himyarite</French>
+		<German>Himyarite</German>
+		<Italian>Himyarite</Italian>
+		<Spanish>Himyarite</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_SABA_ADJECTIVE</Tag>
+		<English>Sabaean</English>
+		<French>Sabaean</French>
+		<German>Sabaean</German>
+		<Italian>Sabaean</Italian>
+		<Spanish>Sabaean</Spanish>
+	</TEXT>
+</Civ4GameText>

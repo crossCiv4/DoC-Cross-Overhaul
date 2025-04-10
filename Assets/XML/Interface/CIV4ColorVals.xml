@@ -1540,5 +1540,19 @@
 			<fBlue>0.62</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_PLAYER_OMAN_BLUE</Type>
+			<fRed>0.23</fRed>
+			<fGreen>0.7</fGreen>
+			<fBlue>0.76</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_PLAYER_OMAN_YELLOW</Type>
+			<fRed>1</fRed>
+			<fGreen>1</fGreen>
+			<fBlue>0.36</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
 	</ColorVals>
 </Civ4ColorVals>

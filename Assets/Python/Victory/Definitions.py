@@ -160,6 +160,7 @@ SunkShips = GoalDefinition(req.SunkShips)
 TradeGold = GoalDefinition(req.TradeGold)
 TradeMissionCount = GoalDefinition(req.TradeMissionCount)
 TradeRouteCommerce = GoalDefinition(req.TradeRouteCommerce)
+GlobalTradeMissionCount = GoalDefinition(req.GlobalTradeMissionCount)
 
 
 ### ARGUMENTS ###

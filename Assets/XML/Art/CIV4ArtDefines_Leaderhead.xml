@@ -1208,11 +1208,11 @@
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_AL_MUIZZ</Type>
-			<Button>Art/Leaderheads/abubakr/abubakr_btn.dds</Button>
-			<NIF>Art/Leaderheads/abubakr/abubakr.nif</NIF>
-			<KFM>Art/Leaderheads/abubakr/frederick_the_great.kfm</KFM>
-			<NoShaderNIF>Art/Leaderheads/abubakr/abubakr.nif</NoShaderNIF>
-			<BackgroundKFM>Art/Leaderheads/abubakr/frederick_the_great_bg.kfm</BackgroundKFM>
+			<Button>,Art/Interface/Buttons/Leaderheads/Ghor.dds,Art/Interface/Buttons/mem_leaders_atlas_soi.dds,5,2</Button>
+			<NIF>Art/LeaderHeads/Al Muiz/saladin.nif</NIF>
+			<KFM>Art/LeaderHeads/Al Muiz/saladin.kfm</KFM>
+			<NoShaderNIF>Art/LeaderHeads/Al Muiz/saladin.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Al Muiz/saladin_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_NASIR_AL_DAWLA</Type>
@@ -1309,6 +1309,62 @@
 			<KFM>Art/Leaderheads/Hassan/napoleon.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/Hassan/napoleon_noshader.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Hassan/napoleon_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ABU_KARIB</Type>
+			<Button>Art/Leaderheads/nuwas_as_abu_karib/Yahya.dds</Button>
+			<NIF>Art/Leaderheads/nuwas_as_abu_karib/kublai_khan.nif</NIF>
+			<KFM>Art/Leaderheads/nuwas_as_abu_karib/kublai_khan.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/nuwas_as_abu_karib/kublai_khan_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/nuwas_as_abu_karib/kublai_khan_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ARWA_AL_SULAYHI</Type>
+			<Button>Art/Leaderheads/makeda_as_arwa_al_sulayhi/Button_Bilqis.dds</Button>
+			<NIF>Art/Leaderheads/makeda_as_arwa_al_sulayhi/Hammurabi.nif</NIF>
+			<KFM>Art/Leaderheads/Hammurabi/Hammurabi.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/makeda_as_arwa_al_sulayhi/Hammurabi.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/makeda_as_arwa_al_sulayhi/Hammurabi_Backgrnd.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_AL_SALLAL</Type>
+			<Button>Art/Leaderheads/ayub_as_al_sallal/Musharraf.dds</Button>
+			<NIF>Art/Leaderheads/ayub_as_al_sallal/george_washington.nif</NIF>
+			<KFM>Art/Leaderheads/ayub_as_al_sallal/george_washington.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/ayub_as_al_sallal/george_washington_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Frederick_the_Great/frederick_the_great_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_HABIB_BOURGUIBA</Type>
+			<Button>Art/Leaderheads/Bourguiba/buttonlh_lbp.dds</Button>
+			<NIF>Art/Leaderheads/Bourguiba/fdr.nif</NIF>
+			<KFM>Art/Leaderheads/Bourguiba/fdr.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Bourguiba/fdr_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/IbnSaud/IbnSaud_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_IBN_SAUD</Type>
+			<Button>Art/Leaderheads/IbnSaud/IbnSaud_button.dds</Button>
+			<NIF>Art/Leaderheads/IbnSaud/IbnSaud.nif</NIF>
+			<KFM>Art/Leaderheads/IbnSaud/John II.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/IbnSaud/IbnSaud.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/IbnSaud/IbnSaud_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_SAID_BIN_SULTAN</Type>
+			<Button>Art/LeaderHeads/Barghash/Button_Barghash.dds</Button>
+			<NIF>Art/LeaderHeads/Barghash/SultanBarghashAgain.nif</NIF>
+			<KFM>Art/LeaderHeads/Barghash/cunhambebe.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Barghash/SultanBarghashAgain.nif</NoShaderNIF>
+			<BackgroundKFM>Art/LeaderHeads/Barghash/cunhambebe_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ABI_BIN_OMAR</Type>
+			<Button>,Art/Interface/Buttons/Leaderheads/Omani.dds,Art/Interface/Buttons/soi_leaders.dds,1,3</Button>
+			<NIF>Art/Leaderheads/abubakr/abubakr.nif</NIF>
+			<KFM>Art/Leaderheads/abubakr/frederick_the_great.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/abubakr/abubakr.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/abubakr/frederick_the_great_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

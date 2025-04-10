@@ -1541,7 +1541,6 @@
 		<Italian>Yaqub ibn al-Layth Saffar</Italian>
 		<Spanish>Yaqub ibn al-Layth Saffar</Spanish>
 	</TEXT>
-
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ABDULLAH_KHAN</Tag>
 		<English>Abdullah Khan</English>
@@ -1550,7 +1549,6 @@
 		<Italian>Abdullah Khan</Italian>
 		<Spanish>Abdullah Khan</Spanish>
 	</TEXT>
-
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_GAISERIC</Tag>
 		<English>Gaiseric</English>
@@ -1559,7 +1557,6 @@
 		<Italian>Gaiseric</Italian>
 		<Spanish>Gaiseric</Spanish>
 	</TEXT>
-
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MOHAMMED_V</Tag>
 		<English>Mohammed V</English>
@@ -1567,6 +1564,62 @@
 		<German>Mohammed V</German>
 		<Italian>Mohammed V</Italian>
 		<Spanish>Mohammed V</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ABU_KARIB</Tag>
+		<English>Abu Karib</English>
+		<French>Abu Karib</French>
+		<German>Abu Karib</German>
+		<Italian>Abu Karib</Italian>
+		<Spanish>Abu Karib</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_HABIB_BOURGUIBA</Tag>
+		<English>Habib Bourguiba</English>
+		<French>Habib Bourguiba</French>
+		<German>Habib Bourguiba</German>
+		<Italian>Habib Bourguiba</Italian>
+		<Spanish>Habib Bourguiba</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SAID_BIN_SULTAN</Tag>
+		<English>Said bin Sultan</English>
+		<French>Said bin Sultan</French>
+		<German>Said bin Sultan</German>
+		<Italian>Said bin Sultan</Italian>
+		<Spanish>Said bin Sultan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ABI_BIN_OMAR</Tag>
+		<English>Abi Bin Omar</English>
+		<French>Abi Bin Omar</French>
+		<German>Abi Bin Omar</German>
+		<Italian>Abi Bin Omar</Italian>
+		<Spanish>Abi Bin Omar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ARWA_AL_SULAYHI</Tag>
+		<English>Arwa Al-Sulayhi</English>
+		<French>Arwa Al-Sulayhi</French>
+		<German>Arwa Al-Sulayhi</German>
+		<Italian>Arwa Al-Sulayhi</Italian>
+		<Spanish>Arwa Al-Sulayhi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AL_SALLAL</Tag>
+		<English>Al-Sallal</English>
+		<French>Al-Sallal</French>
+		<German>Al-Sallal</German>
+		<Italian>Al-Sallal</Italian>
+		<Spanish>Al-Sallal</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_IBN_SAUD</Tag>
+		<English>Ibn Saud</English>
+		<French>Ibn Saud</French>
+		<German>Ibn Saud</German>
+		<Italian>Ibn Saud</Italian>
+		<Spanish>Ibn Saud</Spanish>
 	</TEXT>
 
 	<TEXT>
