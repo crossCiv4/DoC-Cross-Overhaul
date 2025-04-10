@@ -486,7 +486,7 @@ def tradingCompany(iTech, iTeam, iPlayer):
 		iFrance: [iGeography, iReplaceableParts, iMeasurement, iEngine],
 		iEngland: [iGeography, iReplaceableParts, iMeasurement, iMicrobiology, iEngine, iPneumatics],
 		iNetherlands: [iEconomics, iGeography, iReplaceableParts, iHorticulture],
-		iOman: [iFirearms],
+		iOman: [iFirearms, iOptics],
 		iYemen: [iCompanies],
 	})
 	

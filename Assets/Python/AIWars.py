@@ -201,8 +201,9 @@ tMongolsBaghdadBR = (90, 49)
 
 tConquestMongolsBaghdad = (38, iMongols, iArabia, tMongolsBaghdadTL, tMongolsBaghdadBR, 1, iMongolsBaghdadYear, 5)
 
-iFatamidEgyptYear = 969
-tConquestFatamidEgypt = (39, iMamluks, iArabia, tEgyptTL, tEgyptBR, 3, iFatamidEgyptYear, 10)
+iFatimidEgyptYear = 969
+tEgyptIncludingCyreneTL = (73, 40)
+tConquestFatimidEgypt = (39, iMamluks, iArabia, tEgyptIncludingCyreneTL, tEgyptBR, 3, iFatimidEgyptYear, 10)
 
 
 iMongolsKievYear = 1240
@@ -292,7 +293,7 @@ lConquests = [
 	tConquestCarthageInSpain,
 	tConquestHannibalInItaly,
 	tConquestParthiaMesopotamia,
-	tConquestFatamidEgypt,
+	tConquestFatimidEgypt,
 	tConquestMongolsBaghdad,
 	#tConquestMongolsKiev, # shouldn't need this since the Mongols will conquer the Khazars and then attack the Rus
 	tConquestTimuridsPunjab,
@@ -632,6 +633,9 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 			# Shia conquerors get free missionary
 			if pPlayer.getStateReligion() == iShia:
 				makeUnits(iPlayer, iShiaMissionary, tPlot, 1)
+
+			if iCiv == iMamluks:
+				makeUnits(iPlayer, iCamelArcher, tPlot, 2)
 
 	# if human, select to orient player
 	if pPlayer.isHuman():

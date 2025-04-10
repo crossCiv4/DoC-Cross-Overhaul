@@ -1299,7 +1299,7 @@ def specificName(iPlayer):
 		if iReligion == iIslam or iReligion == iShia:
 			return "TXT_KEY_CIV_SPAIN_AL_ANDALUS"
 	
-		bSpain = not player(iMoors).isExisting() or not player(iMoors).getCapitalCity() in plots.region(rIberia)
+		bSpain = isSpainPeriod(iPlayer)
 	
 		if bSpain:
 			if not player(iPortugal).isExisting() or not player(iPortugal).getCapitalCity() in plots.region(rIberia):
