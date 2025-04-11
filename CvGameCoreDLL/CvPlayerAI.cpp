@@ -3081,12 +3081,14 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 		CvUnit* pLoopUnit;
 		CvPlot* pLoopPlot;
 		int iCount;
+		int iDefenders;
 		int iDistance;
 		int iBorderDanger;
 		int iDX, iDY;
 		CvArea *pPlotArea = pPlot->area();
 
 		iCount = 0;
+		iDefenders = 0;
 		iBorderDanger = 0;
 
 			/*if (iRange == -1)
@@ -3156,6 +3158,12 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 										}
 									}
 								}
+
+								// Leoreth: city defenders need to stay behind - no danger
+								if (pLoopPlot->isCity() && pLoopUnit->getGroup()->AI_getMissionAIType() == MISSIONAI_GUARD_CITY && !pLoopUnit->isHuman())
+								{
+									iDefenders++;
+								}
 							}
 						}
 					}
@@ -3172,9 +3180,9 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 		}
 
 		// Leoreth: if plot is a city, reflect that its danger is reduced by the need to defend the city
-		if (pPlot->isCity())
+		if (iCount > 1 && iDefenders > 0)
 		{
-			iCount = std::max(0, iCount - pPlot->getPlotCity()->AI_minDefenders());
+			iCount = std::max(1, iCount - std::min(iDefenders, pPlot->getPlotCity()->AI_minDefenders()));
 		}
 
 		pPlot->setPlayerDangerCache(getID(), iRange, std::min(iCount, MAX_SHORT));

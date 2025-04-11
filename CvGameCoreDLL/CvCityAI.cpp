@@ -1242,6 +1242,21 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 
+	// Leoreth: second additional settler check
+	if (iNumSettlers == 0 && iNumSettlers < iMaxSettlers && GET_PLAYER(getOwnerINLINE()).AI_getNumTrainAIUnits(UNITAI_SETTLE) == 0)
+	{
+		if (iAreaBestFoundValue > iMinFoundValue && iAreaBestSettlerValue >= 10)
+		{
+			if (!bFinancialTrouble && !bMajorWar && happyLevel() <= unhappyLevel())
+			{
+				if (AI_chooseUnit(UNITAI_SETTLE))
+				{
+					return;
+				}
+			}
+		}
+	}
+
 	if	(!bLandWar && !bMajorWar && !bAssault && (iTargetCulturePerTurn > getCommerceRate(COMMERCE_CULTURE)))
 	{
 		//if (GC.getGameINLINE().getSorenRandNum(bAggressiveAI ? 3 : 2, "AI Culture Build") == 0) //Rhye
