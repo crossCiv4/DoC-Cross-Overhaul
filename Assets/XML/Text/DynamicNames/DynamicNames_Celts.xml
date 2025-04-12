@@ -102,11 +102,11 @@
 		<Spanish>%s2 Petty Kingdoms</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CELTS_SCOTS_IRISH_ADJECTIVE</Tag>
-		<English>Scots-Irish</English>
-		<French>Scots-Irish</French>
-		<German>Scots-Irish</German>
-		<Italian>Scots-Irish</Italian>
-		<Spanish>Scots-Irish</Spanish>
+		<Tag>TXT_KEY_CIV_CELTS_IRISH_ADJECTIVE</Tag>
+		<English>Irish</English>
+		<French>Irish</French>
+		<German>Irish</German>
+		<Italian>Irish</Italian>
+		<Spanish>Irish</Spanish>
 	</TEXT>
 </Civ4GameText>

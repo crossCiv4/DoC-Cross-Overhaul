@@ -1543,7 +1543,7 @@ def specificAdjective(iPlayer):
 
 	elif iCiv == iCelts:
 		if bResurrected:
-			return "TXT_KEY_CIV_CELTS_SCOTS_IRISH_ADJECTIVE"
+			return "TXT_KEY_CIV_CELTS_IRISH_ADJECTIVE"
 
 	elif iCiv == iArmenia:
 		if bResurrected and iEra == iMedieval:
