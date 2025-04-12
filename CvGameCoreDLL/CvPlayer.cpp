@@ -18466,7 +18466,7 @@ void CvPlayer::processCivics(CivicTypes eCivic, int iChange)
 	for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		changeSpecialistValidCount(((SpecialistTypes)iI), ((GC.getCivicInfo(eCivic).isSpecialistValid(iI)) ? iChange : 0));
-		changeSpecialistExtraCount((SpecialistTypes)iI, GC.getCivicInfo(eCivic).getSpecialistCount(iI));
+		changeSpecialistExtraCount((SpecialistTypes)iI, GC.getCivicInfo(eCivic).getSpecialistCount(iI) * iChange);
 	}
 
 	for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
