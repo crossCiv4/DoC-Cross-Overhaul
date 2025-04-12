@@ -141,7 +141,7 @@ dSpecificVassalTitles = deepdict({
 		iByzantium : "TXT_KEY_CIV_FRENCH_BYZANTIUM",
 		iNorse : "TXT_KEY_CIV_FRANCE_DEPARTEMENTS_OF",
 		iArabia : "TXT_KEY_MANDATE_OF",
-		#iEngland : "TXT_KEY_CIV_DUCHY_NORMANDY",
+		iEngland : "TXT_KEY_CIV_DUCHY_NORMANDY",
 		iSpain : "TXT_KEY_CIV_FRENCH_SPAIN",
 		iHolyRome : "TXT_KEY_CIV_FRENCH_HOLY_ROME",
 		iPoland : "TXT_KEY_CIV_FRENCH_POLAND",
@@ -1842,7 +1842,7 @@ def islamicTitle(iPlayer):
 	bTheocracy = civic.iLegitimacy == iTheocracy or (civic.iGovernment in [iRepublic, iElective] and civic.iReligion == iFanaticism)
 
 	# some civs have their own nomenclature, like Shahdom for Iran/Persia
-	if iCiv in [iIran, iPersia, iOttomans, iMongols, iTimurids, iKhazars, iOman]:
+	if iCiv in [iIran, iPersia, iOttomans, iMongols, iTimurids, iKhazars, iYemen, iOman]:
 		return
 
 	if iReligion == iIslam or iReligion == iShia:
