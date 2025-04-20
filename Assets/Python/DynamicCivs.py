@@ -8,10 +8,8 @@ from Core import *
 
 from Events import handler
 from Core import name as short
-from Core import adjective as civAdjective
 
 import CityNames as cn
-
 
 ### Constants ###
 
@@ -590,34 +588,7 @@ dEmpireThreshold = {
 
 lChristianity = [iCatholicism, iOrthodoxy, iProtestantism]
 
-lRespawnNameChanges = [iHolyRome, iInca, iAztecs, iMali, iTurks] # TODO: this should be covered by period
-lVassalNameChanges = [iInca, iAztecs, iTimurids] # TODO: this should be covered by period
-lChristianityNameChanges = [iInca, iAztecs] # TODO: this should be covered by period
-
 lColonies = [iMali, iEthiopia, iCongo, iSwahili, iToltecs, iAztecs, iInca, iMaya] # TODO: could be covered by more granular continental regions
-
-dNameChanges = { # TODO: this should be covered by period
-	iPhoenicia : "TXT_KEY_CIV_CARTHAGE_SHORT_DESC",
-	iAztecs : "TXT_KEY_CIV_MEXICO_SHORT_DESC",
-	iInca : "TXT_KEY_CIV_PERU_SHORT_DESC",
-	iHolyRome : "TXT_KEY_CIV_AUSTRIA_SHORT_DESC",
-	iMali : "TXT_KEY_CIV_SONGHAI_SHORT_DESC",
-	#iTimurids : "TXT_KEY_CIV_PAKISTAN_SHORT_DESC",
-	#iTimurids : "TXT_KEY_CIV_PAKISTAN_SHORT_DESC",
-	iMoors : "TXT_KEY_CIV_MOROCCO_SHORT_DESC",
-	iTurks : "TXT_KEY_CIV_UZBEKS_SHORT_DESC",
-}
-
-dAdjectiveChanges = {
-	iPhoenicia : "TXT_KEY_CIV_CARTHAGE_ADJECTIVE",
-	iAztecs : "TXT_KEY_CIV_MEXICO_ADJECTIVE",
-	iInca : "TXT_KEY_CIV_PERU_ADJECTIVE",
-	iHolyRome : "TXT_KEY_CIV_AUSTRIA_ADJECTIVE",
-	iMali : "TXT_KEY_CIV_SONGHAI_ADJECTIVE",
-	#iTimurids : "TXT_KEY_CIV_PAKISTAN_ADJECTIVE",
-	iMoors : "TXT_KEY_CIV_MOROCCO_ADJECTIVE",
-	iTurks : "TXT_KEY_CIV_UZBEKS_ADJECTIVE",
-}
 
 dStartingLeaders = [
 # 3000 BC
@@ -760,12 +731,6 @@ def onResurrection(iPlayer):
 	onRespawn(iPlayer)
 
 def onRespawn(iPlayer):
-	data.civs[civ(iPlayer)].iResurrections += 1
-	
-	if civ(iPlayer) in lRespawnNameChanges:
-		checkNameChange(iPlayer)
-		checkAdjectiveChange(iPlayer)
-		
 	setDesc(iPlayer, desc(iPlayer, defaultTitle(iPlayer)))
 	checkName(iPlayer)
 	checkLeader(iPlayer)
@@ -774,14 +739,6 @@ def onRespawn(iPlayer):
 def onVassalState(iMaster, iVassal):
 	iMasterCiv = civ(iMaster)
 	iVassalCiv = civ(iVassal)
-
-	if iVassalCiv in lVassalNameChanges:
-		# TODO: revise if this needs to be adapted
-		if iVassalCiv == iTimurids and iMasterCiv not in dCivGroups[iCivGroupEurope]: return
-	
-		data.civs[iVassalCiv].iResurrections += 1
-		checkNameChange(iVassal)
-		checkAdjectiveChange(iVassal)
 	
 	checkName(iVassal)
 
@@ -789,11 +746,6 @@ def onVassalState(iMaster, iVassal):
 def onPlayerChangeStateReligion(iPlayer, iReligion):
 	if is_minor(iPlayer):
 		return
-
-	if civ(iPlayer) in lChristianityNameChanges and iReligion in lChristianity:
-		data.civs[civ(iPlayer)].iResurrections += 1
-		checkNameChange(iPlayer)
-		checkAdjectiveChange(iPlayer)
 		
 	checkName(iPlayer)
 
@@ -803,10 +755,6 @@ def onRevolution(iPlayer):
 		return
 
 	data.civs[civ(iPlayer)].iAnarchyTurns += 1
-	
-	# TODO: revise if this needs to be adapted
-	if civ(iPlayer) == iTimurids and isRepublic(iPlayer):
-		checkNameChange(iPlayer)
 	
 	checkName(iPlayer)
 	
@@ -832,12 +780,17 @@ def onCityBuilt(city):
 def onPeriodChange(iPlayer, iPeriod):
 	iCiv = civ(iPlayer)
 	
-	if iCiv == iPhoenicia:
+	# "revert name changes"
+	if iPeriod == -1 and iCiv in [iHolyRome, iPhoenicia]:
+		setShort(iPlayer, infos.civ(iCiv).getShortDescription(0))
+		setAdjective(iPlayer, infos.civ(iCiv).getAdjective(0))
+
+	elif iCiv == iPhoenicia:
 		if iPeriod == iPeriodCarthage:
-			checkNameChange(iPlayer)
-			checkAdjectiveChange(iPlayer)
+			setShort(iPlayer, text("TXT_KEY_CIV_CARTHAGE_SHORT_DESC"))
+			setAdjective(iPlayer, text("TXT_KEY_CIV_CARTHAGE_ADJECTIVE"))
 	
-	if iCiv == iNorse:
+	elif iCiv == iNorse:
 		if iPeriod == iPeriodDenmark:
 			setShort(iPlayer, text("TXT_KEY_CIV_DENMARK_SHORT_DESC"))
 			setAdjective(iPlayer, text("TXT_KEY_CIV_DENMARK_ADJECTIVE"))
@@ -852,17 +805,17 @@ def onPeriodChange(iPlayer, iPeriod):
 				if city.getName() in ['Roskilde']: 
 					cn.renameOwnedCity(city, u"København")
 	
-	if iCiv == iTurks:
+	elif iCiv == iTurks:
 		if iPeriod == iPeriodUzbeks:
-			checkNameChange(iPlayer)
-			checkAdjectiveChange(iPlayer)
+			setShort(iPlayer, text("TXT_KEY_CIV_UZBEKS_SHORT_DESC"))
+			setAdjective(iPlayer, text("TXT_KEY_CIV_UZBEKS_SHORT_DESC"))
 			
-	if iCiv == iHolyRome:
+	elif iCiv == iHolyRome:
 		if iPeriod == iPeriodAustria:
-			checkNameChange(iPlayer)
-			checkAdjectiveChange(iPlayer)
+			setShort(iPlayer, text("TXT_KEY_CIV_AUSTRIA_SHORT_DESC"))
+			setAdjective(iPlayer, text("TXT_KEY_CIV_AUSTRIA_ADJECTIVE"))
 
-	if iCiv == iTimurids:
+	elif iCiv == iTimurids:
 		if iPeriod == iPeriodMughals:
 			setShort(iPlayer, text("TXT_KEY_CIV_MUGHALS_SHORT_DESC"))
 			setAdjective(iPlayer, text("TXT_KEY_CIV_MUGHALS_ADJECTIVE"))
@@ -870,17 +823,23 @@ def onPeriodChange(iPlayer, iPeriod):
 			setShort(iPlayer, text("TXT_KEY_CIV_PAKISTAN_SHORT_DESC"))
 			setAdjective(iPlayer, text("TXT_KEY_CIV_PAKISTAN_ADJECTIVE"))
 
-	if iCiv == iRus:
+	elif iCiv == iRus:
 		if iPeriod == iPeriodUkraine:
 			setShort(iPlayer, text("TXT_KEY_CIV_UKRAINE_SHORT_DESC"))
 			setAdjective(iPlayer, text("TXT_KEY_CIV_UKRAINE_ADJECTIVE"))
 
-	if iPeriod == -1:
-		revertNameChange(iPlayer)
-		revertAdjectiveChange(iPlayer)
+	elif iCiv == iInca:
+		if iPeriod == iPeriodPeru:
+			setShort(iPlayer, text("TXT_KEY_CIV_PERU_SHORT_DESC"))
+			setAdjective(iPlayer, text("TXT_KEY_CIV_PERU_ADJECTIVE"))
 	
+	elif iCiv == iAztecs:
+		if iPeriod == iPeriodAztecMexico:
+			setShort(iPlayer, text("TXT_KEY_CIV_MEXICO_SHORT_DESC"))
+			setAdjective(iPlayer, text("TXT_KEY_CIV_MEXICO_ADJECTIVE"))
+
 	checkName(iPlayer)
-	
+
 
 @handler("religionFounded")
 def onReligionFounded(_, iPlayer):
@@ -966,28 +925,7 @@ def capitalName(iPlayer):
 		return capital.getName()
 	
 	return short(iPlayer)
-	
-def checkNameChange(iPlayer):
-	iCiv = civ(iPlayer)
 
-	if iCiv in dNameChanges:
-		setShort(iPlayer, text(dNameChanges[iCiv]))
-	
-def checkAdjectiveChange(iPlayer):
-	iCiv = civ(iPlayer)
-	if iCiv in dAdjectiveChanges:
-		setAdjective(iPlayer, text(dAdjectiveChanges[iCiv]))
-		
-def revertNameChange(iPlayer):
-	iCiv = civ(iPlayer)
-	if iCiv in dNameChanges:
-		setShort(iPlayer, infos.civ(iCiv).getShortDescription(0))
-
-def revertAdjectiveChange(iPlayer):
-	iCiv = civ(iPlayer)
-	if iCiv in dAdjectiveChanges:
-		setAdjective(iPlayer, infos.civ(iCiv).getAdjective(0))
-	
 def getColumn(iPlayer):
 	lTechs = [infos.tech(iTech).getGridX() for iTech in range(iNumTechs) if team(iPlayer).isHasTech(iTech)]
 	if not lTechs: return 0
@@ -1988,8 +1926,8 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 	bWar = isAtWar(iPlayer)
 	bMonarchy = not (isCommunist(iPlayer) or isFascist(iPlayer) or isRepublic(iPlayer))
 
-	if iCiv == iEgypt:	
-		if slot(iMacedon) in lPreviousOwners:
+	if iCiv == iEgypt:
+		if period(iCiv) == iPeriodPtolemaicEgypt:
 			return "TXT_KEY_CIV_EGYPT_PTOLEMAIC"
 			
 		if bCityStates:
@@ -2529,6 +2467,9 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_EMPIRE_OF"
 		
 	elif iCiv == iOman:
+		if bCityStates:
+			return "TXT_KEY_TRIBAL_COUNCIL"
+
 		if iReligion in [iIslam, iShia]:
 			if bTheocracy:
 				return "TXT_KEY_CIV_IMAMATE_OF"
@@ -2538,6 +2479,9 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 				return "TXT_KEY_EMIRATE_OF"
 
 	elif iCiv == iYemen:
+		if bCityStates:
+			return "TXT_KEY_TRIBAL_COUNCIL"
+		
 		if iReligion in [iIslam, iShia]:
 			if bTheocracy:
 				return "TXT_KEY_CIV_IMAMATE_OF"
@@ -2580,8 +2524,9 @@ def leader(iPlayer):
 	iEra = pPlayer.getCurrentEra()
 	iGameEra = game.getCurrentEra()
 	
-	if iCiv == iEgypt:		
-		if getColumn(iPlayer) >= 4: return iCleopatra
+	if iCiv == iEgypt:
+		if period(iCiv) == iPeriodPtolemaicEgypt:
+			return iCleopatra
 
 	elif iCiv == iMamluks:
 		if not bMonarchy and iEra >= iGlobal: return iNasser

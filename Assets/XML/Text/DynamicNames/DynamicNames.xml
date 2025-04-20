@@ -190,6 +190,14 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRIBAL_COUNCIL</Tag>
+		<English>%s2 Tribal Council</English>
+		<French>%s2 Tribal Council</French>
+		<German>%s2 Tribal Council</German>
+		<Italian>%s2 Tribal Council</Italian>
+		<Spanish>%s2 Tribal Council</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_SOCIALIST_REPUBLIC_OF</Tag>
 		<English>Socialist Republic of %s1</English>
 		<French>

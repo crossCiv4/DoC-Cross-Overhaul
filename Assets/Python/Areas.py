@@ -98,7 +98,8 @@ iPeriodVijayanagara :	(106, 37),	# Vijayanagara
 iPeriodAustria :		(72, 59),	# Vienna
 iPeriodMughals :		tDelhi,  # Delhi
 iPeriodUkraine :		(81, 62), # Kyiv
-iPeriodPakistan:		(102, 49) # Taxila / Islamabad
+iPeriodPakistan :		(102, 49), # Taxila / Islamabad
+iPeriodPtolemaicEgypt :	(77, 44), # Alexandria
 }
 
 # new capital locations if changed during the game

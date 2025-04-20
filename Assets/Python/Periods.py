@@ -63,6 +63,8 @@ dPeriodNames = {
 	iPeriodModernIndia:				"Modern_India",
 	iPeriodUkraine:					"Ukraine",
 	iPeriodSouthAfrica:				"South_Africa",
+	iPeriodPtolemaicEgypt:			"Ptolemaic_Egypt",
+	iPeriodAztecMexico:				"Aztec_Mexico",
 }
 
 
@@ -149,7 +151,18 @@ def onResurrection(iPlayer):
 			setPeriod(iCiv, iPeriodMughals)
 		else:
 			setPeriod(iCiv, iPeriodPakistan)
+	
+	elif iCiv == iEgypt:
+		if cities.region(rEgypt).any(lambda city: 
+							   iMacedon in [city.getCivilizationType(), city.getPreviousCiv()] or 
+							   iGreece  in [city.getCivilizationType(), city.getPreviousCiv()]):
+			setPeriod(iCiv, iPeriodPtolemaicEgypt)
 
+	elif iCiv == iInca:
+		setPeriod(iInca, iPeriodPeru)
+
+	elif iCiv == iAztecs:
+		setPeriod(iAztecs, iPeriodAztecMexico)
 
 @handler("cityAcquired")
 def onCityAcquired(iOwner, iPlayer, city, bConquest):
@@ -203,6 +216,8 @@ def onVassalState(iMaster, iVassal, bVassal, bCapitulated):
 	if bVassal:
 		if iVassalCiv == iInca:
 			setPeriod(iInca, iPeriodPeru)
+		elif iVassalCiv == iAztecs:
+			setPeriod(iAztecs, iPeriodAztecMexico)
 		
 		if iVassalCiv == iChina or iVassalCiv == iChinaS:
 			if bCapitulated and iMasterCiv == iMongols:
@@ -288,3 +303,21 @@ def getNorsePeriod(iPlayer):
 	
 	# default to Denmark, for example if a government in exile
 	return iPeriodDenmark
+
+@handler("playerChangeStateReligion")
+def onPlayerChangeStateReligion(iPlayer, iReligion):
+	if is_minor(iPlayer):
+		return
+	
+	iCiv = civ(iPlayer)
+
+	if iReligion in [iOrthodoxy, iCatholicism, iProtestantism]:
+		if iCiv == iInca:
+			if period(iCiv) != iPeriodPeru:
+				data.civs[iCiv].iResurrections += 1
+				setPeriod(iInca, iPeriodPeru)
+
+		elif iCiv == iAztecs:
+			if period(iCiv) != iPeriodAztecMexico:
+				data.civs[iCiv].iResurrections += 1
+				setPeriod(iAztecs, iPeriodAztecMexico)

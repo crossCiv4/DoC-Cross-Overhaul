@@ -284,7 +284,10 @@ def getSpecialLanguages(identifier):
 		return None
 	
 	if iCiv == iInca:
-		if data.civs[iCiv].iResurrections > 0:
+		if player(iCiv).getPeriod() == iPeriodPeru:
+			return [iLangSpanish]
+	elif iCiv == iAztecs:
+		if player(iCiv).getPeriod() == iPeriodAztecMexico:
 			return [iLangSpanish]
 	elif iCiv == iPersia and (player(identifier).getStateReligion() == iShia or player(identifier).getStateReligion() == iIslam):
 		return [iLangFarsi, iLangArabic, iLangPersian]

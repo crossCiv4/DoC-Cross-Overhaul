@@ -39251,6 +39251,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=37
+	BonusType=BONUS_OBSIDIAN
 	FeatureType=FEATURE_FOREST, FeatureVariety=5
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1

@@ -1455,14 +1455,14 @@
 				</Flavor>
 			</Flavors>
 			<PrereqTech>TECH_CONTRACT</PrereqTech>
-			<iCost>30</iCost>
+			<iCost>40</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iMoves>2</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iAsset>2</iAsset>
 			<iBaseTrade>10</iBaseTrade>
-			<iTradeMultiplier>50</iTradeMultiplier>
+			<iTradeMultiplier>30</iTradeMultiplier>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_DESERT_ADAPTATION</PromotionType>
@@ -12863,6 +12863,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER</BonusType>
 				<BonusType>BONUS_IRON</BonusType>
+				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
 			<iCost>50</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -19872,6 +19873,24 @@
 			<iCost>40</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>20</iMinAreaSize>
+			<TerrainImpassables>
+				<TerrainImpassable>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<bTerrainImpassable>1</bTerrainImpassable>
+				</TerrainImpassable>
+			</TerrainImpassables>
+			<FeatureImpassables>
+				<FeatureImpassable>
+					<FeatureType>FEATURE_CAPE</FeatureType>
+					<bFeatureImpassable>1</bFeatureImpassable>
+				</FeatureImpassable>
+			</FeatureImpassables>
+			<FeaturePassableTechs>
+				<FeaturePassableTech>
+					<FeatureType>FEATURE_CAPE</FeatureType>
+					<PassableTech>TECH_COMPASS</PassableTech>
+				</FeaturePassableTech>
+			</FeaturePassableTechs>
 			<iMoves>4</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<iCombat>4</iCombat>

@@ -260,6 +260,7 @@ lCivilizations = [
 		iYemen,
 		iGold=50,
 		iStateReligion=iJudaism,
+		iAdvancedStartPoints=30,
 		lCivics=[iDespotism, iSlavery],
 		techs=techs.column(3).without(iShipbuilding, iConstruction, iArithmetics)
 	),
@@ -586,6 +587,7 @@ lCivilizations = [
 		iOman,
 		iGold=200,
 		iStateReligion=iShia,
+		iAdvancedStartPoints=60,
 		lCivics=[iMonarchy, iSlavery, iMerchantTrade, iMonasticism, iTheocracy, iThalassocracy],
 		techs=techs.column(8).without(iLimbProtection)
 	),
@@ -1183,6 +1185,7 @@ dStartingUnits = CivDict({
 		iEscort: 1,
 		iCounter: 1,
 		iHarass: 1,
+		iMissionary: 1,
 	},
 	iGhorids: {
 		iSettle: 1,
