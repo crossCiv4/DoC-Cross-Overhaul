@@ -306,6 +306,8 @@ def getSpecialLanguages(identifier):
 		return [iLangChinese]
 	elif iCiv == iTimurids and year() >= year(1900):
 		return [iLangPakistani, iLangFarsi, iLangTurkish, iLangArabic, iLangIndian]
+	elif iCiv == iEgypt and player(iCiv).getPeriod() == iPeriodPtolemaicEgypt:
+		return [iLangGreek, iLangEgyptian, iLangPersian]
 	return None
 
 
