@@ -307,6 +307,8 @@ def colonialConquest(iPlayer, tPlot):
 		iNumUnits = 2
 	elif iCiv in [iFrance, iEngland]:
 		iNumUnits = 3
+	else:
+		iNumUnits = 2
 		
 
 	# before replaceable parts (pikemen, musketeers)
