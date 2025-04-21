@@ -1057,6 +1057,9 @@ def flipUnit(unit, iNewOwner, plot):
 	
 # used: Congresses, Stability
 def relocateUnitsToCore(iPlayer, lUnits, iArmyPercent = 100, exceptions = []):
+	if lUnits is None:
+		return
+	
 	coreCities = cities.core(iPlayer).without(exceptions).owner(iPlayer)
 	coastalCities = coreCities.coastal() or cities.owner(iPlayer).without(exceptions).coastal()
 	if not coreCities:
