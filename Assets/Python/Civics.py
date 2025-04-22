@@ -67,24 +67,24 @@ def notcivics(*civics):
 	return tuple(iCivic for iCivic in infos.civics() if infos.civic(iCivic).getCivicOptionType() == iCategory and iCivic not in civics)
 
 def isCommunist(iPlayer):
-	isCommunist = False
+	retValue = False
 	civic = civics(iPlayer)
 	pPlayer = player(iPlayer)
 	
 	if civic.iLegitimacy == iVassalage:
-		isCommunist = False
+		retValue = False
 	elif civic.iEconomy == iCentralPlanning:
-		isCommunist = True
+		retValue = True
 	elif civic.iGovernment == iStateParty and civic.iSociety != iTotalitarianism and civic.iEconomy not in [iMerchantTrade, iFreeEnterprise]:
-		isCommunist = True
+		retValue = True
 		
 	# force Marxism on communist states
-	if isCommunist and not pPlayer.isHuman() and pPlayer.getStateReligion() != iMarxism and pPlayer.getConversionTimer() > 0 and not iSecularism in civics:
+	if retValue and not pPlayer.isHuman() and pPlayer.getStateReligion() != iMarxism and pPlayer.getConversionTimer() == 0 and not civic.iReligion == iSecularism:
 		pPlayer.setLastStateReligion(iMarxism)
 		pPlayer.setConversionTimer(10)
 		createMissionaries(iPlayer, 3, iMarxism)
 
-	return isCommunist
+	return retValue
 	
 def isFascist(iPlayer):
 	civic = civics(iPlayer)

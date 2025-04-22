@@ -8519,7 +8519,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_NATIONHOOD</FavoriteCivic>
+			<FavoriteCivic>CIVIC_FREE_ENTERPRISE</FavoriteCivic>
 			<FavoriteReligion>RELIGION_PROTESTANTISM</FavoriteReligion>
 			<Traits/>
 			<Flavors>
@@ -74148,7 +74148,7 @@
 			<DefensivePactRefuseAttitudeThreshold>ATTITUDE_FURIOUS</DefensivePactRefuseAttitudeThreshold>
 			<PermanentAllianceRefuseAttitudeThreshold>ATTITUDE_PLEASED</PermanentAllianceRefuseAttitudeThreshold>
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
-			<iVassalPowerModifier>0</iVassalPowerModifier>
+			<iVassalPowerModifier>20</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
 			<FavoriteCivic>CIVIC_CONSTITUTION</FavoriteCivic>
 			<FavoriteReligion>RELIGION_PROTESTANTISM</FavoriteReligion>
@@ -75277,7 +75277,7 @@
 			<VassalRefuseAttitudeThreshold>ATTITUDE_PLEASED</VassalRefuseAttitudeThreshold>
 			<iVassalPowerModifier>0</iVassalPowerModifier>
 			<iFreedomAppreciation>10</iFreedomAppreciation>
-			<FavoriteCivic>CIVIC_MULTILATERALISM</FavoriteCivic>
+			<FavoriteCivic>CIVIC_DEMOCRACY</FavoriteCivic>
 			<FavoriteReligion>NONE</FavoriteReligion>
 			<Traits/>
 			<Flavors>

@@ -35,7 +35,6 @@ lBirthOrder = [
 	iAssyria,
 	iShu,
 	iPhoenicia,
-	iPolynesia,
 	iGreece,
     iYemen,
 	iPersia,
@@ -104,7 +103,8 @@ lBirthOrder = [
 	iMexico,
 	iColombia,
 	iBrazil,
-	iCanada
+	iCanada,
+	iPolynesia,
 ]
 
 lCivOrder = lBirthOrder + [
@@ -558,7 +558,7 @@ iNubia : -1650,
 iAssyria : -1450,
 iShu : -1600,
 iPhoenicia : -1100,
-iPolynesia : -1000,
+iPolynesia : 2000,
 iGreece : -900,
 iYemen: -730,
 iPersia : -660,
@@ -685,7 +685,7 @@ iArmenia : 1050,
 iMinoans: -1130,
 iParthia: 650,
 iGhorids: 1370,
-#iSaxons: 1050,
+iSaxons: 1050,
 iTunis: 1535, # Ottoman takeover
 iVandals: 535,
 iYemen: 600,

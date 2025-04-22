@@ -157,6 +157,37 @@ class Congress:
 		self.lPossibleBribes = []
 		self.iNumBribes = 0
 		self.lBriberyOptions = []
+
+		self.dGreatPowerBiases = {
+			iAmerica: 3,
+			iFrance: 3,
+			iEngland: 3,
+			iSpain: 3,
+			iOttomans: 3,
+			iItaly: 3,
+			iGermany: 3,
+			iHolyRome: 3,
+			iRussia: 3,
+			
+			iSweden: 2,
+			iRome: 2,
+			iJapan: 2,
+			iPortugal: 2,
+
+			iNorse: 1,
+			iPoland: 1,
+			iBulgaria: 1,
+			iByzantium: 1,
+			iGreece: 1,
+			iPhoenicia: 1,
+			iSaxons: 1,
+			iMamluks: 1,
+			iCanada: 1,
+			iBrazil: 1,
+			iThailand: 1,
+			iChina: 1,
+			iChinaS: 1,
+		}
 		
 		self.introduction = popup.option(self.applyIntroduction, "TXT_KEY_CONGRESS_OK", '').build()
 			
@@ -677,7 +708,7 @@ class Congress:
 		
 		completeCityFlip(assignedCity, iPlayer, iOwner, 80, False, False, True, bPermanentCultureChange=False)
 		
-		bLimitedDefenders = player(iPlayer).isHuman() or isIsland(assignedCity)
+		bLimitedDefenders = player(iPlayer).isHuman() or isIsland((x, y))
 		iNumDefenders = bLimitedDefenders and 2 or max(2, player(iPlayer).getCurrentEra()-1)
 		createRoleUnit(iPlayer, (x, y), iDefend, iNumDefenders)
 		
@@ -1182,9 +1213,9 @@ class Congress:
 		
 	def getHighestRankedPlayers(self, lPlayers, iNumPlayers):
 		return players.of(lPlayers).highest(iNumPlayers, game.getPlayerRank)
-		
+
 	def invite(self):
-		rank = lambda x: game.getPlayerRank(x)
+		rank = lambda x: game.getPlayerRank(x) + self.dGreatPowerBiases.get(civ(x)) or 0
 		self.invites = players.none()
 		
 		if self.bPostWar:

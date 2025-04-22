@@ -38,6 +38,14 @@
 		<Spanish>Anglo-Saxons</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_ANGLES_AND_SAXONS</Tag>
+		<English>the Angles and Saxons</English>
+		<French>the Angles and Saxons</French>
+		<German>the Angles and Saxons</German>
+		<Italian>the Angles and Saxons</Italian>
+		<Spanish>the Angles and Saxons</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_ANGLO-SAXONS_DEFAULT</Tag>
 		<English>%s2 Petty Kingdoms</English>
 		<French>%s2 Petty Kingdoms</French>

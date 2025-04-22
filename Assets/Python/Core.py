@@ -1417,6 +1417,9 @@ class Plots(Locations):
 	def coastal(self):
 		return self.where(lambda p: p.isCoastalLand())
 	
+	def inland(self):
+		return self.where(lambda p: not p.isWater() and not p.isCoastalLand())
+	
 	def core(self, identifier):
 		if isinstance(identifier, Civ):
 			return self.where(lambda p: p.isCore(identifier))

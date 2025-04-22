@@ -547,7 +547,7 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>ARAB_REPUBLIC_OF</Tag>
+		<Tag>TXT_KEY_ARAB_REPUBLIC_OF</Tag>
 		<English>Arab Republic of %s1</English>
 		<French>
 			<Text>R&#233;publique arabe d'%s1</Text>

@@ -3457,7 +3457,7 @@
 			<Description>TXT_KEY_TECH_MACHINE_TOOLS</Description>
 			<Civilopedia>TXT_KEY_TECH_MACHINE_TOOLS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>3000</iCost>
+			<iCost>2900</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_INDUSTRIAL</Era>
 			<iAsset>52</iAsset>
@@ -3561,7 +3561,7 @@
 			<Description>TXT_KEY_TECH_CHEMISTRY</Description>
 			<Civilopedia>TXT_KEY_TECH_CHEMISTRY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<iCost>2500</iCost>
+			<iCost>2400</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_INDUSTRIAL</Era>
 			<iAsset>52</iAsset>
@@ -3598,7 +3598,7 @@
 			<Description>TXT_KEY_TECH_BIOLOGY</Description>
 			<Civilopedia>TXT_KEY_TECH_BIOLOGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<iCost>2700</iCost>
+			<iCost>2600</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_INDUSTRIAL</Era>
 			<iAsset>52</iAsset>

@@ -447,31 +447,6 @@ def americanWestCoastSettlement(iTech, iTeam, iPlayer):
 
 
 @handler("techAcquired")
-def russianSiberianSettlement(iTech, iTeam, iPlayer):
-	if iTech == iRailroad and civ(iPlayer) == iRussia and not player(iPlayer).isHuman():
-		siberiaPlot = plots.region(rAmur).coastal().maximum(lambda p: p.getSettlerValue(iRussia))
-		
-		convertPlotCulture(siberiaPlot, iPlayer, 100, True)
-		
-		if siberiaPlot.isCity() and siberiaPlot.getOwner() != iPlayer:
-			spawnPlot = plots.surrounding(siberiaPlot).land().passable().where(lambda p: not p.isCity()).random()
-			
-			team(iTeam).declareWar(siberiaPlot.getTeam(), True, WarPlanTypes.WARPLAN_LIMITED)
-			
-			createRoleUnit(iPlayer, spawnPlot, iCityAttack, 4)
-			createRoleUnit(iPlayer, spawnPlot, iCitySiege, 2)
-			
-			message(siberiaPlot.getOwner(), "TXT_KEY_MESSAGE_RUSSIAN_SIBERIAN_CONQUERORS", adjective(iPlayer), siberiaPlot.getPlotCity().getName(), color=iRed, location=siberiaPlot, button=infos.unit(iRifleman).getButton())
-			
-		elif isFree(iPlayer, siberiaPlot, True):
-			player(iPlayer).found(*location(siberiaPlot))
-			createRoleUnit(iPlayer, siberiaPlot, iDefend, 2)
-			
-			for plot in plots.surrounding(siberiaPlot):
-				convertPlotCulture(plot, iPlayer, 80, True)
-
-
-@handler("techAcquired")
 def tradingCompany(iTech, iTeam, iPlayer):
 	if turn() == scenarioStartTurn():
 		return
@@ -484,11 +459,12 @@ def tradingCompany(iTech, iTeam, iPlayer):
 	dCivTechMappings = CivDict({
 		iSpain: [iOptics, iExploration],
 		iPortugal: [iExploration, iOptics, iEconomics, iGeography],
-		iFrance: [iGeography, iReplaceableParts, iMeasurement, iEngine],
+		iFrance: [iGeography, iReplaceableParts, iMeasurement, iThermodynamics, iEngine, iPneumatics],
 		iEngland: [iGeography, iReplaceableParts, iMeasurement, iMicrobiology, iEngine, iPneumatics],
 		iNetherlands: [iEconomics, iGeography, iReplaceableParts, iHorticulture],
 		iOman: [iFirearms, iOptics],
 		iYemen: [iCompanies],
+		iRussia: [iRailroad, iBallistics, iAssemblyLine]
 	})
 	
 	if iCiv in dCivTechMappings.keys() and iTech in dCivTechMappings[iCiv]:
@@ -823,11 +799,8 @@ colonialAcquisitionPopup = popup.text("TXT_KEY_ASKCOLONIALCITY_MESSAGE") \
 							.option(refuseColonialAcquisition, "TXT_KEY_POPUP_NO") \
 							.build()
 
-def handleColonialAcquisition(iPlayer):
-	pPlayer = player(iPlayer)
-	iCiv = civ(iPlayer)
-	
-	targets = getColonialTargets(iPlayer, bEmpty=True)
+def handleColonialAcquisition(iPlayer, iNumCities):
+	targets = getColonialTargets(iPlayer, iNumCities, bEmpty=True)
 	if not targets:
 		return
 	
@@ -866,15 +839,36 @@ def handleColonialAcquisition(iPlayer):
 				else:
 					data.timedConquest(iPlayer, location(plot))
 
+	pPlayer = player(iPlayer)
 	iNewGold = pPlayer.getGold() - iGold
 	pPlayer.setGold(max(0, iNewGold))
 
 
 def handleColonialConquest(iPlayer):
-	targets = getColonialTargets(iPlayer)
+	iCiv = civ(iPlayer)
+
+	# per "event"
+	dNumCities = {
+		iFrance: 2,
+		iSpain: 2,
+		iEngland: 2,
+		iPortugal: 2,
+		iNetherlands: 2,
+		iOman: 1,
+		iYemen: 1,
+		iRussia: 2,
+	}
 	
-	if not targets:
-		handleColonialAcquisition(iPlayer)
+	iNumCities = dNumCities[iCiv]
+
+	# human player only gets this event once as opposed to several times
+	if player(iPlayer).isHuman():
+		iNumCities = 3
+
+	targets = getColonialTargets(iPlayer, iNumCities)
+	
+	if not targets or targets.count() < iNumCities:
+		handleColonialAcquisition(iPlayer, iNumCities - targets.count())
 		return
 
 	for plot in targets:

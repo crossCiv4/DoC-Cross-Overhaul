@@ -280,11 +280,11 @@ dMasterTitles = {
 	iTibet : "TXT_KEY_CIV_TIBETAN_VASSAL",
 	iMoors : "TXT_KEY_CIV_ARABIAN_VASSAL",
 	iSpain : "TXT_KEY_CIV_SPANISH_VASSAL",
-	iFrance : "TXT_KEY_ADJECTIVE_TITLE",
-	iEngland : "TXT_KEY_CIV_ENGLISH_VASSAL",
+	# iFrance : "TXT_KEY_ADJECTIVE_TITLE",
+	# iEngland : "TXT_KEY_CIV_ENGLISH_VASSAL",
 	iPoland : "TXT_KEY_CIV_POLISH_VASSAL",
-	iNetherlands : "TXT_KEY_ADJECTIVE_TITLE",
-	iPortugal : "TXT_KEY_ADJECTIVE_TITLE",
+	# iNetherlands : "TXT_KEY_ADJECTIVE_TITLE",
+	# iPortugal : "TXT_KEY_ADJECTIVE_TITLE",
 	iMongols : "TXT_KEY_CIV_MONGOL_VASSAL",
 	iTimurids : "TXT_KEY_CIV_MUGHAL_VASSAL",
 	iRussia : "TXT_KEY_CIV_RUSSIAN_VASSAL",
@@ -537,6 +537,7 @@ dForeignNames = deepdict({
 	iEngland : {
 		iKhmer : "TXT_KEY_CIV_ENGLISH_NAME_KHMER",
 		iTimurids : "TXT_KEY_CIV_ENGLISH_NAME_MUGHALS",
+		iCelts: "TXT_KEY_CIV_CELTS_IRELAND",
 	},
 	iRussia : {
 		iPersia : "TXT_KEY_CIV_RUSSIAN_NAME_PERSIA",
@@ -559,7 +560,7 @@ lRepublicAdj = [iBabylonia, iRome, iMoors, iSpain, iFrance, iPortugal, iInca, iI
 lSocialistRepublicOf = [iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis, iMorocco, iYemen, iOman]
 lSocialistRepublicAdj = [iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina]
 
-lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria]
+lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria, iMalays]
 lPeoplesRepublicAdj = [iDravidia, iByzantium, iMongols]
 
 # prefer all islamic republics to use the "islamic republic" name; if some names don't fit, add them as exceptions
@@ -587,8 +588,6 @@ dEmpireThreshold = {
 }
 
 lChristianity = [iCatholicism, iOrthodoxy, iProtestantism]
-
-lColonies = [iMali, iEthiopia, iCongo, iSwahili, iToltecs, iAztecs, iInca, iMaya] # TODO: could be covered by more granular continental regions
 
 dStartingLeaders = [
 # 3000 BC
@@ -1201,7 +1200,7 @@ def specificName(iPlayer):
 
 	elif iCiv == iSaxons:
 		if tPlayer.isHasTech(iNobility):
-			return "TXT_KEY_CIV_ENGLAND_SHORT_DESC"
+			return "TXT_KEY_CIV_ANGLES_AND_SAXONS"
 
 	elif iCiv == iArabia:
 		if bResurrected:
@@ -1831,10 +1830,15 @@ def vassalTitle(iPlayer, iMaster):
 	if player(iMasterCiv).getStateReligion() == iIslam or player(iMasterCiv).getStateReligion() == iShia:
 		return dMasterTitles[iArabia]
 
+	# England "Dominion" titles should only start in the Renaissance
+	if iMasterCiv == iEngland and player(iMasterCiv).getCurrentEra() >= iRenaissance:
+		return "TXT_KEY_CIV_ENGLISH_VASSAL"
+
 	sMasterTitle = dMasterTitles.get(iMasterCiv)
 	if sMasterTitle: return sMasterTitle
-		
-	if iCiv in lColonies and iMasterCiv not in lColonies:
+
+	# Colony is related to western powers, while vassal is not in Global era
+	if player(iMasterCiv).getCurrentEra() >= iRenaissance and iCiv not in dTechGroups[iTechGroupWestern] and iMasterCiv in dTechGroups[iTechGroupWestern] and player(iCiv).getCurrentEra() < iGlobal:
 		return "TXT_KEY_COLONY_OF"
 	
 	if player(iMasterCiv).getCurrentEra() <= iClassical:
@@ -1885,7 +1889,8 @@ def republicTitle(iPlayer):
 		if isControlled(iPlayer, plots.regions(rNewGranada, rAndes)):
 			return "TXT_KEY_CIV_COLOMBIA_FEDERATION_ANDES"
 	
-	if iCiv in [iMamluks, iOman, iYemen]: return key(iPlayer, "ARAB_REPUBLIC_OF")
+	if iCiv in [iMamluks, iOman, iYemen]: 
+		return "TXT_KEY_ARAB_REPUBLIC_OF"
 
 	if pPlayer.getStateReligion() == iIslam or  pPlayer.getStateReligion() == iShia:
 		if iCiv == iOttomans: return key(iPlayer, "ISLAMIC_REPUBLIC")
@@ -2258,10 +2263,13 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_KINGDOM_OF"
 
 	elif iCiv == iEngland:
-		if player(iSaxons).isAlive() or (iEra == iMedieval and len(cities.region(rBritain).owner(iEngland)) == 0):
+		if iEra == iMedieval and (
+			len(cities.region(rBritain).owner(iEngland)) == 0 or 
+			player(iSaxons).isAlive() or 
+			not (team(iSaxons).isAVassal() and civ(master(iSaxons)) == iEngland)):
 			return "TXT_KEY_CIV_DUCHY_NORMANDY"
 
-		if iEra > iMedieval and capital not in cities.core(iEngland):
+		if iEra > iRenaissance and capital not in cities.core(iEngland):
 			return "TXT_KEY_CIV_ENGLAND_EXILE"
 			
 		if iEra == iMedieval and player(iFrance).isExisting() and team(iFrance).isAVassal() and civ(master(iFrance)) == iEngland:
