@@ -169,7 +169,7 @@ def spreadReligionsRegionally():
 	spreadReligionToRegion(iMarxism, [rLowerGermany, rFrance, rBritain, rCentralEurope, rBalkans, rDenmark, rBaltics, rIberia, rPoland, rItaly], 1848, 1930, 2, 2)
 	spreadReligionToRegion(iMarxism, [rRuthenia, rRussia, rCrimea], 1870, 1930, 1, 2)
 
-	spreadReligionToRegion(iMarxism, [rRuthenia, rRussia, rFrance, rBritain, rIreland, rCentralEurope, rBalkans, rDenmark, rBaltics, rBrazil, rNewGranada, rQuebec, rSwahiliCoast, rNorthChina, rSouthChina, rManchuria, rSiberia, rIberia, rMongolia, rCaucasus, rGreatLakes, rPoland, rDravida, rCrimea, rItaly, rCaribbean, rMesoamerica, rCentralAmerica], 1930, 1980, 1, 1)
+	spreadReligionToRegion(iMarxism, [rRuthenia, rRussia, rFrance, rBritain, rIreland, rCentralEurope, rBalkans, rDenmark, rBaltics, rBrazil, rNewGranada, rQuebec, rSwahiliCoast, rNorthChina, rSouthChina, rManchuria, rSiberia, rIberia, rMongolia, rCaucasus, rGreatLakes, rPoland, rDravida, rCrimea, rItaly, rCaribbean, rMesoamerica, rCentralAmerica], 1930, 1980, 2, 1)
 
 @handler("BeginGameTurn")
 def spreadHinduismSoutheastAsia():

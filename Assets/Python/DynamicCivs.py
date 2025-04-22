@@ -554,13 +554,13 @@ dForeignNames = deepdict({
 	},
 })
 
-lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis, iMorocco, iYemen, iOman]
+lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis, iMorocco, iYemen, iOman, iZulu]
 lRepublicAdj = [iBabylonia, iRome, iMoors, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons]
 
 lSocialistRepublicOf = [iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis, iMorocco, iYemen, iOman]
 lSocialistRepublicAdj = [iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina]
 
-lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria, iMalays]
+lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria, iMalays, iZulu]
 lPeoplesRepublicAdj = [iDravidia, iByzantium, iMongols]
 
 # prefer all islamic republics to use the "islamic republic" name; if some names don't fit, add them as exceptions

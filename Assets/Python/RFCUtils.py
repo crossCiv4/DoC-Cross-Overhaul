@@ -1297,4 +1297,4 @@ def downgradeCityCottages(city):
 				plot.setUpgradeProgress(0)
 
 def isSpainPeriod(iPlayer):
-	return year() > year(dBirth[iMorocco]) and (not player(iMoors).isExisting() or master(iMoors) == iPlayer) and (not player(iMorocco).getCapitalCity() in plots.region(rIberia) or master(iMorocco) == iPlayer)
+	return year() > year(dBirth[iMorocco]) and (not player(iMoors).isExisting() or master(iMoors) == iPlayer) and (not player(iMoors).isExisting() or master(iMorocco) == iPlayer or not player(iMorocco).getCapitalCity() in plots.region(rIberia))

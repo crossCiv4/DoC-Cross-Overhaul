@@ -800,7 +800,7 @@
 			<TechPrereq>TECH_COMPANIES</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Regulated Trade.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
-			<Upkeep>UPKEEP_HIGH</Upkeep>
+			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<TradeYieldModifiers>
 				<iYield>0</iYield>
 				<iYield>25</iYield>
@@ -860,7 +860,7 @@
 			<TradeYieldModifiers>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>25</iYield>
+				<iYield>33</iYield>
 			</TradeYieldModifiers>
 			<SpecialistValids>
 				<SpecialistValid>
@@ -868,6 +868,16 @@
 					<bValid>1</bValid>
 				</SpecialistValid>
 			</SpecialistValids>
+			<SpecialistTypeExtraYields>
+				<SpecialistTypeExtraYield>
+					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</SpecialistTypeExtraYield>
+			</SpecialistTypeExtraYields>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDINGCLASS_FACTORY</BuildingType>
@@ -892,7 +902,7 @@
 			<TechPrereq>TECH_LABOUR_UNIONS</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/State_Property.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
-			<Upkeep>UPKEEP_MEDIUM</Upkeep>
+			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<BuildingProductionModifiers>
  				<BuildingProductionModifier>
  					<BuildingType>BUILDINGCLASS_FACTORY</BuildingType>
@@ -959,7 +969,7 @@
 			<TechPrereq>TECH_SOCIAL_SERVICES</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Public Welfare.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
-			<Upkeep>UPKEEP_HIGH</Upkeep>
+			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iCorporationUnhappinessModifier>-50</iCorporationUnhappinessModifier>
 			<SpecialistExtraYields>
 				<iYield>0</iYield>

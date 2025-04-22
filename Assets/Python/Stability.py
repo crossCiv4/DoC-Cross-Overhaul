@@ -918,7 +918,7 @@ def getCivicStability(iPlayer, civics=None):
 		if iStateParty in civics: iStability += 5
 		if iDespotism in civics: iStability += 3
 		if iStratocracy in civics: iStability += 3
-		if iCentralPlanning in civics: iStability += 3
+		if iRegulatedTrade in civics: iStability += 3
 		if iDemocracy in civics: iStability -= 3
 		if iConstitution in civics: iStability -= 5
 		if iSecularism in civics: iStability += 2
@@ -927,7 +927,6 @@ def getCivicStability(iPlayer, civics=None):
 		if iHegemony in civics: iStability += 2
 		
 	if iCentralPlanning in civics:
-		if iEgalitarianism in civics: iStability += 2
 		if iStateParty in civics: iStability += 2
 		if iBureaucracy in civics: iStability += 2
 		

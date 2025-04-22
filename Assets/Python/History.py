@@ -457,7 +457,7 @@ def tradingCompany(iTech, iTeam, iPlayer):
 	iCiv = civ(iPlayer)
 
 	dCivTechMappings = CivDict({
-		iSpain: [iOptics, iExploration],
+		iSpain: [iOptics, iGeography],
 		iPortugal: [iExploration, iOptics, iEconomics, iGeography],
 		iFrance: [iGeography, iReplaceableParts, iMeasurement, iThermodynamics, iEngine, iPneumatics],
 		iEngland: [iGeography, iReplaceableParts, iMeasurement, iMicrobiology, iEngine, iPneumatics],

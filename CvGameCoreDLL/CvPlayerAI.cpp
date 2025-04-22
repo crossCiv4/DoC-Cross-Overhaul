@@ -10793,13 +10793,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 			iValue += 15 * -getStabilityParameter(PARAMETER_RELIGION);
 		}
 	}
-	else if (eCivic == CIVIC_CENTRAL_PLANNING)
-	{
-		if (getStabilityParameter(PARAMETER_ECONOMIC_GROWTH) < 15)
-		{
-			iValue += 200;
-		}
-	}
 	else if (eCivic == CIVIC_ISOLATIONISM)
 	{
 		if (getStabilityParameter(PARAMETER_RELATIONS) < -10)
@@ -10883,7 +10876,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	case CIVIC_TOTALITARIANISM:
 	case CIVIC_EGALITARIANISM:
 	case CIVIC_FREE_ENTERPRISE:
-	case CIVIC_CENTRAL_PLANNING:
+	// case CIVIC_CENTRAL_PLANNING:
 	case CIVIC_NATIONHOOD:
 	case CIVIC_DEMOCRACY:
 		iValue *= 6;
@@ -10897,6 +10890,16 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		{
 			iValue *= 6;
 			iValue /= 5;
+		}
+	// nerf attractiveness of some "old" civics in global era
+	case CIVIC_SLAVERY:
+	case CIVIC_VASSALAGE:
+	case CIVIC_MANORIALISM:
+	case CIVIC_REDISTRIBUTION:
+		if (getCurrentEra() >= ERA_GLOBAL)
+		{
+			iValue *= 3;
+			iValue /= 4;
 		}
 	default:
 		break;

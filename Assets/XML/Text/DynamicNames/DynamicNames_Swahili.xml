@@ -41,4 +41,20 @@
 		<Italian>Kilwa Sultanate</Italian>
 		<Spanish>Kilwa Sultanate</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SWAHILI_COMMUNIST</Tag>
+		<English>People's Republic of Kenya</English>
+		<French>People's Republic of Kenya</French>
+		<German>People's Republic of Kenya</German>
+		<Italian>People's Republic of Kenya</Italian>
+		<Spanish>People's Republic of Kenya</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SWAHILI_REPUBLIC</Tag>
+		<English>Republic of Kenya</English>
+		<French>Republic of Kenya</French>
+		<German>Republic of Kenya</German>
+		<Italian>Republic of Kenya</Italian>
+		<Spanish>Republic of Kenya</Spanish>
+	</TEXT>
 </Civ4GameText>

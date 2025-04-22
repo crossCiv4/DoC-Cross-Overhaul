@@ -2444,7 +2444,7 @@
 			<Description>TXT_KEY_TECH_CARTOGRAPHY</Description>
 			<Civilopedia>TXT_KEY_TECH_CARTOGRAPHY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>950</iCost>
+			<iCost>1050</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_MEDIEVAL</Era>
 			<iAsset>36</iAsset>
@@ -2684,7 +2684,7 @@
 			<Description>TXT_KEY_TECH_EXPLORATION</Description>
 			<Civilopedia>TXT_KEY_TECH_EXPLORATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>1100</iCost>
+			<iCost>1150</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_RENAISSANCE</Era>
 			<iAsset>40</iAsset>

@@ -1215,7 +1215,7 @@ class Congress:
 		return players.of(lPlayers).highest(iNumPlayers, game.getPlayerRank)
 
 	def invite(self):
-		rank = lambda x: game.getPlayerRank(x) + self.dGreatPowerBiases.get(civ(x)) or 0
+		rank = lambda x: game.getPlayerRank(x) + (self.dGreatPowerBiases.get(civ(x)) or 0)
 		self.invites = players.none()
 		
 		if self.bPostWar:
