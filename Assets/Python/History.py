@@ -457,14 +457,14 @@ def tradingCompany(iTech, iTeam, iPlayer):
 	iCiv = civ(iPlayer)
 
 	dCivTechMappings = CivDict({
-		iSpain: [iOptics, iGeography],
-		iPortugal: [iExploration, iOptics, iEconomics, iGeography],
-		iFrance: [iGeography, iReplaceableParts, iMeasurement, iThermodynamics, iEngine, iPneumatics],
-		iEngland: [iGeography, iReplaceableParts, iMeasurement, iMicrobiology, iEngine, iPneumatics],
-		iNetherlands: [iEconomics, iGeography, iReplaceableParts, iHorticulture],
-		iOman: [iFirearms, iOptics],
+		iSpain: [iOptics, iGeography, iCombinedArms, iUrbanPlanning],
+		iPortugal: [iExploration, iOptics, iEconomics, iGeography, iCombinedArms, iUrbanPlanning, iHorticulture, iStatecraft],
+		iFrance: [iGeography, iHorticulture, iPhysics, iGeology, iReplaceableParts, iMeasurement, iThermodynamics, iEngine, iPneumatics, iRailroad, iRefrigeration],
+		iEngland: [iGeography, iHorticulture, iPhysics, iReplaceableParts, iMeasurement, iMicrobiology, iChemistry, iThermodynamics, iRailroad, iEngine, iPneumatics],
+		iNetherlands: [iEconomics, iGeography, iPhysics, iReplaceableParts, iHorticulture, iChemistry],
+		iOman: [iFirearms, iOptics, iGeography],
 		iYemen: [iCompanies],
-		iRussia: [iRailroad, iBallistics, iAssemblyLine]
+		iRussia: [iRailroad, iBallistics, iAssemblyLine, iEngine, iMicrobiology]
 	})
 	
 	if iCiv in dCivTechMappings.keys() and iTech in dCivTechMappings[iCiv]:
@@ -827,9 +827,9 @@ def handleColonialAcquisition(iPlayer, iNumCities):
 			
 		else:
 			bAccepted = is_minor(iTarget) or (rand(100) >= dPatienceThreshold[iTarget] and not team(iPlayer).isAtWar(iTarget))
-			iNumCities = targets.cities().owner(iTarget).count()
-					
-			if iNumCities >= player(iTarget).getNumCities():
+			iTargetCities = targets.cities().owner(iTarget).count()
+
+			if iTargetCities >= player(iTarget).getNumCities():
 				bAccepted = False
 			
 			for plot in targets.cities().owner(iTarget):
@@ -845,39 +845,23 @@ def handleColonialAcquisition(iPlayer, iNumCities):
 
 
 def handleColonialConquest(iPlayer):
-	iCiv = civ(iPlayer)
-
-	# per "event"
-	dNumCities = {
-		iFrance: 2,
-		iSpain: 2,
-		iEngland: 2,
-		iPortugal: 2,
-		iNetherlands: 2,
-		iOman: 1,
-		iYemen: 1,
-		iRussia: 2,
-	}
-	
-	iNumCities = dNumCities[iCiv]
-
+	iNumCities = 1
 	# human player only gets this event once as opposed to several times
 	if player(iPlayer).isHuman():
 		iNumCities = 3
 
 	targets = getColonialTargets(iPlayer, iNumCities)
 	
-	if not targets or targets.count() < iNumCities:
-		handleColonialAcquisition(iPlayer, iNumCities - targets.count())
-		return
+	if not targets:
+		handleColonialAcquisition(iPlayer, iNumCities)
+	else:
+		for plot in targets:
+			data.timedConquest(iPlayer, location(plot))
+			
+		seaPlot = plots.surrounding(targets[0]).water().random()
 
-	for plot in targets:
-		data.timedConquest(iPlayer, location(plot))
-		
-	seaPlot = plots.surrounding(targets[0]).water().random()
-
-	if seaPlot:
-		makeUnit(iPlayer, unique_unit(iPlayer, iGalleon), seaPlot)
+		if seaPlot:
+			makeUnit(iPlayer, unique_unit(iPlayer, iGalleon), seaPlot)
 
 
 def placeTribalVillage(tTL, tBR):
