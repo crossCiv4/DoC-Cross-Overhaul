@@ -2265,7 +2265,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 	elif iCiv == iEngland:
 		if iEra == iMedieval and (
 			len(cities.region(rBritain).owner(iEngland)) == 0 or 
-			(player(iSaxons).isAlive() and team(iSaxons).isAVassal() and civ(master(iSaxons)) == iEngland)):
+			(player(iSaxons).isAlive() and not (team(iSaxons).isAVassal() and civ(master(iSaxons)) == iEngland))):
 			return "TXT_KEY_CIV_DUCHY_NORMANDY"
 
 		if iEra > iRenaissance and capital not in cities.core(iEngland):
