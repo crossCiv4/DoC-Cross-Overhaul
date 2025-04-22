@@ -70,6 +70,14 @@
 		<Spanish>Celts</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_CELT_THE_CELTS</Tag>
+		<English>the Celts</English>
+		<French>the Celts</French>
+		<German>the Celts</German>
+		<Italian>the Celts</Italian>
+		<Spanish>the Celts</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_CELTS_COMMUNIST</Tag>
 		<English>%s2 Commune</English>
 		<French>%s2 Commune</French>

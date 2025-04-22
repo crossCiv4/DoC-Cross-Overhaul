@@ -1068,6 +1068,15 @@ def specificName(iPlayer):
 			if not (bEmpire and not player(iChina).isExisting()):
 				return "TXT_KEY_CIV_SHU_HAN"
 
+	elif iCiv == iCelts:
+		if bResurrected:
+			return "TXT_KEY_CIV_CELTS_IRELAND"
+		else:
+			return "TXT_KEY_CIV_CELT_THE_CELTS"
+
+	elif iCiv == iVandals:
+		return "TXT_KEY_CIV_VANDALS_THE_VANDALS_AND_ALANS"
+
 	elif iCiv == iNigeria:
 		if isCurrentCapital(iPlayer, "Benin", "Edo"):
 			return "TXT_KEY_CIV_NIGERIA_BENIN"

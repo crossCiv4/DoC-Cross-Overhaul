@@ -6365,7 +6365,7 @@
 			<PaganReligion>PAGAN_RELIGION_ATUA</PaganReligion>
 			<Impact>IMPACT_MARGINAL</Impact>
 			<Identifier>PLY</Identifier>
-			<StartingYear>2000</StartingYear>
+			<StartingYear>-1000</StartingYear>
 			<LoadingTimes>
 				<LoadingTime>1</LoadingTime>
 				<LoadingTime>0</LoadingTime>
