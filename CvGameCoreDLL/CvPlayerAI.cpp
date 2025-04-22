@@ -10891,6 +10891,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 			iValue *= 6;
 			iValue /= 5;
 		}
+		break;
 	// nerf attractiveness of some "old" civics in global era
 	case CIVIC_SLAVERY:
 	case CIVIC_VASSALAGE:
@@ -10901,6 +10902,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 			iValue *= 3;
 			iValue /= 4;
 		}
+		break;
 	default:
 		break;
 	}
