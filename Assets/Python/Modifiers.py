@@ -1046,7 +1046,7 @@ dInflationRateMods = CivDict({
 	iFrance: 60,
 	iMalays: 100,
 	iJapan: 80,
-	iSpain: 95,
+	iSpain: 85,
 	iVandals: 110,
 	iNorse: 85,
 	iTurks: 90,

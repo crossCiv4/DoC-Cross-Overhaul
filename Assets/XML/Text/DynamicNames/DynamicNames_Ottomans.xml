@@ -195,24 +195,24 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_OTTOMAN_GREECE</Tag>
-		<English>Eyalet of Rumelia</English>
+		<English>Eyalet of the Morea</English>
 		<French>
-			<Text>Eyalet de Roum&#233;lie</Text>
+			<Text>Eyalet de Morée</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Eyalet Rumelien:Eyalet Rumelien:Eyalet Rumelien</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
+			<Text>Eyalet of the Morea</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Eyalet di Rumelia</Text>
+			<Text>Eyalet di Morea</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Eyalet de Rumelia</Text>
+			<Text>Eyalet de Morea</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
