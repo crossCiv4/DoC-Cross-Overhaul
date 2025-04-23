@@ -86,4 +86,16 @@
 		<Italian>Tatar</Italian>
 		<Spanish>Tatar</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TARTARIA</Tag>
+		<English>Tartaria</English>
+		<French>
+			<Text>Tartarie</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Tartarei</German>
+		<Italian>Tartaria</Italian>
+		<Spanish>Tartaria</Spanish>
+	</TEXT>
 </Civ4GameText>

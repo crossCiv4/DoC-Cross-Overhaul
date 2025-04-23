@@ -1076,6 +1076,10 @@ def specificName(iPlayer):
 
 	elif iCiv == iVandals:
 		return "TXT_KEY_CIV_VANDALS_THE_VANDALS_AND_ALANS"
+	
+	elif iCiv == iKhazars:
+		if bResurrected:
+			return "TXT_KEY_CIV_TARTARIA"
 
 	elif iCiv == iNigeria:
 		if isCurrentCapital(iPlayer, "Benin", "Edo"):

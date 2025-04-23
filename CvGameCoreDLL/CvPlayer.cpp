@@ -448,6 +448,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iGreatSpiesThresholdModifier = 0; // Leoreth
 	m_iGreatPeopleRateModifier = 0;
 	m_iGreatGeneralRateModifier = 0;
+	m_iGreatSpyRateModifier = 0;
 	m_iDomesticGreatGeneralRateModifier = 0;
 	m_iStateReligionGreatPeopleRateModifier = 0;
 	m_iMaxGlobalBuildingProductionModifier = 0;
