@@ -8593,7 +8593,8 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 					{
 						eBuild = ((BuildTypes)iJ);
 
-						if (GC.getBuildInfo(eBuild).getImprovement() == eImprovement)
+						// Leoreth: exclude graphical only as shortcut to prevent focus on slave improvements that cannot be built
+						if (GC.getBuildInfo(eBuild).getImprovement() == eImprovement && !GC.getBuildInfo(eBuild).isGraphicalOnly())
 						{
 							if (GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild, false))
 							{
@@ -8618,13 +8619,13 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 					bValid = true;
 
 					// Leoreth: try to discourage workshops with low health
-					if (iFoodChange > 0 && !pPlot->isHills())
+					/*if (iFoodChange > 0 && !pPlot->isHills())
 					{
 						if (getImprovementHealthPercentChange(eImprovement) < 0)
 						{
 							bValid = false;
 						}
-					}
+					}*/
 
 					if (pPlot->getFeatureType() != NO_FEATURE)
 					{
@@ -8687,13 +8688,19 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 						}
 						else
 						{
-							if (eBestBuild != NO_BUILD)
+							// Leoreth: never consider improvements that disconnect bonuses
+							if (bHasBonusImprovement)
+							{
+								iValue -= 100000;
+							}
+
+							/*if (eBestBuild != NO_BUILD)
 							{
 								if ((GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT) && (GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)))
 								{
 									iValue -= 1000;
 								}
-							}
+							}*/
 						}
 					}
 				}
