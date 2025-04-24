@@ -124,6 +124,7 @@ Found = GoalDefinition(req.Found)
 NoCityConquered = GoalDefinition(req.NoCityConquered)
 NoCityLost = GoalDefinition(req.NoCityLost)
 Settle = GoalDefinition(req.Settle)
+FirstEnterEraX = GoalDefinition(req.FirstEnterEraX)
 
 
 ### TRACK REQUIREMENTS ###

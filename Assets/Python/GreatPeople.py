@@ -61,17 +61,16 @@ def create(iPlayer, iUnit, tile):
 def getAlias(iCiv, iType, iEra):
 	#TODO convert to dictionary
 	if iCiv in [iHarappa, iDravidia]: return iIndia
-	elif iCiv == iMamluks or (iCiv == iEgypt and (player(iCiv).getStateReligion() == iIslam or player(iCiv).getStateReligion() == iShia)): return iArabia
-	elif iCiv == iIran or iCiv == iParthia: return iPersia
-	elif iCiv == iMinoans or iCiv == iMacedon: return iGreece
-	elif iCiv == iChinaS or iCiv == iShu or iCiv == iXia: return iChina
+	elif iCiv in [iMamluks, iYemen, iOman] or (iCiv == iEgypt and (player(iCiv).getStateReligion() in [iIslam, iShia])): return iArabia
+	elif iCiv in [iIran, iParthia, iBuyids]: return iPersia
+	elif iCiv in [iMinoans, iMacedon]: return iGreece
+	elif iCiv in [iChinaS, iShu, iXia]: return iChina
 	elif iCiv == iGhorids: return iTimurids
 	elif iCiv == iKhazars: return iTurks
 	elif iCiv == iNigeria or iCiv == iZulu: return iMali
 	elif iCiv == iSaxons: return iEngland
-	elif iCiv == iTunis or iCiv == iMorocco: return iMoors
+	elif iCiv in [iTunis, iMorocco]: return iMoors
 	elif iCiv == iVandals: return iRome
-	elif iCiv in [iYemen, iOman]: return iArabia
 	
 	return iCiv
 	

@@ -8,8 +8,8 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 85
-(iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iByzantium, iCanada, 
+iNumCivs = 86
+(iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iBuyids, iByzantium, iCanada, 
 iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, iGhorids,
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, iKhazars,
 iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iMaya, iMexico, iMinoans, iMongols, iMoors, iMorocco,
@@ -102,6 +102,7 @@ dCivNames = {
 	iMorocco: "Morocco",
 	iYemen: "Yemen",
 	iOman: "Oman",
+	iBuyids: "Buyids",
 }
 
 dReligionNames = {
@@ -199,6 +200,7 @@ iVandals:		((64, 45),	(66, 48)),
 iMorocco:		((56, 43),  (59, 46)),
 iYemen :		((87, 34),  (92, 37)),
 iOman :			((93, 36),  (96, 41)),
+iBuyids :		((92, 43),	(94, 48)),
 }
 
 dCoreAreaExceptions = {

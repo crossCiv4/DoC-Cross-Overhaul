@@ -1185,6 +1185,7 @@ enum CivilizationTypes		// Exposed to Python
 	BRAZIL,
 	BULGARIA,
 	BURMA,
+	BUYIDS,
 	BYZANTIUM, 
 	CANADA,
 
@@ -1408,7 +1409,10 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	YAROSLAV,
 
+	ADUD_AL_DAWLA,
+
 	LE_LOI,
+	HO_CHI_MINH,
 
 	SULEIMAN_IBN_DAWUD,
 

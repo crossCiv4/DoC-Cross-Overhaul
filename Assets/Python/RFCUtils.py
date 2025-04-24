@@ -805,6 +805,9 @@ def canRespawn(iCiv):
 	if exclusive(iCiv, iParthia, iIran):
 		return False
 	
+	if exclusive(iCiv, iBuyids, iIran):
+		return False
+	
 	# Mexico cannot respawn if Aztecs are alive and vice versa
 	if exclusive(iCiv, iAztecs, iMexico):
 		return False

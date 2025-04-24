@@ -3425,6 +3425,18 @@
 		<Italian>Coastal Outpost</Italian>
 		<Spanish>Coastal Outpost</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUYID_SUFI_SHRINE</Tag>
+		<English>Sufi Shrine</English>
+		<French>
+			<Text>Sufi Shrine</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Sufi Shrine</German>
+		<Italian>Sufi Shrine</Italian>
+		<Spanish>Sufi Shrine</Spanish>
+	</TEXT>
 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_</Tag>

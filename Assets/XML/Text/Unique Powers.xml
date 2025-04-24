@@ -1402,4 +1402,20 @@
 		<Italian>+1 [ICON_FOOD] from deserts and semideserts</Italian>
 		<Spanish>+1 [ICON_FOOD] from deserts and semideserts</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_BUY_TITLE</Tag>
+		<English>The Power of Religious Legitimacy:</English>
+		<French>The Power of Religious Legitimacy:</French>
+		<German>The Power of Religious Legitimacy:</German>
+		<Italian>The Power of Religious Legitimacy:</Italian>
+		<Spanish>The Power of Religious Legitimacy:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_BUY</Tag>
+		<English>Gain -5% tech cost reduction per each owned shrine</English>
+		<French>Gain -5% tech cost reduction per each owned shrine</French>
+		<German>Gain -5% tech cost reduction per each owned shrine</German>
+		<Italian>Gain -5% tech cost reduction per each owned shrine</Italian>
+		<Spanish>Gain -5% tech cost reduction per each owned shrine</Spanish>
+	</TEXT>
 </Civ4GameText>

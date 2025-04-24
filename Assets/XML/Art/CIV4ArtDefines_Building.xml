@@ -4007,5 +4007,15 @@
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/omani_port.dds,Art/Interface/Buttons/soi_buildings.dds,3,6</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BUYID_SUFI_SHRINE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Sufi Shrine/midpalace.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/sufi_shrine.dds,Art/Interface/Buttons/soi_buildings.dds,1,7</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

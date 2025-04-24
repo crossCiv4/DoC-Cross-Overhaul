@@ -1646,6 +1646,15 @@
 		<Spanish>Seleucus I Nicator</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_ADUD_AL_DAWLA</Tag>
+		<English>Adud Al-Dawla</English>
+		<French>Adud Al-Dawla</French>
+		<German>Adud Al-Dawla</German>
+		<Italian>Adud Al-Dawla</Italian>
+		<Spanish>Adud Al-Dawla</Spanish>
+	</TEXT>
+
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>
 		<French></French>

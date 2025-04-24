@@ -338,3 +338,31 @@ class Settle(StateRequirement):
 			self.fail()
 			goal.expire()
 	
+# Third Buyid UHV goal
+class FirstEnterEraX(StateRequirement):
+
+	TYPES = (ERA,)
+	
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_BE_FIRST_ENTER"
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_X_ERA"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_ENTER_ERA_BEFORE"
+
+	def __init__(self, iEra, **options):
+		StateRequirement.__init__(self, iEra, **options)
+		
+		self.iEra = iEra
+		
+		self.handle("techAcquired", self.check_enter_era_first)
+		self.expire("techAcquired", self.expire_enter_era_first)
+		
+	def check_enter_era_first(self, goal, iTech, iPlayer):
+		iEra = infos.tech(iTech).getEra()
+		if self.iEra == iEra and self.state == POSSIBLE:
+			self.succeed()
+			goal.check()
+	
+	def expire_enter_era_first(self, goal, iTech, iPlayer):
+		iEra = infos.tech(iTech).getEra()
+		if self.iEra == iEra and self.state == POSSIBLE:
+			self.fail()
+			goal.expire()

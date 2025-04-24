@@ -234,7 +234,7 @@ WONDER_ORIGINAL_BUILDERS = {
 	iSpiralMinaret : (iArabia, 851),
 	iIslamicShrine : (iArabia, 692),
 	iHouseOfWisdom : (iArabia, 754),
-	iAlamut : (iArabia, 1090),
+	iAlamut : (iBuyids, 1090),
 	iPotalaPalace : (iTibet, 1694),
 	iBorobudur : (iJava, 825),
 	iPrambanan : (iJava, 850),

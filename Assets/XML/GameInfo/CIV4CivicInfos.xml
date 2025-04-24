@@ -783,8 +783,6 @@
 					<BuildingType>BUILDINGCLASS_MARKET</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
-			</BuildingProductionModifiers>
-			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDINGCLASS_LIGHTHOUSE</BuildingType>
 					<iProductionModifier>100</iProductionModifier>

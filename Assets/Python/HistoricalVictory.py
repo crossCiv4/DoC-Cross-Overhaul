@@ -46,6 +46,7 @@ TOLLAN = "TXT_KEY_VICTORY_NAME_TOLLAN"
 VIENNA = "TXT_KEY_VICTORY_NAME_VIENNA"
 TARNOVO = "TXT_KEY_VICTORY_NAME_TARNOVO"
 MYCENAE = "TXT_KEY_VICTORY_NAME_MYCENAE"
+BAGHDAD = "TXT_KEY_VICTORY_NAME_BAGHDAD"
 
 # city descriptors
 ANOTHER_CAPITAL = "TXT_KEY_VICTORY_NAME_ANOTHER_CAPITAL"
@@ -923,7 +924,7 @@ dGoals = {
         	by=1400,
 		),
 		AllowNone(
-			civs(iTurks, iTimurids, iMongols, iParthia, iPersia),
+			civs(iTurks, iTimurids, iMongols, iParthia, iPersia, iBuyids),
 			plots.regions(*lIndia).named(INDIA),
 			at=1500,
 		),	
@@ -1083,6 +1084,15 @@ dGoals = {
 			by=1950,
 		),
 		BrokeredPeace(12, by=2000),
+	),
+	iBuyids: (
+		All(
+			BestPopulationCity(city(tBabylon).named(BAGHDAD)),
+			BestCultureCity(city(tBabylon).named(BAGHDAD)),
+			by=1250,
+		),
+		BuildingCount(religious_buildings(shrine).named(SHRINES), 5, by=1250),
+		FirstEnterEraX(iIndustrial),
 	),
 }
 

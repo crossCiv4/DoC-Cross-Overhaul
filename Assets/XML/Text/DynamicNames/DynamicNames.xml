@@ -515,6 +515,14 @@
 		<Spanish>Imamate of %s1</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_IMAMATE_ADJECTIVE</Tag>
+		<English>%s2 Imamate</English>
+		<French>%s2 Imamate</French>
+		<German>%s2 Imamate</German>
+		<Italian>%s2 Imamate</Italian>
+		<Spanish>%s2 Imamate</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CONFEDERACY_ADJECTIVE</Tag>
 		<English>%s2 Confederacy</English>
 		<French>Conf&#233;d&#233;ration %s2</French>

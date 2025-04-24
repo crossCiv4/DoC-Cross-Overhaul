@@ -101,6 +101,7 @@ dLanguages = CivDict({
 	iMorocco: [iLangArabic, iLangFarsi, iLangMande],
 	iYemen: [iLangArabic, iLangFarsi, iLangMande],
 	iOman: [iLangArabic, iLangFarsi, iLangMande],
+	iBuyids: [iLangFarsi, iLangArabic],
 
 }, [])
 

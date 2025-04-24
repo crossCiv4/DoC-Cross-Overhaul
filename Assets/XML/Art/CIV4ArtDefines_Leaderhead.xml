@@ -1390,5 +1390,13 @@
 			<NoShaderNIF>art/LeaderHeads/seleucus/hannibal_noshader.nif</NoShaderNIF>
 			<BackgroundKFM>art/LeaderHeads/seleucus/hannibal_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ADUD_AL_DAWLA</Type>
+			<Button>,Art/Interface/Buttons/Leaderheads/AlDawla.dds,Art/Interface/Buttons/mem_leaders_atlas_soi.dds,4,4</Button>
+			<NIF>art/Leaderheads/Adud Al Dawla/Mursilis.nif</NIF>
+			<KFM>art/Leaderheads/Adud Al Dawla/peter.kfm</KFM>
+			<NoShaderNIF>art/Leaderheads/Adud Al Dawla/Mursilis.nif</NoShaderNIF>
+			<BackgroundKFM>art/LeaderHeads/Adud Al Dawla/mursilis_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

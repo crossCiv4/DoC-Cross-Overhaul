@@ -2739,6 +2739,7 @@ int CvTeam::getResearchCost(TechTypes eTech, bool bModifiers) const
 		iModifier += getSpreadResearchModifier(eTech);
 		iModifier += getTurnResearchModifier();
 		iModifier += getModernizationResearchModifier(eTech); // Leoreth: Japanese UP (Modernization)
+		iModifier += getShrineResearchModifier(); // Buyid UP
 
 		iCost *= iModifier;
 		iCost /= 100;
@@ -3021,6 +3022,23 @@ int CvTeam::getModernizationResearchModifier(TechTypes eTech) const
 	}
 
 	return 0;
+}
+
+int CvTeam::getShrineResearchModifier() const //Buyid UP: -5% tech cost for shrine.
+{
+	if (GET_PLAYER(getLeaderID()).getCivilizationType() != BUYIDS) return 0;
+
+	int shrineModifier = 0;
+
+	for (int religionInt = JUDAISM; religionInt != NUM_RELIGIONS; religionInt++)
+	{
+		ReligionTypes religion = static_cast<ReligionTypes>(religionInt);
+		if (GET_PLAYER(getLeaderID()).hasShrine(religion))
+		{
+			shrineModifier -= 5;
+		}
+	}
+	return shrineModifier;
 }
 
 int CvTeam::getResearchLeft(TechTypes eTech) const

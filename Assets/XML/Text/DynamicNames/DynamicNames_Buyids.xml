@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUYIDS_DESC</Tag>
+		<English>The Buyids</English>
+		<French>The Buyids</French>
+		<German>The Buyids</German>
+		<Italian>The Buyids</Italian>
+		<Spanish>The Buyids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUYIDS_PEOPLES</Tag>
+		<English>Daylamite Peoples</English>
+		<French>Daylamite Peoples</French>
+		<German>Daylamite Peoples</German>
+		<Italian>Daylamite Peoples</Italian>
+		<Spanish>Daylamite Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUYIDS_ADJECTIVE</Tag>
+		<English>Buyid</English>
+		<French>Buyid</French>
+		<German>Buyid</German>
+		<Italian>Buyid</Italian>
+		<Spanish>Buyid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUYIDS_SHORT_DESC</Tag>
+		<English>Buyids</English>
+		<French>Buyids</French>
+		<German>Buyids</German>
+		<Italian>Buyids</Italian>
+		<Spanish>Buyids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUYIDS_DEFAULT</Tag>
+		<English>%s2 Shahdom</English>
+		<French>%s2 Shahdom</French>
+		<German>%s2 Shahdom</German>
+		<Italian>%s2 Shahdom</Italian>
+		<Spanish>%s2 Shahdom</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUYIDS_EMPIRE</Tag>
+		<English>%s2 Caliphate</English>
+		<French>%s2 Caliphate</French>
+		<German>%s2 Caliphate</German>
+		<Italian>%s2 Caliphate</Italian>
+		<Spanish>%s2 Caliphate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUYIDS_REPUBLIC</Tag>
+		<English>Farsi Republic</English>
+		<English>Farsi Republic</English>
+		<French>Farsi Republic</French>
+		<German>Farsi Republic</German>
+		<Italian>Farsi Republic</Italian>
+		<Spanish>Farsi Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUYIDS_COMMUNIST</Tag>
+		<English>Farsi Peoples' Republic</English>
+		<English>Farsi Peoples' Republic</English>
+		<French>Farsi Peoples' Republic</French>
+		<German>Farsi Peoples' Republic</German>
+		<Italian>Farsi Peoples' Republic</Italian>
+		<Spanish>Farsi Peoples' Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUYIDS_FASCIST</Tag>
+		<English>National Islamic Farsi Republic</English>
+		<English>National Islamic Farsi Republic</English>
+		<French>National Islamic Farsi Republic</French>
+		<German>National Islamic Farsi Republic</German>
+		<Italian>National Islamic Farsi Republic</Italian>
+		<Spanish>National Islamic Farsi Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUYIDS_FARS</Tag>
+		<English>Fars</English>
+		<English>Fars</English>
+		<French>Fars</French>
+		<German>Fars</German>
+		<Italian>Fars</Italian>
+		<Spanish>Fars</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUYIDS_FARSI</Tag>
+		<English>Farsi</English>
+		<English>Farsi</English>
+		<French>Farsi</French>
+		<German>Farsi</German>
+		<Italian>Farsi</Italian>
+		<Spanish>Farsi</Spanish>
+	</TEXT>
+
+</Civ4GameText>

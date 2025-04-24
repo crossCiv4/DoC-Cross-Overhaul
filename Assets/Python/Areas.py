@@ -87,6 +87,7 @@ iVandals :		(56, 48), # Cadiz
 iMorocco :		(56, 48), # Cadiz
 iYemen :		(89, 37), # Sana'a
 iOman :			(96, 40), # Masqat
+iBuyids :		(94, 45), # Persepolis
 })
 
 dPeriodCapitals = {
@@ -114,6 +115,7 @@ iSaxons :	(58, 64),	# London
 iGhorids:	(105, 46),	# Delhi
 iVandals :	(67, 48),	# Carthage
 iYemen:		(89, 35),	# Adan
+iBuyids :	(89, 47), 	# Baghdad
 })
 
 # new capital locations on respawn
@@ -325,6 +327,7 @@ iVandals:		((66, 46),  (67, 48)),
 iMorocco:       ((56, 43),  (59, 46)),
 iYemen :		((87, 34),  (92, 37)),
 iOman :			((93, 36),  (96, 41)),
+iBuyids :		((92, 43),	(94, 48)),
 })
 
 dCoreAreaExceptions = CivDict({

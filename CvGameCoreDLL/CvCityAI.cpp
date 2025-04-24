@@ -2554,8 +2554,11 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_ATTACK] *= 2;
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 3;
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
-		aiUnitAIVal[UNITAI_MISSIONARY] *= 2;
 		aiUnitAIVal[UNITAI_ICBM] *= 2;
+		break;
+	case BUYIDS:
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
+		aiUnitAIVal[UNITAI_MISSIONARY] *= 2;
 		break;
 	case MAMLUKS:
 		aiUnitAIVal[UNITAI_ATTACK] *= 2;

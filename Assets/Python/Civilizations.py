@@ -530,6 +530,15 @@ lCivilizations = [
 		techs=techs.column(6).including(iLateenSails, iConsensus, iNobility, iSpringSteel).without(iScholarship)
 	),
 	Civilization(
+		iBuyids,
+		iGold=150,
+		iAdvancedStartPoints=60,
+		iStateReligion=iShia,
+		lEnemies=[iArabia],
+		lCivics=[iMonarchy, iSlavery, iMerchantTrade, iMonasticism, iCitizenship, iHegemony],
+		techs=techs.column(7).including(iDoctrine, iAlchemy).without(iSpringSteel, iLateenSails)
+	),
+	Civilization(
 		iMamluks,
 		iGold=300,
 		iAdvancedStartPoints=60,
@@ -1132,6 +1141,16 @@ dStartingUnits = CivDict({
 		iDefend: 3,
 		iAttack: 3,
 		iCounter: 1,
+	},
+	iBuyids: {
+		iSettle: 1,
+		iWork: 2,
+		iAttack: 6,
+		iCounter: 3,
+		iShock: 1,
+		iHarass: 2,
+		iSiege: 3,
+		iMissionary: 2,
 	},
 	iSwahili: {
 		iSettle: 2,
@@ -2910,6 +2929,15 @@ dBuildingPreferences = {
 		iMezquita: -50,
 		iUniversityOfSankore: -30,
 		iGreatAdobeMosque: -30,
+	},
+	iBuyids: {
+		iHouseOfWisdom: 40,
+		iAlamut: 30,
+		#iItchanKhala: 20,
+			
+		#iAlAzhar: -10,
+		iMezquita: -20,
+		#iOuadaneKsar: -30,
 	},
 	iMamluks: {
 		iBurjKhalifa: 40,

@@ -3936,6 +3936,18 @@
 		<Spanish>Zaydi Tribesman</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_BUYID_DAYLAMITE</Tag>
+		<English>Daylamite</English>
+		<French>
+			<Text>Daylamite</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Daylamite</German>
+		<Italian>Daylamite</Italian>
+		<Spanish>Daylamite</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
 		<English></English>
 		<French></French>

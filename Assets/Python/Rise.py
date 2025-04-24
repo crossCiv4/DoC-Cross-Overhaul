@@ -43,6 +43,7 @@ lExpansionCivs = [
 	iAssyria,
 	iFrance,
 	iEngland,
+	iBuyids,
 ]
 
 lIndependenceCivs = [
@@ -59,6 +60,7 @@ lIndependenceCivs = [
 	iByzantium,
 	iHolyRome,
 	iVandals,
+	iBuyids,
 ]
 
 lDynamicReligionCivs = [
@@ -109,7 +111,8 @@ lBirthWars = [
 	(iOttomans, iBulgaria),
 	(iMoors, iSpain),
 	(iMamluks, iArabia),
-	(iParthia, iPersia)
+	(iParthia, iPersia),
+	(iBuyids, iArabia),
 ]
 
 
@@ -823,9 +826,14 @@ class Birth(object):
 			if cities.regions(rAnatolia, rCaucasus).none(lambda city: iTurks in [city.getCivilizationType(), city.getPreviousCiv()] or iMongols in [city.getCivilizationType(), city.getPreviousCiv()]):
 				return False
 		
-		# Iran requires Persia and Parthia to be dead
+		# Arabia must've conquered a Persian city for Buyids
+		if self.iCiv == iBuyids:
+			if cities.regions(rPersia).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()]):
+				return False
+
+		# Iran requires Persia, Parthia and Buyids to be dead
 		if self.iCiv == iIran:
-			if player(iPersia).isExisting() or player(iParthia).isExisting():
+			if player(iPersia).isExisting() or player(iParthia).isExisting() or player(iBuyids).isExisting():
 				return False
 
 		# Moors & Fatimids cannot spawn if Arabia has never conquered one of the cities of the Maghreb

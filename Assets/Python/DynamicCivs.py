@@ -201,7 +201,8 @@ dSpecificVassalTitles = deepdict({
 		iByzantium : "TXT_KEY_CIV_MONGOL_BYZANTIUM",
 		iRussia : "TXT_KEY_CIV_MONGOL_RUSSIA",
 		iOttomans : "TXT_KEY_CIV_MONGOL_OTTOMANS",
-		iGhorids : "TXT_KEY_CIV_MONGOL_NAME_GHURIDS"
+		iGhorids : "TXT_KEY_CIV_MONGOL_NAME_GHURIDS",
+		iBuyids : "TXT_KEY_CIV_MONGOL_ILKHANATE",
 	},
 	iTimurids : {
 		iDravidia : "TXT_KEY_CIV_DECCAN_SULTANATES",
@@ -586,6 +587,7 @@ dEmpireThreshold = {
 	iBulgaria: 4,
 	iHittites: 3,
 	iSpain: 7,
+	iBuyids : 10,	
 }
 
 lChristianity = [iCatholicism, iOrthodoxy, iProtestantism]
@@ -675,7 +677,8 @@ dStartingLeaders = [
 	iVandals: iGaiseric,
 	iMorocco: iYaqub,
 	iYemen: iAbuKarib,
-	iOman: iAbiBinOmar
+	iOman: iAbiBinOmar,
+	iBuyids : iAdudAlDawla,
 },
 # 600 AD
 {
@@ -1076,6 +1079,13 @@ def specificName(iPlayer):
 		else:
 			return "TXT_KEY_CIV_CELT_THE_CELTS"
 
+	elif iCiv == iBuyids:
+		if iReligion == iZoroastrianism:
+			return "TXT_KEY_CIV_PERSIA_SHORT_DESC"
+
+		if iEra >= iRenaissance:
+			return "TXT_KEY_CIV_BUYIDS_FARS"
+
 	elif iCiv == iVandals:
 		return "TXT_KEY_CIV_VANDALS_THE_VANDALS_AND_ALANS"
 	
@@ -1411,6 +1421,13 @@ def specificAdjective(iPlayer):
 	elif iCiv == iMacedon:
 		if iLeader == iSeleucus:
 			return "TXT_KEY_CIV_MACEDON_SELEUCID_AJECTIVE"
+
+	elif iCiv == iBuyids:
+		if iReligion == iZoroastrianism:
+			return "TXT_KEY_CIV_PERSIA_ADJECTIVE"
+
+		if iEra >= iRenaissance:
+			return "TXT_KEY_CIV_BUYIDS_FARSI"
 
 	elif iCiv == iYemen:
 		if not iReligion in [iIslam, iShia] and iEra < iIndustrial:
@@ -1799,7 +1816,7 @@ def islamicTitle(iPlayer):
 	bTheocracy = civic.iLegitimacy == iTheocracy or (civic.iGovernment in [iRepublic, iElective] and civic.iReligion == iFanaticism)
 
 	# some civs have their own nomenclature, like Shahdom for Iran/Persia
-	if iCiv in [iIran, iPersia, iOttomans, iMongols, iTimurids, iKhazars, iYemen, iOman]:
+	if iCiv in [iIran, iPersia, iOttomans, iMongols, iTimurids, iKhazars, iYemen, iOman, iBuyids]:
 		return
 
 	if iReligion == iIslam or iReligion == iShia:
@@ -1976,7 +1993,30 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		
 			if year() >= year(dBirth[iMongols]): 
 				return "TXT_KEY_CIV_GOLDEN_HORDE"
-			
+
+	elif iCiv == iBuyids:	
+		if bCityStates:
+			return "TXT_KEY_TRIBAL_COUNCIL"
+
+		if iEra >= iRenaissance:
+			if iReligion in [iIslam, iShia]:
+				if bTheocracy:
+					return "TXT_KEY_CIV_IMAMATE_OF"
+				
+			if bEmpire:
+				return "TXT_KEY_EMPIRE_OF"
+			else:
+				return "TXT_KEY_EMIRATE_OF"
+		else:
+			if iReligion in [iIslam, iShia]:
+				if bTheocracy:
+					return "TXT_KEY_CIV_IMAMATE_ADJECTIVE"
+				
+			if bEmpire:
+				return "TXT_KEY_EMPIRE_ADJECTIVE"
+			else:
+				return "TXT_KEY_CIV_BUYIDS_DEFAULT"
+
 	elif iCiv == iZulu:
 		if bEmpire:
 			if bResurrected:
@@ -2650,7 +2690,7 @@ def leader(iPlayer):
 	elif iCiv == iByzantium:
 		if year() >= year(976): 
 			return iBasil
-		if year() >= year(520): 
+		if year() >= year(500): 
 			return iJustinian
 
 	elif iCiv == iMacedon:
