@@ -1621,7 +1621,30 @@
 		<Italian>Ibn Saud</Italian>
 		<Spanish>Ibn Saud</Spanish>
 	</TEXT>
-
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MARCUS_AURELIUS</Tag>
+		<English>Marcus Aurelius</English>
+		<French>Marcus Aurelius</French>
+		<German>Marcus Aurelius</German>
+		<Italian>Marcus Aurelius</Italian>
+		<Spanish>Marcus Aurelius</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CONSTANTINE</Tag>
+		<English>Constantine</English>
+		<French>Constantine</French>
+		<German>Constantine</German>
+		<Italian>Constantine</Italian>
+		<Spanish>Constantine</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SELEUCUS</Tag>
+		<English>Seleucus I Nicator</English>
+		<French>Seleucus I Nicator</French>
+		<German>Seleucus I Nicator</German>
+		<Italian>Seleucus I Nicator</Italian>
+		<Spanish>Seleucus I Nicator</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>

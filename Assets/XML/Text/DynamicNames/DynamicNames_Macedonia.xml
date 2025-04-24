@@ -75,15 +75,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MACEDON_PERSIA</Tag>
-		<English>Seleucid Empire</English>
-		<French>
-			<Text>Empire s&#233;leucide</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Seleucid Empire</German>
-		<Italian>Seleucid Empire</Italian>
-		<Spanish>Seleucid Empire</Spanish>
+		<English>Satrapy of Persia</English>
+		<French>Satrapy of Persia</French>
+		<German>Satrapy of Persia</German>
+		<Italian>Satrapy of Persia</Italian>
+		<Spanish>Satrapy of Persia</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MACEDON_EGYPT</Tag>
@@ -120,5 +116,17 @@
 		<German>League of Corinth</German>
 		<Italian>League of Corinth</Italian>
 		<Spanish>League of Corinth</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_SELEUCID_AJECTIVE</Tag>
+		<English>Seleucid</English>
+		<French>
+			<Text>s&#233;leucide:s&#233;leucide:s&#233;leucides:s&#233;leucides</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Seleucid</German>
+		<Italian>Seleucid</Italian>
+		<Spanish>Seleucid</Spanish>
 	</TEXT>
 </Civ4GameText>

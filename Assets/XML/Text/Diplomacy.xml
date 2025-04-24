@@ -765,6 +765,22 @@
 		<Spanish>When the prison doors are opened, the real dragon will fly out. So don't make us angry!</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CONSTANTINE_1</Tag>
+		<English>Hail. It is I, [OUR_NAME] the Great. I think you'll find that there's nobody out there who's closer to God than me? Are you jealous yet?</English>
+		<French>Hail. It is I, [OUR_NAME] the Great. I think you'll find that there's nobody out there who's closer to God than me? Are you jealous yet?</French>
+		<German>Hail. It is I, [OUR_NAME] the Great. I think you'll find that there's nobody out there who's closer to God than me? Are you jealous yet?</German>
+		<Italian>Hail. It is I, [OUR_NAME] the Great. I think you'll find that there's nobody out there who's closer to God than me? Are you jealous yet?</Italian>
+		<Spanish>Hail. It is I, [OUR_NAME] the Great. I think you'll find that there's nobody out there who's closer to God than me? Are you jealous yet?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MARCUS_AURELIUS_1</Tag>
+		<English>Greetings, ruler. I am [OUR_NAME], Imperator of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</English>
+		<French>Greetings, ruler. I am [OUR_NAME], Imperator of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</French>
+		<German>Greetings, ruler. I am [OUR_NAME], Imperator of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</German>
+		<Italian>Greetings, ruler. I am [OUR_NAME], Imperator of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</Italian>
+		<Spanish>Greetings, ruler. I am [OUR_NAME], Imperator of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_</Tag>
 		<English></English>
 		<French></French>

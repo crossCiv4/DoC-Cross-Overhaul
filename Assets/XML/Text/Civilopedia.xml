@@ -7045,6 +7045,30 @@ Your stability level can change during a stability check. As long it is higher t
 		<Italian>Abu Karib</Italian>
 		<Spanish>Abu Karib</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CONSTANTINE_PEDIA</Tag>
+		<English>Flavius Valerius Aurelius Constantinus (27 February ca. 272? - 22 May 337), commonly known as Constantine I, (among Roman Catholics) and Constantine the Great, or Saint Constantine (among Eastern Orthodox and Byzantine Catholic Christians), was an Illyrian Roman Emperor. He was proclaimed Augustus by his troops in 306, ruled an ever-growing portion of the Roman Empire until his death. Best known for being the first Christian Roman Emperor, the Edict of Milan - issued by his co-emperor Licinius - helped to put an end to institutionalized persecution of Christians in the Empire.	The Byzantine liturgical calendar, observed by the Eastern Orthodox Church and Eastern Catholic Churches of Byzantine rite, lists both Constantine and his mother Helena as saints. Although he is not included in the Latin Church's list of saints, which does recognize several other Constantines as saints, he is revered under the title "The Great" for his contributions to Christianity.In 324, Constantine announced his decision to transform Byzantium into Nova Roma and on May 11, 330, he officially proclaimed the city the new capital of the Roman Empire. The city was renamed Constantinople, The City of Constantine, after Constantine's death in 337. It would remain the capital of the Byzantine Empire for over a thousand years, a reign interrupted only briefly by its 1204 sacking and occupation in the Fourth Crusade, until it finally fell to the Ottoman Empire in 1453.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MARCUS_AURELIUS_PEDIA</Tag>
+		<English>Marcus Aurelius Antoninus Augustus (called "the Wise") (April 26, 121 - March 17, 180) was Roman Emperor from 161 to his death in 180. He was the last of the "Five Good Emperors", and is also considered one of the most important Stoic philosophers. His tenure was marked by wars in Asia against a revitalized Parthian Empire, and with Germanic tribes along the Limes Germanicus into Gaul and across the Danube. A revolt in the East, led by Avidius Cassius, failed. Marcus Aurelius' work Meditations, written on campaign between 170 and 180, is still revered as a literary monument to a government of service and duty and has been praised for its "exquisite accent and its infinite tenderness."</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SELEUCUS_PEDIA</Tag>
+		<English>[H1]Seleucus I Nicator[\H1][NEWLINE][BOLD]Founder of the Seleucid Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c. 358 BC - 281 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Seleucus I (given the surname by later generations of Nicator, i.e. Seleucus the Victor) (ca. 358 BC - 281 BC) was a Macedonian officer of Alexander the Great and one of the Diadochi. In the Wars of the Diadochi that took place after Alexander's death, Seleucus established the Seleucid dynasty and the Seleucid Empire. His kingdom would be one of the last holdouts of Alexander's former empire to Roman rule. They were only outlived by the Ptolemaic Kingdom in Egypt by roughly 34 years.[PARAGRAPH:1]After the death of Alexander, Seleucus was nominated as the satrap of Babylon in 320 BC. Antigonus forced Seleucus to flee from Babylon, but, supported by Ptolemy, he was able to return in 312 BC. Seleucus' later conquests include Persia and Media. It is assumed that he was defeated by the emperor of India, Chandragupta Maurya and accepted a matrimony alliance for 500 elephants after ceding the territories considered as part of India. Seleucus defeated Antigonus in the battle of Ipsus in 301 BC and Lysimachus in the battle of Corupedium in 281 BC. He was assassinated by Ptolemy Ceraunus during the same year. His successor was his son Antiochus I.[PARAGRAPH:1]Seleucus founded a number of new cities, including Antioch and Seleucia.</English>
+		<French>Seleucus Nicator</French>
+		<German>Seleucus Nicator</German>
+		<Italian>Seleucus Nicator</Italian>
+		<Spanish>Seleucus Nicator</Spanish>
+	</TEXT>
 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING__PEDIA</Tag>

@@ -85,4 +85,5 @@ iAmerica : 4,
 iCanada : 4,
 iMamluks: 2,
 iNigeria: 2,
+#iBuyids: 3,
 }, default=3)

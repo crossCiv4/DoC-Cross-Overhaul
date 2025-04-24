@@ -435,6 +435,7 @@ dForeignNames = deepdict({
 		iThailand : "TXT_KEY_CIV_ROMAN_NAME_THAILAND",
 		iCelts: "TXT_KEY_CIV_ROMAN_NAME_CELTS",
 		iMacedon: "TXT_KEY_CIV_ROMAN_NAME_MACEDONIA",
+		iYemen: "TXT_KEY_CIV_ROMAN_NAME_YEMEN",
 	},
 	iTurks : {
 		iByzantium : "TXT_KEY_CIV_TURKIC_NAME_BYZANTIUM",
@@ -620,7 +621,7 @@ dStartingLeaders = [
 	iToltecs : iTopiltzin,
 	iKushans: iKanishka,
 	iKorea : iWangKon,
-	iByzantium : iJustinian,
+	iByzantium : iConstantine,
 	iMalays : iSriJayanasa,
 	iNorse : iRagnar,
 	iTurks : iBumin,
@@ -680,6 +681,7 @@ dStartingLeaders = [
 {
 	iChina : iTaizong,
 	iChinaS: iGaozong,
+	iByzantium : iJustinian,
 },
 # 1700 AD
 {
@@ -1383,6 +1385,7 @@ def specificAdjective(iPlayer):
 	iEra = pPlayer.getCurrentEra()
 	iGameEra = game.getCurrentEra()
 	bWar = isAtWar(iPlayer)
+	iLeader = pPlayer.getLeader()
 	
 	bMonarchy = not isCommunist(iPlayer) and not isFascist(iPlayer) and not isRepublic(iPlayer)
 	
@@ -1404,6 +1407,10 @@ def specificAdjective(iPlayer):
 	elif iCiv == iKhazars:
 		if bResurrected:
 			return "TXT_KEY_CIV_TATARS_ADJECTIVE"
+
+	elif iCiv == iMacedon:
+		if iLeader == iSeleucus:
+			return "TXT_KEY_CIV_MACEDON_SELEUCID_AJECTIVE"
 
 	elif iCiv == iYemen:
 		if not iReligion in [iIslam, iShia] and iEra < iIndustrial:
@@ -2543,6 +2550,7 @@ def leader(iPlayer):
 	iAnarchyTurns = data.civs[iCiv].iAnarchyTurns
 	iEra = pPlayer.getCurrentEra()
 	iGameEra = game.getCurrentEra()
+	iLeader = pPlayer.getLeader()
 	
 	if iCiv == iEgypt:
 		if period(iCiv) == iPeriodPtolemaicEgypt:
@@ -2600,10 +2608,14 @@ def leader(iPlayer):
 			
 	elif iCiv == iPhoenicia:
 		if capital.getRegionID() not in [rMesopotamia, rAnatolia, rLevant]: return iHannibal
-		
+
 	elif iCiv == iRome:
-		if bEmpire or not bCityStates: return iAugustus
-		
+		if team(iPlayer).isHasTech(iEngineering):
+			if team(iPlayer).isHasTech(iPolitics):
+				return iMarcusAurelius
+			else:
+				return iAugustus
+
 	elif iCiv == iArmenia:
 		if iEra >= iIndustrial: return iAndranik
 
@@ -2634,10 +2646,20 @@ def leader(iPlayer):
 		
 	elif iCiv == iDravidia:
 		if iEra >= iRenaissance: return iKrishnaDevaRaya
-		
+
 	elif iCiv == iByzantium:
-		if year() >= year(976): return iBasil
-		
+		if year() >= year(976): 
+			return iBasil
+		if year() >= year(520): 
+			return iJustinian
+
+	elif iCiv == iMacedon:
+		# don't revert back to Alexander
+		if iLeader == iSeleucus:
+			return iSeleucus
+		elif capital.getRegionID() in [rMesopotamia, rAnatolia, rLevant]: 
+			return iSeleucus
+
 	elif iCiv == iNorse:
 		if iEra >= iGlobal: return iGerhardsen
 

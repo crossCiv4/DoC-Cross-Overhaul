@@ -1301,8 +1301,10 @@ enum LeaderHeadTypes			// Exposed to Python
 	MURSILI,
 
 	PERICLES,
-	ALEXANDER_THE_GREAT,
 	GEORGE,
+	
+	ALEXANDER_THE_GREAT,
+	SELEUCUS,
 
 	ASOKA,
 	CHANDRAGUPTA,
@@ -1324,6 +1326,7 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	JULIUS_CAESAR,
 	AUGUSTUS,
+	MARCUS_AURELIUS,
 
 	PACAL,
 
@@ -1345,6 +1348,7 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	MANSA_MUSA,
 
+	CONSTANTINE,
 	JUSTINIAN,
 	BASIL,
 

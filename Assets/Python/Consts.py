@@ -1410,12 +1410,12 @@ iVictorySecularism = 11
 
 
 #leaders
-iNumLeaders = 168
+iNumLeaders = 171
 (iLeaderBarbarian, iNativeLeader, iIndependentLeader, iRamesses, iCleopatra, iSargon, iHammurabi, iWentAntu,
-iAshurbanipal, iNasirAlDawla, iQinShiHuang, iTaizong, iHongwu, iMao, iSunQuan, iGaozong, iChiangKaishek, iMursili, iPericles, iAlexanderTheGreat, iGeorge, iAsoka, 
+iAshurbanipal, iNasirAlDawla, iQinShiHuang, iTaizong, iHongwu, iMao, iSunQuan, iGaozong, iChiangKaishek, iMursili, iPericles, iGeorge, iAlexanderTheGreat, iSeleucus, iAsoka, 
 iChandragupta, iShivaji, iGandhi, iHiram, iHannibal, iAbuFaris, iHabibBourguiba, iTaharqa, iAhoeitu, iCyrus, iDarius, iMithridates, iKhosrow, 
-iBrennus, iBrianBoru, iJuliusCaesar, iAugustus, iPacal, iRajendra, iKrishnaDevaRaya, iEzana, iZaraYaqob, iMenelik, iTopiltzin, 
-iKanishka, iWangKon, iSejong, iSuryavarman, iMansaMusa, iJustinian, iBasil, iCharlemagne, iLouis, iNapoleon, 
+iBrennus, iBrianBoru, iJuliusCaesar, iAugustus, iMarcusAurelius, iPacal, iRajendra, iKrishnaDevaRaya, iEzana, iZaraYaqob, iMenelik, iTopiltzin, 
+iKanishka, iWangKon, iSejong, iSuryavarman, iMansaMusa, iConstantine, iJustinian, iBasil, iCharlemagne, iLouis, iNapoleon, 
 iDeGaulle, iSriJayanasa, iTunPerak, iKammu, iOdaNobunaga, iMeiji, iRagnar, iChristian, iGerhardsen, iBumin, 
 iAlpArslan, iTamerlane, iHarun, iIbnSaud, iAlMuizz, iSaladin, iBaibars, iNasser, iSimeon, iSongtsen, iLobsangGyatso, iRahman, iYaqub, iMohammedV, iHayamWuruk, iSuharto, 
 iIsabella, iPhilip, iFranco, iWilliamConqueror, iElizabeth, iVictoria, iChurchill, iBarbarossa, iCharles, iFrancis, 

@@ -300,7 +300,7 @@ lConquests = [
 	tConquestMacedonPunjab,
 	tConquestAssyriaEgypt,
 	#tConquestChinaShu,
-	tConquestRomeDacia,
+	#tConquestRomeDacia,
 	tConquestItalyCrete,
 	tConquestSwedenPomerania,
 	tConquestFranceGermanyCharlemagne,

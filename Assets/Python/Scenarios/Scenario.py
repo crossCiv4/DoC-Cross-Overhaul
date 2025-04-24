@@ -27,6 +27,7 @@ LEADER_DATES = {
 	iMursili: -1600,
 	iPericles: -450,
 	iAlexanderTheGreat: -330,
+	iSeleucus: -305,
 	iAsoka: -260,
 	iChandragupta: 320,
 	iShivaji: 1680,
@@ -157,6 +158,8 @@ LEADER_DATES = {
 	iShaka: 1816,
 	iNelsonMandela: 1994,
 	iGaiseric: 428,
+	iConstantine: 330,
+	iMarcusAurelius: 161,
 }
 
 RELIGION_FOUNDING_DATES = {

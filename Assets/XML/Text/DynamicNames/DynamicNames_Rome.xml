@@ -230,6 +230,14 @@
 		<Spanish>Macedonia</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_ROMAN_NAME_YEMEN</Tag>
+		<English>Arabia Felix</English>
+		<French>Arabia Felix</French>
+		<German>Arabia Felix</German>
+		<Italian>Arabia Felix</Italian>
+		<Spanish>Arabia Felix</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_ROMAN_NAME_PHOENICIA</Tag>
 		<English>Syria</English>
 		<French>
