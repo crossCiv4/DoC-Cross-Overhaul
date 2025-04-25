@@ -359,12 +359,12 @@ def mongolConquerors(iTargetTeam):
 	iTargetCiv = civ(iTargetTeam)
 
 	if iTargetCiv in lMongolCivs:
-		if year() < year(1500) and player(iMongols).getNumCities() > 0 and data.isFirstContactMongols(iTargetCiv):
+		if year() < year(dBirth[iTimurids]) and player(iMongols).getNumCities() > 0 and data.isFirstContactMongols(iTargetCiv):
 			data.setFirstContactMongols(iTargetCiv, False)
 
 			teamTarget = team(iTargetTeam)
 			
-			lMongolRegions = [rLevant, rMesopotamia, rAnatolia, rCaucasus, rPersia, rKhorasan, rPonticSteppe, rRuthenia, rSindh]
+			lMongolRegions = [rLevant, rMesopotamia, rAnatolia, rCaucasus, rPersia, rKhorasan, rPonticSteppe, rRuthenia, rSindh, rTransoxiana, rCrimea, rVolga, rUrals, rCentralAsianSteppe, rHinduKush, rPunjab]
 			
 			mongol_cities = cities.owner(iMongols)
 			target_cities = cities.regions(*lMongolRegions).owner(iTargetCiv)

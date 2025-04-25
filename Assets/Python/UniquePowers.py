@@ -50,19 +50,21 @@ def mongolUP(iOwner, iPlayer, city, bConquest):
 	if civ(iPlayer) != iMongols:
 		return
 	
-	if not bConquest:
+	if year() > year(dBirth[iTimurids]):
 		return
-		
+
 	if player(iPlayer).isHuman():
 		return
 
-	if city.getPopulation() >= 7:
-		makeUnits(iMongols, iKeshik, city, 2, UnitAITypes.UNITAI_ATTACK_CITY)
-	elif city.getPopulation() >= 4:
-		makeUnit(iMongols, iKeshik, city, UnitAITypes.UNITAI_ATTACK_CITY)
+	#if not bConquest:
+	#	return
+		
+	if city.getPopulation() >= 3:
+		makeUnits(iMongols, iKeshik, city, int((city.getPopulation()+1) / 4), UnitAITypes.UNITAI_ATTACK_CITY)
+		makeUnits(iMongols, iMangudai, city, int((city.getPopulation()+1) / 4), UnitAITypes.UNITAI_ATTACK_CITY)
 
-	if city.getPopulation() >= 4:
-		message(slot(iMongols), 'TXT_KEY_UP_MONGOL_HORDE')
+	#if city.getPopulation() >= 4:
+	#	message(slot(iMongols), 'TXT_KEY_UP_MONGOL_HORDE')
 
 
 @handler("combatResult")

@@ -441,10 +441,10 @@ lCivilizations = [
 	),
 	Civilization(
 		iTurks,
-		iGold=150,
+		iGold=250,
 		iAdvancedStartPoints=150,
 		lCivics=[iDespotism, iSlavery, iMerchantTrade, iHegemony],
-		techs=techs.column(5).including(iRecurveBow, iArtisanry, iSteel, iPolitics).without(iEngineering, iPhilosophy, iShipbuilding, iNavigation)
+		techs=techs.column(5).including(iRecurveBow, iArtisanry, iSteel, iPolitics).without(iPhilosophy, iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iArabia,
@@ -1035,13 +1035,14 @@ dStartingUnits = CivDict({
 		iCounter: 2,
 		iHarass: 10,
 		iExplore: 1,
+		iSiege: 3,
 	},
 	iArabia: {
 		iSettle: 2,
 		iWork: 5,
-		iDefend: 1,
+		iDefend: 2,
 		iShock: 7,
-		iAttack: 7,
+		iAttack: 9,
 		iSiege: 6,
 		iCounter: 3,
 		iEscort: 1,
@@ -2067,6 +2068,10 @@ dTechPreferences = {
 		iExploration: -40,
 		iOptics: -40,
 		iGeography: -40,
+		iMachinery: 30,
+		iNobility: 20,
+		iConsensus: 10,
+		iDiscipline: -10,
 	},
 	iHittites: {
 		iBloomery: 50,

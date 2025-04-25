@@ -21,11 +21,11 @@ tRomeCarthageBR = (70, 49)
 tRomeSpainTL = (56, 48)
 tRomeSpainBR = (61, 53)
 
-iRomeGreeceYear = -150
+iRomeGreeceYear = -135
 tRomeGreeceTL = (72, 48)
 tRomeGreeceBR = (78, 55)
 
-iRomeMesopotamiaYear = -75
+iRomeMesopotamiaYear = -70
 tRomeMesopotamiaTL = (82, 44)
 tRomeMesopotamiaBR = (90, 50)
 
@@ -87,15 +87,15 @@ tSpainMoorsBR = (62, 53)
 tConquestSpainMoors = (9, iSpain, iMoors, tSpainMoorsTL, tSpainMoorsBR, 1, iSpainMoorsYear, 10)
 
 iTurksPersiaYear = 1040
-tTurksPersiaTL = (91, 43)
-tTurksPersiaBR = (98, 52)
+tTurksPersiaTL = (91, 48)
+tTurksPersiaBR = (98, 53)
 
 iTurksAnatoliaYear = 1100
 tTurksAnatoliaTL = (81, 51)
 tTurksAnatoliaBR = (92, 55)
 
 tConquestTurksPersia = (10, iTurks, iArabia, tTurksPersiaTL, tTurksPersiaBR, 4, iTurksPersiaYear, 20)
-tConquestTurksAnatolia = (11, iTurks, iByzantium, tTurksAnatoliaTL, tTurksAnatoliaBR, 5, iTurksAnatoliaYear, 20)
+tConquestTurksAnatolia = (11, iTurks, iByzantium, tTurksAnatoliaTL, tTurksAnatoliaBR, 4, iTurksAnatoliaYear, 20)
 
 iEnglandIrelandYear = 1200
 tEnglandIrelandTL = (52, 64)
@@ -274,7 +274,7 @@ lConquests = [
 	tConquestTurksPersia, 
 	tConquestTurksAnatolia, 
 	tConquestEnglandIreland,
-	tConquestMongolsPersia,
+	#tConquestMongolsPersia,
 	#tConquestChinaUnification,
 	#tConquestFranceCrusades, # if re-enabled make sure to not trigger on top of Catholic lands
 	#tConquestHolyRomeCrusades, # if re-enabled make sure to not trigger on top of Catholic lands
@@ -294,7 +294,7 @@ lConquests = [
 	tConquestHannibalInItaly,
 	tConquestParthiaMesopotamia,
 	tConquestFatimidEgypt,
-	tConquestMongolsBaghdad,
+	#tConquestMongolsBaghdad,
 	#tConquestMongolsKiev, # shouldn't need this since the Mongols will conquer the Khazars and then attack the Rus
 	tConquestTimuridsPunjab,
 	tConquestMacedonPunjab,
@@ -572,6 +572,7 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		
 		if iCiv == iMacedon:
 			lUnits  = makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits.promotion(infos.type("PROMOTION_ACCURACY"))
 			lUnits += makeUnits(iPlayer, iPhalanx, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 			lUnits += makeUnits(iPlayer, iCompanion, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 
@@ -585,14 +586,15 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 				lUnits += lMercs
 
 			# Tyre gets extra attackers, since it's a tough nut to crack and the site of a famous siege
-			if location(city) == tTyre:
-				lUnits += makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			#if location(city) == tTyre:
+			#	lUnits += makeUnits(iPlayer, iCatapult, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 
 			lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
 
 		# Hannibalic army composition
 		elif iCiv == iPhoenicia:
 			lUnits  = makeUnits(iPlayer, iCatapult, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits.promotion(infos.type("PROMOTION_ACCURACY"))
 			lUnits += makeUnits(iPlayer, iSacredBand, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 			lUnits += makeUnits(iPlayer, iOathsworn, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 			lUnits += makeUnits(iPlayer, iHoplite, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
@@ -602,6 +604,7 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 
 		elif iCiv == iPersia:
 			lUnits  = makeUnits(iPlayer, iCatapult, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			lUnits.promotion(infos.type("PROMOTION_ACCURACY"))
 			lUnits += makeUnits(iPlayer, iImmortal, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 			lUnits += makeUnits(iPlayer, iHorseman, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 			lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
@@ -621,21 +624,29 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		else:
 			dConquestUnits = {
 				iAttack: 2 + iRenaissanceExtras,
-				iCitySiege: 2 + iRenaissanceExtras,
 				iDefend: 1,
-				iShockCity: iMedievalExtras + iRenaissanceExtras + iNomadExtras,
-				iCounter: max(iMedievalExtras + iRenaissanceExtras - iNomadExtras, 0),
-				iHarass: iNomadExtras * 2
+				iShockCity: iMedievalExtras + iRenaissanceExtras,
+				iCounter: 1 + max(iMedievalExtras + iRenaissanceExtras - iNomadExtras, 0),
+				iHarass: iNomadExtras * 3
 			}
 			lUnits = createRoleUnits(iPlayer, tPlot, dConquestUnits.items())
 			lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
+
+			dSiegeUnits = {
+				iCitySiege: 2 + iRenaissanceExtras,
+			}
+
+			lSiegeUnits = createRoleUnits(iPlayer, tPlot, dSiegeUnits.items())
+			lSiegeUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"), infos.type("PROMOTION_ACCURACY"))
+
+			lUnits += lSiegeUnits
 
 			# Shia conquerors get free missionary
 			if pPlayer.getStateReligion() == iShia:
 				makeUnits(iPlayer, iShiaMissionary, tPlot, 1)
 
 			if iCiv == iMamluks:
-				makeUnits(iPlayer, iCamelArcher, tPlot, 2)
+				makeUnits(iPlayer, iCamelArcher, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 
 	# if human, select to orient player
 	if pPlayer.isHuman():

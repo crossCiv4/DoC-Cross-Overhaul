@@ -103,6 +103,7 @@ lBirthWars = [
 	(iArabia, iBabylonia),
 	(iArabia, iPersia),
 	(iArabia, iParthia),
+	(iArabia, iYemen),
 	(iMongols, iChina),
 	(iMongols, iChinaS),
 	(iMongols, iShu),
@@ -826,9 +827,14 @@ class Birth(object):
 			if cities.regions(rAnatolia, rCaucasus).none(lambda city: iTurks in [city.getCivilizationType(), city.getPreviousCiv()] or iMongols in [city.getCivilizationType(), city.getPreviousCiv()]):
 				return False
 		
-		# Arabia must've conquered a Persian city for Buyids
+		# Arabia must have conquered a city in Buyid core
 		if self.iCiv == iBuyids:
 			if cities.regions(rPersia).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()]):
+				return False
+			
+		# Arabia must have conquered a city in Ghurid core
+		if self.iCiv == iGhorids:
+			if cities.regions(rHinduKush, rSindh, rPunjab).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()] or iTurks in [city.getCivilizationType(), city.getPreviousCiv()]):
 				return False
 
 		# Iran requires Persia, Parthia and Buyids to be dead
