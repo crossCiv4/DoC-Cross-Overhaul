@@ -18,6 +18,14 @@
 		<Spanish>Haudenosaunee Peoples</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_IROQUOIS_ENDONYM_ADJECTIVE</Tag>
+		<English>Haudenosaunee</English>
+		<French>Haudenosaunee</French>
+		<German>Haudenosaunee</German>
+		<Italian>Haudenosaunee</Italian>
+		<Spanish>Haudenosaunee</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_IROQUOIS_ADJECTIVE</Tag>
 		<English>Iroquois</English>
 		<French>Iroquois</French>
@@ -40,5 +48,13 @@
 		<German>%s2 Confederacy</German>
 		<Italian>%s2 Confederacy</Italian>
 		<Spanish>%s2 Confederacy</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NORTH_AMERICA</Tag>
+		<English>%s2 North America</English>
+		<French>%s2 North America</French>
+		<German>%s2 North America</German>
+		<Italian>%s2 North America</Italian>
+		<Spanish>%s2 North America</Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -126,6 +126,7 @@ dSpecificVassalTitles = deepdict({
 		iAmerica : "TXT_KEY_CIV_SPANISH_AMERICA",
 		iArgentina : "TXT_KEY_CIV_SPANISH_ARGENTINA",
 		iColombia : "TXT_KEY_CIV_SPANISH_COLOMBIA",
+		iIroquois: "TXT_KEY_CIV_NORTH_AMERICA",
 	},
 	iFrance : {
 		iEgypt : "TXT_KEY_MANDATE_OF",
@@ -152,9 +153,10 @@ dSpecificVassalTitles = deepdict({
 		iCongo : "TXT_KEY_ADJECTIVE_TITLE",
 		iRussia : "TXT_KEY_CIV_FRANCE_DEPARTEMENTS_OF",
 		iOttomans : "TXT_KEY_MANDATE_OF",
-		iAmerica : "TXT_KEY_CIV_FRENCH_AMERICA",
+		iAmerica: "TXT_KEY_CIV_ENGLISH_AMERICA", # Thirteen Colonies
 		iNigeria: "TXT_KEY_CIV_FRENCH_NIGERIA",
 		iMoors: "TXT_KEY_CIV_FRENCH_MOORS",
+		iIroquois: "TXT_KEY_CIV_NEW_FRANCE",
 	},
 	iEngland : {
 		iEgypt : "TXT_KEY_MANDATE_OF",
@@ -176,6 +178,7 @@ dSpecificVassalTitles = deepdict({
 		iAmerica : "TXT_KEY_CIV_ENGLISH_AMERICA",
 		iNigeria: "TXT_KEY_CIV_ENGLISH_NIGERIA",
 		iTunis: "TXT_KEY_CIV_TUNIS_PROTECTORATE",
+		iIroquois: "TXT_KEY_CIV_NORTH_AMERICA",
 	},
 	iHolyRome : {
 		iItaly : "TXT_KEY_CIV_HOLY_ROMAN_ITALY",
@@ -183,12 +186,14 @@ dSpecificVassalTitles = deepdict({
 		iNetherlands : "TXT_KEY_CIV_HOLY_ROMAN_NETHERLANDS",
 		iByzantium : "TXT_KEY_CIV_HOLY_ROMAN_BYZANTIUM",
 		iPoland : "TXT_KEY_CIV_HOLY_ROMAN_POLAND",
+		iIroquois: "TXT_KEY_CIV_NORTH_AMERICA",
 	},
 	iPortugal : {
 		iIndia : "TXT_KEY_CIV_PORTUGUESE_INDIA",
 		iMali : "TXT_KEY_CIV_PORTUGUESE_MALI",
 		iCongo : "TXT_KEY_CIV_PORTUGUESE_CONGO",
 		iBrazil : "TXT_KEY_CIV_PORTUGUESE_BRAZIL",
+		iIroquois: "TXT_KEY_CIV_NORTH_AMERICA",
 	},
 	iMongols : {
 		iEgypt : "TXT_KEY_CIV_MONGOL_ILKHANATE",
@@ -214,7 +219,8 @@ dSpecificVassalTitles = deepdict({
 		iTurks : "TXT_KEY_ADJECTIVE_TITLE",
 		iPoland : "TXT_KEY_CIV_RUSSIAN_POLAND",
 		iAmerica : "TXT_KEY_ADJECTIVE_TITLE",
-		iKhazars: "TXT_KEY_CIV_RUSSIAN_KHAZARS"
+		iKhazars: "TXT_KEY_CIV_RUSSIAN_KHAZARS",
+		iIroquois: "TXT_KEY_CIV_NORTH_AMERICA",
 	},
 	iOttomans : {
 		iEgypt : "TXT_KEY_CIV_OTTOMAN_EGYPT",
@@ -236,6 +242,7 @@ dSpecificVassalTitles = deepdict({
 		iCongo : "TXT_KEY_CIV_DUTCH_CONGO",
 		iAmerica : "TXT_KEY_CIV_DUTCH_AMERICA",
 		iBrazil : "TXT_KEY_CIV_DUTCH_BRAZIL",
+		iIroquois: "TXT_KEY_CIV_NORTH_AMERICA",
 	},
 	iGermany : {
 		iHolyRome : "TXT_KEY_CIV_GERMAN_HOLY_ROME",
@@ -243,6 +250,7 @@ dSpecificVassalTitles = deepdict({
 		iEthiopia : "TXT_KEY_CIV_GERMAN_ETHIOPIA",
 		iPoland : "TXT_KEY_CIV_GERMAN_POLAND",
 		iNigeria: "TXT_KEY_CIV_GERMAN_NIGERIA",
+		iIroquois: "TXT_KEY_CIV_NORTH_AMERICA",
 	},
 	iAmerica : {
 		iEngland : "TXT_KEY_CIV_AMERICAN_ENGLAND",
@@ -251,12 +259,14 @@ dSpecificVassalTitles = deepdict({
 		iAztecs : "TXT_KEY_CIV_AMERICAN_MEXICO",
 		iMaya : "TXT_KEY_CIV_AMERICAN_MAYA",
 		iKorea : "TXT_KEY_CIV_AMERICAN_KOREA",
+		iIroquois: "TXT_KEY_CIV_RESERVATION",
 	},
 	iBrazil : {
 		iArgentina : "TXT_KEY_CIV_BRAZILIAN_ARGENTINA",
 	},
 	iSweden : {
 		iNorse: "TXT_KEY_CIV_SWEDISH_NORSE",
+		iIroquois: "TXT_KEY_CIV_NORTH_AMERICA",
 	},
 	iRome : {
 		iVandals: "TXT_KEY_CIV_ROMAN_VANDALS",
@@ -1217,7 +1227,7 @@ def specificName(iPlayer):
 		if capital in plots.region(rAnatolia):
 			return "TXT_KEY_CIV_TURKS_RUM"
 			
-		if iEra >= iRenaissance and not tPlayer.isAVassal():
+		if iEra >= iRenaissance or (bResurrected and year() >= year(dBirth[iIran])):
 			if bEmpire:
 				return "TXT_KEY_CIV_TURKS_UZBEKISTAN"
 				
@@ -1414,6 +1424,33 @@ def specificAdjective(iPlayer):
 		
 		return "TXT_KEY_CIV_MISR_ADJECTIVE"
 
+	elif iCiv == iNorse:
+		if year() < year(dBirth[iSweden]):
+			return "TXT_KEY_CIV_NORSE_ADJECTIVE"
+		else:
+			bOwnNorway = 1 <= len(cities.region(rNorway)) == len(cities.region(rNorway).owner(iPlayer))
+			bOwnDenmark = 1 <= len(cities.region(rDenmark)) == len(cities.region(rDenmark).owner(iPlayer))
+			bOwnSweden = 1 <= len(cities.region(rSweden)) == len(cities.region(rSweden).owner(iPlayer))
+			
+			if bOwnDenmark and bOwnSweden and bOwnNorway:
+				return "TXT_KEY_CIV_NORSE_SCANDINAVIAN"
+			elif bOwnDenmark and bOwnNorway:
+				return "TXT_KEY_CIV_DENMARK_ADJECTIVE"
+			elif bOwnDenmark:
+				return "TXT_KEY_CIV_DENMARK_ADJECTIVE"
+			elif bOwnNorway:
+				return "TXT_KEY_CIV_NORWAY_ADJECTIVE"
+			else:
+				# if it doesn't own Denmark nor all of Norway, odds are that it at least owns a little bit of it
+				# or is in exile
+				return "TXT_KEY_CIV_NORWAY_ADJECTIVE"
+
+	elif iCiv == iIroquois:
+		if bCapitulated and not master(iIroquois).getCurrentEra() >= iGlobal:
+			return "TXT_KEY_CIV_IROQUOIS_ADJECTIVE"
+		else:
+			return "TXT_KEY_CIV_IROQUOIS_ENDONYM_ADJECTIVE"
+
 	elif iCiv == iKhazars:
 		if bResurrected:
 			return "TXT_KEY_CIV_TATARS_ADJECTIVE"
@@ -1465,7 +1502,7 @@ def specificAdjective(iPlayer):
 	elif iCiv == iChina or (iCiv == iChinaS and bEmpire and not player(iChina).isExisting()):
 		if bMonarchy:
 			if iEra >= iMedieval:
-				if tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder):
+				if year() >= year(1000) or (tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder)):
 					return "TXT_KEY_CIV_CHINA_SONG"
 			
 				if year() >= year(600):
@@ -1488,11 +1525,11 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_CHINA_ADJECTIVE"
 
 		if bMonarchy:
-			if iEra == iMedieval and tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder):
-				return "TXT_KEY_CIV_WU_SONG"
-
 			if iEra >= iRenaissance:
 				return "TXT_KEY_CIV_WU_MING"
+
+			if iEra == iMedieval and year() >= year(1000) or (tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder)):
+				return "TXT_KEY_CIV_WU_SONG"
 
 			return "TXT_KEY_CIV_WU_WU"
 
@@ -1638,7 +1675,7 @@ def specificAdjective(iPlayer):
 		return "TXT_KEY_CIV_BULGARIA_ADJECTIVE"
 			
 	elif iCiv == iTurks:
-		if iEra >= iRenaissance:
+		if iEra >= iRenaissance or (bResurrected and year() >= year(dBirth[iIran])):
 			if bEmpire:
 				return "TXT_KEY_CIV_TURKS_SHAYBANID"
 			
@@ -1820,15 +1857,15 @@ def islamicTitle(iPlayer):
 		return
 
 	if iReligion == iIslam or iReligion == iShia:
-		if iCiv in [iSwahili, iAssyria, iMamluks, iArabia] or (iCiv == iGhorids and year() < year(dBirth[iMongols])) or (iCiv == iMorocco and getColumn(iPlayer) < 12):
-			if bTheocracy:
+		if iCiv in [iSwahili, iAssyria, iMamluks, iArabia, iTurks] or (iCiv == iGhorids and year() < year(dBirth[iMongols])) or (iCiv == iMorocco and getColumn(iPlayer) < 12):
+			if bTheocracy and bEmpire:
 				return "TXT_KEY_CALIPHATE_ADJECTIVE"
 			if bEmpire:
 				return "TXT_KEY_SULTANATE_ADJECTIVE"
 			else:
 				return "TXT_KEY_EMIRATE_ADJECTIVE"
 		else:
-			if bTheocracy:
+			if bTheocracy and bEmpire:
 				return "TXT_KEY_CALIPHATE_OF"
 			if bEmpire:
 				return "TXT_KEY_SULTANATE_OF"
@@ -2453,7 +2490,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 
 	elif iCiv == iTimurids: # similar structure to Ottoman nomenclature
 		if iReligion == iShia:
-			if bTheocracy:
+			if bTheocracy and bEmpire:
 				return "TXT_KEY_CALIPHATE_ADJECTIVE"
 
 		if iReligion == iIslam:
@@ -2471,7 +2508,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 
 	elif iCiv == iOttomans:
 		if iReligion == iShia:
-			if bTheocracy:
+			if bTheocracy and bEmpire:
 				return "TXT_KEY_CALIPHATE_ADJECTIVE"
 
 		if iReligion == iIslam:

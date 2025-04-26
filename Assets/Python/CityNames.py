@@ -68,7 +68,7 @@ dLanguages = CivDict({
 	iPortugal: [iLangPortuguese, iLangSpanish],
 	iInca: [iLangQuechua],
 	iItaly: [iLangItalian],
-	iMongols: [iLangMongolian, iLangTurkish, iLangChinese, iLangPersian],
+	iMongols: [iLangMongolian, iLangTurkish, iLangChinese, iLangFarsi],
 	iAztecs: [iLangNahuatl],
 	iTimurids: [iLangFarsi, iLangTurkish, iLangArabic, iLangIndian],
 	iThailand: [iLangThai, iLangKhmer, iLangIndonesian],
@@ -101,7 +101,7 @@ dLanguages = CivDict({
 	iMorocco: [iLangArabic, iLangFarsi, iLangMande],
 	iYemen: [iLangArabic, iLangFarsi, iLangMande],
 	iOman: [iLangArabic, iLangFarsi, iLangMande],
-	iBuyids: [iLangFarsi, iLangArabic],
+	iBuyids: [iLangFarsi, iLangArabic, iLangTurkish, iLangPersian],
 
 }, [])
 

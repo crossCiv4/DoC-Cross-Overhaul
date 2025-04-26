@@ -828,8 +828,9 @@ class Birth(object):
 				return False
 		
 		# Arabia must have conquered a city in Buyid core
+		# OR the region is owned by indies
 		if self.iCiv == iBuyids:
-			if cities.regions(rPersia).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()]):
+			if cities.regions(rPersia).none(lambda city: city.getCivilizationType() in [iArabia, iIndependent, iIndependent2, iBarbarian] or city.getPreviousCiv() == iArabia):
 				return False
 			
 		# Arabia must have conquered a city in Ghurid core

@@ -625,7 +625,7 @@ lCivilizations = [
 	Civilization(
 		iMongols,
 		iGold=250,
-		iAdvancedStartPoints=50,
+		iAdvancedStartPoints=100,
 		lCivics=[iElective, iVassalage, iSlavery, iMerchantTrade, iSyncretism, iHegemony],
 		techs=techs.column(8).including(iPaper, iCompass).without(iDoctrine)
 	),
