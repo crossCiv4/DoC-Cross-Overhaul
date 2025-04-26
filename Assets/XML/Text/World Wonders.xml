@@ -3297,5 +3297,17 @@
 		<Italian>Palace of Minos</Italian>
 		<Spanish>Palace of Minos</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALHAMBRA</Tag>
+		<English>Alhambra</English>
+		<French>
+			<Text>Alhambra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Alhambra</German>
+		<Italian>Alhambra</Italian>
+		<Spanish>Alhambra</Spanish>
+	</TEXT>
 	
 </Civ4GameText>

@@ -703,5 +703,9 @@
 			<Type>ART_DEF_MOVIE_GREAT_ADOBE_MOSQUE</Type>
 			<Path>Art/Movies/Wonders/Great_Adobe_Mosque.bik</Path>
 		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ALHAMBRA</Type>
+			<Path>Art/Movies/Wonders/alhambra.dds</Path>
+		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

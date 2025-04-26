@@ -1768,12 +1768,22 @@
 			<Button>Art/Interface/Buttons/Buildings/Byzantium_Walls.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LA_MEZQUITA</Type>
+			<Type>ART_DEF_BUILDING_ALHAMBRA</Type>
 			<LSystem>LSYSTEM_4x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Alhambra/alhambra.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/alhambra.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_LA_MEZQUITA</Type>
+			<LSystem>LSYSTEM_4x4</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.025</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Mezquita/mezquita.nif</NIF>
 			<KFM/>
 			<Button>Art/Structures/Wonders/La_Mezquita/mezquita_BTN.dds</Button>
 		</BuildingArtInfo>

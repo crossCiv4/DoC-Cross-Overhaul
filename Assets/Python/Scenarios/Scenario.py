@@ -268,6 +268,7 @@ WONDER_ORIGINAL_BUILDERS = {
 	iImageOfTheWorldSquare : (iIran, 1629),
 	iBourse : (iNetherlands, 1602),
 	iAmberRoom : (iGermany, 1700),
+	iAlhambra: (iMoors, 1238),
 }
 
 DEFAULT_CIV_DESCRIPTIONS = {}

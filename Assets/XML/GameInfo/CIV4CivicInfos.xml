@@ -123,6 +123,10 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
+					<BuildingType>BUILDINGCLASS_ALHAMBRA</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
 					<BuildingType>BUILDINGCLASS_NEWS_PRESS</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>

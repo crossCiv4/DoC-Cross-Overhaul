@@ -2932,6 +2932,7 @@ dBuildingPreferences = {
 	
 		iTopkapiPalace: -80,
 		iMezquita: -50,
+		iAlhambra: -50,
 		iUniversityOfSankore: -30,
 		iGreatAdobeMosque: -30,
 	},
@@ -2942,6 +2943,7 @@ dBuildingPreferences = {
 			
 		#iAlAzhar: -10,
 		iMezquita: -20,
+		iAlhambra: -30,
 		#iOuadaneKsar: -30,
 	},
 	iMamluks: {
@@ -2971,7 +2973,18 @@ dBuildingPreferences = {
 	},
 	iMoors : {
 		iMezquita: 100,
+		iAlhambra: 100,
 		
+		iUniversityOfSankore: -40,
+		iSpiralMinaret: -40,
+		iTopkapiPalace: -40,
+		iBlueMosque: -40,
+		iUniversityOfSankore: -30,
+		iGreatAdobeMosque: -30,
+	},
+	iMorocco : {
+		iAlhambra: 30,
+
 		iUniversityOfSankore: -40,
 		iSpiralMinaret: -40,
 		iTopkapiPalace: -40,
@@ -3000,6 +3013,7 @@ dBuildingPreferences = {
 		iNotreDame: -15,
 		iSistineChapel: -15,
 		iMezquita: 15,
+		iAlhambra: 15,
 		iMountAthos: -20,
 		iHagiaSophia: -20,
 		iOldSynagogue: -30,
@@ -3130,6 +3144,7 @@ dBuildingPreferences = {
 		iBlueMosque: -80,
 		iTopkapiPalace: -80,
 		iMezquita: -50,
+		iAlhambra: -50,
 	},
 	iGhorids: {
 		iTajMahal: 40,
@@ -3141,6 +3156,7 @@ dBuildingPreferences = {
 		iBlueMosque: -80,
 		iTopkapiPalace: -80,
 		iMezquita: -50,
+		iAlhambra: -50,
 	},
 	iThailand : {
 		iEmeraldBuddha: 40,
