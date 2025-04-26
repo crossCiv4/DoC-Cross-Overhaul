@@ -36,6 +36,7 @@ public:
 	int countNumImprovedPlots();
 	int countNumWaterPlots();
 	int countNumRiverPlots();
+	int countNumDesertPlots();
 
 	int findPopulationRank();
 	int findBaseYieldRateRank(int /*YieldTypes*/ eYield);

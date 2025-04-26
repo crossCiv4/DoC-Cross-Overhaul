@@ -3271,9 +3271,9 @@
 			<Type>ART_DEF_BUILDING_GUR_E_AMIR</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>3.7</fScale>
+			<fScale>2.0</fScale>
 			<fInterfaceScale>0.45</fInterfaceScale>
-			<NIF>Art/Structures/Wonders/Gur-e-Amir/shah.nif</NIF>
+			<NIF>Art/Structures/Wonders/Gur-e-Amir/islamic_monastery.nif</NIF>	
 			<KFM/>
 			<Button>Art/Structures/Wonders/Gur-e-Amir/gureamir.dds</Button>
 		</BuildingArtInfo>
@@ -4026,6 +4026,96 @@
 			<NIF>Art/Structures/Buildings/Sufi Shrine/midpalace.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/sufi_shrine.dds,Art/Interface/Buttons/soi_buildings.dds,1,7</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_PROPHETS_MOSQUE</Type>
+			<LSystem>LSYSTEM_4x4</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.55</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Mosque Prophet/OldMosque.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/prophets_mosque.dds,Art/Interface/Buttons/soi_buildings.dds,5,13</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_AL_AZHAR</Type>
+			<LSystem>LSYSTEM_4x4</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.4</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/mosque_of_kairouan/mosque_of_kairouan.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/alazhar.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_AIT_BENHADDOU</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.35</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Tholos/Burial_SA.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/AitBenhaddou.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ITCHAN_KHALA</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.0</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Shah_Mosque_as_Itchan_Kala/shah.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/ItchanKhala.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NAREKAVANK</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>0.52</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Narekavank/StGregoryChurch.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Narekavank.dds,Art/Interface/Buttons/soi_buildings.dds,3,13</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_IYANUWO</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>0.18</fScale>
+			<fInterfaceScale>0.18</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/BeninWalls/beninwalls.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Wonders/BeninWalls/BeninButton.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OUADANE_KSOUR</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/carthage/temple.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/OuadaneKsour.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TOMB_OF_ASKIA</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Africa/Warcollege/afr_warcollege.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/TombOfAskia.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OSUN_OSOGBO</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Osun-Osogbo/Osun.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Wonders/Osun-Osogbo/Button_OsunOsogbo.dds</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

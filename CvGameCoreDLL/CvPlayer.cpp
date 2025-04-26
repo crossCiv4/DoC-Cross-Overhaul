@@ -7188,6 +7188,11 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 	{
 		updateYield();
 	}
+	// Ait Benhaddou
+	else if (eBuilding == AIT_BENHADDOU)
+	{
+		updateYield();
+	}
 
 	// Kremlin
 	else if (eBuilding == KREMLIN)

@@ -3309,5 +3309,124 @@
 		<Italian>Alhambra</Italian>
 		<Spanish>Alhambra</Spanish>
 	</TEXT>
-	
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROPHETS_MOSQUE</Tag>
+		<English>Prophet's Mosque</English>
+		<French>
+			<Text>Prophet's Mosque</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Prophet's Mosque</German>
+		<Italian>Prophet's Mosque</Italian>
+		<Spanish>Prophet's Mosque</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AL_AZHAR</Tag>
+		<English>Al Azhar</English>
+		<French>
+			<Text>Al Azhar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Al Azhar</German>
+		<Italian>Al Azhar</Italian>
+		<Spanish>Al Azhar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AIT_BENHADDOU</Tag>
+		<English>Ait Benhaddou</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AIT_BENHADDOU_HELP</Tag>
+		<English>[ICON_BULLET]Requires a total of 5 Desert tiles in city radius[NEWLINE][ICON_BULLET]+1[ICON_PRODUCTION] on Desert and Semidesert</English>
+		<French>[ICON_BULLET]Requires a total of 5 Desert tiles in city radius[NEWLINE][ICON_BULLET]+1[ICON_PRODUCTION] sur les cases de d&#233;sert et semi-d&#233;sert</French>
+		<German>[ICON_BULLET]Requires a total of 5 tiles in city radius[NEWLINE][ICON_BULLET]+1[ICON_PRODUCTION] on Desert and Semidesert</German>
+		<Italian>[ICON_BULLET]Requires a total of 5 tiles in city radius[NEWLINE][ICON_BULLET]+1[ICON_PRODUCTION] on Desert and Semidesert</Italian>
+		<Spanish>[ICON_BULLET]Requires a total of 5 tiles in city radius[NEWLINE][ICON_BULLET]+1[ICON_PRODUCTION] on Desert and Semidesert</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ITCHAN_KHALA</Tag>
+		<English>Itchan Kala</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NAREKAVANK</Tag>
+		<English>Narekavank</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NAREKAVANK_HELP</Tag>
+		<English>Gain [ICON_GREATPEOPLE] (Great Prophet) whenever you lose a unit in combat</English>
+		<French>Gain [ICON_GREATPEOPLE] (Great Prophet) whenever you lose a unit in combat</French>
+		<German>Gain [ICON_GREATPEOPLE] (Great Prophet) whenever you lose a unit in combat</German>
+		<Italian>Gain [ICON_GREATPEOPLE] (Great Prophet) whenever you lose a unit in combat</Italian>
+		<Spanish>Gain [ICON_GREATPEOPLE] (Great Prophet) whenever you lose a unit in combat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OUADANE_KSOUR_HELP</Tag>
+		<English>[ICON_BULLET]Requires a total of 5 Desert tiles in city radius[NEWLINE][ICON_BULLET]+1 trade route per 2 desert tiles in this city</English>
+		<French>[ICON_BULLET]Requires a total of 5 Desert tiles in city radius[NEWLINE][ICON_BULLET]+1 trade route per 2 desert tiles in this city</French>
+		<German>[ICON_BULLET]Requires a total of 5 Desert tiles in city radius[NEWLINE][ICON_BULLET]+1 trade route per 2 desert tiles in this city</German>
+		<Italian>[ICON_BULLET]Requires a total of 5 Desert tiles in city radius[NEWLINE][ICON_BULLET]+1 trade route per 2 desert tiles in this city</Italian>
+		<Spanish>[ICON_BULLET]Requires a total of 5 Desert tiles in city radius[NEWLINE][ICON_BULLET]+1 trade route per 2 desert tiles in this city</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OUADANE_KSOUR</Tag>
+		<English>Ouadane Ksar</English>
+		<French>Ouadane Ksar</French>
+		<German>Ouadane Ksar</German>
+		<Italian>Ouadane Ksar</Italian>
+		<Spanish>Ouadane Ksar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_IYANUWO</Tag>
+		<English>Iyanuwo</English>
+		<French>Iyanuwo</French>
+		<German>Iyanuwo</German>
+		<Italian>Iyanuwo</Italian>
+		<Spanish>Iyanuwo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOMB_OF_ASKIA</Tag>
+		<English>Tomb of Askia</English>
+		<French>Tomb of Askia</French>
+		<German>Tomb of Askia</German>
+		<Italian>Tomb of Askia</Italian>
+		<Spanish>Tomb of Askia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOMB_OF_ASKIA_HELP</Tag>
+		<English>[ICON_BULLET]Gain 2 light and 2 heavy cavalry when you complete a trade mission with a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Gain 2 light and 2 heavy cavalry when you complete a trade mission with a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Gain 2 light and 2 heavy cavalry when you complete a trade mission with a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Gain 2 light and 2 heavy cavalry when you complete a trade mission with a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Gain 2 light and 2 heavy cavalry when you complete a trade mission with a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OSUN_OSOGBO</Tag>
+		<English>Osun Osogbo</English>
+		<French>Osun Osogbo</French>
+		<German>Osun Osogbo</German>
+		<Italian>Osun Osogbo</Italian>
+		<Spanish>Osun Osogbo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OSUN_OSOGBO_HELP</Tag>
+		<English>[ICON_BULLET]+3 [ICON_HAPPY] from Pagan [ICON_RELIGION] temples</English>
+		<French>[ICON_BULLET]+3 [ICON_HAPPY] from Pagan [ICON_RELIGION] temples</French>
+		<German>[ICON_BULLET]+3 [ICON_HAPPY] from Pagan [ICON_RELIGION] temples</German>
+		<Italian>[ICON_BULLET]+3 [ICON_HAPPY] from Pagan [ICON_RELIGION] temples</Italian>
+		<Spanish>[ICON_BULLET]+3 [ICON_HAPPY] from Pagan [ICON_RELIGION] temples</Spanish>
+	</TEXT>
 </Civ4GameText>

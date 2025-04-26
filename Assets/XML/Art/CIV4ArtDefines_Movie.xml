@@ -707,5 +707,33 @@
 			<Type>ART_DEF_MOVIE_ALHAMBRA</Type>
 			<Path>Art/Movies/Wonders/alhambra.dds</Path>
 		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AL_AZHAR</Type>
+			<Path>Art/Movies/Wonders/alazhar.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AIT_BENHADDOU</Type>
+			<Path>Art/Movies/Wonders/Benhaddou.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NAREKAVANK</Type>
+			<Path>Art/Movies/Wonders/Narekavank.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_IYANUWO</Type>
+			<Path>Art/Movies/Wonders/BeninWalls.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_OUADANE_KSOUR</Type>
+			<Path>Art/Movies/Wonders/OuadaneKsour.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PROPHETS_MOSQUE</Type>
+			<Path>Art/Movies/Wonders/ProphetsMosque.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TOMB_OF_ASKIA</Type>
+			<Path>Art/Movies/Wonders/TombOfAskia.dds</Path>
+		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

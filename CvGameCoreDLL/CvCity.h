@@ -49,32 +49,33 @@ public:
 
 	void doTask(TaskTypes eTask, int iData1 = -1, int iData2 = -1, bool bOption = false, bool bAlt = false, bool bShift = false, bool bCtrl = false);		// Exposed to Python
 
-	void chooseProduction(UnitTypes eTrainUnit = NO_UNIT, BuildingTypes eConstructBuilding = NO_BUILDING, ProjectTypes eCreateProject = NO_PROJECT, bool bFinish = false, bool bFront = false);		// Exposed to Python
+	void chooseProduction(UnitTypes eTrainUnit = NO_UNIT, BuildingTypes eConstructBuilding = NO_BUILDING, ProjectTypes eCreateProject = NO_PROJECT, bool bFinish = false, bool bFront = false); // Exposed to Python
 
-	int getCityPlotIndex(const CvPlot* pPlot) const;				// Exposed to Python 
-	CvPlot* getCityIndexPlot(int iIndex) const;															// Exposed to Python
+	int getCityPlotIndex(const CvPlot* pPlot) const; // Exposed to Python 
+	CvPlot* getCityIndexPlot(int iIndex) const; // Exposed to Python
 
-	bool canWork(CvPlot* pPlot) const;																			// Exposed to Python
+	bool canWork(CvPlot* pPlot) const; // Exposed to Python
 	void verifyWorkingPlot(int iIndex);
 	void verifyWorkingPlots();
-	void clearWorkingOverride(int iIndex);														// Exposed to Python
+	void clearWorkingOverride(int iIndex); // Exposed to Python
 	int countNumImprovedPlots(ImprovementTypes eImprovement = NO_IMPROVEMENT, bool bPotential = false) const;
-	int countNumBonusPlots(BonusTypes eBonus = NO_BONUS) const; // 1SDAN																		// Exposed to Python
-	int countNumWaterPlots() const;																					// Exposed to Python
-	int countNumRiverPlots() const;																					// Exposed to Python
+	int countNumBonusPlots(BonusTypes eBonus = NO_BONUS) const; // 1SDAN // Exposed to Python
+	int countNumWaterPlots() const; // Exposed to Python
+	int countNumRiverPlots() const; // Exposed to Python
+	int countNumDesertPlots() const; // Exposed to Python
 
-	int findPopulationRank() const;																					// Exposed to Python
-	int findBaseYieldRateRank(YieldTypes eYield) const;											// Exposed to Python
-	int findYieldRateRank(YieldTypes eYield) const;								// Exposed to Python					
-	int findCommerceRateRank(CommerceTypes eCommerce) const;			// Exposed to Python					
+	int findPopulationRank() const;	// Exposed to Python
+	int findBaseYieldRateRank(YieldTypes eYield) const;	// Exposed to Python
+	int findYieldRateRank(YieldTypes eYield) const; // Exposed to Python					
+	int findCommerceRateRank(CommerceTypes eCommerce) const; // Exposed to Python					
 
-	UnitTypes allUpgradesAvailable(UnitTypes eUnit, int iUpgradeCount = 0) const;						// Exposed to Python
-	bool isWorldWondersMaxed() const;																							// Exposed to Python
-	bool isTeamWondersMaxed() const;																							// Exposed to Python
-	bool isNationalWondersMaxed() const;																					// Exposed to Python
-	bool isBuildingsMaxed() const;																								// Exposed to Python
+	UnitTypes allUpgradesAvailable(UnitTypes eUnit, int iUpgradeCount = 0) const; // Exposed to Python
+	bool isWorldWondersMaxed() const; // Exposed to Python
+	bool isTeamWondersMaxed() const; // Exposed to Python
+	bool isNationalWondersMaxed() const; // Exposed to Python
+	bool isBuildingsMaxed() const; // Exposed to Python
 
-	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreUpgrades = false) const;					// Exposed to Python 
+	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreUpgrades = false) const; // Exposed to Python 
 	bool canTrain(UnitCombatTypes eUnitCombat) const;
 	bool canConstruct(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false) const;	// Exposed to Python  
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const;		// Exposed to Python 

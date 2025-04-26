@@ -32,6 +32,7 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("countNumImprovedPlots", &CyCity::countNumImprovedPlots, "int ()")
 		.def("countNumWaterPlots", &CyCity::countNumWaterPlots, "int ()")
 		.def("countNumRiverPlots", &CyCity::countNumRiverPlots, "int ()")
+		.def("countNumDesertPlots", &CyCity::countNumDesertPlots, "int ()")
 
 		.def("findPopulationRank", &CyCity::findPopulationRank, "int ()")
 		.def("findBaseYieldRateRank", &CyCity::findBaseYieldRateRank, "int (int /*YieldTypes*/ eYield)")

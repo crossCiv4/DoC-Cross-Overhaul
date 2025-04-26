@@ -2264,6 +2264,23 @@ bool CvCity::canTrain(UnitCombatTypes eUnitCombat) const
 	return false;
 }
 
+int CvCity::countNumDesertPlots() const
+{
+	int iNumDesertTiles = 0;
+	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+	{
+		switch (getCityIndexPlot(iI)->getTerrainType())
+		{
+			case TERRAIN_DESERT:
+				iNumDesertTiles++;
+				break;
+			default:
+			;
+		}
+	}
+
+	return iNumDesertTiles;
+}
 
 bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost) const
 {
@@ -2462,7 +2479,9 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 	}
 
 	// Leoreth: Burj Khalifa requires ten desert tiles
-	if (eBuilding == BURJ_KHALIFA)
+	// Aeons: Ait Benhaddou also requires 5
+	// Aeons: Ouadane Ksour needs 5 desert only
+	if (eBuilding == BURJ_KHALIFA || eBuilding == AIT_BENHADDOU || eBuilding == OUADANE_KSOUR)
 	{
 		int iNumDesertTiles = 0;
 		for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
@@ -2479,10 +2498,22 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 			}
 		}
 
-		if (iNumDesertTiles < 10)
+		if (eBuilding == BURJ_KHALIFA)
 		{
-			return false;
+			if (iNumDesertTiles < 10)
+			{
+				return false;
+			}
 		}
+		else
+		{
+			if (iNumDesertTiles < 5)
+			{
+				return false;
+			}
+		}
+
+		
 	}
 
 	// Leoreth: Delta Works requires only flatland
@@ -4802,6 +4833,26 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			}
 
 			changeBuildingYieldChange((BuildingClassTypes)GC.getBuildingInfo((BuildingTypes)MOLE_ANTONELLIANA).getBuildingClassType(), YIELD_PRODUCTION, iChange * 2 * iNumPeaks);
+		}
+
+		// Aeons - Ouadane Ksour
+		else if (eBuilding == OUADANE_KSOUR)
+		{
+			int iNumDeserts = 0;
+			for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+			{
+				if (getCityIndexPlot(iI)->getTerrainType()== TERRAIN_DESERT)
+				{
+					iNumDeserts++;
+				}
+			}
+			changeExtraTradeRoutes(iChange * iNumDeserts / 2);
+		}
+
+		// Aeons - Osun Osogbo - 3 happiness from pagan temples.
+		else if (eBuilding == OSUN_OSOGBO)
+		{
+			GET_PLAYER(getOwnerINLINE()).changeExtraBuildingHappiness(getUniqueBuilding(getCivilizationType(), (BuildingTypes)PAGAN_TEMPLE), 3 * iChange);
 		}
 
 		// Metropolitain

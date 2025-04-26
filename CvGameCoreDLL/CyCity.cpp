@@ -75,6 +75,11 @@ int CyCity::countNumWaterPlots()
 	return m_pCity ? m_pCity->countNumWaterPlots() : -1;
 }
 
+int CyCity::countNumDesertPlots()
+{
+	return m_pCity ? m_pCity->countNumDesertPlots() : -1;
+}
+
 int CyCity::countNumRiverPlots()
 {
 	return m_pCity ? m_pCity->countNumRiverPlots() : -1;

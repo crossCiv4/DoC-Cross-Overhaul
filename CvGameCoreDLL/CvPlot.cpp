@@ -7288,6 +7288,15 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			}
 		}
 
+		// Aeons: Ait Benhaddou effect
+		if (GET_PLAYER(ePlayer).isHasBuildingEffect((BuildingTypes)AIT_BENHADDOU))
+		{
+			if ((getTerrainType() == TERRAIN_DESERT || getTerrainType() == TERRAIN_SEMIDESERT) && eYield == YIELD_PRODUCTION)
+			{
+				iYield += 1;
+			}
+		}
+
 		// Yemen UP: +1 food from desert and semidesert.
 		if (eCivilization == YEMEN)
 		{

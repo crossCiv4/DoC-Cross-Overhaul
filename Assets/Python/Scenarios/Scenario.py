@@ -269,6 +269,15 @@ WONDER_ORIGINAL_BUILDERS = {
 	iBourse : (iNetherlands, 1602),
 	iAmberRoom : (iGermany, 1700),
 	iAlhambra: (iMoors, 1238),
+	iTombOfAskia : (iMali, 1500),
+	iIyanuwo : (iNigeria, 1460),
+	iOsunOsogbo : (iNigeria, 1650),
+	iItchanKhala : (iTurks, 1170),
+	iAitBenhaddou : (iMoors, 1080),
+	iAlAzhar : (iMamluks, 972),
+	iNarekavank : (iArmenia, 980),
+	iProphetsMosque : (iArabia, 705),
+	iOuadaneKsour : (iMali, 900),
 }
 
 DEFAULT_CIV_DESCRIPTIONS = {}

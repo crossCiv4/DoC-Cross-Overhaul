@@ -2865,6 +2865,18 @@ dBuildingPreferences = {
 	iMali : {
 		iUniversityOfSankore: 40,
 		iGreatAdobeMosque: 40,
+		iOuadaneKsour: 40,
+		iUniversityOfSankore: 20,
+		iGreatAdobeMosque: 20,
+		iIyanuwo: 20,
+		iAitBenhaddou: -20,
+	},
+	iCongo : {
+		iOsunOsogbo: 15,
+		iIyanuwo: 20,
+	},
+	iZulu : {
+		iOsunOsogbo: 15,
 	},
 	iByzantium : {
 		iHagiaSophia: 40,
@@ -2874,6 +2886,7 @@ dBuildingPreferences = {
 		iNotreDame: -20,
 		iSistineChapel: -20,
 		iSaintSophia: -50,
+		iNarekavank: -30,
 	},
 	iFrance : {
 		iTradingCompanyBuilding: 40,
@@ -2917,6 +2930,14 @@ dBuildingPreferences = {
 		
 		iShwedagonPaya: -30,
 	},
+	iNigeria: {
+		iOuadaneKsour: 40,
+		iUniversityOfSankore: 20,
+		iGreatAdobeMosque: 20,
+		iIyanuwo: 20,
+		iOsunOsogbo: 10,
+		iAitBenhaddou: -20,
+	},
 	iNorse : {
 		iNobelPrize: 20,
 		iGlobalSeedVault: 30,
@@ -2928,44 +2949,98 @@ dBuildingPreferences = {
 		iSpiralMinaret: 40,
 		iDomeOfTheRock: 40,
 		iHouseOfWisdom: 40,
-		iBurjKhalifa: 40,
+		iBurjKhalifa: 15,
+		iProphetsMosque: 40,
 	
 		iTopkapiPalace: -80,
 		iMezquita: -50,
 		iAlhambra: -50,
 		iUniversityOfSankore: -30,
 		iGreatAdobeMosque: -30,
+		iAitBenhaddou: -20,
+		iAlAzhar: -20,
 	},
 	iBuyids: {
 		iHouseOfWisdom: 40,
 		iAlamut: 30,
-		#iItchanKhala: 20,
+		iItchanKhala: 20,
 			
-		#iAlAzhar: -10,
 		iMezquita: -20,
 		iAlhambra: -30,
-		#iOuadaneKsar: -30,
+		iOuadaneKsour: -30,
+		iAitBenhaddou: -20,
+		iAlAzhar: -10,
 	},
 	iMamluks: {
-		iBurjKhalifa: 40,
-		iAlamut: 30,
+		iBurjKhalifa: 10,
+		iAlamut: 20,
+
+		iAlAzhar: 50,
+		iKrakDesChevaliers: 50,
+		iDomeOfTheRock: 40,
+
+		iAlamut: -20,
+		iHouseOfWisdom: -20,
+		iSpiralMinaret: -20,
+		iTopkapiPalace: -80,
+		iMezquita: -50,
+		iUniversityOfSankore: -30,
+		iGreatAdobeMosque: -30,
+		iTombOfAskia: -60,
+		iOuadaneKsour: -50,
 	},
 	iTunis: {
 		iHouseOfWisdom: 5,
-		# other wonder preferences...
+
+		iMezquita: 30,
+		iAlhambra: 20,
+		iAitBenhaddou: 20,
+		iUniversityOfSankore: -40,
+		iSpiralMinaret: -20,
+		iTopkapiPalace: -30,
+		iBlueMosque: -30,
+		iProphetsMosque: -30,
+		iUniversityOfSankore: -30,
+		iGreatAdobeMosque: -30,
 	},
 	iMorocco: {
 		iHouseOfWisdom: 5,
-		# other wonder preferences...
+
+		iAlhambra: 10,
+		iAitBenhaddou: 40,
+
+		iUniversityOfSankore: -40,
+		iSpiralMinaret: -40,
+		iTopkapiPalace: -40,
+		iBlueMosque: -40,
+		iProphetsMosque: -20,
+		iGreatAdobeMosque: -30,
 	},
 	iYemen: {
 		iAlKhazneh: 25,
 		iOldSynagogue: 5,
-		# other wonder preferences...
+		iBurjKhalifa: 15,
+
+		iOuadaneKsour: -40,
+		iMezquita: -40,
+		iUniversityOfSankore: -40,
+		iSpiralMinaret: -40,
+		iTopkapiPalace: -40,
+		iBlueMosque: -40,
+		iGreatAdobeMosque: -30,
+		iAitBenhaddou: -40,
 	},
 	iOman: {
-		iTopkapiPalace: -10,
-		# other wonder preferences...
+		iBurjKhalifa: 40,
+
+		iOuadaneKsour: -40,
+		iMezquita: -40,
+		iUniversityOfSankore: -40,
+		iSpiralMinaret: -40,
+		iTopkapiPalace: -40,
+		iBlueMosque: -40,
+		iGreatAdobeMosque: -30,
+		iAitBenhaddou: -40,
 	},
 	iTibet : {
 		iPotalaPalace: 40,
@@ -3073,6 +3148,14 @@ dBuildingPreferences = {
 		iSaintSophia: 40,
 		iSaintBasilsCathedral: 20,
 		iKremlin: 20,
+
+		iNarekavank: -30,
+	},
+	iArmenia: {
+		iNarekavank: 30,
+		iSaintSophia: -20,
+		iTheodosianWalls: -20,
+		iHagiaSophia: -20,
 	},
 	iPoland : {
 		iSaltCathedral: 30,
@@ -3105,6 +3188,7 @@ dBuildingPreferences = {
 	},
 	iMongols : {
 		iSilverTreeFountain: 40,
+		iItchanKhala: 30,
 	},
 	iRussia : {
 		iKremlin: 40,
@@ -3116,6 +3200,8 @@ dBuildingPreferences = {
 		iSaintSophia: 30,
 		iMountAthos: 20,
 		iMetropolitain: 20,
+
+		iNarekavank: -30,
 	},
 	iOttomans : {
 		iTopkapiPalace: 60,
