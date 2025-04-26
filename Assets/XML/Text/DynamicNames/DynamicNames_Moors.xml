@@ -27,27 +27,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOORS_DEFAULT</Tag>
-		<English>Kingdom of %s1</English>
-		<French>
-			<Text>Royaume du %s1</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>K&#246;nigreich %s1:K&#246;nigreich %s1:K&#246;nigreich %s1</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Regno del %s1</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Reino de %s1</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<English>Kingdom of Andalusia</English>
+		<French>Royaume de l'Andalousie</French>
+		<German>Kingdom of Andalusia</German>
+		<Italian>Kingdom of Andalusia</Italian>
+		<Spanish>Kingdom of Andalusia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MOORS_ANDALUSIA</Tag>
+		<English>Andalusia</English>
+		<French>Andalousie</French>
+		<German>Andalusia</German>
+		<Italian>Andalusia</Italian>
+		<Spanish>Andalusia</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MOORS_FASCIST</Tag>
