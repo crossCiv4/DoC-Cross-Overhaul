@@ -1446,7 +1446,7 @@ def specificAdjective(iPlayer):
 				return "TXT_KEY_CIV_NORWAY_ADJECTIVE"
 
 	elif iCiv == iIroquois:
-		if bCapitulated and not master(iIroquois).getCurrentEra() >= iGlobal:
+		if bCapitulated and not player(master(iIroquois)).getCurrentEra() >= iGlobal:
 			return "TXT_KEY_CIV_IROQUOIS_ADJECTIVE"
 		else:
 			return "TXT_KEY_CIV_IROQUOIS_ENDONYM_ADJECTIVE"
