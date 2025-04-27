@@ -15991,7 +15991,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BROOKLYN_BRIDGE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BROOKLYN_BRIDGE</MovieDefineTag>
 			<MaxStartEra>ERA_GLOBAL</MaxStartEra>
-			<PrereqTech>TECH_LABOUR_UNIONS</PrereqTech>
+			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<FreeBuilding>BUILDINGCLASS_LEVEE</FreeBuilding>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>

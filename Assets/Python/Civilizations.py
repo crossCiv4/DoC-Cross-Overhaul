@@ -2798,6 +2798,7 @@ dBuildingPreferences = {
 		
 		iParthenon: -30,
 		iStatueOfZeus: -20,
+		iIyanuwo: -30,
 	},
 	iPhoenicia : {
 		iGreatCothon: 30,
@@ -2805,6 +2806,7 @@ dBuildingPreferences = {
 		iColossus: 15,
 		
 		iPyramids: -50,
+		iIyanuwo: -30,
 	},
 	iPolynesia : {
 		iMoaiStatues: 30,
@@ -2836,6 +2838,8 @@ dBuildingPreferences = {
 	iDravidia : {
 		iJetavanaramaya: 30,
 		iKhajuraho: 20,
+
+		iIyanuwo: -30,
 	},
 	iEthiopia : {
 		iMonolithicChurch: 40,
@@ -2991,6 +2995,7 @@ dBuildingPreferences = {
 		iGreatAdobeMosque: -30,
 		iTombOfAskia: -60,
 		iOuadaneKsour: -50,
+		iIyanuwo: -30,
 	},
 	iTunis: {
 		iHouseOfWisdom: 5,
@@ -3005,6 +3010,7 @@ dBuildingPreferences = {
 		iProphetsMosque: -30,
 		iUniversityOfSankore: -30,
 		iGreatAdobeMosque: -30,
+		iIyanuwo: -30,
 	},
 	iMorocco: {
 		iHouseOfWisdom: 5,
@@ -3018,6 +3024,7 @@ dBuildingPreferences = {
 		iBlueMosque: -40,
 		iProphetsMosque: -20,
 		iGreatAdobeMosque: -30,
+		iIyanuwo: -30,
 	},
 	iYemen: {
 		iAlKhazneh: 25,

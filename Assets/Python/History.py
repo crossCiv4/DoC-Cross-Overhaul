@@ -464,7 +464,9 @@ def tradingCompany(iTech, iTeam, iPlayer):
 		iNetherlands: [iEconomics, iGeography, iPhysics, iReplaceableParts, iHorticulture, iChemistry],
 		iOman: [iFirearms, iOptics, iGeography],
 		iYemen: [iCompanies],
-		iRussia: [iRailroad, iBallistics, iAssemblyLine, iEngine, iMicrobiology]
+		iRussia: [iRailroad, iBallistics, iAssemblyLine, iEngine, iMicrobiology],
+		iJapan: [iRefining, iPneumatics, iSocialServices, iInfrastructure, iSynthetics, iRadio, iPsychology],
+		iGermany: [iMicrobiology],
 	})
 	
 	if iCiv in dCivTechMappings.keys() and iTech in dCivTechMappings[iCiv]:

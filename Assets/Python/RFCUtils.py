@@ -397,13 +397,20 @@ def getColonialTargets(iPlayer, iNumCities=1, bEmpty=False):
 		lColonialRegions = [rMadagascar, rSwahiliCoast, rHornOfAfrica]
 	elif iCiv == iRussia:
 		lColonialRegions = [rSiberia, rAmur, rCentralAsianSteppe, rManchuria]
+	elif iCiv == iJapan:
+		lColonialRegions += lOceania
 	else:
 		lColonialRegions += lSubSaharanAfrica
 		
 	targetPlots = plots.all().regions(*lColonialRegions)
 	
 	cityPlots, emptyPlots = targetPlots.split(CyPlot.isCity)
-	targetCities = cityPlots.notowners(players.group(iCivGroupEurope)).where(lambda p: p.getWarValue(iCiv) > 1).highest(iNumCities, metric=lambda p: p.getWarValue(iCiv) + getCoastalValueBonus(p))
+
+	if iCiv == iJapan:
+		# can also declare colonial war against Europeans
+		targetCities = cityPlots.where(lambda p: p.getWarValue(iCiv) > 1).highest(iNumCities, metric=lambda p: p.getWarValue(iCiv) + getCoastalValueBonus(p))
+	else:
+		targetCities = cityPlots.notowners(players.group(iCivGroupEurope)).where(lambda p: p.getWarValue(iCiv) > 1).highest(iNumCities, metric=lambda p: p.getWarValue(iCiv) + getCoastalValueBonus(p))
 	
 	if bEmpty:
 		nearbyCityPlots, settlePlots = emptyPlots.split(lambda p: plots.surrounding(p).any(CyPlot.isCity))
