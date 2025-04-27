@@ -10392,7 +10392,14 @@ int CvCity::getVassalTradeModifier(CvCity* pOtherCity) const
 {
 	if (GET_TEAM(pOtherCity->getTeam()).isVassal(getTeam()))
 	{
-		return GET_PLAYER(getOwner()).getVassalTradeModifier();
+		int iModifier = GET_PLAYER(getOwner()).getVassalTradeModifier();
+		// Naqsh-e Rostam aka Achaemenid Necropolis effect
+		if (GET_PLAYER(getOwner()).isHasBuildingEffect((BuildingTypes)ROSTAM))
+		{
+			iModifier += 100;
+		}
+
+		return iModifier;
 	}
 
 	return 0;

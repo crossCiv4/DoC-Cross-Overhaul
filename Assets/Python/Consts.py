@@ -1274,7 +1274,7 @@ iNumBuildings += iNumNationalWonders
 (iAcademy, iAdministrativeCenter, iManufactory, iArmoury, iMuseum, iStockExchange, iTradingCompanyBuilding, iIberianTradingCompanyBuilding, iNationalMonument, iNationalTheatre, 
 iNationalGallery, iNationalCollege, iMilitaryAcademy, iSecretService, iIronworks, iRedCross, iNationalPark, iCentralBank, iSpaceport) = range(iFirstNationalWonder, iNumBuildings)
 
-iNumGreatWonders = 149 # different from DLL constant because that includes national wonders
+iNumGreatWonders = 150 # different from DLL constant because that includes national wonders
 iFirstWonder = iNumBuildings
 iNumBuildings += iNumGreatWonders
 (iGreatSphinx, iPyramids, iOracle, iGreatWall, iIshtarGate, iPalaceOfMinos, iTerracottaArmy, iHangingGardens, iGreatCothon, iDujiangyan, iApadanaPalace, 
@@ -1291,7 +1291,7 @@ iPalaceOfNations, iMoleAntonelliana, iNeuschwanstein, iFrontenac, iWembley, iLub
 iBletchleyPark, iSagradaFamilia, iCERN, iItaipuDam, iGraceland, iCNTower, iPentagon, iUnitedNations, iCrystalCathedral, iMotherlandCalls, 
 iBerlaymont, iWorldTradeCenter, iAtomium, iIronDome, iHarbourOpera, iLotusTemple, iGlobalSeedVault, iGardensByTheBay, iBurjKhalifa, iHubbleSpaceTelescope, 
 iChannelTunnel, iSkytree, iOrientalPearlTower, iDeltaWorks, iSpaceElevator, iLargeHadronCollider, iITER, 
-iProphetsMosque, iAlAzhar, iAitBenhaddou, iItchanKhala, iNarekavank, iIyanuwo, iOuadaneKsour, iTombOfAskia, iOsunOsogbo) = range(iFirstWonder, iNumBuildings)
+iProphetsMosque, iAlAzhar, iAitBenhaddou, iItchanKhala, iNarekavank, iIyanuwo, iOuadaneKsour, iTombOfAskia, iOsunOsogbo, iRostam) = range(iFirstWonder, iNumBuildings)
 
 iTemple = iJewishTemple #generic
 iCathedral = iJewishCathedral #generic

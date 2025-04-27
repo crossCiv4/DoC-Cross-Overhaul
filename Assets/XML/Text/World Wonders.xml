@@ -3429,4 +3429,38 @@
 		<Italian>[ICON_BULLET]+3 [ICON_HAPPY] from Pagan [ICON_RELIGION] temples</Italian>
 		<Spanish>[ICON_BULLET]+3 [ICON_HAPPY] from Pagan [ICON_RELIGION] temples</Spanish>
 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROSTAM</Tag>
+		<English>Achaemenid Necropolis</English>
+		<French>Achaemenid Necropolis</French>
+		<German>Achaemenid Necropolis</German>
+		<Italian>Achaemenid Necropolis</Italian>
+		<Spanish>Achaemenid Necropolis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROSTAM_PEDIA</Tag>
+		<English>[TAB]Naqsh-e Rostam, also referred to as Necropolis is an archaeological site located about 12 km northwest of Persepolis, in Fars province, Iran. Naqsh-e Rustam lies a few hundred meters from Naqsh-e Rajab. The oldest relief at Naqsh-i Rustam is severely damaged and dates to c. 1000 BC. It depicts a faint image of a man with unusual head-gear and is thought to be Elamite in origin. The depiction is part of a larger mural, most of which was removed at the command of Bahram II. The man with the unusual cap gives the site its name, Naqsh-e Rostam, &quot;Picture of Rostam&quot;, because the relief was locally believed to be a depiction of the mythical hero Rostam. The triumph of Shapur I (c. 241-272):  is the most famous of the Sassanid rock reliefs, and depicts Shapur's victory over two Roman emperors, Valerian and Philip the Arab. A more elaborate version of this rock relief is at Bishapur.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROSTAM_STRATEGY</Tag>
+		<English>[COLOR_BUILDING_TEXT]Achaemenid Necropolis[COLOR_REVERT] doubles trade route income from vassals and increases the likelihood a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT] will be generated.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROSTAM_HELP</Tag>
+		<English>[ICON_BULLET]Doubles trade route income from vassals</English>
+		<French>[ICON_BULLET]Doubles trade route income from vassals</French>
+		<German>[ICON_BULLET]Doubles trade route income from vassals</German>
+		<Italian>[ICON_BULLET]Doubles trade route income from vassals</Italian>
+		<Spanish>[ICON_BULLET]Doubles trade route income from vassals</Spanish>
+	</TEXT>
 </Civ4GameText>

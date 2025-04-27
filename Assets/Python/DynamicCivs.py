@@ -592,7 +592,8 @@ dEmpireThreshold = {
 	iBulgaria: 4,
 	iHittites: 3,
 	iSpain: 7,
-	iBuyids : 10,	
+	iBuyids : 10,
+	iNorse: 7,
 }
 
 lChristianity = [iCatholicism, iOrthodoxy, iProtestantism]

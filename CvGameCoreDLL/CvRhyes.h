@@ -11,8 +11,11 @@ typedef list<char*> LISTCHAR;
 
 #define MAX_COM_SHRINE			(20)
 
-#define BEGIN_WONDERS				(213) // increment if normal building (not for wonders) is added
-#define BEGIN_GREAT_WONDERS			(BEGIN_WONDERS+13) // increment if a national wonder is added
+// increment if normal building (not for wonders) is added --> this is iNumBuildings + iNumReligiousBuildings + 6 (national wonders built by great people)
+#define BEGIN_WONDERS				(213) 
+
+// increment if a national wonder is added (this is the national wonders AFTER those that great people can build)
+// #define BEGIN_GREAT_WONDERS			(BEGIN_WONDERS+13)
 
 #define NUM_CIVS				(81)
 
@@ -208,12 +211,12 @@ enum DoCBuildings
 	NATIONAL_COLLEGE, 
 	MILITARY_ACADEMY,
 	SECRET_SERVICE, 
-
 	IRONWORKS, 
 	RED_CROSS, 
 	NATIONAL_PARK, 
 	CENTRAL_BANK, 
 	SPACEPORT,
+
 	GREAT_SPHINX, 
 	PYRAMIDS, 
 	ORACLE, 
@@ -377,7 +380,8 @@ enum DoCBuildings
 	IYANUWO,
 	OUADANE_KSOUR,
 	TOMB_OF_ASKIA,
-	OSUN_OSOGBO
+	OSUN_OSOGBO,
+	ROSTAM
 };
 
 enum DoCEras

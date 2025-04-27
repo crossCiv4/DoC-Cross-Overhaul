@@ -10855,7 +10855,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 
 	if (getLastStateReligion() == MARXISM)
 	{
-		// Orthodox Christian states have an aversion to caste system
 		if (eCivic == CIVIC_CENTRAL_PLANNING || eCivic == CIVIC_STATE_PARTY || eCivic == CIVIC_FANATICISM || eCivic == CIVIC_PUBLIC_WELFARE)
 		{
 			iValue *= 2;

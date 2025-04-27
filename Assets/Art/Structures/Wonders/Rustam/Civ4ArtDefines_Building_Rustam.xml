@@ -1,0 +1,10 @@
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ROSTAM</Type>
+			<LSystem>LSYSTEM_4x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.1</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Buildings/Rustam/Rustam.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Rustam_button.dds</Button>
+		</BuildingArtInfo>

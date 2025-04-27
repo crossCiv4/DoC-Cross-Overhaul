@@ -4117,5 +4117,15 @@
 			<KFM/>
 			<Button>Art/Structures/Wonders/Osun-Osogbo/Button_OsunOsogbo.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ROSTAM</Type>
+			<LSystem>LSYSTEM_4x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.1</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Rustam/Rustam.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Wonders/Rustam/rustam_button.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

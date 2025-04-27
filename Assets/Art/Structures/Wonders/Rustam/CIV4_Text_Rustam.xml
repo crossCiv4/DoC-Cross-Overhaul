@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROSTAM</Tag>
+		<English>Naqsh-i-Rustam</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROSTAM_PEDIA</Tag>
+		<English>[TAB]Naqsh-e Rustam also referred to as Necropolis is an archaeological site located about 12 km northwest of Persepolis, in Fars province, Iran. Naqsh-e Rustam lies a few hundred meters from Naqsh-e Rajab. The oldest relief at Naqsh-i Rustam is severely damaged and dates to c. 1000 BC. It depicts a faint image of a man with unusual head-gear and is thought to be Elamite in origin. The depiction is part of a larger mural, most of which was removed at the command of Bahram II. The man with the unusual cap gives the site its name, Naqsh-e Rostam, &quot;Picture of Rostam&quot;, because the relief was locally believed to be a depiction of the mythical hero Rostam. The triumph of Shapur I (c. 241-272):  is the most famous of the Sassanid rock reliefs, and depicts Shapur's victory over two Roman emperors, Valerian and Philip the Arab. A more elaborate version of this rock relief is at Bishapur.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROSTAM_STRATEGY</Tag>
+		<English>[COLOR_BUILDING_TEXT]Naqsh-i-RustamCOLOR_REVERT] increases likelihood a [COLOR_UNIT_TEXT]Great General[COLOR_REVERT] will be produced, increases cultural output, and increases the likelihood a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT] will be generated.</English>
+	</TEXT>
+</Civ4GameText>

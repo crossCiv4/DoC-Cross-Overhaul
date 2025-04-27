@@ -1335,10 +1335,10 @@ dStartingUnits = CivDict({
 	},
 	iIran: {
 		iSettle: 1,
-		iWork: 3,
+		iWork: 2,
 		iDefend: 3,
 		iAttack: 3,
-		iSiege: 3,
+		iSiege: 1,
 		iMissionary: 3,
 	},
 	iNetherlands: {
@@ -2810,6 +2810,7 @@ dBuildingPreferences = {
 		iMoaiStatues: 30,
 	},
 	iPersia : {
+		iRostam: 30,
 		iApadanaPalace: 30,
 		iGreatMausoleum: 30,
 		iGondeshapur: 30,
@@ -2927,6 +2928,7 @@ dBuildingPreferences = {
 		iGurEAmir: 20,
 		iSalsalBuddha: 20,
 		iImageOfTheWorldSquare: 20,
+		iRostam: 5,
 		
 		iShwedagonPaya: -30,
 	},
@@ -2964,6 +2966,7 @@ dBuildingPreferences = {
 		iHouseOfWisdom: 40,
 		iAlamut: 30,
 		iItchanKhala: 20,
+		iRostam: 5,
 			
 		iMezquita: -20,
 		iAlhambra: -30,
