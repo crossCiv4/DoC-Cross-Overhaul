@@ -74,6 +74,14 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PRINCIPALITY_OF</Tag>
+		<English>Principality of %s1</English>
+		<French>Principalit&#233; de %s1</French>
+		<German>Principality of %s1</German>
+		<Italian>Principality of %s1</Italian>
+		<Spanish>Principality of %s1</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_KINGDOM_OF</Tag>
 		<English>Kingdom of %s1</English>
 		<French>

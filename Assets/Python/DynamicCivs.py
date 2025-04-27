@@ -1079,6 +1079,10 @@ def specificName(iPlayer):
 			if not (bEmpire and not player(iChina).isExisting()):
 				return "TXT_KEY_CIV_SHU_HAN"
 
+	elif iCiv == iRus:
+		if not bCapitulated and period(iCiv) != iPeriodUkraine:
+			return capitalName(iPlayer)
+
 	elif iCiv == iCelts:
 		if bResurrected:
 			return "TXT_KEY_CIV_CELTS_IRELAND"
@@ -2024,6 +2028,15 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		if iEra == iClassical:
 			return "TXT_KEY_CIV_EGYPT_NEW_KINGDOM"
 
+	elif iCiv == iRus:
+		if period(iCiv) != iPeriodUkraine:
+			if bCityStates:
+				return "TXT_KEY_CIV_RUSSIA_MEDIEVAL_REPUBLIC"
+			elif bEmpire:
+				return "TXT_KEY_CIV_RUSSIA_GRAND_PRINCIPALITY"
+			else:
+				return "TXT_KEY_PRINCIPALITY_OF"
+
 	elif iCiv == iKhazars:
 		if bResurrected:
 			if iEra >= iRenaissance:
@@ -2470,11 +2483,11 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 		
 		if iEra <= iMedieval:
-			if (civic.iGovernment == iRepublic and civic.iLegitimacy in [iVassalage, iCitizenship]) or (civic.iGovernment == iElective and civic.iLegitimacy == iCitizenship):
+			if bCityStates:
 				return "TXT_KEY_CIV_RUSSIA_MEDIEVAL_REPUBLIC"
 			
 			if civic.iGovernment == iElective:
-				if isCurrentCapital(iPlayer, "Kiev"):
+				if isCurrentCapital(iPlayer, "Kiev", "Kievu", "Kyiv"):
 					return "TXT_KEY_CIV_RUSSIA_KIEVAN_RUS"
 				
 				return "TXT_KEY_CIV_RUSSIA_RUS"
