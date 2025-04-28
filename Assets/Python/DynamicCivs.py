@@ -1608,23 +1608,12 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_ASSYRIA_ANTIOCHENE"
 
 	elif iCiv == iPersia:
-		if iReligion == iIslam or iReligion == iShia and iEra < iRenaissance:
-			return "TXT_KEY_CIV_PERSIA_SAFFARID"
-
-		if pPlayer.isStateReligion() and iReligion < 0:
+		if isCurrentCapital(iPlayer, "Hangmatana"):
 			return "TXT_KEY_CIV_PERSIA_MEDIAN"
-	
+
 		if bEmpire:	
-			if iEra == iRenaissance:
-				return "TXT_KEY_CIV_PERSIA_SAFAVID"
-	
-			if iEra == iIndustrial:
-				return "TXT_KEY_CIV_PERSIA_QAJAR"
-			if iEra == iGlobal:
-				return "TXT_KEY_CIV_PERSIA_PAHLAVI"
-		
 			return "TXT_KEY_CIV_PERSIA_ACHAEMENID"
-		
+
 	elif iCiv == iParthia:
 		if getColumn(iPlayer) >= 6:
 			return "TXT_KEY_CIV_PERSIA_SASSANID"
@@ -1634,7 +1623,7 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_POLYNESIA_TUI_MANUA"
 			
 		return "TXT_KEY_CIV_POLYNESIA_TUI_TONGA"
-		
+
 	elif iCiv == iRome:
 		if player(iByzantium).isExisting() and not team(iByzantium).isVassal(team(iCiv).getID()):
 			return "TXT_KEY_CIV_ROME_WESTERN"
@@ -2692,8 +2681,6 @@ def leader(iPlayer):
 		if iEra >= iGlobal: return iKhomeini
 		
 	elif iCiv == iPersia:
-		if bResurrected and game.isReligionFounded(iIslam): return iAbbas
-
 		if not player(iBabylonia).isAlive() and not player(iAssyria).isAlive():
 			return iDarius
 			
@@ -2980,10 +2967,6 @@ def leaderName(iPlayer):
 				return "TXT_KEY_LEADER_DAVID_IV"
 			else:
 				return "TXT_KEY_LEADER_ASHOT"
-	
-	elif iCiv == iPersia:
-		if iLeader == iAbbas:
-			return "TXT_KEY_LEADER_YAQUB_SAFFAR"
 	
 	elif iCiv == iTurks:
 		if player(iPlayer).getPeriod() == iPeriodUzbeks:
