@@ -61306,13 +61306,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=135,y=52
-	BonusType=BONUS_SILVER
 	FeatureType=FEATURE_FOREST, FeatureVariety=3
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
 BeginPlot
 	x=135,y=53
+	BonusType=BONUS_SILVER
 	FeatureType=FEATURE_FOREST, FeatureVariety=3
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -62164,7 +62164,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=137,y=51
-	BonusType=BONUS_DYE
 	FeatureType=FEATURE_FOREST, FeatureVariety=3
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -62625,6 +62624,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=138,y=53
+	BonusType=BONUS_DYE
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot

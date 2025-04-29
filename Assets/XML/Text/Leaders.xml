@@ -926,16 +926,16 @@
 		<Spanish>Chiang Kai-shek</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LEADER_ODA_NOBUNAGA</Tag>
-		<English>Oda Nobunaga</English>
+		<Tag>TXT_KEY_LEADER_TOKUGAWA_IEYASU</Tag>
+		<English>Tokugawa Ieyasu</English>
 		<French>
-			<Text>Oda Nobunaga</Text>
+			<Text>Tokugawa Ieyasu</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Oda Nobunaga</German>
-		<Italian>Oda Nobunaga</Italian>
-		<Spanish>Oda Nobunaga</Spanish>
+		<German>Tokugawa Ieyasu</German>
+		<Italian>Tokugawa Ieyasu</Italian>
+		<Spanish>Tokugawa Ieyasu</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_TRUDEAU</Tag>
@@ -1550,6 +1550,14 @@
 		<Spanish>Abdullah Khan</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_ASHIKAGA_TAKAUJI</Tag>
+		<English>Ashikaga Takauji</English>
+		<French>Ashikaga Takauji</French>
+		<German>Ashikaga Takauji</German>
+		<Italian>Ashikaga Takauji</Italian>
+		<Spanish>Ashikaga Takauji</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_GAISERIC</Tag>
 		<English>Gaiseric</English>
 		<French>Gaiseric</French>
@@ -1652,6 +1660,14 @@
 		<German>Adud Al-Dawla</German>
 		<Italian>Adud Al-Dawla</Italian>
 		<Spanish>Adud Al-Dawla</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MINAMOTO_NO_YORIMOTO</Tag>
+		<English>Minamoto no Yorimoto</English>
+		<French>Minamoto no Yorimoto</French>
+		<German>Minamoto no Yorimoto</German>
+		<Italian>Minamoto no Yorimoto</Italian>
+		<Spanish>Minamoto no Yorimoto</Spanish>
 	</TEXT>
 
 	<TEXT>

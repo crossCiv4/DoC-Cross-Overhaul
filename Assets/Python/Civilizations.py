@@ -432,7 +432,7 @@ lCivilizations = [
 		techs=techs.column(5).including(iEthics).without(iGeneralship, iEngineering)
 	),
 	Civilization(
-		iJapan,
+		iYamato,
 		iGold=100,
 		iAdvancedStartPoints=60,
 		iStateReligion=iBuddhism,
@@ -693,6 +693,13 @@ lCivilizations = [
 		lEnemies=[iTimurids],
 		lCivics=[iMonarchy, iTheocracy, iManorialism, iMerchantTrade, iFanaticism, iHegemony],
 		techs=techs.column(10).including(iFirearms).without(iCartography, iFinance, iHumanities, iPrinting, iJudiciary)
+	),
+	Civilization(
+		iJapan,
+		iGold=600,
+		lEnemies=[iYamato],
+		lCivics=[iDespotism, iVassalage, iCasteSystem, iRegulatedTrade, iSyncretism, iHegemony],
+		techs=techs.column(10).including(iFirearms).without(iFinance, iHumanities, iJudiciary)
 	),
 	Civilization(
 		iNetherlands,
@@ -1012,13 +1019,22 @@ dStartingUnits = CivDict({
 		iMissionary: 2,
 		iEscort: 1,
 	},
-	iJapan: {
-		iSettle: 3,
+	iYamato: {
+		iSettle: 2,
 		iWork: 2,
 		iDefend: 2,
 		iAttack: 2,
-		iMissionary: 1,
-		iWorkerSea: 2,
+		iShock: 1,
+		iWorkerSea: 1,
+	},
+	iJapan : {
+		iSettle: 1,
+		iWork: 2,
+		iAttack: 2,
+		iCounter: 4,
+		iSkirmish: 1,
+		iSiege: 3,
+		iEscort: 2,
 	},
 	iNorse: {
 		iSettle: 1,
@@ -1468,9 +1484,15 @@ dExtraAIUnits = CivDict({
 	iRome: {
 		iWork: 3,
 	},
-	iJapan: {
-		iDefend: 2,
-		iAttack: 1,
+	iYamato: {
+		iAttack: 2,
+		iSiege: 2,
+	},
+	iJapan : {
+		iAttack: 2,
+		iCounter: 1,
+		iSkirmish: 1,
+		iSiege: 2,
 	},
 	iDravidia: {
 		iShock: 1,
@@ -1641,6 +1663,10 @@ dAdditionalUnits = CivDict({
 	},
 	iRome: {
 		iAttack: 4,
+	},
+	iYamato: {
+		iDefend: 2,
+		iAttack: 2,
 	},
 	iJapan: {
 		iDefend: 2,
@@ -2268,6 +2294,16 @@ dTechPreferences = {
 		iArtisanry: 20,
 	},
 	iJapan : {
+		iNobility: 40,
+		iRobotics: 40,
+	
+		iOptics: -40,
+		iExploration: -40,
+		iGeography: -20,
+		iReplaceableParts: -20,
+		iScientificMethod: -20,
+	},
+	iYamato : {
 		iNobility: 40,
 		iFortification: 40,
 		iRobotics: 40,
@@ -2918,6 +2954,17 @@ dBuildingPreferences = {
 		iBorobudur: 20,
 	},
 	iJapan : {
+		iItsukushimaShrine: 50,
+		iHimejiCastle: 50,
+		iTsukijiFishMarket: 30,
+		iSkytree: 30,
+	
+		iBorobudur: 0,
+		iPrambanan: 0,
+		iShwedagonPaya: 0,
+		iGreatWall: -100,
+	},
+	iYamato : {
 		iItsukushimaShrine: 50,
 		iHimejiCastle: 50,
 		iTsukijiFishMarket: 30,

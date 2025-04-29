@@ -46,7 +46,7 @@ lCivilizations = [
 	),
 	Civilization(
 		iJapan,
-		iLeader=iOdaNobunaga,
+		iLeader=iTokugawa,
 		iGold=400,
 		iStateReligion=iBuddhism,
 		lCivics=[iMonarchy, iVassalage, iManorialism, iRegulatedTrade, iMonasticism, iIsolationism],

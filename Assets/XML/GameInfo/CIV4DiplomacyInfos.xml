@@ -631,7 +631,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ODA_NOBUNAGA</LeaderType>
+							<LeaderType>LEADER_TOKUGAWA_IEYASU</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -1812,7 +1812,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ODA_NOBUNAGA</LeaderType>
+							<LeaderType>LEADER_TOKUGAWA_IEYASU</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -2684,7 +2684,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ODA_NOBUNAGA</LeaderType>
+							<LeaderType>LEADER_TOKUGAWA_IEYASU</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -3859,7 +3859,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ODA_NOBUNAGA</LeaderType>
+							<LeaderType>LEADER_TOKUGAWA_IEYASU</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -5401,7 +5401,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ODA_NOBUNAGA</LeaderType>
+							<LeaderType>LEADER_TOKUGAWA_IEYASU</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -7430,7 +7430,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ODA_NOBUNAGA</LeaderType>
+							<LeaderType>LEADER_TOKUGAWA_IEYASU</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -8522,7 +8522,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ODA_NOBUNAGA</LeaderType>
+							<LeaderType>LEADER_TOKUGAWA_IEYASU</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -9577,7 +9577,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_ODA_NOBUNAGA</LeaderType>
+							<LeaderType>LEADER_TOKUGAWA_IEYASU</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>

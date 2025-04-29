@@ -1782,6 +1782,18 @@
 		<Spanish>[COLOR_BUILDING_TEXT]Stupas[COLOR_REVERT] ([COLOR_BUILDING_TEXT]Buddhist Temples[COLOR_REVERT]) increase a city's happiness and culture. [COLOR_BUILDING_TEXT]Stupas[COLOR_REVERT] are required to build the [COLOR_BUILDING_TEXT]Buddhist Chaitya[COLOR_REVERT] building.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHINBUTSU_SHUGO_TEMPLE</Tag>
+		<English>Shinbutsu Shugo Temple</English>
+		<French>
+			<Text>Temple shinbutsu shugo:Temples shinbutsu shugo</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>Shinbutsu Shugo Temple</German>
+		<Italian>Shinbutsu Shugo Temple</Italian>
+		<Spanish>Shinbutsu Shugo Temple</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUDDHIST_MONASTERY</Tag>
 		<English>Buddhist Sangha</English>
 		<French>

@@ -264,7 +264,7 @@ dGoals = {
 		HappiestTurns(60, by=600),
 	),
 	iXia : (
-		CultureAmount(600, by=-480),
+		FoundedCultureAmount(600, by=-480),
 		All(
             Control(plots.region(rNorthChina).named(CHINA_NORTH),at=-400),
 			BuildingCount(iBronzeworks, 4, by=-400),
@@ -583,7 +583,7 @@ dGoals = {
 		CityBuilding(area_city(tMalaya).named(MALAYAN_CITY), iHinduCathedral, iBuddhistCathedral, iIslamicCathedral, by=1500),
 	),
 	iJapan: (
-		FoundedCultureAmount(30000, by=1600),
+		AreaNoReligion(plots.region(rJapan), iCatholicism, at=1650),
 		Control(
 			plots.region(rKorea),
 			plots.regions(rManchuria, rAmur).named(MANCHURIA),
@@ -592,9 +592,14 @@ dGoals = {
 			plots.region(rIndonesia),
 			plots.region(rPhilippines).named(PHILIPPINES),
 			subject=VASSALS,
-			at=1940,
+			at=1945,
 		),
 		EraFirstDiscover((iGlobal, 8), (iDigital, 8)),
+	),
+	iYamato: (
+		CultureCover(plots.region(rJapan), by=1000),
+		BuildingCount((iBuddhistCathedral, 1), (iShinbutsuShugoTemple, 6), at=1000),
+		CultureAmount(30000, by=1600),
 	),
 	iNorse: (
 		Control(required=1, at=1050, desc_key=FIRST_NORSE_GOAL, *lNorseTargets),
@@ -921,7 +926,7 @@ dGoals = {
 		All(
 			AreaNoStateReligion(plots.regions(*lIndia).named(INDIA), iHinduism),	
 			AreaNoStateReligion(plots.regions(*lIndia).named(INDIA), iBuddhism),
-        	by=1400,
+			by=1400,
 		),
 		AllowNone(
 			civs(iTurks, iTimurids, iMongols, iParthia, iPersia, iBuyids),

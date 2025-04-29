@@ -851,11 +851,11 @@
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_POP_ANGER</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_ANGER_DIVISOR</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>15</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>DEFY_RESOLUTION_POP_ANGER</DefineName>

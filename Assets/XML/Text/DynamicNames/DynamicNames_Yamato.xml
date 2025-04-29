@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YAMATO_DESC</Tag>
+		<English>The Yamato</English>
+		<French>The Yamato</French>
+		<German>The Yamato</German>
+		<Italian>The Yamato</Italian>
+		<Spanish>The Yamato</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YAMATO_PEOPLES</Tag>
+		<English>Yamato Peoples</English>
+		<French>
+			<Text>Peuplades Yamato</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Yamato-V&#246;lker:Yamato-V&#246;lker:Yamato-V&#246;lkern</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>1:1:1</Plural>
+		</German>
+		<Italian>
+			<Text>Popoli Yamato</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pueblos Yamato</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YAMATO_ADJECTIVE</Tag>
+		<English>Yamato</English>
+		<French>Yamato</French>
+		<German>Yamato</German>
+		<Italian>Yamato</Italian>
+		<Spanish>Yamato</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KAMAKURA_ADJECTIVE</Tag>
+		<English>Kamakura</English>
+		<French>Kamakura</French>
+		<German>Kamakura</German>
+		<Italian>Kamakura</Italian>
+		<Spanish>Kamakura</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASHIKAGA_ADJECTIVE</Tag>
+		<English>Ashikaga</English>
+		<French>Ashikaga</French>
+		<German>Ashikaga</German>
+		<Italian>Ashikaga</Italian>
+		<Spanish>Ashikaga</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YAMATO_SHORT_DESC</Tag>
+		<English>Yamato</English>
+		<French>Yamato</French>
+		<German>Yamato</German>
+		<Italian>Yamato</Italian>
+		<Spanish>Yamato</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YAMATO_DEFAULT</Tag>
+		<English>%s2 Kingdom</English>
+		<French>%s2 Kingdom</French>
+		<German>%s2 Kingdom</German>
+		<Italian>%s2 Kingdom</Italian>
+		<Spanish>%s2 Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YAMATO_JAPAN</Tag>
+		<English>Japanese Daimyos</English>
+		<French>
+			<Text>Daimyos Japonais</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Japanese Daimyos</German>
+		<Italian>Japanese Daimyos</Italian>
+		<Spanish>Japanese Daimyos</Spanish>
+	</TEXT>
+</Civ4GameText>

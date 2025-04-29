@@ -135,7 +135,7 @@
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_JAPAN</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Japan.dds</Button>
-			<Path>Art/Interface/TeamColor/FlagDECAL_SunSeal.dds</Path>
+			<Path>Art/Interface/TeamColor/FlagDECAL_RisingSun.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
@@ -520,6 +520,12 @@
 			<Type>ART_DEF_CIVILIZATION_BUYIDS</Type>
 			<Button>Art/Interface/Buttons/Civilizations/buyids.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Buyids.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_YAMATO</Type>
+			<Button>Art/Interface/Buttons/Civilizations/yamato.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_SunSeal.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 	</CivilizationArtInfos>

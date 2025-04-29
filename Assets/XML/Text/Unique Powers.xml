@@ -1418,4 +1418,20 @@
 		<Italian>Gain -5% tech cost reduction per each owned shrine</Italian>
 		<Spanish>Gain -5% tech cost reduction per each owned shrine</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_YMT_TITLE</Tag>
+		<English>The Power of Divine Heritage:</English>
+		<French>The Power of Divine Heritage:</French>
+		<German>The Power of Divine Heritage:</German>
+		<Italian>The Power of Divine Heritage:</Italian>
+		<Spanish>The Power of Divine Heritage:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_YMT</Tag>
+		<English>Always collapse to core rather than completely collapsing</English>
+		<French>Always collapse to core rather than completely collapsing</French>
+		<German>Always collapse to core rather than completely collapsing</German>
+		<Italian>Always collapse to core rather than completely collapsing</Italian>
+		<Spanish>Always collapse to core rather than completely collapsing</Spanish>
+	</TEXT>
 </Civ4GameText>

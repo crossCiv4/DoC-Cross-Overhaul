@@ -199,7 +199,7 @@
 			<BackgroundKFM>art/LeaderHeads/Saladin/saladin_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_ODA_NOBUNAGA</Type>
+			<Type>ART_DEF_LEADER_TOKUGAWA_IEYASU</Type>
 			<Button>,Art/interface/LeaderHeads/Btn_LH_Japan_Tokugawa.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,4,12</Button>
 			<NIF>art/LeaderHeads/Tokugawa/tokugawa.nif</NIF>
 			<KFM>art/LeaderHeads/Tokugawa/tokugawa.kfm</KFM>
@@ -1397,6 +1397,14 @@
 			<KFM>art/Leaderheads/Adud Al Dawla/peter.kfm</KFM>
 			<NoShaderNIF>art/Leaderheads/Adud Al Dawla/Mursilis.nif</NoShaderNIF>
 			<BackgroundKFM>art/LeaderHeads/Adud Al Dawla/mursilis_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MINAMOTO_NO_YORIMOTO</Type>
+			<Button>art/Leaderheads/tokugawa_as_minamoto/tokugawa_btn.dds</Button>
+			<NIF>art/Leaderheads/tokugawa_as_minamoto/tokugawa.nif</NIF>
+			<KFM>art/Leaderheads/tokugawa_as_minamoto/tokugawa.kfm</KFM>
+			<NoShaderNIF>art/Leaderheads/tokugawa_as_minamoto/tokugawa_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>art/LeaderHeads/tokugawa_as_minamoto/tokugawa_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

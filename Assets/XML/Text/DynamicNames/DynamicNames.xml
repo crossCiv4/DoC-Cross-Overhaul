@@ -702,4 +702,28 @@
 		<Italian>Client Kingdom of %s1</Italian>
 		<Spanish>Client Kingdom of %s1</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SHOGUNATE_ADJECTIVE</Tag>
+		<English>%s2 Shogunate</English>
+		<French>
+			<Text>Shogunat %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>%s2 Schogunat:%s2 Schogunat:%s2 Schogunat</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Shogunato %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Shogunato %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
 </Civ4GameText>

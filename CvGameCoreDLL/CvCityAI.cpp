@@ -2525,6 +2525,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 5;
 		break;
 	case JAPAN:
+	case YAMATO:
 		if (!GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)MACHINE_TOOLS))
 				aiUnitAIVal[UNITAI_ATTACK_SEA] /= 3;
 		else

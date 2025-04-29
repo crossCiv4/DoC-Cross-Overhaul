@@ -1498,7 +1498,7 @@
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<bNoSlavery>1</bNoSlavery>
-			<iMaxConscript>3</iMaxConscript>
+			<iMaxConscript>2</iMaxConscript>
 			<iCapitalBuildingProductionModifier>25</iCapitalBuildingProductionModifier>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>

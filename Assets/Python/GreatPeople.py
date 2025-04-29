@@ -71,6 +71,7 @@ def getAlias(iCiv, iType, iEra):
 	elif iCiv == iSaxons: return iEngland
 	elif iCiv in [iTunis, iMorocco]: return iMoors
 	elif iCiv == iVandals: return iRome
+	elif iCiv == iYamato: return iJapan
 	
 	return iCiv
 	

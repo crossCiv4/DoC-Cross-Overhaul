@@ -230,21 +230,27 @@ def spreadCatholicismInJapan():
 	if not game.isReligionFounded(iCatholicism): 
 		return
 
-	if not turn().between(1550, 1700): 
+	if not turn().between(dBirth[iJapan], 1700): 
 		return
 	
 	if not periodic(3): 
 		return
 	
-	civic = civics(iJapan)
-	if civic.iTerritory == iIsolationism:
+	if player(iJapan).isExisting() and not player(iYamato).isExisting() and civics(iJapan).iTerritory == iIsolationism:
+		return
+
+	if player(iJapan).isExisting() and player(iYamato).isExisting() and civics(iYamato).iTerritory == iIsolationism and civics(iJapan).iTerritory == iIsolationism:
 		return
 	
+	if not player(iJapan).isExisting() and player(iYamato).isExisting() and civics(iYamato).iTerritory == iIsolationism:
+		return
+		
 	japaneseCities = cities.region(rJapan)
 	potentialCities = japaneseCities.where(lambda c: not c.isHasReligion(iCatholicism))
 	
 	iMaxCitiesMultiplier = 2
-	if player(iJapan).getStateReligion() == iCatholicism: iMaxCitiesMultiplier = 5
+	if player(iJapan).isExisting() and player(iJapan).getStateReligion() == iCatholicism: iMaxCitiesMultiplier = 5
+	elif player(iYamato).isExisting() and player(iYamato).getStateReligion() == iCatholicism: iMaxCitiesMultiplier = 5
 	
 	if len(potentialCities) * iMaxCitiesMultiplier >= len(japaneseCities):
 		spreadCity = potentialCities.random()

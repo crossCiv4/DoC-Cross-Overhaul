@@ -2983,17 +2983,17 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_JAPAN
+		UnitOwner=CIVILIZATION_YAMATO
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_JAPAN
+		CityOwner=CIVILIZATION_YAMATO
 		CityName=Kumamoto
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_HARBOR
 		ReligionType=RELIGION_BUDDHISM
 		BeginCulture
-			Civilization=CIVILIZATION_JAPAN, Culture=10
+			Civilization=CIVILIZATION_YAMATO, Culture=10
 		EndCulture
 		YearFounded=550
 	EndCity
@@ -3007,30 +3007,30 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_SWORDSMAN
-		UnitOwner=CIVILIZATION_JAPAN
+		UnitOwner=CIVILIZATION_YAMATO
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_SWORDSMAN
-		UnitOwner=CIVILIZATION_JAPAN
+		UnitOwner=CIVILIZATION_YAMATO
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_JAPAN
+		UnitOwner=CIVILIZATION_YAMATO
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_BUDDHIST_MISSIONARY
-		UnitOwner=CIVILIZATION_JAPAN
+		UnitOwner=CIVILIZATION_YAMATO
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_WORKER
-		UnitOwner=CIVILIZATION_JAPAN
+		UnitOwner=CIVILIZATION_YAMATO
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_WORKER
-		UnitOwner=CIVILIZATION_JAPAN
+		UnitOwner=CIVILIZATION_YAMATO
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_JAPAN
+		CityOwner=CIVILIZATION_YAMATO
 		CityName=Kyouto
 		CityPopulation=4
 		BuildingType=BUILDING_PALACE
@@ -3039,7 +3039,7 @@ BeginPlot
 		BuildingType=BUILDING_BUDDHIST_TEMPLE
 		ReligionType=RELIGION_BUDDHISM
 		BeginCulture
-			Civilization=CIVILIZATION_JAPAN, Culture=50
+			Civilization=CIVILIZATION_YAMATO, Culture=50
 		EndCulture
 		YearFounded=520
 		YearAcquired=520
@@ -3058,17 +3058,17 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_JAPAN
+		UnitOwner=CIVILIZATION_YAMATO
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_JAPAN
+		CityOwner=CIVILIZATION_YAMATO
 		CityName=Fuchuu
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_HARBOR
 		ReligionType=RELIGION_BUDDHISM
 		BeginCulture
-			Civilization=CIVILIZATION_JAPAN, Culture=25
+			Civilization=CIVILIZATION_YAMATO, Culture=25
 		EndCulture
 		YearFounded=520
 		YearAcquired=520

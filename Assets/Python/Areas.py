@@ -70,7 +70,7 @@ iMexico :		(17, 43), # Mexico City
 iColombia :		(30, 34), # Bogota
 iBrazil :		(44, 20), # Rio de Janeiro
 iCanada :		(31, 61), # Montreal
-iBulgaria:      (77, 56), # Tarnovo
+iBulgaria:		(77, 56), # Tarnovo
 iMamluks :		(67, 48), # Tunis
 iMacedon :		(75, 54), # Pella
 iIroquois :		(30, 59), # "Mohawk"
@@ -88,6 +88,7 @@ iMorocco :		(56, 48), # Cadiz
 iYemen :		(89, 37), # Sana'a
 iOman :			(96, 40), # Masqat
 iBuyids :		(94, 45), # Persepolis
+iYamato :		(137, 51), # Heijo-kyo
 })
 
 dPeriodCapitals = {
@@ -115,7 +116,9 @@ iSaxons :	(58, 64),	# London
 iGhorids:	(105, 46),	# Delhi
 iVandals :	(67, 48),	# Carthage
 iYemen:		(89, 35),	# Adan
-iBuyids :	(89, 47), 	# Baghdad
+iBuyids :	(89, 47),	# Baghdad
+iYamato :	(137, 53),	# Kyoto
+iTurks :	(92, 50),	# Hamadan
 })
 
 # new capital locations on respawn
@@ -193,6 +196,8 @@ iSaxons :		((65, 64),	(67, 68)),
 iEngland :		((57, 61),	(61, 63)),
 iVandals :		((55, 47),	(58, 49)),
 iMorocco :		((56, 42),  (59, 49)),
+iJapan :		((136, 52),	(138, 54)),
+iYamato :		((137, 51),	(138, 54)),
 })
 
 dBirthAreaExceptions = CivDict({
@@ -275,7 +280,8 @@ iKorea :		((130, 53),	(132, 56)),
 iKhmer :		((120, 36),	(122, 38)),
 iByzantium :	((74, 48),	(87, 55)),
 iMalays :		((119, 26),	(121, 31)),
-iJapan :		((135, 52),	(140, 55)),
+iYamato :		((136, 52),	(138, 54)),
+iJapan :		((135, 51),	(140, 55)),
 iNorse :		((65, 67),	(68, 75)),
 iTurks :		((96, 54),	(107, 59)),
 iArabia :		((84, 46),	(90, 50)),

@@ -79,11 +79,15 @@ dSpecificVassalTitles = deepdict({
 	iIndia : {
 		iAztecs: "TXT_KEY_CIV_INDIAN_AZTECS",
 	},
+	iYamato: {
+		iJapan : "TXT_KEY_CIV_YAMATO_JAPAN",
+	},
 	iJapan : {
 		iChina : "TXT_KEY_CIV_JAPANESE_CHINA",
 		iIndia : "TXT_KEY_CIV_JAPANESE_INDIA",
 		iKorea : "TXT_KEY_CIV_JAPANESE_KOREA",
 		iMongols : "TXT_KEY_CIV_JAPANESE_MONGOLIA",
+		iYamato : "TXT_KEY_CIV_JAPANESE_YAMATO",
 	},
 	iByzantium : {
 		iEgypt : "TXT_KEY_CIV_BYZANTINE_EGYPT",
@@ -562,13 +566,13 @@ dForeignNames = deepdict({
 })
 
 lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis, iMorocco, iYemen, iOman, iZulu, iMalays, iMoors]
-lRepublicAdj = [iBabylonia, iRome, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons]
+lRepublicAdj = [iBabylonia, iRome, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons, iYamato]
 
 lSocialistRepublicOf = [iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis, iMorocco, iYemen, iOman]
 lSocialistRepublicAdj = [iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina]
 
 lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria, iMalays, iZulu]
-lPeoplesRepublicAdj = [iDravidia, iByzantium, iMongols]
+lPeoplesRepublicAdj = [iDravidia, iByzantium, iMongols, iYamato]
 
 # prefer all islamic republics to use the "islamic republic" name; if some names don't fit, add them as exceptions
 # lIslamicRepublicOf = [iIndia, iPersia, iMali, iTimurids, iIran]
@@ -622,7 +626,8 @@ dStartingLeaders = [
 	iRome : iJuliusCaesar,
 	iCelts : iBrennus,
 	iMaya : iPacal,
-	iJapan : iKammu,
+	iYamato : iKammu,
+	iJapan: iTokugawa,
 	iDravidia : iRajendra,
 	iEthiopia : iEzana,
 	iVietnam: iLeLoi,
@@ -700,7 +705,6 @@ dStartingLeaders = [
 	iDravidia : iKrishnaDevaRaya,
 	iKorea : iSejong,
 	iNorse : iChristian,
-	iJapan : iOdaNobunaga,
 	iTurks : iAlpArslan,
 	iSpain : iPhilip,
 	iFrance : iLouis,
@@ -1428,6 +1432,18 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_MISR_AYYUBID"
 		
 		return "TXT_KEY_CIV_MISR_ADJECTIVE"
+
+	elif iCiv == iYamato:
+		if iVassalage in civic or iStratocracy in civic or iDespotism in civic:
+			# shogunates
+			if getColumn(iPlayer) >= 9:
+				return "TXT_KEY_CIV_ASHIKAGA_ADJECTIVE"
+			else:
+				return "TXT_KEY_CIV_KAMAKURA_ADJECTIVE"
+
+		else:
+			# imperial dynasties
+			return "TXT_KEY_CIV_YAMATO_ADJECTIVE"
 
 	elif iCiv == iNorse:
 		if year() < year(dBirth[iSweden]):
@@ -2205,21 +2221,31 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			
 		if bEmpire:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
-			
+
 	elif iCiv == iRome:
 		if bEmpire:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
-			
+
 		if bCityStates:
 			return "TXT_KEY_REPUBLIC_ADJECTIVE"
-			
+
 	elif iCiv == iColombia:
 		if bEmpire:
 			if isControlled(iPlayer, plots.regions(rNewGranada, rAndes)):
 				return "TXT_KEY_CIV_COLOMBIA_EMPIRE_ANDES"
-		
+
 			return "TXT_KEY_CIV_COLOMBIA_EMPIRE"
-			
+
+	elif iCiv == iYamato:
+		if iVassalage in civic or iStratocracy in civic or iDespotism in civic:
+			return "TXT_KEY_SHOGUNATE_ADJECTIVE"
+
+		if bEmpire:
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+		if iEra >= iIndustrial:
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
+
 	elif iCiv == iJapan:
 		if bEmpire:
 			return "TXT_KEY_EMPIRE_OF"
@@ -2711,11 +2737,12 @@ def leader(iPlayer):
 		if iEra >= iRenaissance: return iSejong
 		
 		if scenario() >= i1700AD: return iSejong
-		
+	
+	elif iCiv == iYamato:
+		if tPlayer.isHasTech(iNobility): return iMinamoto
+
 	elif iCiv == iJapan:
 		if iEra >= iIndustrial: return iMeiji
-		
-		if tPlayer.isHasTech(iNobility): return iOdaNobunaga
 		
 	elif iCiv == iEthiopia:
 		if iEra >= iIndustrial: return iMenelik
@@ -2916,6 +2943,7 @@ def leaderName(iPlayer):
 	bResurrected = data.civs[iCiv].iResurrections > 0
 	iReligion = pPlayer.getStateReligion()
 	iEra = pPlayer.getCurrentEra()
+	civic = civics(iPlayer)
 	
 	if iCiv == iChina:
 		if iLeader == iHongwu:
@@ -2972,5 +3000,10 @@ def leaderName(iPlayer):
 		if player(iPlayer).getPeriod() == iPeriodUzbeks:
 			if iLeader == iAlpArslan:
 				return "TXT_KEY_LEADER_ABDULLAH_KHAN"
+
+	elif iCiv == iYamato:
+		if iLeader == iMinamoto:
+			if getColumn(iPlayer) >= 9:
+				return "TXT_KEY_LEADER_ASHIKAGA_TAKAUJI"
 
 	return None

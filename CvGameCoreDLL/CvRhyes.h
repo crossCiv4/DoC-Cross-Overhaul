@@ -12,12 +12,12 @@ typedef list<char*> LISTCHAR;
 #define MAX_COM_SHRINE			(20)
 
 // increment if normal building (not for wonders) is added --> this is iNumBuildings + iNumReligiousBuildings + 6 (national wonders built by great people)
-#define BEGIN_WONDERS				(213) 
+#define BEGIN_WONDERS				(214) 
 
 // increment if a national wonder is added (this is the national wonders AFTER those that great people can build)
 // #define BEGIN_GREAT_WONDERS			(BEGIN_WONDERS+13)
 
-#define NUM_CIVS				(81)
+#define NUM_CIVS				(82)
 
 #define NUM_ERAS				(ERA_DIGITAL+1)
 

@@ -26,7 +26,7 @@ def checkAvailableSlots():
 
 def freeSlotFor(iCiv):
 	iCivImpact = getImpact(iCiv)
-	availableSlots = players.major().ai().alive().where(lambda p: getImpact(civ(p)) <= iCivImpact)
+	availableSlots = players.major().ai().alive().where(lambda p: getImpact(civ(p)) <= iCivImpact and civ(p) != iYamato)
 	metric = lambda iPlayer: (getImpact(civ(iPlayer)), until(year(dFall[iPlayer])))
 	
 	iSlot = availableSlots.where(lambda p: stability(p) == iStabilityCollapsing).minimum(metric)
@@ -51,6 +51,12 @@ def scheduleCollapse(iPlayer):
 	data.players[iPlayer].iTurnsToCollapse = 1
 	
 def completeCollapse(iPlayer):
+
+	# Yamato UP
+	if civ(iPlayer) == iYamato:
+		collapseToCore(iPlayer)
+		return
+
 	# before cities are seceded, downgrade their improvements
 	downgradeImprovements(iPlayer)
 	

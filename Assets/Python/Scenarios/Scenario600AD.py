@@ -97,7 +97,7 @@ lCivilizations = [
 		techs=techs.column(5).including(iEthics).without(iEngineering)
 	),
 	Civilization(
-		iJapan,
+		iYamato,
 		iGold=300,
 		iStateReligion=iBuddhism,
 		lCivics=[iMonarchy, iCasteSystem, iRedistribution, iDeification, iThalassocracy],
@@ -182,10 +182,10 @@ def createStartingUnits():
 	createRoleUnit(iMalays, capital, iWorkerSea, 2)
 	
 	# Japan
-	capital = plots.capital(iJapan)
-	if not player(iJapan).isHuman():
-		makeUnits(iJapan, iCrossbowman, capital, 2)
-		makeUnits(iJapan, iSamurai, capital, 3)
+	capital = plots.capital(iYamato)
+	if not player(iYamato).isHuman():
+		makeUnits(iYamato, iCrossbowman, capital, 2)
+		makeUnits(iYamato, iSamurai, capital, 3)
 	
 	# Norse
 	capital = plots.capital(iNorse)

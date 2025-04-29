@@ -1260,6 +1260,7 @@ enum CivilizationTypes		// Exposed to Python
 	VANDALS,
 	VIETNAM,
 	XIA,
+	YAMATO,
 	YEMEN,
 	ZULU,
 	INDEPENDENT,
@@ -1362,7 +1363,9 @@ enum LeaderHeadTypes			// Exposed to Python
 	TUN_PERAK,
 
 	KAMMU,
-	ODA_NOBUNADA,
+	MINAMOTO,
+
+	TOKUGAWA,
 	MEIJI,
 
 	RAGNAR,
