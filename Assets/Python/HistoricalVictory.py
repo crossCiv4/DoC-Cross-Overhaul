@@ -601,6 +601,19 @@ dGoals = {
 		BuildingCount((iBuddhistCathedral, 1), (iShinbutsuShugoTemple, 6), at=1000),
 		CultureAmount(30000, by=1600),
 	),
+	iManchu: (
+		VassalCount(4, civs=group(iCivGroupAsia).named(ASIA), by=1800),
+		All(
+			LandPercent(5),
+			PopulationPercent(10),
+			by=1900,
+		),
+		All(
+			BuildingCount(iManchuExaminationHall, 10),
+			SpecialistCount(iSpecialistStatesman, 30),
+			by=1900,
+		),
+	),
 	iNorse: (
 		Control(required=1, at=1050, desc_key=FIRST_NORSE_GOAL, *lNorseTargets),
 		FirstSettle(plots.regions(*lAmerica).named(AMERICAS), allowed=dCivGroups[iCivGroupAmerica], by=1100),

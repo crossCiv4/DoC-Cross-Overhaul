@@ -710,6 +710,13 @@ lCivilizations = [
 		techs=techs.column(11).including(iCombinedArms, iUrbanPlanning)
 	),
 	Civilization(
+		iManchu,
+		iGold=500,
+		iAdvancedStartPoints=100,
+		lCivics=[iDespotism, iBureaucracy, iCasteSystem, iIsolationism, iSyncretism, iHegemony],
+		techs=techs.column(11).including(iCombinedArms).without(iExploration, iOptics, iAcademia)
+	),
+	Civilization(
 		iGermany,
 		iGold=800,
 		iAdvancedStartPoints=200,
@@ -1027,6 +1034,14 @@ dStartingUnits = CivDict({
 		iShock: 1,
 		iWorkerSea: 1,
 	},
+	iManchu: {
+		iSettle: 2,
+		iWork: 3,
+		iSiege: 4,
+		iDefend: 4,
+		iHarass: 10,
+		iCounter: 2,
+	},
 	iJapan : {
 		iSettle: 1,
 		iWork: 2,
@@ -1269,9 +1284,9 @@ dStartingUnits = CivDict({
 		iEscort: 1,
 	},
 	iMongols: {
-		iSettle: 3,
+		iSettle: 8,
 		iWork: 4,
-		iDefend: 4,
+		iDefend: 5,
 		iAttack: 3,
 		iHarass: 5,
 		iShock: 8,
@@ -1457,6 +1472,14 @@ dExtraAIUnits = CivDict({
 		iShock: 2,
 		iSettler: 1,
 		iBase: 1,
+	},
+	iManchu : {
+		iHarass: 9,
+		iSiege: 4,
+		iSkirmish: 3,
+		iCounter: 2,
+		iWork: 2,
+		iDefend: 5,
 	},
 	iChina : {
 		iSettle: 2,
@@ -1667,6 +1690,10 @@ dAdditionalUnits = CivDict({
 	iYamato: {
 		iDefend: 2,
 		iAttack: 2,
+	},
+	iManchu: {
+		iDefend: 2,
+		iHarass: 2,
 	},
 	iJapan: {
 		iDefend: 2,
@@ -2008,6 +2035,12 @@ dTechPreferences = {
 		iSailing: -20,
 		iCartography: -100,
 		iEconomics: -20,
+	},
+	iManchu : {
+		iExploration: -20,
+		iMachineTools: -20,
+		iReplaceableParts: -20,
+		iBallistics: -30,
 	},
 	iChinaS : {
 		iAesthetics: 40,
@@ -2769,6 +2802,20 @@ dBuildingPreferences = {
 		iBorobudur: -30,
 		iBrandenburgGate: -30,
 		iIshtarGate: -30,
+	},
+	iManchu : {
+		iGreatWall: 80,
+		iForbiddenPalace: 40,
+		iGrandCanal: 40,
+		iOrientalPearlTower: 40,
+		iDujiangyan: 30,
+		iTerracottaArmy: 30,
+		iPorcelainTower: 30,
+		
+		iHangingGardens: -30,
+		iHimejiCastle: -30,
+		iBorobudur: -30,
+		iBrandenburgGate: -30,
 	},
 	iVietnam: {
 		iGreatWall: -30,	

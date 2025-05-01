@@ -1434,4 +1434,20 @@
 		<Italian>Always collapse to core rather than completely collapsing</Italian>
 		<Spanish>Always collapse to core rather than completely collapsing</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MCH_TITLE</Tag>
+		<English>The Power of the Banners:</English>
+		<French>The Power of the Banners:</French>
+		<German>The Power of the Banners:</German>
+		<Italian>The Power of the Banners:</Italian>
+		<Spanish>The Power of the Banners:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MCH</Tag>
+		<English>66% chance to convert defeated Chinese gunpowder units into Han Bannermen, likewise for steppe cavalry into Manchu Bannermen, and Chinese siege units</English>
+		<French>66% chance to convert defeated Chinese gunpowder units into Han Bannermen, likewise for steppe cavalry into Manchu Bannermen, and Chinese siege units</French>
+		<German>66% chance to convert defeated Chinese gunpowder units into Han Bannermen, likewise for steppe cavalry into Manchu Bannermen, and Chinese siege units</German>
+		<Italian>66% chance to convert defeated Chinese gunpowder units into Han Bannermen, likewise for steppe cavalry into Manchu Bannermen, and Chinese siege units</Italian>
+		<Spanish>66% chance to convert defeated Chinese gunpowder units into Han Bannermen, likewise for steppe cavalry into Manchu Bannermen, and Chinese siege units</Spanish>
+	</TEXT>
 </Civ4GameText>

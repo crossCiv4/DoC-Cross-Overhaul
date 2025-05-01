@@ -185,7 +185,6 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 		
 	# determine army size
 	iNumCities = resurrectionCities.count()
-	iGarrison = 2
 	iArmySize = pPlayer.getCurrentEra()
 	
 	pPlayer.setLastBirthTurn(turn())
@@ -262,17 +261,23 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	# give the new civ a starting army
 	capital = pPlayer.getCapitalCity()
 
-	dStartingUnits = {
-		iAttack: 2 * iArmySize + iNumCities,
-		iShock: iArmySize,
-		iCounter: iArmySize,
-		iSiege: iArmySize + iNumCities,
-	}
+	if iCiv in [iMongols, iTurks, iKhazars]:
+		dStartingUnits = {
+			iAttack: iNumCities,
+			iHarass: 2 * iArmySize,
+			iShock: iNumCities,
+			iSiege: iNumCities,
+		}
+	else:
+		dStartingUnits = {
+			iAttack: 2 * iArmySize + iNumCities,
+			iShock: iArmySize,
+			iCounter: iArmySize,
+			iSiege: iArmySize + iNumCities,
+		}
 	createRoleUnits(iPlayer, capital, dStartingUnits.items())
 
-	if iCiv == iPersia and game.isReligionFounded(iShia):
-		makeUnits(iPersia, iShiaMissionary, plot(capital), 4)
-	elif iCiv == iAssyria and game.isReligionFounded(iShia):
+	if iCiv == iAssyria and game.isReligionFounded(iShia):
 		makeUnits(iAssyria, iShiaMissionary, plot(capital), 2)
 	
 	switchCivics(iPlayer)

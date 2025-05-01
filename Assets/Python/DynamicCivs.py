@@ -281,6 +281,7 @@ dMasterTitles = {
 	iChinaS : "TXT_KEY_CIV_CHINESE_VASSAL",
 	iShu : "TXT_KEY_CIV_CHINESE_VASSAL",
 	iXia : "TXT_KEY_CIV_CHINESE_VASSAL",
+	iManchu : "TXT_KEY_CIV_CHINESE_VASSAL",
 	iIndia : "TXT_KEY_CIV_INDIAN_VASSAL",
 	iPersia : "TXT_KEY_CIV_PERSIAN_VASSAL",
 	iParthia:  "TXT_KEY_CIV_PERSIAN_VASSAL",
@@ -394,6 +395,21 @@ dForeignAdjectives = deepdict({
 		iTibet : "TXT_KEY_CIV_CHINESE_ADJECTIVE_TIBET",
 	},
 	iXia : {
+		iEgypt : "TXT_KEY_CIV_CHINESE_ADJECTIVE_EGYPT",
+		iIndia : "TXT_KEY_CIV_CHINESE_ADJECTIVE_INDIA",
+		iBabylonia : "TXT_KEY_CIV_CHINESE_ADJECTIVE_BABYLONIA",
+		iPersia : "TXT_KEY_CIV_CHINESE_ADJECTIVE_PERSIA",
+		iRome : "TXT_KEY_CIV_CHINESE_ADJECTIVE_ROME",
+		iJapan : "TXT_KEY_CIV_CHINESE_ADJECTIVE_JAPAN",
+		iKorea : "TXT_KEY_CIV_CHINESE_ADJECTIVE_KOREA",
+		iByzantium : "TXT_KEY_CIV_CHINESE_ADJECTIVE_BYZANTIUM",
+		iArabia : "TXT_KEY_CIV_CHINESE_ADJECTIVE_ARABIA",
+		iKhmer : "TXT_KEY_CIV_CHINESE_ADJECTIVE_KHMER",
+		iMongols : "TXT_KEY_CIV_CHINESE_ADJECTIVE_MONGOLIA",
+		iOttomans : "TXT_KEY_CIV_CHINESE_ADJECTIVE_OTTOMANS",
+		iTibet : "TXT_KEY_CIV_CHINESE_ADJECTIVE_TIBET",
+	},
+	iManchu : {
 		iEgypt : "TXT_KEY_CIV_CHINESE_ADJECTIVE_EGYPT",
 		iIndia : "TXT_KEY_CIV_CHINESE_ADJECTIVE_INDIA",
 		iBabylonia : "TXT_KEY_CIV_CHINESE_ADJECTIVE_BABYLONIA",
@@ -566,13 +582,13 @@ dForeignNames = deepdict({
 })
 
 lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis, iMorocco, iYemen, iOman, iZulu, iMalays, iMoors]
-lRepublicAdj = [iBabylonia, iRome, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons, iYamato]
+lRepublicAdj = [iBabylonia, iRome, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons, iYamato, iManchu]
 
 lSocialistRepublicOf = [iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis, iMorocco, iYemen, iOman]
 lSocialistRepublicAdj = [iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina]
 
 lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria, iMalays, iZulu]
-lPeoplesRepublicAdj = [iDravidia, iByzantium, iMongols, iYamato]
+lPeoplesRepublicAdj = [iDravidia, iByzantium, iMongols, iYamato, iManchu]
 
 # prefer all islamic republics to use the "islamic republic" name; if some names don't fit, add them as exceptions
 # lIslamicRepublicOf = [iIndia, iPersia, iMali, iTimurids, iIran]
@@ -690,6 +706,7 @@ dStartingLeaders = [
 	iYemen: iAbuKarib,
 	iOman: iAbiBinOmar,
 	iBuyids : iAdudAlDawla,
+	iManchu: iNurhaci,
 },
 # 600 AD
 {
@@ -1074,9 +1091,15 @@ def specificName(iPlayer):
 	iGameEra = game.getCurrentEra()
 	bWar = isAtWar(iPlayer)
 			
-	if iCiv == iChina:
-		if bEmpire and (bResurrected and iEra >= iRenaissance) or scenario() == i1700AD:
-			return "TXT_KEY_CIV_CHINA_QING"
+	if iCiv == iManchu:
+		if bEmpire:
+			return "TXT_KEY_CIV_MANCHU_GREAT_QING"
+		elif year() < year(dBirth[iAmerica]):
+			return "TXT_KEY_CIV_MANCHU_JIN"
+
+	elif iCiv == iChina or (iCiv == iChinaS and bEmpire and not player(iChina).isExisting()):
+		if iEra >= iRenaissance:
+			return "TXT_KEY_CIV_CHINA_GREAT_MING"
 
 	elif iCiv == iShu:
 		if bResurrected:
@@ -1445,6 +1468,12 @@ def specificAdjective(iPlayer):
 			# imperial dynasties
 			return "TXT_KEY_CIV_YAMATO_ADJECTIVE"
 
+	elif iCiv == iManchu:
+		if bEmpire:
+			return "TXT_KEY_CIV_MANCHU_QING"
+		elif year() < year(dBirth[iAmerica]):
+			return "TXT_KEY_CIV_MANCHU_JIN"
+
 	elif iCiv == iNorse:
 		if year() < year(dBirth[iSweden]):
 			return "TXT_KEY_CIV_NORSE_ADJECTIVE"
@@ -1522,6 +1551,9 @@ def specificAdjective(iPlayer):
 			
 	elif iCiv == iChina or (iCiv == iChinaS and bEmpire and not player(iChina).isExisting()):
 		if bMonarchy:
+			if iEra >= iRenaissance:
+				return "TXT_KEY_CIV_CHINA_MING"
+
 			if iEra >= iMedieval:
 				if year() >= year(1000) or (tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder)):
 					return "TXT_KEY_CIV_CHINA_SONG"
@@ -1539,7 +1571,7 @@ def specificAdjective(iPlayer):
 				if year() >= year(-200):
 					return "TXT_KEY_CIV_CHINA_HAN"
 				
-				return "TXT_KEY_CIV_CHINA_QIN"			
+				return "TXT_KEY_CIV_CHINA_QIN"
 
 	elif iCiv == iChinaS:
 		if bResurrected and year() >= year(1830):
@@ -2132,13 +2164,17 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 		if iEra <= iClassical:
 			return "TXT_KEY_CIV_INDIA_MAHAJANAPADAS"
 
-	# adjectives, titles and names should be unified into one functon per civ
-	# it would make it easier to track all the dynamic names
+	elif iCiv == iManchu:
+		if bMonarchy: 
+			if bEmpire:
+				return "TXT_KEY_EMPIRE_OF" # Great Qing
+
 	elif iCiv == iChina:
 		if bMonarchy:
 			if bEmpire:
-				if (bResurrected and iEra >= iRenaissance) or scenario() == i1700AD:
-					return "TXT_KEY_EMPIRE_OF" # Great Qing
+				if iEra == iRenaissance:
+					return "TXT_KEY_EMPIRE_OF" # Great Ming
+
 				if iEra == iClassical and year() >= year(220) and year() < year(580):
 					return "TXT_KEY_EMPIRE_OF_ADJECTIVE" # Empire of Wei, using adjective aka %s2
 				return "TXT_KEY_EMPIRE_ADJECTIVE"
@@ -2662,6 +2698,9 @@ def leader(iPlayer):
 		if period(iCiv) == iPeriodPtolemaicEgypt:
 			return iCleopatra
 
+	elif iCiv == iManchu:
+		if iEra >= iIndustrial: return iCixi
+
 	elif iCiv == iMamluks:
 		if not bMonarchy and iEra >= iGlobal: return iNasser
 		
@@ -2677,12 +2716,12 @@ def leader(iPlayer):
 		if getColumn(iPlayer) >= 5: return iChandragupta
 		
 	elif iCiv == iChina:
-		if isCommunist(iPlayer) or isRepublic(iPlayer) and iEra >= iIndustrial: return iMao		
+		if bResurrected and year() >= year(1930): return iMao
+
+		if isCommunist(iPlayer) or isRepublic(iPlayer) and iEra >= iIndustrial: return iMao
 
 		if iEra >= iRenaissance and year() >= year(1400): return iHongwu
 			
-		if scenario() >= i1700AD: return iHongwu
-		
 		if iEra >= iMedieval: return iTaizong
 
 	elif iCiv == iChinaS:
@@ -2945,11 +2984,11 @@ def leaderName(iPlayer):
 	iEra = pPlayer.getCurrentEra()
 	civic = civics(iPlayer)
 	
-	if iCiv == iChina:
-		if iLeader == iHongwu:
-			if year() >= year(1700):
+	if iCiv == iManchu:
+		if iLeader == iNurhaci:
+			if year() >= year(1661):
 				return "TXT_KEY_LEADER_KANGXI"
-	
+
 	elif iCiv == iShu:
 		if iLeader == iLiuBei:
 			if not bResurrected:

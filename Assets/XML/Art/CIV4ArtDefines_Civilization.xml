@@ -528,5 +528,11 @@
 			<Path>Art/Interface/TeamColor/FlagDECAL_SunSeal.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_MANCHU</Type>
+			<Button>Art/Interface/Buttons/Civilizations/manchu.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Manchu.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
 	</CivilizationArtInfos>
 </Civ4ArtDefines>

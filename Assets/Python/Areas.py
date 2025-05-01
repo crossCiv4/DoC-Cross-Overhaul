@@ -89,6 +89,7 @@ iYemen :		(89, 37), # Sana'a
 iOman :			(96, 40), # Masqat
 iBuyids :		(94, 45), # Persepolis
 iYamato :		(137, 51), # Heijo-kyo
+iManchu :		(129, 61), # Daqing; not the actual first capital of the Qing but works for gameplay reasons
 })
 
 dPeriodCapitals = {
@@ -119,12 +120,13 @@ iYemen:		(89, 35),	# Adan
 iBuyids :	(89, 47),	# Baghdad
 iYamato :	(137, 53),	# Kyoto
 iTurks :	(92, 50),	# Hamadan
+iManchu :	(125, 56),	# Beijing
 })
 
 # new capital locations on respawn
 dRespawnCapitals = CivDict({
 iChina :	(125, 56),	# Beijing
-iIndia :	tDelhi,	# Delhi
+iIndia :	tDelhi, 	# Delhi
 iPersia :	(93, 48),	# Esfahan
 iCelts :	(54, 65),	# Dublin
 iEthiopia :	(84, 32),	# Addis Ababa
@@ -198,6 +200,7 @@ iVandals :		((55, 47),	(58, 49)),
 iMorocco :		((56, 42),  (59, 49)),
 iJapan :		((136, 52),	(138, 54)),
 iYamato :		((137, 51),	(138, 54)),
+iManchu :		((127, 57),	(130, 63)),
 })
 
 dBirthAreaExceptions = CivDict({
@@ -334,6 +337,7 @@ iMorocco:       ((56, 43),  (59, 46)),
 iYemen :		((87, 34),  (92, 37)),
 iOman :			((93, 36),  (96, 41)),
 iBuyids :		((92, 43),	(94, 48)),
+iManchu :		((122, 55),	(129, 61)),
 })
 
 dCoreAreaExceptions = CivDict({

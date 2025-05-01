@@ -24497,6 +24497,7 @@ EraTypes CvPlayer::getSoundtrackEra()
 			case JAPAN:
 			case KOREA:
 			case YAMATO:
+			case MANCHU:
 				return (EraTypes)ERA_EAST_ASIA;
 			default:
 				return (EraTypes)ERA_SOUTH_ASIA;

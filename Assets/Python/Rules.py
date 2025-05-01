@@ -189,6 +189,21 @@ def zuluUniquePower(winningUnit, losingUnit):
 		captureUnit(losingUnit, winningUnit, losingUnit.getUnitType(), 25)
 
 @handler("combatResult")
+def manchuUniquePower(winningUnit, losingUnit):
+	# Manchu UP: 
+	# recruit Chinese premodern gunpowder units into Han Bannermen &
+	# recruit steppe cavalry units into Manchu Bannermen &
+	# recruit Chinese siege units
+	if civ(winningUnit) == iManchu:
+		if civ(losingUnit) in [iChina, iChinaS, iXia, iShu, iIndependent, iIndependent2, iBarbarian] and losingUnit.getUnitCombatType() in [UnitCombatTypes.UNITCOMBAT_MELEE, UnitCombatTypes.UNITCOMBAT_GUN, UnitCombatTypes.UNITCOMBAT_ARCHER]:
+			captureUnit(losingUnit, winningUnit, iHanBannerman, 66)
+		elif civ(losingUnit) in [iChina, iChinaS, iXia, iShu, iIndependent, iIndependent2, iBarbarian] and losingUnit.getUnitCombatType() == UnitCombatTypes.UNITCOMBAT_SIEGE:
+			captureUnit(losingUnit, winningUnit, losingUnit.getUnitType(), 66)
+		elif civ(losingUnit) in [iMongols, iTurks, iKhazars, iIndependent, iIndependent2, iBarbarian] and losingUnit.getUnitCombatType() in [UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY, UnitCombatTypes.UNITCOMBAT_LIGHT_CAVALRY]:
+			captureUnit(losingUnit, winningUnit, iManchuHorseArcher, 66)
+
+
+@handler("combatResult")
 def mayanHolkanAbility(winningUnit, losingUnit):
 	if winningUnit.getUnitType() == iHolkan:
 		iWinner = winningUnit.getOwner()

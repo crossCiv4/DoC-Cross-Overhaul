@@ -1223,6 +1223,7 @@ enum CivilizationTypes		// Exposed to Python
 	MALAYS,
 	MALI,
 	MAMLUKS,
+	MANCHU,
 	MAYA,
 	MEXICO,
 	MINOANS,
@@ -1513,6 +1514,9 @@ enum LeaderHeadTypes			// Exposed to Python
 	NELSON_MANDELA,
 
 	ALFRED,
+
+	NURHACI,
+	CIXI,
 
 	NUM_LEADERHEADS
 };

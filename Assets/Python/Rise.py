@@ -44,6 +44,7 @@ lExpansionCivs = [
 	iFrance,
 	iEngland,
 	iBuyids,
+	iManchu,
 ]
 
 lIndependenceCivs = [

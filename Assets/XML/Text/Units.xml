@@ -3956,6 +3956,22 @@
 		<Spanish>Ashigaru</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_HAN_BANNERMAN_MUSKETEER</Tag>
+		<English>Han Bannerman</English>
+		<French>Han Bannerman</French>
+		<German>Han Bannerman</German>
+		<Italian>Han Bannerman</Italian>
+		<Spanish>Han Bannerman</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MANCHU_HORSE_ARCHER</Tag>
+		<English>Manchu Bannerman</English>
+		<French>Manchu Bannerman</French>
+		<German>Manchu Bannerman</German>
+		<Italian>Manchu Bannerman</Italian>
+		<Spanish>Manchu Bannerman</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
 		<English></English>
 		<French></French>

@@ -154,7 +154,7 @@
 		<Spanish>Song</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINA_MING</Tag>
+		<Tag>TXT_KEY_CIV_CHINA_GREAT_MING</Tag>
 		<English>the Great Ming</English>
 		<French>le Grand Ming</French>
 		<German>the Great Ming</German>
@@ -162,12 +162,12 @@
 		<Spanish>the Great Ming</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINA_QING</Tag>
-		<English>the Great Qing</English>
-		<French>le Grand Qing</French>
-		<German>the Great Qing</German>
-		<Italian>the Great Qing</Italian>
-		<Spanish>the Great Qing</Spanish>
+		<Tag>TXT_KEY_CIV_CHINA_MING</Tag>
+		<English>Ming</English>
+		<French>Ming</French>
+		<German>Ming</German>
+		<Italian>Ming</Italian>
+		<Spanish>Ming</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINESE_VASSAL</Tag>

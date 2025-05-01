@@ -8,11 +8,11 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 87
+iNumCivs = 88
 (iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iBuyids, iByzantium, iCanada, 
 iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, iGhorids,
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, iKhazars,
-iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iMaya, iMexico, iMinoans, iMongols, iMoors, iMorocco,
+iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iManchu, iMaya, iMexico, iMinoans, iMongols, iMoors, iMorocco,
 iTimurids, iNetherlands, iNigeria, iNorse, iNubia, iOman, iOttomans, iParthia, iPersia, iPoland, iPolynesia, iPortugal, 
 iRome, iRus, iRussia, iSaxons, iShu, iSpain, iSwahili, iSweden, iThailand, iTibet, iToltecs, iTunis,
 iTurks, iVandals, iVietnam, iXia, iYamato, iYemen, iZulu, iIndependent, iIndependent2, iNative, iMinor, iBarbarian) = range(iNumCivs)
@@ -104,6 +104,7 @@ dCivNames = {
 	iOman: "Oman",
 	iBuyids: "Buyids",
 	iYamato: "Yamato",
+	iManchu: "Manchu",
 }
 
 dReligionNames = {
@@ -203,6 +204,7 @@ iMorocco:		((56, 43),  (59, 46)),
 iYemen :		((87, 34),  (92, 37)),
 iOman :			((93, 36),  (96, 41)),
 iBuyids :		((92, 43),	(94, 48)),
+iManchu :		((100, 50), (100, 50))
 }
 
 dCoreAreaExceptions = {

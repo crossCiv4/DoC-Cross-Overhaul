@@ -26,6 +26,7 @@ def checkAvailableSlots():
 
 def freeSlotFor(iCiv):
 	iCivImpact = getImpact(iCiv)
+	# Yamato UP
 	availableSlots = players.major().ai().alive().where(lambda p: getImpact(civ(p)) <= iCivImpact and civ(p) != iYamato)
 	metric = lambda iPlayer: (getImpact(civ(iPlayer)), until(year(dFall[iPlayer])))
 	

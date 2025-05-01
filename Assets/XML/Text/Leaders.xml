@@ -1566,6 +1566,22 @@
 		<Spanish>Gaiseric</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_NURHACI</Tag>
+		<English>Nurhaci</English>
+		<French>Nurhaci</French>
+		<German>Nurhaci</German>
+		<Italian>Nurhaci</Italian>
+		<Spanish>Nurhaci</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CIXI</Tag>
+		<English>Cixi</English>
+		<French>Cixi</French>
+		<German>Cixi</German>
+		<Italian>Cixi</Italian>
+		<Spanish>Cixi</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_MOHAMMED_V</Tag>
 		<English>Mohammed V</English>
 		<French>Mohammed V</French>

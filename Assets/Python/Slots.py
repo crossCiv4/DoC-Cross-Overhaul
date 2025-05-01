@@ -107,9 +107,10 @@ def isOutdated(iCiv):
 	if year() < year(dFall[iCiv]):
 		return False
 	
-	# give an extra 100 year window after resurrection for relevance
-	if any(year().between(iStart, iEnd + 100) for iStart, iEnd in dResurrections[iCiv]):
-		return True
+	if any(year().between(iStart, iEnd) for iStart, iEnd in dResurrections[iCiv]):
+		return False
+	
+	return True
 
 def getNextBirth():
 	lUpcomingCivs = [iCiv for iCiv, iYear in dBirth.items() if turn() < year(iYear) - turns(5)]

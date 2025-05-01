@@ -25,6 +25,7 @@ dRelocatedCapitals = CivDict({
 	iMorocco: (57, 44), # Marrakesh
 	iYamato : (137, 53), # Kyoto
 	iTurks : (92, 50), # Hamadan
+	iManchu: tBeijing,
 })
 
 dCapitalInfrastructure = CivDict({

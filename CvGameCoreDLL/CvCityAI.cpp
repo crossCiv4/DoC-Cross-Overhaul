@@ -2447,6 +2447,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		break;
 	case CHINA:
 	case YANGTZE_CHINA:
+	case MANCHU:
 	case SHU:
 		aiUnitAIVal[UNITAI_EXPLORE] /= 4;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 5;

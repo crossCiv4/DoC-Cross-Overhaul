@@ -64,7 +64,7 @@ def getAlias(iCiv, iType, iEra):
 	elif iCiv in [iMamluks, iYemen, iOman] or (iCiv == iEgypt and (player(iCiv).getStateReligion() in [iIslam, iShia])): return iArabia
 	elif iCiv in [iIran, iParthia, iBuyids]: return iPersia
 	elif iCiv in [iMinoans, iMacedon]: return iGreece
-	elif iCiv in [iChinaS, iShu, iXia]: return iChina
+	elif iCiv in [iChinaS, iShu, iXia, iManchu]: return iChina
 	elif iCiv == iGhorids: return iTimurids
 	elif iCiv == iKhazars: return iTurks
 	elif iCiv == iNigeria or iCiv == iZulu: return iMali

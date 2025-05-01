@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MANCHU_DESC</Tag>
+		<English>The Manchus</English>
+		<French>The Manchus</French>
+		<German>The Manchus</German>
+		<Italian>The Manchus</Italian>
+		<Spanish>The Manchus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MANCHU_PEOPLES</Tag>
+		<English>Jurchen Peoples</English>
+		<French>Jurchen Peoples</French>
+		<German>Jurchen Peoples</German>
+		<Italian>Jurchen Peoples</Italian>
+		<Spanish>Jurchen Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MANCHU_ADJECTIVE</Tag>
+		<English>Manchu</English>
+		<French>Manchu</French>
+		<German>Manchu</German>
+		<Italian>Manchu</Italian>
+		<Spanish>Manchu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MANCHU_SHORT_DESC</Tag>
+		<English>Manchu</English>
+		<French>Manchu</French>
+		<German>Manchu</German>
+		<Italian>Manchu</Italian>
+		<Spanish>Manchu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MANCHU_GREAT_QING</Tag>
+		<English>the Great Qing</English>
+		<French>le Grand Qing</French>
+		<German>the Great Qing</German>
+		<Italian>the Great Qing</Italian>
+		<Spanish>the Great Qing</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MANCHU_QING</Tag>
+		<English>Qing</English>
+		<French>Qing</French>
+		<German>Qing</German>
+		<Italian>Qing</Italian>
+		<Spanish>Qing</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MANCHU_JIN</Tag>
+		<English>Jin</English>
+		<French>Jin</French>
+		<German>Jin</German>
+		<Italian>Jin</Italian>
+		<Spanish>Jin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MANCHU_DEFAULT</Tag>
+		<English>%s2 Khanate</English>
+		<French>%s2 Khanate</French>
+		<German>%s2 Khanate</German>
+		<Italian>%s2 Khanate</Italian>
+		<Spanish>%s2 Khanate</Spanish>
+	</TEXT>
+</Civ4GameText>

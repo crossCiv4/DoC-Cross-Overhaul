@@ -1406,5 +1406,21 @@
 			<NoShaderNIF>art/Leaderheads/tokugawa_as_minamoto/tokugawa_noshader.nif</NoShaderNIF>
 			<BackgroundKFM>art/LeaderHeads/tokugawa_as_minamoto/tokugawa_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_NURHACI</Type>
+			<Button>art/Leaderheads/Taizong_as_Nurhaci/Taizong.dds</Button>
+			<NIF>art/Leaderheads/Taizong_as_Nurhaci/wang_kon.nif</NIF>
+			<KFM>art/Leaderheads/Taizong_as_Nurhaci/wang_kon.kfm</KFM>
+			<NoShaderNIF>art/Leaderheads/Taizong_as_Nurhaci/wang_kon_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>art/LeaderHeads/Taizong_as_Nurhaci/Wang_Kon_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_CIXI</Type>
+			<Button>art/Leaderheads/Cixi/Btn_LH_Cixi.dds</Button>
+			<NIF>art/Leaderheads/Cixi/cixi.nif</NIF>
+			<KFM>art/Leaderheads/Cixi/asoka.kfm</KFM>
+			<NoShaderNIF>art/Leaderheads/Cixi/cixi.nif</NoShaderNIF>
+			<BackgroundKFM>art/LeaderHeads/Cixi/asoka_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>
