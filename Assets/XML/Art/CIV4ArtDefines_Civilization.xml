@@ -57,7 +57,7 @@
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_CHINA</Type>
 			<Button>Art/Interface/Buttons/Civilizations/China.dds</Button>
-			<Path>Art/Interface/TeamColor/FlagDECAL_Dragon3.dds</Path>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Tiananmen.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
@@ -531,7 +531,7 @@
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_MANCHU</Type>
 			<Button>Art/Interface/Buttons/Civilizations/manchu.dds</Button>
-			<Path>Art/Interface/TeamColor/FlagDECAL_Manchu.dds</Path>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Dragon3.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 	</CivilizationArtInfos>
