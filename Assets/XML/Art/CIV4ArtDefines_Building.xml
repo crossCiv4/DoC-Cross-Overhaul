@@ -3271,9 +3271,9 @@
 			<Type>ART_DEF_BUILDING_GUR_E_AMIR</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>2.0</fScale>
+			<fScale>0.75</fScale>
 			<fInterfaceScale>0.45</fInterfaceScale>
-			<NIF>Art/Structures/Wonders/Gur-e-Amir/islamic_monastery.nif</NIF>	
+			<NIF>Art/Structures/Wonders/Gur_e_Amir/gur_e_amir.nif</NIF>
 			<KFM/>
 			<Button>Art/Structures/Wonders/Gur_e_Amir/gur_e_amir.dds</Button>
 		</BuildingArtInfo>
