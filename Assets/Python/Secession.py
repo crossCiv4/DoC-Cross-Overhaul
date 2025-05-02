@@ -182,19 +182,23 @@ def secedeCity(city, iNewOwner, bRelocate, iArmyPercent):
 		
 def getPossibleMinors(iPlayer):
 	lPossibleMinors = [iIndependent, iIndependent2]
+	iNationalismCount = gc.getGame().countKnownTechNumTeams(iNationalism)
 
-	if gc.getGame().countKnownTechNumTeams(iNationalism) == 0 and civ(iPlayer) in [iMaya, iToltecs, iAztecs, iInca, iMali, iEthiopia, iCongo, iIroquois, iNigeria, iZulu]:
+	if iNationalismCount == 0 and civ(iPlayer) in [iMaya, iToltecs, iAztecs, iInca, iMali, iEthiopia, iCongo, iIroquois, iNigeria, iZulu]:
 		lPossibleMinors = [iNative]
 
-	elif gc.getGame().countKnownTechNumTeams(iNationalism) == 0 and civ(iPlayer) in [iSwahili, iIndia, iDravidia, iHarappa, iJava, iEthiopia, iNubia]:
+	elif iNationalismCount == 0 and civ(iPlayer) in [iSwahili, iIndia, iDravidia, iHarappa, iJava, iEthiopia, iNubia]:
 		lPossibleMinors = [iBarbarian, iNative]
-		
+
+	elif iNationalismCount == 0 and civ(iPlayer) in [iMongols, iKhazars, iTurks]:
+		lPossibleMinors = [iBarbarian]
+
 	elif player(iPlayer).getCurrentEra() <= iClassical:
 		lPossibleMinors = [iBarbarian, iNative, iIndependent, iIndependent2]
 
 	elif player(iPlayer).getCurrentEra() <= iMedieval:
 		lPossibleMinors = [iBarbarian, iIndependent, iIndependent2]
-		
+
 	return players.civs(*lPossibleMinors)
 	
 def balanceStability(iPlayer, iNewStabilityLevel):
