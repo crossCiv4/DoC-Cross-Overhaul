@@ -3275,7 +3275,7 @@
 			<fInterfaceScale>0.45</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Gur-e-Amir/islamic_monastery.nif</NIF>	
 			<KFM/>
-			<Button>Art/Structures/Wonders/Gur-e-Amir/gureamir.dds</Button>
+			<Button>Art/Structures/Wonders/Gur_e_Amir/gur_e_amir.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LOTUS_TEMPLE</Type>
@@ -3352,7 +3352,7 @@
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.8</fScale>
-			<fInterfaceScale>0.9</fInterfaceScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Wonders/Taj_Mahal/TajMahal.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/TajMahal.dds,Art/Interface/Buttons/Buildings_Atlas.dds,2,7</Button>

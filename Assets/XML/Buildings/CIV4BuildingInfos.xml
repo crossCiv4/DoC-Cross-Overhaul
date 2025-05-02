@@ -10893,6 +10893,8 @@
 			<ObsoleteTech>TECH_CIVIL_SERVICE</ObsoleteTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+			<FreeBonus>BONUS_DATES</FreeBonus>
+			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAIWeight>250</iAIWeight>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
