@@ -713,7 +713,7 @@ lCivilizations = [
 		iManchu,
 		iGold=500,
 		iAdvancedStartPoints=100,
-		lCivics=[iDespotism, iBureaucracy, iCasteSystem, iIsolationism, iSyncretism, iHegemony],
+		lCivics=[iDespotism, iBureaucracy, iCasteSystem, iIsolationism, iSyncretism, iRegulatedTrade],
 		techs=techs.column(11).including(iCombinedArms).without(iExploration, iOptics, iAcademia)
 	),
 	Civilization(

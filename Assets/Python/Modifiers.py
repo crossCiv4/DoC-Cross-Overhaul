@@ -1125,10 +1125,10 @@ dInflationRateMods = CivDict({
 	iBarbarian: 95,
 	iIroquois: 75,
 	iArmenia: 95,
-	iYemen: 115,
+	iYemen: 110,
 	iOman: 110,
-	iBuyids: 115,
-	iManchu: 115,
+	iBuyids: 110,
+	iManchu: 95,
 }, default=100)
 
 dGreatPeopleThresholdMods = CivDict({
