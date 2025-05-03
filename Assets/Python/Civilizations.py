@@ -1872,6 +1872,11 @@ dStartingExperience = CivDict({
 		iSkirmish: 2,
 		iSiege: 2,
 	},
+	iManchu: {
+		iDefend: 2,
+		iHarass: 2,
+		iSiege: 2,
+	},
 }, {})
 
 dAlwaysTrain = CivDict({
