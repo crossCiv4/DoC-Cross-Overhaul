@@ -603,14 +603,10 @@ dGoals = {
 	),
 	iManchu: (
 		VassalCount(4, civs=group(iCivGroupAsia).named(ASIA), by=1800),
+		BuildingCount(iManchuExaminationHall, 10, by=1850),
 		All(
 			LandPercent(5),
 			PopulationPercent(10),
-			by=1900,
-		),
-		All(
-			BuildingCount(iManchuExaminationHall, 10),
-			SpecialistCount(iSpecialistStatesman, 30),
 			by=1900,
 		),
 	),
