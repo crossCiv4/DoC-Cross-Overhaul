@@ -113,7 +113,7 @@ def getName(unit):
 	
 	return random_entry(lAvailableNames)
 
-		
+
 dGreatPeople = {
 	iEgypt : {
 		iGreatProphet : (
@@ -722,7 +722,7 @@ dGreatPeople = {
 			"Ravindra Kaushik", # 20th
 		),
 	},
-	iCarthage : {
+	iPhoenicia : {
 		iGreatProphet : (
 			"Sakun-yaton", # unknown date
 			"fJezebel", # 9th BC
@@ -3584,7 +3584,7 @@ dGreatPeople = {
 			"Qualpopoca", # 15th
 		),
 	},
-	iMughals : {
+	iTimurids : {
 		iGreatProphet : (
 			"Guru Ram Das", # 16th
 			"Guru Arjan", # 16th

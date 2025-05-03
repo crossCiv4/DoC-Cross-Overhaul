@@ -1098,7 +1098,7 @@ def specificName(iPlayer):
 			return "TXT_KEY_CIV_MANCHU_JIN"
 
 	elif iCiv == iChina or (iCiv == iChinaS and bEmpire and not player(iChina).isExisting()):
-		if iEra >= iRenaissance:
+		if iEra >= iRenaissance or year() > year(dBirth[iJapan]):
 			return "TXT_KEY_CIV_CHINA_GREAT_MING"
 
 	elif iCiv == iShu:
@@ -1551,7 +1551,7 @@ def specificAdjective(iPlayer):
 			
 	elif iCiv == iChina or (iCiv == iChinaS and bEmpire and not player(iChina).isExisting()):
 		if bMonarchy:
-			if iEra >= iRenaissance:
+			if iEra >= iRenaissance or year() > year(dBirth[iJapan]):
 				return "TXT_KEY_CIV_CHINA_MING"
 
 			if iEra >= iMedieval:
@@ -1578,7 +1578,7 @@ def specificAdjective(iPlayer):
 			return "TXT_KEY_CIV_CHINA_ADJECTIVE"
 
 		if bMonarchy:
-			if iEra >= iRenaissance:
+			if iEra >= iRenaissance or year() > year(dBirth[iJapan]):
 				return "TXT_KEY_CIV_WU_MING"
 
 			if iEra == iMedieval and year() >= year(1000) or (tPlayer.isHasTech(iPaper) and tPlayer.isHasTech(iGunpowder)):

@@ -769,6 +769,7 @@ class Birth(object):
 		if iUntilBirth == 2:
 			self.askSwitch()
 		elif iUntilBirth == 1:
+			self.birth()
 			self.checkSwitch()
 		elif -turns(3) <= iUntilBirth <= 0 and not scenarioStart():
 			self.checkFlip()
