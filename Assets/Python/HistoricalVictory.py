@@ -31,6 +31,7 @@ AMSTERDAM = "TXT_KEY_VICTORY_NAME_AMSTERDAM"
 ANGKOR = "TXT_KEY_VICTORY_NAME_ANGKOR"
 AYUTTHAYA = "TXT_KEY_VICTORY_NAME_AYUTTHAYA"
 BABYLON = "TXT_KEY_VICTORY_NAME_BABYLON"
+BEIJING = "TXT_KEY_VICTORY_NAME_BEIJING"
 BERLIN = "TXT_KEY_VICTORY_NAME_BERLIN"
 BUENOS_AIRES = "TXT_KEY_VICTORY_NAME_BUENOS_AIRES"
 CARTHAGE = "TXT_KEY_VICTORY_NAME_CARTHAGE"
@@ -603,7 +604,12 @@ dGoals = {
 	),
 	iManchu: (
 		VassalCount(4, civs=group(iCivGroupAsia).named(ASIA), by=1800),
-		BuildingCount(iManchuExaminationHall, 10, by=1850),
+		All(
+			BuildingCount(iManchuExaminationHall, 10),
+			CitySpecialistCount(city(tBeijing).named(BEIJING), great_people(), 6),
+			CityBuilding(city(tBeijing).named(BEIJING), iPalace),
+			by=1850,
+		),
 		All(
 			LandPercent(5),
 			PopulationPercent(10),
