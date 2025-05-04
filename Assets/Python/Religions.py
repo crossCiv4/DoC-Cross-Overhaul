@@ -74,6 +74,10 @@ def onBuildingBuilt(city, iBuilding):
 
 @handler("BeginGameTurn")
 def checkFoundReligions(iGameTurn):
+	# latest Shia founding date passed? don't bother evaluating this
+	if iGameTurn >= year(900):
+		return
+
 	# only found Judaism if Jerusalem exists; Jerusalem is re-founded several times during the game
 	if not game.isReligionFounded(iJudaism) and plots.surrounding(tJerusalem, radius=1).cities().count() > 0 and iGameTurn >= year(-1000) - turns(data.iSeed % 6):
 		foundReligion(selectHolyCity(plots.regions(*lJudaismFoundRegions), tJerusalem, False), iJudaism)

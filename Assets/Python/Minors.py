@@ -67,7 +67,7 @@ class MinorCity(object):
 		if not is_minor(city.getOwner()):
 			return
 		
-		if self.every(10):
+		if self.every(12):
 			self.add_unit()
 		
 		if self.every(25):
@@ -746,8 +746,8 @@ def assignMinorUnitAdjective(city, unit):
 	if minor_city_adjective:
 		set_unit_adjective(unit, minor_city_adjective)
 	
-
-@handler("BeginGameTurn")
+# I don't think indies need fragmentation as it stands
+#@handler("BeginGameTurn")
 def fragmentIndependents():
 	if year() >= year(50) and core_periodic(15):
 		iLargestMinor = players.independent().maximum(lambda p: player(p).getNumCities())

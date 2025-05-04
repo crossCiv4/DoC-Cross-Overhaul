@@ -147,6 +147,9 @@ def cleanupGreatWall():
 
 @handler("BeginGameTurn")
 def checkBirths():
+	# don't check births after the last possible one
+	if year() > data.births[-1].iTurn + 1:
+		return
 	for birth in data.births:
 		birth.check()
 
@@ -788,11 +791,13 @@ class Birth(object):
 		
 		if not infos.civ(self.iCiv).isAIPlayable():
 			return False
-		
-		if autoplay():
-			if infos.civ(self.iCiv).getImpact() <= iImpactLimited:
-				if year(dBirth[civ(active())]) > year(dFall[self.iCiv]) + turns(20):
-					return False
+
+		# we want all possible civs to spawn in autoplay
+		# if a civ isn't worth having in autoplay, why have it in the game?		
+		# if autoplay():
+		# 	if infos.civ(self.iCiv).getImpact() <= iImpactLimited:
+		# 		if year(dBirth[civ(active())]) > year(dFall[self.iCiv]) + turns(20):
+		# 			return False
 		
 		# Byzantium requires Rome to be alive and Greece (or Macedon) to be dead (human Rome can avoid Byzantine spawn by being solid)
 		if self.iCiv == iByzantium:
@@ -808,7 +813,7 @@ class Birth(object):
 			elif player(iRome).isHuman() and stability(iRome) == iStabilitySolid:
 				return False
 
-		elif self.iCiv == iChina:
+		if self.iCiv == iChina:
 			if player(iXia).isHuman() and stability(iXia) == iStabilitySolid:
 				return False
 		
@@ -861,18 +866,18 @@ class Birth(object):
 			if player(iAztecs).isExisting():
 				return False
 	
-		# independence civs require all players controlling cities in their area to be stable or worse
-		if self.isIndependence():
-			birthCities = plots.birth(self.iCiv).cities()
-			if players.major().where(lambda p: civ(p) != self.iCiv).where(lambda p: birthCities.owner(p).any()).all_if_any(lambda p: stability(p) >= iStabilitySolid):
-				return False
-		
 		# Timurid spawn can be avoided if player is Mongols and Stable, 
 		# or Mongols are not current or previous owners of the Timurid birth zone
 		if self.iCiv == iTimurids:
 			if player(iMongols).isHuman() and stability(iMongols) >= iStabilityStable:
 				return False
 			elif cities.regions(rKhorasan, rTransoxiana, rHinduKush).none(lambda city: iMongols in [city.getCivilizationType(), city.getPreviousCiv()]):
+				return False
+
+		# independence civs require all players controlling cities in their area to be stable or worse
+		if self.isIndependence():
+			birthCities = plots.birth(self.iCiv).cities()
+			if players.major().where(lambda p: civ(p) != self.iCiv).where(lambda p: birthCities.owner(p).any()).all_if_any(lambda p: stability(p) >= iStabilitySolid):
 				return False
 
 		return True
@@ -909,7 +914,7 @@ class Birth(object):
 			self.player.setAlive(True, True)
 		
 		# certain civs don't spawn in their core, and so they shouldn't purge the culture there on birth
-		if self.iCiv == iEngland or self.iCiv == iVandals:
+		if self.iCiv in [iEngland, iVandals]:
 			self.area = plots.birth(self.iPlayer)
 		else:
 			self.area = plots.birth(self.iPlayer) + plots.core(self.iPlayer)

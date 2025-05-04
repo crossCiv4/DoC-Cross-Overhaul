@@ -183,56 +183,22 @@ dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames
 def onCityBuilt(city):
 	updateName(city, bFound=True)
 
-
 @handler("cityAcquired")
 def onCityAcquired(iOwner, iNewOwner, city):
 	updateName(city)
-	
-	# how do we handle fallback languages in case the new owner has no translation
-	# and potentially keeps a non-local translation in place
-
-
-@handler("birth")
-def onBirth(iPlayer):
-	# update some colonial to Mexican city names
-	
-	pass
-	
 
 @handler("periodChange")
 def onPeriodChange(iCiv, iPeriod):
-	# Prey Nokor becomes Saigon
-	
 	updateNames(iCiv)
-
-
-@handler("religionSpread")
-def onReligionSpread(iReligion, iPlayer, city):
-	# Yogyakarta changes to Mataram with Islam
-	# Budapest is renamed to Buddhapest with Buddhism
-	
-	updateName(city)
-
 
 @handler("revolution")
 def onRevolution(iPlayer):
-	# civic names are handled by a different function, not persistence
-	
 	updateNames(iPlayer)
-
-
-@handler("greatPersonBorn")
-def onGreatPersonBorn(unit, iPlayer):
-	# Pitic changes to Hermosillo when a great general is born
-	
-	updateNames(iPlayer)
-
-
 
 ### MAIN FUNCTIONS ###
 
-def updateNames(identifier):
-	for city in cities.owner(identifier):
+def updateNames(playerId):
+	for city in cities.owner(playerId):
 		updateName(city)
 
 
@@ -253,8 +219,8 @@ def updateName(city, bFound=False):
 		city.setName(name, False)
 
 
-def getName(identifier, tile):
-	iCiv = civ(identifier)
+def getName(playerId, tile):
+	iCiv = civ(playerId)
 
 	name = city_names[tile]
 	
@@ -268,8 +234,8 @@ def getName(identifier, tile):
 	return name
 
 
-def translateName(identifier, name):
-	for iLanguage in getLanguages(identifier):
+def translateName(playerId, name):
+	for iLanguage in getLanguages(playerId):
 		if name in dTranslations[iLanguage]:
 			return dTranslations[iLanguage][name]
 		
@@ -279,48 +245,113 @@ def translateName(identifier, name):
 	return name
 
 
-def getLanguages(identifier):
-	return getSpecialLanguages(identifier) or dLanguages[identifier]
+def getLanguages(playerId):
+	return getSpecialLanguages(playerId) or dLanguages[playerId]
 
+# Define functions for special language logic
+def getIncaLanguages(playerId):
+    if player(playerId).getPeriod() == iPeriodPeru:
+        return [iLangSpanish]
+    return None
 
-def getSpecialLanguages(identifier):
-	iCiv = civ(identifier)
-	if player(identifier).getID() < 0:
-		return None
+def getAztecsLanguages(playerId):
+    if player(playerId).getPeriod() == iPeriodAztecMexico:
+        return [iLangSpanish]
+    return None
 
-	iEra = player(identifier).getCurrentEra()
-	
-	if iCiv == iInca:
-		if player(iCiv).getPeriod() == iPeriodPeru:
-			return [iLangSpanish]
-	elif iCiv == iAztecs:
-		if player(iCiv).getPeriod() == iPeriodAztecMexico:
-			return [iLangSpanish]
-	elif iCiv == iPersia and (player(identifier).getStateReligion() == iShia or player(identifier).getStateReligion() == iIslam):
-		return [iLangFarsi, iLangArabic, iLangPersian]
-	elif iCiv == iNorse:
-		if player(iCiv).getPeriod() == iPeriodDenmark or player(iCiv).getPeriod() == iPeriodNorway:
-			return [iLangDanish, iLangNorse]
-	elif iCiv == iParthia and getColumn(player(identifier).getID()) >= 6:
-		return [iLangFarsi, iLangPersian, iLangByzantine]
-	elif iCiv == iAssyria and data.civs[iCiv].iResurrections > 0 and game.isReligionFounded(iIslam):
-		return [iLangArabic, iLangByzantine]
-	elif iCiv == iIndia and (data.civs[iCiv].iResurrections > 0 or year() > year(dBirth[iArabia])):
-		return [iLangIndian, iLangFarsi, iLangTurkish, iLangVedic]
-	elif iCiv == iRus and player(iCiv).getPeriod() == iPeriodUkraine:
-		return [iLangUkrainian, iLangRussian, iLangRuthenian]
-	elif iCiv == iShu and data.civs[iCiv].iResurrections > 0:
-		return [iLangChinese]
-	elif iCiv == iTimurids and year() >= year(1900):
-		return [iLangPakistani, iLangFarsi, iLangTurkish, iLangArabic, iLangIndian]
-	elif iCiv == iEgypt and player(iCiv).getPeriod() == iPeriodPtolemaicEgypt:
-		return [iLangGreek, iLangEgyptian, iLangPersian]
-	elif iCiv in [iChina, iChinaS, iShu, iXia] and iEra >= iRenaissance:
-			return [iLangModernChinese, iLangChinese]
-	elif iCiv == iYamato and iEra >= iRenaissance:
-		return [iLangModernJapanese, iLangJapanese, iLangModernChinese]
-	return None
+def getPersiaLanguages(playerId):
+    if player(playerId).getStateReligion() in [iShia, iIslam]:
+        return [iLangFarsi, iLangArabic, iLangPersian]
+    return None
 
+def getNorseLanguages(playerId):
+    if player(playerId).getPeriod() in [iPeriodDenmark, iPeriodNorway]:
+        return [iLangDanish, iLangNorse]
+    return None
+
+def getParthiaLanguages(playerId):
+    if getColumn(player(playerId).getID()) >= 6:
+        return [iLangFarsi, iLangPersian, iLangByzantine]
+    return None
+
+def getAssyriaLanguages(playerId):
+    if data.civs[iAssyria].iResurrections > 0 and game.isReligionFounded(iIslam):
+        return [iLangArabic, iLangByzantine]
+    return None
+
+def getIndiaLanguages(playerId):
+    if data.civs[iIndia].iResurrections > 0 or year() > year(dBirth[iArabia]):
+        return [iLangIndian, iLangFarsi, iLangTurkish, iLangVedic]
+    return None
+
+def getRusLanguages(playerId):
+    if player(playerId).getPeriod() == iPeriodUkraine:
+        return [iLangUkrainian, iLangRussian, iLangRuthenian]
+    return None
+
+def getShuLanguages(playerId):
+    if data.civs[iShu].iResurrections > 0:
+        return [iLangChinese]
+    return None
+
+def getTimuridsLanguages(playerId):
+    if year() >= year(1900):
+        return [iLangPakistani, iLangFarsi, iLangTurkish, iLangArabic, iLangIndian]
+    return None
+
+def getEgyptLanguages(playerId):
+    if player(playerId).getPeriod() == iPeriodPtolemaicEgypt:
+        return [iLangGreek, iLangEgyptian, iLangPersian]
+    return None
+
+def getChinaLanguages(playerId):
+    if player(playerId).getCurrentEra() >= iRenaissance:
+        return [iLangModernChinese, iLangChinese]
+    return None
+
+def getChinaSLanguages(playerId):
+    if player(playerId).getCurrentEra() >= iRenaissance:
+        return [iLangModernChinese, iLangChinese]
+    return None
+
+def getXiaLanguages(playerId):
+    if player(playerId).getCurrentEra() >= iRenaissance:
+        return [iLangModernChinese, iLangChinese]
+    return None
+
+def getYamatoLanguages(playerId):
+    if player(playerId).getCurrentEra() >= iRenaissance:
+        return [iLangModernJapanese, iLangJapanese, iLangModernChinese]
+    return None
+
+# Define a CivDict mapping civilizations to their special language logic
+dSpecialLanguages = CivDict({
+    iInca: getIncaLanguages,
+    iAztecs: getAztecsLanguages,
+    iPersia: getPersiaLanguages,
+    iNorse: getNorseLanguages,
+    iParthia: getParthiaLanguages,
+    iAssyria: getAssyriaLanguages,
+    iIndia: getIndiaLanguages,
+    iRus: getRusLanguages,
+    iShu: getShuLanguages,
+    iTimurids: getTimuridsLanguages,
+    iEgypt: getEgyptLanguages,
+    iChina: getChinaLanguages,
+    iChinaS: getChinaSLanguages,
+    iXia: getXiaLanguages,
+    iYamato: getYamatoLanguages,
+})
+
+def getSpecialLanguages(playerId):
+    iCiv = civ(playerId)
+    if player(playerId).getID() < 0:
+        return None
+
+    if iCiv in dSpecialLanguages:
+        return dSpecialLanguages[iCiv](playerId)
+
+    return None
 
 def findLocations(name):
 	return plots.all().land().where(lambda p: city_names[p] == name)

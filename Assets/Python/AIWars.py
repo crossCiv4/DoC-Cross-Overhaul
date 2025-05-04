@@ -356,7 +356,7 @@ def checkConquests():
 
 @handler("GameStart")
 def setup():
-	iTurn = year(-600)
+	iTurn = year(-2000)
 	if scenario() == i600AD:  #late start condition
 		iTurn = year(900)
 	elif scenario() == i1700AD:
@@ -397,8 +397,9 @@ def checkTargetMinors():
 
 @handler("BeginGameTurn")
 def increaseAggressionLevels():
-	for iLoopPlayer in players.major():
-		data.players[iLoopPlayer].iAggressionLevel = dAggressionLevel[iLoopPlayer] + rand(2)
+	if every(5):
+		for iLoopPlayer in players.major():
+			data.players[iLoopPlayer].iAggressionLevel = dAggressionLevel[iLoopPlayer] + rand(10)
 
 
 @handler("techAcquired")	
@@ -833,8 +834,8 @@ def determineTargetPlayer(iPlayer):
 				dTargetValues[iLoopPlayer] /= 2
 		
 		# Spain prefers Moors in Iberia
-		if (iCiv == iSpain and iLoopCiv != iMoors) or (iCiv == iFrance and iLoopCiv == iSpain):
-			if cities.regions(rIberia).owner(iMoors):
+		if (iCiv == iSpain and not iLoopCiv in [iMoors, iMorocco]) or (iCiv == iFrance and iLoopCiv == iSpain):
+			if cities.regions(rIberia).owner(iMoors) or cities.regions(rIberia).owner(iMorocco):
 				dTargetValues[iLoopPlayer] /= 4
 				
 	return dict_max(dTargetValues)
