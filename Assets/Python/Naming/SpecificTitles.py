@@ -1,7 +1,9 @@
-from DynamicCivsHelpers import key
+from DynamicCivsHelpers import *
 from Consts import *
 from Core import *
 from RFCUtils import *
+
+lChristianity = [iCatholicism, iOrthodoxy, iProtestantism]
 
 def holyRomeRepublicTitle(args):
 	if args.pPlayer.getPeriod() == -1:
@@ -279,10 +281,280 @@ def yemenTitle(args):
 		if args.bEmpire:
 			return "TXT_KEY_SULTANATE_OF"
 		return "TXT_KEY_EMIRATE_OF"
+	
+def greeceTitle(args):
+	if args.bCityStates and period(args.iCiv) == -1:
+		if isAtWar(args.iPlayer):
+			return "TXT_KEY_CIV_GREECE_LEAGUE"
+		return "TXT_KEY_CITY_STATES_ADJECTIVE"
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+def macedonTitle(args):
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+def persiaTitle(args):
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+	if args.bCityStates:
+		return "TXT_KEY_CITY_STATES_ADJECTIVE"
+
+def parthiaTitle(args):
+	if getColumn(args.iPlayer) >= 6:
+		return "TXT_KEY_CIV_SASSANID_SHAHDOM"
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+	if args.bCityStates:
+		return "TXT_KEY_CITY_STATES_ADJECTIVE"
+
+def polynesiaTitle(args):
+	if isCurrentCapital(args.iPlayer, "Kaua'i", "O'ahu", "Maui"):
+		return "TXT_KEY_KINGDOM_OF"
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+def romeTitle(args):
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+	if args.bCityStates:
+		return "TXT_KEY_REPUBLIC_ADJECTIVE"
+
+def colombiaTitle(args):
+	if args.bEmpire:
+		if isControlled(args.iPlayer, plots.regions(rNewGranada, rAndes)):
+			return "TXT_KEY_CIV_COLOMBIA_EMPIRE_ANDES"
+		return "TXT_KEY_CIV_COLOMBIA_EMPIRE"
+
+def yamatoTitle(args):
+	if iVassalage in args.civic or iStratocracy in args.civic or iDespotism in args.civic:
+		return "TXT_KEY_SHOGUNATE_ADJECTIVE"
+	if args.bEmpire or args.iEra >= iIndustrial:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+def japanTitle(args):
+	if args.bEmpire or args.civic.iLegitimacy == iBureaucracy or args.iEra >= iIndustrial:
+		return "TXT_KEY_EMPIRE_OF"
+
+def dravidiaTitle(args):
+	if getColumn(args.iPlayer) >= 9:
+		return "TXT_KEY_KINGDOM_OF"
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+def ethiopiaTitle(args):
+	if args.bCityStates:
+		return "TXT_KEY_CITY_STATES_ADJECTIVE"
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+def koreaTitle(args):
+	if args.iEra >= iIndustrial and args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+	if args.iEra == iClassical and args.bEmpire:
+		return "TXT_KEY_EMPIRE_OF"
+	if args.bCityStates:
+		return "TXT_KEY_CIV_KOREA_SAMHAN"
+	if args.iReligion >= 0:
+		return "TXT_KEY_KINGDOM_OF"
+
+def byzantiumTitle(args):
+	if not args.bEmpire and location(args.capital) != location(plots.capital(args.iCiv)):
+		if args.capital.getRegionID() == rAnatolia:
+			return "TXT_KEY_EMPIRE_OF"
+		return "TXT_KEY_CIV_BYZANTIUM_DESPOTATE"
+
+def norseTitle(args):
+	if args.bCityStates:
+		return "TXT_KEY_CIV_NORSE_ALTHINGS"
+	if isControlled(args.iPlayer, plots.region(rBritain)):
+		return "TXT_KEY_CIV_NORSE_NORTH_SEA_EMPIRE"
+	if args.iReligion < 0 and args.iEra < iRenaissance:
+		return "TXT_KEY_CIV_NORSE_NORSE_KINGDOMS"
+	bOwnNorway = cities.region(rNorway) <= cities.region(rNorway).owner(args.iPlayer)
+	bOwnDenmark = cities.region(rDenmark) <= cities.region(rDenmark).owner(args.iPlayer)
+	bOwnSweden = cities.region(rSweden) <= cities.region(rSweden).owner(args.iPlayer)
+	if bOwnDenmark and bOwnSweden and bOwnNorway:
+		return "TXT_KEY_CIV_NORSE_KALMAR_UNION"
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+def turksTitle(args):
+	if args.bCityStates:
+		return "TXT_KEY_CIV_TURKS_KURULTAI"
+	if args.iReligion >= 0:
+		if args.bEmpire:
+			if isControlled(args.iPlayer, plots.core(iPersia)) and not args.bResurrected:
+				return "TXT_KEY_CIV_TURKS_GREAT_EMPIRE"
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
+		if not isControlled(args.iPlayer, plots.core(iPersia)):
+			return "TXT_KEY_CIV_TURKS_KHANATE_OF"
+		return "TXT_KEY_KINGDOM_OF"
+	if args.bEmpire:
+		return "TXT_KEY_CIV_TURKS_KHAGANATE"
+
+def arabiaTitle(args):
+	if args.bResurrected:
+		return "TXT_KEY_KINGDOM_OF"
+
+def tibetTitle(args):
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+def khmerTitle(args):
+	if args.iEra <= iRenaissance and isCurrentCapital(args.iPlayer, "Angkor"):
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+	if args.iEra >= iIndustrial:
+		return "TXT_KEY_KINGDOM_OF"
+	if isCurrentCapital(args.iPlayer, "Dai La"):
+		return "TXT_KEY_CIV_KHMER_DAI_VIET"
+
+def moorsTitle(args):
+	if args.bCityStates:
+		return "TXT_KEY_CIV_MOORS_TAIFAS"
+	if args.iReligion not in [iIslam, iShia] and args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+def spainTitle(args):
+	if year() < year(dBirth[iMoors]) + 50:
+		if args.bEmpire:
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
+		if args.bMonarchy:
+			return "TXT_KEY_KINGDOM_ADJECTIVE"
+	else:
+		if args.bEmpire and args.iEra > iMedieval:
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
+		if args.iEra == iMedieval and isCurrentCapital(args.iPlayer, "Barcelona", "Valencia"):
+			return "TXT_KEY_CIV_SPAIN_CROWN_OF"
+
+def franceTitle(args):
+	if args.capital not in cities.core(iFrance):
+		return "TXT_KEY_CIV_FRANCE_EXILE"
+	if args.iEra >= iIndustrial and args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+	if args.civic.iLegitimacy == iStratocracy:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+	if not player(iHolyRome).isExisting() and args.iEra == iMedieval:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+def englandTitle(args):
+	if args.iEra == iMedieval and (
+		len(cities.region(rBritain).owner(iEngland)) == 0 or 
+		(player(iSaxons).isAlive() and not (team(iSaxons).isAVassal() and civ(master(iSaxons)) == iEngland))):
+		return "TXT_KEY_CIV_DUCHY_NORMANDY"
+	if args.iEra > iRenaissance and args.capital not in cities.core(iEngland):
+		return "TXT_KEY_CIV_ENGLAND_EXILE"
+	if args.iEra == iMedieval and player(iFrance).isExisting() and team(iFrance).isAVassal() and civ(master(iFrance)) == iEngland:
+		return "TXT_KEY_CIV_ENGLAND_ANGEVIN_EMPIRE"
+	if getColumn(args.iPlayer) >= 12:
+		if args.bEmpire:
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
+		if 1 < len(cities.region(rBritain)) <= len(cities.region(rBritain).owner(args.iPlayer)):
+			return "TXT_KEY_CIV_ENGLAND_UNITED_KINGDOM_OF"
+
+def bulgariaTitle(args):
+	if args.bEmpire:
+		return "TXT_KEY_CIV_RUSSIA_TSARDOM_OF"
+
+def russiaTitle(args):
+	if args.bEmpire and args.iEra >= iRenaissance:
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+	if args.iEra <= iMedieval:
+		if args.bCityStates:
+			return "TXT_KEY_CIV_RUSSIA_MEDIEVAL_REPUBLIC"
+		
+		if args.civic.iGovernment == iElective:
+			if isCurrentCapital(args.iPlayer, "Kiev", "Kievu", "Kyiv"):
+				return "TXT_KEY_CIV_RUSSIA_KIEVAN_RUS"
+			
+			return "TXT_KEY_CIV_RUSSIA_RUS"
+		
+	if isControlled(args.iPlayer, plots.regions(rRuthenia, rPonticSteppe, rCrimea, rEuropeanArctic), 5):
+		return "TXT_KEY_CIV_RUSSIA_TSARDOM_OF"
+	
+	if isCurrentCapital(args.iPlayer, "Kiev"):
+		return "TXT_KEY_CIV_RUSSIA_GRAND_PRINCIPALITY"
+
+def mongolsTitle(args):
+	if args.capital.getRegionID() in [rPersia, rKhorasan, rTransoxiana] and args.iReligion in [iIslam, iShia]:
+			return "TXT_KEY_CIV_MONGOLIA_ILKHANATE"
+	
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+		
+	if args.iEra <= iRenaissance:
+		if args.pPlayer.getNumCities() <= 3:
+			return "TXT_KEY_CIV_MONGOLIA_KHAMAG"
+			
+		return "TXT_KEY_CIV_MONGOLIA_KHANATE"
+
+def italyTitle(args):
+	if args.bCityStates and isAtWar(args.iPlayer):
+		if not args.bEmpire:
+			return "TXT_KEY_CIV_ITALY_LEAGUE"
+			
+		return "TXT_KEY_CIV_ITALY_MARITIME_REPUBLICS"
+			
+	if not args.bResurrected:
+		if args.iReligion == iCatholicism:
+			if args.bTheocracy:
+				return "TXT_KEY_CIV_ITALY_PAPAL_STATES"
+			
+			if isCurrentCapital(args.iPlayer, "Roma"):
+				return "TXT_KEY_CIV_ITALY_PAPAL_STATES"
+				
+		if not args.bEmpire:
+			return "TXT_KEY_CIV_ITALY_DUCHY_OF"
+			
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+def incaTitle(args):
+	if not args.bResurrected:
+		if args.bEmpire:
+			return "TXT_KEY_CIV_INCA_FOUR_REGIONS"
+
+def portugalTitle(args):
+	if args.capital in cities.core(iBrazil) and not player(iBrazil).isExisting():
+		return "TXT_KEY_CIV_PORTUGAL_BRAZIL"
+			
+	if not args.capital in plots.region(rIberia):
+		return "TXT_KEY_CIV_PORTUGAL_EXILE"
+		
+	if args.bEmpire and args.iEra >= iRenaissance:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+def polandTitle(args):
+	if args.iEra >= iRenaissance and args.bEmpire:
+		return "TXT_KEY_CIV_POLAND_COMMONWEALTH"
+		
+	if scenario() == i1700AD and turn() < year(1790):
+		return "TXT_KEY_CIV_POLAND_COMMONWEALTH"
+		
+	if isCurrentCapital(args.iPlayer, "Kowno", "Medvegalis", "Wilno", "Ryga"):
+		return "TXT_KEY_CIV_POLAND_GRAND_DUCHY_OF"
+
+def holyRomeTitle(args):
+	if args.bCityStates and player(iPlayer).getPeriod() == -1:
+		return "TXT_KEY_CIV_HOLY_ROME_FREE_CITIES"
+
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+		
+	if isCurrentCapital(args.iPlayer, "Buda"):
+		return "TXT_KEY_KINGDOM_OF"
+		
+	if player(iGermany).isExisting():
+		return "TXT_KEY_CIV_HOLY_ROME_ARCHDUCHY_OF"
+
+def saxonsTitle(args):
+	if args.tPlayer.isHasTech(iNobility):
+		return "TXT_KEY_KINGDOM_OF"
 
 dSpecificTitles = CivDict({
 	iEgypt: egyptTitle,
-	iRussia: rusTitle,
+	iRus: rusTitle,
 	iKhazars: khazarsTitle,
 	iBuyids: buyidsTitle,
 	iZulu: zuluTitle,
@@ -308,4 +580,35 @@ dSpecificTitles = CivDict({
 	iBrazil: brazilTitle,
 	iOman: omanTitle,
 	iYemen: yemenTitle,
+	iGreece: greeceTitle,
+	iMacedon: macedonTitle,
+	iPersia: persiaTitle,
+	iParthia: parthiaTitle,
+	iPolynesia: polynesiaTitle,
+	iRome: romeTitle,
+	iColombia: colombiaTitle,
+	iYamato: yamatoTitle,
+	iJapan: japanTitle,
+	iDravidia: dravidiaTitle,
+	iEthiopia: ethiopiaTitle,
+	iKorea: koreaTitle,
+	iByzantium: byzantiumTitle,
+	iNorse: norseTitle,
+	iTurks: turksTitle,
+	iArabia: arabiaTitle,
+	iTibet: tibetTitle,
+	iKhmer: khmerTitle,
+	iMoors: moorsTitle,
+	iSpain: spainTitle,
+	iFrance: franceTitle,
+	iEngland: englandTitle,
+	iBulgaria: bulgariaTitle,
+	iRussia: russiaTitle,
+	iMongols: mongolsTitle,
+	iItaly: italyTitle,
+	iInca: incaTitle,
+	iPortugal: portugalTitle,
+	iPoland: polandTitle,
+	iHolyRome: holyRomeTitle,
+	iSaxons: saxonsTitle,
 })

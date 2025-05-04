@@ -2,4 +2,7 @@
     "cSpell.words": [
         "deepdict"
     ],
+    "python.analysis.extraPaths": [
+        "./Assets/Python/Naming"
+    ],
 }
