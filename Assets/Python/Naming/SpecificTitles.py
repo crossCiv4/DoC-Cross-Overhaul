@@ -416,7 +416,7 @@ def moorsTitle(args):
 		return "TXT_KEY_EMPIRE_ADJECTIVE"
 
 def spainTitle(args):
-	if year() < year(dBirth[iMoors]) + 50:
+	if year() < year(dBirth[iMoors] + 50):
 		if args.bEmpire:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 		if args.bMonarchy:
