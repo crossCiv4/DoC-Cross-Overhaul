@@ -536,7 +536,7 @@ def polandTitle(args):
 		return "TXT_KEY_CIV_POLAND_GRAND_DUCHY_OF"
 
 def holyRomeTitle(args):
-	if args.bCityStates and player(iPlayer).getPeriod() == -1:
+	if args.bCityStates and player(args.iPlayer).getPeriod() == -1:
 		return "TXT_KEY_CIV_HOLY_ROME_FREE_CITIES"
 
 	if args.bEmpire:
