@@ -612,3 +612,29 @@ dSpecificTitles = CivDict({
 	iHolyRome: holyRomeTitle,
 	iSaxons: saxonsTitle,
 })
+
+# Civs which are missing (never had specific titles):
+# iArmenia
+# iBurma
+# iCanada
+# iPhoenicia
+# iHarappa
+# iHittites
+# iIran
+# iIroquois
+# iJava
+# iCongo
+# iKushans
+# iMalays
+# iMali
+# iMamluks
+# iMaya
+# iMinoans
+# iMorocco
+# iNigeria
+# iNubia
+# iSwahili
+# iToltecs
+# iTunis
+# iVandals
+# iXia

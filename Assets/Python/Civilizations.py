@@ -1907,8 +1907,10 @@ dNeverTrain = CivDict({
 
 def createSpecificUnits(iPlayer, tile):
 	iCiv = civ(iPlayer)
-	
+
 	if iCiv == iKorea:
+		makeUnit(iPlayer, iBuddhistMissionary, tile)
+	elif iCiv == iYamato:
 		makeUnit(iPlayer, iBuddhistMissionary, tile)
 	elif iCiv == iPersia:
 		makeUnits(iPlayer, iZoroastrianMissionary, tile, 2)
