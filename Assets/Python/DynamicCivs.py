@@ -75,6 +75,7 @@ dEmpireThreshold = {
 	iSpain: 7,
 	iBuyids : 10,
 	iNorse: 7,
+	iTurks: 7,
 }
 
 dStartingLeaders = [
