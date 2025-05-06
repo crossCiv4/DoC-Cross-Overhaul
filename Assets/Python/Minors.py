@@ -706,7 +706,7 @@ barbarians = [
 	Barbarians(1500, 1650, {iLongbowman: 1, iDogSoldier: 2}, ((21, 49), (27, 54)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_MUSCOGEE", condition=is_new_world_discovered),
 	Barbarians(1500, 1850, {iCuirassier: 2}, ((92, 57), (109, 64)), 10, NOMADS, target_area=((92, 60), (113, 70)), adjective="TXT_KEY_ADJECTIVE_KAZAKH", promotions=(iSteppeAdaptation,), iAlternativeCiv=iTurks),
 	Barbarians(1550, 1900, {iArquebusier: 2}, ((58, 31), (64, 35)), 10, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_ASHANTI"),
-	Barbarians(1530, 1600, {iManchuHorseArcher: 4}, ((124, 58), (132, 64)), 6, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_MANCHU"),
+	Barbarians(1530, 1600, {iManchuHorseArcher: 4}, ((124, 58), (132, 64)), 6, INVADERS, target_area=((117, 46), (129, 59))),
 	#Barbarians(1550, 1650, {iCuirassier: 3, iBombard: 2, iArquebusier: 2}, ((124, 58), (132, 64)), 3, INVADERS, target_area=((117, 46), (129, 59)), iAlternativeCiv=iChina, adjective="TXT_KEY_ADJECTIVE_MANCHU"),
 	Barbarians(1550, 1770, {iHorseman: 1, iNativeRaider: 1, iNativeArcher: 2}, ((63, 32), (67, 32)), 8, CLOSE_INVADERS, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_OYO", promotions=(iDesertAdaptation,)),
 	Barbarians(1600, 1800, {iPombos: 2}, ((70, 20), (77, 25)), 10, INVADERS, iOwner=iNative, target_area=((69, 21), (77, 30)), adjective="TXT_KEY_ADJECTIVE_CHOKWE"),

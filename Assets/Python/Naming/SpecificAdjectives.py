@@ -340,7 +340,7 @@ def italySpecificAdjective(args):
 
 def mongolsSpecificAdjective(args):
     if not args.bEmpire and args.iEra <= iRenaissance:
-        if args.capital.getRegionID() == rPersia:
+        if args.capital.getRegionID() in lMiddleEast:
             return "TXT_KEY_CIV_MONGOLIA_HULAGU"
         if location(args.capital) != location(plots.capital(iMongols)) and args.capital.getRegionID() in [rCentralAsianSteppe, rTarimBasin, rKhorasan]:
             return "TXT_KEY_CIV_MONGOLIA_CHAGATAI"

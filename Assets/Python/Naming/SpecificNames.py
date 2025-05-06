@@ -11,7 +11,7 @@ def manchuSpecificName(args):
 		return "TXT_KEY_CIV_MANCHU_JIN"
 
 def chinaSpecificName(args):
-	if args.iEra >= iRenaissance or year() > year(dBirth[iJapan]):
+	if args.bMonarchy and (args.iEra >= iRenaissance or year() > year(dBirth[iJapan])):
 		return "TXT_KEY_CIV_CHINA_GREAT_MING"
 
 def wuSpecificName(args):

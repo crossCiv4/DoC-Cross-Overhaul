@@ -716,7 +716,7 @@ iSwahili : 1513,
 iPoland : 1650,
 iInca : 1533,
 iMamluks: 1382, # the "Circassian" period is often considered a decline
-iMongols : 1368,
+iMongols : 1350, # Red Turban rebellion
 iAztecs : 1600, # decline after the historical conquest, because we want to give the AI time to discover and conquer the Aztecs
 iTimurids : 1640,
 iCongo : 1800,

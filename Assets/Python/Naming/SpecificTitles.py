@@ -160,7 +160,7 @@ def chinaSTitle(args):
 			return "TXT_KEY_CIV_WU_FASCIST"
 	elif args.bMonarchy:
 		if args.bEmpire:
-			if not player(iChina).isExisting() and args.iEra == iRenaissance:
+			if not player(iChina).isExisting() and (args.iEra >= iRenaissance or year() > year(dBirth[iJapan])):
 				return "TXT_KEY_EMPIRE_OF"
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 		if args.iEra <= iMedieval and not (args.tPlayer.isHasTech(iPaper) and args.tPlayer.isHasTech(iGunpowder)):
@@ -477,8 +477,8 @@ def russiaTitle(args):
 		return "TXT_KEY_CIV_RUSSIA_GRAND_PRINCIPALITY"
 
 def mongolsTitle(args):
-	if args.capital.getRegionID() in [rPersia, rKhorasan, rTransoxiana] and args.iReligion in [iIslam, iShia]:
-			return "TXT_KEY_CIV_MONGOLIA_ILKHANATE"
+	if args.iReligion in [iIslam, iShia] and args.capital.getRegionID() in lMiddleEast:
+		return "TXT_KEY_CIV_MONGOLIA_ILKHANATE"
 	
 	if args.bEmpire:
 		return "TXT_KEY_EMPIRE_ADJECTIVE"

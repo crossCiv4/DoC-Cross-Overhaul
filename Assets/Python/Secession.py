@@ -12,7 +12,6 @@ def secedeCities(iPlayer, secedingCities, bRazeMinorCities = False):
 	if iNumCities <= 0:
 		return
 
-	iCiv = civ(iPlayer)
 	bComplete = len(secedingCities) == player(iPlayer).getNumCities()
 	iArmyPercent = 100 - 100 * len(secedingCities) / iNumCities
 	
@@ -32,7 +31,13 @@ def secedeCities(iPlayer, secedingCities, bRazeMinorCities = False):
 	# determine who has the best claim on each city
 	dClaimedCities = appenddict()
 	for city in cededCities:
-		iClaim = getCityClaim(city)
+		# Mongols on complete collapse, 
+		# give cities in the China region to Wu (Ming)
+		# if Qin is not alive
+		if bComplete and civ(iPlayer) == iMongols and not player(iChina).isExisting() and city.getRegionID() in [rNorthChina, rSouthChina]:
+			iClaim = iChinaS
+		else:
+			iClaim = getCityClaim(city)
 		dClaimedCities[iClaim].append(city)
 		
 	lMinorCities = dClaimedCities.pop(-1, [])

@@ -470,6 +470,15 @@ def immigration():
 		events.fireEvent("immigration", sourceCity, targetCity, iPopulation, iCultureChange)
 
 
+
+@handler("playerChangeStateReligion")
+def onPlayerChangeStateReligion(iPlayer):
+	# Mongols will prefer having their capital in the Middle East if Muslim
+	if civ(iPlayer) == iMongols and player(iPlayer).getStateReligion() in [iIslam, iShia]:
+		capital = plots.capital(iPlayer)
+		if capital.getRegionID() not in lMiddleEast:
+			newCapital = cities.regions(*lMiddleEast).owner(iMongols).maximum(lambda city: city.getPopulation())
+			relocateCapital(iPlayer, newCapital)
 ### POPUPS ###
 
 unit_bribe_popup = popup.text("TXT_KEY_BRIBE_UNITS_POPUP") \
