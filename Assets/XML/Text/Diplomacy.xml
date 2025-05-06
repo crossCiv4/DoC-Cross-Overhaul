@@ -780,6 +780,7 @@
 		<Italian>Greetings, ruler. I am [OUR_NAME], Imperator of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</Italian>
 		<Spanish>Greetings, ruler. I am [OUR_NAME], Imperator of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</Spanish>
 	</TEXT>
+	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DJOSER_1</Tag>
 		<English>I am [OUR_NAME]! Divine king of [OUR_CIV_SHORT]! Who are you who comes into such rich and fertile lands at this day and hour?</English>
 		<French>I am [OUR_NAME]! Divine king of [OUR_CIV_SHORT]! Who are you who comes into such rich and fertile lands at this day and hour?</French>
