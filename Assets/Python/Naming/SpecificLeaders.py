@@ -78,9 +78,9 @@ def phoeniciaLeader(args):
         return iHannibal
 
 def romeLeader(args):
-    if args.bCityStates: 
+    if args.bCityStates and not args.bEmpire and year() < year(-50): 
         return iScipio
-    elif team(args.iPlayer).isHasTech(iEngineering):
+    elif team(args.iPlayer).isHasTech(iEngineering) and team(args.iPlayer).isHasTech(iCurrency):
         if team(args.iPlayer).isHasTech(iPolitics):
             return iMarcusAurelius
         else:
