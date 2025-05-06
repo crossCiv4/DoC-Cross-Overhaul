@@ -35,7 +35,6 @@ dScenarioPeriods = {
 
 
 dPeriodNames = {
-	iPeriodPtolemaicEgypt:			"Ptolemaic_Egypt",
 	iPeriodMing:					"Ming",
 	iPeriodMaratha:					"Maratha",
 	iPeriodModernGreece:			"Modern_Greece",
@@ -154,9 +153,7 @@ def onResurrection(iPlayer):
 			setPeriod(iCiv, iPeriodPakistan)
 	
 	elif iCiv == iEgypt:
-		if cities.region(rEgypt).any(lambda city: 
-							   iMacedon in [city.getCivilizationType(), city.getPreviousCiv()] or 
-							   iGreece  in [city.getCivilizationType(), city.getPreviousCiv()]):
+		if cities.region(rEgypt).any(lambda city: city.getCivilizationType() in [iGreece, iMacedon, iRome] or city.getPreviousCiv() in [iGreece, iMacedon, iRome]):
 			setPeriod(iCiv, iPeriodPtolemaicEgypt)
 
 	elif iCiv == iInca:
@@ -191,7 +188,7 @@ def onCityAcquired(iOwner, iPlayer, city, bConquest):
 			setPeriod(iTurks, -1)
 	
 	if iOwnerCiv == iEgypt:
-		if iCiv in [iGreece, iRome]:
+		if iCiv in [iGreece, iMacedon, iRome]:
 			setPeriod(iEgypt, iPeriodPtolemaicEgypt)
 			
 	if iOwnerCiv == iByzantium or city.getPreviousCiv() == iByzantium:
@@ -229,7 +226,7 @@ def onVassalState(iMaster, iVassal, bVassal, bCapitulated):
 				setPeriod(iMongols, iPeriodYuan)
 		
 		if iVassalCiv == iEgypt:
-			if iMasterCiv in [iGreece, iRome]:
+			if iMasterCiv in [iGreece, iMacedon, iRome]:
 				setPeriod(iEgypt, iPeriodPtolemaicEgypt)
 			
 

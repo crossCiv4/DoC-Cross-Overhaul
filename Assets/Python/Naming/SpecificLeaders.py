@@ -8,7 +8,10 @@ lChristianity = [iCatholicism, iOrthodoxy, iProtestantism]
 
 def egyptLeader(args):
     if period(args.iCiv) == iPeriodPtolemaicEgypt:
-        return iCleopatra
+        return iPtolemy
+    if getColumn(args.iPlayer) >= 3: return iRamesses
+
+    if year() >= year(-1600): return iHatshepsut
 
 def manchuLeader(args):
     if args.iEra >= iIndustrial:
@@ -75,11 +78,15 @@ def phoeniciaLeader(args):
         return iHannibal
 
 def romeLeader(args):
-    if team(args.iPlayer).isHasTech(iEngineering):
+    if args.bCityStates: 
+        return iScipio
+    elif team(args.iPlayer).isHasTech(iEngineering):
         if team(args.iPlayer).isHasTech(iPolitics):
             return iMarcusAurelius
         else:
             return iAugustus
+    else:
+            return iJuliusCaesar
 
 def armeniaLeader(args):
     if args.iEra >= iIndustrial:
@@ -95,7 +102,7 @@ def minoansLeader(args):
 
 def parthiaLeader(args):
     if getColumn(args.iPlayer) >= 6:
-        return iKhosrow
+        return iShapur
 
 def koreaLeader(args):
     if args.iEra >= iRenaissance:
@@ -320,7 +327,11 @@ def yemenLeader(args):
 def omanLeader(args):
     if team(args.iPlayer).isHasTech(iOptics):
         return iSaidBinSultan
-    
+
+def khmerLeader(args):
+    if args.iEra >= iMedieval: 
+        return iSuryavarman
+
 dSpecificLeaders = CivDict({
     iEgypt: egyptLeader,
     iManchu: manchuLeader,
@@ -377,6 +388,7 @@ dSpecificLeaders = CivDict({
     iArabia: arabiaLeader,
     iYemen: yemenLeader,
     iOman: omanLeader,
+    iKhmer: khmerLeader,
 })
 
 #####
