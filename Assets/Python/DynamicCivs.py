@@ -84,7 +84,7 @@ dStartingLeaders = [
 	iIndependent : iIndependentLeader,
 	iIndependent2 : iIndependentLeader,
 	iNative : iNativeLeader,
-	iEgypt : iRamesses,
+	iEgypt : iDjoser,
 	iIndia : iAsoka,
 	iBabylonia : iSargon,
 	iHarappa : iWentAntu,
@@ -99,7 +99,7 @@ dStartingLeaders = [
 	iPersia : iCyrus,
 	iPhoenicia : iHiram,
 	iPolynesia : iAhoeitu,
-	iRome : iJuliusCaesar,
+	iRome : iScipio,
 	iCelts : iBrennus,
 	iMaya : iPacal,
 	iYamato : iKammu,
@@ -118,7 +118,7 @@ dStartingLeaders = [
 	iTibet : iSongtsen,
 	iKhazars: iBulan,
 	iBulgaria: iSimeon,
-	iKhmer : iSuryavarman,
+	iKhmer : iNeangNeak,
 	iMoors : iRahman,
 	iJava : iHayamWuruk,
 	iSpain : iIsabella,
@@ -330,7 +330,7 @@ def onPeriodChange(iPlayer, iPeriod):
 			setAdjective(iPlayer, text("TXT_KEY_CIV_MEXICO_ADJECTIVE"))
 
 	checkName(iPlayer)
-
+	checkLeader(iPlayer)
 
 @handler("religionFounded")
 def onReligionFounded(_, iPlayer):
@@ -722,6 +722,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 
 	if iCiv in dSpecificTitles:
 		return dSpecificTitles[iCiv](DynamicNameArgs(iPlayer))
+
 	return None
 			
 ### Leader methods ###

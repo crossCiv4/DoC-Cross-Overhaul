@@ -13,8 +13,10 @@ from Parsers import *
 START_HISTORY = -3000
 
 LEADER_DATES = {
+	iDjoser: -2700,
+	iHatshepsut: -1600,
 	iRamesses: -1300,
-	iCleopatra: -50,
+	iPtolemy: -330,
 	iSargon: -2400,
 	iHammurabi: -1800,
 	iWentAntu: -2000,
@@ -39,9 +41,10 @@ LEADER_DATES = {
 	iAhoeitu: 900,
 	iCyrus: -550,
 	iDarius: -520,
-	iKhosrow: 540,
+	iShapur: 300,
 	iBrennus: -380,
 	iBrianBoru: 1000,
+	iScipio: -200,
 	iJuliusCaesar: -50,
 	iAugustus: -20,
 	iPacal: 620,
@@ -56,6 +59,7 @@ LEADER_DATES = {
 	iKanishka: 130,
 	iWangKon: 920,
 	iSejong: 1420,
+	iNeangNeak: 100,
 	iSuryavarman: 1120,
 	iJustinian: 530,
 	iBasil: 980,

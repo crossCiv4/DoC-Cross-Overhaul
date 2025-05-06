@@ -2072,11 +2072,19 @@
 			</InitialCivics>
 			<Leaders>
 				<Leader>
+					<LeaderName>LEADER_DJOSER</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
 					<LeaderName>LEADER_HATSHEPSUT</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 				<Leader>
 					<LeaderName>LEADER_RAMESSES</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_PTOLEMY</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -4045,6 +4053,10 @@
 				<CivicType>CIVIC_KINSHIP</CivicType>
 			</InitialCivics>
 			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_NEANG_NEAK</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 				<Leader>
 					<LeaderName>LEADER_SURYAVARMAN</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
@@ -6308,7 +6320,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 				<Leader>
-					<LeaderName>LEADER_KHOSROW</LeaderName>
+					<LeaderName>LEADER_SHAPUR</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -6918,6 +6930,10 @@
 				<CivicType>CIVIC_KINSHIP</CivicType>
 			</InitialCivics>
 			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_SCIPIO</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 				<Leader>
 					<LeaderName>LEADER_JULIUS_CAESAR</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>

@@ -8,6 +8,7 @@ BASE MODS
 * Project Synthesis by Linkman for the Seljuks and Middle Eastern Mongol conquerors
 * The History Rewritten mod by Xyth:
 	* Tamil, Tibetan, Moorish, Polish, Congolese, Polynesian, Assyrian, Celtic, Kushan, Malay, Nubian, Swahili, Vietnamese civilizations including units, buildings and leaders
+	* Scipio, Alfred, Djoser, Neang Neak (Shin Sawbu) leaderhead art
 	* Civics advisor screen
 	* Civilopedia design
 	* Tech tree layout and tech ideas
@@ -22,7 +23,7 @@ LEADERHEADS
 * melcher kürzer: Catherine the Great, Isabella, Barbarossa
 * veBear: Baibars, Hayam Wuruk, Suharto
 * saibotlieh: Nicholas II, Maria II, Cleopatra
-* The Capo: Cavour, Charles V, Nasser, Yaroslav, Mongkut, Afonso, Hitler, Chandragupta, George I (Stambolov), Tun Perak (Askia)
+* The Capo: Cavour, Charles V, Nasser, Yaroslav, Mongkut, Afonso, Hitler, Chandragupta, George I (Stambolov), Tun Perak (Askia), Ptolemy
 * IgorS: Charles V, Nasser, Yaroslav, Mongkut, Afonso, Brian Boru, Tun Perak (Askia)
 * Amra: Naresuan (Ramkhamhaeng), Hiram, Akbar, Basil, Francis
 * Ekmek: Meiji, Ataturk, Khomeini, Mussolini, Akbar, Basil, Hitler, Pilsudski, Castilla (O'Higgins)

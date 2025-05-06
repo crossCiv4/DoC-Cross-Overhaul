@@ -55,6 +55,14 @@
 			<BackgroundKFM>art/LeaderHeads/Cyrus/Cyrus_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_DJOSER</Type>
+			<Button>Art/Leaderheads/Djoser/Djoser.dds</Button>
+			<NIF>Art/Leaderheads/Djoser/Gilgamesh.nif</NIF>
+			<KFM>Art/Leaderheads/Djoser/Gilgamesh.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Djoser/Gilgamesh.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Djoser/Gilgamesh_Backgrnd.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_ELIZABETH</Type>
 			<Button>,Art/interface/LeaderHeads/Btn_LH_England_ElizabethI.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,8,10</Button>
 			<NIF>art/LeaderHeads/Elizabeth/elizabeth.nif</NIF>
@@ -999,12 +1007,12 @@
 			<BackgroundKFM>art/LeaderHeads/George I/peter_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_KHOSROW</Type>
-			<Button>art/LeaderHeads/Khosrow/Khosrau_Button.dds</Button>
-			<NIF>art/LeaderHeads/Khosrow/Suryavarman.nif</NIF>
-			<KFM>art/LeaderHeads/Khosrow/Suryavarman.kfm</KFM>
-			<NoShaderNIF>art/LeaderHeads/Khosrow/Suryaverman_NONSHADER.nif</NoShaderNIF>
-			<BackgroundKFM>art/LeaderHeads/Khosrow/Suryavarman_BG.kfm</BackgroundKFM>
+			<Type>ART_DEF_LEADER_SHAPUR</Type>
+			<Button>art/LeaderHeads/Shapur/Shapur.dds</Button>
+			<NIF>art/LeaderHeads/Shapur/Suryavarman.nif</NIF>
+			<KFM>art/LeaderHeads/Shapur/Suryavarman.kfm</KFM>
+			<NoShaderNIF>art/LeaderHeads/Shapur/Suryaverman_NONSHADER.nif</NoShaderNIF>
+			<BackgroundKFM>art/LeaderHeads/Shapur/Suryavarman_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
 			<Type>ART_DEF_LEADER_ALP_ARSLAN</Type>
@@ -1421,6 +1429,39 @@
 			<KFM>art/Leaderheads/Cixi/asoka.kfm</KFM>
 			<NoShaderNIF>art/Leaderheads/Cixi/cixi.nif</NoShaderNIF>
 			<BackgroundKFM>art/LeaderHeads/Cixi/asoka_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_PTOLEMY</Type>
+			<Button>Art/Leaderheads/Ptolemy/Btn_Ptolemy.dds</Button>
+			<NIF>Art/Leaderheads/Ptolemy/Pericles.nif</NIF>
+			<KFM>Art/Leaderheads/Ptolemy/Pericles.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Ptolemy/Pericles.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Ptolemy/leader_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_SCIPIO</Type>
+			<Button>Art/Leaderheads/Scipio/Btn_Scipio.dds</Button>
+			<NIF>Art/Leaderheads/Scipio/antony.nif</NIF>
+			<KFM>Art/Leaderheads/Scipio/augustus_caesar.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Scipio/antony.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Scipio/antony_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_NEANG_NEAK</Type>
+			<Button>Art/Leaderheads/Neang Neak/NeangNeak.dds</Button>
+			<NIF>Art/Leaderheads/Neang Neak/asoka.nif</NIF>
+			<KFM>Art/Leaderheads/Asoka/asoka.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Neang Neak/asoka.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Neang Neak/catherine_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<!-- FIXME: figure out what to do with this new leaderhead -->
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ALFRED_2</Type>
+			<Button>Art/Leaderheads/Alfred2/Button_Aelfred.dds</Button>
+			<NIF>Art/Leaderheads/Alfred2/Charlemagne.nif</NIF>
+			<KFM>Art/Leaderheads/Alfred2/Charlemagne.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Alfred2/Charlemagne.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Alfred2/Charlemagne_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

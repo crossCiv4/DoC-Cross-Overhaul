@@ -266,6 +266,14 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_DJOSER</Tag>
+		<English>Djoser</English>
+		<French>Djoser</French>
+		<German>Djoser</German>
+		<Italian>Djoser</Italian>
+		<Spanish>Djoser</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_DOM_PEDRO</Tag>
 		<English>Pedro II</English>
 		<French>
@@ -421,19 +429,6 @@
 		<Italian>Al-Mu'izz</Italian>
 		<Spanish>Al-Mu'izz</Spanish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LEADER_HATSHEPSUT</Tag>
-		<English>Cleopatra</English>
-		<French>
-			<Text>Cl&#233;op&#226;tre</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Cleopatra</German>
-		<Italian>Cleopatra</Italian>
-		<Spanish>Cleopatra</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_LEADER_HAYAM_WURUK</Tag>
 		<English>Hayam Wuruk</English>
 		<French>
@@ -1166,16 +1161,12 @@
 		<Spanish>George I</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LEADER_KHOSROW</Tag>
-		<English>Khosrow I</English>
-		<French>
-			<Text>Khosro Ier</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Khosrow I</German>
-		<Italian>Khosrow I</Italian>
-		<Spanish>Khosrow I</Spanish>
+		<Tag>TXT_KEY_LEADER_SHAPUR</Tag>
+		<English>Shapur</English>
+		<French>Shapur</French>
+		<German>Shapur</German>
+		<Italian>Shapur</Italian>
+		<Spanish>Shapur</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_EZANA</Tag>
@@ -1685,7 +1676,30 @@
 		<Italian>Minamoto no Yorimoto</Italian>
 		<Spanish>Minamoto no Yorimoto</Spanish>
 	</TEXT>
-
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_PTOLEMY</Tag>
+		<English>Ptolemy</English>
+		<French>Ptolemy</French>
+		<German>Ptolemy</German>
+		<Italian>Ptolemy</Italian>
+		<Spanish>Ptolemy</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SCIPIO</Tag>
+		<English>Scipio</English>
+		<French>Scipio</French>
+		<German>Scipio</German>
+		<Italian>Scipio</Italian>
+		<Spanish>Scipio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NEANG_NEAK</Tag>
+		<English>Neang Neak</English>
+		<French>Neang Neak</French>
+		<German>Neang Neak</German>
+		<Italian>Neang Neak</Italian>
+		<Spanish>Neang Neak</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>

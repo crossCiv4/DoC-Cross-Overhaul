@@ -35,6 +35,7 @@ dScenarioPeriods = {
 
 
 dPeriodNames = {
+	iPeriodPtolemaicEgypt:			"Ptolemaic_Egypt",
 	iPeriodMing:					"Ming",
 	iPeriodMaratha:					"Maratha",
 	iPeriodModernGreece:			"Modern_Greece",
@@ -188,6 +189,10 @@ def onCityAcquired(iOwner, iPlayer, city, bConquest):
 			setPeriod(iTurks, iPeriodSeljuks)
 		else:
 			setPeriod(iTurks, -1)
+	
+	if iOwnerCiv == iEgypt:
+		if iCiv in [iGreece, iRome]:
+			setPeriod(iEgypt, iPeriodPtolemaicEgypt)
 			
 	if iOwnerCiv == iByzantium or city.getPreviousCiv() == iByzantium:
 		if bConquest and player(iByzantium).getNumCities() <= 3 and year() >= year(dBirth[iOttomans]):
@@ -222,6 +227,10 @@ def onVassalState(iMaster, iVassal, bVassal, bCapitulated):
 		if iVassalCiv == iChina or iVassalCiv == iChinaS:
 			if bCapitulated and iMasterCiv == iMongols:
 				setPeriod(iMongols, iPeriodYuan)
+		
+		if iVassalCiv == iEgypt:
+			if iMasterCiv in [iGreece, iRome]:
+				setPeriod(iEgypt, iPeriodPtolemaicEgypt)
 			
 
 @handler("capitalMoved")
