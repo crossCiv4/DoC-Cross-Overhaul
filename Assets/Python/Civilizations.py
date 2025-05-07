@@ -1475,11 +1475,11 @@ dExtraAIUnits = CivDict({
 	},
 	iManchu : {
 		iHarass: 9,
-		iSiege: 4,
-		iSkirmish: 3,
-		iCounter: 2,
+		iSiege: 5,
+		iSkirmish: 4,
+		iCounter: 5,
 		iWork: 2,
-		iDefend: 5,
+		iDefend: 7,
 	},
 	iChina : {
 		iSettle: 2,
