@@ -42,17 +42,17 @@ dDefaultInsertAdjectives = {
 }
 
 
-lRepublicOf = [iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis, iMorocco, iYemen, iOman, iZulu, iMalays, iMoors]
-lRepublicAdj = [iBabylonia, iRome, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons, iYamato, iManchu]
+lRepublicOf = set([iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis, iMorocco, iYemen, iOman, iZulu, iMalays, iMoors])
+lRepublicAdj = set([iBabylonia, iRome, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons, iYamato, iManchu])
 
-lSocialistRepublicOf = [iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis, iMorocco, iYemen, iOman]
-lSocialistRepublicAdj = [iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina]
+lSocialistRepublicOf = set([iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis, iMorocco, iYemen, iOman])
+lSocialistRepublicAdj = set([iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina])
 
-lPeoplesRepublicOf = [iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria, iMalays, iZulu]
-lPeoplesRepublicAdj = [iDravidia, iByzantium, iMongols, iYamato, iManchu]
+lPeoplesRepublicOf = set([iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria, iMalays, iZulu])
+lPeoplesRepublicAdj = set([iDravidia, iByzantium, iMongols, iYamato, iManchu])
 
 # prefer all islamic republics to use the "islamic republic" name; if some names don't fit, add them as exceptions
-# lIslamicRepublicOf = [iIndia, iPersia, iMali, iTimurids, iIran]
+# lIslamicRepublicOf = set([iIndia, iPersia, iMali, iTimurids, iIran])
 
 dEmpireThreshold = {
 	iPhoenicia : 4,
@@ -266,71 +266,82 @@ def onCityRazed(city):
 @handler("cityBuilt")	
 def onCityBuilt(city):
 	checkName(city.getOwner())
-	
-@handler("playerPeriodChange")
-def onPeriodChange(iPlayer, iPeriod):
-	iCiv = civ(iPlayer)
-	
-	# "revert name changes"
-	if iPeriod == -1 and iCiv in [iHolyRome, iPhoenicia]:
+
+def handleHolyRome(iPlayer, iCiv, iPeriod):
+	if iPeriod == -1:
 		setShort(iPlayer, infos.civ(iCiv).getShortDescription(0))
 		setAdjective(iPlayer, infos.civ(iCiv).getAdjective(0))
+	elif iPeriod == iPeriodAustria:
+		setShort(iPlayer, text("TXT_KEY_CIV_AUSTRIA_SHORT_DESC"))
+		setAdjective(iPlayer, text("TXT_KEY_CIV_AUSTRIA_ADJECTIVE"))
 
-	elif iCiv == iPhoenicia:
-		if iPeriod == iPeriodCarthage:
-			setShort(iPlayer, text("TXT_KEY_CIV_CARTHAGE_SHORT_DESC"))
-			setAdjective(iPlayer, text("TXT_KEY_CIV_CARTHAGE_ADJECTIVE"))
-	
-	elif iCiv == iNorse:
-		if iPeriod == iPeriodDenmark:
-			setShort(iPlayer, text("TXT_KEY_CIV_DENMARK_SHORT_DESC"))
-			setAdjective(iPlayer, text("TXT_KEY_CIV_DENMARK_ADJECTIVE"))
-			for city in cities.owner(iPlayer):
-				if city.getName() in ['Roskilde']: 
-					cn.renameOwnedCity(city, u"København")
+def handlePhoenicia(iPlayer, iCiv, iPeriod):
+	if iPeriod == iPeriodCarthage:
+		setShort(iPlayer, text("TXT_KEY_CIV_CARTHAGE_SHORT_DESC"))
+		setAdjective(iPlayer, text("TXT_KEY_CIV_CARTHAGE_ADJECTIVE"))
 
-		elif iPeriod == iPeriodNorway:
-			setShort(iPlayer, text("TXT_KEY_CIV_NORWAY_SHORT_DESC"))
-			setAdjective(iPlayer, text("TXT_KEY_CIV_NORWAY_ADJECTIVE"))
-			for city in cities.owner(iPlayer):
-				if city.getName() in ['Roskilde']: 
-					cn.renameOwnedCity(city, u"København")
-	
-	elif iCiv == iTurks:
-		if iPeriod == iPeriodUzbeks:
-			setShort(iPlayer, text("TXT_KEY_CIV_UZBEKS_SHORT_DESC"))
-			setAdjective(iPlayer, text("TXT_KEY_CIV_UZBEKS_SHORT_DESC"))
-			
-	elif iCiv == iHolyRome:
-		if iPeriod == iPeriodAustria:
-			setShort(iPlayer, text("TXT_KEY_CIV_AUSTRIA_SHORT_DESC"))
-			setAdjective(iPlayer, text("TXT_KEY_CIV_AUSTRIA_ADJECTIVE"))
+def handleNorse(iPlayer, iCiv, iPeriod):
+	if iPeriod == iPeriodDenmark:
+		setShort(iPlayer, text("TXT_KEY_CIV_DENMARK_SHORT_DESC"))
+		setAdjective(iPlayer, text("TXT_KEY_CIV_DENMARK_ADJECTIVE"))
+		for city in cities.owner(iPlayer):
+			if city.getName() in ['Roskilde']:
+				cn.renameOwnedCity(city, u"København")
+	elif iPeriod == iPeriodNorway:
+		setShort(iPlayer, text("TXT_KEY_CIV_NORWAY_SHORT_DESC"))
+		setAdjective(iPlayer, text("TXT_KEY_CIV_NORWAY_ADJECTIVE"))
+		for city in cities.owner(iPlayer):
+			if city.getName() in ['Roskilde']:
+				cn.renameOwnedCity(city, u"København")
 
-	elif iCiv == iTimurids:
-		if iPeriod == iPeriodMughals:
-			setShort(iPlayer, text("TXT_KEY_CIV_MUGHALS_SHORT_DESC"))
-			setAdjective(iPlayer, text("TXT_KEY_CIV_MUGHALS_ADJECTIVE"))
-		elif iPeriod == iPeriodPakistan:
-			setShort(iPlayer, text("TXT_KEY_CIV_PAKISTAN_SHORT_DESC"))
-			setAdjective(iPlayer, text("TXT_KEY_CIV_PAKISTAN_ADJECTIVE"))
+def handleTurks(iPlayer, iCiv, iPeriod):
+	if iPeriod == iPeriodUzbeks:
+		setShort(iPlayer, text("TXT_KEY_CIV_UZBEKS_SHORT_DESC"))
+		setAdjective(iPlayer, text("TXT_KEY_CIV_UZBEKS_SHORT_DESC"))
 
-	elif iCiv == iRus:
-		if iPeriod == iPeriodUkraine:
-			setShort(iPlayer, text("TXT_KEY_CIV_UKRAINE_SHORT_DESC"))
-			setAdjective(iPlayer, text("TXT_KEY_CIV_UKRAINE_ADJECTIVE"))
+def handleTimurids(iPlayer, iCiv, iPeriod):
+	if iPeriod == iPeriodMughals:
+		setShort(iPlayer, text("TXT_KEY_CIV_MUGHALS_SHORT_DESC"))
+		setAdjective(iPlayer, text("TXT_KEY_CIV_MUGHALS_ADJECTIVE"))
+	elif iPeriod == iPeriodPakistan:
+		setShort(iPlayer, text("TXT_KEY_CIV_PAKISTAN_SHORT_DESC"))
+		setAdjective(iPlayer, text("TXT_KEY_CIV_PAKISTAN_ADJECTIVE"))
 
-	elif iCiv == iInca:
-		if iPeriod == iPeriodPeru:
-			setShort(iPlayer, text("TXT_KEY_CIV_PERU_SHORT_DESC"))
-			setAdjective(iPlayer, text("TXT_KEY_CIV_PERU_ADJECTIVE"))
-	
-	elif iCiv == iAztecs:
-		if iPeriod == iPeriodAztecMexico:
-			setShort(iPlayer, text("TXT_KEY_CIV_MEXICO_SHORT_DESC"))
-			setAdjective(iPlayer, text("TXT_KEY_CIV_MEXICO_ADJECTIVE"))
+def handleRus(iPlayer, iCiv, iPeriod):
+	if iPeriod == iPeriodUkraine:
+		setShort(iPlayer, text("TXT_KEY_CIV_UKRAINE_SHORT_DESC"))
+		setAdjective(iPlayer, text("TXT_KEY_CIV_UKRAINE_ADJECTIVE"))
 
-	checkName(iPlayer)
-	checkLeader(iPlayer)
+def handleInca(iPlayer, iCiv, iPeriod):
+	if iPeriod == iPeriodPeru:
+		setShort(iPlayer, text("TXT_KEY_CIV_PERU_SHORT_DESC"))
+		setAdjective(iPlayer, text("TXT_KEY_CIV_PERU_ADJECTIVE"))
+
+def handleAztecs(iPlayer, iCiv, iPeriod):
+	if iPeriod == iPeriodAztecMexico:
+		setShort(iPlayer, text("TXT_KEY_CIV_MEXICO_SHORT_DESC"))
+		setAdjective(iPlayer, text("TXT_KEY_CIV_MEXICO_ADJECTIVE"))
+
+dCivPeriodNameChanges = {
+	iHolyRome: handleHolyRome,
+	iPhoenicia: handlePhoenicia,
+	iNorse: handleNorse,
+	iTurks: handleTurks,
+	iTimurids: handleTimurids,
+	iRus: handleRus,
+	iInca: handleInca,
+	iAztecs: handleAztecs,
+}
+
+@handler("playerPeriodChange")
+def onPeriodChange(iPlayer, iPeriod):
+    iCiv = civ(iPlayer)
+
+    if iCiv in dCivPeriodNameChanges:
+        dCivPeriodNameChanges[iCiv](iPlayer, iCiv, iPeriod)
+
+    checkName(iPlayer)
+    checkLeader(iPlayer)
 
 @handler("religionFounded")
 def onReligionFounded(_, iPlayer):
@@ -549,16 +560,21 @@ def republicAdjective(iPlayer):
 	iCiv = civ(iPlayer)
 
 	if iCiv == iRome:
-		if player(iByzantium).isExisting(): return None
+		if player(iByzantium).isExisting(): 
+			return None
 
-	if iCiv == iByzantium:
-		if player(iRome).isExisting(): return None
+	elif iCiv == iByzantium:
+		if player(iRome).isExisting(): 
+			return None
 		
-	if iCiv in [iMoors, iEngland]: return None
+	elif iCiv in [iMoors, iEngland]: 
+		return None
 	
-	if iCiv == iInca and data.civs[iCiv].iResurrections > 0: return None
+	elif iCiv == iInca and data.civs[iCiv].iResurrections > 0: 
+		return None
 	
-	if iCiv == iHolyRome and player(iPlayer).getPeriod() == -1: return "TXT_KEY_CIV_HOLY_ROME_GERMAN"
+	elif iCiv == iHolyRome and player(iPlayer).getPeriod() == -1: 
+		return "TXT_KEY_CIV_HOLY_ROME_GERMAN"
 		
 	return player(iPlayer).getCivilizationAdjective(0)
 	
@@ -601,6 +617,8 @@ def title(iPlayer):
 	
 	return defaultTitle(iPlayer)
 
+sCustomIslamicTitleCivs = set([iIran, iPersia, iOttomans, iMongols, iTimurids, iKhazars, iYemen, iOman, iBuyids])
+sAdjectiveIslamicTitleCivs = set([iSwahili, iAssyria, iMamluks, iArabia, iTurks])
 def islamicTitle(iPlayer):
 	pPlayer = player(iPlayer)
 	civic = civics(iPlayer)
@@ -608,14 +626,14 @@ def islamicTitle(iPlayer):
 
 	iReligion = pPlayer.getStateReligion()
 	bEmpire = isEmpire(iPlayer)
-	bTheocracy = civic.iLegitimacy == iTheocracy or (civic.iGovernment in [iRepublic, iElective] and civic.iReligion == iFanaticism)
+	bTheocracy = civic.iLegitimacy == iTheocracy or (civic.iReligion == iFanaticism and civic.iGovernment in [iRepublic, iElective])
 
 	# some civs have their own nomenclature, like Shahdom for Iran/Persia
-	if iCiv in [iIran, iPersia, iOttomans, iMongols, iTimurids, iKhazars, iYemen, iOman, iBuyids]:
+	if iCiv in sCustomIslamicTitleCivs:
 		return
 
-	if iReligion == iIslam or iReligion == iShia:
-		if iCiv in [iSwahili, iAssyria, iMamluks, iArabia, iTurks] or (iCiv == iGhorids and year() < year(dBirth[iMongols])) or (iCiv == iMorocco and getColumn(iPlayer) < 12):
+	if iReligion in sMuslimReligions:
+		if iCiv in sAdjectiveIslamicTitleCivs or (iCiv == iGhorids and year() < year(dBirth[iMongols])) or (iCiv == iMorocco and getColumn(iPlayer) < 12):
 			if bTheocracy and bEmpire:
 				return "TXT_KEY_CALIPHATE_ADJECTIVE"
 			if bEmpire:

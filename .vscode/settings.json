@@ -1,9 +1,13 @@
 {
     "cSpell.words": [
         "appenddict",
-        "deepdict"
+        "deepdict",
+        "UNITAI",
+        "UNITCOMBAT"
     ],
     "python.analysis.extraPaths": [
-        "./Assets/Python/Naming"
+        "./Assets/Python/Naming",
+        "./Assets/Python/Victory"
     ],
+    "python.defaultInterpreterPath": "C:\\Python27\\python.exe",
 }

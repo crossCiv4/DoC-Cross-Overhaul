@@ -68,7 +68,8 @@ dSpecificVassalTitles = deepdict({
 		iRome : "TXT_KEY_CIV_BYZANTINE_ROME",
 		iSpain : "TXT_KEY_CIV_BYZANTINE_SPAIN",
 		iBulgaria: "TXT_KEY_CIV_BYZANTINE_BULGARIA",
-		iAssyria: "TXT_KEY_CIV_BYZANTINE_ASSYRIA"
+		iAssyria: "TXT_KEY_CIV_BYZANTINE_ASSYRIA",
+        iKhazars: "TXT_KEY_CIV_BYZANTINE_KHAZARS",
 	},
 	iNorse : {
 		iEngland : "TXT_KEY_CIV_NORSE_ENGLAND",
@@ -526,15 +527,45 @@ dForeignNames = deepdict({
 		iKhmer : "TXT_KEY_CIV_SPANISH_NAME_KHMER",
 		iAztecs : "TXT_KEY_CIV_SPANISH_NAME_AZTECS",
 		iTimurids : "TXT_KEY_CIV_SPANISH_NAME_MUGHALS",
+        iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
 	},
 	iFrance : {
 		iKhmer : "TXT_KEY_CIV_FRENCH_NAME_KHMER",
 		iTimurids : "TXT_KEY_CIV_FRENCH_NAME_MUGHALS",
+        iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
 	},
 	iEngland : {
 		iKhmer : "TXT_KEY_CIV_ENGLISH_NAME_KHMER",
 		iTimurids : "TXT_KEY_CIV_ENGLISH_NAME_MUGHALS",
 		iCelts: "TXT_KEY_CIV_CELTS_IRELAND",
+        iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+	},
+    iNetherlands : {
+        iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+	},
+    iPortugal : {
+		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+	},
+	iHolyRome : {
+		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+	},
+	iGermany : {
+		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+	},
+	iItaly : {
+		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+	},
+    iSweden : {
+		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+	},
+    iNorse : {
+		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+	},
+    iBulgaria : {
+		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+	},
+    iIran : {
+		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
 	},
 	iRussia : {
 		iPersia : "TXT_KEY_CIV_RUSSIAN_NAME_PERSIA",

@@ -1,5 +1,4 @@
 from Civilizations import *
-from Civilizations import dNeverTrain
 from Core import *
 
 from Events import events
@@ -97,7 +96,7 @@ def updateMinorTechs(iMinorCiv, iMajorCiv):
 	if civ(iMinorCiv) == iNative:
 		techs = techs.where(lambda iTech: all(iEnabledTech in techs for iEnabledTech in getEnabledTechs(iTech)))
 		
-		nativePlayers = players.of(*lBioNewWorld)
+		nativePlayers = players.of(*sBioNewWorld)
 		if nativePlayers:
 			techs = techs.where(lambda iTech: nativePlayers.all(lambda p: team(p).isHasTech(iTech)))
 
@@ -384,23 +383,23 @@ def getCoastalValueBonus(pPlot):
 def getColonialTargets(iPlayer, iNumCities=1, bEmpty=False):
 	iCiv = civ(iPlayer)
 		
-	lColonialRegions = [iRegion for iRegion in lAsia if iRegion != rLevant]
+	lColonialRegions = set([iRegion for iRegion in lAsia if iRegion != rLevant])
 	if iCiv == iFrance:
-		lColonialRegions += [rMadagascar]
+		lColonialRegions |= set([rMadagascar])
 		if team(iPlayer).isHasTech(iThermodynamics):
-			lColonialRegions += [rMaghreb, rGuinea, rSahel]
+			lColonialRegions |= set([rMaghreb, rGuinea, rSahel])
 	elif iCiv == iSpain:
-		lColonialRegions += lCentralAmerica
+		lColonialRegions |= lCentralAmerica
 	elif iCiv == iYemen:
-		lColonialRegions = [rHornOfAfrica, iEthiopia]
+		lColonialRegions = set([rHornOfAfrica, iEthiopia])
 	elif iCiv == iOman:
-		lColonialRegions = [rMadagascar, rSwahiliCoast, rHornOfAfrica]
+		lColonialRegions = set([rMadagascar, rSwahiliCoast, rHornOfAfrica])
 	elif iCiv == iRussia:
-		lColonialRegions = [rSiberia, rAmur, rCentralAsianSteppe, rManchuria]
+		lColonialRegions = set([rSiberia, rAmur, rCentralAsianSteppe, rManchuria])
 	elif iCiv == iJapan:
-		lColonialRegions += lOceania
+		lColonialRegions |= lOceania
 	else:
-		lColonialRegions += lSubSaharanAfrica
+		lColonialRegions |= lSubSaharanAfrica
 		
 	targetPlots = plots.all().regions(*lColonialRegions)
 	
@@ -447,6 +446,8 @@ def hasEnemyUnit(iPlayer, tPlot):
 	return units.at(tPlot).notowner(iPlayer).atwar(iPlayer).any()
 	
 # used: Barbs, History, RFCUtils
+sDifficultTerrain = set([iMud, iJungle, iRainforest])
+
 def isFree(iPlayer, tPlot, bNoCity=False, bNoEnemyUnit=False, bCanEnter=False, bNoCulture=False, iCityDistance=1):
 	plot = plot_(tPlot)
 	
@@ -461,7 +462,7 @@ def isFree(iPlayer, tPlot, bNoCity=False, bNoEnemyUnit=False, bCanEnter=False, b
 	if bCanEnter:
 		if plot.isPeak(): return False
 		if plot.isWater(): return False
-		if plot.getFeatureType() in [iMud, iJungle, iRainforest]: return False
+		if plot.getFeatureType() in sDifficultTerrain: return False
 	
 	if bNoCulture:
 		if plot.isOwned() and plot.getOwner() != iPlayer and plot.getOwner() in players.major():
@@ -506,9 +507,11 @@ def replace(unit, iUnitType):
 	replaced.convert(unit)
 	return replaced
 
+sSeaRoles = set([iWorkerSea, iSettleSea, iAttackSea, iAssaultSea, iFerry, iEscort, iExploreSea, iLightEscort])
+
 # used: RFCUtils
 def getRoleDomain(iRole):
-	if iRole in [iWorkerSea, iSettleSea, iAttackSea, iAssaultSea, iFerry, iEscort, iExploreSea, iLightEscort]:
+	if iRole in sSeaRoles:
 		return DomainTypes.DOMAIN_SEA
 	return DomainTypes.DOMAIN_LAND
 
@@ -521,81 +524,137 @@ def getRoleLocation(iRole, location):
 	
 	return location
 
+# specific civs are offensive with their spear units
+sOffensiveSpearCivs = set([iAssyria, iGreece, iMacedon, iPersia, iPhoenicia, iGhorids])
+dRolesToAi = {
+	iDefend: UnitAITypes.UNITAI_CITY_DEFENSE,
+	iAttack: UnitAITypes.UNITAI_ATTACK,
+	iShock: UnitAITypes.UNITAI_ATTACK,
+	iCityAttack: UnitAITypes.UNITAI_ATTACK_CITY,
+	iShockCity: UnitAITypes.UNITAI_ATTACK_CITY,
+	iCitySiege: UnitAITypes.UNITAI_ATTACK_CITY,
+	iWorkerSea: UnitAITypes.UNITAI_WORKER_SEA,
+	iSettle: UnitAITypes.UNITAI_SETTLE,
+	iSettleSea: UnitAITypes.UNITAI_SETTLER_SEA,
+	iAttackSea: UnitAITypes.UNITAI_ATTACK_SEA,
+	iAssaultSea: UnitAITypes.UNITAI_ASSAULT_SEA,
+	iFerry: UnitAITypes.UNITAI_ASSAULT_SEA,
+	iEscort: UnitAITypes.UNITAI_ESCORT_SEA,
+	iExploreSea: UnitAITypes.UNITAI_EXPLORE_SEA,
+	iExplore: UnitAITypes.UNITAI_EXPLORE,
+	iSkirmish: UnitAITypes.UNITAI_COLLATERAL,
+	iWork: UnitAITypes.UNITAI_WORKER,
+}
+
 # used: RFCUtils
 def getRoleAI(iRole, iPlayer):
-	if iRole == iDefend:
-		return UnitAITypes.UNITAI_CITY_DEFENSE
-	elif iRole in [iAttack, iShock]:
-		return UnitAITypes.UNITAI_ATTACK
-	elif iRole in [iCityAttack, iShockCity, iCitySiege]:
-		return UnitAITypes.UNITAI_ATTACK_CITY
-	elif iRole == iCounter:
+	if iRole == iCounter:
 		iCiv = civ(iPlayer)
-		# specific civs are offensive with their spear units
-		if iCiv in [iAssyria, iGreece, iMacedon, iPersia, iPhoenicia, iGhorids]:
+		if iCiv in sOffensiveSpearCivs:
 			return UnitAITypes.UNITAI_ATTACK_CITY
 		else:
 			return UnitAITypes.UNITAI_COUNTER
-	elif iRole == iWorkerSea:
-		return UnitAITypes.UNITAI_WORKER_SEA
-	elif iRole == iSettle:
-		return UnitAITypes.UNITAI_SETTLE
-	elif iRole == iSettleSea:
-		return UnitAITypes.UNITAI_SETTLER_SEA
-	elif iRole == iAttackSea:
-		return UnitAITypes.UNITAI_ATTACK_SEA
-	elif iRole in [iAssaultSea, iFerry]:
-		return UnitAITypes.UNITAI_ASSAULT_SEA
-	elif iRole == iEscort:
-		return UnitAITypes.UNITAI_ESCORT_SEA
-	elif iRole == iExploreSea:
-		return UnitAITypes.UNITAI_EXPLORE_SEA
-	elif iRole == iExplore:
-		return UnitAITypes.UNITAI_EXPLORE
-	elif iRole == iSkirmish:
-		return UnitAITypes.UNITAI_COLLATERAL
-	elif iRole == iWork:
-		return UnitAITypes.UNITAI_WORKER
 
-	return UnitAITypes.NO_UNITAI
+	return dRolesToAi.get(iRole, UnitAITypes.NO_UNITAI)
+
+#####
+
+def base_condition(iUnit):
+		return base_unit(iUnit) == iMilitia
+
+def defend_condition(iUnit):
+	unit = infos.unit(iUnit)
+	iCombatType = unit.getUnitCombatType()
+	return (iCombatType == UnitCombatTypes.UNITCOMBAT_ARCHER and unit.getCityDefenseModifier() > 0) or iCombatType == UnitCombatTypes.UNITCOMBAT_GUN or base_unit(iUnit) == iMilitia
+
+def attack_condition(iUnit):
+	unit = infos.unit(iUnit)
+	iCombatType = unit.getUnitCombatType()
+	return iCombatType in [UnitCombatTypes.UNITCOMBAT_MELEE, UnitCombatTypes.UNITCOMBAT_GUN]
+
+def counter_condition(iUnit):
+	unit = infos.unit(iUnit)
+	iCombatType = unit.getUnitCombatType()
+	return iCombatType == UnitCombatTypes.UNITCOMBAT_MELEE and unit.getUnitCombatModifier(UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY) > 0
+
+def shock_condition(iUnit):
+	unit = infos.unit(iUnit)
+	iCombatType = unit.getUnitCombatType()
+	return iCombatType == UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY and (iUnit != iWarElephant and iUnit != iTemplar) or iUnit == iKeshik
+
+def harass_condition(iUnit):
+	unit = infos.unit(iUnit)
+	iCombatType = unit.getUnitCombatType()
+	return iCombatType == UnitCombatTypes.UNITCOMBAT_LIGHT_CAVALRY and not iUnit == iKeshik
+
+def worker_sea_condition(iUnit):
+	unit = infos.unit(iUnit)
+	iDomainType = unit.getDomainType()
+	return iDomainType == DomainTypes.DOMAIN_SEA and unit.getCombat() == 0
+
+def settle_condition(iUnit):
+	unit = infos.unit(iUnit)
+	return unit.isFound()
+
+def settle_sea_condition(iUnit):
+	unit = infos.unit(iUnit)
+	return unit.getCargoSpace() > 0
+
+def attack_sea_condition(iUnit):
+	unit = infos.unit(iUnit)
+	iDomainType = unit.getDomainType()
+	return iDomainType == DomainTypes.DOMAIN_SEA
+
+def explore_condition(iUnit):
+	unit = infos.unit(iUnit)
+	return unit.isNoBadGoodies()
+
+def siege_condition(iUnit):
+	unit = infos.unit(iUnit)
+	iCombatType = unit.getUnitCombatType()
+	return iCombatType == UnitCombatTypes.UNITCOMBAT_SIEGE
+
+def skirmish_condition(iUnit):
+	unit = infos.unit(iUnit)
+	iCombatType = unit.getUnitCombatType()
+	return iCombatType in [UnitCombatTypes.UNITCOMBAT_ARCHER, UnitCombatTypes.UNITCOMBAT_GUN] and unit.getCollateralDamage() > 0
+
+def light_escort_condition(iUnit):
+	unit = infos.unit(iUnit)
+	iDomainType = unit.getDomainType()
+	return iDomainType == DomainTypes.DOMAIN_SEA and unit.getWithdrawalProbability() > 0
+
+def work_condition(iUnit):
+	unit = infos.unit(iUnit)
+	return unit.getWorkRate() > 0 and unit.getCombat() == 0 and not unit.isSlave()
+
+dRolesToCombatTypeCheck = {
+	iBase: base_condition,
+	iDefend: defend_condition,
+	(iAttack, iCityAttack): attack_condition,
+	iCounter: counter_condition,
+	(iShock, iShockCity): shock_condition,
+	iHarass: harass_condition,
+	iWorkerSea: worker_sea_condition,
+	iSettle: settle_condition,
+	(iSettleSea, iAssaultSea, iFerry): settle_sea_condition,
+	(iAttackSea, iEscort, iExploreSea): attack_sea_condition,
+	iExplore: explore_condition,
+	(iSiege, iCitySiege): siege_condition,
+	iSkirmish: skirmish_condition,
+	iLightEscort: light_escort_condition,
+	iWork: work_condition,
+}
 
 # used: RFCUtils
 def isUnitOfRole(iUnit, iRole):
-	unit = infos.unit(iUnit)
-	iCombatType = unit.getUnitCombatType()
-	iDomainType = unit.getDomainType()
+	for roles, condition in dRolesToCombatTypeCheck.items():
+		if isinstance(roles, tuple):
+			if iRole in roles:
+				return condition(iUnit)
+		elif iRole == roles:
+			return condition(iUnit)
 
-	if iRole == iBase:
-		return base_unit(iUnit) == iMilitia
-	elif iRole == iDefend:
-		return (iCombatType == UnitCombatTypes.UNITCOMBAT_ARCHER and unit.getCityDefenseModifier() > 0) or iCombatType == UnitCombatTypes.UNITCOMBAT_GUN or base_unit(iUnit) == iMilitia
-	elif iRole in [iAttack, iCityAttack]:
-		return iCombatType in [UnitCombatTypes.UNITCOMBAT_MELEE, UnitCombatTypes.UNITCOMBAT_GUN]
-	elif iRole == iCounter:
-		return iCombatType == UnitCombatTypes.UNITCOMBAT_MELEE and unit.getUnitCombatModifier(UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY) > 0
-	elif iRole in [iShock, iShockCity]:
-		return iCombatType == UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY and (iUnit != iWarElephant and iUnit != iTemplar) or iUnit == iKeshik
-	elif iRole == iHarass:
-		return iCombatType == UnitCombatTypes.UNITCOMBAT_LIGHT_CAVALRY and not iUnit == iKeshik
-	elif iRole == iWorkerSea:
-		return iDomainType == DomainTypes.DOMAIN_SEA and unit.getCombat() == 0
-	elif iRole == iSettle:
-		return unit.isFound()
-	elif iRole in [iSettleSea, iAssaultSea, iFerry]:
-		return unit.getCargoSpace() > 0
-	elif iRole in [iAttackSea, iEscort, iExploreSea]:
-		return iDomainType == DomainTypes.DOMAIN_SEA
-	elif iRole == iExplore:
-		return unit.isNoBadGoodies()
-	elif iRole in [iSiege, iCitySiege]:
-		return iCombatType == UnitCombatTypes.UNITCOMBAT_SIEGE
-	elif iRole == iSkirmish:
-		return iCombatType in [UnitCombatTypes.UNITCOMBAT_ARCHER, UnitCombatTypes.UNITCOMBAT_GUN] and unit.getCollateralDamage() > 0
-	elif iRole == iLightEscort:
-		return iDomainType == DomainTypes.DOMAIN_SEA and unit.getWithdrawalProbability() > 0
-	elif iRole == iWork:
-		return unit.getWorkRate() > 0 and unit.getCombat() == 0 and not unit.isSlave()
-	
 	raise Exception("Unexpected unit role: %d" % iRole)
 	
 def canCreateUnit(iPlayer, iUnit):
@@ -772,6 +831,8 @@ def createMissionaries(iPlayer, iNumUnits, iReligion=None):
 def exclusive(iCiv, *civs):
 	return iCiv in civs and any(player(iOtherCiv).isExisting() for iOtherCiv in civs if iCiv != iOtherCiv)
 	
+sJapaneseDoNotSpawnCivs = set([iChina, iChinaS, iKorea, iMalays, iJava, iThailand])
+
 # used: CvScreensInterface, Stability
 # TODO: should move to stability
 def canRespawn(iCiv):
@@ -825,7 +886,7 @@ def canRespawn(iCiv):
 	
 	# Exception during Japanese UHV
 	if player(iJapan).isHuman() and year().between(1920, 1945):
-		if iCiv in [iChina, iChinaS, iKorea, iMalays, iJava, iThailand]:
+		if iCiv in sJapaneseDoNotSpawnCivs:
 			return False
 		
 	# Ottoman respawn if
@@ -835,9 +896,8 @@ def canRespawn(iCiv):
 		if data.civs[iOttomans].iLastTurnAlive > 0:
 			return True
 		if cities.regions(rAnatolia, rCaucasus).none(lambda city: 
-			iTurks in [city.getCivilizationType(), city.getPreviousCiv()] or 
-			iMongols in [city.getCivilizationType(), city.getPreviousCiv()] or
-			iTimurids in [city.getCivilizationType(), city.getPreviousCiv()]):
+			city.getCivilizationType() in [iTurks, iMongols, iTimurids] or
+			city.getPreviousCiv() in [iTurks, iMongols, iTimurids]):
 			return False
 		
 	# Qin (China) cannot respawn if Xia (Zhou) is alive and vice-versa

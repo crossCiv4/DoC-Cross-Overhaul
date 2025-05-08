@@ -3,8 +3,6 @@ from Consts import *
 from Core import *
 from RFCUtils import *
 
-lChristianity = [iCatholicism, iOrthodoxy, iProtestantism]
-
 def holyRomeRepublicTitle(args):
 	if args.pPlayer.getPeriod() == -1:
 		return "TXT_KEY_CIV_HOLY_ROME_CONFEDERATION"
@@ -48,7 +46,7 @@ def egyptTitle(args):
 		return "TXT_KEY_CIV_EGYPT_PTOLEMAIC"
 	if args.bCityStates:
 		return "TXT_KEY_CIV_EGYPT_NOMES"
-	if args.iReligion in [iOrthodoxy, iCatholicism, iProtestantism]:
+	if args.iReligion in sChristianity:
 		return "TXT_KEY_CIV_EGYPT_COPTIC"
 	if args.iEra == iAncient:
 		if data.civs[args.iCiv].iAnarchyTurns == 0:
@@ -78,14 +76,14 @@ def buyidsTitle(args):
 	if args.bCityStates:
 		return "TXT_KEY_TRIBAL_COUNCIL"
 	if args.iEra >= iRenaissance:
-		if args.iReligion in [iIslam, iShia]:
+		if args.iReligion in sMuslimReligions:
 			if args.bTheocracy:
 				return "TXT_KEY_CIV_IMAMATE_OF"
 		if args.bEmpire:
 			return "TXT_KEY_EMPIRE_OF"
 		return "TXT_KEY_EMIRATE_OF"
 	else:
-		if args.iReligion in [iIslam, iShia]:
+		if args.iReligion in sMuslimReligions:
 			if args.bTheocracy:
 				return "TXT_KEY_CIV_IMAMATE_ADJECTIVE"
 		if args.bEmpire:
@@ -107,7 +105,7 @@ def zuluTitle(args):
 		return "TXT_KEY_KINGDOM_OF"
 
 def assyriaTitle(args):
-	if args.bResurrected and args.iReligion in [iOrthodoxy, iCatholicism]:
+	if args.bResurrected and args.iReligion in sChristianity:
 		return "TXT_KEY_CIV_ASSYRIA_PRINCIPALITY_OF"
 
 def celtsTitle(args):
@@ -201,7 +199,7 @@ def timuridsTitle(args):
 	if args.iReligion == iIslam:
 		if args.bTheocracy and game.getHolyCity(iIslam) and game.getHolyCity(iIslam).getOwner() == args.iPlayer:
 			return "TXT_KEY_CALIPHATE_ADJECTIVE"
-	if args.iReligion in [iShia, iIslam]:
+	if args.iReligion in sMuslimReligions:
 		if args.bEmpire:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 		return "TXT_KEY_SULTANATE_ADJECTIVE"
@@ -215,7 +213,7 @@ def ottomansTitle(args):
 	if args.iReligion == iIslam:
 		if args.bTheocracy and game.getHolyCity(iIslam) and game.getHolyCity(iIslam).getOwner() == args.iPlayer:
 			return "TXT_KEY_CALIPHATE_ADJECTIVE"
-	if args.iReligion in [iShia, iIslam]:
+	if args.iReligion in sMuslimReligions:
 		if args.bEmpire:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 		return "TXT_KEY_SULTANATE_ADJECTIVE"
@@ -265,7 +263,7 @@ def brazilTitle(args):
 def omanTitle(args):
 	if args.bCityStates:
 		return "TXT_KEY_TRIBAL_COUNCIL"
-	if args.iReligion in [iIslam, iShia]:
+	if args.iReligion in sMuslimReligions:
 		if args.bTheocracy:
 			return "TXT_KEY_CIV_IMAMATE_OF"
 		if args.bEmpire:
@@ -275,7 +273,7 @@ def omanTitle(args):
 def yemenTitle(args):
 	if args.bCityStates:
 		return "TXT_KEY_TRIBAL_COUNCIL"
-	if args.iReligion in [iIslam, iShia]:
+	if args.iReligion in sMuslimReligions:
 		if args.bTheocracy:
 			return "TXT_KEY_CIV_IMAMATE_OF"
 		if args.bEmpire:
@@ -412,7 +410,7 @@ def khmerTitle(args):
 def moorsTitle(args):
 	if args.bCityStates:
 		return "TXT_KEY_CIV_MOORS_TAIFAS"
-	if args.iReligion not in [iIslam, iShia] and args.bEmpire:
+	if args.iReligion not in sMuslimReligions and args.bEmpire:
 		return "TXT_KEY_EMPIRE_ADJECTIVE"
 
 def spainTitle(args):
@@ -477,7 +475,7 @@ def russiaTitle(args):
 		return "TXT_KEY_CIV_RUSSIA_GRAND_PRINCIPALITY"
 
 def mongolsTitle(args):
-	if args.iReligion in [iIslam, iShia] and args.capital.getRegionID() in lMiddleEast:
+	if args.iReligion in sMuslimReligions and args.capital.getRegionID() in lMiddleEast:
 		return "TXT_KEY_CIV_MONGOLIA_ILKHANATE"
 	
 	if args.bEmpire:

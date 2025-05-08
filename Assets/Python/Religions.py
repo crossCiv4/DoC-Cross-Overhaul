@@ -8,10 +8,10 @@ from Events import handler, popup_handler
 
 ## CONSTANTS
 
-lJudaismFoundRegions = [rEgypt, rLevant, rMesopotamia]
-lJudaismEuropeRegions = [rIberia, rFrance, rLowerGermany, rCentralEurope, rPoland, rItaly, rBritain, rRuthenia, rBalkans]
-lJudaismMiddleEastRegions = [rLevant, rMesopotamia, rAnatolia, rEgypt]
-lJudaismNewWorldRegions = [rOntario, rMaritimes, rAtlanticSeaboard, rMidwest, rCalifornia]
+lJudaismFoundRegions = set([rEgypt, rLevant, rMesopotamia])
+lJudaismEuropeRegions = set([rIberia, rFrance, rLowerGermany, rCentralEurope, rPoland, rItaly, rBritain, rRuthenia, rBalkans])
+lJudaismMiddleEastRegions = set([rLevant, rMesopotamia, rAnatolia, rEgypt])
+lJudaismNewWorldRegions = set([rOntario, rMaritimes, rAtlanticSeaboard, rMidwest, rCalifornia])
 
 dCatholicPreference = CivDict({
 iEgypt		: 80,
@@ -166,26 +166,26 @@ def spreadReligionsRegionally():
 	spreadReligionToRegion(iJudaism, lJudaismMiddleEastRegions, 600, 1000, 15)
 	spreadReligionToRegion(iJudaism, lJudaismNewWorldRegions, 1850, 1950, 10)
 
-	spreadReligionToRegion(iOrthodoxy, [rRuthenia, rRussia, rPonticSteppe], 990, 1190, 6, 1)
-	spreadReligionToRegion(iIslam, [rHinduKush, rTransoxiana, rKhorasan, rCentralAsianSteppe, rVolga, rPonticSteppe, rTarimBasin], 750, 1300, 6, 1)
-	spreadReligionToRegion(iShia, [rPersia, rTransoxiana, rKhorasan, rDeccan, rRajputana, rYemenOman], 915, 1550, 6, 1)
+	spreadReligionToRegion(iOrthodoxy, set([rRuthenia, rRussia, rPonticSteppe]), 990, 1190, 6, 1)
+	spreadReligionToRegion(iIslam, set([rHinduKush, rTransoxiana, rKhorasan, rCentralAsianSteppe, rVolga, rPonticSteppe, rTarimBasin]), 750, 1300, 6, 1)
+	spreadReligionToRegion(iShia, set([rPersia, rTransoxiana, rKhorasan, rDeccan, rRajputana, rYemenOman]), 915, 1550, 6, 1)
 
-	spreadReligionToRegion(iMarxism, [rLowerGermany, rFrance, rBritain, rCentralEurope, rBalkans, rDenmark, rBaltics, rIberia, rPoland, rItaly], 1848, 1930, 2, 2)
-	spreadReligionToRegion(iMarxism, [rRuthenia, rRussia, rCrimea], 1870, 1930, 1, 2)
+	spreadReligionToRegion(iMarxism, set([rLowerGermany, rFrance, rBritain, rCentralEurope, rBalkans, rDenmark, rBaltics, rIberia, rPoland, rItaly]), 1848, 1930, 2, 2)
+	spreadReligionToRegion(iMarxism, set([rRuthenia, rRussia, rCrimea]), 1870, 1930, 1, 2)
 
-	spreadReligionToRegion(iMarxism, [rRuthenia, rRussia, rFrance, rBritain, rIreland, rCentralEurope, rBalkans, rDenmark, rBaltics, rBrazil, rNewGranada, rQuebec, rSwahiliCoast, rNorthChina, rSouthChina, rManchuria, rSiberia, rIberia, rMongolia, rCaucasus, rGreatLakes, rPoland, rDravida, rCrimea, rItaly, rCaribbean, rMesoamerica, rCentralAmerica], 1930, 1980, 2, 1)
+	spreadReligionToRegion(iMarxism, set([rRuthenia, rRussia, rFrance, rBritain, rIreland, rCentralEurope, rBalkans, rDenmark, rBaltics, rBrazil, rNewGranada, rQuebec, rSwahiliCoast, rNorthChina, rSouthChina, rManchuria, rSiberia, rIberia, rMongolia, rCaucasus, rGreatLakes, rPoland, rDravida, rCrimea, rItaly, rCaribbean, rMesoamerica, rCentralAmerica]), 1930, 1980, 2, 1)
 
 @handler("BeginGameTurn")
 def spreadHinduismSoutheastAsia():
-	lSouthEastAsianCivs = [iKhmer, iMalays, iJava]
+	#sSouthEastAsianCivs = set([iKhmer, iMalays, iJava])
 
 	if not game.isReligionFounded(iHinduism): return
-	# if none(player(iCiv).isExisting() for iCiv in lSouthEastAsianCivs): return
+	# if none(player(iCiv).isExisting() for iCiv in sSouthEastAsianCivs): return
 	if not turn().between(500, 1200): return
 	
 	if not periodic(20): return
 	
-	# contacts = players.major().where(lambda p: any(player(q).canContact(p) for q in lSouthEastAsianCivs) and player(p).getStateReligion() in [iHinduism, iBuddhism])
+	# contacts = players.major().where(lambda p: any(player(q).canContact(p) for q in sSouthEastAsianCivs) and player(p).getStateReligion() in [iHinduism, iBuddhism])
 	# if not contacts:
 	#	return
 	

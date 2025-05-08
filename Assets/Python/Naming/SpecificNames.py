@@ -107,7 +107,7 @@ def ethiopiaSpecificName(args):
 		return "TXT_KEY_CIV_ETHIOPIA_AKSUM"
 
 def byzantiumSpecificName(args):
-	if args.iReligion in [iIslam,iShia]:
+	if args.iReligion in sMuslimReligions:
 		return "TXT_KEY_CIV_BYZANTIUM_RUM"
 
 	if not args.bEmpire:
@@ -121,7 +121,7 @@ def byzantiumSpecificName(args):
 			return capitalName(args.iPlayer)
 
 def bulgariaSpecificName(args):
-	if args.iReligion in [iIslam, iShia]:
+	if args.iReligion in sMuslimReligions:
 		return "TXT_KEY_CIV_BULGARIA_RUMELIA"
 	if isCurrentCapital(args.iPlayer, "Ras"):
 		return "TXT_KEY_CIV_SERBIA_SHORT_DESC"
@@ -181,14 +181,14 @@ def ghoridsSpecificName(args):
 		return capitalName(args.iPlayer)
 
 def javaSpecificName(args):
-	if args.iReligion in [iIslam, iShia]:
+	if args.iReligion in sMuslimReligions:
 		return "TXT_KEY_CIV_INDONESIA_MATARAM"
 	if args.iEra <= iRenaissance:
 		if args.bEmpire:
 			return "TXT_KEY_CIV_INDONESIA_MAJAPAHIT"
 
 def spainSpecificName(args):
-	if args.iReligion in [iIslam, iShia]:
+	if args.iReligion in sMuslimReligions:
 		return "TXT_KEY_CIV_SPAIN_AL_ANDALUS"
 	bSpain = isSpainPeriod(args.iPlayer)
 	if bSpain:

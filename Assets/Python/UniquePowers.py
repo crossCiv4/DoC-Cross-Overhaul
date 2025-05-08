@@ -120,7 +120,7 @@ def resetBabylonianPower():
 @handler("cityAcquired")
 def colombianPower(iOwner, iPlayer, city, bConquest):
 	if civ(iPlayer) == iColombia and bConquest:
-		if city in cities.regions(*(lCentralAmerica + lSouthAmerica)):
+		if city in cities.regions(*(lCentralAmerica | lSouthAmerica)):
 			city.setOccupationTimer(0)
 
 

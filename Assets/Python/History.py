@@ -245,7 +245,7 @@ def conquistadors(iTeamX, iHasMetTeamY):
 			return
 		
 		if year().between(600, 1800):
-			if civ(iTeamX) in lBioNewWorld and civ(iHasMetTeamY) not in lBioNewWorld:
+			if civ(iTeamX) in sBioNewWorld and civ(iHasMetTeamY) not in sBioNewWorld:
 				iNewWorldPlayer = iTeamX
 				iOldWorldPlayer = iHasMetTeamY
 				
@@ -357,42 +357,38 @@ def flipMongolConquerors(iPlayer):
 			if player(iPlayer).canContact(iOtherPlayer):
 				mongolConquerors(player(iOtherPlayer).getTeam())
 
+lMongolRegions = set([rLevant, rMesopotamia, rAnatolia, rCaucasus, rPersia, rKhorasan, rPonticSteppe, rRuthenia, rSindh, rTransoxiana, rCrimea, rVolga, rUrals, rCentralAsianSteppe, rHinduKush, rPunjab])
 
 def mongolConquerors(iTargetTeam):
 	iTargetCiv = civ(iTargetTeam)
 
-	if iTargetCiv in lMongolCivs:
-		if year() < year(dBirth[iTimurids]) and player(iMongols).getNumCities() > 0 and data.isFirstContactMongols(iTargetCiv):
-			data.setFirstContactMongols(iTargetCiv, False)
+	if iTargetCiv in sMongolCivs and year() < year(dBirth[iTimurids]) and player(iMongols).getNumCities() > 0 and data.isFirstContactMongols(iTargetCiv):
+		data.setFirstContactMongols(iTargetCiv, False)			
+		
+		mongol_cities = cities.owner(iMongols)
+		target_cities = cities.regions(*lMongolRegions).owner(iTargetCiv)
+		lTargetCities = [(mongol_cities.closest(target_city), target_city) for target_city in target_cities]
+		lSelectedTargets = sorted(lTargetCities, key=lambda (mongol_city, target_city): distance(mongol_city, target_city))[:3]
+		
+		if not lSelectedTargets:
+			return
 
-			teamTarget = team(iTargetTeam)
+		team(iMongols).declareWar(iTargetTeam, True, WarPlanTypes.WARPLAN_TOTAL)
+		
+		iHandicap = 0
+		if teamtype(iTargetTeam).isHuman():
+			iHandicap = game.getHandicapType() / 2
+		
+		for mongol_city, target_city in lSelectedTargets:
+			tSpawn = possibleSpawnsBetween(mongol_city, target_city, iDistance=3).closest(target_city)
 			
-			lMongolRegions = [rLevant, rMesopotamia, rAnatolia, rCaucasus, rPersia, rKhorasan, rPonticSteppe, rRuthenia, rSindh, rTransoxiana, rCrimea, rVolga, rUrals, rCentralAsianSteppe, rHinduKush, rPunjab]
+			makeUnits(iMongols, iKeshik, tSpawn, 2 + iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iMongols, iMangudai, tSpawn, 1 + 2 * iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iMongols, iTrebuchet, tSpawn, 1 + iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
 			
-			mongol_cities = cities.owner(iMongols)
-			target_cities = cities.regions(*lMongolRegions).owner(iTargetCiv)
-			lTargetCities = [(mongol_cities.closest(target_city), target_city) for target_city in target_cities]
-			lSelectedTargets = sorted(lTargetCities, key=lambda (mongol_city, target_city): distance(mongol_city, target_city))[:3]
-			
-			if not lSelectedTargets:
-				return
-
-			team(iMongols).declareWar(iTargetTeam, True, WarPlanTypes.WARPLAN_TOTAL)
-			
-			iHandicap = 0
-			if teamtype(iTargetTeam).isHuman():
-				iHandicap = game.getHandicapType() / 2
-			
-			for mongol_city, target_city in lSelectedTargets:
-				tSpawn = possibleSpawnsBetween(mongol_city, target_city, iDistance=3).closest(target_city)
-				
-				makeUnits(iMongols, iKeshik, tSpawn, 2 + iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
-				makeUnits(iMongols, iMangudai, tSpawn, 1 + 2 * iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
-				makeUnits(iMongols, iTrebuchet, tSpawn, 1 + iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
-				
-			message(iTargetTeam, 'TXT_KEY_MONGOL_HORDE_HUMAN')
-			if team().canContact(iTargetTeam):
-				message(active(), 'TXT_KEY_MONGOL_HORDE', adjective(iTargetTeam))
+		message(iTargetTeam, 'TXT_KEY_MONGOL_HORDE_HUMAN')
+		if team().canContact(iTargetTeam):
+			message(active(), 'TXT_KEY_MONGOL_HORDE', adjective(iTargetTeam))
 
 
 ### TECH ACQUIRED ###
@@ -460,16 +456,16 @@ def tradingCompany(iTech, iTeam, iPlayer):
 	iCiv = civ(iPlayer)
 
 	dCivTechMappings = CivDict({
-		iSpain: [iOptics, iGeography, iCombinedArms, iUrbanPlanning],
-		iPortugal: [iExploration, iOptics, iEconomics, iGeography, iCombinedArms, iUrbanPlanning, iHorticulture, iStatecraft],
-		iFrance: [iGeography, iHorticulture, iPhysics, iGeology, iReplaceableParts, iMeasurement, iThermodynamics, iEngine, iPneumatics, iRailroad, iRefrigeration],
-		iEngland: [iGeography, iHorticulture, iPhysics, iReplaceableParts, iMeasurement, iMicrobiology, iChemistry, iThermodynamics, iRailroad, iEngine, iPneumatics],
-		iNetherlands: [iEconomics, iGeography, iPhysics, iReplaceableParts, iHorticulture, iChemistry],
-		iOman: [iFirearms, iOptics, iGeography],
-		iYemen: [iCompanies],
-		iRussia: [iRailroad, iBallistics, iAssemblyLine, iEngine, iMicrobiology],
-		iJapan: [iRefining, iPneumatics, iSocialServices, iInfrastructure, iSynthetics, iRadio, iPsychology],
-		iGermany: [iMicrobiology],
+		iSpain: set([iOptics, iGeography, iCombinedArms, iUrbanPlanning]),
+		iPortugal: set([iExploration, iOptics, iEconomics, iGeography, iCombinedArms, iUrbanPlanning, iHorticulture, iStatecraft]),
+		iFrance: set([iGeography, iHorticulture, iPhysics, iGeology, iReplaceableParts, iMeasurement, iThermodynamics, iEngine, iPneumatics, iRailroad, iRefrigeration]),
+		iEngland: set([iGeography, iHorticulture, iPhysics, iReplaceableParts, iMeasurement, iMicrobiology, iChemistry, iThermodynamics, iRailroad, iEngine, iPneumatics]),
+		iNetherlands: set([iEconomics, iGeography, iPhysics, iReplaceableParts, iHorticulture, iChemistry]),
+		iOman: set([iFirearms, iOptics, iGeography]),
+		iYemen: set([iCompanies]),
+		iRussia: set([iRailroad, iBallistics, iAssemblyLine, iEngine, iMicrobiology]),
+		iJapan: set([iRefining, iPneumatics, iSocialServices, iInfrastructure, iSynthetics, iRadio, iPsychology]),
+		iGermany: set([iMicrobiology]),
 	})
 	
 	if iCiv in dCivTechMappings.keys() and iTech in dCivTechMappings[iCiv]:
@@ -487,11 +483,13 @@ def removeOrthodoxyFromAnatolia(iPlayer):
 
 ### BIRTH ###
 
+sEasternMedRegions = set([rGreece, rLevant, rEgypt, rAnatolia, rBalkans, rItaly])
+
 @handler("birth")
 def removeSeaPeopleBoatsOnPhoenicianSpawn(iPlayer):
 	# by the start of the Iron Age, we want all Sea Peoples ships to be deleted so they don't kill Punic and Greek boats
 	if civ(iPlayer) == iPhoenicia:
-		lRegions = [rGreece, rLevant, rEgypt, rAnatolia, rBalkans, rItaly]
+		lRegions = sEasternMedRegions
 		for unit in plots.regions(*lRegions).units().owner(iBarbarian).domain(DomainTypes.DOMAIN_SEA):
 			unit.kill(False, -1)
 

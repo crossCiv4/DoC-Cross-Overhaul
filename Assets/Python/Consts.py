@@ -24,6 +24,8 @@ iNetherlands, iNigeria, iNorse, iNubia, iOman, iOttomans, iParthia, iPersia, iPo
 iRome, iRus, iRussia, iSaxons, iShu, iSpain, iSwahili, iSweden, iThailand, iTibet, iTimurids, iToltecs, iTunis,
 iTurks, iVandals, iVietnam, iXia, iYamato, iYemen, iZulu, iIndependent, iIndependent2, iNative, iMinor, iBarbarian) = tuple(Civ(i) for i in range(iNumCivs))
 
+sMinorCivs = iBarbarian, iIndependent, iIndependent2, iNative
+
 lBirthOrder = [
 	iEgypt,
 	iBabylonia,
@@ -123,12 +125,12 @@ iNumCivGroups = 6
 (iCivGroupEurope, iCivGroupAsia, iCivGroupMiddleEast, iCivGroupMediterranean, iCivGroupAfrica, iCivGroupAmerica) = range(iNumCivGroups)
 
 dCivGroups = {
-iCivGroupEurope : [iGreece, iRome, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iItaly, iPoland, iPortugal, iSweden, iRussia, iNetherlands, iGermany, iBulgaria, iMacedon, iArmenia, iByzantium, iSaxons, iVandals],
-iCivGroupAsia : [iIndia, iChina, iChinaS, iShu, iXia, iHarappa, iPolynesia, iPersia, iJapan, iYamato, iDravidia, iKushans, iKorea, iKhmer, iMalays, iJava, iTibet, iBurma, iVietnam, iMongols, iTimurids, iThailand, iRussia, iTurks, iGhorids, iKhazars, iManchu],
-iCivGroupMiddleEast : [iEgypt, iBabylonia, iAssyria, iHittites, iPersia, iKushans, iArabia, iMoors, iOttomans, iPhoenicia, iTurks, iIran, iMamluks, iParthia, iTunis, iMorocco, iOman, iYemen, iBuyids],
-iCivGroupMediterranean : [iEgypt, iGreece, iPhoenicia, iRome, iByzantium, iFrance, iArabia, iMoors, iSpain, iPortugal, iItaly, iOttomans, iMamluks, iMacedon, iMinoans, iTunis, iMorocco],
-iCivGroupAfrica : [iEgypt, iNubia, iPhoenicia, iEthiopia, iMali, iNigeria, iMoors, iSwahili, iCongo, iMamluks, iZulu, iTunis, iMorocco],
-iCivGroupAmerica : [iMaya, iToltecs, iInca, iAztecs, iAmerica, iArgentina, iMexico, iColombia, iBrazil, iCanada, iIroquois],
+iCivGroupEurope : set([iGreece, iRome, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iItaly, iPoland, iPortugal, iSweden, iRussia, iNetherlands, iGermany, iBulgaria, iMacedon, iArmenia, iSaxons, iVandals]),
+iCivGroupAsia : set([iIndia, iChina, iChinaS, iShu, iXia, iHarappa, iPolynesia, iPersia, iJapan, iYamato, iDravidia, iKushans, iKorea, iKhmer, iMalays, iJava, iTibet, iBurma, iVietnam, iMongols, iTimurids, iThailand, iRussia, iTurks, iGhorids, iKhazars, iManchu]),
+iCivGroupMiddleEast : set([iEgypt, iBabylonia, iAssyria, iHittites, iPersia, iKushans, iArabia, iMoors, iOttomans, iPhoenicia, iTurks, iIran, iMamluks, iParthia, iTunis, iMorocco, iOman, iYemen, iBuyids]),
+iCivGroupMediterranean : set([iEgypt, iGreece, iPhoenicia, iRome, iByzantium, iFrance, iArabia, iMoors, iSpain, iPortugal, iItaly, iOttomans, iMamluks, iMacedon, iMinoans, iTunis, iMorocco]),
+iCivGroupAfrica : set([iEgypt, iNubia, iPhoenicia, iEthiopia, iMali, iNigeria, iMoors, iSwahili, iCongo, iMamluks, iZulu, iTunis, iMorocco]),
+iCivGroupAmerica : set([iMaya, iToltecs, iInca, iAztecs, iAmerica, iArgentina, iMexico, iColombia, iBrazil, iCanada, iIroquois]),
 }
 
 # used in: Stability
@@ -137,14 +139,14 @@ iNumTechGroups = 5
 (iTechGroupWestern, iTechGroupMiddleEast, iTechGroupFarEast, iTechGroupNativeAmerica, iTechGroupAfrica) = range(iNumTechGroups)
 
 dTechGroups = {
-iTechGroupWestern : [iRome, iGreece, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iPoland, iPortugal, iItaly, iSweden, iRussia, iNetherlands, iGermany, iAmerica, iArgentina, iMexico, iColombia, iBrazil, iCanada, iBulgaria, iMacedon, iSaxons],
-iTechGroupMiddleEast : [iEgypt, iBabylonia, iHarappa, iAssyria, iHittites, iIndia, iPhoenicia, iPersia, iKushans, iArabia, iMoors, iOttomans, iTimurids, iDravidia, iTurks, iIran, iMamluks, iArmenia, iParthia, iMinoans, iGhorids, iKhazars, iTunis, iVandals, iMorocco, iOman, iYemen, iBuyids],
-iTechGroupFarEast : [iChina, iChinaS, iShu, iXia, iKorea, iKhmer, iMalays, iJapan, iYamato, iJava, iTibet, iBurma, iVietnam, iMongols, iThailand, iManchu],
-iTechGroupNativeAmerica : [iPolynesia, iMaya, iToltecs, iInca, iAztecs, iIroquois],
-iTechGroupAfrica : [iZulu, iNigeria, iMali, iCongo, iEthiopia, iNubia, iSwahili],
+iTechGroupWestern : set([iRome, iGreece, iCelts, iByzantium, iFrance, iNorse, iSpain, iEngland, iHolyRome, iRus, iPoland, iPortugal, iItaly, iSweden, iRussia, iNetherlands, iGermany, iAmerica, iArgentina, iMexico, iColombia, iBrazil, iCanada, iBulgaria, iMacedon, iSaxons]),
+iTechGroupMiddleEast : set([iEgypt, iBabylonia, iHarappa, iAssyria, iHittites, iIndia, iPhoenicia, iPersia, iKushans, iArabia, iMoors, iOttomans, iTimurids, iDravidia, iTurks, iIran, iMamluks, iArmenia, iParthia, iMinoans, iGhorids, iKhazars, iTunis, iVandals, iMorocco, iOman, iYemen, iBuyids]),
+iTechGroupFarEast : set([iChina, iChinaS, iShu, iXia, iKorea, iKhmer, iMalays, iJapan, iYamato, iJava, iTibet, iBurma, iVietnam, iMongols, iThailand, iManchu]),
+iTechGroupNativeAmerica : set([iPolynesia, iMaya, iToltecs, iInca, iAztecs, iIroquois]),
+iTechGroupAfrica : set([iZulu, iNigeria, iMali, iCongo, iEthiopia, iNubia, iSwahili]),
 }
 
-lBioNewWorld = [iMaya, iToltecs, iInca, iAztecs, iIroquois]
+sBioNewWorld = set([iMaya, iToltecs, iInca, iAztecs, iIroquois])
 
 #for messages
 iDuration = 14
@@ -1157,6 +1159,9 @@ iGermany : 3
 iNumReligions = 12
 (iJudaism, iOrthodoxy, iCatholicism, iProtestantism, iIslam, iHinduism, iBuddhism, iConfucianism, iTaoism, iZoroastrianism, iShia, iMarxism) = range(iNumReligions)
 
+sChristianity = set([iOrthodoxy, iCatholicism, iProtestantism])
+sMuslimReligions = set([iIslam, iShia])
+
 #Persecution preference
 tPersecutionPreference = (
 (iHinduism, iBuddhism, iTaoism, iConfucianism, iMarxism, iZoroastrianism, iIslam, iShia, iProtestantism, iCatholicism, iOrthodoxy), # Judaism
@@ -1395,24 +1400,24 @@ rRweru, rTanganyika, rMweru, rBangweulu, rRukwa, rMalawi, rGreatBear, rTidee, rA
 rDubawt, rBaker, rWinnipeg, rSuperior, rMichigan, rHuron, rErie, rLakeOntario, rMistassini, rLobstick, 
 rGreatSalt, rNicaragua, rTiticaca, rMarChiquita, rKhanka) = range(100, 100 + iNumWaterRegions)
 
-lEuropeProper = [rBritain, rIreland, rFrance, rIberia, rItaly, rLowerGermany, rCentralEurope, rBalkans, rGreece, rPoland, rBaltics, rDenmark, rNorway, rSweden, rRuthenia, rCrimea]
-lEuropeAsia = [rEuropeanArctic, rUrals, rSiberia, rPonticSteppe]
-lMiddleEast = [rAnatolia, rCaucasus, rLevant, rMesopotamia, rArabia, rPersia, rKhorasan, rTransoxiana, rYemenOman, rHinduKush]
-lIndia = [rSindh, rPunjab, rRajputana, rHindustan, rBengal, rDeccan, rDravida]
-lEastAsia = [rIndochina, rIndonesia, rPhilippines, rSouthChina, rNorthChina, rKorea, rJapan, rTibet, rTarimBasin, rMongolia, rManchuria, rAmur, rCentralAsianSteppe]
-lNorthAfrica = [rEgypt, rNubia, rMaghreb]
-lSubSaharanAfrica = [rEthiopia, rHornOfAfrica, rSwahiliCoast, rGreatLakes, rZambezi, rMadagascar, rCape, rKalahari, rCongo, rGuinea, rSahel, rSahara]
-lSouthAmerica = [rNewGranada, rAndes, rAmazonia, rBrazil, rSouthernCone]
-lCentralAmerica = [rCaribbean, rMesoamerica, rCentralAmerica]
-lNorthAmerica = [rAtlanticSeaboard, rDeepSouth, rMidwest, rGreatPlains, rAridoamerica, rCalifornia, rCascadia, rOntario, rQuebec, rMaritimes, rAmericanArctic]
-lOceania = [rAustralia, rOceania]
+lEuropeProper = set([rBritain, rIreland, rFrance, rIberia, rItaly, rLowerGermany, rCentralEurope, rBalkans, rGreece, rPoland, rBaltics, rDenmark, rNorway, rSweden, rRuthenia, rCrimea ])
+lEuropeAsia = set([rEuropeanArctic, rUrals, rSiberia, rPonticSteppe])
+lMiddleEast = set([rAnatolia, rCaucasus, rLevant, rMesopotamia, rArabia, rPersia, rKhorasan, rTransoxiana, rYemenOman, rHinduKush])
+lIndia = set([rSindh, rPunjab, rRajputana, rHindustan, rBengal, rDeccan, rDravida])
+lEastAsia = set([rIndochina, rIndonesia, rPhilippines, rSouthChina, rNorthChina, rKorea, rJapan, rTibet, rTarimBasin, rMongolia, rManchuria, rAmur, rCentralAsianSteppe])
+lNorthAfrica = set([rEgypt, rNubia, rMaghreb])
+lSubSaharanAfrica = set([rEthiopia, rHornOfAfrica, rSwahiliCoast, rGreatLakes, rZambezi, rMadagascar, rCape, rKalahari, rCongo, rGuinea, rSahel, rSahara])
+lSouthAmerica = set([rNewGranada, rAndes, rAmazonia, rBrazil, rSouthernCone])
+lCentralAmerica = set([rCaribbean, rMesoamerica, rCentralAmerica])
+lNorthAmerica = set([rAtlanticSeaboard, rDeepSouth, rMidwest, rGreatPlains, rAridoamerica, rCalifornia, rCascadia, rOntario, rQuebec, rMaritimes, rAmericanArctic])
+lOceania = set([rAustralia, rOceania])
 
-lEurope = lEuropeProper + lEuropeAsia
-lAfrica = lNorthAfrica + lSubSaharanAfrica
-lAsia = lMiddleEast + lIndia + lEastAsia
-lAmerica = lSouthAmerica + lCentralAmerica + lNorthAmerica
+lEurope = lEuropeProper | lEuropeAsia
+lAfrica = lNorthAfrica | lSubSaharanAfrica
+lAsia = lMiddleEast | lIndia | lEastAsia
+lAmerica = lSouthAmerica | lCentralAmerica | lNorthAmerica
 
-lNewWorld = lAmerica + lOceania
+lNewWorld = lAmerica | lOceania
 
 #Projects
 
@@ -1421,7 +1426,7 @@ iNumProjects = 22
 iLunarLanding, iGoldenRecord, iMarsMission, iLunarColony, iInterstellarProbe, iMarsFraming, iMarsPowerSource, iMarsExtractor, iMarsHabitat, iMarsHydroponics, 
 iMarsLaboratory, iMarsControlCenter) = range(iNumProjects)
 
-lMarsBaseComponents = [iMarsFraming, iMarsPowerSource, iMarsExtractor, iMarsHabitat, iMarsHydroponics, iMarsLaboratory, iMarsControlCenter]
+#lMarsBaseComponents = [iMarsFraming, iMarsPowerSource, iMarsExtractor, iMarsHabitat, iMarsHydroponics, iMarsLaboratory, iMarsControlCenter]
 
 #Eras
 
@@ -1502,7 +1507,7 @@ iNumImpacts = 5
 lTradingCompanyCivs = [iSpain, iFrance, iEngland, iPortugal, iNetherlands]
 lLateColonyCivs = lTradingCompanyCivs + [iGermany]
 
-lMongolCivs = [iPersia, iByzantium, iTurks, iArabia, iRus, iMamluks, iAssyria, iParthia, iKushans, iMacedon, iArmenia, iGhorids, iKhazars, iBuyids, iKorea, iYamato, iIndependent, iIndependent2]
+sMongolCivs = set([iPersia, iByzantium, iTurks, iArabia, iRus, iMamluks, iAssyria, iParthia, iKushans, iMacedon, iArmenia, iGhorids, iKhazars, iBuyids, iKorea, iYamato, iIndependent, iIndependent2])
 
 (i3000BC, i600AD, i1700AD) = range(3)
 

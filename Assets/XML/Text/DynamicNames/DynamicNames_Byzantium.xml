@@ -270,6 +270,18 @@
 		<Spanish>Theme of Antiocheia</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_BYZANTINE_KHAZARS</Tag>
+		<English>Theme of Cherson</English>
+		<French>
+			<Text>Th&#232;me de Cherson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Theme of Cherson</German>
+		<Italian>Theme of Cherson</Italian>
+		<Spanish>Theme of Cherson</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTIUM_ADJECTIVE</Tag>
 		<English>
 			<Text>Byzantine:Byzantines</Text>

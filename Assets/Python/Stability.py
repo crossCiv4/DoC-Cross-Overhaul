@@ -128,6 +128,8 @@ def onCityAcquired(iOwner, iPlayer, city, bConquest):
 	if player(iPlayer).isBarbarian():
 		checkBarbarianCollapse(iOwner)
 
+sRazingCivs = set([iMongols, iKhazars, iNorse])
+
 @handler("cityRazed")
 def onCityRazed(city, iPlayer):
 	iOwner = slot(Civ(city.getPreviousCiv()))
@@ -137,7 +139,7 @@ def onCityRazed(city, iPlayer):
 	if player(iOwner).isBarbarian():
 		return
 
-	if player(iPlayer).isHuman() and civ(iPlayer) not in [iMongols, iNorse]:
+	if player(iPlayer).isHuman() and civ(iPlayer) not in sRazingCivs:
 		iRazePenalty = -10
 		if city.getHighestPopulation() < 5 and not city.isCapital():
 			iRazePenalty = -2 * city.getHighestPopulation()
@@ -480,6 +482,8 @@ def calculateSeparatism(city):
 	
 	return iModifier * iPopulation / 100
 
+sAntiChattelSlaveryReligions = set([iZoroastrianism, iCatholicism, iProtestantism, iMarxism])
+
 def calculateStability(iPlayer):
 	pPlayer = player(iPlayer)
 	tPlayer = team(iPlayer)
@@ -692,10 +696,10 @@ def calculateStability(iPlayer):
 		if iBureaucracy in civics: iCivicEraTechStability += 3
 		if iIsolationism in civics: iCivicEraTechStability += 3
 		
-	elif iStateReligion in [iZoroastrianism, iOrthodoxy, iCatholicism, iProtestantism]:
+	elif iStateReligion in sAntiChattelSlaveryReligions:
 		if iSlavery in civics: iCivicEraTechStability -= 3
 		
-	elif iStateReligion == iIslam or iStateReligion == iShia:
+	elif iStateReligion in sMuslimReligions:
 		if iSlavery in civics: iCivicEraTechStability += 2
 		
 	elif iStateReligion == iBuddhism:
@@ -1248,8 +1252,7 @@ def isTolerated(iPlayer, iReligion):
 	if iStateReligion == iBuddhism and iReligion == iHinduism: return True
 	
 	# Poland
-	lChristianity = [iOrthodoxy, iCatholicism, iProtestantism]
-	if civ(iPlayer) == iPoland and iStateReligion in lChristianity and iReligion in lChristianity: return True
+	if civ(iPlayer) == iPoland and iStateReligion in sChristianity and iReligion in sChristianity: return True
 	
 	return False
 	

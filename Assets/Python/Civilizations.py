@@ -534,7 +534,6 @@ lCivilizations = [
 		iGold=150,
 		iAdvancedStartPoints=60,
 		iStateReligion=iShia,
-		lEnemies=[iArabia],
 		lCivics=[iMonarchy, iSlavery, iMerchantTrade, iMonasticism, iCitizenship, iHegemony],
 		techs=techs.column(7).including(iDoctrine, iAlchemy).without(iSpringSteel, iLateenSails)
 	),

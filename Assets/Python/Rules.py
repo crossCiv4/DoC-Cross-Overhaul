@@ -51,9 +51,10 @@ def resetNationalWonders(iOwner, iPlayer, city, bConquest, bTrade):
 				city.setHasRealBuilding(iNationalWonder, False)
 
 
+# infrequently used
 @handler("cityAcquired")
 def spreadTradingCompanyCulture(iOwner, iPlayer, city, bConquest, bTrade):
-	if bTrade and civ(iPlayer) in lTradingCompanyCivs and city.getRegionID() in lAsia + lSubSaharanAfrica:
+	if bTrade and civ(iPlayer) in lTradingCompanyCivs and city.getRegionID() not in lEurope:
 		for plot in plots.surrounding(city):
 			if location(plot) == location(city):
 				convertPlotCulture(plot, iPlayer, 51, False)
@@ -73,7 +74,7 @@ def downgradeCottages(iOwner, iPlayer, city, bConquest, bTrade):
 # purge Great People when a city falls to independents, barbarians or natives, prior to Renaissance era
 @handler("cityAcquired")
 def purgeGreatPeople(iOwner, iPlayer, city, bConquest, bTrade):
-	if bConquest and civ(iPlayer) in [iBarbarian, iIndependent, iIndependent2, iNative] and player(iOwner).getCurrentEra() >= iRenaissance:
+	if bConquest and civ(iPlayer) in sMinorCivs and player(iOwner).getCurrentEra() < iRenaissance:
 		for iGreatPerson in lGreatSpecialists:
 			city.setFreeSpecialistCount(iGreatPerson, 0)
 
@@ -144,42 +145,41 @@ def giftedCityDefenders(city):
 		
 @handler("combatResult")
 def captureSlaves(winningUnit, losingUnit):
+	if not player(winningUnit).canUseSlaves():
+		return
+
+	winningCiv = civ(winningUnit)
+	losingCiv = civ(losingUnit)
+
 	# Tunis UP
-	if civ(winningUnit) == iTunis and winningUnit.getDomainType() == DomainTypes.DOMAIN_SEA and player(winningUnit).canUseSlaves():
+	if winningCiv == iTunis and winningUnit.getDomainType() == DomainTypes.DOMAIN_SEA:
 		captureUnit(losingUnit, winningUnit, iSlave, 33)
 		return
 
 	if plot(winningUnit).isWater() and freeCargo(winningUnit, winningUnit) <= 0:
 		return
 
-	if civ(winningUnit) == iAztecs:
+	if losingCiv == iNative and winningUnit.getUnitType() in [iBandeirante, iOmaniSlaver]:
+		captureUnit(losingUnit, winningUnit, iSlave, 100)
+		return
+
+	if winningCiv == iAztecs:
 		captureUnit(losingUnit, winningUnit, iAztecSlave, 50)
 		return
 	
-	if civ(losingUnit) == iNative and winningUnit.getUnitType() == iBandeirante and player(winningUnit).canUseSlaves():
-		captureUnit(losingUnit, winningUnit, iSlave, 100)
+	# enslave natives if your civic is slavery or colonialism regardless of era
+	if losingCiv == iNative:
+		captureUnit(losingUnit, winningUnit, iSlave, 33)
 		return
 
-	if civ(losingUnit) == iNative and winningUnit.getUnitType() == iOmaniSlaver and player(winningUnit).canUseSlaves():
-		captureUnit(losingUnit, winningUnit, iSlave, 100)
-		return
-	
-	# enslave natives if your civic is slavery or colonialism regardless of era
-	if civ(losingUnit) == iNative:
-		if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
-			captureUnit(losingUnit, winningUnit, iSlave, 33)
-		return
-	
 	# Nigeria UP: can always capture slaves from any civ at 20% rate (natives still at default rate)
-	if civ(winningUnit) == iNigeria:
-		if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
-			captureUnit(losingUnit, winningUnit, iSlave, 20)
+	if winningCiv == iNigeria:
+		captureUnit(losingUnit, winningUnit, iSlave, 20)
 		return
 
 	# also enslave barbarians but at a lesser rate
-	if civ(losingUnit) == iBarbarian:
-		if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
-			captureUnit(losingUnit, winningUnit, iSlave, 10)
+	if losingCiv == iBarbarian:
+		captureUnit(losingUnit, winningUnit, iSlave, 10)
 		return
 
 @handler("combatResult")
@@ -188,6 +188,9 @@ def zuluUniquePower(winningUnit, losingUnit):
 	if civ(winningUnit) == iZulu:
 		captureUnit(losingUnit, winningUnit, losingUnit.getUnitType(), 25)
 
+sChineseOrMinorCivs = set([iChina, iChinaS, iXia, iShu, iIndependent, iIndependent2, iBarbarian])
+sInfantryTypes = set([UnitCombatTypes.UNITCOMBAT_MELEE, UnitCombatTypes.UNITCOMBAT_GUN, UnitCombatTypes.UNITCOMBAT_ARCHER])
+sSteppeCivs = set([iMongols, iTurks, iKhazars, iIndependent, iIndependent2, iBarbarian])
 @handler("combatResult")
 def manchuUniquePower(winningUnit, losingUnit):
 	# Manchu UP: 
@@ -195,11 +198,11 @@ def manchuUniquePower(winningUnit, losingUnit):
 	# recruit steppe cavalry units into Manchu Bannermen &
 	# recruit Chinese siege units
 	if civ(winningUnit) == iManchu:
-		if civ(losingUnit) in [iChina, iChinaS, iXia, iShu, iIndependent, iIndependent2, iBarbarian] and losingUnit.getUnitCombatType() in [UnitCombatTypes.UNITCOMBAT_MELEE, UnitCombatTypes.UNITCOMBAT_GUN, UnitCombatTypes.UNITCOMBAT_ARCHER]:
+		if civ(losingUnit) in sChineseOrMinorCivs and losingUnit.getUnitCombatType() in sInfantryTypes:
 			captureUnit(losingUnit, winningUnit, iHanBannerman, 66)
-		elif civ(losingUnit) in [iChina, iChinaS, iXia, iShu, iIndependent, iIndependent2, iBarbarian] and losingUnit.getUnitCombatType() == UnitCombatTypes.UNITCOMBAT_SIEGE:
+		elif civ(losingUnit) in sChineseOrMinorCivs and losingUnit.getUnitCombatType() == UnitCombatTypes.UNITCOMBAT_SIEGE:
 			captureUnit(losingUnit, winningUnit, losingUnit.getUnitType(), 66)
-		elif civ(losingUnit) in [iMongols, iTurks, iKhazars, iIndependent, iIndependent2, iBarbarian] and losingUnit.getUnitCombatType() in [UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY, UnitCombatTypes.UNITCOMBAT_LIGHT_CAVALRY]:
+		elif civ(losingUnit) in sSteppeCivs and losingUnit.getUnitCombatType() in [UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY, UnitCombatTypes.UNITCOMBAT_LIGHT_CAVALRY]:
 			captureUnit(losingUnit, winningUnit, iManchuHorseArcher, 66)
 
 
@@ -240,10 +243,11 @@ def validateSlaves(iPlayer):
 
 ### UNIT BUILT ###
 
-@handler("unitBuilt")
+# is this even a thing?
+#@handler("unitBuilt")
 def moveSlavesToNewWorld(city, unit):
 	if base_unit(unit) == iSlave and city.getRegionID() in lEurope + [rMaghreb, rAnatolia] and not city.isHuman():	
-		colony = cities.owner(iPlayer).regions(*(lAmerica + lSubSaharanAfrica)).random()
+		colony = cities.owner(iPlayer).regions(*(lAmerica | lSubSaharanAfrica)).random()
 		if colony:
 			move(unit, colony)
 
@@ -474,7 +478,7 @@ def immigration():
 @handler("playerChangeStateReligion")
 def onPlayerChangeStateReligion(iPlayer):
 	# Mongols will prefer having their capital in the Middle East if Muslim
-	if civ(iPlayer) == iMongols and player(iPlayer).getStateReligion() in [iIslam, iShia]:
+	if civ(iPlayer) == iMongols and player(iPlayer).getStateReligion() in sMuslimReligions:
 		capital = plots.capital(iPlayer)
 		if capital.getRegionID() not in lMiddleEast:
 			newCapital = cities.regions(*lMiddleEast).owner(iMongols).maximum(lambda city: city.getPopulation())

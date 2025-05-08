@@ -279,19 +279,19 @@ scenario1700AD = Scenario(
 	
 	dRevealed = {
 		iCivGroupEurope: Revealed(
-			lLandRegions=lEurope + lNorthAfrica + [rAnatolia, rMesopotamia, rArabia, rPersia], 
-			lCoastRegions=lIndia + lEastAsia + lSubSaharanAfrica + lAmerica,
-			lSeaAreas=[((29, 60), (50, 27)), ((28, 11), (58, 26)), ((79, 23), (97, 32)), ((111, 28), (123, 44)), ((0, 28), (21, 44))],
+			lLandRegions=lEurope | lNorthAfrica | set([rAnatolia, rMesopotamia, rArabia, rPersia]), 
+			lCoastRegions=lIndia | lEastAsia | lSubSaharanAfrica | lAmerica,
+			lSeaAreas=set([((29, 60), (50, 27)), ((28, 11), (58, 26)), ((79, 23), (97, 32)), ((111, 28), (123, 44)), ((0, 28), (21, 44))]),
 		),
 		iCivGroupAsia: Revealed(
-			lLandRegions=lEastAsia + lIndia + [rTarimBasin, rTransoxiana, rKhorasan, rMesopotamia, rPersia, rArabia, rYemenOman],
+			lLandRegions=lEastAsia | lIndia | set([rTarimBasin, rTransoxiana, rKhorasan, rMesopotamia, rPersia, rArabia, rYemenOman]),
 			lCoastRegions=[rEthiopia],
-			lSeaAreas=[((79, 23), (97, 32))],
+			lSeaAreas=set([((79, 23), (97, 32))]),
 		),
 		iCivGroupMiddleEast: Revealed(
-			lLandRegions=lMiddleEast + lIndia + lNorthAfrica + [rSahel, rSahara, rEthiopia, rHornOfAfrica, rSwahiliCoast, rIberia, rItaly, rBalkans, rPonticSteppe],
-			lCoastRegions=lEastAsia + lCentralAmerica + [rCape, rBritain, rIreland, rFrance, rLowerGermany, rDenmark, rNorway, rSweden, rCrimea, rAtlanticSeaboard, rMaritimes, rDeepSouth, rBrazil],
-			lSeaAreas=[((79, 23), (97, 32))],
+			lLandRegions=lMiddleEast | lIndia | lNorthAfrica | set([rSahel, rSahara, rEthiopia, rHornOfAfrica, rSwahiliCoast, rIberia, rItaly, rBalkans, rPonticSteppe]),
+			lCoastRegions=lEastAsia | lCentralAmerica | set([rCape, rBritain, rIreland, rFrance, rLowerGermany, rDenmark, rNorway, rSweden, rCrimea, rAtlanticSeaboard, rMaritimes, rDeepSouth, rBrazil]),
+			lSeaAreas=set([((79, 23), (97, 32))]),
 		),
 		iCivGroupAfrica: Revealed(
 			lLandRegions=lSubSaharanAfrica,

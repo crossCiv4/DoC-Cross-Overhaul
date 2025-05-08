@@ -74,13 +74,15 @@ def completeCollapse(iPlayer):
 	message(active(), 'TXT_KEY_STABILITY_COMPLETE_COLLAPSE', adjective(iPlayer))
 	
 	events.fireEvent("collapse", iPlayer)
-		
+
+sAlwaysDowngrade = set([iCottage, iHamlet, iVillage, iTown])
+sDowngradeCiv = set([iHarappa, iToltecs, iHittites, iEgypt, iMinoans])
+sDestroyImprovementCivs = set([iHarappa, iMinoans, iToltecs])
 def downgradeImprovements(iPlayer):
-	lAlwaysDowngrade = [iCottage, iHamlet, iVillage, iTown]
-	bPlayerDowngrade = civ(iPlayer) in [iHarappa, iToltecs, iHittites, iEgypt, iMinoans] and not player(iPlayer).isHuman()
+	bPlayerDowngrade = civ(iPlayer) in sDowngradeCiv and not player(iPlayer).isHuman()
 	
 	improvementPlots = plots.owner(iPlayer).where(lambda p: p.getImprovementType() >= 0)
-	alwaysDowngrade, potentialDowngrade = improvementPlots.split(lambda p: p.getImprovementType() in lAlwaysDowngrade or bPlayerDowngrade)
+	alwaysDowngrade, potentialDowngrade = improvementPlots.split(lambda p: p.getImprovementType() in sAlwaysDowngrade or bPlayerDowngrade)
 	
 	if player(iPlayer).getCurrentEra() <= iRenaissance:
 		iFraction = 4
@@ -102,7 +104,7 @@ def downgradeImprovements(iPlayer):
 			plot.setImprovementType(-1)
 		
 		# Destroy all improvements of particular civs
-		if civ(iPlayer) in [iHarappa, iMinoans, iToltecs] and not player(iPlayer).isHuman():
+		if civ(iPlayer) in sDestroyImprovementCivs and not player(iPlayer).isHuman():
 			if iImprovement >= 0:
 				plot.setImprovementType(-1)
 				

@@ -12,10 +12,8 @@ import Popup
 import BugCore
 
 import random
-import re
 import types
 
-from sets import Set
 from itertools import groupby
 from datetime import datetime
 
@@ -2359,8 +2357,8 @@ class TechFactory(object):
 class TechCollection(object):
 
 	def __init__(self):
-		self.included = []
-		self.excluded = []
+		self.included = set()
+		self.excluded = set()
 		self.iEra = -1
 		self.iColumn = 0
 	
@@ -2373,17 +2371,17 @@ class TechCollection(object):
 		return self
 	
 	def without(self, *techs):
-		self.excluded += [i for i in techs if i not in self.excluded]
+		self.excluded |= set(techs)
 		return self
 	
 	def including(self, *techs):
-		self.included += [i for i in techs if i not in self.included]
+		self.included |= set(techs)
 		return self
 		
 	def techs(self):
-		techs = [i for i in infos.techs().where(lambda iTech: infos.tech(iTech).getEra() <= self.iEra or infos.tech(iTech).getGridX() <= self.iColumn)]
-		techs += [i for i in self.included if i not in techs]
-		techs = [i for i in techs if i not in self.excluded]
+		techs = set([i for i in infos.techs().where(lambda iTech: infos.tech(iTech).getEra() <= self.iEra or infos.tech(iTech).getGridX() <= self.iColumn)])
+		techs |= self.included
+		techs -= self.excluded
 		
 		return techs
 	

@@ -1,29 +1,30 @@
 from Definitions import *
 from Locations import *
+from Consts import *
 
 
 lHappinessResources = [iResource for iResource in infos.bonuses() if infos.bonus(iResource).getHappiness() > 0]
 
 # third Phoenician goal: reveal 50% of the African coast by 1 AD
-lAfricanCoastRegions = [rRegion for rRegion in lAfrica if rRegion != rMadagascar]
+lAfricanCoastRegions = set([rRegion for rRegion in lAfrica if rRegion != rMadagascar])
 
 # first Norse goal: control a European core in 1050 AD
-lNorseTargets = [plots.core(iCiv) for iCiv in dCivGroups[iCivGroupEurope] if iCiv != iNorse and dBirth[iCiv] <= 1050]
+lNorseTargets = set([plots.core(iCiv) for iCiv in dCivGroups[iCivGroupEurope] if iCiv != iNorse and dBirth[iCiv] <= 1050])
 
 # first Portuguese goal
-lIndianTradeRegions = [rYemenOman, rSindh, rRajputana, rDeccan, rDravida, rHornOfAfrica, rSwahiliCoast, rCape, rKalahari, rCongo, rGuinea, rSahel, rSahara, rMaghreb]
+lIndianTradeRegions = set([rYemenOman, rSindh, rRajputana, rDeccan, rDravida, rHornOfAfrica, rSwahiliCoast, rCape, rKalahari, rCongo, rGuinea, rSahel, rSahara, rMaghreb])
 
 # second Portuguese goal: acquire 12 colonial resources by 1650 AD
-lColonialResources = [iBanana, iSpices, iSugar, iCoffee, iTea, iTobacco, iCocoa]
+lColonialResources = set([iBanana, iSpices, iSugar, iCoffee, iTea, iTobacco, iCocoa])
 
 # third Aztec goal: control a European core by 1750 AD
-lAztecTargets = [plots.core(iCiv) for iCiv in dCivGroups[iCivGroupEurope]]
+lAztecTargets = set([plots.core(iCiv) for iCiv in dCivGroups[iCivGroupEurope]])
 
 # third Thai goal: allow no foreign powers in South Asia in 1900 AD
-lSouthAsianCivs = [iIndia, iDravidia, iVietnam, iMalays, iJava, iKhmer, iBurma, iTimurids, iThailand, iGhorids]
+lSouthAsianCivs = set([iIndia, iDravidia, iVietnam, iMalays, iJava, iKhmer, iBurma, iTimurids, iThailand, iGhorids])
 
 # first Russian goal: control three Orthodox Cathedrals and three Orthodox wonders by 1550 AD
-lOrthodoxWonders = [iBuilding for iBuilding in infos.buildings() if isWonder(iBuilding) and iOrthodoxy in [infos.building(iBuilding).getPrereqReligion(), infos.building(iBuilding).getOrPrereqReligion()]]
+lOrthodoxWonders = set([iBuilding for iBuilding in infos.buildings() if isWonder(iBuilding) and iOrthodoxy in set([infos.building(iBuilding).getPrereqReligion(), infos.building(iBuilding).getOrPrereqReligion()])])
 
 
 # city names
@@ -747,7 +748,7 @@ dGoals = {
 		All(
 			CityCount(
 				(plots.regions(*lNorthAmerica).named(NORTH_AMERICA), 6),
-				(plots.regions(*(lSouthAmerica + lCentralAmerica)).named(SOUTH_CENTRAL_AMERICA), 4),
+				(plots.regions(*(lSouthAmerica | lCentralAmerica)).named(SOUTH_CENTRAL_AMERICA), 4),
 				(plots.regions(*lAfrica).named(AFRICA), 3),
 			),
 			UnitCombatLevelCount(UnitCombatTypes.UNITCOMBAT_NAVAL, 3, 25),

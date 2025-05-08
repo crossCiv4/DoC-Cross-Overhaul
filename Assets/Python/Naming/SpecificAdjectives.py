@@ -106,7 +106,7 @@ def buyidsSpecificAdjective(args):
         return "TXT_KEY_CIV_BUYIDS_FARSI"
 
 def yemenSpecificAdjective(args):
-    if not args.iReligion in [iIslam, iShia] and args.iEra < iIndustrial:
+    if not args.iReligion in sMuslimReligions and args.iEra < iIndustrial:
         if isCurrentCapital(args.iPlayer, "Adan"):
             return "TXT_KEY_CIV_YEMEN_HIMYAR_ADJECTIVE"
         else:
@@ -195,9 +195,9 @@ def iranSpecificAdjective(args):
         return "TXT_KEY_CIV_PERSIA_PAHLAVI"
 
 def assyriaSpecificAdjective(args):
-    if args.bResurrected or args.iReligion in [iIslam, iShia]:
+    if args.bResurrected or args.iReligion in sMuslimReligions:
         return "TXT_KEY_CIV_ASSYRIA_HAMDANID"
-    if args.bResurrected or args.iReligion in [iOrthodoxy, iCatholicism]:
+    if args.bResurrected or args.iReligion in sChristianity:
         return "TXT_KEY_CIV_ASSYRIA_ANTIOCHENE"
 
 def persiaSpecificAdjective(args):
@@ -220,7 +220,7 @@ def romeSpecificAdjective(args):
         return "TXT_KEY_CIV_ROME_WESTERN"
 
 def dravidiaSpecificAdjective(args):
-    if args.iReligion in [iIslam, iShia]:
+    if args.iReligion in sMuslimReligions:
         if args.iEra in [iMedieval, iRenaissance]:
             return "TXT_KEY_CIV_DRAVIDIA_BAHMANI"
     if args.iEra <= iClassical:
@@ -231,7 +231,7 @@ def dravidiaSpecificAdjective(args):
         return "TXT_KEY_CIV_DRAVIDIA_CHOLA"
 
 def ethiopiaSpecificAdjective(args):
-    if args.iReligion in [iIslam, iShia]:
+    if args.iReligion in sMuslimReligions:
         return "TXT_KEY_CIV_ETHIOPIA_ADAL"
     if not game.isReligionFounded(iIslam):
         return "TXT_KEY_CIV_ETHIOPIA_AKSUMITE"
@@ -243,7 +243,7 @@ def byzantiumSpecificAdjective(args):
         return infos.civ(iRome).getAdjective(0)
 
 def bulgariaSpecificAdjective(args):
-    if args.iReligion in [iIslam, iShia]:
+    if args.iReligion in sMuslimReligions:
         return "TXT_KEY_CIV_BULGARIA_RUMELIA_ADJECTIVE"
     if isCurrentCapital(args.iPlayer, "Ras"):
         return "TXT_KEY_CIV_SERBIA_ADJECTIVE"

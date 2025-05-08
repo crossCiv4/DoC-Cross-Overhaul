@@ -10,9 +10,9 @@ iTurkicEastWestBorder = 106
 
 # History
 
-lSilkRoute = [(102, 55), (103, 55), (104, 56), (106, 55), (107, 56), (108, 56), (109, 56), (110, 56), (111, 57), (113, 56), (114, 56), (115, 56), (116, 56), (117, 55), (118, 54)]
-lKushanRoad = [(99, 51), (100, 50), (101, 49)]
-lHejazRoad = [(84, 44), (84, 43), (85, 42), (85, 41), (86, 40)]
+lSilkRoute = set([(102, 55), (103, 55), (104, 56), (106, 55), (107, 56), (108, 56), (109, 56), (110, 56), (111, 57), (113, 56), (114, 56), (115, 56), (116, 56), (117, 55), (118, 54)])
+lKushanRoad = set([(99, 51), (100, 50), (101, 49)])
+lHejazRoad = set([(84, 44), (84, 43), (85, 42), (85, 41), (86, 40)])
 
 # Rise
 
@@ -22,7 +22,7 @@ tNovgorod = ((81, 68), (84, 71))
 
 # second Phoenician goal: control Iberia and Italy by 150 BC
 tPhoenicianItaly = ((65, 48), (72, 55))
-lPhoenicianItalyExceptions = [(65, 48), (66, 48), (67, 48), (72, 55)]
+lPhoenicianItalyExceptions = set([(65, 48), (66, 48), (67, 48), (72, 55)])
 
 # first Polynesian goal: settle two out of the following island groups by 800 AD: Hawaii, New Zealand, Marquesas and Easter Island
 # second Polynesian goal: settle Hawaii, New Zealand, Marquesas and Easter Island by 1000 AD

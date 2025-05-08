@@ -23,7 +23,7 @@ lExpandedFlipCivs = [
 	#iByzantium
 ]
 
-lExpansionCivs = [
+sExpansionCivs = set([
 	iPersia,
 	iIndia,
 	iMacedon,
@@ -45,9 +45,9 @@ lExpansionCivs = [
 	iEngland,
 	iBuyids,
 	iManchu,
-]
+])
 
-lIndependenceCivs = [
+sIndependenceCivs = set([
 	iChinaS,
 	iArgentina,
 	iMexico,
@@ -62,9 +62,9 @@ lIndependenceCivs = [
 	iHolyRome,
 	iVandals,
 	iBuyids,
-]
+])
 
-lDynamicReligionCivs = [
+sDynamicReligionCivs = set([
 	iByzantium,
 	iAmerica,
 	iArgentina,
@@ -72,7 +72,7 @@ lDynamicReligionCivs = [
 	iColombia,
 	iBrazil,
 	iCanada
-]
+])
 
 lInvasionCivs = [
 	iOttomans,
@@ -89,15 +89,15 @@ dClearedForBirth = {
 	iChina: iShu,
 }
 
-lAlwaysClear = [
+sAlwaysClear = set([
 	iToltecs,
 	iMinoans,
 	iHarappa,
 	iBabylonia,
 	iShu,
-]
+])
 
-lBirthWars = [
+sBirthWars = set([
 	(iPersia, iAssyria),
 	(iPersia, iBabylonia),
 	(iArabia, iEgypt),
@@ -111,11 +111,12 @@ lBirthWars = [
 	(iMongols, iXia),
 	(iOttomans, iByzantium),
 	(iOttomans, iBulgaria),
-	(iMoors, iSpain),
 	(iMamluks, iArabia),
 	(iParthia, iPersia),
 	(iBuyids, iArabia),
-]
+	(iManchu, iChina),
+	(iManchu, iChinaS),
+])
 
 
 ### Event Handlers ###
@@ -373,6 +374,8 @@ def getBirth(iCiv):
 	return next(birth for birth in data.births if birth.iCiv == iCiv)
 	
 
+sNorthAfricanIslamicSpawns = set([iMoors, iMamluks, iTunis, iMorocco])
+
 class Birth(object):
 
 	def __init__(self, iCiv):
@@ -434,7 +437,7 @@ class Birth(object):
 		return self.player.isHuman()
 	
 	def isIndependence(self):
-		return self.iCiv in lIndependenceCivs
+		return self.iCiv in sIndependenceCivs
 	
 	def startAutoplay(self):
 		iAutoplayTurns = self.iTurn - scenarioStartTurn()
@@ -562,7 +565,7 @@ class Birth(object):
 		self.civ.apply()
 		
 		# dynamic starting religion
-		if self.iCiv in lDynamicReligionCivs:
+		if self.iCiv in sDynamicReligionCivs:
 			iPrevalentReligion = getPrevalentReligion(self.area, self.iPlayer)
 			if iPrevalentReligion >= 0:
 				self.player.setLastStateReligion(iPrevalentReligion)
@@ -830,7 +833,9 @@ class Birth(object):
 		
 		# Ottomans require that the Turks or Mongols managed to conquer at least one city in the Anatolia / Armenia
 		if self.iCiv == iOttomans:
-			if cities.regions(rAnatolia, rCaucasus).none(lambda city: iTurks in [city.getCivilizationType(), city.getPreviousCiv()] or iMongols in [city.getCivilizationType(), city.getPreviousCiv()]):
+			if cities.regions(rAnatolia, rCaucasus).none(lambda city: 
+					city.getCivilizationType() in [iTurks, iMongols] or
+					city.getPreviousCiv() in [iTurks, iMongols]):
 				return False
 		
 		# Arabia must have conquered a city in Buyid core
@@ -841,7 +846,9 @@ class Birth(object):
 			
 		# Arabia must have conquered a city in Ghurid core
 		if self.iCiv == iGhorids:
-			if cities.regions(rHinduKush, rSindh, rPunjab).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()] or iTurks in [city.getCivilizationType(), city.getPreviousCiv()]):
+			if cities.regions(rHinduKush, rSindh, rPunjab).none(lambda city: 
+					city.getCivilizationType() in [iTurks, iArabia] or
+					city.getPreviousCiv() in [iTurks, iArabia]):
 				return False
 
 		# Iran requires Persia, Parthia and Buyids to be dead
@@ -852,11 +859,9 @@ class Birth(object):
 		# Moors & Fatimids cannot spawn if Arabia has never conquered one of the cities of the Maghreb
 		# OR Carthage, Romans and Byzantines don't hold any cities in the Maghreb
 		# if autoplay, spawn them anyway, as not having them around does more damage to the timeline
-		if self.iCiv in [iMoors, iMamluks, iTunis, iMorocco]:
+		if self.iCiv in sNorthAfricanIslamicSpawns:
 			if not autoplay() and cities.regions(rMaghreb).none(lambda city: 
-					iArabia in [city.getCivilizationType(), city.getPreviousCiv()] or
-					iMoors in [city.getCivilizationType(), city.getPreviousCiv()] or
-					iTunis in [city.getCivilizationType(), city.getPreviousCiv()]):
+					city.getCivilizationType() in [iArabia, iMoors, iTunis] or city.getPreviousCiv() in [iArabia, iMoors, iTunis]):
 				for iBlockerCiv in [iPhoenicia, iRome, iByzantium, iVandals]:
 					if len(cities.region(rMaghreb).owner(iBlockerCiv)) != 0:
 						return False
@@ -943,7 +948,7 @@ class Birth(object):
 		for plot in plots.all().where(lambda p: p.getExpansion() == self.iPlayer):
 			plot.resetExpansion()
 	
-		if self.iCiv in lExpansionCivs:
+		if self.iCiv in sExpansionCivs:
 			capital_continent = plot_(self.location).getContinentArea()
 			
 			for plot in plots.all().without(self.area).where(lambda p: p.getPlayerWarValue(self.iPlayer) >= 5).where(lambda p: p.getContinentArea() == capital_continent or distance(self.location, p) <= 32).land().where(lambda p: not p.isPeak()):
@@ -1016,7 +1021,7 @@ class Birth(object):
 		if data.civs[iClearedCiv].iResurrections > 0:
 			return
 
-		if not self.isHuman() and iClearedCiv not in lAlwaysClear:
+		if not self.isHuman() and iClearedCiv not in sAlwaysClear:
 			return
 			
 		if not player(iClearedCiv).isExisting():
@@ -1141,8 +1146,9 @@ class Birth(object):
 		# send event
 		events.fireEvent("birth", self.iPlayer)
 		
-	def warOnFlip(self, iOwner, cityNames):
+	def warOnFlip(self, iOwner, flippedCities):
 		if player(iOwner).isHuman():
+			cityNames = format_separators(flippedCities.owner(iOwner), ",", text("TXT_KEY_AND"), CyCity.getName)
 			self.flipPopup.text(cityNames, name(self.iPlayer)).cancel().declareWarOnFlip().launch(iOwner)
 			return
 		
@@ -1174,39 +1180,38 @@ class Birth(object):
 	
 	def flip(self):
 		flippedPlots = self.flippedArea()
-		
+
 		excludedPlots = flippedPlots.where(lambda p: p.isCity() and city_(p).isCapital() and p.isPlayerCore(p.getOwner()))
 		excludedPlots = excludedPlots.expand(1).where(lambda p: cities.surrounding(p).all(lambda city: city in excludedPlots))
-		
+
 		flippedPlots = flippedPlots.without(excludedPlots)
-		
+
 		flippedCities = flippedPlots.cities().notowner(self.iPlayer)
 		flippedCityPlots = flippedCities.plots()
-	
-		flippedPlayerCities = dict((p, format_separators(flippedCities.owner(p), ",", text("TXT_KEY_AND"), CyCity.getName)) for p in flippedCities.owners().major())
-		
+
+		# flippedPlayerCities = dict((p, format_separators(flippedCities.owner(p), ",", text("TXT_KEY_AND"), CyCity.getName)) for p in flippedCities.owners().major())
+
 		expelUnits(self.iPlayer, flippedPlots)
-		
+
 		for city in flippedCities:
 			city = completeCityFlip(city, self.iPlayer, city.getOwner(), 100, bFlipUnits=True)
 			
 			self.prepareCity(city)
-		
-		convertSurroundingPlotCulture(self.iPlayer, flippedPlots.land())
-		convertSurroundingPlotCulture(self.iPlayer, flippedPlots.water().where(lambda p: p.getPlayerCityRadiusCount(self.iPlayer) > 0))
+
+		convertSurroundingPlotCulture(self.iPlayer, flippedPlots.land() + flippedPlots.water().where(lambda p: p.getPlayerCityRadiusCount(self.iPlayer) > 0))
 		
 		if self.player.getCurrentEra() <= iRenaissance:
 			downgradeAreaCottages(self.iPlayer, flippedPlots.land())
-		
-		for iOwner, cityNames in flippedPlayerCities.items():
-			self.warOnFlip(iOwner, cityNames)
-		
-		flipped_names = format_separators(flippedCityPlots.cities(), ",", text("TXT_KEY_AND"), CyCity.getName)
-		if flippedCities:
+
+		for iOwner in flippedCities.owners().major():
+			self.warOnFlip(iOwner, flippedCities)
+
+		if flippedCities and player(self.iPlayer).isHuman():
+			flipped_names = format_separators(flippedCityPlots.cities(), ",", text("TXT_KEY_AND"), CyCity.getName)
 			message(self.iPlayer, 'TXT_KEY_MESSAGE_CITIES_FLIPPED', flipped_names, color=iGreen)
-		
+
 		self.civ.advancedStart()
-		
+
 		events.fireEvent("flip", self.iPlayer)
 	
 	def wars(self):
@@ -1217,7 +1222,7 @@ class Birth(object):
 		expansionTargets = expansionArea.owners()
 		
 		for iTarget in expansionTargets:
-			if (self.iCiv, civ(iTarget)) in lBirthWars:
+			if (self.iCiv, civ(iTarget)) in sBirthWars:
 				self.team.declareWar(player(iTarget).getTeam(), True, WarPlanTypes.WARPLAN_TOTAL)
 				
 				if player(iTarget).isHuman():

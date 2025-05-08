@@ -101,6 +101,17 @@ def checkCompany(iCompany, iGameTurn):
 				spreadCity.setHasCorporation(iCompany, True, True, True)
 				
 
+sSilkRouteRegions = set([rMongolia, rTarimBasin, rTransoxiana, rKhorasan, rHinduKush, rPersia, rMesopotamia, rLevant])
+
+sTradingCompanyRegions = set([rCaribbean, rYemenOman, rDeccan, rDravida, rBengal, rIndochina, rIndonesia, rPhilippines]) | lSubSaharanAfrica
+
+sHanseaticMostFavouredRegions = set([rLowerGermany, rDenmark, rSweden, rPoland, rBaltics])
+sHanseaticSomeFavourRegions = set([rNorway, rBritain, rRussia])
+
+sKnightsTemplarMostFavouredRegions = set([rIberia, rItaly, rGreece, rAnatolia, rLevant, rEgypt, rMaghreb, rBalkans])
+sKnightsTemplarSomeFavourRegions = set([rBritain, rFrance])
+
+sAverageBonusCompanies = set([iFishingIndustry, iCerealIndustry, iTextileIndustry, iKnightsTemplar])
 
 def getCityValue(city, iCompany):
 	iValue = 2
@@ -151,22 +162,16 @@ def getCityValue(city, iCompany):
 			return -1
 		if iOwnerCiv == iNetherlands:
 			iValue += 2
-	elif iCompany == iSilkRoute:
-		if city.getRegionID() in [rTarimBasin, rTransoxiana, rHinduKush, rKhorasan, rPersia]:
-			iValue += 2
-		elif city.getRegionID() in [rSouthChina, rNorthChina]:
-			iValue -= 2
 	
 	# geographical requirements
 	if iCompany == iSilkRoute:
-		if city.getRegionID() not in [rMongolia, rTarimBasin, rTransoxiana, rKhorasan, rHinduKush, rPersia, rMesopotamia, rLevant]:
+		if city.getRegionID() not in sSilkRouteRegions:
 			return -1
 			
 	elif iCompany == iTradingCompany:
 		if not city.isHasRealBuilding(unique_building(city.getOwner(), iTradingCompanyBuilding)):
-			if city.getRegionID() not in [rCaribbean, rYemenOman, rDeccan, rDravida, rBengal, rIndochina, rIndonesia, rPhilippines] + lSubSaharanAfrica:
+			if city.getRegionID() not in sTradingCompanyRegions:
 				return -1
-			
 			if not city.isCoastal(20):
 				return -1
 	
@@ -174,16 +179,16 @@ def getCityValue(city, iCompany):
 			iValue += 1
 	
 	elif iCompany == iHanseaticLeague:
-		if city.getRegionID() in [rLowerGermany, rDenmark, rSweden, rPoland, rBaltics]:
+		if city.getRegionID() in sHanseaticMostFavouredRegions:
 			iValue += 12
-		elif city.getRegionID() in [rNorway, rBritain, rRussia]:
+		elif city.getRegionID() in sHanseaticSomeFavourRegions:
 			iValue += 9
-		elif city.getRegionID() not in [rFrance]:
+		elif city.getRegionID() != rFrance:
 			return -1
 	elif iCompany == iKnightsTemplar:
-		if city.getRegionID() in [rIberia, rItaly, rGreece, rAnatolia, rLevant, rEgypt, rMaghreb, rBalkans]:
+		if city.getRegionID() in sKnightsTemplarMostFavouredRegions:
 			iValue += 12
-		elif city.getRegionID() in [rBritain, rFrance]:
+		elif city.getRegionID() in sKnightsTemplarSomeFavourRegions:
 			iValue += 4
 	
 	# fishing industry - coastal cities only
@@ -202,13 +207,13 @@ def getCityValue(city, iCompany):
 	
 	# religions
 	if iCompany == iSilkRoute:
-		if owner.getStateReligion() in [iProtestantism, iCatholicism, iOrthodoxy]:
+		if owner.getStateReligion() in sChristianity:
 			iValue -= 1
 	if iCompany == iHanseaticLeague:
-		if owner.getStateReligion() in [iProtestantism, iCatholicism, iOrthodoxy]:
+		if owner.getStateReligion() in sChristianity:
 			iValue += 3
 	if iCompany == iKnightsTemplar:
-		if not owner.getStateReligion() in [iCatholicism]:
+		if not owner.getStateReligion() == iCatholicism:
 			return -1
 	
 	# various bonuses
@@ -217,6 +222,7 @@ def getCityValue(city, iCompany):
 		if city.hasBuilding(unique_building(iOwner, iMarket)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iStable)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iHarbor)): iValue += 1
+		if city.hasBuilding(unique_building(iOwner, iLighthouse)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iPostOffice)): iValue += 1
 
 	elif iCompany == iTradingCompany:
@@ -306,7 +312,7 @@ def getCityValue(city, iCompany):
 		if iBonus > -1:
 			if city.getNumBonuses(iBonus) > 0: 
 				bFound = True
-				if iCompany in [iFishingIndustry, iCerealIndustry, iTextileIndustry, iKnightsTemplar]:
+				if iCompany in sAverageBonusCompanies:
 					iTempValue += city.getNumBonuses(iBonus)
 				elif iCompany == iOilIndustry:
 					iTempValue += city.getNumBonuses(iBonus) * 4

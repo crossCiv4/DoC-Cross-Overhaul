@@ -1909,12 +1909,14 @@ bool CvUnit::isActionRecommended(int iAction)
 				eRoute = ((RouteTypes)(GC.getBuildInfo(eBuild).getRoute()));
 				eBonus = pPlot->getBonusType(getTeam());
 				pWorkingCity = pPlot->getWorkingCity();
+
+				CvImprovementInfo& kImprovement = GC.getImprovementInfo(eImprovement);
 				
 				if (eImprovement != NO_IMPROVEMENT)
 				{
 					if (eBonus != NO_BONUS)
 					{
-						if (GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eBonus))
+						if (kImprovement.isImprovementBonusTrade(eBonus))
 						{
 							return true;
 						}
@@ -1944,7 +1946,7 @@ bool CvUnit::isActionRecommended(int iAction)
 					{
 						if (eBonus != NO_BONUS)
 						{
-							if (GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eBonus))
+							if (kImprovement.isImprovementBonusTrade(eBonus))
 							{
 								return true;
 							}
@@ -1954,7 +1956,7 @@ bool CvUnit::isActionRecommended(int iAction)
 						{
 							if (!(pPlot->isIrrigated()) && pPlot->isIrrigationAvailable(true))
 							{
-								if (GC.getImprovementInfo(eImprovement).isCarriesIrrigation())
+								if (kImprovement.isCarriesIrrigation())
 								{
 									return true;
 								}
@@ -1962,21 +1964,21 @@ bool CvUnit::isActionRecommended(int iAction)
 
 							if (pWorkingCity != NULL)
 							{
-								if (GC.getImprovementInfo(eImprovement).getYieldChange(YIELD_FOOD) > 0)
+								if (kImprovement.getYieldChange(YIELD_FOOD) > 0)
 								{
 									return true;
 								}
 
 								if (pPlot->isHills())
 								{
-									if (GC.getImprovementInfo(eImprovement).getYieldChange(YIELD_PRODUCTION) > 0)
+									if (kImprovement.getYieldChange(YIELD_PRODUCTION) > 0)
 									{
 										return true;
 									}
 								}
 								else
 								{
-									if (GC.getImprovementInfo(eImprovement).getYieldChange(YIELD_COMMERCE) > 0)
+									if (kImprovement.getYieldChange(YIELD_COMMERCE) > 0)
 									{
 										return true;
 									}

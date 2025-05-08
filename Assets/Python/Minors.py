@@ -191,6 +191,9 @@ class MinorCity(object):
 NUM_BARBARIAN_TYPES = 8
 (ANIMALS, NOMADS, MINORS, INVADERS, CLOSE_INVADERS, NATIVES, SEA_INVADERS, PIRATES) = range(NUM_BARBARIAN_TYPES)
 
+sAggressivePatterns = set([NOMADS, INVADERS, CLOSE_INVADERS, SEA_INVADERS])
+sInvadingPatterns = set([INVADERS, CLOSE_INVADERS, SEA_INVADERS])
+sOutsideBordersPatterns = set([ANIMALS, NOMADS, MINORS, PIRATES])
 
 class Barbarians(object):
 
@@ -259,7 +262,7 @@ class Barbarians(object):
 		if not self.every():
 			return False
 	
-		if self.pattern in [NOMADS, INVADERS, CLOSE_INVADERS, SEA_INVADERS]:
+		if self.pattern in sAggressivePatterns:
 			if not self.valid_targets():
 				return False
 		
@@ -365,7 +368,7 @@ class Barbarians(object):
 			
 			return [spawn_area.random()] * iNumUnits
 		
-		elif self.pattern in [INVADERS, CLOSE_INVADERS, SEA_INVADERS]:
+		elif self.pattern in sInvadingPatterns:
 			return [spawn_area.random()] * iNumUnits
 		
 		else:
@@ -430,7 +433,7 @@ class Barbarians(object):
 		elif cities.surrounding(plot):
 			return False
 		
-		if self.pattern in [ANIMALS, NOMADS, MINORS, PIRATES]:
+		if self.pattern in sOutsideBordersPatterns:
 			if plot.isOwned():
 				return False
 		

@@ -2567,13 +2567,15 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 		return false;
 	}
 
-	if (GC.getImprovementInfo(eImprovement).isWater() != isWater())
+	CvImprovementInfo& kImprovement = GC.getImprovementInfo(eImprovement);
+
+	if (kImprovement.isWater() != isWater())
 	{
 		return false;
 	}
 
 	// Leoreth: different fishing boats for different sea levels
-	if (GC.getImprovementInfo(eImprovement).isWater())
+	if (kImprovement.isWater())
 	{
 		if (eImprovement == IMPROVEMENT_FISHING_BOATS && getTerrainType() == TERRAIN_OCEAN) return false;
 		if (eImprovement == IMPROVEMENT_OCEAN_FISHERY && getTerrainType() != TERRAIN_OCEAN) return false;
@@ -2582,53 +2584,53 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	if (getFeatureType() != NO_FEATURE)
 	{
 		// Leoreth: unless the feature makes valid
-		if (GC.getFeatureInfo(getFeatureType()).isNoImprovement() && !GC.getImprovementInfo(eImprovement).getFeatureMakesValid(getFeatureType()) && !(getBonusType(eTeam) != NO_BONUS && GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(getBonusType())))
+		if (GC.getFeatureInfo(getFeatureType()).isNoImprovement() && !kImprovement.getFeatureMakesValid(getFeatureType()) && !(getBonusType(eTeam) != NO_BONUS && kImprovement.isImprovementBonusTrade(getBonusType())))
 		{
 			return false;
 		}
 	}
 
-	if ((getBonusType(eTeam) != NO_BONUS) && GC.getImprovementInfo(eImprovement).isImprovementBonusMakesValid(getBonusType(eTeam)))
+	if ((getBonusType(eTeam) != NO_BONUS) && kImprovement.isImprovementBonusMakesValid(getBonusType(eTeam)))
 	{
 		return true;
 	}
 
-	if (GC.getImprovementInfo(eImprovement).isNoFreshWater() && isFreshWater())
+	if (kImprovement.isNoFreshWater() && isFreshWater())
 	{
 		return false;
 	}
 
-	if (GC.getImprovementInfo(eImprovement).isRequiresFlatlands() && !isFlatlands())
+	if (kImprovement.isRequiresFlatlands() && !isFlatlands())
 	{
 		return false;
 	}
 
-	if (GC.getImprovementInfo(eImprovement).isRequiresFeature() && (getFeatureType() == NO_FEATURE))
+	if (kImprovement.isRequiresFeature() && (getFeatureType() == NO_FEATURE))
 	{
 		return false;
 	}
 
-	if (GC.getImprovementInfo(eImprovement).isHillsMakesValid() && isHills())
+	if (kImprovement.isHillsMakesValid() && isHills())
 	{
 		bValid = true;
 	}
 
-	if (GC.getImprovementInfo(eImprovement).isFreshWaterMakesValid() && isFreshWater())
+	if (kImprovement.isFreshWaterMakesValid() && isFreshWater())
 	{
 		bValid = true;
 	}
 
-	if (GC.getImprovementInfo(eImprovement).isRiverSideMakesValid() && isRiverSide())
+	if (kImprovement.isRiverSideMakesValid() && isRiverSide())
 	{
 		bValid = true;
 	}
 
-	if (GC.getImprovementInfo(eImprovement).getTerrainMakesValid(getTerrainType()))
+	if (kImprovement.getTerrainMakesValid(getTerrainType()))
 	{
 		bValid = true;
 	}
 
-	if ((getFeatureType() != NO_FEATURE) && GC.getImprovementInfo(eImprovement).getFeatureMakesValid(getFeatureType()))
+	if ((getFeatureType() != NO_FEATURE) && kImprovement.getFeatureMakesValid(getFeatureType()))
 	{
 		bValid = true;
 	}
@@ -2638,7 +2640,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 		return false;
 	}
 
-	if (GC.getImprovementInfo(eImprovement).isRequiresRiverSide())
+	if (kImprovement.isRequiresRiverSide())
 	{
 		bValid = false;
 
@@ -2669,7 +2671,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 
 	for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 	{
-		if (calculateNatureYield(((YieldTypes)iI), eTeam, bIgnoreFeature) < GC.getImprovementInfo(eImprovement).getPrereqNatureYield(iI))
+		if (calculateNatureYield(((YieldTypes)iI), eTeam, bIgnoreFeature) < kImprovement.getPrereqNatureYield(iI))
 		{
 			return false;
 		}
@@ -2677,7 +2679,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 
 	if ((getTeam() == NO_TEAM) || !(GET_TEAM(getTeam()).isIgnoreIrrigation()))
 	{
-		if (!bPotential && GC.getImprovementInfo(eImprovement).isRequiresIrrigation() && !isIrrigationAvailable())
+		if (!bPotential && kImprovement.isRequiresIrrigation() && !isIrrigationAvailable())
 		{
 			return false;
 		}
@@ -6955,20 +6957,22 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 	int iYield;
 	int iI;
 
-	iYield = GC.getImprovementInfo(eImprovement).getYieldChange(eYield);
+	CvImprovementInfo& kImprovement = GC.getImprovementInfo(eImprovement);
+
+	iYield = kImprovement.getYieldChange(eYield);
 
 	if (isRiverSide())
 	{
-		iYield += GC.getImprovementInfo(eImprovement).getRiverSideYieldChange(eYield);
+		iYield += kImprovement.getRiverSideYieldChange(eYield);
 	}
 
 	if (isHills())
 	{
-		iYield += GC.getImprovementInfo(eImprovement).getHillsYieldChange(eYield);
+		iYield += kImprovement.getHillsYieldChange(eYield);
 	}
 
 	// Leoreth
-	int iCoastalYieldChange = GC.getImprovementInfo(eImprovement).getCoastalYieldChange(eYield);
+	int iCoastalYieldChange = kImprovement.getCoastalYieldChange(eYield);
 	if (iCoastalYieldChange != 0 && isCoastalLand())
 	{
 		iYield += iCoastalYieldChange;
@@ -6976,7 +6980,7 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 
 	if ((bOptimal) ? true : isIrrigationAvailable())
 	{
-		iYield += GC.getImprovementInfo(eImprovement).getIrrigatedYieldChange(eYield);
+		iYield += kImprovement.getIrrigatedYieldChange(eYield);
 	}
 
 	if (bOptimal)
@@ -6985,7 +6989,7 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 
 		for (iI = 0; iI < GC.getNumRouteInfos(); ++iI)
 		{
-			iBestYield = std::max(iBestYield, GC.getImprovementInfo(eImprovement).getRouteYieldChanges(iI, eYield));
+			iBestYield = std::max(iBestYield, kImprovement.getRouteYieldChanges(iI, eYield));
 		}
 
 		iYield += iBestYield;
@@ -6994,7 +6998,7 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 	{
 		if (getRouteType() != NO_ROUTE)
 		{
-			iYield += GC.getImprovementInfo(eImprovement).getRouteYieldChanges(getRouteType(), eYield);
+			iYield += kImprovement.getRouteYieldChanges(getRouteType(), eYield);
 		}
 	}
 
@@ -7002,7 +7006,7 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 	{
 		for (iI = 0; iI < GC.getNumTechInfos(); ++iI)
 		{
-			iYield += GC.getImprovementInfo(eImprovement).getTechYieldChanges(iI, eYield);
+			iYield += kImprovement.getTechYieldChanges(iI, eYield);
 		}
 
 		for (iI = 0; iI < GC.getNumCivicInfos(); ++iI)
@@ -7026,43 +7030,51 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 
 		if (eBonus != NO_BONUS)
 		{
-			iYield += GC.getImprovementInfo(eImprovement).getImprovementBonusYield(eBonus, eYield);
+			iYield += kImprovement.getImprovementBonusYield(eBonus, eYield);
 		}
-	}
 
-	// Leoreth: Moorish UP: +1 food from Orchards
-	if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getCivilizationType() == MOORS)
-	{
-		if (eYield == YIELD_FOOD && eImprovement == IMPROVEMENT_ORCHARD)
+		const CivilizationTypes eCivilization = GET_PLAYER(ePlayer).getCivilizationType();
+
+		// Leoreth: Moorish UP: +1 food from Orchards
+		if (eCivilization == MOORS)
 		{
-			iYield += 1;
+			if (eYield == YIELD_FOOD && eImprovement == IMPROVEMENT_ORCHARD)
+			{
+				iYield += 1;
+			}
 		}
-	}
 
-	// Leoreth: Shu UP: +1 commerce from Mines
-	if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getCivilizationType() == SHU)
-	{
-		if (eYield == YIELD_COMMERCE && eImprovement == IMPROVEMENT_MINE)
+		// Leoreth: Shu UP: +1 commerce from Mines
+		else if (eCivilization == SHU)
 		{
-			iYield += 1;
+			if (eYield == YIELD_COMMERCE && eImprovement == IMPROVEMENT_MINE)
+			{
+				iYield += 1;
+			}
 		}
-	}
 
-	// Leoreth: Javanese UP: double yield from food improvements on islands
-	if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getCivilizationType() == JAVA && area()->getNumTiles() <= 30)
-	{
-		if (GC.getImprovementInfo(eImprovement).getYieldChange(YIELD_FOOD) > 0 || (getBonusType(GET_PLAYER(ePlayer).getTeam()) != NO_BONUS && GC.getImprovementInfo(eImprovement).getImprovementBonusYield(getBonusType(GET_PLAYER(ePlayer).getTeam()), YIELD_FOOD) > 0))
+		// Leoreth: Javanese UP: double yield from food improvements on islands
+		else if (eCivilization == JAVA)
 		{
-			iYield *= 2;
+			if (area()->getNumTiles() <= 30)
+			{
+				if (kImprovement.getYieldChange(YIELD_FOOD) > 0 || (getBonusType(GET_PLAYER(ePlayer).getTeam()) != NO_BONUS && kImprovement.getImprovementBonusYield(getBonusType(GET_PLAYER(ePlayer).getTeam()), YIELD_FOOD) > 0))
+				{
+					iYield *= 2;
+				}
+			}
 		}
-	}
 
-	// Leoreth: Polish UP: +1 commerce from Farm and Pasture
-	if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getCivilizationType() == POLAND && eYield == YIELD_COMMERCE)
-	{
-		if (eImprovement == IMPROVEMENT_FARM || eImprovement == IMPROVEMENT_PASTURE)
+		// Leoreth: Polish UP: +1 commerce from Farm and Pasture
+		else if (eCivilization == POLAND)
 		{
-			iYield += 1;
+			if (eYield == YIELD_COMMERCE)
+			{
+				if (eImprovement == IMPROVEMENT_FARM || eImprovement == IMPROVEMENT_PASTURE)
+				{
+					iYield += 1;
+				}
+			}
 		}
 	}
 
@@ -7307,7 +7319,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 		}
 
 		// Leoreth: Ethiopian UP: +1 food on hill tiles that yield at least one food
-		if (eCivilization == ETHIOPIA)
+		else if (eCivilization == ETHIOPIA)
 		{
 			if (eYield == YIELD_FOOD)
 			{
@@ -7319,7 +7331,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 		}
 
 		// Leoreth: Ruthenian UP: +1 commerce on unimproved land tiles in your trade network
-		if (eCivilization == RUS)
+		else if (eCivilization == RUS)
 		{
 			if (eYield == YIELD_COMMERCE)
 			{

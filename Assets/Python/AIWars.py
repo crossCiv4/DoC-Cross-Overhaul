@@ -401,13 +401,13 @@ def increaseAggressionLevels():
 		for iLoopPlayer in players.major():
 			data.players[iLoopPlayer].iAggressionLevel = dAggressionLevel[iLoopPlayer] + rand(10)
 
-
+sForgetTechs = set([iPsychology, iTelevision])
 @handler("techAcquired")	
 def forgetMemory(iTech, iTeam, iPlayer):
 	if year() <= year(1700):
 		return
 
-	if iTech in [iPsychology, iTelevision]:
+	if iTech in sForgetTechs:
 		pPlayer = player(iPlayer)
 		for iLoopPlayer in players.major().without(iPlayer):
 			if pPlayer.AI_getMemoryCount(iLoopPlayer, MemoryTypes.MEMORY_DECLARED_WAR) > 0:
@@ -553,9 +553,9 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		iRenaissanceExtras = 1
 
 	iNomadExtras = 0
-	if iCiv in [iTurks, iMongols]:
+	if iCiv == iTurks or iCiv == iMongols:
 		iNomadExtras = 1
-	elif iCiv in [iTimurids]:
+	elif iCiv == iTimurids:
 		# timurids get a little bit of everything
 		iNomadExtras = 1
 		iRenaissanceExtras = 1
@@ -715,6 +715,8 @@ def possibleTargets(iPlayer):
 	return players.major().without(iPlayer).where(lambda p: team(iPlayer).canDeclareWar(player(p).getTeam()))
 
 
+sLargeContinentalPowers = set([iFrance, iHolyRome, iGermany])
+sSmallContinentalCivs = set([iNetherlands, iPortugal, iItaly])
 def determineTargetPlayer(iPlayer):
 	pPlayer = player(iPlayer)
 	tPlayer = team(iPlayer)
@@ -818,23 +820,23 @@ def determineTargetPlayer(iPlayer):
 			dTargetValues[iLoopPlayer] /= 2
 			
 		# spare smallish civs
-		if iLoopCiv in [iNetherlands, iPortugal, iItaly]:
+		if iLoopCiv in sSmallContinentalCivs:
 			dTargetValues[iLoopPlayer] *= 4
 			dTargetValues[iLoopPlayer] /= 5
 			
 		# no suicide
 		if iCiv == iNetherlands:
-			if iLoopCiv in [iFrance, iHolyRome, iGermany]:
+			if iLoopCiv in sLargeContinentalPowers:
 				dTargetValues[iLoopPlayer] /= 2
 		elif iCiv == iPortugal:
 			if iLoopCiv == iSpain:
 				dTargetValues[iLoopPlayer] /= 2
 		elif iCiv == iItaly:
-			if iLoopCiv in [iFrance, iHolyRome, iGermany]:
+			if iLoopCiv in sLargeContinentalPowers:
 				dTargetValues[iLoopPlayer] /= 2
 		
 		# Spain prefers Moors in Iberia
-		if (iCiv == iSpain and not iLoopCiv in [iMoors, iMorocco]) or (iCiv == iFrance and iLoopCiv == iSpain):
+		if (iCiv == iSpain and not iLoopCiv in set([iMoors, iMorocco])) or (iCiv == iFrance and iLoopCiv == iSpain):
 			if cities.regions(rIberia).owner(iMoors) or cities.regions(rIberia).owner(iMorocco):
 				dTargetValues[iLoopPlayer] /= 4
 				

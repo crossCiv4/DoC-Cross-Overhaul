@@ -67,6 +67,7 @@ dPeriodNames = {
 	iPeriodAztecMexico:				"Aztec_Mexico",
 }
 
+sGraecoRomans = set([iGreece, iMacedon, iRome, iByzantium])
 
 def setPeriod(iCiv, iPeriod):
 	if game.getPeriod(iCiv) == iPeriod:
@@ -153,7 +154,7 @@ def onResurrection(iPlayer):
 			setPeriod(iCiv, iPeriodPakistan)
 	
 	elif iCiv == iEgypt:
-		if cities.region(rEgypt).any(lambda city: city.getCivilizationType() in [iGreece, iMacedon, iRome] or city.getPreviousCiv() in [iGreece, iMacedon, iRome]):
+		if cities.region(rEgypt).any(lambda city: city.getCivilizationType() in sGraecoRomans or city.getPreviousCiv() in sGraecoRomans):
 			setPeriod(iCiv, iPeriodPtolemaicEgypt)
 
 	elif iCiv == iInca:
@@ -188,7 +189,7 @@ def onCityAcquired(iOwner, iPlayer, city, bConquest):
 			setPeriod(iTurks, -1)
 	
 	if iOwnerCiv == iEgypt:
-		if iCiv in [iGreece, iMacedon, iRome]:
+		if iCiv in sGraecoRomans:
 			setPeriod(iEgypt, iPeriodPtolemaicEgypt)
 			
 	if iOwnerCiv == iByzantium or city.getPreviousCiv() == iByzantium:
@@ -206,7 +207,7 @@ def onCityBuilt(city):
 	iOwnerCiv = civ(iOwner)
 
 	if iOwnerCiv == iPhoenicia:
-		if city.getRegionID in lEurope + lAfrica:
+		if city.getRegionID in lEurope | lAfrica:
 			setPeriod(iPhoenicia, iPeriodCarthage)
 
 
@@ -226,7 +227,7 @@ def onVassalState(iMaster, iVassal, bVassal, bCapitulated):
 				setPeriod(iMongols, iPeriodYuan)
 		
 		if iVassalCiv == iEgypt:
-			if iMasterCiv in [iGreece, iMacedon, iRome]:
+			if iMasterCiv in sGraecoRomans:
 				setPeriod(iEgypt, iPeriodPtolemaicEgypt)
 			
 
@@ -236,7 +237,7 @@ def onCapitalMoved(city):
 	iOwnerCiv = civ(iOwner)
 	
 	if iOwnerCiv == iPhoenicia:
-		if city.getRegionID() in lEurope + lAfrica:
+		if city.getRegionID() in lEurope | lAfrica:
 			setPeriod(iPhoenicia, iPeriodCarthage)
 		else:
 			setPeriod(iPhoenicia, -1)
@@ -317,7 +318,7 @@ def onPlayerChangeStateReligion(iPlayer, iReligion):
 	
 	iCiv = civ(iPlayer)
 
-	if iReligion in [iOrthodoxy, iCatholicism, iProtestantism]:
+	if iReligion in sChristianity:
 		if iCiv == iInca:
 			if period(iCiv) != iPeriodPeru:
 				data.civs[iCiv].iResurrections += 1

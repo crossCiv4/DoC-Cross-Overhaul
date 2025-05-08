@@ -185,18 +185,20 @@ def secedeCity(city, iNewOwner, bRelocate, iArmyPercent):
 		
 	message(iNewOwner, 'TXT_KEY_STABILITY_CITY_CHANGED_OWNER_US', name, color=iRed)
 		
+sNativisingCivs = set([iMaya, iToltecs, iAztecs, iInca, iMali, iEthiopia, iCongo, iIroquois, iNigeria, iZulu])
+sBarbarisingCivs = set([iMongols, iKhazars, iTurks])
+sNativeOrBarbarianCivs = set([iSwahili, iIndia, iDravidia, iHarappa, iJava, iEthiopia, iNubia])
 def getPossibleMinors(iPlayer):
 	lPossibleMinors = [iIndependent, iIndependent2]
 	iNationalismCount = gc.getGame().countKnownTechNumTeams(iNationalism)
 
-	if iNationalismCount == 0 and civ(iPlayer) in [iMaya, iToltecs, iAztecs, iInca, iMali, iEthiopia, iCongo, iIroquois, iNigeria, iZulu]:
-		lPossibleMinors = [iNative]
-
-	elif iNationalismCount == 0 and civ(iPlayer) in [iSwahili, iIndia, iDravidia, iHarappa, iJava, iEthiopia, iNubia]:
-		lPossibleMinors = [iBarbarian, iNative]
-
-	elif iNationalismCount == 0 and civ(iPlayer) in [iMongols, iKhazars, iTurks]:
-		lPossibleMinors = [iBarbarian]
+	if iNationalismCount == 0: 
+		if civ(iPlayer) in sNativisingCivs:
+			lPossibleMinors = [iNative]
+		elif civ(iPlayer) in sNativeOrBarbarianCivs:
+			lPossibleMinors = [iBarbarian, iNative]
+		elif civ(iPlayer) in sBarbarisingCivs:
+			lPossibleMinors = [iBarbarian]
 
 	elif player(iPlayer).getCurrentEra() <= iClassical:
 		lPossibleMinors = [iBarbarian, iNative, iIndependent, iIndependent2]

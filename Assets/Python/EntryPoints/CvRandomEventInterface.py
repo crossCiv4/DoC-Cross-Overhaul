@@ -17,6 +17,7 @@ from Religions import embraceReformation, tolerateReformation, counterReformatio
 from RFCUtils import *
 from Core import *
 from AIWars import spawnConquerors
+from Consts import *
 
 localText = CyTranslator()
 

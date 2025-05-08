@@ -58,23 +58,32 @@ def create(iPlayer, iUnit, tile):
 	x, y = location(tile)
 	player(iPlayer).createGreatPeople(unique_unit(iPlayer, iUnit), True, True, x, y)
 
-def getAlias(iCiv, iType, iEra):
-	#TODO convert to dictionary
-	if iCiv in [iHarappa, iDravidia]: return iIndia
-	elif iCiv in [iMamluks, iYemen, iOman] or (iCiv == iEgypt and (player(iCiv).getStateReligion() in [iIslam, iShia])): return iArabia
-	elif iCiv in [iIran, iParthia, iBuyids]: return iPersia
-	elif iCiv in [iMinoans, iMacedon]: return iGreece
-	elif iCiv in [iChinaS, iShu, iXia, iManchu]: return iChina
-	elif iCiv == iGhorids: return iTimurids
-	elif iCiv == iKhazars: return iTurks
-	elif iCiv == iNigeria or iCiv == iZulu: return iMali
-	elif iCiv == iSaxons: return iEngland
-	elif iCiv in [iTunis, iMorocco]: return iMoors
-	elif iCiv == iVandals: return iRome
-	elif iCiv == iYamato: return iJapan
-	
-	return iCiv
-	
+dGreatPeopleAliases = CivDict({
+	iHarappa: iIndia,
+	iDravidia: iIndia,
+	iMamluks: iArabia,
+	iYemen: iArabia,
+	iOman: iArabia,
+	iIran: iPersia,
+	iParthia: iPersia,
+	iBuyids: iPersia,
+	iMinoans: iGreece,
+	iMacedon: iGreece,
+	iChinaS: iChina,
+	iShu: iChina,
+	iXia: iChina,
+	iManchu: iChina,
+	iGhorids: iTimurids,
+	iKhazars: iTurks,
+	iNigeria: iMali,
+	iZulu: iMali,
+	iSaxons: iEngland,
+	iTunis: iMoors,
+	iMorocco: iMoors,
+	iVandals: iRome,
+	iYamato: iJapan
+})
+
 def getType(iUnit):
 	iUnitType = base_unit(iUnit)
 	if iUnitType in lTypes: return lTypes.index(iUnitType)
@@ -82,8 +91,11 @@ def getType(iUnit):
 
 def getAvailableNames(iPlayer, iType):
 	pPlayer = player(iPlayer)
+	iCiv = civ(iPlayer)
 	iEra = pPlayer.getCurrentEra()
-	iCiv = getAlias(civ(iPlayer), iType, iEra)
+
+	if iCiv in dGreatPeopleAliases:
+		iCiv = dGreatPeopleAliases[iCiv]
 	
 	return getEraNames(iCiv, iType, iEra)
 

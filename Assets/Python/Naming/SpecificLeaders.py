@@ -4,8 +4,6 @@ from Consts import *
 from Core import *
 from RFCUtils import *
 
-lChristianity = [iCatholicism, iOrthodoxy, iProtestantism]
-
 def egyptLeader(args):
     if period(args.iCiv) == iPeriodPtolemaicEgypt:
         return iPtolemy
@@ -73,8 +71,9 @@ def persiaLeader(args):
     if not player(iBabylonia).isAlive() and not player(iAssyria).isAlive():
         return iDarius
 
+sPhoenicianHomelandRegions = set([rMesopotamia, rAnatolia, rLevant])
 def phoeniciaLeader(args):
-    if args.capital.getRegionID() not in [rMesopotamia, rAnatolia, rLevant]:
+    if args.capital.getRegionID() not in sPhoenicianHomelandRegions:
         return iHannibal
 
 def romeLeader(args):
@@ -134,10 +133,11 @@ def byzantiumLeader(args):
     if year() >= year(500):
         return iJustinian
 
+sSeleucidCapitalRegions = set([rMesopotamia, rAnatolia, rLevant])
 def macedonLeader(args):
     if args.iLeader == iSeleucus:
         return iSeleucus
-    elif args.capital.getRegionID() in [rMesopotamia, rAnatolia, rLevant]:
+    elif args.capital.getRegionID() in sSeleucidCapitalRegions:
         return iSeleucus
 
 def norseLeader(args):
@@ -145,7 +145,7 @@ def norseLeader(args):
         return iGerhardsen
     if args.iEra >= iRenaissance:
         return iChristian
-    if args.iReligion in lChristianity or year() >= year(1000):
+    if args.iReligion in sChristianity or year() >= year(1000):
         return iChristian
 
 def turksLeader(args):

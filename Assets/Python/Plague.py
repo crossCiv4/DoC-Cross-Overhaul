@@ -154,8 +154,8 @@ def newWorldPlague(iTeamX, iHasMetTeamY):
 	if year() >= year(1800):
 		return
 		
-	iOldWorld = matching(lambda iPlayer: civ(iPlayer) not in lBioNewWorld, iTeamX, iHasMetTeamY)
-	iNewWorld = matching(lambda iPlayer: civ(iPlayer) in lBioNewWorld, iTeamX, iHasMetTeamY)
+	iOldWorld = matching(lambda iPlayer: civ(iPlayer) not in sBioNewWorld, iTeamX, iHasMetTeamY)
+	iNewWorld = matching(lambda iPlayer: civ(iPlayer) in sBioNewWorld, iTeamX, iHasMetTeamY)
 	
 	if iOldWorld is None or iNewWorld is None:
 		return
@@ -215,12 +215,10 @@ def isVulnerable(iPlayer):
 	
 	if is_minor(iPlayer) and -10 < data.players[iPlayer].iPlagueCountdown <= 0: #more vulnerable
 		return True
-			
-	pPlayer = player(iPlayer)
 		
 	if team(iPlayer).isHasTech(iMicrobiology): return False
 	
-	if civ(iPlayer) in lBioNewWorld and not data.dFirstContactConquerors[civ(iPlayer)]: return False
+	if civ(iPlayer) in sBioNewWorld and not data.dFirstContactConquerors[civ(iPlayer)]: return False
 		
 	if data.players[iPlayer].iPlagueCountdown == 0: #vulnerable
 		if not team(iPlayer).isHasTech(iMicrobiology):

@@ -1,9 +1,7 @@
 from Core import *
 from RFCUtils import createMissionaries
 
-
-lCityStatesStart = [iRome, iPhoenicia, iGreece, iIndia, iMaya, iAztecs, iMinoans]
-
+sCityStatesStart = set([iRome, iPhoenicia, iGreece, iIndia, iMaya, iAztecs, iMinoans])
 
 class Civics(object):
 
@@ -58,7 +56,6 @@ class Civics(object):
 	def iTerritory(self):
 		return self[5]
 
-
 def civics(identifier):
 	return Civics.player(identifier)
 	
@@ -75,7 +72,7 @@ def isCommunist(iPlayer):
 		retValue = False
 	elif civic.iEconomy == iCentralPlanning:
 		retValue = True
-	elif civic.iGovernment == iStateParty and civic.iSociety != iTotalitarianism and civic.iEconomy not in [iMerchantTrade, iFreeEnterprise]:
+	elif civic.iGovernment == iStateParty and civic.iSociety != iTotalitarianism and civic.iEconomy not in set[iMerchantTrade, iFreeEnterprise]:
 		retValue = True
 		
 	# force Marxism on communist states
@@ -97,27 +94,30 @@ def isFascist(iPlayer):
 		
 	return False
 	
+sRepublicValidGovernment = set([iDespotism, iRepublic, iElective])
 def isRepublic(iPlayer):
 	civic = civics(iPlayer)
-	
+
 	if civic.iGovernment == iDemocracy:
 		return True
-	
-	if civic.iGovernment in [iDespotism, iRepublic, iElective] and (civic.iLegitimacy == iConstitution or civic.iTerritory == iNationhood):
+
+	if civic.iGovernment in sRepublicValidGovernment and (civic.iLegitimacy == iConstitution or civic.iTerritory == iNationhood):
 		return True
 	
 	return False
-	
+
+sCityStateInvalidLegitimacy	= set([iPersonalism, iCitizenship, iBureaucracy])
+sCityStatesValidGovernment	= set([iRepublic, iElective, iDemocracy])
 def isCityStates(iPlayer):
 	civic = civics(iPlayer)
 	
-	if civic.iLegitimacy not in [iPersonalism, iCitizenship, iBureaucracy]:
+	if civic.iLegitimacy not in sCityStateInvalidLegitimacy:
 		return False
 	
-	if civic.iGovernment in [iRepublic, iElective, iDemocracy]:
+	if civic.iGovernment in sCityStatesValidGovernment:
 		return True
 	
-	if civic.iGovernment == iChiefdom and civ(iPlayer) in lCityStatesStart:
+	if civic.iGovernment == iChiefdom and civ(iPlayer) in sCityStatesStart:
 		return True
 	
 	return False

@@ -304,35 +304,35 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	events.fireEvent("resurrection", iPlayer)
 	
 def getResurrectionTechs(iPlayer):
-	pPlayer = player(iPlayer)
 	lTechList = []
-	lSourcePlayers = []
+	sSourcePlayers = set()
+	iCiv = civ(iPlayer)
 	
 	# same tech group
-	for lTechGroup in dTechGroups.values():
-		if civ(iPlayer) in lTechGroup:
-			for iPeer in lTechGroup:
-				if civ(iPlayer) != iPeer and player(iPeer).isExisting():
-					lSourcePlayers.append(iPeer)
+	for sTechGroup in dTechGroups.values():
+		if iCiv in sTechGroup:
+			for iPeer in sTechGroup:
+				if iCiv != iPeer and player(iPeer).isExisting():
+					sSourcePlayers.add(iPeer)
 			
 	# direct neighbors (India can benefit from England etc)
-	for iPeer in players.major().existing().without(iPlayer).without(lSourcePlayers):
+	for iPeer in set(players.major().existing().without(iPlayer)) - sSourcePlayers:
 		if game.isNeighbors(iPlayer, iPeer):
-			lSourcePlayers.append(iPeer)
+			sSourcePlayers.add(iPeer)
 				
 	# use independents as source civs in case no other can be found
-	if not lSourcePlayers:
-		lSourcePlayers += players.independent().entities()
+	if not sSourcePlayers:
+		sSourcePlayers = set(players.independent().entities())
 		
 	for iTech in range(iNumTechs):
 			
 		# at least half of the source civs know this technology
 		iCount = 0
-		for iOtherPlayer in lSourcePlayers:
+		for iOtherPlayer in sSourcePlayers:
 			if team(iOtherPlayer).isHasTech(iTech):
 				iCount += 1
 				
-		if 2 * iCount >= len(lSourcePlayers):
+		if 2 * iCount >= len(sSourcePlayers):
 			lTechList.append(iTech)
 			
 	return lTechList

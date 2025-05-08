@@ -15275,11 +15275,12 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(CvPlot* pPlot, BuildTypes eBuild)
 						iValue /= 3;
 					}
 					ImprovementTypes eImprovement = (ImprovementTypes)kOriginalBuildInfo.getImprovement();
+					CvImprovementInfo& kImprovement = GC.getImprovementInfo(eImprovement);
 					if (eImprovement != NO_IMPROVEMENT)
 					{
-						int iRouteMultiplier = ((GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eRoute, YIELD_FOOD)) * 100);
-						iRouteMultiplier += ((GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eRoute, YIELD_PRODUCTION)) * 100);
-						iRouteMultiplier += ((GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eRoute, YIELD_COMMERCE)) * 60);
+						int iRouteMultiplier = ((kImprovement.getRouteYieldChanges(eRoute, YIELD_FOOD)) * 100);
+						iRouteMultiplier += ((kImprovement.getRouteYieldChanges(eRoute, YIELD_PRODUCTION)) * 100);
+						iRouteMultiplier += ((kImprovement.getRouteYieldChanges(eRoute, YIELD_COMMERCE)) * 60);
 						iValue *= 100 + iRouteMultiplier;
 						iValue /= 100;
 					}
