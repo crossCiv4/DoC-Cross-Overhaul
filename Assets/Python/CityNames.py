@@ -21,91 +21,91 @@ iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian,
 iLangArmenian, iLangDanish, iLangParthian, iLangVedic, iLangUkrainian, iLangNanman, iLangAncientChinese, iLangSaxon, iLangPakistani, iLangBrazilPortuguese, iLangModernJapanese, iLangModernChinese) = range(iNumLanguages)
 
 dLanguages = CivDict({
-	iEgypt:	set([iLangEgyptian]),
-	iBabylonia: set([iLangBabylonian]),
-	iHarappa: set([iLangVedic]),
-	iAssyria: set([iLangBabylonian]),
-	iChina: set([iLangChinese]),
-	iChinaS : set([iLangChinese]),
-	iShu : set([iLangNanman, iLangChinese]),
-	iXia : set([iLangAncientChinese, iLangChinese]),
-	iHittites: set([iLangHittite, iLangBabylonian]),
-	iNubia: set([iLangNubian, iLangEgyptian]),
-	iGreece: set([iLangGreek]),
-	iIndia: set([iLangVedic]),
-	iPhoenicia: set([iLangPhoenician, iLangGreek, iLangCeltic, iLangLatin]),
-	iPolynesia: set([iLangPolynesian]),
-	iPersia: set([iLangPersian]),
-	iRome: set([iLangLatin, iLangGreek]),
-	iCelts: set([iLangCeltic]),
-	iMaya: set([iLangMayan, iLangNahuatl]),
-	iDravidia: set([iLangIndian, iLangVedic]),
-	iEthiopia: set([iLangEthiopian]),
-	iToltecs: set([iLangNahuatl]),
-	iKushans: set([iLangVedic, iLangGreek, iLangTurkish, iLangIndian]),
-	iKorea: set([iLangKorean, iLangChinese]),
-	iByzantium: set([iLangByzantine, iLangLatin, iLangGreek]),
-	iMalays: set([iLangIndonesian, iLangKhmer]),
-	iJapan: set([iLangModernJapanese, iLangJapanese, iLangModernChinese]),
-	iNorse: set([iLangNorse]),
-	iTurks: set([iLangTurkish, iLangFarsi, iLangArabic]),
-	iArabia: set([iLangArabic]),
-	iTibet: set([iLangTibetan, iLangChinese]),
-	iKhmer: set([iLangKhmer, iLangIndonesian]),
-	iMoors: set([iLangArabic]),
-	iJava: set([iLangIndonesian, iLangKhmer]),
-	iSpain: set([iLangSpanish]),
-	iFrance: set([iLangFrench]),
-	iEngland: set([iLangEnglish, iLangFrench]),
-	iSaxons: set([iLangSaxon, iLangEnglish, iLangGerman]),
-	iHolyRome: set([iLangGerman]),
-	iBurma: set([iLangBurmese, iLangIndian]),
-	iVietnam: set([iLangVietnamese, iLangChinese]),
-	iRus: set([iLangRuthenian, iLangRussian]),
-	iSwahili: set([iLangArabic]),
-	iMali: set([iLangMande]),
-	iPoland: set([iLangPolish, iLangRussian]), 
-	iPortugal: set([iLangPortuguese, iLangSpanish]),
-	iInca: set([iLangQuechua]),
-	iItaly: set([iLangItalian]),
-	iMongols: set([iLangMongolian, iLangTurkish, iLangChinese, iLangFarsi]),
-	iAztecs: set([iLangNahuatl]),
-	iTimurids: set([iLangFarsi, iLangTurkish, iLangArabic, iLangIndian]),
-	iThailand: set([iLangThai, iLangKhmer, iLangIndonesian]),
-	iSweden: set([iLangSwedish, iLangDanish, iLangNorse]),
-	iRussia: set([iLangRussian, iLangByzantine]),
-	iOttomans: set([iLangTurkish, iLangArabic, iLangFarsi, iLangByzantine]),
-	iCongo: set([iLangCongolese]),
-	iIran: set([iLangFarsi, iLangPersian, iLangArabic, iLangTurkish]),
-	iNetherlands: set([iLangDutch, iLangGerman]),
-	iGermany: set([iLangGerman, iLangDutch]),
-	iAmerica: set([iLangAmerican, iLangEnglish]),
-	iArgentina: set([iLangSpanish]),
-	iMexico: set([iLangSpanish]),
-	iColombia: set([iLangSpanish]),
-	iBrazil: set([iLangBrazilPortuguese, iLangPortuguese, iLangSpanish]),
-	iCanada: set([iLangAmerican, iLangEnglish, iLangFrench]),
-	iBulgaria: set([iLangRuthenian, iLangByzantine, iLangRussian]), # Bulgarian/Balkans language later
-	iMamluks: set([iLangEgyptianArabic, iLangArabic, iLangTurkish]),
-	iMacedon: set([iLangGreek, iLangByzantine]),
-	iIroquois: set([iLangNahuatl, iLangAmerican, iLangEnglish, iLangFrench]),
-	iArmenia: set([iLangArmenian, iLangByzantine, iLangRussian]),
-	iParthia: set([iLangParthian, iLangGreek, iLangPersian]),
-	iMinoans: set([iLangGreek]),
-	iGhorids: set([iLangFarsi, iLangTurkish, iLangArabic, iLangIndian]),
-	iKhazars: set([iLangTurkish, iLangRussian, iLangMongolian]),
-	iNigeria: set([iLangMande, iLangArabic]),
-	iZulu: set([iLangMande, iLangEnglish]),
-	iTunis: set([iLangArabic, iLangEgyptianArabic, iLangMande]),
-	iVandals: set([iLangByzantine, iLangGerman, iLangLatin]),
-	iMorocco: set([iLangArabic, iLangFarsi, iLangMande]),
-	iYemen: set([iLangArabic, iLangFarsi, iLangMande]),
-	iOman: set([iLangArabic, iLangFarsi, iLangMande]),
-	iBuyids: set([iLangFarsi, iLangArabic, iLangTurkish, iLangPersian]),
-	iYamato: set([iLangJapanese, iLangChinese]),
-	iManchu: set([iLangModernChinese, iLangChinese, iLangMongolian, iLangTurkish, iLangKorean]),
+	iEgypt:	[iLangEgyptian],
+	iBabylonia: [iLangBabylonian],
+	iHarappa: [iLangVedic],
+	iAssyria: [iLangBabylonian],
+	iChina: [iLangChinese],
+	iChinaS : [iLangChinese],
+	iShu : [iLangNanman, iLangChinese],
+	iXia : [iLangAncientChinese, iLangChinese],
+	iHittites: [iLangHittite, iLangBabylonian],
+	iNubia: [iLangNubian, iLangEgyptian],
+	iGreece: [iLangGreek],
+	iIndia: [iLangVedic],
+	iPhoenicia: [iLangPhoenician, iLangGreek, iLangCeltic, iLangLatin],
+	iPolynesia: [iLangPolynesian],
+	iPersia: [iLangPersian],
+	iRome: [iLangLatin, iLangGreek],
+	iCelts: [iLangCeltic],
+	iMaya: [iLangMayan, iLangNahuatl],
+	iDravidia: [iLangIndian, iLangVedic],
+	iEthiopia: [iLangEthiopian],
+	iToltecs: [iLangNahuatl],
+	iKushans: [iLangVedic, iLangGreek, iLangTurkish, iLangIndian],
+	iKorea: [iLangKorean, iLangChinese],
+	iByzantium: [iLangByzantine, iLangLatin, iLangGreek],
+	iMalays: [iLangIndonesian, iLangKhmer],
+	iJapan: [iLangModernJapanese, iLangJapanese, iLangModernChinese],
+	iNorse: [iLangNorse],
+	iTurks: [iLangTurkish, iLangFarsi, iLangArabic],
+	iArabia: [iLangArabic],
+	iTibet: [iLangTibetan, iLangChinese],
+	iKhmer: [iLangKhmer, iLangIndonesian],
+	iMoors: [iLangArabic],
+	iJava: [iLangIndonesian, iLangKhmer],
+	iSpain: [iLangSpanish],
+	iFrance: [iLangFrench],
+	iEngland: [iLangEnglish, iLangFrench],
+	iSaxons: [iLangSaxon, iLangEnglish, iLangGerman],
+	iHolyRome: [iLangGerman],
+	iBurma: [iLangBurmese, iLangIndian],
+	iVietnam: [iLangVietnamese, iLangChinese],
+	iRus: [iLangRuthenian, iLangRussian],
+	iSwahili: [iLangArabic],
+	iMali: [iLangMande],
+	iPoland: [iLangPolish, iLangRussian], 
+	iPortugal: [iLangPortuguese, iLangSpanish],
+	iInca: [iLangQuechua],
+	iItaly: [iLangItalian],
+	iMongols: [iLangMongolian, iLangTurkish, iLangChinese, iLangFarsi],
+	iAztecs: [iLangNahuatl],
+	iTimurids: [iLangFarsi, iLangTurkish, iLangArabic, iLangIndian],
+	iThailand: [iLangThai, iLangKhmer, iLangIndonesian],
+	iSweden: [iLangSwedish, iLangDanish, iLangNorse],
+	iRussia: [iLangRussian, iLangByzantine],
+	iOttomans: [iLangTurkish, iLangArabic, iLangFarsi, iLangByzantine],
+	iCongo: [iLangCongolese],
+	iIran: [iLangFarsi, iLangPersian, iLangArabic, iLangTurkish],
+	iNetherlands: [iLangDutch, iLangGerman],
+	iGermany: [iLangGerman, iLangDutch],
+	iAmerica: [iLangAmerican, iLangEnglish],
+	iArgentina: [iLangSpanish],
+	iMexico: [iLangSpanish],
+	iColombia: [iLangSpanish],
+	iBrazil: [iLangBrazilPortuguese, iLangPortuguese, iLangSpanish],
+	iCanada: [iLangAmerican, iLangEnglish, iLangFrench],
+	iBulgaria: [iLangRuthenian, iLangByzantine, iLangRussian], # Bulgarian/Balkans language later
+	iMamluks: [iLangEgyptianArabic, iLangArabic, iLangTurkish],
+	iMacedon: [iLangGreek, iLangByzantine],
+	iIroquois: [iLangNahuatl, iLangAmerican, iLangEnglish, iLangFrench],
+	iArmenia: [iLangArmenian, iLangByzantine, iLangRussian],
+	iParthia: [iLangParthian, iLangGreek, iLangPersian],
+	iMinoans: [iLangGreek],
+	iGhorids: [iLangFarsi, iLangTurkish, iLangArabic, iLangIndian],
+	iKhazars: [iLangTurkish, iLangRussian, iLangMongolian],
+	iNigeria: [iLangMande, iLangArabic],
+	iZulu: [iLangMande, iLangEnglish],
+	iTunis: [iLangArabic, iLangEgyptianArabic, iLangMande],
+	iVandals: [iLangByzantine, iLangGerman, iLangLatin],
+	iMorocco: [iLangArabic, iLangFarsi, iLangMande],
+	iYemen: [iLangArabic, iLangFarsi, iLangMande],
+	iOman: [iLangArabic, iLangFarsi, iLangMande],
+	iBuyids: [iLangFarsi, iLangArabic, iLangTurkish, iLangPersian],
+	iYamato: [iLangJapanese, iLangChinese],
+	iManchu: [iLangModernChinese, iLangChinese, iLangMongolian, iLangTurkish, iLangKorean],
 
-}, set())
+}, [])
 
 ### CSV CITY NAME MAP ###
 
@@ -251,77 +251,77 @@ def getLanguages(playerId):
 # Define functions for special language logic
 def getIncaLanguages(playerId):
     if player(playerId).getPeriod() == iPeriodPeru:
-        return set([iLangSpanish])
+        return [iLangSpanish]
     return None
 
 def getAztecsLanguages(playerId):
     if player(playerId).getPeriod() == iPeriodAztecMexico:
-        return set([iLangSpanish])
+        return [iLangSpanish]
     return None
 
 def getPersiaLanguages(playerId):
     if player(playerId).getStateReligion() in sMuslimReligions:
-        return set([iLangFarsi, iLangArabic, iLangPersian])
+        return [iLangFarsi, iLangArabic, iLangPersian]
     return None
 
 def getNorseLanguages(playerId):
     if player(playerId).getPeriod() in [iPeriodDenmark, iPeriodNorway]:
-        return set([iLangDanish, iLangNorse])
+        return [iLangDanish, iLangNorse]
     return None
 
 def getParthiaLanguages(playerId):
     if getColumn(player(playerId).getID()) >= 6:
-        return set([iLangFarsi, iLangPersian, iLangByzantine])
+        return [iLangFarsi, iLangPersian, iLangByzantine]
     return None
 
 def getAssyriaLanguages(playerId):
     if data.civs[iAssyria].iResurrections > 0 and game.isReligionFounded(iIslam):
-        return set([iLangArabic, iLangByzantine])
+        return [iLangArabic, iLangByzantine]
     return None
 
 def getIndiaLanguages(playerId):
     if data.civs[iIndia].iResurrections > 0 or year() > year(dBirth[iArabia]):
-        return set([iLangIndian, iLangFarsi, iLangTurkish, iLangVedic])
+        return [iLangIndian, iLangFarsi, iLangTurkish, iLangVedic]
     return None
 
 def getRusLanguages(playerId):
     if player(playerId).getPeriod() == iPeriodUkraine:
-        return set([iLangUkrainian, iLangRussian, iLangRuthenian])
+        return [iLangUkrainian, iLangRussian, iLangRuthenian]
     return None
 
 def getShuLanguages(playerId):
     if data.civs[iShu].iResurrections > 0:
-        return set([iLangChinese])
+        return [iLangChinese]
     return None
 
 def getTimuridsLanguages(playerId):
     if year() >= year(1900):
-        return set([iLangPakistani, iLangFarsi, iLangTurkish, iLangArabic, iLangIndian])
+        return [iLangPakistani, iLangFarsi, iLangTurkish, iLangArabic, iLangIndian]
     return None
 
 def getEgyptLanguages(playerId):
     if player(playerId).getPeriod() == iPeriodPtolemaicEgypt:
-        return set([iLangGreek, iLangEgyptian, iLangPersian])
+        return [iLangGreek, iLangEgyptian, iLangPersian]
     return None
 
 def getChinaLanguages(playerId):
     if player(playerId).getCurrentEra() >= iRenaissance:
-        return set([iLangModernChinese, iLangChinese])
+        return [iLangModernChinese, iLangChinese]
     return None
 
 def getChinaSLanguages(playerId):
     if player(playerId).getCurrentEra() >= iRenaissance:
-        return set([iLangModernChinese, iLangChinese])
+        return [iLangModernChinese, iLangChinese]
     return None
 
 def getXiaLanguages(playerId):
     if player(playerId).getCurrentEra() >= iRenaissance:
-        return set([iLangModernChinese, iLangChinese])
+        return [iLangModernChinese, iLangChinese]
     return None
 
 def getYamatoLanguages(playerId):
     if player(playerId).getCurrentEra() >= iRenaissance:
-        return set([iLangModernJapanese, iLangJapanese, iLangModernChinese])
+        return [iLangModernJapanese, iLangJapanese, iLangModernChinese]
     return None
 
 # Define a CivDict mapping civilizations to their special language logic
