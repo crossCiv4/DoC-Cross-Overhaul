@@ -542,7 +542,7 @@ minor_cities = [
 	MinorCity(1350, iIndependent2, (81, 32), "Bonga", iPopulation=3, iCiv=iEthiopia, units={iDefend: 3}),
 	MinorCity(1350, iIndependent, (91, 55), "Quba", iPopulation=2, iCiv=iTurks, units={iHarass: 1}, iCulture=30, buildings=[iMonument, iHarbor], adjective="TXT_KEY_ADJECTIVE_TURKIC"),
 	MinorCity(1585, iNative, (74, 23), "Mwimbele", iPopulation=1, units={iSkirmish: 2}, adjective="TXT_KEY_ADJECTIVE_LUBA"),
-	MinorCity(1610, iNative, (89, 18), "Antananarivo", iPopulation=1, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_MALAGASY"),
+	#MinorCity(1610, iNative, (89, 18), "Antananarivo", iPopulation=1, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_MALAGASY"),
 	MinorCity(1635, iBarbarian, (109, 58), "Ghulja", iPopulation=3, iCiv=iTurks, units={iDefend: 2, iHarass: 3}, bIgnoreRuins=True, condition=lambda: not player(iMongols).isExisting(), adjective="TXT_KEY_ADJECTIVE_DZUNGAR"),
 	MinorCity(1635, iBarbarian, (119, 61), "Qara Qorum", iPopulation=2, iCiv=iMongols, units={iDefend: 2, iHarass: 3}, bIgnoreRuins=True, condition=lambda: not player(iMongols).isExisting(), adjective="TXT_KEY_ADJECTIVE_MONGOL"),
 ]

@@ -97281,14 +97281,14 @@
 			<iTechTradeKnownPercent>50</iTechTradeKnownPercent>
 			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
-			<iMaxWarRand>80</iMaxWarRand>
-			<iMaxWarNearbyPowerRatio>120</iMaxWarNearbyPowerRatio>
+			<iMaxWarRand>60</iMaxWarRand>
+			<iMaxWarNearbyPowerRatio>130</iMaxWarNearbyPowerRatio>
 			<iMaxWarDistantPowerRatio>50</iMaxWarDistantPowerRatio>
 			<iMaxWarMinAdjacentLandPercent>2</iMaxWarMinAdjacentLandPercent>
 			<iLimitedWarRand>80</iLimitedWarRand>
 			<iLimitedWarPowerRatio>110</iLimitedWarPowerRatio>
 			<iDogpileWarRand>25</iDogpileWarRand>
-			<iMakePeaceRand>20</iMakePeaceRand>
+			<iMakePeaceRand>80</iMakePeaceRand>
 			<iDeclareWarTradeRand>40</iDeclareWarTradeRand>
 			<iDemandRebukedSneakProb>40</iDemandRebukedSneakProb>
 			<iDemandRebukedWarProb>25</iDemandRebukedWarProb>

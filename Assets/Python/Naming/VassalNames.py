@@ -69,7 +69,7 @@ dSpecificVassalTitles = deepdict({
 		iSpain : "TXT_KEY_CIV_BYZANTINE_SPAIN",
 		iBulgaria: "TXT_KEY_CIV_BYZANTINE_BULGARIA",
 		iAssyria: "TXT_KEY_CIV_BYZANTINE_ASSYRIA",
-        iKhazars: "TXT_KEY_CIV_BYZANTINE_KHAZARS",
+		iKhazars: "TXT_KEY_CIV_BYZANTINE_KHAZARS",
 	},
 	iNorse : {
 		iEngland : "TXT_KEY_CIV_NORSE_ENGLAND",
@@ -527,48 +527,61 @@ dForeignNames = deepdict({
 		iKhmer : "TXT_KEY_CIV_SPANISH_NAME_KHMER",
 		iAztecs : "TXT_KEY_CIV_SPANISH_NAME_AZTECS",
 		iTimurids : "TXT_KEY_CIV_SPANISH_NAME_MUGHALS",
-        iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+		iThailand: "TXT_KEY_CIV_THAILAND_SIAM",
 	},
 	iFrance : {
 		iKhmer : "TXT_KEY_CIV_FRENCH_NAME_KHMER",
 		iTimurids : "TXT_KEY_CIV_FRENCH_NAME_MUGHALS",
-        iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+		iThailand: "TXT_KEY_CIV_THAILAND_SIAM",
 	},
 	iEngland : {
 		iKhmer : "TXT_KEY_CIV_ENGLISH_NAME_KHMER",
 		iTimurids : "TXT_KEY_CIV_ENGLISH_NAME_MUGHALS",
 		iCelts: "TXT_KEY_CIV_CELTS_IRELAND",
-        iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
-	},
-    iNetherlands : {
-        iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
-	},
-    iPortugal : {
 		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+		iThailand: "TXT_KEY_CIV_THAILAND_SIAM",
+	},
+	iNetherlands : {
+		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+        iThailand: "TXT_KEY_CIV_THAILAND_SIAM",
+	},
+	iPortugal : {
+		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+        iThailand: "TXT_KEY_CIV_THAILAND_SIAM",
 	},
 	iHolyRome : {
 		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+        iThailand: "TXT_KEY_CIV_THAILAND_SIAM",
 	},
 	iGermany : {
 		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+        iThailand: "TXT_KEY_CIV_THAILAND_SIAM",
 	},
 	iItaly : {
 		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+        iThailand: "TXT_KEY_CIV_THAILAND_SIAM",
 	},
-    iSweden : {
+	iSweden : {
 		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+        iThailand: "TXT_KEY_CIV_THAILAND_SIAM",
 	},
-    iNorse : {
+	iNorse : {
 		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+        iThailand: "TXT_KEY_CIV_THAILAND_SIAM",
 	},
-    iBulgaria : {
+	iBulgaria : {
 		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+        iThailand: "TXT_KEY_CIV_THAILAND_SIAM",
 	},
-    iIran : {
+	iIran : {
 		iKhazars: "TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME",
+        iThailand: "TXT_KEY_CIV_THAILAND_SIAM",
 	},
 	iRussia : {
 		iPersia : "TXT_KEY_CIV_RUSSIAN_NAME_PERSIA",
+        iThailand: "TXT_KEY_CIV_THAILAND_SIAM",
 	},
 	iMongols : {
 		iTimurids : "TXT_KEY_CIV_MONGOL_MUGHALS",
