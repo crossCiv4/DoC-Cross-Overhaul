@@ -256,6 +256,14 @@ tConquestFranceGermanyCharlemagne = (48, iFrance, iSaxons, tGermanyCharlemagneTL
 iArabEgyptConquestYear = 645
 tConquestArabiaEgypt = (49, iArabia, iEgypt, tEgyptTL, tEgyptBR, 2, iArabEgyptConquestYear, 10)
 
+tTaiwanTL = (130, 43)
+tTaiwanBR = (131, 45)
+iManchuTaiwanYear = 1680
+tConquestManchuTaiwan = (50, iManchu, iChinaS, tTaiwanTL, tTaiwanBR, 1, iManchuTaiwanYear, 15)
+
+# dummy conquest to check if the conquest of Taiwan can trigger
+tConquestManchuNorthernChina = (51, iManchu, iChinaS, tChinaIndiesTL, tChinaIndiesBR, 2, iManchuTaiwanYear, 10)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -305,6 +313,7 @@ lConquests = [
 	tConquestSwedenPomerania,
 	tConquestFranceGermanyCharlemagne,
 	#tConquestArabiaEgypt, --> not useful since Arabia flips Egypt, but used as a check for the conquest of Carthage, so Byz can block it by conquering a city in Egypt
+	tConquestManchuTaiwan,
 ]
 
 dConquestChecker = {
@@ -331,6 +340,7 @@ dConquestChecker = {
 	tConquestSpainMoors[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
 	tConquestRomeDacia[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
 	tConquestArabiaCarthage[0]: lambda tConquest: checkConquest(tConquest, tConquestArabiaEgypt),
+	tConquestManchuTaiwan[0]: lambda tConquest: checkConquest(tConquest, tConquestManchuNorthernChina),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):

@@ -89,29 +89,35 @@ def isFascist(iPlayer):
 	if civic.iSociety == iTotalitarianism:
 		return True
 	
-	if civic.iGovernment == iStateParty:
+	if civic.iGovernment in [iDespotism, iElective, iStateParty] and civic.iLegitimacy == iStratocracy:
+		return True
+
+	if civic.iGovernment == iStateParty and civic.iSociety != iEgalitarianism and civic.iLegitimacy != iConstitution:
 		return True
 		
 	return False
 	
-sRepublicValidGovernment = set([iDespotism, iRepublic, iElective])
 def isRepublic(iPlayer):
 	civic = civics(iPlayer)
 
-	if civic.iGovernment == iDemocracy:
+	if civic.iGovernment == [iDemocracy, iRepublic]:
 		return True
 
-	if civic.iGovernment in sRepublicValidGovernment and (civic.iLegitimacy == iConstitution or civic.iTerritory == iNationhood):
+	if civic.iGovernment in [iElective, iStateParty] and (civic.iLegitimacy == iConstitution or civic.iTerritory == iNationhood):
+		return True
+	
+	# Despotism e.g. dictatorship can be republic with the right Society civics
+	if civic.iGovernment == iDespotism and civic.iSociety in [iIndividualism, iEgalitarianism] and (civic.iLegitimacy == iConstitution or civic.iTerritory == iNationhood):
 		return True
 	
 	return False
 
-sCityStateInvalidLegitimacy	= set([iPersonalism, iCitizenship, iBureaucracy])
+sCityStateValidLegitimacy	= set([iPersonalism, iCitizenship, iBureaucracy])
 sCityStatesValidGovernment	= set([iRepublic, iElective, iDemocracy])
 def isCityStates(iPlayer):
 	civic = civics(iPlayer)
 	
-	if civic.iLegitimacy not in sCityStateInvalidLegitimacy:
+	if civic.iLegitimacy not in sCityStateValidLegitimacy:
 		return False
 	
 	if civic.iGovernment in sCityStatesValidGovernment:
