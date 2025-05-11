@@ -1651,7 +1651,10 @@ dExtraAIUnits = CivDict({
 	},
 	iBrazil: {
 		iDefend: 1,
-	}
+	},
+	iKhazars : {
+		iShock: 4,
+	},
 }, {})
 
 dHumanStartingUnits = CivDict({
@@ -2466,9 +2469,12 @@ dTechPreferences = {
 		iGuilds: 15,
 		iChemistry: 20,
 		iPrinting: 15,
-		iLabourUnions: 10,
+		iLabourUnions: 20,
+		iJournalism: 15,
 		iConstitution: 15,
 		iRepresentation: 10,
+		iRefining: -5,
+		iMicrobiology: 5,
 	},
 	iHolyRome : {
 		iSelectiveBreeding: 10,

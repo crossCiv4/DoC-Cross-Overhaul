@@ -2423,6 +2423,10 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 				<Leader>
+					<LeaderName>LEADER_PHILIP_AUGUSTUS</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
 					<LeaderName>LEADER_LOUIS_XIV</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
@@ -7226,6 +7230,10 @@
 				<CivicType>CIVIC_KINSHIP</CivicType>
 			</InitialCivics>
 			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_WIDUKIND</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 				<Leader>
 					<LeaderName>LEADER_ALFRED</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>

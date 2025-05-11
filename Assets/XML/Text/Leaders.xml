@@ -1702,6 +1702,22 @@
 		<Spanish>Neang Neak</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_WIDUKIND</Tag>
+		<English>Widukind</English>
+		<French>Widukind</French>
+		<German>Widukind</German>
+		<Italian>Widukind</Italian>
+		<Spanish>Widukind</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_PHILIP_AUGUSTUS</Tag>
+		<English>Philip II Augustus</English>
+		<French>Philip II Augustus</French>
+		<German>Philip II Augustus</German>
+		<Italian>Philip II Augustus</Italian>
+		<Spanish>Philip II Augustus</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>
 		<French></French>

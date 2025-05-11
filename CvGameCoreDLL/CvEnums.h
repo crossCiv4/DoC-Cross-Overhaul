@@ -1356,6 +1356,7 @@ enum LeaderHeadTypes			// Exposed to Python
 	BASIL,
 
 	CHARLEMAGNE,
+	PHILIP_AUGUSTUS,
 	LOUIS,
 	NAPOLEON,
 	DE_GAULLE,
@@ -1513,6 +1514,7 @@ enum LeaderHeadTypes			// Exposed to Python
 	SHAKA,
 	NELSON_MANDELA,
 
+	WIDUKIND,
 	ALFRED,
 
 	NURHACI,

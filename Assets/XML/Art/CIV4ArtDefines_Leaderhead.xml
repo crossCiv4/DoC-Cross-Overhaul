@@ -1295,7 +1295,7 @@
 			<BackgroundKFM>Art/Leaderheads/Ho Chi Minh/genghis_khan_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_ALFRED</Type>
+			<Type>ART_DEF_LEADER_WIDUKIND</Type>
 			<Button>Art/Leaderheads/alfred/alfred.dds</Button>
 			<NIF>Art/Leaderheads/alfred/brennus.nif</NIF>
 			<KFM>Art/Leaderheads/alfred/brennus.kfm</KFM>
@@ -1454,14 +1454,21 @@
 			<NoShaderNIF>Art/Leaderheads/Neang Neak/asoka.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Neang Neak/catherine_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
-		<!-- FIXME: figure out what to do with this new leaderhead -->
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_ALFRED_2</Type>
+			<Type>ART_DEF_LEADER_ALFRED</Type>
 			<Button>Art/Leaderheads/Alfred2/Button_Aelfred.dds</Button>
 			<NIF>Art/Leaderheads/Alfred2/Charlemagne.nif</NIF>
 			<KFM>Art/Leaderheads/Alfred2/Charlemagne.kfm</KFM>
 			<NoShaderNIF>Art/Leaderheads/Alfred2/Charlemagne.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Alfred2/Charlemagne_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_PHILIP_AUGUSTUS</Type>
+			<Button>Art/Leaderheads/PhilipII_Augustus/btn_lh_france_philipiiaugustus.dds</Button>
+			<NIF>Art/Leaderheads/PhilipII_Augustus/Charlemagne.nif</NIF>
+			<KFM>Art/Leaderheads/PhilipII_Augustus/Charlemagne.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/PhilipII_Augustus/Charlemagne_NONSHADER.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/PhilipII_Augustus/Charlemagne_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

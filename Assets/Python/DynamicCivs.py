@@ -124,7 +124,7 @@ dStartingLeaders = [
 	iSpain : iIsabella,
 	iFrance : iCharlemagne,
 	iEngland : iWilliamConqueror,
-	iSaxons: iAlfred,
+	iSaxons: iWidukind,
 	iHolyRome : iBarbarossa,
 	iBurma : iAnawrahta,
 	iRus : iYaroslav,
