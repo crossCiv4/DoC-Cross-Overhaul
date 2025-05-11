@@ -1001,6 +1001,7 @@ def getCivicStability(iPlayer, civics=None):
 		if iCitizenship in civics: iStability -= 3
 		if iRedistribution in civics: iStability += 1
 		if iFreeEnterprise in civics: iStability -= 3
+		if iConstitution in civics: iStability -= 5
 
 		if iCurrentEra <= iClassical:
 			if iSlavery in civics: iStability += 2

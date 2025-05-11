@@ -262,7 +262,9 @@ iManchuTaiwanYear = 1680
 tConquestManchuTaiwan = (50, iManchu, iChinaS, tTaiwanTL, tTaiwanBR, 1, iManchuTaiwanYear, 15)
 
 # dummy conquest to check if the conquest of Taiwan can trigger
-tConquestManchuNorthernChina = (51, iManchu, iChinaS, tChinaIndiesTL, tChinaIndiesBR, 2, iManchuTaiwanYear, 10)
+tChinaMiddleTL = (126, 48)
+tChinaMiddleBR = (129, 51)
+tConquestManchuCentralCoastalChina = (51, iManchu, iChinaS, tChinaMiddleTL, tChinaMiddleBR, 2, iManchuTaiwanYear, 10)
 
 lConquests = [
 	tConquestRomeCarthageInSpain,
@@ -340,7 +342,7 @@ dConquestChecker = {
 	tConquestSpainMoors[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
 	tConquestRomeDacia[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
 	tConquestArabiaCarthage[0]: lambda tConquest: checkConquest(tConquest, tConquestArabiaEgypt),
-	tConquestManchuTaiwan[0]: lambda tConquest: checkConquest(tConquest, tConquestManchuNorthernChina),
+	tConquestManchuTaiwan[0]: lambda tConquest: checkConquest(tConquest, tConquestManchuCentralCoastalChina),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):
