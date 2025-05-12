@@ -121,7 +121,7 @@ dStartingLeaders = [
 	iKhmer : iNeangNeak,
 	iMoors : iRahman,
 	iJava : iHayamWuruk,
-	iSpain : iIsabella,
+	iSpain : iTheodoric,
 	iFrance : iCharlemagne,
 	iEngland : iWilliamConqueror,
 	iSaxons: iWidukind,

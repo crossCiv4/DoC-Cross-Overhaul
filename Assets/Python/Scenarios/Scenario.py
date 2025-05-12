@@ -85,6 +85,7 @@ LEADER_DATES = {
 	iYaqub: 1190,
 	iHayamWuruk: 1350,
 	iSuharto: 1950,
+	iTheodoric: 418,
 	iIsabella: 1480,
 	iPhilip: 1560,
 	iCharlemagne: 770,

@@ -7362,7 +7362,7 @@
 			<PaganReligion>PAGAN_RELIGION_DRUIDISM</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>SPA</Identifier>
-			<StartingYear>526</StartingYear>
+			<StartingYear>418</StartingYear>
 			<LoadingTimes>
 				<LoadingTime>6</LoadingTime>
 				<LoadingTime>1</LoadingTime>
@@ -7440,6 +7440,10 @@
 				<CivicType>CIVIC_KINSHIP</CivicType>
 			</InitialCivics>
 			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_THEODORIC</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 				<Leader>
 					<LeaderName>LEADER_ISABELLA</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>

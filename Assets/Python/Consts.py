@@ -60,11 +60,11 @@ lBirthOrder = [
 	iMali,
 	iByzantium,
 	iVandals,
+    iSpain,
 	iSaxons,
 	iFrance,
 	iMalays,
 	iYamato,
-	iSpain,
 	iTurks,
 	iArabia,
 	iTibet,
@@ -619,11 +619,11 @@ iChinaS: 200,
 iMali : 300,
 iByzantium : 330,
 iVandals: 410,
+iSpain : 418,
 iSaxons: 430,
 iFrance : 496,
 iMalays : 500,
 iYamato : 525,
-iSpain : 526,
 iTurks : 552,
 iArabia : 634,
 iTibet : 630,
@@ -1469,7 +1469,7 @@ iVictorySecularism = 11
 
 
 #leaders
-iNumLeaders = 181
+iNumLeaders = 182
 (iLeaderBarbarian, iNativeLeader, iIndependentLeader, iDjoser, iHatshepsut, iRamesses, iPtolemy, iSargon, iHammurabi, iWentAntu,
 iAshurbanipal, iNasirAlDawla, iQinShiHuang, iTaizong, iHongwu, iMao, iSunQuan, iGaozong, iChiangKaishek, iMursili, iPericles, iGeorge, iAlexanderTheGreat, iSeleucus, iAsoka, 
 iChandragupta, iShivaji, iGandhi, iHiram, iHannibal, iAbuFaris, iHabibBourguiba, iTaharqa, iAhoeitu, iCyrus, iDarius, iMithridates, iShapur, 
@@ -1477,7 +1477,7 @@ iBrennus, iBrianBoru, iScipio, iJuliusCaesar, iAugustus, iMarcusAurelius, iPacal
 iKanishka, iWangKon, iSejong, iNeangNeak, iSuryavarman, iMansaMusa, iConstantine, iJustinian, iBasil, iCharlemagne, iPhilipAugustus, iLouis, iNapoleon, 
 iDeGaulle, iSriJayanasa, iTunPerak, iKammu, iMinamoto, iTokugawa, iMeiji, iRagnar, iChristian, iGerhardsen, iBumin, 
 iAlpArslan, iTamerlane, iHarun, iIbnSaud, iAlMuizz, iSaladin, iBaibars, iNasser, iSimeon, iSongtsen, iLobsangGyatso, iRahman, iYaqub, iMohammedV, iHayamWuruk, iSuharto, 
-iIsabella, iPhilip, iFranco, iWilliamConqueror, iElizabeth, iVictoria, iChurchill, iBarbarossa, iCharles, iFrancis, 
+iTheodoric, iIsabella, iPhilip, iFranco, iWilliamConqueror, iElizabeth, iVictoria, iChurchill, iBarbarossa, iCharles, iFrancis, 
 iAnawrahta, iBayinnaung, iYaroslav, iAdudAlDawla, iLeLoi, iHoChiMinh, iDawud, iCasimir, iSobieski, iPilsudski, iWalesa, iAfonso, 
 iJoao, iMaria, iHuaynaCapac, iCastilla, iLorenzo, iCavour, iMussolini, iGenghisKhan, iKublaiKhan, iMontezuma, 
 iTughluq, iAkbar, iBhutto, iNaresuan, iMongkut, iGustav, iIvan, iPeter, iCatherine, iAlexanderI, 

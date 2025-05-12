@@ -1718,6 +1718,18 @@
 		<Spanish>Philip II Augustus</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_THEODORIC</Tag>
+		<English>Theodoric I</English>
+		<French>
+			<Text>Theodoric I</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Theodoric I</German>
+		<Italian>Theodoric I</Italian>
+		<Spanish>Theodoric I</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>
 		<French></French>

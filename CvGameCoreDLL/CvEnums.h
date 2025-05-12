@@ -1396,6 +1396,7 @@ enum LeaderHeadTypes			// Exposed to Python
 	HAYAM_WURUK,
 	SUHARTO,
 
+	THEODORIC,
 	ISABELLA,
 	PHILIP,
 	FRANCO,

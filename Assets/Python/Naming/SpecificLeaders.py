@@ -77,7 +77,9 @@ def phoeniciaLeader(args):
 		return iHannibal
 
 def romeLeader(args):
-	if args.bCityStates and not args.bEmpire and year() < year(-50): 
+	if year() >= year(dBirth[iByzantium]):
+		return iMarcusAurelius
+	elif args.bCityStates and not args.bEmpire and year() < year(-50): 
 		return iScipio
 	elif team(args.iPlayer).isHasTech(iEngineering) and team(args.iPlayer).isHasTech(iCurrency):
 		if team(args.iPlayer).isHasTech(iPolitics):
@@ -171,6 +173,8 @@ def spainLeader(args):
 		return iFranco
 	if any(data.dFirstContactConquerors.values()):
 		return iPhilip
+	if args.tPlayer.isHasTech(iNobility):
+		return iPhilipAugustus
 
 def franceLeader(args):
 	if getColumn(args.iPlayer) >= 17:
