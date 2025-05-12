@@ -207,9 +207,6 @@ dStartingLeaders = [
 def setup():
 	iScenario = scenario()
 	
-	if iScenario == i600AD:
-		data.civs[iChina].iAnarchyTurns += 3
-	
 @handler("playerCivAssigned")
 def initName(iPlayer):
 	if not is_minor(iPlayer) and player(iPlayer).getNumCities() == 0:

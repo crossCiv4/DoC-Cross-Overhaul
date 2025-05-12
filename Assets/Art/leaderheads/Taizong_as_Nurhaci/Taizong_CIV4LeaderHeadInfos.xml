@@ -7,7 +7,7 @@
 		<LeaderHeadInfo>
 			<Type>LEADER_TAIZONG</Type>
 			<Description>Taizong</Description>
-			<Civilopedia>TXT_KEY_LEADER_TAIZONG_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_LEADER_TANG_TAIZONG_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_TAIZONG</ArtDefineTag>
 			<iWonderConstructRand>40</iWonderConstructRand>
 			<iBaseAttitude>1</iBaseAttitude>

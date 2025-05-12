@@ -1139,14 +1139,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GILGAMESH</LeaderType>
+							<LeaderType>LEADER_SARGON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_GILGAMESH_1</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_SARGON_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -2376,14 +2376,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GILGAMESH</LeaderType>
+							<LeaderType>LEADER_SARGON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_GILGAMESH_1</Text>
+						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_SARGON_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -3248,14 +3248,14 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GILGAMESH</LeaderType>
+							<LeaderType>LEADER_SARGON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_NO_PEACE_LEADER_GILGAMESH_1</Text>
+						<Text>AI_DIPLO_NO_PEACE_LEADER_SARGON_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -4942,7 +4942,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GILGAMESH</LeaderType>
+							<LeaderType>LEADER_SARGON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -4962,7 +4962,7 @@
 					</Attitudes>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_GILGAMESH_1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SARGON_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -6394,7 +6394,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GILGAMESH</LeaderType>
+							<LeaderType>LEADER_SARGON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -6410,7 +6410,7 @@
 					</Attitudes>
 					<DiplomacyPowers/>
 					<DiplomacyText>
-						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_GILGAMESH_1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SARGON_1</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -8302,7 +8302,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GILGAMESH</LeaderType>
+							<LeaderType>LEADER_SARGON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -9413,7 +9413,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GILGAMESH</LeaderType>
+							<LeaderType>LEADER_SARGON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -10487,7 +10487,7 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
-							<LeaderType>LEADER_GILGAMESH</LeaderType>
+							<LeaderType>LEADER_SARGON</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>

@@ -346,7 +346,7 @@
 		<Spanish>Franco</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LEADER_GILGAMESH</Tag>
+		<Tag>TXT_KEY_LEADER_SARGON</Tag>
 		<English>Sargon</English>
 		<French>
 			<Text>Sargon</Text>
@@ -874,7 +874,7 @@
 		<Spanish>Tamerlane</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_LEADER_TAIZONG</Tag>
+		<Tag>TXT_KEY_LEADER_TANG_TAIZONG</Tag>
 		<English>Tang Taizong</English>
 		<French>
 			<Text>Tang Taizong</Text>
@@ -884,6 +884,18 @@
 		<German>Tang Taizong</German>
 		<Italian>Tang Taizong</Italian>
 		<Spanish>Tang Taizong</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SONG_TAIZONG</Tag>
+		<English>Song Taizong</English>
+		<French>
+			<Text>Song Taizong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Song Taizong</German>
+		<Italian>Song Taizong</Italian>
+		<Spanish>Song Taizong</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SUN_QUAN</Tag>
@@ -1729,6 +1741,23 @@
 		<Italian>Theodoric I</Italian>
 		<Spanish>Theodoric I</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CAO_CAO</Tag>
+		<English>Cao Cao</English>
+		<French>Cao Cao</French>
+		<German>Cao Cao</German>
+		<Italian>Cao Cao</Italian>
+		<Spanish>Cao Cao</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GAOZU</Tag>
+		<English>Gaozu</English>
+		<French>Gaozu</French>
+		<German>Gaozu</German>
+		<Italian>Gaozu</Italian>
+		<Spanish>Gaozu</Spanish>
+	</TEXT>
+
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>

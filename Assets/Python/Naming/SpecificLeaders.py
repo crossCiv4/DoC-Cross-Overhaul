@@ -36,7 +36,7 @@ def chinaLeader(args):
 		return iMao
 	if isCommunist(args.iPlayer) or (isRepublic(args.iPlayer) and args.iEra >= iIndustrial):
 		return iMao
-	if args.iEra >= iRenaissance and year() >= year(1400):
+	if args.iEra >= iRenaissance or year() > year(dBirth[iJapan]):
 		return iHongwu
 	if args.iEra >= iMedieval:
 		return iTaizong
@@ -46,7 +46,7 @@ def chinaSLeader(args):
 		return iChiangKaishek
 	if args.bResurrected and year() >= year(1830):
 		return iChiangKaishek
-	if year() >= year(1120):
+	if year() >= year(1000) or (args.tPlayer.isHasTech(iPaper) and args.tPlayer.isHasTech(iGunpowder)):
 		return iGaozong
 
 def babyloniaLeader(args):
@@ -462,6 +462,16 @@ def yamatoLeaderName(args):
 		if getColumn(args.iPlayer) >= 9:
 			return "TXT_KEY_LEADER_ASHIKAGA_TAKAUJI"
 
+def chinaLeaderName(args):
+	if args.iLeader == iTaizong:
+		if year() >= year(1000) or (args.tPlayer.isHasTech(iPaper) and args.tPlayer.isHasTech(iGunpowder)):
+			return "TXT_KEY_LEADER_SONG_TAIZONG"
+	elif args.iLeader == iQinShiHuang:
+		if year() >= year(dBirth[iChinaS]): 
+			return "TXT_KEY_LEADER_CAO_CAO"
+		elif data.civs[args.iCiv].iAnarchyTurns > 0:
+			return "TXT_KEY_LEADER_GAOZU"
+
 dSpecificLeaderNames = CivDict({
 	iManchu: manchuLeaderName,
 	iShu: shuLeaderName,
@@ -473,4 +483,5 @@ dSpecificLeaderNames = CivDict({
 	iArmenia: armeniaLeaderName,
 	iTurks: turksLeaderName,
 	iYamato: yamatoLeaderName,
+	iChina: chinaLeaderName,
 })

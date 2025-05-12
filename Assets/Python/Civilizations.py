@@ -413,9 +413,9 @@ lCivilizations = [
 	),
 	Civilization(
 		iSpain,
-		iGold=100,
+		iGold=150,
 		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(5).including(iPolitics, iEthics, iArtisanry, iSteel)
+		techs=techs.column(5).including(iPolitics, iEthics, iArtisanry, iConsensus, iSteel)
 	),
 	Civilization(
 		iFrance,
@@ -884,12 +884,11 @@ dStartingUnits = CivDict({
 		iShockCity: 2,
 	},
 	iRome: {
-		iSettle: 1,
+		iSettle: 2,
 		iWork: 2,
-		iDefend: 3,
+		iDefend: 4,
 		iAttack: 8,
 		iSiege: 4,
-		iSettleSea: 1,
 		iFerry: 1,
 		iWorkerSea: 1,
 	},
@@ -1099,7 +1098,7 @@ dStartingUnits = CivDict({
 		iWork: 1,
 		iDefend: 1,
 		iCounter: 2,
-		iMissionary: 2,
+		iMissionary: 4,
 		iWorkerSea: 1,
 		iFerry: 1,
 		iEscort: 1,
@@ -1576,7 +1575,6 @@ dExtraAIUnits = CivDict({
 	},
 	iMoors: {
 		iAttack: 2,
-		iSiege: 2,
 		iHarass: 3,
 		iDefend: 1,
 	}, 
@@ -1829,7 +1827,7 @@ dAdditionalUnits = CivDict({
 
 dSpecificAIStartingUnits = CivDict({
 	iByzantium: {
-		iTagmata: 4,
+		iTagmata: 5,
 	},
 	iTimurids: {
 		iKeshik: 12,
@@ -2927,6 +2925,7 @@ dBuildingPreferences = {
 		iSanMarcoBasilica: 30,
 		iAlKhazneh: 20,
 		
+		iTheodosianWalls: -20,
 		iGreatWall: -100,
 	},
 	iMaya : {
@@ -2982,7 +2981,7 @@ dBuildingPreferences = {
 	},
 	iByzantium : {
 		iHagiaSophia: 40,
-		iTheodosianWalls: 30,
+		iTheodosianWalls: 40,
 		iMountAthos: 30,
 		
 		iNotreDame: -20,

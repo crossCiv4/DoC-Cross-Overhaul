@@ -20,9 +20,9 @@ def chinaSpecificAdjective(args):
 		if args.iEra == iClassical:
 			if year() >= year(580):
 				return "TXT_KEY_CIV_CHINA_SUI"
-			if year() >= year(220):
+			if year() >= year(dBirth[iChinaS]):
 				return "TXT_KEY_CIV_CHINA_WEI"
-			if year() >= year(-200):
+			if data.civs[args.iCiv].iAnarchyTurns > 0:
 				return "TXT_KEY_CIV_CHINA_HAN"
 			
 			return "TXT_KEY_CIV_CHINA_QIN"

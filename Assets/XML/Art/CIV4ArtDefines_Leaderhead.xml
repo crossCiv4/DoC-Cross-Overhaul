@@ -343,7 +343,7 @@
 			<BackgroundKFM>art/LeaderHeads/Darius/Darius_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
 		<LeaderheadArtInfo>
-			<Type>ART_DEF_LEADER_GILGAMESH</Type>
+			<Type>ART_DEF_LEADER_SARGON</Type>
 			<Button>,Art/interface/LeaderHeads/Btn_LH_Persia_Cyrus.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,5,1</Button>
 			<NIF>art/LeaderHeads/Gilgamesh/Gilgamesh.nif</NIF>
 			<KFM>art/LeaderHeads/Gilgamesh/Gilgamesh.kfm</KFM>

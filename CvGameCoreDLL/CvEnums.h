@@ -1281,10 +1281,12 @@ enum LeaderHeadTypes			// Exposed to Python
 	LEADER_NATIVE,
 	LEADER_INDEPENDENT,
 
-	RAMESSES,
+	DJOSER,
 	HATSHEPSUT,
+	RAMESSES,
+	PTOLEMY,
 
-	GILGAMESH,
+	SARGON,
 	HAMMURABI,
 
 	WENT_ANTU,
@@ -1317,16 +1319,23 @@ enum LeaderHeadTypes			// Exposed to Python
 	HIRAM,
 	HANNIBAL,
 
+	ABU_FARIS,
+	HABIB_BOURGUIBA,
+
 	TAHARQA,
 
 	AHOEITU,
 
 	CYRUS,
 	DARIUS,
-	KHOSROW,
+
+	MITHRIDATES,
+	SHAPUR,
 
 	BRENNUS,
+	BRIAN_BORUS,
 
+	SCIPIO,
 	JULIUS_CAESAR,
 	AUGUSTUS,
 	MARCUS_AURELIUS,
@@ -1347,6 +1356,7 @@ enum LeaderHeadTypes			// Exposed to Python
 	WANG_KON,
 	SEJONG,
 
+	NEANG_NEAK,
 	SURYAVARMAN,
 
 	MANSA_MUSA,
@@ -1376,22 +1386,25 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	BUMIN,
 	ALP_ARSLAN,
+
 	TAMERLANE,
 
 	HARUN,
 	
+	IBN_SAUD,
 	AL_MUIZZ,
 	SALADIN,
 	BAIBARS,
 	NASSER,
 
+	SIMEON,
+
 	SONGTSEN,
 	LOBSANG_GYATSO,
 
-	SIMEON,
-
 	RAHMAN,
 	YAQUB,
+	MOHAMMED_V,
 
 	HAYAM_WURUK,
 	SUHARTO,
@@ -1517,6 +1530,15 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	WIDUKIND,
 	ALFRED,
+
+	GAISERIC,
+
+	ABI_BIN_OMAR,
+	SAID_BIN_SULTAN,
+
+	ABU_KARIB,
+	ARWA,
+	AL_SALLAL,
 
 	NURHACI,
 	CIXI,

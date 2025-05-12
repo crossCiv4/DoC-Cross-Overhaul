@@ -165,10 +165,10 @@ def placeGoodyHuts(iGameTurn):
 					placeTribalVillage(tTL, tBR)
 
 # give Byzantium a boost by building the Theodosian Walls in Constantinople if the player is autoplaying
-# while the walls were built in the 400s, we'll give the player a chance to build it, unless the player spawns after 600
+# do it a bit earlier than historically
 @handler("BeginGameTurn")
 def buildTheodosianWallsInAutoplay():
-	if year() == year(450) and autoplay() and player(iByzantium).isAlive():
+	if year() == year(380) and autoplay() and player(iByzantium).isAlive():
 		capital = player(iByzantium).getCapitalCity()
 		if capital and location(capital) == tConstantinople:
 			if game.getBuildingClassCreatedCount(infos.building(iTheodosianWalls).getBuildingClassType()) == 0:
