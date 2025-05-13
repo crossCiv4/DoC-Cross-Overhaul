@@ -110,10 +110,10 @@ tMongolsPersiaBR = (98, 52)
 tConquestMongolsPersia = (13, iMongols, iTurks, tMongolsPersiaTL, tMongolsPersiaBR, 7, iMongolsPersiaYear, 10)
 
 iChinaIndiesYear = -240
-tChinaIndiesTL = (120, 51)
-tChinaIndiesBR = (128, 57)
+tChinaYellowRiverTL = (120, 51)
+tChinaYellowRiverBR = (126, 55)
 
-tConquestChinaUnification = (14, iChina, iIndependent, tChinaIndiesTL, tChinaIndiesBR, 3, iChinaIndiesYear, 10)
+tConquestChinaYellowRiver = (14, iChina, iChinaS, tChinaYellowRiverTL, tChinaYellowRiverBR, 3, iChinaIndiesYear, 10)
 
 iFranceCrusadesYear = 1090
 iHolyRomeCrusadesYear = 1190
@@ -124,10 +124,10 @@ tConquestHolyRomeCrusades = (16, iHolyRome, iMamluks, tLevantTL, tLevantBR, 1, i
 tConquestEnglandCrusades = (17, iEngland, iMamluks, tLevantTL, tLevantBR, 1, iEnglandCrusadesYear, 5)
 
 iSuiUnificationYear = 588
-tSouthChinaTL = (124, 43)
+tSouthChinaTL = (124, 46)
 tSouthChinaBR = (131, 50)
 
-tConquestSuiUnification = (18, iChina, iChinaS, tSouthChinaTL, tSouthChinaBR, 3, iSuiUnificationYear, 10)
+tConquestSuiUnification = (18, iChina, iChinaS, tSouthChinaTL, tSouthChinaBR, 5, iSuiUnificationYear, 10)
 
 iArabCarthageConquestYear = 670
 tTunisiaTL = (66, 44)
@@ -343,6 +343,7 @@ dConquestChecker = {
 	tConquestRomeDacia[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
 	tConquestArabiaCarthage[0]: lambda tConquest: checkConquest(tConquest, tConquestArabiaEgypt),
 	tConquestManchuTaiwan[0]: lambda tConquest: checkConquest(tConquest, tConquestManchuCentralCoastalChina),
+	tConquestSuiUnification[0]: lambda tConquest: checkConquest(tConquest, tConquestChinaYellowRiver),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):

@@ -967,7 +967,7 @@ dStartingUnits = CivDict({
 	iChinaS: {
 		iSettle: 1,
 		iWork: 2,
-		iDefend: 2,
+		iDefend: 1,
 		iAttack: 3,
 		iCounter: 2,
 		iMissionary: 1,
@@ -991,6 +991,7 @@ dStartingUnits = CivDict({
 		iAttack: 4,
 		iCounter: 2,
 		iMissionary: 1,
+		iSiege: 1,
 		iFerry: 2,
 		iEscort: 2,
 	},
@@ -1530,8 +1531,9 @@ dExtraAIUnits = CivDict({
 		iDefend: 2,
 	},
 	iByzantium: {
-		iAttack: 3,
-		iSiege: 1,
+		iAttack: 5,
+		iHarass: 2,
+		iSiege: 2,
 	},
 	iVandals: {
 		iWork: 1,
@@ -1827,7 +1829,7 @@ dAdditionalUnits = CivDict({
 
 dSpecificAIStartingUnits = CivDict({
 	iByzantium: {
-		iTagmata: 5,
+		iTagmata: 4,
 	},
 	iTimurids: {
 		iKeshik: 12,

@@ -199,7 +199,7 @@ dResourcesDict = {
 	(128, 62) : (1800,  iCorn),     # Manchuria
 	(80, 63)  : (1800,  iPotato),   # Belarus
 	(87, 65)  : (1800,  iPotato),   # Russia
-	(124, 51) : (1800,  iPotato),   # China
+	(124, 50) : (1800,  iPotato),   # China
 	(139, 11) : (1800,  iSheep),    # Australia
 	(140, 13) : (1800,  iSheep),    # Australia
 	(47, 22)  : (1800,  iCitrus),   # Southern Brazil
