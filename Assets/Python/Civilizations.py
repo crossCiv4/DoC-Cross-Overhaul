@@ -2607,7 +2607,6 @@ dTechPreferences = {
 		iCombinedArms: 25,
 		iFirearms: 25,
 		iLogistics: 25,
-		iRefining: 30,
 		iCivilLiberties: 20,
 		iBiology: 20,
 		iAcademia: 20,
