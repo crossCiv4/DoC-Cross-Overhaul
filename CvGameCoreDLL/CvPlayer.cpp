@@ -25638,7 +25638,7 @@ bool CvPlayer::isUnstableCivic(CivicTypes eCivic) const
 {
 	if (getCurrentEra() >= ERA_GLOBAL)
 	{
-		if (eCivic == CIVIC_ISOLATIONISM)
+		if (eCivic == CIVIC_ISOLATIONISM || eCivic == CIVIC_HEGEMONY || eCivic == CIIVC_THALASSOCRACY)
 		{
 			return true;
 		}
@@ -25671,14 +25671,6 @@ bool CvPlayer::isUnstableCivic(CivicTypes eCivic) const
 	if (GET_TEAM(getTeam()).isHasTech((TechTypes)CIVIL_RIGHTS))
 	{
 		if (eCivic == CIVIC_SLAVERY || eCivic == CIVIC_MANORIALISM || eCivic == CIVIC_CASTE_SYSTEM)
-		{
-			return true;
-		}
-	}
-
-	if (GET_TEAM(getTeam()).isHasTech((TechTypes)NATIONALISM))
-	{
-		if (eCivic == CIVIC_HEGEMONY || eCivic == CIIVC_THALASSOCRACY)
 		{
 			return true;
 		}

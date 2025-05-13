@@ -655,11 +655,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_COLONIALISM_STRATEGY</Tag>
-		<English>Reduced colony maintenance; extra production and commerce from slave plantations and slave mines; extra experience for sea units; can capture slaves</English>
-		<French>Reduced colony maintenance; extra production and commerce from slave plantations and slave mines; extra experience for sea units; can capture slaves</French>
-		<German>Reduced colony maintenance; extra production and commerce from slave plantations and slave mines; extra experience for sea units; can capture slaves</German>
-		<Italian>Reduced colony maintenance; extra production and commerce from slave plantations and slave mines; extra experience for sea units; can capture slaves</Italian>
-		<Spanish>Reduced colony maintenance; extra production and commerce from slave plantations and slave mines; extra experience for sea units; can capture slaves</Spanish>
+		<English>Reduced colony maintenance; extra production and commerce from slave plantations and slave mines; extra experience for sea units; can capture slaves; extra stability from founding colonies</English>
+		<French>Reduced colony maintenance; extra production and commerce from slave plantations and slave mines; extra experience for sea units; can capture slaves; extra stability from founding colonies</French>
+		<German>Reduced colony maintenance; extra production and commerce from slave plantations and slave mines; extra experience for sea units; can capture slaves; extra stability from founding colonies</German>
+		<Italian>Reduced colony maintenance; extra production and commerce from slave plantations and slave mines; extra experience for sea units; can capture slaves; extra stability from founding colonies</Italian>
+		<Spanish>Reduced colony maintenance; extra production and commerce from slave plantations and slave mines; extra experience for sea units; can capture slaves; extra stability from founding colonies</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_NATIONHOOD</Tag>

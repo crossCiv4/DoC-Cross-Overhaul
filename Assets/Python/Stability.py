@@ -584,7 +584,10 @@ def calculateStability(iPlayer):
 	if iHegemony in civics: iConquestModifier += 1
 	if iCiv == iParthia: iConquestModifier += 1 # iParthia UP
 	
-	iRecentExpansionStability += iRecentlyFounded
+	iFoundedModifier = 1
+	if iColonialism in civics: iFoundedModifier += 1
+
+	iRecentExpansionStability += iFoundedModifier * iRecentlyFounded
 	iRecentExpansionStability += iConquestModifier * iRecentlyConquered
 		
 	lParameters[iParameterRecentExpansion] = iRecentExpansionStability
@@ -658,20 +661,23 @@ def calculateStability(iPlayer):
 	if iVassalage in civics:
 		if iCurrentEra == iMedieval: iCivicEraTechStability += 2
 		elif iCurrentEra >= iIndustrial: iCivicEraTechStability -= 5
-		
+
+	if iColonialism in civics and iCurrentEra < iGlobal and civ(iPlayer) in dTechGroups[iTechGroupWestern]:
+		iCivicEraTechStability += 5
+
 	if iDeification in civics:
 		if iCurrentEra <= iClassical: iCivicEraTechStability += 2
 		else: iCivicEraTechStability -= 2 * (iCurrentEra - iClassical)
 		
 	if iRepublic in civics:
 		if iCurrentEra <= iClassical: iCivicEraTechStability += 2
-		elif iCurrentEra >= iIndustrial: iCivicEraTechStability -= 5
+		elif iCurrentEra >= iIndustrial: iCivicEraTechStability -= 2
 		
 	if iIsolationism in civics:
 		if iCurrentEra >= iGlobal: iCivicEraTechStability -= (iCurrentEra - iRenaissance) * 4
 		
 	if tPlayer.isHasTech(iRepresentation):
-		if (iRepublic, iDemocracy) not in civics and (iStratocracy, iConstitution) not in civics: iCivicEraTechStability -= 5
+		if (iRepublic, iDemocracy) not in civics and (iStratocracy, iConstitution) not in civics: iCivicEraTechStability -= 2
 		
 	if tPlayer.isHasTech(iCivilRights):
 		if (iSlavery, iManorialism, iCasteSystem) in civics: iCivicEraTechStability -= 5
@@ -679,7 +685,7 @@ def calculateStability(iPlayer):
 	if tPlayer.isHasTech(iEconomics):
 		if (iReciprocity, iRedistribution, iMerchantTrade) in civics: iCivicEraTechStability -= 5
 		
-	if tPlayer.isHasTech(iNationalism):
+	if iCurrentEra >= iGlobal:
 		if (iNationhood, iMultilateralism) in civics: iCivicEraTechStability += 5
 		if (iHegemony, iThalassocracy) in civics: iCivicEraTechStability -= 5
 		
