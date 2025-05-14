@@ -3972,6 +3972,14 @@
 		<Spanish>Manchu Bannerman</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MOUNTED_CROSSBOWMAN</Tag>
+		<English>Mounted Crossbowman</English>
+		<French>Mounted Crossbowman</French>
+		<German>Mounted Crossbowman</German>
+		<Italian>Mounted Crossbowman</Italian>
+		<Spanish>Mounted Crossbowman</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
 		<English></English>
 		<French></French>

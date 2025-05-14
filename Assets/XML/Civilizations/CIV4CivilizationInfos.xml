@@ -1475,6 +1475,10 @@
 			</Buildings>
 			<Units>
 				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>UNIT_MOUNTED_CROSSBOWMAN</UnitType>
+				</Unit>
+				<Unit>
 					<UnitClassType>UNITCLASS_LIGHT_SWORDSMAN</UnitClassType>
 					<UnitType>UNIT_CELTIC_OATHSWORN</UnitType>
 				</Unit>
@@ -2154,6 +2158,10 @@
 			</Buildings>
 			<Units>
 				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>UNIT_MOUNTED_CROSSBOWMAN</UnitType>
+				</Unit>
+				<Unit>
 					<UnitClassType>UNITCLASS_MUSKETEER</UnitClassType>
 					<UnitType>UNIT_ENGLISH_REDCOAT</UnitType>
 				</Unit>
@@ -2386,6 +2394,10 @@
 				</Building>
 			</Buildings>
 			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>UNIT_MOUNTED_CROSSBOWMAN</UnitType>
+				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_CUIRASSIER</UnitClassType>
 					<UnitType>UNIT_FRENCH_GENDARME</UnitType>
@@ -3049,6 +3061,10 @@
 			</Buildings>
 			<Units>
 				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>UNIT_MOUNTED_CROSSBOWMAN</UnitType>
+				</Unit>
+				<Unit>
 					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
 					<UnitType>UNIT_HOLY_ROMAN_LANDSKNECHT</UnitType>
 				</Unit>
@@ -3611,6 +3627,10 @@
 				</Building>
 			</Buildings>
 			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>UNIT_MOUNTED_CROSSBOWMAN</UnitType>
+				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
 					<UnitType>UNIT_ITALIAN_BALESTRIERE</UnitType>
@@ -5883,6 +5903,10 @@
 			</Buildings>
 			<Units>
 				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>UNIT_MOUNTED_CROSSBOWMAN</UnitType>
+				</Unit>
+				<Unit>
 					<UnitClassType>UNITCLASS_HEAVY_GALLEY</UnitClassType>
 					<UnitType>UNIT_NORSE_LONGSHIP</UnitType>
 				</Unit>
@@ -6769,6 +6793,10 @@
 			</Buildings>
 			<Units>
 				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>UNIT_MOUNTED_CROSSBOWMAN</UnitType>
+				</Unit>
+				<Unit>
 					<UnitClassType>UNITCLASS_EXPLORER</UnitClassType>
 					<UnitType>UNIT_PORTUGUESE_BANDEIRANTE</UnitType>
 				</Unit>
@@ -7203,6 +7231,10 @@
 			</Buildings>
 			<Units>
 				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>UNIT_MOUNTED_CROSSBOWMAN</UnitType>
+				</Unit>
+				<Unit>
 					<UnitClassType>UNITCLASS_SWORDSMAN</UnitClassType>
 					<UnitType>UNIT_SAXON_THANE</UnitType>
 				</Unit>
@@ -7408,6 +7440,10 @@
 				</Building>
 			</Buildings>
 			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>UNIT_MOUNTED_CROSSBOWMAN</UnitType>
+				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
 					<UnitType>UNIT_SPANISH_TERCIO</UnitType>
@@ -7670,6 +7706,10 @@
 				</Building>
 			</Buildings>
 			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>UNIT_MOUNTED_CROSSBOWMAN</UnitType>
+				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_PISTOLIER</UnitClassType>
 					<UnitType>UNIT_SWEDISH_HAKKAPELIITTA</UnitType>
