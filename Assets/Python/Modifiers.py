@@ -245,7 +245,7 @@ dResearchCostMods = CivDict({
 	iEgypt: 150,
 	iBabylonia: 140,
 	iHarappa: 125,
-	iChina: 120,
+	iChina: 115,
 	iXia: 90,
 	iHittites: 125,
 	iNubia: 130,

@@ -129,4 +129,16 @@
 		<Italian>Seleucid</Italian>
 		<Spanish>Seleucid</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_FASCIST</Tag>
+		<English>%s2 Regency</English>
+		<French>
+			<Text>Régence %s2</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>%s2 Regency</German>
+		<Italian>%s2 Regency</Italian>
+		<Spanish>%s2 Regency</Spanish>
+	</TEXT>
 </Civ4GameText>

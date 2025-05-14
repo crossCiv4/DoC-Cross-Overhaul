@@ -142,7 +142,8 @@ iKhazars :	(86, 59),	# Azov
 iEngland :	(58, 64),	# London
 iSaxons :	(58, 64),	# London
 iMorocco :	(57, 44),	# Merrakesh
-iYemen:		(89, 35),	# Adan
+iYemen :	(89, 35),	# Adan
+iVietnam :	(121, 42),	# Hanoi
 })
 
 ### Birth Area ###

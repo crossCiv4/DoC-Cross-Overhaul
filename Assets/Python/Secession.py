@@ -34,8 +34,11 @@ def secedeCities(iPlayer, secedingCities, bRazeMinorCities = False):
 		# Mongols on complete collapse, 
 		# give cities in the China region to Wu (Ming)
 		# if Qin is not alive
-		if bComplete and civ(iPlayer) == iMongols and not player(iChina).isExisting() and city.getRegionID() in [rNorthChina, rSouthChina]:
+		if bComplete and not player(iChinaS).isHuman() and civ(iPlayer) == iMongols and not player(iChina).isExisting() and city.getRegionID() in [rNorthChina, rSouthChina]:
 			iClaim = iChinaS
+		# Vassal "provinces" of Rome collapse to Roman control rather than other claimants, or indies
+		elif bComplete and not player(iRome).isHuman() and team(iPlayer).isAVassal() and civ(master(iPlayer)) == iRome:
+			iClaim = iRome
 		else:
 			iClaim = getCityClaim(city)
 		dClaimedCities[iClaim].append(city)
