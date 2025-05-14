@@ -501,7 +501,7 @@ minor_cities = [
 	MinorCity(-490, iBarbarian, (66, 57), "Melpum", iPopulation=2, iCiv=iCelts, units={iHarass: 2}, adjective="TXT_KEY_ADJECTIVE_CELTIC"),
 	MinorCity(-280, iBarbarian, (59, 53), "Iruna", iPopulation=1, iCiv=iCelts, units={iSkirmish: 1}, iCulture=1, adjective="TXT_KEY_ADJECTIVE_CELTIBERIAN"),
 	MinorCity(-250, iBarbarian, (60, 47), "Shigan", iPopulation=2, iCiv=iPhoenicia, units={iShock: 4}, adjective="TXT_KEY_ADJECTIVE_BERBER"),
-	MinorCity(-150, iIndependent2, (112, 57), "Jiaohe", iPopulation=1, iCiv=iChina, units={iHarass: 1}, adjective="TXT_KEY_ADJECTIVE_TOCHARIAN"),
+	MinorCity(-150, iBarbarian, (112, 57), "Yarghol", iPopulation=2, iCiv=iTurks, units={iHarass: 1}, adjective="TXT_KEY_ADJECTIVE_TOCHARIAN"),
 	MinorCity(-75, iIndependent, (105, 55), "Kash", iPopulation=2, iCiv=iKushans, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_UIGHUR"),
 	MinorCity(-50, iIndependent2, (58, 64), "Londinion", iPopulation=2, iCiv=iCelts, units={iDefend: 1}, bIgnoreRuins=True, adjective="TXT_KEY_ADJECTIVE_CELTIC"),
 	MinorCity(50, iBarbarian, (76, 58), "Sarmizegetusa", iPopulation=2, iCiv=iCelts, units={iDefend: 1, iAttack: 2}, bIgnoreRuins=True, adjective="TXT_KEY_ADJECTIVE_DACIAN"),
