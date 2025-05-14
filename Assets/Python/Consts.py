@@ -1227,7 +1227,7 @@ iLightSwordsman, iMycenaeanMyrmidon, iVulture, iDogSoldier, iOathsworn, iSwordsm
 iShotelai, iHeavySwordsman, iGallowglass, iSamurai, iHuscarl, iDruzhina, iPombos, iSpearman, iPhalanx, iAzmaru, iHoplite, 
 iSacredBand, iImmortal, iNativeRaider, iImpi, iHeavySpearman, iGhuridVeteranSpears, iThematicSpearman, iTagmata, iKyundaw, iPikeman, iNaginataAshigaru, iLandsknecht, iArquebusier, iFirelancer, iTercio, 
 iStrelets, iJanissary, iOromoWarrior, iQizilbash, iMohawkCatholic, iMohawkProtestant, iOmaniSlaver, iMusketeer, iHanBannerman, iRedcoat, iCarolean, iFusilier, iRifleman, 
-iMehalSefari, iGrenadier, iRocketeer, iGrenzer, iAlbionLegion, iAntiTank, iInfantry, iVietCong, iSamInfantry, iMobileSam, iMarine, 
+iMehalSefari, iGrenadier, iRocketeer, iGrenzer, iAlbionLegion, iInfantry, iVietCong, iAssaultInfantry, iSamInfantry, iMobileSam, iMarine, 
 iNavySeal, iParatrooper, iMechanizedInfantry, iArcher, iNanmanArcher, iAsharittuBowman, iMedjay, iNativeArcher, iSkirmisher, iVishap, iHolkan, iAtlatl, 
 iKelebolo, iLongbowman, iPatiyodha, iRattanArcher, iCrossbowman, iNaffatun, iChokonu, iBalestriere, iGrenadineCrossbowman, iChariot, iWarChariot, iHuluganni, 
 iCidainh, iHorseman, iHausaCavalry, iCompanion, iNumidianCavalry, iAsvaka, iBerberFaris, iCamelRider, iCamelLancer, iHorseArcher, iMountedCrossbowman, iKonnik, iMangudai, iKhampa, iOghuz, 

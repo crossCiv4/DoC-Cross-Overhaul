@@ -3980,6 +3980,14 @@
 		<Spanish>Mounted Crossbowman</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_ASSAULT_INFANTRY</Tag>
+		<English>Assault Infantry</English>
+		<French>Assault Infantry</French>
+		<German>Assault Infantry</German>
+		<Italian>Assault Infantry</Italian>
+		<Spanish>Assault Infantry</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
 		<English></English>
 		<French></French>

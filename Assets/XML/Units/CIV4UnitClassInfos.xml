@@ -302,14 +302,14 @@
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_INFANTRY</DefaultUnit>
 		</UnitClassInfo>
-		<UnitClassInfo>
+		<!-- <UnitClassInfo>
 			<Type>UNITCLASS_AT_INFANTRY</Type>
 			<Description>TXT_KEY_UNIT_AT_INFANTRY</Description>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_AT_INFANTRY</DefaultUnit>
-		</UnitClassInfo>
+		</UnitClassInfo> -->
 		<UnitClassInfo>
 			<Type>UNITCLASS_SAM_INFANTRY</Type>
 			<Description>TXT_KEY_UNIT_SAM_INFANTRY</Description>
@@ -349,6 +349,14 @@
 			<iMaxTeamInstances>-1</iMaxTeamInstances>
 			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
 			<DefaultUnit>UNIT_MECHANIZED_INFANTRY</DefaultUnit>
+		</UnitClassInfo>
+		<UnitClassInfo>
+			<Type>UNITCLASS_ASSAULT_INFANTRY</Type>
+			<Description>TXT_KEY_UNIT_ASSAULT_INFANTRY</Description>
+			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
+			<iMaxTeamInstances>-1</iMaxTeamInstances>
+			<iMaxPlayerInstances>-1</iMaxPlayerInstances>
+			<DefaultUnit>UNIT_ASSAULT_INFANTRY</DefaultUnit>
 		</UnitClassInfo>
 		<UnitClassInfo>
 			<Type>UNITCLASS_ARCHER</Type>
