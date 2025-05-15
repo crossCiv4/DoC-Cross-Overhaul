@@ -324,6 +324,11 @@ def getYamatoLanguages(playerId):
         return [iLangModernJapanese, iLangJapanese, iLangModernChinese]
     return None
 
+def getGreekLanguages(playerId):
+	if player(playerId).getCurrentEra() >= iMedieval:
+		return [iLangByzantine, iLangGreek]
+	return None
+
 # Define a CivDict mapping civilizations to their special language logic
 dSpecialLanguages = CivDict({
     iInca: getIncaLanguages,
@@ -341,6 +346,7 @@ dSpecialLanguages = CivDict({
     iChinaS: getChinaSLanguages,
     iXia: getXiaLanguages,
     iYamato: getYamatoLanguages,
+    iGreece: getGreekLanguages,
 })
 
 def getSpecialLanguages(playerId):

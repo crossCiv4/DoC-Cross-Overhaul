@@ -1007,7 +1007,7 @@ dStartingUnits = CivDict({
 		iWorkerSea: 1,
 	},
 	iFrance: {
-		iSettle: 3,
+		iSettle: 2,
 		iWork: 2,
 		iDefend: 3,
 		iCounter: 3,
@@ -2452,6 +2452,7 @@ dTechPreferences = {
 		iSelectiveBreeding: 15,
 		iCivilLiberties: -15,
 		iCombinedArms: 10,
+		iLateenSails: -10,
 	},
 	iSaxons : {
 		iNobility: 10,

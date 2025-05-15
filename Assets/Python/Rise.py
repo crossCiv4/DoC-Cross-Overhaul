@@ -806,8 +806,8 @@ class Birth(object):
 		if self.iCiv == iByzantium:
 			if not player(iRome).isExisting():
 				return False
-			# Rome has to own some cities in the region
-			elif cities.regions(rGreece, rAnatolia).owner(iRome).count() == 0:
+			# Rome has to own some cities in the region, or had owned before collapse
+			elif cities.regions(rGreece, rAnatolia).owner(iRome).count() == 0 and cities.regions(rGreece, rAnatolia).where(lambda city: city.getCivilizationType() in [iIndependent, iIndependent2, iBarbarian, iNative] and city.getPreviousCiv() == iRome).count() == 0:
 				return False
 			elif player(iGreece).isExisting() and (player(iGreece).isHuman() or stability(iGreece) == iStabilitySolid):
 				return False
