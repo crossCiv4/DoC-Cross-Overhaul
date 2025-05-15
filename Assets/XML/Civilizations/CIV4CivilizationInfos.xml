@@ -8398,11 +8398,11 @@
 				<LoadingTime>0</LoadingTime>
 			</LoadingTimes>
 			<Rating>
-				<Trade>3</Trade>
+				<Trade>2</Trade>
 				<Production>3</Production>
-				<Culture>4</Culture>
-				<Growth>3</Growth>
-				<Start>4</Start>
+				<Culture>2</Culture>
+				<Growth>2</Growth>
+				<Start>2</Start>
 			</Rating>
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
