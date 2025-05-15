@@ -722,7 +722,7 @@ dGoals = {
 			RaidGold(300),
 			PillageCount(10),
 			DefeatedUnits(civs(iRome, iByzantium, iArabia), 10),
-			UnitCombatLevelCount(UnitCombatTypes.UNITCOMBAT_NAVAL, 3, 2),
+			UnitCombatLevelCount(UnitCombatTypes.UNITCOMBAT_NAVAL, 3, 4),
 			by=750,
 		),	
 		All(

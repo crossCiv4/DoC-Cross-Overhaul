@@ -353,12 +353,25 @@ def onCapitalMoved(city):
 	checkName(city.getOwner())
 
 
-@handler("BeginGameTurn")
-def checkTurn(iGameTurn):
-	if every(10):
+@handler("birth")
+def checkLeadersAndNamesOnPlayerBirth(iPlayer):
+	if player(iPlayer).isHuman():
 		for iPlayer in players.major():
 			checkName(iPlayer)
 			checkLeader(iPlayer)
+
+@handler("BeginGameTurn")
+def checkTurn(iGameTurn):
+	if autoplay():
+		if every(10):
+			for iPlayer in players.major():
+				# checkName(iPlayer)
+				checkLeader(iPlayer)
+	else:
+		if every(3):
+			for iPlayer in players.major():
+				checkName(iPlayer)
+				checkLeader(iPlayer)
 
 		
 def checkName(iPlayer):
