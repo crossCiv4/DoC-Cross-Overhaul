@@ -531,7 +531,6 @@ class Birth(object):
 			self.area += additionalPlots
 			self.area = self.area.unique()
 
-		# I'm not sure this does anything? It has a duplicate in flip()
 		elif self.iCiv == iRussia:
 			if player(iRussia).isHuman() or player(iRus).isHuman():
 				self.area = self.area.without(plots.rectangle(tNovgorod))
