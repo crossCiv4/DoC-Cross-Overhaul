@@ -72,7 +72,7 @@ dSpecificVassalTitles = deepdict({
 		iKhazars: "TXT_KEY_CIV_BYZANTINE_KHAZARS",
 	},
 	iNorse : {
-		iEngland : "TXT_KEY_CIV_NORSE_ENGLAND",
+		iSaxons : "TXT_KEY_CIV_NORSE_ENGLAND",
 		iRussia : "TXT_KEY_CIV_NORSE_RUSSIA",
 	},
 	iArabia : {

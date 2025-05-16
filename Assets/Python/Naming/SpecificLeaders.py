@@ -472,6 +472,13 @@ def chinaLeaderName(args):
 		elif data.civs[args.iCiv].iAnarchyTurns > 0:
 			return "TXT_KEY_LEADER_GAOZU"
 
+def rusLeaderName(args):
+	if args.iLeader == iYaroslav:
+		if getColumn(player(args.iPlayer).getID()) >= 8:
+			return "TXT_KEY_LEADER_YAROSLAV"
+		else:
+			return "TXT_KEY_LEADER_RURIK"
+
 dSpecificLeaderNames = CivDict({
 	iManchu: manchuLeaderName,
 	iShu: shuLeaderName,
@@ -484,4 +491,5 @@ dSpecificLeaderNames = CivDict({
 	iTurks: turksLeaderName,
 	iYamato: yamatoLeaderName,
 	iChina: chinaLeaderName,
+	iRus: rusLeaderName,
 })

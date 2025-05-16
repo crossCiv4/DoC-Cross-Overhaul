@@ -61,7 +61,7 @@ dLanguages = CivDict({
 	iHolyRome: [iLangGerman],
 	iBurma: [iLangBurmese, iLangIndian],
 	iVietnam: [iLangVietnamese, iLangChinese],
-	iRus: [iLangRuthenian, iLangRussian],
+	iRus: [iLangNorse, iLangRuthenian, iLangRussian, iLangByzantine], # starts out as Norse
 	iSwahili: [iLangArabic],
 	iMali: [iLangMande],
 	iPoland: [iLangPolish, iLangRussian], 
@@ -287,6 +287,8 @@ def getIndiaLanguages(playerId):
 def getRusLanguages(playerId):
     if player(playerId).getPeriod() == iPeriodUkraine:
         return [iLangUkrainian, iLangRussian, iLangRuthenian]
+    elif getColumn(player(playerId).getID()) >= 8:
+        return [iLangRuthenian, iLangRussian, iLangNorse, iLangByzantine]
     return None
 
 def getShuLanguages(playerId):

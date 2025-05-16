@@ -3,7 +3,8 @@
         "appenddict",
         "deepdict",
         "UNITAI",
-        "UNITCOMBAT"
+        "UNITCOMBAT",
+        "Yaroslav"
     ],
     "python.analysis.extraPaths": [
         "./Assets/Python/Naming",

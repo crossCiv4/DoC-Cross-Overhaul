@@ -19,9 +19,9 @@ import CvScreensInterface
 MainOpt = BugCore.game.MainInterface
 
 
-lExpandedFlipCivs = [
-	#iByzantium
-]
+# lExpandedFlipCivs = [
+# 	#iByzantium
+# ]
 
 sExpansionCivs = set([
 	iPersia,
@@ -62,6 +62,7 @@ sIndependenceCivs = set([
 	iHolyRome,
 	iVandals,
 	iBuyids,
+	iRussia
 ])
 
 sDynamicReligionCivs = set([
@@ -500,18 +501,18 @@ class Birth(object):
 		if self.player.getNumCities() == 0:
 			setDesc(self.iPlayer, peoplesName(self.iPlayer))
 		
-	# does this only apply to independence civs?
+	# does this only apply to independence civs --> yes! see the last line of def flippedArea(self):
 	def updateArea(self):
 		# unused for now, but could be handy later
-		if self.iCiv in lExpandedFlipCivs:
-			owners = self.area.cities().owners().major()
-			ownerCities = cities.all().area(self.location).where(lambda city: city.getOwner() in owners).where(lambda city: not plot(city).isPlayerCore(city.getOwner()))
-			closerCities = ownerCities.where(lambda city: real_distance(city, self.location) <= real_distance(city, capital(city)))
+		# if self.iCiv in lExpandedFlipCivs:
+		# 	owners = self.area.cities().owners().major()
+		# 	ownerCities = cities.all().area(self.location).where(lambda city: city.getOwner() in owners).where(lambda city: not plot(city).isPlayerCore(city.getOwner()))
+		# 	closerCities = ownerCities.where(lambda city: real_distance(city, self.location) <= real_distance(city, capital(city)))
 			
-			additionalPlots = closerCities.plots().expand(2).where(lambda p: p.getOwner() in owners and none(p.isPlayerCore(iPlayer) for iPlayer in players.major().existing().without(self.iPlayer)))
+		# 	additionalPlots = closerCities.plots().expand(2).where(lambda p: p.getOwner() in owners and none(p.isPlayerCore(iPlayer) for iPlayer in players.major().existing().without(self.iPlayer)))
 			
-			self.area += additionalPlots
-			self.area = self.area.unique()
+		# 	self.area += additionalPlots
+		# 	self.area = self.area.unique()
 		
 		# simplified version of the above that only applies to Rome
 		# also consider the "capital" to be Milan even if that isn't the case
@@ -815,6 +816,8 @@ class Birth(object):
 				return False
 			elif player(iRome).isHuman() and stability(iRome) == iStabilitySolid:
 				return False
+			
+			return True # ignore the "independence civ" check for can spawn
 
 		if self.iCiv == iChina:
 			if player(iXia).isHuman() and stability(iXia) == iStabilitySolid:
@@ -1171,9 +1174,7 @@ class Birth(object):
 			self.bFlip = True
 	
 	def flippedArea(self):
-		if self.iCiv == iRussia and (player(iRussia).isHuman() or player(iRus).isHuman()):
-			return plots.birth(self.iPlayer).without(plots.rectangle(tNovgorod))
-		elif self.iCiv == iVandals or self.iCiv == iEngland:
+		if self.iCiv == iVandals or self.iCiv == iEngland:
 			return plots.birth(self.iPlayer)
 
 		return self.isIndependence() and self.area or plots.birth(self.iPlayer)
