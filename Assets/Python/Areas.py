@@ -63,7 +63,7 @@ iSweden : 		(73, 71), # Birka
 iCongo : 		(71, 25), # Mbanza Kongo
 iIran : 		(93, 48), # Esfahan
 iNetherlands :	(62, 65), # Amsterdam
-iGermany : 		(70, 63), # Berlin
+iGermany : 		(69, 63), # Berlin
 iAmerica :		(29, 54), # Washington
 iArgentina :	(38, 13), # Buenos Aires
 iMexico :		(17, 43), # Mexico City
@@ -170,7 +170,7 @@ iTibet :		((105, 47),	(117, 53)),
 iBulgaria:		((73, 55),  (78, 58)),
 iMoors :		((54, 42),	(64, 53)),
 iJava :			((125, 24),	(128, 25)),
-iHolyRome :		((64, 58),	(73, 61)),
+iHolyRome :		((64, 58),	(73, 63)),
 iBurma :		((115, 38),	(119, 44)),
 iRus :			((78, 61),	(89, 70)),
 iPortugal :		((52, 48),	(55, 52)),

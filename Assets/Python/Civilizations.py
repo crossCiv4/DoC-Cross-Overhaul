@@ -395,7 +395,7 @@ lCivilizations = [
 		iAdvancedStartPoints=100,
 		iStateReligion=iOrthodoxy,
 		lCivics=[iMonarchy, iCitizenship, iSlavery, iRedistribution, iClergy, iThalassocracy],
-		techs=techs.column(5).including(iArchitecture, iPolitics, iEthics, iArtisanry, iLateenSails)
+		techs=techs.column(5).including(iArchitecture, iPolitics, iEthics, iArtisanry)
 	),
 	Civilization(
 		iVandals,

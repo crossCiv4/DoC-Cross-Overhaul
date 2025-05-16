@@ -8,7 +8,7 @@ from DynamicCivs import getColumn
 
 ### CONSTANTS ###
 
-iNumLanguages = 57
+iNumLanguages = 58
 (iLangAmerican, iLangArabic, iLangBabylonian, iLangBurmese, iLangByzantine, 
 iLangCeltic, iLangChinese, iLangCongolese, iLangDutch, iLangEgyptian, 
 iLangEgyptianArabic, iLangEnglish, iLangEthiopian, iLangFrench, iLangGerman, 
@@ -18,7 +18,7 @@ iLangMayan, iLangMongolian, iLangNahuatl, iLangNorse, iLangNubian,
 iLangPersian, iLangPhoenician, iLangPolish, iLangPolynesian, iLangPortuguese, 
 iLangQuechua, iLangRussian, iLangSpanish, iLangSwedish, iLangThai, 
 iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian, 
-iLangArmenian, iLangDanish, iLangParthian, iLangVedic, iLangUkrainian, iLangNanman, iLangAncientChinese, iLangSaxon, iLangPakistani, iLangBrazilPortuguese, iLangModernJapanese, iLangModernChinese) = range(iNumLanguages)
+iLangArmenian, iLangDanish, iLangParthian, iLangVedic, iLangUkrainian, iLangNanman, iLangAncientChinese, iLangSaxon, iLangPakistani, iLangBrazilPortuguese, iLangModernJapanese, iLangModernChinese, iLangModernGerman) = range(iNumLanguages)
 
 dLanguages = CivDict({
 	iEgypt:	[iLangEgyptian],
@@ -56,7 +56,7 @@ dLanguages = CivDict({
 	iJava: [iLangIndonesian, iLangKhmer],
 	iSpain: [iLangSpanish],
 	iFrance: [iLangFrench],
-	iEngland: [iLangEnglish, iLangFrench],
+	iEngland: [iLangEnglish, iLangFrench, iLangModernGerman],
 	iSaxons: [iLangSaxon, iLangEnglish, iLangGerman],
 	iHolyRome: [iLangGerman],
 	iBurma: [iLangBurmese, iLangIndian],
@@ -77,9 +77,9 @@ dLanguages = CivDict({
 	iOttomans: [iLangTurkish, iLangArabic, iLangFarsi, iLangByzantine],
 	iCongo: [iLangCongolese],
 	iIran: [iLangFarsi, iLangPersian, iLangArabic, iLangTurkish],
-	iNetherlands: [iLangDutch, iLangGerman],
-	iGermany: [iLangGerman, iLangDutch],
-	iAmerica: [iLangAmerican, iLangEnglish],
+	iNetherlands: [iLangDutch, iLangModernGerman, iLangGerman],
+	iGermany: [iLangModernGerman, iLangGerman, iLangDutch, iLangEnglish],
+	iAmerica: [iLangAmerican, iLangEnglish, iLangSpanish, iLangFrench, iLangModernGerman, iLangGerman],
 	iArgentina: [iLangSpanish],
 	iMexico: [iLangSpanish],
 	iColombia: [iLangSpanish],
@@ -172,6 +172,7 @@ dLanguageNames = {
 	iLangBrazilPortuguese: "BrazilPortuguese",
 	iLangModernJapanese: "ModernJapanese",
 	iLangModernChinese: "ModernChinese",
+    iLangModernGerman: "ModernGerman",
 }
 
 dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames[iLanguage])) for iLanguage in range(iNumLanguages))

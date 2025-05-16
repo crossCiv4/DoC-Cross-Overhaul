@@ -79,10 +79,9 @@ tCholaSumatraBR = (121, 31)
 # currently inactive
 tConquestCholaSumatra = (8, iDravidia, iMalays, tCholaSumatraTL, tCholaSumatraBR, 1, iCholaSumatraYear, 10)
 
-# Don't conquer the south of Al-Andalus, focus on the east coast
 iSpainMoorsYear = 1250
-tSpainMoorsTL = (58, 49)
-tSpainMoorsBR = (62, 53)
+tSpainMoorsTL = (55, 48)
+tSpainMoorsBR = (61, 50)
 
 tConquestSpainMoors = (9, iSpain, iMoors, tSpainMoorsTL, tSpainMoorsBR, 1, iSpainMoorsYear, 10)
 

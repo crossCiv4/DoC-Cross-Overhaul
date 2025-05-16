@@ -882,6 +882,22 @@
 		<Spanish>Tai</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_KALABHRA</Tag>
+		<English>Kalabhra</English>
+		<French>Kalabhra</French>
+		<German>Kalabhra</German>
+		<Italian>Kalabhra</Italian>
+		<Spanish>Kalabhra</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_PALLAVA</Tag>
+		<English>Pallava</English>
+		<French>Pallava</French>
+		<German>Pallava</German>
+		<Italian>Pallava</Italian>
+		<Spanish>Pallava</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_TANGUT</Tag>
 		<English>Tangut</English>
 		<French>Tangut</French>
