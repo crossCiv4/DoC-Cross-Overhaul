@@ -844,7 +844,7 @@ dGoals = {
 		BuildingCount(sum(iOrthodoxCathedral, iCatholicCathedral, iProtestantCathedral).named(CHRISTIAN_CATHEDRALS), 3, by=1600),
 	),
 	iPortugal: (
-		WaterAreaPercent(plots.regions(*lIndianTradeRegions).expand(1).regions(rAtlanticOcean, rIndianOcean, rArabianSea).named(INDIAN_TRADE_ROUTE), 35, by=1550),
+		WaterAreaPercent(plots.regions(*lIndianTradeRegions).expand(1).regions(rAtlanticOcean, rIndianOcean, rArabianSea).named(INDIAN_TRADE_ROUTE), 35),
 		OpenBorderCount(14, by=1600),
 		ResourceCount(sum(lColonialResources).named(TRADING_COMPANY_RESOURCES), 12, by=1650),
 	),
