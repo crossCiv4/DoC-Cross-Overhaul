@@ -7348,6 +7348,10 @@
 					<UnitClassType>UNITCLASS_ARCHER</UnitClassType>
 					<UnitType>UNIT_SHU_NANMAN_ARCHER</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_CONFUCIAN_MISSIONARY</UnitClassType>
+					<UnitType>UNIT_CONFUCIAN_MISSIONARY_SHU</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
