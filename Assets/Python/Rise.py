@@ -58,7 +58,7 @@ sIndependenceCivs = set([
 	iSpain,
 	iGreece,
 	iGhorids,
-	iByzantium,
+	#iByzantium,
 	iHolyRome,
 	iVandals,
 	iBuyids,
