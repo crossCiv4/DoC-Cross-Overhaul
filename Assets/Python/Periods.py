@@ -99,7 +99,7 @@ def evacuate(iPlayer):
 def onBirth(iPlayer):
 	iCiv = civ(iPlayer)
 
-	if iCiv == iFrance:
+	if iCiv == iFranks:
 		setPeriod(iCelts, iPeriodInsularCelts)
 	elif iCiv == iGermany:
 		setPeriod(iHolyRome, iPeriodAustria)

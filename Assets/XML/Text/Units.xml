@@ -3988,6 +3988,14 @@
 		<Spanish>Assault Infantry</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_FRANKISH_AXEMAN</Tag>
+		<English>Francisca Axeman</English>
+		<French>Francisca Axeman</French>
+		<German>Francisca Axeman</German>
+		<Italian>Francisca Axeman</Italian>
+		<Spanish>Francisca Axeman</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
 		<English></English>
 		<French></French>

@@ -8,7 +8,7 @@ from DynamicCivs import getColumn
 
 ### CONSTANTS ###
 
-iNumLanguages = 58
+iNumLanguages = 59
 (iLangAmerican, iLangArabic, iLangBabylonian, iLangBurmese, iLangByzantine, 
 iLangCeltic, iLangChinese, iLangCongolese, iLangDutch, iLangEgyptian, 
 iLangEgyptianArabic, iLangEnglish, iLangEthiopian, iLangFrench, iLangGerman, 
@@ -18,7 +18,7 @@ iLangMayan, iLangMongolian, iLangNahuatl, iLangNorse, iLangNubian,
 iLangPersian, iLangPhoenician, iLangPolish, iLangPolynesian, iLangPortuguese, 
 iLangQuechua, iLangRussian, iLangSpanish, iLangSwedish, iLangThai, 
 iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian, 
-iLangArmenian, iLangDanish, iLangParthian, iLangVedic, iLangUkrainian, iLangNanman, iLangAncientChinese, iLangSaxon, iLangPakistani, iLangBrazilPortuguese, iLangModernJapanese, iLangModernChinese, iLangModernGerman) = range(iNumLanguages)
+iLangArmenian, iLangDanish, iLangParthian, iLangVedic, iLangUkrainian, iLangNanman, iLangAncientChinese, iLangSaxon, iLangPakistani, iLangBrazilPortuguese, iLangModernJapanese, iLangModernChinese, iLangModernGerman, iLangFrankish) = range(iNumLanguages)
 
 dLanguages = CivDict({
 	iEgypt:	[iLangEgyptian],
@@ -54,7 +54,7 @@ dLanguages = CivDict({
 	iKhmer: [iLangKhmer, iLangIndonesian],
 	iMoors: [iLangArabic],
 	iJava: [iLangIndonesian, iLangKhmer],
-	iSpain: [iLangSpanish],
+	iSpain: [iLangSpanish, iLangPortuguese],
 	iFrance: [iLangFrench],
 	iEngland: [iLangEnglish, iLangFrench, iLangModernGerman],
 	iSaxons: [iLangSaxon, iLangEnglish, iLangGerman],
@@ -97,13 +97,14 @@ dLanguages = CivDict({
 	iNigeria: [iLangMande, iLangArabic],
 	iZulu: [iLangMande, iLangEnglish],
 	iTunis: [iLangArabic, iLangEgyptianArabic, iLangMande],
-	iVandals: [iLangByzantine, iLangGerman, iLangLatin],
+	iVandals: [iLangFrankish, iLangByzantine, iLangGerman, iLangLatin],
 	iMorocco: [iLangArabic, iLangFarsi, iLangMande],
 	iYemen: [iLangArabic, iLangFarsi, iLangMande],
 	iOman: [iLangArabic, iLangFarsi, iLangMande],
 	iBuyids: [iLangFarsi, iLangArabic, iLangTurkish, iLangPersian],
 	iYamato: [iLangJapanese, iLangChinese],
 	iManchu: [iLangModernChinese, iLangChinese, iLangMongolian, iLangTurkish, iLangKorean],
+    iFranks: [iLangFrankish, iLangFrench, iLangLatin, iLangSaxon, iLangGerman],
 
 }, [])
 
@@ -173,6 +174,7 @@ dLanguageNames = {
 	iLangModernJapanese: "ModernJapanese",
 	iLangModernChinese: "ModernChinese",
     iLangModernGerman: "ModernGerman",
+    iLangFrankish: "Frankish",
 }
 
 dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames[iLanguage])) for iLanguage in range(iNumLanguages))
@@ -332,6 +334,12 @@ def getGreekLanguages(playerId):
 		return [iLangByzantine, iLangGreek]
 	return None
 
+def getSpanishLanguages(playerId):
+	# Visigothic Spain
+	if not team(playerId).isHasTech(iNobility):
+		return [iLangFrankish, iLangLatin, iLangByzantine, iLangSpanish]
+	return None
+
 # Define a CivDict mapping civilizations to their special language logic
 dSpecialLanguages = CivDict({
     iInca: getIncaLanguages,
@@ -350,6 +358,7 @@ dSpecialLanguages = CivDict({
     iXia: getXiaLanguages,
     iYamato: getYamatoLanguages,
     iGreece: getGreekLanguages,
+    iSpain: getSpanishLanguages,
 })
 
 def getSpecialLanguages(playerId):

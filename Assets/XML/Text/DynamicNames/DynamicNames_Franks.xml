@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FRANCIA_DESC</Tag>
+		<English>The Franks</English>
+		<French>The Franks</French>
+		<German>The Franks</German>
+		<Italian>The Franks</Italian>
+		<Spanish>The Franks</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FRANCIA_PEOPLES</Tag>
+		<English>Salian Frankish Peoples</English>
+		<French>Salian Frankish Peoples</French>
+		<German>Salian Frankish Peoples</German>
+		<Italian>Salian Frankish Peoples</Italian>
+		<Spanish>Salian Frankish Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FRANCIA_ADJECTIVE</Tag>
+		<English>Frankish</English>
+		<French>
+			<Text>franc:franque:francs:franques</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Frankish</German>
+		<Italian>Frankish</Italian>
+		<Spanish>Frankish</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FRANCIA_SHORT_DESC</Tag>
+		<English>Francia</English>
+		<French>
+			<Text>Francie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Francia</German>
+		<Italian>Francia</Italian>
+		<Spanish>Francia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FRANCIA_DEFAULT</Tag>
+		<English>%s2 Kingdom</English>
+		<French>%s2 Kingdom</French>
+		<German>%s2 Kingdom</German>
+		<Italian>%s2 Kingdom</Italian>
+		<Spanish>%s2 Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FRANCIA_LOTHARINGIA</Tag>
+		<English>Lotharingia</English>
+		<French>Lotharingia</French>
+		<German>Lotharingia</German>
+		<Italian>Lotharingia</Italian>
+		<Spanish>Lotharingia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FRANCIA_LOTHARINGIAN</Tag>
+		<English>Lotharingian</English>
+		<French>Lotharingian</French>
+		<German>Lotharingian</German>
+		<Italian>Lotharingian</Italian>
+		<Spanish>Lotharingian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FRANCIA_CAROLINGIAN</Tag>
+		<English>Carolingian</English>
+		<French>Carolingian</French>
+		<German>Carolingian</German>
+		<Italian>Carolingian</Italian>
+		<Spanish>Carolingian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FRANCIA_VASSAL</Tag>
+		<English>%s2 March</English>
+		<French>%s2 March</French>
+		<German>%s2 March</German>
+		<Italian>%s2 March</Italian>
+		<Spanish>%s2 March</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FRANKISH_HOLY_ROME</Tag>
+		<English>East Francia</English>
+		<French>
+			<Text>Francie orientale</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>East Francia</German>
+		<Italian>East Francia</Italian>
+		<Spanish>East Francia</Spanish>
+	</TEXT>
+</Civ4GameText>

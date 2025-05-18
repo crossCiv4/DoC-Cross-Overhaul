@@ -76,7 +76,7 @@ lCivilizations = [
 		techs=techs.column(6)
 	),
 	Civilization(
-		iFrance,
+		iFranks,
 		iGold=150,
 		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy, iHegemony],

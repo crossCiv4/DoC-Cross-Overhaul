@@ -247,10 +247,10 @@ tPomeraniaBR = (72, 65)
 tConquestSwedenPomerania = (47, iSweden, iHolyRome, tPomeraniaTL, tPomeraniaBR, 2, iSwedenPomeraniaYear, 5)
 
 iCharlemagneYear = 770
-tGermanyCharlemagneTL = (64, 59)
-tGermanyCharlemagneBR = (70, 65)
+tCharlemagneTL = (59, 55)
+tCharlemagneBR = (70, 65)
 
-tConquestFranceGermanyCharlemagne = (48, iFrance, iSaxons, tGermanyCharlemagneTL, tGermanyCharlemagneBR, 3, iCharlemagneYear, 5)
+tConquestCharlemagne = (48, iFranks, iSaxons, tCharlemagneTL, tCharlemagneBR, 5, iCharlemagneYear, 5)
 
 iArabEgyptConquestYear = 645
 tConquestArabiaEgypt = (49, iArabia, iEgypt, tEgyptTL, tEgyptBR, 2, iArabEgyptConquestYear, 10)
@@ -312,7 +312,7 @@ lConquests = [
 	#tConquestRomeDacia,
 	tConquestItalyCrete,
 	tConquestSwedenPomerania,
-	tConquestFranceGermanyCharlemagne,
+	tConquestCharlemagne,
 	#tConquestArabiaEgypt, --> not useful since Arabia flips Egypt, but used as a check for the conquest of Carthage, so Byz can block it by conquering a city in Egypt
 	tConquestManchuTaiwan,
 ]

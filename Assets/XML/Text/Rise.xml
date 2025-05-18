@@ -114,8 +114,16 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_RISE_CHI</Tag>
+		<Tag>TXT_KEY_MESSAGE_RISE_XIA</Tag>
 		<English>First kingdoms are starting to develop along the Yellow River.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_RISE_CHI</Tag>
+		<English>The rules of Qin are gathering their forces for a unification of China!</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -130,8 +138,24 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_RISE_SAX</Tag>
+		<English>Germanic tribes are about to migrate across the North Sea, fleeing incursions from other tribes and worsening climatic conditions.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_RISE_ENG</Tag>
-		<English>The rulers of Wessex are close to unifying all the Anglo-Saxons in England into one kingdom.</English>
+		<English>The Normans are about to embark on a conquest of England.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_RISE_PAR</Tag>
+		<English>Parni steppe nomads are making incursions in the satrapy of Parthia.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -146,8 +170,16 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_RISE_FRK</Tag>
+		<English>The Salian Franks are taking advantage of the weakness and chaos in the West to carve out their own empire.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_RISE_FRA</Tag>
-		<English>The ascent of the Carolingian dynasty is transforming the kingdom of the Franks into a Frankish Empire.</English>
+		<English>Succession conflicts are making a unified Frankish Empire untenable, and its western parts are looking for their own ruler.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -155,7 +187,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_RISE_HRE</Tag>
-		<English>Succession conflicts are making a unified Frankish Empire untenable, and its German parts are looking for their own ruler.</English>
+		<English>Succession conflicts are making a unified Frankish Empire untenable, and its eastern parts are looking for their own ruler.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -163,7 +195,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_RISE_GRE</Tag>
-		<English>Mycenaean city states are beginning to develop around the coast of the Aegean.</English>
+		<English>Minoan city states are beginning to develop in Crete.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

@@ -42,10 +42,10 @@ dDefaultInsertAdjectives = {
 }
 
 
-lRepublicOf = set([iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis, iMorocco, iYemen, iOman, iZulu, iMalays, iMoors])
+lRepublicOf = set([iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis, iMorocco, iYemen, iOman, iZulu, iMalays, iMoors, iFranks])
 lRepublicAdj = set([iBabylonia, iRome, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons, iYamato, iManchu])
 
-lSocialistRepublicOf = set([iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis, iMorocco, iYemen, iOman])
+lSocialistRepublicOf = set([iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis, iMorocco, iYemen, iOman, iFranks])
 lSocialistRepublicAdj = set([iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina])
 
 lPeoplesRepublicOf = set([iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria, iMalays, iZulu])
@@ -122,7 +122,8 @@ dStartingLeaders = [
 	iMoors : iRahman,
 	iJava : iHayamWuruk,
 	iSpain : iTheodoric,
-	iFrance : iCharlemagne,
+	iFranks : iCharlemagne,
+	iFrance: iPhilipAugustus,
 	iEngland : iWilliamConqueror,
 	iSaxons: iWidukind,
 	iHolyRome : iBarbarossa,
@@ -771,14 +772,18 @@ def leader(iPlayer):
 	if player(iPlayer).isHuman(): return None
 	
 	if iCiv in dSpecificLeaders:
-		return dSpecificLeaders[iCiv](DynamicNameArgs(iPlayer))
-		
-	return startingLeader(iPlayer)
+		iLeader = dSpecificLeaders[iCiv](DynamicNameArgs(iPlayer))
+		if not iLeader: return startingLeader(iPlayer)
+		else: return iLeader
+	else:	
+		return startingLeader(iPlayer)
 		
 def leaderName(iPlayer):
 	iCiv = civ(iPlayer)
 
 	if iCiv in dSpecificLeaderNames:
-		return dSpecificLeaderNames[iCiv](DynamicNameArgs(iPlayer))
-
-	return None
+		leaderName = dSpecificLeaderNames[iCiv](DynamicNameArgs(iPlayer))
+		if not leaderName: return None
+		else: return leaderName
+	else:
+		return None

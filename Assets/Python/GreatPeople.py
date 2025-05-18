@@ -81,7 +81,8 @@ dGreatPeopleAliases = CivDict({
 	iTunis: iMoors,
 	iMorocco: iMoors,
 	iVandals: iRome,
-	iYamato: iJapan
+	iYamato: iJapan,
+	iFranks: iFrance,
 })
 
 def getType(iUnit):

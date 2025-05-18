@@ -940,7 +940,19 @@ def expelUnits(iPlayer, area, excluded_area = None):
 			
 			if seaUnits:
 				moveDomainUnits(iPlayer, iOwner, seaUnits, possibleDestinations.coastal().closest(plot))
-				
+
+# used: Rise
+def flipUnits(iPlayer, area, excluded_area = None):
+	if excluded_area is None:
+		excluded_area = area
+
+	for plot in area:
+		for iOwner, ownerUnits in units.at(plot).notowner(iPlayer).grouped(lambda unit: unit.getOwner()):
+			ownerUnits = ownerUnits.where(lambda unit: not unit.isNone())
+
+			for unit in ownerUnits:
+				flipUnit(unit, iPlayer, plot)
+
 # used: RFCUtils
 def moveDomainUnits(iPlayer, iOwner, units, destination):
 	if not is_minor(iOwner) and destination:

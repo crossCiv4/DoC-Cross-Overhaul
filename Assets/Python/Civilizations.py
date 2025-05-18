@@ -398,6 +398,13 @@ lCivilizations = [
 		techs=techs.column(5).including(iArchitecture, iPolitics, iEthics, iArtisanry)
 	),
 	Civilization(
+		iFranks,
+		iGold=150,
+		iAdvancedStartPoints=75,
+		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iDeification, iHegemony],
+		techs=techs.column(5).including(iSteel, iArtisanry)
+	),
+	Civilization(
 		iVandals,
 		iGold=100,
 		lEnemies=[iRome, iPhoenicia, iIndependent, iIndependent2],
@@ -408,20 +415,15 @@ lCivilizations = [
 		iSaxons,
 		iGold=100,
 		lEnemies=[iRome, iIndependent, iIndependent2],
-		lCivics=[iElective, iSlavery, iMerchantTrade, iThalassocracy],
+		lCivics=[iElective, iSlavery, iMerchantTrade, iDeification, iThalassocracy],
 		techs=techs.column(5).including(iArtisanry, iSteel, iPolitics, iConsensus, iEthics)
 	),
 	Civilization(
 		iSpain,
 		iGold=150,
-		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy, iHegemony],
+		lEnemies=[iFranks, iVandals, iIndependent, iIndependent2],
+		lCivics=[iMonarchy, iSlavery, iMerchantTrade, iDeification, iHegemony],
 		techs=techs.column(5).including(iPolitics, iEthics, iArtisanry, iConsensus, iSteel)
-	),
-	Civilization(
-		iFrance,
-		iGold=150,
-		lCivics=[iMonarchy, iManorialism, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(5).including(iPolitics, iEthics, iArtisanry)
 	),
 	Civilization(
 		iMalays,
@@ -499,6 +501,14 @@ lCivilizations = [
 		iGold=200,
 		lCivics=[iElective, iSlavery, iMerchantTrade, iThalassocracy],
 		techs=techs.column(6).including(iLateenSails, iConsensus, iNobility)
+	),
+	Civilization(
+		iFrance,
+		iGold=150,
+		iAdvancedStartPoints=60,
+		iStateReligion=iCatholicism,
+		lCivics=[iMonarchy, iVassalage, iManorialism, iMerchantTrade, iClergy, iHegemony],
+		techs=techs.column(6).including(iCivilService, iNobility, iTheology, iLateenSails)
 	),
 	Civilization(
 		iHolyRome,
@@ -1006,14 +1016,23 @@ dStartingUnits = CivDict({
 		iAssaultSea: 1,
 		iWorkerSea: 1,
 	},
-	iFrance: {
-		iSettle: 2,
+	iFranks: {
+		iSettle: 1,
 		iWork: 2,
 		iDefend: 3,
-		iCounter: 3,
-		iAttack: 2,
+		iSkirmish: 2,
 		iSiege: 2,
-		iShock: 2,
+		iShock: 3,
+		iAttack: 3,
+		iCounter: 1,
+		iWorkerSea: 1,
+	},
+	iFrance: {
+		iSettle: 4,
+		iWork: 2,
+		iDefend: 4,
+		iCounter: 3,
+		iShock: 5,
 	},
 	iMalays: {
 		iSettle: 1,
@@ -1097,12 +1116,14 @@ dStartingUnits = CivDict({
 	iMoors: {
 		iSettle: 3,
 		iWork: 1,
-		iDefend: 1,
-		iCounter: 2,
+		iDefend: 2,
+		iCounter: 3,
 		iMissionary: 4,
 		iWorkerSea: 1,
 		iFerry: 1,
 		iEscort: 1,
+		iHarass: 2,
+		iSiege: 1,
 	},
 	iJava : {
 		iSettle: 1,
@@ -1125,9 +1146,9 @@ dStartingUnits = CivDict({
 	iSpain: {
 		iSettle: 2,
 		iWork: 2,
-		iDefend: 2,
-		iShock: 3,
-		iAttack: 4,
+		iShock: 1,
+		iAttack: 1,
+		iCounter: 2,
 	},
 	iBulgaria: {
 		iSettle: 3,
@@ -1151,8 +1172,6 @@ dStartingUnits = CivDict({
 		iSettle: 3,
 		iWork: 2,
 		iDefend: 3,
-		iCityAttack: 3,
-		iShockCity: 2,
 		iMissionary: 1,
 	},
 	iBurma: {
@@ -1214,7 +1233,7 @@ dStartingUnits = CivDict({
 	iMorocco: {
 		iSettle: 2,
 		iWork: 1,
-		iSiege: 2,
+		iSiege: 3,
 		iAssaultSea: 1,
 		iEscort: 1,
 		iCounter: 2,
@@ -1387,7 +1406,8 @@ dStartingUnits = CivDict({
 	iGermany: {
 		iSettle: 4,
 		iWork: 2,
-		iAttack: 3,
+		iAttack: 4,
+		iShock: 2,
 		iDefend: 2,
 		iSiege: 3,
 		iMissionary: 2,
@@ -1542,11 +1562,12 @@ dExtraAIUnits = CivDict({
 		iEscort: 2,
 		iFerry: 3,
 	},
-	iFrance: {
+	iFranks: {
 		iAttack: 3,
-		iCounter: 1,
-		iDefend: 4,
+		iCounter: 2,
+		iDefend: 3,
 		iShock: 2,
+		iSiege: 2,
 	},
 	iEngland: {
 		iShockCity: 2,
@@ -1718,9 +1739,14 @@ dAdditionalUnits = CivDict({
 		iAttack: 1,
 		iCounter: 2,
 	},
+	iFranks : {
+		iDefend: 1,
+		iAttack: 2,
+	},
 	iFrance: {
 		iDefend: 3,
-		iAttack: 3,
+		iAttack: 1,
+		iShock: 1,
 	},
 	iNorse: {
 		# 3 Huscarls
@@ -1739,8 +1765,8 @@ dAdditionalUnits = CivDict({
 		iHarass: 2,
 	},
 	iSpain: {
-		iDefend: 3,
-		iAttack: 3,
+		iDefend: 1,
+		#iAttack: 3,
 	},
 	iEngland: {
 		#iDefend: 3,
@@ -1749,7 +1775,7 @@ dAdditionalUnits = CivDict({
 	},
 	iHolyRome: {
 		iDefend: 3,
-		iAttack: 3,
+		iAttack: 2,
 	},
 	iPoland: {
 		iDefend: 2,
@@ -1929,8 +1955,10 @@ def createSpecificUnits(iPlayer, tile):
 		makeUnits(iPlayer, iAlbionLegion, tile, 5).experience(2)
 	elif iCiv == iParthia:
 		makeUnits(iPlayer, iHorseArcher, tile, 5)
-	elif iCiv == iFrance:
-		makeUnits(iPlayer, iAxeman, tile, 5)
+	elif iCiv == iFranks:
+		makeUnits(iPlayer, iComitatus, tile, 4)
+	elif iCiv == iSpain:
+		makeUnits(iPlayer, iComitatus, tile, 2)
 	elif iCiv == iTimurids:
 		makeUnits(iPlayer, iKeshik, tile, 12)
 	elif iCiv == iRus:
@@ -2310,6 +2338,26 @@ dTechPreferences = {
 	},
 	iNigeria : {
 		iDoctrine: 10,
+	},
+	iFranks: {
+		iNobility: 30,
+		iCivilService: 15,
+		iReplaceableParts: 5,
+		iLogistics: 15,
+		iMeasurement: 10,
+		iAcademia: 20,
+		iEducation: 15,
+		iChemistry: 35,
+		iSociology: 15,
+		iFission: 12,
+		iReligiousOrders: 15,
+		iNationalism: 15,
+		iRepresentation: 10,
+		iSocialContract: 10,
+		iBallistics: 10,
+		iRailroad: 5,
+		iSelectiveBreeding: 15,
+		iPsychology: -5,
 	},
 	iFrance : {
 		iCivilService: 15,
@@ -2707,6 +2755,7 @@ dDefaultWonderPreferences = {
 	iArabia: -15,
 	iMamluks: -15,
 	iJava: -15,
+	iFranks: -12,
 	iFrance: -12,
 	iKhmer: -15,
 	iEngland: -12,
@@ -2990,6 +3039,25 @@ dBuildingPreferences = {
 		iSistineChapel: -20,
 		iSaintSophia: -50,
 		iNarekavank: -30,
+	},
+	iFranks : {
+		iTradingCompanyBuilding: 40,
+		iNotreDame: 40,
+		iEiffelTower: 30,
+		iVersailles: 30,
+		iLouvre: 30,
+		iTriumphalArch: 30,
+		iMetropolitain: 30,
+		iCERN: 30,
+		iKrakDesChevaliers: 30,
+		iChannelTunnel: 30,
+		iPalaceOfNations: 20,
+		iBerlaymont: 20,
+		iLargeHadronCollider: 20,
+		iITER: 20,
+		iSaintPeters: 20,
+		iMountAthos: -20,
+		iHagiaSophia: -20,
 	},
 	iFrance : {
 		iTradingCompanyBuilding: 40,

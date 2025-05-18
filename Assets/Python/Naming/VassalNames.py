@@ -150,6 +150,10 @@ dSpecificVassalTitles = deepdict({
 		iTunis: "TXT_KEY_CIV_TUNIS_PROTECTORATE",
 		iIroquois: "TXT_KEY_CIV_NORTH_AMERICA",
 	},
+    iFranks : {
+        iFrance : "TXT_KEY_CIV_HOLY_ROMAN_FRANCE",
+		iHolyRome : "TXT_KEY_CIV_FRANKISH_HOLY_ROME",
+	},
 	iHolyRome : {
 		iItaly : "TXT_KEY_CIV_HOLY_ROMAN_ITALY",
 		iFrance : "TXT_KEY_CIV_HOLY_ROMAN_FRANCE",
@@ -272,6 +276,7 @@ dMasterTitles = {
 	iRussia : "TXT_KEY_CIV_RUSSIAN_VASSAL",
 	iOttomans : "TXT_KEY_CIV_OTTOMAN_VASSAL",
 	iThailand : "TXT_KEY_CIV_THAI_VASSAL",
+    iFranks : "TXT_KEY_CIV_FRANCIA_VASSAL",
 }
 
 dCommunistVassalTitlesGeneric = {

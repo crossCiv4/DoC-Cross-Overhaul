@@ -26,6 +26,7 @@ dRelocatedCapitals = CivDict({
 	iYamato : (137, 53), # Kyoto
 	iTurks : (92, 50), # Hamadan
 	iManchu: tBeijing,
+	iFranks : (65, 62),	# Aachen (Cologne site)
 })
 
 dCapitalInfrastructure = CivDict({
@@ -495,7 +496,6 @@ def removeSeaPeopleBoatsOnPhoenicianSpawn(iPlayer):
 
 @handler("birth")
 def romanRelations(iPlayer):
-
 	# Rome should dislike Celts on spawn, due to perception of barbarian status + their historical sack of Rome
 	if civ(iPlayer) == iRome and player(iCelts).isExisting():
 		iRomePlayer = slot(iRome)
@@ -505,6 +505,13 @@ def romanRelations(iPlayer):
 		iRomePlayer = slot(iRome)
 		player(iRomePlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 4)
 		player(iPlayer).AI_changeMemoryCount(iRomePlayer, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 4)
+
+@handler("birth")
+def frankishRelations(iPlayer):
+	# Rome has positive initial relations with Franks
+	if civ(iPlayer) == iFranks and player(iRome).isExisting():
+		iRomePlayer = slot(iRome)
+		player(iRomePlayer).AI_changeMemoryCount(iFranks, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 2)
 
 # Northern China is upset at the south for rejecting imperial rule in Chang'an / Luoyang
 # This is to prevent the two Chinas from getting friendly and tech trading etc

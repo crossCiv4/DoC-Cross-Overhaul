@@ -174,7 +174,7 @@ def spainLeader(args):
 	if any(data.dFirstContactConquerors.values()):
 		return iPhilip
 	if args.tPlayer.isHasTech(iNobility):
-		return iPhilipAugustus
+		return iIsabella
 
 def franceLeader(args):
 	if getColumn(args.iPlayer) >= 17:
@@ -183,8 +183,6 @@ def franceLeader(args):
 		return iNapoleon
 	if args.iEra >= iRenaissance:
 		return iLouis
-	if args.tPlayer.isHasTech(iSelectiveBreeding):
-		return iPhilipAugustus
 
 def englandLeader(args):
 	if args.iEra >= iGlobal:
@@ -447,7 +445,7 @@ def zuluLeaderName(args):
 
 def armeniaLeaderName(args):
 	if args.iLeader == iAshot:
-		if args.bResurrected and args.iEra == iMedieval:
+		if args.bResurrected and args.iEra >= iMedieval:
 			return "TXT_KEY_LEADER_DAVID_IV"
 		else:
 			return "TXT_KEY_LEADER_ASHOT"
@@ -477,7 +475,7 @@ def rusLeaderName(args):
 		if getColumn(player(args.iPlayer).getID()) >= 8:
 			return "TXT_KEY_LEADER_YAROSLAV"
 		else:
-			return "TXT_KEY_LEADER_RURIK"
+			return "TXT_KEY_LEADER_OLEG"
 
 dSpecificLeaderNames = CivDict({
 	iManchu: manchuLeaderName,

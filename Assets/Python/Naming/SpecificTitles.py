@@ -426,7 +426,7 @@ def spainTitle(args):
 			return "TXT_KEY_CIV_SPAIN_CROWN_OF"
 
 def franceTitle(args):
-	if args.capital not in cities.core(iFrance):
+	if args.iEra >= iIndustrial and args.capital not in cities.core(iFrance):
 		return "TXT_KEY_CIV_FRANCE_EXILE"
 	if args.iEra >= iIndustrial and args.bEmpire:
 		return "TXT_KEY_EMPIRE_ADJECTIVE"
@@ -550,6 +550,10 @@ def saxonsTitle(args):
 	if args.tPlayer.isHasTech(iNobility):
 		return "TXT_KEY_KINGDOM_OF"
 
+def franksTitle(args):
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
 dSpecificTitles = CivDict({
 	iEgypt: egyptTitle,
 	iRus: rusTitle,
@@ -609,6 +613,7 @@ dSpecificTitles = CivDict({
 	iPoland: polandTitle,
 	iHolyRome: holyRomeTitle,
 	iSaxons: saxonsTitle,
+	iFranks: franksTitle,
 })
 
 # Civs which are missing (never had specific titles):

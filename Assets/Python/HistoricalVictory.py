@@ -49,6 +49,7 @@ VIENNA = "TXT_KEY_VICTORY_NAME_VIENNA"
 TARNOVO = "TXT_KEY_VICTORY_NAME_TARNOVO"
 MYCENAE = "TXT_KEY_VICTORY_NAME_MYCENAE"
 BAGHDAD = "TXT_KEY_VICTORY_NAME_BAGHDAD"
+AACHEN = "TXT_KEY_VICTORY_NAME_AACHEN"
 
 # city descriptors
 ANOTHER_CAPITAL = "TXT_KEY_VICTORY_NAME_ANOTHER_CAPITAL"
@@ -554,7 +555,7 @@ dGoals = {
 		# Defeat Charlemagne --> Shed the Blood of the Frankish Men
 		All(
 			AreaNoStateReligion(plots.region(rLowerGermany), iOrthodoxy, at=810),
-			DefeatedUnits(civs(iFrance), 5, by=810),
+			DefeatedUnits(civs(iFranks), 5, by=810),
 		),
 
 		#Thanes
@@ -565,6 +566,14 @@ dGoals = {
 			Control(plots.rectangle(tEngland).named(ENGLAND), at=750),
 			Control(plots.rectangle(tEngland).named(ENGLAND), at=900),
 			Control(plots.rectangle(tEngland).named(ENGLAND), at=1200),
+		),
+	),
+	iFranks: (
+		Found(iCatholicism),
+		AreaPercent(plots.regions(*lEuropeProper).named(EUROPE), 25, subject=VASSALS),
+		All(
+			BuildingCount((iCatholicShrine, 1)),
+			CityBuilding(city((65, 62)).named(AACHEN), iPalace, iCarolingianLibrary, iCatholicMonastery, iCatholicCathedral),
 		),
 	),
 	iFrance: (
@@ -844,7 +853,7 @@ dGoals = {
 		BuildingCount(sum(iOrthodoxCathedral, iCatholicCathedral, iProtestantCathedral).named(CHRISTIAN_CATHEDRALS), 3, by=1600),
 	),
 	iPortugal: (
-		WaterAreaPercent(plots.regions(*lIndianTradeRegions).expand(1).regions(rAtlanticOcean, rIndianOcean, rArabianSea).named(INDIAN_TRADE_ROUTE), 35),
+		WaterAreaPercent(plots.regions(*lIndianTradeRegions).expand(1).regions(rAtlanticOcean, rIndianOcean, rArabianSea).named(INDIAN_TRADE_ROUTE), 30),
 		OpenBorderCount(14, by=1600),
 		ResourceCount(sum(lColonialResources).named(TRADING_COMPANY_RESOURCES), 12, by=1650),
 	),

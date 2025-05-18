@@ -122,30 +122,6 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_FRANCE_FRANCIA</Tag>
-		<English>Francia</English>
-		<French>
-			<Text>Francie</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Francia</German>
-		<Italian>Francia</Italian>
-		<Spanish>Francia</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_FRANCE_FRANKISH</Tag>
-		<English>Frankish</English>
-		<French>
-			<Text>franc:franque:francs:franques</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>Frankish</German>
-		<Italian>Frankish</Italian>
-		<Spanish>Frankish</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_FRANCE_EXILE</Tag>
 		<English>Free %s1</English>
 		<French>

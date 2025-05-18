@@ -201,9 +201,9 @@ def spainSpecificName(args):
 	if not bSpain:
 		return "TXT_KEY_CIV_SPAIN_CASTILE"
 
-def franceSpecificName(args):
-	if args.iEra < iRenaissance and not player(iHolyRome).isExisting():
-		return "TXT_KEY_CIV_FRANCE_FRANCIA"
+def franksSpecificName(args):
+    if year() >= year(dBirth[iHolyRome]):
+        return "TXT_KEY_CIV_FRANCIA_LOTHARINGIA"
 
 def englandSpecificName(args):
 	if getColumn(args.iPlayer) >= 12 and 1 < cities.region(rBritain) <= cities.region(rBritain).owner(args.iPlayer):
@@ -280,7 +280,7 @@ dSpecificNames =  CivDict({
 	iGhorids: ghoridsSpecificName,
 	iJava: javaSpecificName,
 	iSpain: spainSpecificName,
-	iFrance: franceSpecificName,
+	iFranks: franksSpecificName,
 	iEngland: englandSpecificName,
 	iHolyRome: holyRomeSpecificName,
 	iInca: incaSpecificName,

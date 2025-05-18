@@ -278,17 +278,17 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_FRANCE
+		UnitOwner=CIVILIZATION_FRANKS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_FRANCE
+		CityOwner=CIVILIZATION_FRANKS
 		CityName=Burdigala
 		CityPopulation=2
 		BuildingType=BUILDING_BARRACKS
 		BuildingType=BUILDING_GRANARY
 		ReligionType=RELIGION_CATHOLICISM
 		BeginCulture
-			Civilization=CIVILIZATION_FRANCE, Culture=10
+			Civilization=CIVILIZATION_FRANKS, Culture=10
 		EndCulture
 		YearFounded=-300
 		YearAcquired=400
@@ -346,45 +346,45 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_FRANCE
+		UnitOwner=CIVILIZATION_FRANKS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_FRANCE
+		UnitOwner=CIVILIZATION_FRANKS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_HEAVY_SPEARMAN
-		UnitOwner=CIVILIZATION_FRANCE
+		UnitOwner=CIVILIZATION_FRANKS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_HEAVY_SPEARMAN
-		UnitOwner=CIVILIZATION_FRANCE
+		UnitOwner=CIVILIZATION_FRANKS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_SWORDSMAN
-		UnitOwner=CIVILIZATION_FRANCE
+		UnitOwner=CIVILIZATION_FRANKS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_SWORDSMAN
-		UnitOwner=CIVILIZATION_FRANCE
+		UnitOwner=CIVILIZATION_FRANKS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_WORKER
-		UnitOwner=CIVILIZATION_FRANCE
+		UnitOwner=CIVILIZATION_FRANKS
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_WORKER
-		UnitOwner=CIVILIZATION_FRANCE
+		UnitOwner=CIVILIZATION_FRANKS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_FRANCE
+		CityOwner=CIVILIZATION_FRANKS
 		CityName=Paris
 		CityPopulation=4
 		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_GRANARY
 		ReligionType=RELIGION_CATHOLICISM
 		BeginCulture
-			Civilization=CIVILIZATION_FRANCE, Culture=50
+			Civilization=CIVILIZATION_FRANKS, Culture=50
 		EndCulture
 		YearFounded=-250
 		YearAcquired=500
@@ -397,10 +397,10 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_FRANCE
+		UnitOwner=CIVILIZATION_FRANKS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_FRANCE
+		CityOwner=CIVILIZATION_FRANKS
 		CityName=Lyon
 		CityPopulation=3
 		BuildingType=BUILDING_GRANARY
@@ -408,7 +408,7 @@ BeginPlot
 		ReligionType=RELIGION_JUDAISM
 		ReligionType=RELIGION_CATHOLICISM
 		BeginCulture
-			Civilization=CIVILIZATION_FRANCE, Culture=10
+			Civilization=CIVILIZATION_FRANKS, Culture=10
 		EndCulture
 		YearFounded=-40
 		YearAcquired=400

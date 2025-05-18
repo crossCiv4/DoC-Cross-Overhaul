@@ -8,9 +8,9 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 88
+iNumCivs = 89
 (iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iBuyids, iByzantium, iCanada, 
-iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iGermany, iGhorids,
+iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iFranks, iGermany, iGhorids,
 iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, iKhazars,
 iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iManchu, iMaya, iMexico, iMinoans, iMongols, iMoors, iMorocco,
 iTimurids, iNetherlands, iNigeria, iNorse, iNubia, iOman, iOttomans, iParthia, iPersia, iPoland, iPolynesia, iPortugal, 
@@ -54,6 +54,7 @@ dCivNames = {
 	iEngland: "England",
 	iEthiopia: "Ethiopia",
 	iFrance: "France",
+	iFranks: "Franks",
 	iGermany: "Germany",
 	iGreece: "Greece",
 	iHarappa: "Harappa",
@@ -167,6 +168,7 @@ iTibet :		((111, 47),	(114, 49)),
 iMalays :		((119, 24),	(128, 28)),
 iMoors :		((56, 44),	(61, 50)),
 iSpain :		((54, 51),	(59, 54)),
+iFranks :		((60, 62),	(65, 63)),
 iFrance :		((59, 56),	(63, 62)),
 iSaxons :		((57, 62),	(59, 67)),
 iKhmer :		((120, 34),	(123, 38)),

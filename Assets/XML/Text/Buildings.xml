@@ -3457,6 +3457,14 @@
 		<Italian>Examination Hall</Italian>
 		<Spanish>Examination Hall</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CAROLINGIAN_LIBRARY</Tag>
+		<English>Carolingian Scriptorium</English>
+		<French>Carolingian Scriptorium</French>
+		<German>Carolingian Scriptorium</German>
+		<Italian>Carolingian Scriptorium</Italian>
+		<Spanish>Carolingian Scriptorium</Spanish>
+	</TEXT>
 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_</Tag>

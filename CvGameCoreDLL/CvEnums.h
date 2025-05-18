@@ -1199,6 +1199,7 @@ enum CivilizationTypes		// Exposed to Python
 	ENGLAND,
 	ETHIOPIA, 
 	FRANCE,
+	FRANKS,
 	GERMANY,
 	GHORIDS,
 

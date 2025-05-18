@@ -295,9 +295,11 @@ def spainSpecificAdjective(args):
     if not bSpain:
         return "TXT_KEY_CIV_SPAIN_CASTILIAN"
 
-def franceSpecificAdjective(args):
-    if year() < year(dBirth[iHolyRome]):
-        return "TXT_KEY_CIV_FRANCE_FRANKISH"
+def franksSpecificAdjective(args):
+    if year() >= year(dBirth[iHolyRome]):
+        return "TXT_KEY_CIV_FRANCIA_LOTHARINGIAN"
+    elif args.tPlayer.isHasTech(iNobility):
+        return "TXT_KEY_CIV_FRANCIA_CAROLINGIAN" 
 
 def khmerSpecificAdjective(args):
     if args.bMonarchy:
@@ -403,7 +405,7 @@ dSpecificAdjectives = CivDict({
     iTurks: turksSpecificAdjective,
     iArabia: arabiaSpecificAdjective,
     iSpain: spainSpecificAdjective,
-    iFrance: franceSpecificAdjective,
+    iFranks: franksSpecificAdjective,
     iKhmer: khmerSpecificAdjective,
     iEngland: englandSpecificAdjective,
     iHolyRome: holyRomeSpecificAdjective,

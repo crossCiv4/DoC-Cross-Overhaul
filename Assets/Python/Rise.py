@@ -41,7 +41,7 @@ sExpansionCivs = set([
 	iGhorids,
 	iChina,
 	iAssyria,
-	iFrance,
+	iFranks,
 	iEngland,
 	iBuyids,
 	iManchu,
@@ -523,10 +523,10 @@ class Birth(object):
 			self.area += additionalPlots
 			self.area = self.area.unique()
 
-		# idem but HRE with France. We use the middle of France as the comparison point
+		# idem but HRE with Franks. We use the mid-right of France as the comparison point
 		elif self.iCiv == iHolyRome:
-			closerCities = cities.owner(iFrance).where(lambda city: real_distance(city, self.location) <= real_distance(city, (61, 57)))
-			additionalPlots = closerCities.plots().expand(2).where(lambda p: p.getOwner() == player(iFrance).getID())
+			closerCities = cities.owner(iFranks).where(lambda city: real_distance(city, self.location) <= real_distance(city, (63, 60)))
+			additionalPlots = closerCities.plots().expand(1).where(lambda p: p.getOwner() == player(iFranks).getID())
 
 			self.area += additionalPlots
 			self.area = self.area.unique()
@@ -921,7 +921,7 @@ class Birth(object):
 			self.player.setAlive(True, True)
 		
 		# certain civs don't spawn in their core, and so they shouldn't purge the culture there on birth
-		if self.iCiv in [iEngland, iVandals]:
+		if self.iCiv in [iEngland, iVandals, iMamluks, iFrance, iHolyRome, iSpain]:
 			self.area = plots.birth(self.iPlayer)
 		else:
 			self.area = plots.birth(self.iPlayer) + plots.core(self.iPlayer)
@@ -1191,12 +1191,19 @@ class Birth(object):
 
 		# flippedPlayerCities = dict((p, format_separators(flippedCities.owner(p), ",", text("TXT_KEY_AND"), CyCity.getName)) for p in flippedCities.owners().major())
 
-		expelUnits(self.iPlayer, flippedPlots)
+
+		# division of the Carolingian Empire
+		if not self.iCiv in [iFrance, iHolyRome]:
+			expelUnits(self.iPlayer, flippedPlots)
 
 		for city in flippedCities:
 			city = completeCityFlip(city, self.iPlayer, city.getOwner(), 100, bFlipUnits=True)
 			
 			self.prepareCity(city)
+
+		# division of the Carolingian Empire
+		if self.iCiv in [iFrance, iHolyRome]:
+			flipUnits(self.iPlayer, flippedPlots)
 
 		convertSurroundingPlotCulture(self.iPlayer, flippedPlots.land() + flippedPlots.water().where(lambda p: p.getPlayerCityRadiusCount(self.iPlayer) > 0))
 		

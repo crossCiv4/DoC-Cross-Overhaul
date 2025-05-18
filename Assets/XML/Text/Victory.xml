@@ -3923,6 +3923,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_AACHEN</Tag>
+		<English>Aachen</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_BE_FIRST_ENTER</Tag>
 		<English>Be first to enter the %s1 era</English>
 		<French></French>

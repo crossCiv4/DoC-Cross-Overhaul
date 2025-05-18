@@ -1450,4 +1450,20 @@
 		<Italian>66% chance to convert defeated Chinese gunpowder units into Han Bannermen, likewise for steppe cavalry into Manchu Bannermen, and Chinese siege units</Italian>
 		<Spanish>66% chance to convert defeated Chinese gunpowder units into Han Bannermen, likewise for steppe cavalry into Manchu Bannermen, and Chinese siege units</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_FRK_TITLE</Tag>
+		<English>The Power of the New Roman Empire:</English>
+		<French>The Power of the New Roman Empire:</French>
+		<German>The Power of the New Roman Empire:</German>
+		<Italian>The Power of the New Roman Empire:</Italian>
+		<Spanish>The Power of the New Roman Empire:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_FRK</Tag>
+		<English>Extra commerce in your capital proportional to your city count</English>
+		<French>Extra commerce in your capital proportional to your city count</French>
+		<German>Extra commerce in your capital proportional to your city count</German>
+		<Italian>Extra commerce in your capital proportional to your city count</Italian>
+		<Spanish>Extra commerce in your capital proportional to your city count</Spanish>
+	</TEXT>
 </Civ4GameText>

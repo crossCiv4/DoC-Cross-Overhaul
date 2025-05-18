@@ -203,3 +203,11 @@ def VandalPower(iOwner, iPlayer, city, bConquest):
 def VandalPower(iOwner, iPlayer, city, bConquest):
 	if civ(iPlayer) == iMorocco and bConquest and player(iPlayer).getCurrentEra() < iRenaissance:
 		makeUnits(iMorocco, iCamelLancer, city, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+
+@handler("BeginGameTurn")
+def frankishPower(iGameTurn):
+	# get one extra commerce in your capital for each city you own
+	if player(iFranks).isAlive():
+		capital = player(iFranks).getCapitalCity()
+		if capital:
+			capital.setBuildingCommerceChange(infos.building(iPalace).getBuildingClassType(), CommerceTypes.COMMERCE_GOLD, player(iFranks).getNumCities())

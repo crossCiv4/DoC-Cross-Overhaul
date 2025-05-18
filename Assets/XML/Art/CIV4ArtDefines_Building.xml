@@ -4137,5 +4137,15 @@
 			<KFM/>
 			<Button>Art/Structures/Buildings/EU3_FarEAst_Admiralty/manchu_examination_hall_btn.dds</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CAROLINGIAN_LIBRARY</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>20</fScale>
+			<fInterfaceScale>3</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Library and Mage College/HumanLibrary.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Library and Mage College/btn_carolingianLibrary.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

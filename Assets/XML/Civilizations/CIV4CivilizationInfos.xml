@@ -2349,7 +2349,7 @@
 			<PaganReligion>PAGAN_RELIGION_DRUIDISM</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>FRA</Identifier>
-			<StartingYear>496</StartingYear>
+			<StartingYear>843</StartingYear>
 			<LoadingTimes>
 				<LoadingTime>5</LoadingTime>
 				<LoadingTime>0</LoadingTime>
@@ -2431,10 +2431,6 @@
 			</InitialCivics>
 			<Leaders>
 				<Leader>
-					<LeaderName>LEADER_CHARLEMAGNE</LeaderName>
-					<bLeaderAvailability>1</bLeaderAvailability>
-				</Leader>
-				<Leader>
 					<LeaderName>LEADER_PHILIP_AUGUSTUS</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
@@ -2454,6 +2450,105 @@
 			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_FRANCE_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_FRANCE_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_FRANKS</Type>
+			<Description>TXT_KEY_CIV_FRANCIA_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_FRANCIA_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_FRANCIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_FRANCIA_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_EMERALD_ORANGE</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_FRANKS</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_ASATRU</PaganReligion>
+			<Impact>IMPACT_CRITICAL</Impact>
+			<Identifier>FRK</Identifier>
+			<StartingYear>380</StartingYear>
+			<LoadingTimes>
+				<LoadingTime>5</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+			</LoadingTimes>
+			<Rating>
+				<Trade>3</Trade>
+				<Production>3</Production>
+				<Culture>4</Culture>
+				<Growth>4</Growth>
+				<Start>3</Start>
+			</Rating>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Chartres</City>
+				<City>Grenoble</City>
+				<City>Dijon</City>
+				<City>Carcassonne</City>
+				<City>Toulon</City>
+				<City>Caen</City>
+				<City>Arles</City>
+				<City>Le Havre</City>
+				<City>Montpellier</City>
+				<City>Le Mans</City>
+				<City>Nancy</City>
+				<City>Lille</City>
+				<City>Lourdes</City>
+				<City>Cannes</City>
+				<City>La Rochelle</City>
+				<City>Bourges</City>
+				<City>Saint &#201;tienne</City>
+			</Cities>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
+					<BuildingType>BUILDING_CAROLINGIAN_LIBRARY</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_ASATRU_HOF</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSE_ARCHER</UnitClassType>
+					<UnitType>UNIT_MOUNTED_CROSSBOWMAN</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_SWORDSMAN</UnitClassType>
+					<UnitType>UNIT_FRANKISH_AXEMAN</UnitType>
+				</Unit>
+			</Units>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_CHIEFDOM</CivicType>
+				<CivicType>CIVIC_PERSONALISM</CivicType>
+				<CivicType>CIVIC_TRADITIONALISM</CivicType>
+				<CivicType>CIVIC_RECIPROCITY</CivicType>
+				<CivicType>CIVIC_ANIMISM</CivicType>
+				<CivicType>CIVIC_KINSHIP</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_CHARLEMAGNE</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_FRANCE</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_HOLY_ROMAN_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_HOLY_ROMAN_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_GERMANY</Type>
@@ -3012,7 +3107,7 @@
 			<PaganReligion>PAGAN_RELIGION_ASATRU</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>HRE</Identifier>
-			<StartingYear>840</StartingYear>
+			<StartingYear>843</StartingYear>
 			<LoadingTimes>
 				<LoadingTime>6</LoadingTime>
 				<LoadingTime>2</LoadingTime>
@@ -6725,7 +6820,7 @@
 			<DefaultPlayerColor>PLAYERCOLOR_VERY_LIGHT_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_PORTUGAL</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_GRECO_ROMAN</UnitArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_DRUIDISM</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>POR</Identifier>
@@ -7393,8 +7488,8 @@
 			<Civilopedia>TXT_KEY_CIV_SPAIN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_YELLOW</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_SPAIN</ArtDefineTag>
-			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
-			<UnitArtStyleType>UNIT_ARTSTYLE_GRECO_ROMAN</UnitArtStyleType>
+			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
 			<PaganReligion>PAGAN_RELIGION_DRUIDISM</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>SPA</Identifier>
