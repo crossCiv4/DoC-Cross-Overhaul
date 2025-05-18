@@ -529,6 +529,7 @@ minor_cities = [
 	MinorCity(530, iIndependent, (54, 65), u"Áth Cliath", iPopulation=1, iCiv=iCelts, units={iDefend: 2}, condition=lambda: not player(iCelts).isExisting() and not player(iCelts).isHuman(), adjective="TXT_KEY_ADJECTIVE_IRISH"),
 	MinorCity(860, iBarbarian, (76, 59), u"Kolozsvár", iPopulation=3, iCiv=iTurks, units={iHarass: 3}, bIgnoreRuins=True, adjective="TXT_KEY_ADJECTIVE_MAGYAR"),
 	MinorCity(860, iIndependent2, (82, 68), u"Holmgarðr", iPopulation=1, iCiv=iRus, units={iDefend: 2}, condition=lambda: not player(iRus).isExisting() and not player(iNorse).isHuman(), adjective="TXT_KEY_CIV_RUS_ADJECTIVE"),
+	MinorCity(860, iIndependent, (68, 60), u"Regensburg", iPopulation=3, iCiv=iHolyRome, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
 	MinorCity(880, iIndependent, (81, 62), u"Kænugarðr", iPopulation=1, iCiv=iRus, units={iDefend: 2}, condition=lambda: not player(iRus).isExisting(), adjective="TXT_KEY_CIV_RUS_ADJECTIVE"),
 	MinorCity(900, iNative, (27, 28), u"Túcume", iPopulation=1, iCiv=iInca, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_CHIMU"),
 	MinorCity(900, iNative, (28, 25), "Chan Chan", iPopulation=2, iCiv=iInca, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_CHIMU"),

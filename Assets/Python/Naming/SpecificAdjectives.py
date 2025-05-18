@@ -296,7 +296,7 @@ def spainSpecificAdjective(args):
         return "TXT_KEY_CIV_SPAIN_CASTILIAN"
 
 def franksSpecificAdjective(args):
-    if year() >= year(dBirth[iHolyRome]):
+    if year() >= year(dBirth[iHolyRome]) and player(iHolyRome).isExisting() and player(iFrance).isExisting():
         return "TXT_KEY_CIV_FRANCIA_LOTHARINGIAN"
     elif args.tPlayer.isHasTech(iNobility):
         return "TXT_KEY_CIV_FRANCIA_CAROLINGIAN" 

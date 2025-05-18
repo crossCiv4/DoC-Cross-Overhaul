@@ -432,7 +432,7 @@ def franceTitle(args):
 		return "TXT_KEY_EMPIRE_ADJECTIVE"
 	if args.civic.iLegitimacy == iStratocracy:
 		return "TXT_KEY_EMPIRE_ADJECTIVE"
-	if not player(iHolyRome).isExisting() and args.iEra == iMedieval:
+	if not player(iHolyRome).isExisting() and not player(iFranks).isExisting() and args.iEra >= iMedieval:
 		return "TXT_KEY_EMPIRE_ADJECTIVE"
 
 def englandTitle(args):
