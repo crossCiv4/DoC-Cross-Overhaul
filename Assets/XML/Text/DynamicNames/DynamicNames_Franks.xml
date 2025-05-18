@@ -75,11 +75,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_FRANCIA_VASSAL</Tag>
-		<English>%s2 March</English>
-		<French>%s2 March</French>
-		<German>%s2 March</German>
-		<Italian>%s2 March</Italian>
-		<Spanish>%s2 March</Spanish>
+		<English>%s4 March</English>
+		<French>%s4 March</French>
+		<German>%s4 March</German>
+		<Italian>%s4 March</Italian>
+		<Spanish>%s4 March</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_FRANKISH_HOLY_ROME</Tag>
