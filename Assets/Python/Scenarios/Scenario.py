@@ -66,6 +66,7 @@ LEADER_DATES = {
 	iSriJayanasa: 700,
 	iTunPerak: 1450,
 	iKammu: 790,
+	iMinamoto: 1192,
 	iTokugawa: 1580,
 	iMeiji: 1870,
 	iRagnar: 800,

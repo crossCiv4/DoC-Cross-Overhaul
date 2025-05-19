@@ -539,27 +539,115 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SUN_QUAN</Tag>
-		<English>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_SUN_QUAN</English>
-		<French>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_SUN_QUAN</French>
-		<German>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_SUN_QUAN</German>
-		<Italian>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_SUN_QUAN</Italian>
-		<Spanish>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_SUN_QUAN</Spanish>
+		<English>Welcome to the court of the true Emperor of China, [CT_NAME]. Show reverence, and you shall be treated as kin. Show insolence, and be destroyed like the other usurpers!</English>
+		<French>Welcome to the court of the true Emperor of China, [CT_NAME]. Show reverence, and you shall be treated as kin. Show insolence, and be destroyed like the other usurpers!</French>
+		<German>Welcome to the court of the true Emperor of China, [CT_NAME]. Show reverence, and you shall be treated as kin. Show insolence, and be destroyed like the other usurpers!</German>
+		<Italian>Welcome to the court of the true Emperor of China, [CT_NAME]. Show reverence, and you shall be treated as kin. Show insolence, and be destroyed like the other usurpers!</Italian>
+		<Spanish>Welcome to the court of the true Emperor of China, [CT_NAME]. Show reverence, and you shall be treated as kin. Show insolence, and be destroyed like the other usurpers!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GAOZONG</Tag>
-		<English>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_GAOZONG</English>
-		<French>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_GAOZONG</French>
-		<German>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_GAOZONG</German>
-		<Italian>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_GAOZONG</Italian>
-		<Spanish>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_GAOZONG</Spanish>
+		<English>I am the [OUR_NAME] of the [OUR_EMPIRE], gleaming beacon of civilization. Speak quickly, for I have a retirement palace to build.</English>
+		<French>I am the [OUR_NAME] of the [OUR_EMPIRE], gleaming beacon of civilization. Speak quickly, for I have a retirement palace to build.</French>
+		<German>I am the [OUR_NAME] of the [OUR_EMPIRE], gleaming beacon of civilization. Speak quickly, for I have a retirement palace to build.</German>
+		<Italian>I am the [OUR_NAME] of the [OUR_EMPIRE], gleaming beacon of civilization. Speak quickly, for I have a retirement palace to build.</Italian>
+		<Spanish>I am the [OUR_NAME] of the [OUR_EMPIRE], gleaming beacon of civilization. Speak quickly, for I have a retirement palace to build.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CHIANG_KAISHEK</Tag>
-		<English>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_CHIANG_KAISHEK</English>
-		<French>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_CHIANG_KAISHEK</French>
-		<German>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_CHIANG_KAISHEK</German>
-		<Italian>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_CHIANG_KAISHEK</Italian>
-		<Spanish>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_CHIANG_KAISHEK</Spanish>
+		<English>As the leader of the [OUR_EMPIRE], I am here to bring you the blessings of the Three Principles of the People. We are a nation of peace and prosperity, and we will not tolerate any aggression against our sovereignty.</English>
+		<French>As the leader of the [OUR_EMPIRE], I am here to bring you the blessings of the Three Principles of the People. We are a nation of peace and prosperity, and we will not tolerate any aggression against our sovereignty.</French>
+		<German>As the leader of the [OUR_EMPIRE], I am here to bring you the blessings of the Three Principles of the People. We are a nation of peace and prosperity, and we will not tolerate any aggression against our sovereignty.</German>
+		<Italian>As the leader of the [OUR_EMPIRE], I am here to bring you the blessings of the Three Principles of the People. We are a nation of peace and prosperity, and we will not tolerate any aggression against our sovereignty.</Italian>
+		<Spanish>As the leader of the [OUR_EMPIRE], I am here to bring you the blessings of the Three Principles of the People. We are a nation of peace and prosperity, and we will not tolerate any aggression against our sovereignty.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_PTOLEMY_1</Tag>
+		<English>Welcome to the court of the Ptolemaic dynasty, [CT_NAME]. I am [OUR_NAME], true heir to Alexander's legacy.</English>
+		<French>Welcome to the court of the Ptolemaic dynasty, [CT_NAME]. I am [OUR_NAME], true heir to Alexander's legacy.</French>
+		<German>Welcome to the court of the Ptolemaic dynasty, [CT_NAME]. I am [OUR_NAME], true heir to Alexander's legacy.</German>
+		<Italian>Welcome to the court of the Ptolemaic dynasty, [CT_NAME]. I am [OUR_NAME], true heir to Alexander's legacy.</Italian>
+		<Spanish>Welcome to the court of the Ptolemaic dynasty, [CT_NAME]. I am [OUR_NAME], true heir to Alexander's legacy.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CHENG_TANG_1</Tag>
+		<English>Welcome to my heavenly court, [CT_NAME]. I am [OUR_NAME], and may everyone on the banks of the river know it.</English>
+		<French>Welcome to my heavenly court, [CT_NAME]. I am [OUR_NAME], and may everyone on the banks of the river know it.</French>
+		<German>Welcome to my heavenly court, [CT_NAME]. I am [OUR_NAME], and may everyone on the banks of the river know it.</German>
+		<Italian>Welcome to my heavenly court, [CT_NAME]. I am [OUR_NAME], and may everyone on the banks of the river know it.</Italian>
+		<Spanish>Welcome to my heavenly court, [CT_NAME]. I am [OUR_NAME], and may everyone on the banks of the river know it.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_LIU_BEI_1</Tag>
+		<English>Before you enter the [OUR_EMPIRE], [CT_NAME], be sure to leave your ill-fate expansionist designs at home.</English>
+		<French>Before you enter the [OUR_EMPIRE], [CT_NAME], be sure to leave your ill-fate expansionist designs at home.</French>
+		<German>Before you enter the [OUR_EMPIRE], [CT_NAME], be sure to leave your ill-fate expansionist designs at home.</German>
+		<Italian>Before you enter the [OUR_EMPIRE], [CT_NAME], be sure to leave your ill-fate expansionist designs at home.</Italian>
+		<Spanish>Before you enter the [OUR_EMPIRE], [CT_NAME], be sure to leave your ill-fate expansionist designs at home.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABU_KARIB_1</Tag>
+		<English>Come, [CT_NAME], and sample our incense. I am [OUR_NAME], the [OUR_CIV_ADJ] people are the greatest traders in the world. We have much to discuss.</English>
+		<French>Come, [CT_NAME], and sample our incense. I am [OUR_NAME], the [OUR_CIV_ADJ] people are the greatest traders in the world. We have much to discuss.</French>
+		<German>Come, [CT_NAME], and sample our incense. I am [OUR_NAME], the [OUR_CIV_ADJ] people are the greatest traders in the world. We have much to discuss.</German>
+		<Italian>Come, [CT_NAME], and sample our incense. I am [OUR_NAME], the [OUR_CIV_ADJ] people are the greatest traders in the world. We have much to discuss.</Italian>
+		<Spanish>Come, [CT_NAME], and sample our incense. I am [OUR_NAME], the [OUR_CIV_ADJ] people are the greatest traders in the world. We have much to discuss.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ARWA_AL_SULAYHI_1</Tag>
+		<English>Give reverence to me, [OUR_NAME], the living image of God's will.</English>
+		<French>Give reverence to me, [OUR_NAME], the living image of God's will.</French>
+		<German>Give reverence to me, [OUR_NAME], the living image of God's will.</German>
+		<Italian>Give reverence to me, [OUR_NAME], the living image of God's will.</Italian>
+		<Spanish>Give reverence to me, [OUR_NAME], the living image of God's will.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_AL_SALLAL_1</Tag>
+		<English>I am [OUR_NAME], revolutionary protector of the [OUR_CIV_ADJ] people. Intervene in our affairs at your peril, [CT_NAME].</English>
+		<French>I am [OUR_NAME], revolutionary protector of the [OUR_CIV_ADJ] people. Intervene in our affairs at your peril, [CT_NAME].</French>
+		<German>I am [OUR_NAME], revolutionary protector of the [OUR_CIV_ADJ] people. Intervene in our affairs at your peril, [CT_NAME].</German>
+		<Italian>I am [OUR_NAME], revolutionary protector of the [OUR_CIV_ADJ] people. Intervene in our affairs at your peril, [CT_NAME].</Italian>
+		<Spanish>I am [OUR_NAME], revolutionary protector of the [OUR_CIV_ADJ] people. Intervene in our affairs at your peril, [CT_NAME].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SELEUCUS_1</Tag>
+		<English>Welcome to the court of the Seleucid Dynasty, [CT_NAME]. I am [OUR_NAME]. If you oppose the unification of Alexander's Empire, I will have you trampled by elephants.</English>
+		<French>Welcome to the court of the Seleucid Dynasty, [CT_NAME]. I am [OUR_NAME]. If you oppose the unification of Alexander's Empire, I will have you trampled by elephants.</French>
+		<German>Welcome to the court of the Seleucid Dynasty, [CT_NAME]. I am [OUR_NAME]. If you oppose the unification of Alexander's Empire, I will have you trampled by elephants.</German>
+		<Italian>Welcome to the court of the Seleucid Dynasty, [CT_NAME]. I am [OUR_NAME]. If you oppose the unification of Alexander's Empire, I will have you trampled by elephants.</Italian>
+		<Spanish>Welcome to the court of the Seleucid Dynasty, [CT_NAME]. I am [OUR_NAME]. If you oppose the unification of Alexander's Empire, I will have you trampled by elephants.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GAISERIC_1</Tag>
+		<English>The seas can be dangerous this time of year, [CT_NAME]. You might get shipwrecked without the friendship of the [OUR_EMPIRE].</English>
+		<French>The seas can be dangerous this time of year, [CT_NAME]. You might get shipwrecked without the friendship of the [OUR_EMPIRE].</French>
+		<German>The seas can be dangerous this time of year, [CT_NAME]. You might get shipwrecked without the friendship of the [OUR_EMPIRE].</German>
+		<Italian>The seas can be dangerous this time of year, [CT_NAME]. You might get shipwrecked without the friendship of the [OUR_EMPIRE].</Italian>
+		<Spanish>The seas can be dangerous this time of year, [CT_NAME]. You might get shipwrecked without the friendship of the [OUR_EMPIRE].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_THEODORIC_1</Tag>
+		<English>Ave Caesar, [CT_NAME]. I am [OUR_NAME], ever-loyal friend of the Roman people, and ruler of the [OUR_CIV_ADJ] people. Now what is it you wanted to talk about?</English>
+		<French>Ave Caesar, [CT_NAME]. I am [OUR_NAME], ever-loyal friend of the Roman people, and ruler of the [OUR_CIV_ADJ] people. Now what is it you wanted to talk about?</French>
+		<German>Ave Caesar, [CT_NAME]. I am [OUR_NAME], ever-loyal friend of the Roman people, and ruler of the [OUR_CIV_ADJ] people. Now what is it you wanted to talk about?</German>
+		<Italian>Ave Caesar, [CT_NAME]. I am [OUR_NAME], ever-loyal friend of the Roman people, and ruler of the [OUR_CIV_ADJ] people. Now what is it you wanted to talk about?</Italian>
+		<Spanish>Ave Caesar, [CT_NAME]. I am [OUR_NAME], ever-loyal friend of the Roman people, and ruler of the [OUR_CIV_ADJ] people. Now what is it you wanted to talk about?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_WIDUKIND_1</Tag>
+		<English>Greetings, foreigner, I am [OUR_NAME], picked leader of the [OUR_EMPIRE]. Respect our Great Tree, or hang from it.</English>
+		<French>Greetings, foreigner, I am [OUR_NAME], picked leader of the [OUR_EMPIRE]. Respect our Great Tree, or hang from it.</French>
+		<German>Greetings, foreigner, I am [OUR_NAME], picked leader of the [OUR_EMPIRE]. Respect our Great Tree, or hang from it.</German>
+		<Italian>Greetings, foreigner, I am [OUR_NAME], picked leader of the [OUR_EMPIRE]. Respect our Great Tree, or hang from it.</Italian>
+		<Spanish>Greetings, foreigner, I am [OUR_NAME], picked leader of the [OUR_EMPIRE]. Respect our Great Tree, or hang from it.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ALFRED_1</Tag>
+		<English>I pray that your journey to my court was safe, [CT_NAME]. I am [OUR_NAME], King of the [OUR_CIV_SHORT].</English>
+		<French>I pray that your journey to my court was safe, [CT_NAME]. I am [OUR_NAME], King of the [OUR_CIV_SHORT].</French>
+		<German>I pray that your journey to my court was safe, [CT_NAME]. I am [OUR_NAME], King of the [OUR_CIV_SHORT].</German>
+		<Italian>I pray that your journey to my court was safe, [CT_NAME]. I am [OUR_NAME], King of the [OUR_CIV_SHORT].</Italian>
+		<Spanish>I pray that your journey to my court was safe, [CT_NAME]. I am [OUR_NAME], King of the [OUR_CIV_SHORT].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SHAPUR</Tag>
@@ -587,22 +675,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_TIGRANES_1</Tag>
-		<English>Welcome [CT_NAME]. I, [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]?</English>
-		<French>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</French>
-		<German>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</German>
-		<Italian>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</Italian>
-		<Spanish>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</Spanish>
-		<Russian>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</Russian>
-		<Japanese>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</Japanese>
-		<Chinese>Welcome [CT_NAME] I the god like [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</Chinese>
+		<English>Bear witness, [CT_NAME] to the rise of a new empire! Do not interfere in the designs of the divinely-inspired [OUR_NAME]!</English>
+		<French>Bear witness, [CT_NAME] to the rise of a new empire! Do not interfere in the designs of the divinely-inspired [OUR_NAME]!</French>
+		<German>Bear witness, [CT_NAME] to the rise of a new empire! Do not interfere in the designs of the divinely-inspired [OUR_NAME]!</German>
+		<Italian>Bear witness, [CT_NAME] to the rise of a new empire! Do not interfere in the designs of the divinely-inspired [OUR_NAME]!</Italian>
+		<Spanish>Bear witness, [CT_NAME] to the rise of a new empire! Do not interfere in the designs of the divinely-inspired [OUR_NAME]!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ASHOT_1</Tag>
-		<English>Welcome to our mountainous little kingdom, [CT_NAME]! I am king [OUR_NAME]. Now, go away!</English>
-		<French>Welcome to our mountainous little kingdom, [CT_NAME]! I am king [OUR_NAME]. Now, go away!</French>
-		<German>Welcome to our mountainous little kingdom, [CT_NAME]! I am king [OUR_NAME]. Now, go away!</German>
-		<Italian>Welcome to our mountainous little kingdom, [CT_NAME]! I am king [OUR_NAME]. Now, go away!</Italian>
-		<Spanish>Welcome to our mountainous little kingdom, [CT_NAME]! I am king [OUR_NAME]. Now, go away!</Spanish>
+		<English>Welcome to our home of hills and valleys, [CT_NAME]! I am [OUR_NAME], ruler of a people as unbreakable as the mountains!</English>
+		<French>Welcome to our home of hills and valleys, [CT_NAME]! I am [OUR_NAME], ruler of a people as unbreakable as the mountains!</French>
+		<German>Welcome to our home of hills and valleys, [CT_NAME]! I am [OUR_NAME], ruler of a people as unbreakable as the mountains!</German>
+		<Italian>Welcome to our home of hills and valleys, [CT_NAME]! I am [OUR_NAME], ruler of a people as unbreakable as the mountains!</Italian>
+		<Spanish>Welcome to our home of hills and valleys, [CT_NAME]! I am [OUR_NAME], ruler of a people as unbreakable as the mountains!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ANDRANIK_1</Tag>
@@ -614,27 +699,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MITHRIDATES_1</Tag>
-		<English>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_MITHRIDATES_1</English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
+		<English>Welcome [CT_NAME]. I, [OUR_NAME] of [OUR_EMPIRE] greet you. Shall we live in peace or shall the horsemen of the [OUR_CIV_SHORT] trample the armies of [CT_CIV_SHORT]?</English>
+		<French>Welcome [CT_NAME]. I, [OUR_NAME] of [OUR_EMPIRE] greet you. Shall we live in peace or shall the horsemen of the [OUR_CIV_SHORT] trample the armies of [CT_CIV_SHORT]?</French>
+		<German>Welcome [CT_NAME]. I, [OUR_NAME] of [OUR_EMPIRE] greet you. Shall we live in peace or shall the horsemen of the [OUR_CIV_SHORT] trample the armies of [CT_CIV_SHORT]?</German>
+		<Italian>Welcome [CT_NAME]. I, [OUR_NAME] of [OUR_EMPIRE] greet you. Shall we live in peace or shall the horsemen of the [OUR_CIV_SHORT] trample the armies of [CT_CIV_SHORT]?</Italian>
+		<Spanish>Welcome [CT_NAME]. I, [OUR_NAME] of [OUR_EMPIRE] greet you. Shall we live in peace or shall the horsemen of the [OUR_CIV_SHORT] trample the armies of [CT_CIV_SHORT]?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_AGAMEMNON_1</Tag>
-		<English>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_AGAMEMNON_1</English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
+		<English>Feast with me, [CT_NAME], but behave yourself, or I shall sail across any sea to raze your cities!</English>
+		<French>Feast with me, [CT_NAME], but behave yourself, or I shall sail across any sea to raze your cities!</French>
+		<German>Feast with me, [CT_NAME], but behave yourself, or I shall sail across any sea to raze your cities!</German>
+		<Italian>Feast with me, [CT_NAME], but behave yourself, or I shall sail across any sea to raze your cities!</Italian>
+		<Spanish>Feast with me, [CT_NAME], but behave yourself, or I shall sail across any sea to raze your cities!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ARIADNE_1</Tag>
-		<English>Placeholder for AI_DIPLO_FIRST_CONTACT_LEADER_ARIADNE_1</English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
+		<English>Welcome to our island, [CT_NAME], I am [OUR_NAME] of [OUR_EMPIRE]. Care for some wine or olive oil? I can have it shipped by the ton.</English>
+		<French>Welcome to our island, [CT_NAME], I am [OUR_NAME] of [OUR_EMPIRE]. Care for some wine or olive oil? I can have it shipped by the ton.</French>
+		<German>Welcome to our island, [CT_NAME], I am [OUR_NAME] of [OUR_EMPIRE]. Care for some wine or olive oil? I can have it shipped by the ton.</German>
+		<Italian>Welcome to our island, [CT_NAME], I am [OUR_NAME] of [OUR_EMPIRE]. Care for some wine or olive oil? I can have it shipped by the ton.</Italian>
+		<Spanish>Welcome to our island, [CT_NAME], I am [OUR_NAME] of [OUR_EMPIRE]. Care for some wine or olive oil? I can have it shipped by the ton.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BRIAN_BORU_1</Tag>
@@ -766,19 +851,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CONSTANTINE_1</Tag>
-		<English>Hail. It is I, [OUR_NAME] the Great. I think you'll find that there's nobody out there who's closer to God than me? Are you jealous yet?</English>
-		<French>Hail. It is I, [OUR_NAME] the Great. I think you'll find that there's nobody out there who's closer to God than me? Are you jealous yet?</French>
-		<German>Hail. It is I, [OUR_NAME] the Great. I think you'll find that there's nobody out there who's closer to God than me? Are you jealous yet?</German>
-		<Italian>Hail. It is I, [OUR_NAME] the Great. I think you'll find that there's nobody out there who's closer to God than me? Are you jealous yet?</Italian>
-		<Spanish>Hail. It is I, [OUR_NAME] the Great. I think you'll find that there's nobody out there who's closer to God than me? Are you jealous yet?</Spanish>
+		<English>Hail. It is I, [OUR_NAME]. I think you'll find that there's nobody out there who's closer to God than me.</English>
+		<French>Hail. It is I, [OUR_NAME]. I think you'll find that there's nobody out there who's closer to God than me.</French>
+		<German>Hail. It is I, [OUR_NAME]. I think you'll find that there's nobody out there who's closer to God than me.</German>
+		<Italian>Hail. It is I, [OUR_NAME]. I think you'll find that there's nobody out there who's closer to God than me.</Italian>
+		<Spanish>Hail. It is I, [OUR_NAME]. I think you'll find that there's nobody out there who's closer to God than me.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MARCUS_AURELIUS_1</Tag>
-		<English>Greetings, ruler. I am [OUR_NAME], Imperator of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</English>
-		<French>Greetings, ruler. I am [OUR_NAME], Imperator of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</French>
-		<German>Greetings, ruler. I am [OUR_NAME], Imperator of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</German>
-		<Italian>Greetings, ruler. I am [OUR_NAME], Imperator of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</Italian>
-		<Spanish>Greetings, ruler. I am [OUR_NAME], Imperator of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</Spanish>
+		<English>Greetings, [CT_NAME]. I am [OUR_NAME], Princeps of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</English>
+		<French>Greetings, [CT_NAME]. I am [OUR_NAME], Princeps of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</French>
+		<German>Greetings, [CT_NAME]. I am [OUR_NAME], Princeps of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</German>
+		<Italian>Greetings, [CT_NAME]. I am [OUR_NAME], Princeps of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</Italian>
+		<Spanish>Greetings, [CT_NAME]. I am [OUR_NAME], Princeps of [OUR_CIV_SHORT]. Our palace is magnificent, but let's set that aside for a second and meditate, shall we?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DJOSER_1</Tag>
