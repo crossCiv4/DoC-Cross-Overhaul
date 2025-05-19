@@ -8456,7 +8456,7 @@
 		<LeaderHeadInfo>
 			<Type>LEADER_SUN_QUAN</Type> <!-- like Qin Shi Huang but more militaristic, cultural -->
 			<Description>TXT_KEY_LEADER_SUN_QUAN</Description>
-			<Civilopedia>TXT_KEY_LEADER_SUN_QUAN_PEDIA</Civilopedia> <!-- FIXME entry missing-->
+			<Civilopedia>TXT_KEY_LEADER_SUN_QUAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_SUN_QUAN</ArtDefineTag>
 			<iWonderConstructRand>30</iWonderConstructRand>
 			<iBaseAttitude>0</iBaseAttitude>
