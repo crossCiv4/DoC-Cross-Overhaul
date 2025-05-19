@@ -102,8 +102,8 @@ def armenianUniquePower():
 		return
 
 	(tBLx, tBLy), (tTRx, tTRy) = dCoreArea[iArmenia]
-	for x in range(tBLx, tTRx):
-		for y in range(tBLy, tTRy):
+	for x in range(tBLx, tTRx+1):
+		for y in range(tBLy, tTRy+1):
 			pCurrentPlot = plot(x, y)
 			if (pCurrentPlot.getOwner() != -1 and civ(pCurrentPlot.getOwner()) == iArmenia):
 				for i in range(pCurrentPlot.getNumUnits()):
