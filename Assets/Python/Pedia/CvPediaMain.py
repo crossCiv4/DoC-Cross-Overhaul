@@ -524,13 +524,13 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
 
 	def placeTechs(self):
 		lTechs = []
-		dTechs = dict((iX, []) for iX in range(23))
+		dTechs = dict((iX, []) for iX in range(24))
 		
 		for iTech in range(gc.getNumTechInfos()):
 			techInfo = gc.getTechInfo(iTech)
 			dTechs[techInfo.getGridX()].append((techInfo.getGridY(), techInfo.getDescription(), iTech))
 		
-		for iX in range(23):
+		for iX in range(24):
 			if lTechs:
 				lTechs.append(("", -1))
 			
