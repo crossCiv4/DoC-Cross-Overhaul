@@ -18351,7 +18351,7 @@
 			<OrPrereqReligion>RELIGION_SHIA</OrPrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
 			<PrereqTech>TECH_CROP_ROTATION</PrereqTech>
-			<ObsoleteTech>TECH_GLOBALISM</ObsoleteTech>
+			<ObsoleteTech>TECH_GEOPOLITICS</ObsoleteTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>

@@ -427,7 +427,7 @@ HISTORIANS = {
 			"TXT_KEY_HISTORIAN_RINCHEN",
 		),
 	},
-	iMughals: {
+	iTimurids: {
 		iRenaissance: (
 			"TXT_KEY_HISTORIAN_BHANDARI",
 			"TXT_KEY_HISTORIAN_ABUL_FAZL",
