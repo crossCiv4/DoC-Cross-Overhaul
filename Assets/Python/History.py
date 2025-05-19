@@ -240,8 +240,8 @@ def createSilkRoute():
 
 ### BEGIN PLAYER TURN ###
 
-
-@handler("BeginPlayerTurn")
+# Disable this Leoreth event for now
+#@handler("BeginPlayerTurn")
 def earlyArmies(iGameTurn, iPlayer):
 	if iGameTurn == year(-1200):
 		if not player(iPlayer).isHuman():
