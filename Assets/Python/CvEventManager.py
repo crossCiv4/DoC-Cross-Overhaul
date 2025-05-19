@@ -13,7 +13,6 @@ import CvDebugTools
 import PyHelpers
 import Popup as PyPopup
 import CvCameraControls
-import CvTopCivs
 import sys
 import CvAdvisorUtils
 import CvPlatyBuilderSettings

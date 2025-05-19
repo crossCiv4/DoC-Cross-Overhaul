@@ -870,6 +870,10 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
+		<DefineName>TEMP_HAPPY_TURNS</DefineName>
+		<iDefineIntVal>10</iDefineIntVal>
+	</Define>
+	<Define>
 		<DefineName>BASE_WAR_WEARINESS_MULTIPLIER</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>

@@ -1145,6 +1145,7 @@ enum FontSymbols					// Exposed to Python
 	AIRPORT_CHAR,
 	CLEAN_POWER_CHAR,
 	SATELLITE_CHAR,
+	MILITARY_CHAR,
 
 #ifdef _USRDLL
 	MAX_NUM_SYMBOLS

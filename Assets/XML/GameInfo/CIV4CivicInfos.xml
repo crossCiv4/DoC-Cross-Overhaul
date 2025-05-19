@@ -1534,7 +1534,7 @@
 			<Description>TXT_KEY_CIVIC_MULTILATERALISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_MULTILATERALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_MULTILATERALISM_STRATEGY</Strategy>
-			<TechPrereq>TECH_GLOBALISM</TechPrereq>
+			<TechPrereq>TECH_GEOPOLITICS</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Multilateralism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>

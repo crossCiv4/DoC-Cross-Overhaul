@@ -725,6 +725,9 @@ void CvCityAI::AI_chooseProduction()
 	int iCultureRateRank = findCommerceRateRank(COMMERCE_CULTURE);
     int iCulturalVictoryNumCultureCities = GC.getGameINLINE().culturalVictoryNumCultureCities();
 
+	bool bGlobalThreatened = bMajorWar && kPlayer.AI_getEnemyPower() * 2 >= kPlayer.getPower();
+	bool bAreaThreatened = bMajorWar && pArea->getEnemyPower(getOwner()) * 2 >= kPlayer.getPower();
+
     bool bGetBetterUnits = kPlayer.AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS);
     bool bAggressiveAI = GC.getGameINLINE().isOption(GAMEOPTION_AGGRESSIVE_AI);
     bool bAlwaysPeace = GC.getGameINLINE().isOption(GAMEOPTION_ALWAYS_PEACE);
@@ -1247,7 +1250,7 @@ void CvCityAI::AI_chooseProduction()
 	{
 		if (iAreaBestFoundValue > iMinFoundValue && iAreaBestSettlerValue >= 10)
 		{
-			if (!bFinancialTrouble && !bMajorWar && happyLevel() <= unhappyLevel())
+			if (!bFinancialTrouble && !bAreaThreatened && happyLevel() <= unhappyLevel())
 			{
 				if (AI_chooseUnit(UNITAI_SETTLE))
 				{
@@ -1426,7 +1429,7 @@ void CvCityAI::AI_chooseProduction()
 
 		if (iPlotSettlerCount == 0)
 		{
-			if ((iNumSettlers < iMaxSettlers) && (!(bLandWar && bMajorWar) || (GC.getGameINLINE().getSorenRandNum(2, "AI War Settler") == 0)))
+			if ((iNumSettlers < iMaxSettlers) && (!(bLandWar && (iAreaBestFoundValue > iWaterAreaBestFoundValue) ? !bAreaThreatened : !bGlobalThreatened) || (GC.getGameINLINE().getSorenRandNum(2, "AI War Settler") == 0)))
 			{
 				if (iPlotCityDefenderCount == 1)
 				{
@@ -2428,7 +2431,9 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
 		break;
 	case ASSYRIA:
-		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 3;
+		aiUnitAIVal[UNITAI_SETTLE] /= 50;
 		break;
 	case NUBIA:
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 3;

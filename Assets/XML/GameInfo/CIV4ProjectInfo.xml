@@ -857,7 +857,7 @@
 			<Civilopedia>TXT_KEY_PROJECT_MARS_HABITAT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_PROJECT_MARS_HABITAT_STRATEGY</Strategy>
 			<VictoryPrereq>VICTORY_SPACE_RACE</VictoryPrereq>
-			<TechPrereq>TECH_AUTOMATION</TechPrereq>
+			<TechPrereq>TECH_CYBERNETICS</TechPrereq>
 			<AnyonePrereqProject>NONE</AnyonePrereqProject>
 			<iMaxGlobalInstances>-1</iMaxGlobalInstances>
 			<iMaxTeamInstances>5</iMaxTeamInstances>

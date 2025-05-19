@@ -78,9 +78,9 @@ class EventHandlerRegistry(object):
 		return BeginPlayerTurn
 	
 	def blockade(self, goal, applicable, func):
-		def blockade((iPlayer, iGold)):
+		def blockade((iPlayer, city, iGold)):
 			if applicable(goal, iPlayer):
-				func(goal, iGold)
+				func(goal, iGold, city)
 		
 		return blockade
 		
@@ -115,7 +115,7 @@ class EventHandlerRegistry(object):
 	def cityCaptureGold(self, goal, applicable, func):
 		def cityCaptureGold((city, iPlayer, iGold)):
 			if applicable(goal, iPlayer):
-				func(goal, iGold)
+				func(goal, iGold, city)
 		
 		return cityCaptureGold
 	
@@ -269,7 +269,7 @@ class EventHandlerRegistry(object):
 	def unitPillage(self, goal, applicable, func):
 		def unitPillage((unit, iImprovement, iRoute, iPlayer, iGold)):
 			if applicable(goal, iPlayer):
-				func(goal, iGold)
+				func(goal, iGold, unit)
 		
 		return unitPillage
 	

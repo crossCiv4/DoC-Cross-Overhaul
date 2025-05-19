@@ -1407,7 +1407,7 @@ void CvDllPythonEvents::reportReleasedCivilization(PlayerTypes ePlayer, Civiliza
 }
 
 // Leoreth: blockade a city
-void CvDllPythonEvents::reportBlockade(PlayerTypes ePlayer, int iGold)
+void CvDllPythonEvents::reportBlockade(PlayerTypes ePlayer, CvCity* pCity, int iGold)
 {
 	if (preEvent())
 	{
@@ -1415,9 +1415,12 @@ void CvDllPythonEvents::reportBlockade(PlayerTypes ePlayer, int iGold)
 		eventData.add("blockade");
 
 		eventData.add((int)ePlayer);
+		CyCity* pCyCity = new CyCity(pCity);
+		eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyCity));
 		eventData.add(iGold);
 
 		postEvent(eventData);
+		delete pCyCity;
 	}
 }
 

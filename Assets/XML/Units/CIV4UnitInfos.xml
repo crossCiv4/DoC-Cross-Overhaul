@@ -5524,7 +5524,7 @@
 			<Type>UNIT_ASSYRIAN_AZMARU</Type>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<Domain>DOMAIN_LAND</Domain>
-			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
+			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ASSYRIAN_AZMARU</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASSYRIAN_AZMARU_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ASSYRIAN_AZMARU_STRATEGY</Strategy>
@@ -5542,10 +5542,6 @@
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_CITY</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_ATTACK</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 				<UnitAI>
@@ -9837,7 +9833,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_GLOBALISM</PrereqTech>
+			<PrereqTech>TECH_GEOPOLITICS</PrereqTech>
 			<iCost>175</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -9941,7 +9937,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_GLOBALISM</PrereqTech>
+			<PrereqTech>TECH_GEOPOLITICS</PrereqTech>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -10535,11 +10531,11 @@
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_LIGHT_CAVALRY</UnitCombatType>
-					<iUnitCombatMod>50</iUnitCombatMod>
+					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<iFirstStrikes>2</iFirstStrikes>
-			<iCityDefense>50</iCityDefense>
+			<iCityDefense>25</iCityDefense>
 			<iHillsDefense>25</iHillsDefense>
 			<iCultureGarrison>4</iCultureGarrison>
 			<iAsset>2</iAsset>
@@ -12201,6 +12197,12 @@
 					<bTerrainImpassable>1</bTerrainImpassable>
 				</TerrainImpassable>
 			</TerrainImpassables>
+			<TerrainAttacks>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<iTerrainAttack>25</iTerrainAttack>
+				</TerrainAttack>
+			</TerrainAttacks>
 			<FeatureImpassables>
 				<FeatureImpassable>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -12215,17 +12217,11 @@
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
-			<FeatureAttacks>
-				<FeatureAttack>
-					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<iFeatureAttack>25</iFeatureAttack>
-				</FeatureAttack>
-			</FeatureAttacks>
 			<iCombat>4</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iWithdrawalProb>20</iWithdrawalProb>
+			<iWithdrawalProb>30</iWithdrawalProb>
 			<iPlainsAttack>25</iPlainsAttack>
 			<iPlainsDefense>25</iPlainsDefense>
 			<iCultureGarrison>4</iCultureGarrison>
@@ -18532,7 +18528,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_LEVERAGE</PrereqTech>
-			<iCost>45</iCost>
+			<iCost>40</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iMoves>1</iMoves>
@@ -18573,7 +18569,7 @@
 			<iCollateralDamage>40</iCollateralDamage>
 			<iCollateralDamageLimit>40</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>2</iCollateralDamageMaxUnits>
-			<iCityAttack>50</iCityAttack>
+			<iCityAttack>75</iCityAttack>
 			<UnitCombatCollateralImmunes>
 				<UnitCombatCollateralImmune>
 					<UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
@@ -21662,6 +21658,7 @@
 			<Civilopedia>TXT_KEY_UNIT_PORTUGUESE_CARRACK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_PORTUGUESE_CARRACK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bPillage>1</bPillage>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -23890,7 +23887,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_AUTOMATION</PrereqTech>
+			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
 			<BonusType>BONUS_OIL</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALUMINUM</BonusType>

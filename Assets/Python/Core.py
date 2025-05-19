@@ -674,11 +674,11 @@ def chance(iPercentage):
 	return rand(100) <= iPercentage
 	
 	
-def random_entry(iterable):
+def random_entry(iterable, otherwise=None):
 	if not iterable:
-		return None
+		return otherwise
 		
-	return iterable[rand(len(iterable))]
+	return random.choice(iterable)
 	
 
 def name(identifier):
@@ -947,18 +947,18 @@ class EntityCollection(object):
 	def all_if_any(self, condition):
 		return self.any() and self.all(condition)
 		
-	def random(self):
-		return random_entry(self.entities())
+	def random(self, otherwise=None):
+		return random_entry(self.entities(), otherwise=otherwise)
 		
 	def get(self, function = lambda x: x):
 		return [function(e) for e in self.entities()]
 		
-	def first(self):
-		if not self: return None
+	def first(self, otherwise=None):
+		if not self: return otherwise
 		return self.entities()[0]
 	
-	def last(self):
-		if not self: return None
+	def last(self, otherwise=None):
+		if not self: return otherwise
 		return self.entities()[self.count()-1]
 		
 	def one(self):
@@ -1869,7 +1869,7 @@ class Players(EntityCollection):
 		return [(x, y) for x, y in permutations(self._keys, self._keys) if (identical and x == y) or x < y]
 		
 	def asCivs(self):
-		return [civ(p) for p in self.entities()]
+		return self.transform(Civilizations)
 	
 	def tech(self, iTech):
 		return self.where(lambda p: team(p).isHasTech(iTech))

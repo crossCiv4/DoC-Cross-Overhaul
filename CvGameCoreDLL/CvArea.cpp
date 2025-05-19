@@ -999,6 +999,29 @@ int CvArea::getClosestAreaSize(int iSize) const
 }
 
 
+int CvArea::getEnemyPower(PlayerTypes ePlayer, bool bIncludeMinors) const
+{
+	int iPower = 0;
+
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	{
+		CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
+		if (bIncludeMinors || !kPlayer.isMinorCiv())
+		{
+			if (GET_TEAM(kPlayer.getTeam()).isAtWar(GET_PLAYER(ePlayer).getTeam()))
+			{
+				if (getCitiesPerPlayer((PlayerTypes)iI) > 0)
+				{
+					iPower += kPlayer.getPower();
+				}
+			}
+		}
+	}
+
+	return iPower;
+}
+
+
 void CvArea::read(FDataStreamBase* pStream)
 {
 	int iI;

@@ -5451,6 +5451,12 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				pLoopUnit = ::getUnit(pUnitNode->m_data);
 				pUnitNode = nextUnitNode(pUnitNode);
 
+				// Leoreth: bump out animals
+				if (pLoopUnit->isAnimal())
+				{
+					pLoopUnit->jumpToNearestValidPlot();
+				}
+
 				if (pLoopUnit->getTeam() != getTeam() && (getTeam() == NO_TEAM || !GET_TEAM(getTeam()).isVassal(pLoopUnit->getTeam())))
 				{
 					GET_PLAYER(pLoopUnit->getOwnerINLINE()).changeNumOutsideUnits(1);
@@ -6905,15 +6911,6 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 						iYield += 1;
 						break;
 					}
-				}
-			}
-
-			// Prambanan effect: +1 production on islands
-			if (eTeam != NO_TEAM && GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHasBuildingEffect((BuildingTypes)PRAMBANAN))
-			{
-				if (isWater() && eYield == YIELD_PRODUCTION && GC.getFeatureInfo(getFeatureType()).getYieldChange(eYield) > 0)
-				{
-					iYield += 1;
 				}
 			}
 		}

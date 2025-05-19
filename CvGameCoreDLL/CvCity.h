@@ -471,6 +471,8 @@ public:
 	int getHappinessTimer() const;																				// Exposed to Python
 	void changeHappinessTimer(int iChange);												// Exposed to Python
 
+	int getTempHappiness() const; // Leoreth
+
 	int getNoUnhappinessCount() const;
 	bool isNoUnhappiness() const;																					// Exposed to Python
 	void changeNoUnhappinessCount(int iChange);

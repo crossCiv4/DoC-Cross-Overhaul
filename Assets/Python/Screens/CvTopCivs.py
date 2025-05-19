@@ -7,14 +7,536 @@ import PyHelpers
 import CvUtil
 import CvScreenEnums
 import random
-from Consts import *
-from CvPythonExtensions import *
-
-PyPlayer = PyHelpers.PyPlayer
-gc = CyGlobalContext()
-localText = CyTranslator()
+from Core import *
 
 NUM_CIVILIZATIONS = 8
+
+"TXT_KEY_HISTORIAN_"
+
+HISTORIANS = {
+	iEgypt: {
+		iAncient: (
+			"TXT_KEY_HISTORIAN_KHAEMWASET",
+		),
+		iClassical: (
+			"TXT_KEY_HISTORIAN_MANETHO",
+		),
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_AL_QIFTI",
+			"TXT_KEY_HISTORIAN_AL_MAQRIZI",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_AL_SUYUTI",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_ABD_AL_RAHMAN_AL_RAFAI",
+		),
+	},
+	iBabylonia: {
+		iAncient: (
+			"TXT_KEY_HISTORIAN_AMMISADUQA",
+		),
+	},
+	iChina: {
+		iAncient: (
+			"TXT_KEY_HISTORIAN_FU_SHENG",
+			"TXT_KEY_HISTORIAN_ZUO_QIUMING",
+		),
+		iClassical: (
+			"TXT_KEY_HISTORIAN_SIMA_QIAN",
+			"TXT_KEY_HISTORIAN_LIU_XIANG",
+			"TXT_KEY_HISTORIAN_GUO_PU",
+			"TXT_KEY_HISTORIAN_CHEN_SHOU",
+			"TXT_KEY_HISTORIAN_PEI_SONGZHI",
+		),
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_SIMA_GUANG",
+			"TXT_KEY_HISTORIAN_OUYANG_XIU",
+			"TXT_KEY_HISTORIAN_SONG_LIAN",
+			"TXT_KEY_HISTORIAN_LIU_ZHIJI",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_HUANG_ZONGXI",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_YANG_SHOUJING",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_LI_XUEQIN",
+		),
+	},
+	iGreece: {
+		iAncient: (
+			"TXT_KEY_HISTORIAN_HERODOTUS",
+		),
+		iClassical: (
+			"TXT_KEY_HISTORIAN_THUCYDIDES",
+			"TXT_KEY_HISTORIAN_XENOPHON",
+			"TXT_KEY_HISTORIAN_PLUTARCH",
+			"TXT_KEY_HISTORIAN_STRABO",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_KAROLIDIS",
+			"TXT_KEY_HISTORIAN_PAPARRIGOPOULOS",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_KORDATOS",
+		),
+	},
+	iIndia: {
+		iAncient: (
+			"TXT_KEY_HISTORIAN_VYASA",
+		),
+		iClassical: (
+			"TXT_KEY_HISTORIAN_KAUTILYA",
+		),
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_BANABHATTA",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_PADMANABHA",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_CHOUDHARY",
+			"TXT_KEY_HISTORIAN_MAJUMDAR",
+		),
+	},
+	iPhoenicia: {
+		iAncient: (
+			"TXT_KEY_HISTORIAN_SANCHUNIATHON",
+		),
+	},
+	iPolynesia: {
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_TEUIRA_HENRY",
+			"TXT_KEY_HISTORIAN_TE_RANGIKAHEKE",
+		),
+	},
+	iPersia: {
+		iClassical: (
+			"TXT_KEY_HISTORIAN_CTESIAS",
+		),
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_RASHID_AL_DIN",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_FIRISHTA",
+			"TXT_KEY_HISTORIAN_MUNSHI",
+		),
+	},
+	iRome: {
+		iClassical: (
+			"TXT_KEY_HISTORIAN_LIVY",
+			"TXT_KEY_HISTORIAN_PLINY",
+			"TXT_KEY_HISTORIAN_TACITUS",
+			"TXT_KEY_HISTORIAN_AMMIAN",
+		),
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_SAINT_AUGUSTINE",
+			"TXT_KEY_HISTORIAN_PAUL_THE_DEACON",
+		),
+	},
+	iEthiopia: {
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_BAHREY",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_HERUY_WOLDE_SELASSIE",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_ZEWDE_GEBRE_SELLASSIE",
+		),
+	},
+	iDravidia: {
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_NILAKANTA_SASTRI",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_PILLAI",
+			"TXT_KEY_HISTORIAN_SIVATHAMBY",
+		),
+	},
+	iKorea: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_KIM_PUSIK",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_CHOE_BU",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_MUN_IL_PYEONG",
+			"TXT_KEY_HISTORIAN_SHIN_CHAE_HO",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_JEONG_SU_IL",
+		),
+	},
+	iByzantium: {
+		iClassical: (
+			"TXT_KEY_HISTORIAN_THEOPHANES",
+			"TXT_KEY_HISTORIAN_PROCOPIUS",
+			"TXT_KEY_HISTORIAN_SAINT_JEROME",
+		),
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_ANNA_KOMNENE",
+		),
+	},
+	iJapan: {
+		iClassical: (
+			"TXT_KEY_HISTORIAN_YASUMARO",
+			"TXT_KEY_HISTORIAN_TONERI",
+		),
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_KITABATAKE",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_ARAI",
+			"TXT_KEY_HISTORIAN_HAYASHI",
+			"TXT_KEY_HISTORIAN_MOTOORI",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_RAI",
+			"TXT_KEY_HISTORIAN_DATE",
+			"TXT_KEY_HISTORIAN_NAITOU",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_INOUE",
+		),
+	},
+	iNorse: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_AGGESEN",
+			"TXT_KEY_HISTORIAN_THORGILSSON",
+			"TXT_KEY_HISTORIAN_SAXO_GRAMMATICUS",
+			"TXT_KEY_HISTORIAN_SNORRI_STURLUSON",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_HOLBERG",
+			"TXT_KEY_HISTORIAN_HUITFELDT",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_MUNCH",
+		),
+	},
+	iTurks: {
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_TOGAN",
+		),
+	},
+	iArabia: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_AL_ZUBAYR",
+			"TXT_KEY_HISTORIAN_AL_TABARI",
+			"TXT_KEY_HISTORIAN_IBN_FADLAN",
+			"TXT_KEY_HISTORIAN_ABUL_FARAJ",
+			"TXT_KEY_HISTORIAN_AL_MASUDI",
+			"TXT_KEY_HISTORIAN_IBN_MUNQIDH",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_KHULUSI",
+			"TXT_KEY_HISTORIAN_AL_ZAHIRI",
+		),
+	},
+	iTibet: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_DRUB",
+			"TXT_KEY_HISTORIAN_ZHONNU_PEL",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_THRENGWA",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_PUNTSOK",
+		),
+	},
+	iJava: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_PRAPANCA",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_YASADIPURA",
+			"TXT_KEY_HISTORIAN_RANGGAWARSITA",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_NOTOSUSANTO",
+			"TXT_KEY_HISTORIAN_KARTODIRDJO",
+		),
+	},
+	iMalays: {
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_YAMIN",
+		),
+	},
+	iMoors: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_IBN_HAZM",
+			"TXT_KEY_HISTORIAN_IBN_BATTUTA",
+			"TXT_KEY_HISTORIAN_IBN_KHALDUN",
+		),
+	},
+	iSpain: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_ISIDORE",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_DANGHIERA",
+			"TXT_KEY_HISTORIAN_DE_MORGA",
+			"TXT_KEY_HISTORIAN_DE_LAS_CASAS",
+		),
+	},
+	iFrance: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_GREGORY_OF_TOURS",
+			"TXT_KEY_HISTORIAN_EINHARD",
+			"TXT_KEY_HISTORIAN_FROISSART",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_RAMBAUD",
+			"TXT_KEY_HISTORIAN_MICHELET",
+			"TXT_KEY_HISTORIAN_BLOCH",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_BRAUDEL",
+			"TXT_KEY_HISTORIAN_DUBY",
+			"TXT_KEY_HISTORIAN_LE_GOFF",
+		),
+	},
+	iKhmer: {
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_KAONN",
+		),
+	},
+	iEngland: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_BEDE",
+			"TXT_KEY_HISTORIAN_ASSER",
+			"TXT_KEY_HISTORIAN_AETHELWEARD",
+			"TXT_KEY_HISTORIAN_GEOFFREY_OF_MONMOUTH",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_HOLINSHED",
+			"TXT_KEY_HISTORIAN_HUME",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_GIBBON",
+			"TXT_KEY_HISTORIAN_LORD_MACAULAY",
+			"TXT_KEY_HISTORIAN_CARLYLE",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_TOYNBEE",
+			"TXT_KEY_HISTORIAN_HOBSBAWM",
+		),
+	},
+	iHolyRome: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_ADAM_OF_BREMEN",
+			"TXT_KEY_HISTORIAN_HERMANN_OF_REICHENAU",
+		),
+	},
+	iRus: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_NESTOR_THE_CHRONICLER",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_KOSTOMAROV",
+		),
+	},
+	iRussia: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_NIKITIN",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_KARAMZIN",
+			"TXT_KEY_HISTORIAN_MULLER",
+			"TXT_KEY_HISTORIAN_TATISHCHEV",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_SOLOVYOV",
+			"TXT_KEY_HISTORIAN_KLYUCHEVSKY",
+			"TXT_KEY_HISTORIAN_POKROVSKY",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_VOLGIN",
+		),
+	},
+	iMali: {
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_KATI",
+			"TXT_KEY_HISTORIAN_IBN_AL_MUKHTAR",
+		),
+	},
+	iPoland: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_KADLUBEK",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_MIECHOWITA",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_LELEWEL",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_HANDELSMAN",
+		),
+	},
+	iPortugal: {
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_DE_BARROS",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_HERCULANO",
+		),
+	},
+	iInca: {
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_DE_LA_VEGA",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_BASADRE",
+		),
+	},
+	iItaly: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_SALIMBENE",
+			"TXT_KEY_HISTORIAN_POLO",
+			"TXT_KEY_HISTORIAN_RAUL",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_MACHIAVELLI",
+			"TXT_KEY_HISTORIAN_VASARI",
+			"TXT_KEY_HISTORIAN_VICO",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_CANTU",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_DE_SANCTIS",
+			"TXT_KEY_HISTORIAN_DEL_BOCA",
+		),
+	},
+	iMongols: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_TOQTOA",
+			"TXT_KEY_HISTORIAN_HAMADANI",
+			"TXT_KEY_HISTORIAN_BOLAD",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_LUVSANDAZAN",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_RINCHEN",
+		),
+	},
+	iMughals: {
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_BHANDARI",
+			"TXT_KEY_HISTORIAN_ABUL_FAZL",
+			"TXT_KEY_HISTORIAN_LAHORI",
+			"TXT_KEY_HISTORIAN_KHAFI_KHAN",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_ROSHAN_KHAN",
+			"TXT_KEY_HISTORIAN_IKRAM",
+		),
+	},
+	iOttomans: {
+		iMedieval: (
+			"TXT_KEY_HISTORIAN_ASHIKPASHAZADE",
+			"TXT_KEY_HISTORIAN_NESHRI",
+		),
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_CHELEBI",
+			"TXT_KEY_HISTORIAN_PECHEVI",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_CEVDET_PASHA",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_INAN",
+		),
+	},
+	iSweden: {
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_OLAUS_MAGNUS",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_GRIMBERG",
+			"TXT_KEY_HISTORIAN_GEIJER",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_LONNROTH",
+		),
+	},
+	iThailand: {
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_RAJANUBHAB",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_WICHIWATHAKAN",
+		),
+	},
+	iNetherlands: {
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_DE_JONGE",
+			"TXT_KEY_HISTORIAN_FRUIN",
+		),
+	},
+	iGermany: {
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_SCHILLER",
+			"TXT_KEY_HISTORIAN_VON_RANKE",
+			"TXT_KEY_HISTORIAN_VON_SYBEL",
+			"TXT_KEY_HISTORIAN_MARX",
+		),
+	},
+	iAmerica: {
+		iRenaissance: (
+			"TXT_KEY_HISTORIAN_MATHER",
+		),
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_ADAMS",
+			"TXT_KEY_HISTORIAN_BEARD",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_SCHLESINGER",
+		),
+	},
+	iArgentina: {
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_MITRE",
+			"TXT_KEY_HISTORIAN_LOPEZ",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_LUNA",
+		),
+	},
+	iColombia: {
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_RESTREPO_VELEZ",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_FRIEDE",
+		),
+	},
+	iBrazil: {
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_DE_VARNHAGEN",
+			"TXT_KEY_HISTORIAN_ROMERO",
+			"TXT_KEY_HISTORIAN_DE_ABREU",
+		),
+		iGlobal: (
+			"TXT_KEY_HISTORIAN_FREYRE",
+			"TXT_KEY_HISTORIAN_DE_HOLANDA",
+			"TXT_KEY_HISTORIAN_PRADO_JUNIOR",
+		),
+	},
+	iCanada: {
+		iIndustrial: (
+			"TXT_KEY_HISTORIAN_GARNEAU",
+			"TXT_KEY_HISTORIAN_GROULX",
+		),
+	},
+}
 
 class CvTopCivs:
 	"The Greatest Civilizations screen"
@@ -68,42 +590,31 @@ class CvTopCivs:
 			return
 
 		# Text
-		self.TITLE_TEXT = u"<font=3>" + localText.getText("TXT_KEY_TOPCIVS_TITLE", ()).upper() + u"</font>"
-		self.EXIT_TEXT = localText.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper()
-		
-		self.HistorianList = [	localText.getText("TXT_KEY_TOPCIVS_HISTORIAN1", ()),
-					localText.getText("TXT_KEY_TOPCIVS_HISTORIAN2", ()),
-					localText.getText("TXT_KEY_TOPCIVS_HISTORIAN3", ()),
-					localText.getText("TXT_KEY_TOPCIVS_HISTORIAN4", ()),
-					localText.getText("TXT_KEY_TOPCIVS_HISTORIAN5", ()),
-					localText.getText("TXT_KEY_TOPCIVS_HISTORIAN6", ()),
-					localText.getText("TXT_KEY_TOPCIVS_HISTORIAN7", ()),
-					localText.getText("TXT_KEY_TOPCIVS_HISTORIAN8", ()),
-					localText.getText("TXT_KEY_TOPCIVS_HISTORIAN9", ()),
-					localText.getText("TXT_KEY_TOPCIVS_HISTORIAN10", ()),
-					localText.getText("TXT_KEY_TOPCIVS_HISTORIAN11", ())
-				    ]
+		self.TITLE_TEXT = u"<font=3>" + text("TXT_KEY_TOPCIVS_TITLE").upper() + u"</font>"
+		self.EXIT_TEXT = text("TXT_KEY_PEDIA_SCREEN_EXIT").upper()
 					
-		self.RankList =     [	localText.getText("TXT_KEY_TOPCIVS_RANK1", ()),
-					localText.getText("TXT_KEY_TOPCIVS_RANK2", ()),
-					localText.getText("TXT_KEY_TOPCIVS_RANK3", ()),
-					localText.getText("TXT_KEY_TOPCIVS_RANK4", ()),
-					localText.getText("TXT_KEY_TOPCIVS_RANK5", ()),
-					localText.getText("TXT_KEY_TOPCIVS_RANK6", ()),
-					localText.getText("TXT_KEY_TOPCIVS_RANK7", ()),
-					localText.getText("TXT_KEY_TOPCIVS_RANK8", ())
-				    ]
+		self.RankList = [
+			text("TXT_KEY_TOPCIVS_RANK1"),
+			text("TXT_KEY_TOPCIVS_RANK2"),
+			text("TXT_KEY_TOPCIVS_RANK3"),
+			text("TXT_KEY_TOPCIVS_RANK4"),
+			text("TXT_KEY_TOPCIVS_RANK5"),
+			text("TXT_KEY_TOPCIVS_RANK6"),
+			text("TXT_KEY_TOPCIVS_RANK7"),
+			text("TXT_KEY_TOPCIVS_RANK8")
+		]
 
-		self.TypeList =    [	localText.getText("TXT_KEY_TOPCIVS_WEALTH", ()),
-					localText.getText("TXT_KEY_TOPCIVS_POWER", ()),
-					localText.getText("TXT_KEY_TOPCIVS_TECH", ()),
-					localText.getText("TXT_KEY_TOPCIVS_CULTURE", ()),
-					localText.getText("TXT_KEY_TOPCIVS_SIZE", ()),
-				    ]
+		self.TypeList = [
+			"TXT_KEY_TOPCIVS_WEALTH",
+			"TXT_KEY_TOPCIVS_POWER",
+			"TXT_KEY_TOPCIVS_TECH",
+			"TXT_KEY_TOPCIVS_CULTURE",
+			"TXT_KEY_TOPCIVS_SIZE",
+			"TXT_KEY_TOPCIVS_POPULATION",
+		]
 
-		# Randomly choose what category and what historian will be used
+		# Randomly choose what category will be used
 		szTypeRand = random.choice(self.TypeList)
-		szHistorianRand = random.choice(self.HistorianList)
 		
 		# Create screen
 		
@@ -141,99 +652,85 @@ class CvTopCivs:
 		self.screen.setLabel("DawnTitle", "Background", self.TITLE_TEXT, CvUtil.FONT_CENTER_JUSTIFY,
 				self.X_TITLE_TEXT, self.Y_TITLE_TEXT, -2.0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		
+		self.populateList(szTypeRand)
+		
+		szHistorianKey = self.getHistorian()
+		szHistorian = text(szHistorianKey)
+		szType = text(szTypeRand)
+		
 		# 1 Text
 		self.X_INFO_TEXT = self.X_TITLE_TEXT - 260#self.X_HEADER_PANEL + (self.W_HEADER_PANEL / 2)
 		self.Y_INFO_TEXT = self.Y_TITLE_TEXT + 50
 		self.W_INFO_TEXT = self.W_HEADER_PANEL
 		self.H_INFO_TEXT = 70
-		szText = localText.getText("TXT_KEY_TOPCIVS_TEXT1", (szHistorianRand, )) + u"\n" + localText.getText("TXT_KEY_TOPCIVS_TEXT2", (szTypeRand, ))
+		szText = text("TXT_KEY_TOPCIVS_TEXT1", szHistorian) + u"\n" + text("TXT_KEY_TOPCIVS_TEXT2", szType)
 		self.screen.addMultilineText( "InfoText1", szText, self.X_INFO_TEXT, self.Y_INFO_TEXT, self.W_INFO_TEXT, self.H_INFO_TEXT, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_CENTER_JUSTIFY)
 		
-		self.makeList(szTypeRand)
+		self.printList()
 		
-	def makeList(self, szType):
+	def populateList(self, szType):
+		
+		print "populateList for %s" % szType
 
 		# Determine the list of top civs
 		
-		# Will eventually Store [iValue, iPlayerID]
-		self.aiTopCivsValues = []
+		typeFunction = None
 		
-		# Loop through all players except the barbs
-		for iPlayerLoop in range(gc.getMAX_CIV_PLAYERS()):
-			pPlayer = gc.getPlayer(iPlayerLoop)
-			if not pPlayer.isAlive() or pPlayer.isMinorCiv() or pPlayer.isBarbarian():
-				continue
-				
-			if (szType == localText.getText("TXT_KEY_TOPCIVS_WEALTH", ())):
-
-				self.aiTopCivsValues.append([gc.getPlayer(iPlayerLoop).getGold(), iPlayerLoop])
-				print("Player %d Num Gold: %d" %(iPlayerLoop, gc.getPlayer(iPlayerLoop).getGold()))
-				
-			if (szType == localText.getText("TXT_KEY_TOPCIVS_POWER", ())):
-
-				self.aiTopCivsValues.append([gc.getPlayer(iPlayerLoop).getPower(), iPlayerLoop])
-
-			if (szType == localText.getText("TXT_KEY_TOPCIVS_TECH", ())):
-
-				iPlayerNumTechs = 0
-				iNumTotalTechs = gc.getNumTechInfos()
-
-				for iTechLoop in range(iNumTotalTechs):
-
-					bPlayerHasTech = gc.getTeam(gc.getPlayer(iPlayerLoop).getTeam()).isHasTech(iTechLoop)
-
-					if (bPlayerHasTech):
-						iPlayerNumTechs = iPlayerNumTechs + 1
-						
-				self.aiTopCivsValues.append([iPlayerNumTechs, iPlayerLoop])
-
-			if (szType == localText.getText("TXT_KEY_TOPCIVS_CULTURE", ())):
-
-				self.aiTopCivsValues.append([gc.getPlayer(iPlayerLoop).countTotalCulture(), iPlayerLoop])
-
-			if (szType == localText.getText("TXT_KEY_TOPCIVS_SIZE", ())):
-
-				self.aiTopCivsValues.append([gc.getPlayer(iPlayerLoop).getTotalLand(), iPlayerLoop])
-
-		# Lowest to Highest
-		self.aiTopCivsValues.sort()
-		# Switch it around - want the best to be first
-		self.aiTopCivsValues.reverse()
-
-		self.printList(szType)
+		if szType == "TXT_KEY_TOPCIVS_WEALTH":
+			typeFunction = CyPlayer.getGold
+		elif szType == "TXT_KEY_TOPCIVS_POWER":
+			typeFunction = CyPlayer.getPower
+		elif szType == "TXT_KEY_TOPCIVS_TECH":
+			typeFunction = lambda p: team(p).getTotalTechValue()
+		elif szType == "TXT_KEY_TOPCIVS_CULTURE":
+			typeFunction = CyPlayer.countTotalCulture
+		elif szType == "TXT_KEY_TOPCIVS_SIZE":
+			typeFunction = CyPlayer.getTotalLand
+		elif szType == "TXT_KEY_TOPCIVS_POPULATION":
+			typeFunction = CyPlayer.getTotalPopulation
+			
+		self.topPlayers = players.major().existing().sort(lambda p: typeFunction(player(p)), reverse=True)
 		
-	def printList(self, szType):
+	def printList(self):
+		for iRank, iPlayer in enumerate(self.topPlayers.limit(8)):
+			if iPlayer == active() or team().isHasMet(player(iPlayer).getTeam()):
+				szCivText = name(iPlayer)
+			else:
+				szCivText = text("TXT_KEY_TOPCIVS_UNKNOWN")
+			
+			szWidgetName = "Text" + str(iRank)
+			szWidgetDesc = "%d) %s" % (iRank + 1, szCivText)
+			
+			iXLoc = self.X_RANK_TEXT
+			iYLoc = self.Y_RANK_TEXT + iRank * self.H_RANK_TEXT
+			
+			self.screen.addMultilineText(szWidgetName, unicode(szWidgetDesc), iXLoc, iYLoc, self.W_RANK_TEXT, self.H_RANK_TEXT, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+	
+	def getHistorian(self):
+		iHistorianPlayer = self.topPlayers.where(lambda p: team().isHasMet(player(p).getTeam())).limit(4).where(lambda p: civ(p) in HISTORIANS).random(otherwise=active())
 		
-		# Print out the list
-		for iRankLoop in range(8):
-			
-			if (iRankLoop > len(self.aiTopCivsValues)-1):
-				return
-			
-			iPlayer = self.aiTopCivsValues[iRankLoop][1]
-			iValue = self.aiTopCivsValues[iRankLoop][0]
-			
-			szPlayerName = gc.getPlayer(iPlayer).getNameKey()
-			
-			if (szPlayerName != ""):
-				
-				pActivePlayerTeam = gc.getTeam(gc.getPlayer(CyGame().getActivePlayer()).getTeam())
-				iPlayerTeam = gc.getPlayer(iPlayer).getTeam()
-				szCivText = ""
-				
-				# Does the Active player know this player exists?
-				if (iPlayer == CyGame().getActivePlayer() or pActivePlayerTeam.isHasMet(iPlayerTeam)):
-					#szCivText = localText.getText("TXT_KEY_TOPCIVS_TEXT3", (szPlayerName, self.RankList[iRankLoop])) #Rhye
-					szCivText = gc.getPlayer(iPlayer).getCivilizationDescription(0) #Rhye					
-				else:
-					szCivText = localText.getText("TXT_KEY_TOPCIVS_UNKNOWN", ())
-					
-				szWidgetName = "Text" + str(iRankLoop)
-				szWidgetDesc = "%d) %s" % (iRankLoop + 1, szCivText)
-				iXLoc = self.X_RANK_TEXT
-				iYLoc = self.Y_RANK_TEXT + (iRankLoop * self.H_RANK_TEXT)
-				#self.screen.setText(szWidgetName, "Background", szWidgetDesc, CvUtil.FONT_LEFT_JUSTIFY, iXLoc, iYLoc, TEXT_Z, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-				self.screen.addMultilineText( szWidgetName, unicode(szWidgetDesc), iXLoc, iYLoc, self.W_RANK_TEXT, self.H_RANK_TEXT, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+		tHistorianNames = self.getHistorianNames(iHistorianPlayer)
+		if not tHistorianNames:
+			return "TXT_KEY_HISTORIAN_GENERIC"
+		
+		print "historian names are %s" % (tHistorianNames,)
+		
+		return random_entry(tHistorianNames)
+	
+	def getHistorianNames(self, iPlayer):
+		iCiv = civ(iPlayer)
+		iCurrentEra = player(iPlayer).getCurrentEra()
+		
+		for iEra in reversed(range(iCurrentEra+1)):
+			if iEra in HISTORIANS[iCiv]:
+				return HISTORIANS[iCiv][iEra]
+		
+		for iEra in range(iCurrentEra+1, iNumEras):
+			if iEra in HISTORIANS[iCiv]:
+				return HISTORIANS[iCiv][iEra]
+		
+		return tuple()
+		
 				
 	def turnChecker(self, iTurnNum):
 

@@ -506,9 +506,9 @@ void CvEventReporter::releasedCivilization(PlayerTypes ePlayer, CivilizationType
 }
 
 // Leoreth: blockade a city
-void CvEventReporter::blockade(PlayerTypes ePlayer, int iGold)
+void CvEventReporter::blockade(PlayerTypes ePlayer, CvCity* pCity, int iGold)
 {
-	m_kPythonEventMgr.reportBlockade(ePlayer, iGold);
+	m_kPythonEventMgr.reportBlockade(ePlayer, pCity, iGold);
 }
 
 // Leoreth: arrange peace deal between players

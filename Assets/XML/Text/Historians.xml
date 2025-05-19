@@ -1,0 +1,1831 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Actions -->
+<Civ4GameText>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_BEDE</Tag>
+		<English>The Venerable Bede</English>
+		<French>
+			<Text>B&#232;de le V&#233;n&#233;rable</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Beda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Il venerando Bede</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Beda el Venerable</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_GIBBON</Tag>
+		<English>Gibbon</English>
+		<French>
+			<Text>Gibbon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gibbon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gibbon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gibbon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_HERODOTUS</Tag>
+		<English>Herodotus</English>
+		<French>
+			<Text>H&#233;rodote</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Herodot</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Erodoto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Herodoto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_LIVY</Tag>
+		<English>Livy</English>
+		<French>
+			<Text>Tite-Live</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Livius</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tito Livio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tito Livio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_LORD_MACAULAY</Tag>
+		<English>Lord Macaulay</English>
+		<French>
+			<Text>Lord Macaulay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lord Macaulay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lord Macaulay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lord Macaulay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_MACHIAVELLI</Tag>
+		<English>Machiavelli</English>
+		<French>
+			<Text>Machiavel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Machiavelli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Machiavelli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maquiavelo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_PLINY</Tag>
+		<English>Pliny</English>
+		<French>
+			<Text>Pline</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Plinius</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Plinio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Plinio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SAINT_AUGUSTINE</Tag>
+		<English>St. Augustine</English>
+		<French>
+			<Text>Saint Augustin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Augustinus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sant'Agostino</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Agust&#237;n</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_TACITUS</Tag>
+		<English>Tacitus</English>
+		<French>
+			<Text>Tacite</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tacitus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tacito</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>T&#225;cito</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_THUCYDIDES</Tag>
+		<English>Thucydides</English>
+		<French>
+			<Text>Thucydide</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Thukydides</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tucidide</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tuc&#237;dides</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_TOYNBEE</Tag>
+		<English>Toynbee</English>
+		<French>
+			<Text>Toynbee</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Toynbee</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Toynbee</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Toynbee</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KHAEMWASET</Tag>
+		<English>Khaemwaset</English>
+		<French>Khaemwaset</French>
+		<German>Khaemwaset</German>
+		<Italian>Khaemwaset</Italian>
+		<Spanish>Khaemwaset</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_MANETHO</Tag>
+		<English>Manetho</English>
+		<French>Manetho</French>
+		<German>Manetho</German>
+		<Italian>Manetho</Italian>
+		<Spanish>Manetho</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_AL_QIFTI</Tag>
+		<English>Al-Qifti</English>
+		<French>Al-Qifti</French>
+		<German>Al-Qifti</German>
+		<Italian>Al-Qifti</Italian>
+		<Spanish>Al-Qifti</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_AL_MAQRIZI</Tag>
+		<English>Al-Maqrizi</English>
+		<French>Al-Maqrizi</French>
+		<German>Al-Maqrizi</German>
+		<Italian>Al-Maqrizi</Italian>
+		<Spanish>Al-Maqrizi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_AL_SUYUTI</Tag>
+		<English>Al-Suyuti</English>
+		<French>Al-Suyuti</French>
+		<German>Al-Suyuti</German>
+		<Italian>Al-Suyuti</Italian>
+		<Spanish>Al-Suyuti</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ABD_AL_RAHMAN_AL_RAFAI</Tag>
+		<English>Abd al-Rahman al-Rafai</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_AMMISADUQA</Tag>
+		<English>Ammisaduqa</English>
+		<French>Ammisaduqa</French>
+		<German>Ammisaduqa</German>
+		<Italian>Ammisaduqa</Italian>
+		<Spanish>Ammisaduqa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_FU_SHENG</Tag>
+		<English>Fu Sheng</English>
+		<French>Fu Sheng</French>
+		<German>Fu Sheng</German>
+		<Italian>Fu Sheng</Italian>
+		<Spanish>Fu Sheng</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ZUO_QIUMING</Tag>
+		<English>Zuo Qiuming</English>
+		<French>Zuo Qiuming</French>
+		<German>Zuo Qiuming</German>
+		<Italian>Zuo Qiuming</Italian>
+		<Spanish>Zuo Qiuming</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SIMA_QIAN</Tag>
+		<English>Sima Qian</English>
+		<French>Sima Qian</French>
+		<German>Sima Qian</German>
+		<Italian>Sima Qian</Italian>
+		<Spanish>Sima Qian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_LIU_XIANG</Tag>
+		<English>Liu Xiang</English>
+		<French>Liu Xiang</French>
+		<German>Liu Xiang</German>
+		<Italian>Liu Xiang</Italian>
+		<Spanish>Liu Xiang</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_GUO_PU</Tag>
+		<English>Guo Pu</English>
+		<French>Guo Pu</French>
+		<German>Guo Pu</German>
+		<Italian>Guo Pu</Italian>
+		<Spanish>Guo Pu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_CHEN_SHOU</Tag>
+		<English>Chen Shou</English>
+		<French>Chen Shou</French>
+		<German>Chen Shou</German>
+		<Italian>Chen Shou</Italian>
+		<Spanish>Chen Shou</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_PEI_SONGZHI</Tag>
+		<English>Pei Songzhi</English>
+		<French>Pei Songzhi</French>
+		<German>Pei Songzhi</German>
+		<Italian>Pei Songzhi</Italian>
+		<Spanish>Pei Songzhi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SIMA_GUANG</Tag>
+		<English>Sima Guang</English>
+		<French>Sima Guang</French>
+		<German>Sima Guang</German>
+		<Italian>Sima Guang</Italian>
+		<Spanish>Sima Guang</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_OUYANG_XIU</Tag>
+		<English>Ouyang Xiu</English>
+		<French>Ouyang Xiu</French>
+		<German>Ouyang Xiu</German>
+		<Italian>Ouyang Xiu</Italian>
+		<Spanish>Ouyang Xiu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SONG_LIAN</Tag>
+		<English>Song Lian</English>
+		<French>Song Lian</French>
+		<German>Song Lian</German>
+		<Italian>Song Lian</Italian>
+		<Spanish>Song Lian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_LIU_ZHIJI</Tag>
+		<English>Liu Zhiji</English>
+		<French>Liu Zhiji</French>
+		<German>Liu Zhiji</German>
+		<Italian>Liu Zhiji</Italian>
+		<Spanish>Liu Zhiji</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_HUANG_ZONGXI</Tag>
+		<English>Huang Zongxi</English>
+		<French>Huang Zongxi</French>
+		<German>Huang Zongxi</German>
+		<Italian>Huang Zongxi</Italian>
+		<Spanish>Huang Zongxi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_YANG_SHOUJING</Tag>
+		<English>Yang Shoujing</English>
+		<French>Yang Shoujing</French>
+		<German>Yang Shoujing</German>
+		<Italian>Yang Shoujing</Italian>
+		<Spanish>Yang Shoujing</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_LI_XUEQIN</Tag>
+		<English>Li Xueqin</English>
+		<French>Li Xueqin</French>
+		<German>Li Xueqin</German>
+		<Italian>Li Xueqin</Italian>
+		<Spanish>Li Xueqin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_XENOPHON</Tag>
+		<English>Xenophon</English>
+		<French>Xenophon</French>
+		<German>Xenophon</German>
+		<Italian>Xenophon</Italian>
+		<Spanish>Xenophon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_PLUTARCH</Tag>
+		<English>Plutarch</English>
+		<French>Plutarch</French>
+		<German>Plutarch</German>
+		<Italian>Plutarch</Italian>
+		<Spanish>Plutarch</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_STRABO</Tag>
+		<English>Strabo</English>
+		<French>Strabo</French>
+		<German>Strabo</German>
+		<Italian>Strabo</Italian>
+		<Spanish>Strabo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KAROLIDIS</Tag>
+		<English>Pavlos Karolidis</English>
+		<French>Pavlos Karolidis</French>
+		<German>Pavlos Karolidis</German>
+		<Italian>Pavlos Karolidis</Italian>
+		<Spanish>Pavlos Karolidis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KORDATOS</Tag>
+		<English>Yanis Kordatos</English>
+		<French>Yanis Kordatos</French>
+		<German>Yanis Kordatos</German>
+		<Italian>Yanis Kordatos</Italian>
+		<Spanish>Yanis Kordatos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_PAPARRIGOPOULOS</Tag>
+		<English>Constantine Paparrigopoulos</English>
+		<French>Constantine Paparrigopoulos</French>
+		<German>Constantine Paparrigopoulos</German>
+		<Italian>Constantine Paparrigopoulos</Italian>
+		<Spanish>Constantine Paparrigopoulos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_VYASA</Tag>
+		<English>Vyasa</English>
+		<French>Vyasa</French>
+		<German>Vyasa</German>
+		<Italian>Vyasa</Italian>
+		<Spanish>Vyasa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KAUTILYA</Tag>
+		<English>Kautilya</English>
+		<French>Kautilya</French>
+		<German>Kautilya</German>
+		<Italian>Kautilya</Italian>
+		<Spanish>Kautilya</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_BANABHATTA</Tag>
+		<English>Banabhatta</English>
+		<French>Banabhatta</French>
+		<German>Banabhatta</German>
+		<Italian>Banabhatta</Italian>
+		<Spanish>Banabhatta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_PADMANABHA</Tag>
+		<English>Padmanabha</English>
+		<French>Padmanabha</French>
+		<German>Padmanabha</German>
+		<Italian>Padmanabha</Italian>
+		<Spanish>Padmanabha</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_CHOUDHARY</Tag>
+		<English>Radha Krishna Choudhary</English>
+		<French>Radha Krishna Choudhary</French>
+		<German>Radha Krishna Choudhary</German>
+		<Italian>Radha Krishna Choudhary</Italian>
+		<Spanish>Radha Krishna Choudhary</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_MAJUMDAR</Tag>
+		<English>Ramesh Chandra Majumdar</English>
+		<French>Ramesh Chandra Majumdar</French>
+		<German>Ramesh Chandra Majumdar</German>
+		<Italian>Ramesh Chandra Majumdar</Italian>
+		<Spanish>Ramesh Chandra Majumdar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SANCHUNIATHON</Tag>
+		<English>Sanchuniathon</English>
+		<French>Sanchuniathon</French>
+		<German>Sanchuniathon</German>
+		<Italian>Sanchuniathon</Italian>
+		<Spanish>Sanchuniathon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_TEUIRA_HENRY</Tag>
+		<English>Teuira Henry</English>
+		<French>Teuira Henry</French>
+		<German>Teuira Henry</German>
+		<Italian>Teuira Henry</Italian>
+		<Spanish>Teuira Henry</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_TE_RANGIKAHEKE</Tag>
+		<English>Te Rangikaheke</English>
+		<French>Te Rangikaheke</French>
+		<German>Te Rangikaheke</German>
+		<Italian>Te Rangikaheke</Italian>
+		<Spanish>Te Rangikaheke</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_CTESIAS</Tag>
+		<English>Ctesias</English>
+		<French>Ctesias</French>
+		<German>Ctesias</German>
+		<Italian>Ctesias</Italian>
+		<Spanish>Ctesias</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_RASHID_AL_DIN</Tag>
+		<English>Rashid al-Din</English>
+		<French>Rashid al-Din</French>
+		<German>Rashid al-Din</German>
+		<Italian>Rashid al-Din</Italian>
+		<Spanish>Rashid al-Din</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_FIRISHTA</Tag>
+		<English>Firishta</English>
+		<French>Firishta</French>
+		<German>Firishta</German>
+		<Italian>Firishta</Italian>
+		<Spanish>Firishta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_MUNSHI</Tag>
+		<English>Iskandar Beg Munshi</English>
+		<French>Iskandar Beg Munshi</French>
+		<German>Iskandar Beg Munshi</German>
+		<Italian>Iskandar Beg Munshi</Italian>
+		<Spanish>Iskandar Beg Munshi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_AMMIAN</Tag>
+		<English>Ammian</English>
+		<French>Ammian</French>
+		<German>Ammian</German>
+		<Italian>Ammian</Italian>
+		<Spanish>Ammian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_PAUL_THE_DEACON</Tag>
+		<English>Paul the Deacon</English>
+		<French>Paul the Deacon</French>
+		<German>Paul the Deacon</German>
+		<Italian>Paul the Deacon</Italian>
+		<Spanish>Paul the Deacon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_BAHREY</Tag>
+		<English>Bahrey</English>
+		<French>Bahrey</French>
+		<German>Bahrey</German>
+		<Italian>Bahrey</Italian>
+		<Spanish>Bahrey</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_HERUY_WOLDE_SELASSIE</Tag>
+		<English>Heruy Wolde Selassie</English>
+		<French>Heruy Wolde Selassie</French>
+		<German>Heruy Wolde Selassie</German>
+		<Italian>Heruy Wolde SelassieHeruy Wolde Selassie</Italian>
+		<Spanish>Heruy Wolde Selassie</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ZEWDE_GEBRE_SELLASSIE</Tag>
+		<English>Zewde Gebre-Sellassie</English>
+		<French>Zewde Gebre-Sellassie</French>
+		<German>Zewde Gebre-Sellassie</German>
+		<Italian>Zewde Gebre-Sellassie</Italian>
+		<Spanish>Zewde Gebre-Sellassie</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_PILLAI</Tag>
+		<English>Nalankal Krishna Pillai</English>
+		<French>Nalankal Krishna Pillai</French>
+		<German>Nalankal Krishna Pillai</German>
+		<Italian>Nalankal Krishna Pillai</Italian>
+		<Spanish>Nalankal Krishna Pillai</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_NILAKANTA_SASTRI</Tag>
+		<English>K. A. Nilakanta Sastri</English>
+		<French>K. A. Nilakanta Sastri</French>
+		<German>K. A. Nilakanta Sastri</German>
+		<Italian>K. A. Nilakanta Sastri</Italian>
+		<Spanish>K. A. Nilakanta Sastri</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SIVATHAMBY</Tag>
+		<English>Karthigesu Sivathamby</English>
+		<French>Karthigesu Sivathamby</French>
+		<German>Karthigesu Sivathamby</German>
+		<Italian>Karthigesu Sivathamby</Italian>
+		<Spanish>Karthigesu Sivathamby</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KIM_PUSIK</Tag>
+		<English>Kim Pusik</English>
+		<French>Kim Pusik</French>
+		<German>Kim Pusik</German>
+		<Italian>Kim Pusik</Italian>
+		<Spanish>Kim Pusik</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_CHOE_BU</Tag>
+		<English>Choe Bu</English>
+		<French>Choe Bu</French>
+		<German>Choe Bu</German>
+		<Italian>Choe Bu</Italian>
+		<Spanish>Choe Bu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_MUN_IL_PYEONG</Tag>
+		<English>Mun Il-pyeong</English>
+		<French>Mun Il-pyeong</French>
+		<German>Mun Il-pyeong</German>
+		<Italian>Mun Il-pyeong</Italian>
+		<Spanish>Mun Il-pyeong</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_JEONG_SU_IL</Tag>
+		<English>Jeong Su-il</English>
+		<French>Jeong Su-il</French>
+		<German>Jeong Su-il</German>
+		<Italian>Jeong Su-il</Italian>
+		<Spanish>Jeong Su-il</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SHIN_CHAE_HO</Tag>
+		<English>Shin Chae-ho</English>
+		<French>Shin Chae-ho</French>
+		<German>Shin Chae-ho</German>
+		<Italian>Shin Chae-ho</Italian>
+		<Spanish>Shin Chae-ho</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_THEOPHANES</Tag>
+		<English>Theophanes the Confessor</English>
+		<French>Theophanes the Confessor</French>
+		<German>Theophanes the Confessor</German>
+		<Italian>Theophanes the Confessor</Italian>
+		<Spanish>Theophanes the Confessor</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_PROCOPIUS</Tag>
+		<English>Procopius</English>
+		<French>Procopius</French>
+		<German>Procopius</German>
+		<Italian>Procopius</Italian>
+		<Spanish>Procopius</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SAINT_JEROME</Tag>
+		<English>Saint Jerome</English>
+		<French>Saint Jerome</French>
+		<German>Saint Jerome</German>
+		<Italian>Saint Jerome</Italian>
+		<Spanish>Saint Jerome</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ANNA_KOMNENE</Tag>
+		<English>Anna Komnene</English>
+		<French>Anna Komnene</French>
+		<German>Anna Komnene</German>
+		<Italian>Anna Komnene</Italian>
+		<Spanish>Anna Komnene</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_YASUMARO</Tag>
+		<English>Ou no Yasumaro</English>
+		<French>Ou no Yasumaro</French>
+		<German>Ou no Yasumaro</German>
+		<Italian>Ou no Yasumaro</Italian>
+		<Spanish>Ou no Yasumaro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_TONERI</Tag>
+		<English>Prince Toneri</English>
+		<French>Prince Toneri</French>
+		<German>Prince Toneri</German>
+		<Italian>Prince Toneri</Italian>
+		<Spanish>Prince Toneri</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KITABATAKE</Tag>
+		<English>Kitabatake Chikafusa</English>
+		<French>Kitabatake Chikafusa</French>
+		<German>Kitabatake Chikafusa</German>
+		<Italian>Kitabatake Chikafusa</Italian>
+		<Spanish>Kitabatake Chikafusa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ARAI</Tag>
+		<English>Arai Hakuseki</English>
+		<French>Arai Hakuseki</French>
+		<German>Arai Hakuseki</German>
+		<Italian>Arai Hakuseki</Italian>
+		<Spanish>Arai Hakuseki</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_HAYASHI</Tag>
+		<English>Hayashi Gahou</English>
+		<French>Hayashi Gahou</French>
+		<German>Hayashi Gahou</German>
+		<Italian>Hayashi Gahou</Italian>
+		<Spanish>Hayashi Gahou</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_MOTOORI</Tag>
+		<English>Motoori Norinaga</English>
+		<French>Motoori Norinaga</French>
+		<German>Motoori Norinaga</German>
+		<Italian>Motoori Norinaga</Italian>
+		<Spanish>Motoori Norinaga</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_RAI</Tag>
+		<English>Rai San'you</English>
+		<French>Rai San'you</French>
+		<German>Rai San'you</German>
+		<Italian>Rai San'you</Italian>
+		<Spanish>Rai San'you</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DATE</Tag>
+		<English>Date Munehiro</English>
+		<French>Date Munehiro</French>
+		<German>Date Munehiro</German>
+		<Italian>Date Munehiro</Italian>
+		<Spanish>Date Munehiro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_NAITOU</Tag>
+		<English>Naitou Konan</English>
+		<French>Naitou Konan</French>
+		<German>Naitou Konan</German>
+		<Italian>Naitou Konan</Italian>
+		<Spanish>Naitou Konan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_INOUE</Tag>
+		<English>Inoue Kiyoshi</English>
+		<French>Inoue Kiyoshi</French>
+		<German>Inoue Kiyoshi</German>
+		<Italian>Inoue Kiyoshi</Italian>
+		<Spanish>Inoue Kiyoshi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_AGGESEN</Tag>
+		<English>Sven Aggesen</English>
+		<French>Sven Aggesen</French>
+		<German>Sven Aggesen</German>
+		<Italian>Sven Aggesen</Italian>
+		<Spanish>Sven Aggesen</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_THORGILSSON</Tag>
+		<English>Ari Thorgilsson</English>
+		<French>Ari Thorgilsson</French>
+		<German>Ari Thorgilsson</German>
+		<Italian>Ari Thorgilsson</Italian>
+		<Spanish>Ari Thorgilsson</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SAXO_GRAMMATICUS</Tag>
+		<English>Saxo Grammaticus</English>
+		<French>Saxo Grammaticus</French>
+		<German>Saxo Grammaticus</German>
+		<Italian>Saxo Grammaticus</Italian>
+		<Spanish>Saxo Grammaticus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SNORRI_STURLUSON</Tag>
+		<English>Snorri Sturluson</English>
+		<French>Snorri Sturluson</French>
+		<German>Snorri Sturluson</German>
+		<Italian>Snorri Sturluson</Italian>
+		<Spanish>Snorri Sturluson</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_OLAUS_MAGNUS</Tag>
+		<English>Olaus Magnus</English>
+		<French>Olaus Magnus</French>
+		<German>Olaus Magnus</German>
+		<Italian>Olaus Magnus</Italian>
+		<Spanish>Olaus Magnus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_HOLBERG</Tag>
+		<English>Ludvig Holberg</English>
+		<French>Ludvig Holberg</French>
+		<German>Ludvig Holberg</German>
+		<Italian>Ludvig Holberg</Italian>
+		<Spanish>Ludvig Holberg</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_HUITFELDT</Tag>
+		<English>Arild Huitfeldt</English>
+		<French>Arild Huitfeldt</French>
+		<German>Arild Huitfeldt</German>
+		<Italian>Arild Huitfeldt</Italian>
+		<Spanish>Arild Huitfeldt</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_GRIMBERG</Tag>
+		<English>Carl Grimberg</English>
+		<French>Carl Grimberg</French>
+		<German>Carl Grimberg</German>
+		<Italian>Carl Grimberg</Italian>
+		<Spanish>Carl Grimberg</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_GEIJER</Tag>
+		<English>Erik Gustaf Geijer</English>
+		<French>Erik Gustaf Geijer</French>
+		<German>Erik Gustaf Geijer</German>
+		<Italian>Erik Gustaf Geijer</Italian>
+		<Spanish>Erik Gustaf Geijer</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_MUNCH</Tag>
+		<English>Peter Andreas Munch</English>
+		<French>Peter Andreas Munch</French>
+		<German>Peter Andreas Munch</German>
+		<Italian>Peter Andreas Munch</Italian>
+		<Spanish>Peter Andreas Munch</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_LONNROTH</Tag>
+		<English>Erik L&#246;nnroth</English>
+		<French>Erik L&#246;nnroth</French>
+		<German>Erik L&#246;nnroth</German>
+		<Italian>Erik L&#246;nnroth</Italian>
+		<Spanish>Erik L&#246;nnroth</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_TOGAN</Tag>
+		<English>Zeki Velidi Togan</English>
+		<French>Zeki Velidi Togan</French>
+		<German>Zeki Velidi Togan</German>
+		<Italian>Zeki Velidi Togan</Italian>
+		<Spanish>Zeki Velidi Togan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_AL_ZUBAYR</Tag>
+		<English>Urwa ibn al-Zubayr</English>
+		<French>Urwa ibn al-Zubayr</French>
+		<German>Urwa ibn al-Zubayr</German>
+		<Italian>Urwa ibn al-Zubayr</Italian>
+		<Spanish>Urwa ibn al-Zubayr</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_AL_TABARI</Tag>
+		<English>Al-Tabari</English>
+		<French>Al-Tabari</French>
+		<German>Al-Tabari</German>
+		<Italian>Al-Tabari</Italian>
+		<Spanish>Al-Tabari</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_IBN_FADLAN</Tag>
+		<English>Ahmad ibn Fadlan</English>
+		<French>Ahmad ibn Fadlan</French>
+		<German>Ahmad ibn Fadlan</German>
+		<Italian>Ahmad ibn Fadlan</Italian>
+		<Spanish>Ahmad ibn Fadlan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ABUL_FARAJ</Tag>
+		<English>Abul-Faraj</English>
+		<French>Abul-Faraj</French>
+		<German>Abul-Faraj</German>
+		<Italian>Abul-Faraj</Italian>
+		<Spanish>Abul-Faraj</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_AL_MASUDI</Tag>
+		<English>Al-Masudi</English>
+		<French>Al-Masudi</French>
+		<German>Al-Masudi</German>
+		<Italian>Al-Masudi</Italian>
+		<Spanish>Al-Masudi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_IBN_MUNQIDH</Tag>
+		<English>Ibn Munqidh</English>
+		<French>Ibn Munqidh</French>
+		<German>Ibn Munqidh</German>
+		<Italian>Ibn Munqidh</Italian>
+		<Spanish>Ibn Munqidh</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KHULUSI</Tag>
+		<English>Safa Khulusi</English>
+		<French>Safa Khulusi</French>
+		<German>Safa Khulusi</German>
+		<Italian>Safa Khulusi</Italian>
+		<Spanish>Safa Khulusi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_AL_ZAHIRI</Tag>
+		<English>Al-Zahiri</English>
+		<French>Al-Zahiri</French>
+		<German>Al-Zahiri</German>
+		<Italian>Al-Zahiri</Italian>
+		<Spanish>Al-Zahiri</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DRUB</Tag>
+		<English>Buton Rinchen Drub</English>
+		<French>Buton Rinchen Drub</French>
+		<German>Buton Rinchen Drub</German>
+		<Italian>Buton Rinchen Drub</Italian>
+		<Spanish>Buton Rinchen Drub</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ZHONNU_PEL</Tag>
+		<English>G&#246; Lotsawa Zh&#246;nnu-pel</English>
+		<French>G&#246; Lotsawa Zh&#246;nnu-pel</French>
+		<German>G&#246; Lotsawa Zh&#246;nnu-pel</German>
+		<Italian>G&#246; Lotsawa Zh&#246;nnu-pel</Italian>
+		<Spanish>G&#246; Lotsawa Zh&#246;nnu-pel</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_THRENGWA</Tag>
+		<English>Pawo Tsuglag Threngwa</English>
+		<French>Pawo Tsuglag Threngwa</French>
+		<German>Pawo Tsuglag Threngwa</German>
+		<Italian>Pawo Tsuglag Threngwa</Italian>
+		<Spanish>Pawo Tsuglag Threngwa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_PUNTSOK</Tag>
+		<English>Chapel Tseten Puntsok</English>
+		<French>Chapel Tseten Puntsok</French>
+		<German>Chapel Tseten Puntsok</German>
+		<Italian>Chapel Tseten Puntsok</Italian>
+		<Spanish>Chapel Tseten Puntsok</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_PRAPANCA</Tag>
+		<English>Mpu Prapanca</English>
+		<French>Mpu Prapanca</French>
+		<German>Mpu Prapanca</German>
+		<Italian>Mpu Prapanca</Italian>
+		<Spanish>Mpu Prapanca</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_YASADIPURA</Tag>
+		<English>Yasadipura</English>
+		<French>Yasadipura</French>
+		<German>Yasadipura</German>
+		<Italian>Yasadipura</Italian>
+		<Spanish>Yasadipura</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_RANGGAWARSITA</Tag>
+		<English>Ranggawarsita</English>
+		<French>Ranggawarsita</French>
+		<German>Ranggawarsita</German>
+		<Italian>Ranggawarsita</Italian>
+		<Spanish>Ranggawarsita</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_YAMIN</Tag>
+		<English>Mohammad Yamin</English>
+		<French>Mohammad Yamin</French>
+		<German>Mohammad Yamin</German>
+		<Italian>Mohammad Yamin</Italian>
+		<Spanish>Mohammad Yamin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_NOTOSUSANTO</Tag>
+		<English>Nugroho Notosusanto</English>
+		<French>Nugroho Notosusanto</French>
+		<German>Nugroho Notosusanto</German>
+		<Italian>Nugroho Notosusanto</Italian>
+		<Spanish>Nugroho Notosusanto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KARTODIRDJO</Tag>
+		<English>Sartono Kartodirdjo</English>
+		<French>Sartono Kartodirdjo</French>
+		<German>Sartono Kartodirdjo</German>
+		<Italian>Sartono Kartodirdjo</Italian>
+		<Spanish>Sartono Kartodirdjo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_IBN_HAZM</Tag>
+		<English>Ibn Hazm</English>
+		<French>Ibn Hazm</French>
+		<German>Ibn Hazm</German>
+		<Italian>Ibn Hazm</Italian>
+		<Spanish>Ibn Hazm</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_IBN_BATTUTA</Tag>
+		<English>Ibn Battuta</English>
+		<French>Ibn Battuta</French>
+		<German>Ibn Battuta</German>
+		<Italian>Ibn Battuta</Italian>
+		<Spanish>Ibn Battuta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_IBN_KHALDUN</Tag>
+		<English>Ibn Khaldun</English>
+		<French>Ibn Khaldun</French>
+		<German>Ibn Khaldun</German>
+		<Italian>Ibn Khaldun</Italian>
+		<Spanish>Ibn Khaldun</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ISIDORE</Tag>
+		<English>Isidore of Seville</English>
+		<French>Isidore of Seville</French>
+		<German>Isidore of Seville</German>
+		<Italian>Isidore of Seville</Italian>
+		<Spanish>Isidore of Seville</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DANGHIERA</Tag>
+		<English>Peter Martyr d'Anghiera</English>
+		<French>Peter Martyr d'Anghiera</French>
+		<German>Peter Martyr d'Anghiera</German>
+		<Italian>Peter Martyr d'Anghiera</Italian>
+		<Spanish>Peter Martyr d'Anghiera</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DE_MORGA</Tag>
+		<English>Antonio de Morga</English>
+		<French>Antonio de Morga</French>
+		<German>Antonio de Morga</German>
+		<Italian>Antonio de Morga</Italian>
+		<Spanish>Antonio de Morga</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DE_LAS_CASAS</Tag>
+		<English>Bartolom&#233; de las Casas</English>
+		<French>Bartolom&#233; de las Casas</French>
+		<German>Bartolom&#233; de las Casas</German>
+		<Italian>Bartolom&#233; de las Casas</Italian>
+		<Spanish>Bartolom&#233; de las Casas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_GREGORY_OF_TOURS</Tag>
+		<English>Gregory of Tours</English>
+		<French>Gregory of Tours</French>
+		<German>Gregory of Tours</German>
+		<Italian>Gregory of Tours</Italian>
+		<Spanish>Gregory of Tours</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_EINHARD</Tag>
+		<English>Einhard</English>
+		<French>Einhard</French>
+		<German>Einhard</German>
+		<Italian>Einhard</Italian>
+		<Spanish>Einhard</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_FROISSART</Tag>
+		<English>Jean Froissart</English>
+		<French>Jean Froissart</French>
+		<German>Jean Froissart</German>
+		<Italian>Jean Froissart</Italian>
+		<Spanish>Jean Froissart</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_RAMBAUD</Tag>
+		<English>Alfred Nicolas Rambaud</English>
+		<French>Alfred Nicolas Rambaud</French>
+		<German>Alfred Nicolas Rambaud</German>
+		<Italian>Alfred Nicolas Rambaud</Italian>
+		<Spanish>Alfred Nicolas Rambaud</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_MICHELET</Tag>
+		<English>Jules Michelet</English>
+		<French>Jules Michelet</French>
+		<German>Jules Michelet</German>
+		<Italian>Jules Michelet</Italian>
+		<Spanish>Jules Michelet</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_BLOCH</Tag>
+		<English>Marc Bloch</English>
+		<French>Marc Bloch</French>
+		<German>Marc Bloch</German>
+		<Italian>Marc Bloch</Italian>
+		<Spanish>Marc Bloch</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_BRAUDEL</Tag>
+		<English>Fernand Braudel</English>
+		<French>Fernand Braudel</French>
+		<German>Fernand Braudel</German>
+		<Italian>Fernand Braudel</Italian>
+		<Spanish>Fernand Braudel</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DUBY</Tag>
+		<English>Georges Duby</English>
+		<French>Georges Duby</French>
+		<German>Georges Duby</German>
+		<Italian>Georges Duby</Italian>
+		<Spanish>Georges Duby</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_LE_GOFF</Tag>
+		<English>Jacques Le Goff</English>
+		<French>Jacques Le Goff</French>
+		<German>Jacques Le Goff</German>
+		<Italian>Jacques Le Goff</Italian>
+		<Spanish>Jacques Le Goff</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KAONN</Tag>
+		<English>Vandy Kaonn</English>
+		<French>Vandy Kaonn</French>
+		<German>Vandy Kaonn</German>
+		<Italian>Vandy Kaonn</Italian>
+		<Spanish>Vandy Kaonn</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ASSER</Tag>
+		<English>Asser</English>
+		<French>Asser</French>
+		<German>Asser</German>
+		<Italian>Asser</Italian>
+		<Spanish>Asser</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_AETHELWEARD</Tag>
+		<English>&#198;thelweard</English>
+		<French>&#198;thelweard</French>
+		<German>&#198;thelweard</German>
+		<Italian>&#198;thelweard</Italian>
+		<Spanish>&#198;thelweard</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_GEOFFREY_OF_MONMOUTH</Tag>
+		<English>Geoffrey of Monmouth</English>
+		<French>Geoffrey of Monmouth</French>
+		<German>Geoffrey of Monmouth</German>
+		<Italian>Geoffrey of Monmouth</Italian>
+		<Spanish>Geoffrey of Monmouth</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_HOLINSHED</Tag>
+		<English>Raphael Holinshed</English>
+		<French>Raphael Holinshed</French>
+		<German>Raphael Holinshed</German>
+		<Italian>Raphael Holinshed</Italian>
+		<Spanish>Raphael Holinshed</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_HUME</Tag>
+		<English>David Hume</English>
+		<French>David Hume</French>
+		<German>David Hume</German>
+		<Italian>David Hume</Italian>
+		<Spanish>David Hume</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_CARLYLE</Tag>
+		<English>Thomas Carlyle</English>
+		<French>Thomas Carlyle</French>
+		<German>Thomas Carlyle</German>
+		<Italian>Thomas Carlyle</Italian>
+		<Spanish>Thomas Carlyle</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_HOBSBAWM</Tag>
+		<English>Eric Hobsbawm</English>
+		<French>Eric Hobsbawm</French>
+		<German>Eric Hobsbawm</German>
+		<Italian>Eric Hobsbawm</Italian>
+		<Spanish>Eric Hobsbawm</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ADAM_OF_BREMEN</Tag>
+		<English>Adam of Bremen</English>
+		<French>Adam of Bremen</French>
+		<German>Adam of Bremen</German>
+		<Italian>Adam of Bremen</Italian>
+		<Spanish>Adam of Bremen</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_HERMANN_OF_REICHENAU</Tag>
+		<English>Hermann of Reichenau</English>
+		<French>Hermann of Reichenau</French>
+		<German>Hermann of Reichenau</German>
+		<Italian>Hermann of Reichenau</Italian>
+		<Spanish>Hermann of Reichenau</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_NESTOR_THE_CHRONICLER</Tag>
+		<English>Nestor the Chronicler</English>
+		<French>Nestor the Chronicler</French>
+		<German>Nestor the Chronicler</German>
+		<Italian>Nestor the Chronicler</Italian>
+		<Spanish>Nestor the Chronicler</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_NIKITIN</Tag>
+		<English>Afanasy Nikitin</English>
+		<French>Afanasy Nikitin</French>
+		<German>Afanasy Nikitin</German>
+		<Italian>Afanasy Nikitin</Italian>
+		<Spanish>Afanasy Nikitin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KARAMZIN</Tag>
+		<English>Nikolay Karamzin</English>
+		<French>Nikolay Karamzin</French>
+		<German>Nikolay Karamzin</German>
+		<Italian>Nikolay Karamzin</Italian>
+		<Spanish>Nikolay Karamzin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_MULLER</Tag>
+		<English>Gerhard Friedrich M&#252;ller</English>
+		<French>Gerhard Friedrich M&#252;ller</French>
+		<German>Gerhard Friedrich M&#252;ller</German>
+		<Italian>Gerhard Friedrich M&#252;ller</Italian>
+		<Spanish>Gerhard Friedrich M&#252;ller</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_TATISHCHEV</Tag>
+		<English>Vasily Tatishchev</English>
+		<French>Vasily Tatishchev</French>
+		<German>Vasily Tatishchev</German>
+		<Italian>Vasily Tatishchev</Italian>
+		<Spanish>Vasily Tatishchev</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SOLOVYOV</Tag>
+		<English>Sergey Solovyov</English>
+		<French>Sergey Solovyov</French>
+		<German>Sergey Solovyov</German>
+		<Italian>Sergey Solovyov</Italian>
+		<Spanish>Sergey Solovyov</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KLYUCHEVSKY</Tag>
+		<English>Vasily Klyuchevsky</English>
+		<French>Vasily Klyuchevsky</French>
+		<German>Vasily Klyuchevsky</German>
+		<Italian>Vasily Klyuchevsky</Italian>
+		<Spanish>Vasily Klyuchevsky</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KOSTOMAROV</Tag>
+		<English>Mykola Kostomarov</English>
+		<French>Mykola Kostomarov</French>
+		<German>Mykola Kostomarov</German>
+		<Italian>Mykola Kostomarov</Italian>
+		<Spanish>Mykola Kostomarov</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_VOLGIN</Tag>
+		<English>Vyacheslav Volgin</English>
+		<French>Vyacheslav Volgin</French>
+		<German>Vyacheslav Volgin</German>
+		<Italian>Vyacheslav Volgin</Italian>
+		<Spanish>Vyacheslav Volgin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_POKROVSKY</Tag>
+		<English>Mikhail Pokrovsky</English>
+		<French>Mikhail Pokrovsky</French>
+		<German>Mikhail Pokrovsky</German>
+		<Italian>Mikhail Pokrovsky</Italian>
+		<Spanish>Mikhail Pokrovsky</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KATI</Tag>
+		<English>Mahmud Kati</English>
+		<French>Mahmud Kati</French>
+		<German>Mahmud Kati</German>
+		<Italian>Mahmud Kati</Italian>
+		<Spanish>Mahmud Kati</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_IBN_AL_MUKHTAR</Tag>
+		<English>Ibn al-Mukhtar</English>
+		<French>Ibn al-Mukhtar</French>
+		<German>Ibn al-Mukhtar</German>
+		<Italian>Ibn al-Mukhtar</Italian>
+		<Spanish>Ibn al-Mukhtar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KADLUBEK</Tag>
+		<English>Wincenty Kadlubek</English>
+		<French>Wincenty Kadlubek</French>
+		<German>Wincenty Kadlubek</German>
+		<Italian>Wincenty Kadlubek</Italian>
+		<Spanish>Wincenty Kadlubek</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_MIECHOWITA</Tag>
+		<English>Maciej Miechowita</English>
+		<French>Maciej Miechowita</French>
+		<German>Maciej Miechowita</German>
+		<Italian>Maciej Miechowita</Italian>
+		<Spanish>Maciej Miechowita</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_LELEWEL</Tag>
+		<English>Joachim Lelewel</English>
+		<French>Joachim Lelewel</French>
+		<German>Joachim Lelewel</German>
+		<Italian>Joachim Lelewel</Italian>
+		<Spanish>Joachim Lelewel</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_HANDELSMAN</Tag>
+		<English>Marceli Handelsman</English>
+		<French>Marceli Handelsman</French>
+		<German>Marceli Handelsman</German>
+		<Italian>Marceli Handelsman</Italian>
+		<Spanish>Marceli Handelsman</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DE_BARROS</Tag>
+		<English>Jo&#227;o de Barros</English>
+		<French>Jo&#227;o de Barros</French>
+		<German>Jo&#227;o de Barros</German>
+		<Italian>Jo&#227;o de Barros</Italian>
+		<Spanish>Jo&#227;o de Barros</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_HERCULANO</Tag>
+		<English>Alexandre Herculano</English>
+		<French>Alexandre Herculano</French>
+		<German>Alexandre Herculano</German>
+		<Italian>Alexandre Herculano</Italian>
+		<Spanish>Alexandre Herculano</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DE_LA_VEGA</Tag>
+		<English>Inca Garcilaso de la Vega</English>
+		<French>Inca Garcilaso de la Vega</French>
+		<German>Inca Garcilaso de la Vega</German>
+		<Italian>Inca Garcilaso de la Vega</Italian>
+		<Spanish>Inca Garcilaso de la Vega</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_BASADRE</Tag>
+		<English>Jorge Basadre</English>
+		<French>Jorge Basadre</French>
+		<German>Jorge Basadre</German>
+		<Italian>Jorge Basadre</Italian>
+		<Spanish>Jorge Basadre</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SALIMBENE</Tag>
+		<English>Salimbene of Parma</English>
+		<French>Salimbene of Parma</French>
+		<German>Salimbene of Parma</German>
+		<Italian>Salimbene of Parma</Italian>
+		<Spanish>Salimbene of Parma</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_POLO</Tag>
+		<English>Marco Polo</English>
+		<French>Marco Polo</French>
+		<German>Marco Polo</German>
+		<Italian>Marco Polo</Italian>
+		<Spanish>Marco Polo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_RAUL</Tag>
+		<English>Sire Raul</English>
+		<French>Sire Raul</French>
+		<German>Sire Raul</German>
+		<Italian>Sire Raul</Italian>
+		<Spanish>Sire Raul</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_VASARI</Tag>
+		<English>Giorgio Vasari</English>
+		<French>Giorgio Vasari</French>
+		<German>Giorgio Vasari</German>
+		<Italian>Giorgio Vasari</Italian>
+		<Spanish>Giorgio Vasari</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_VICO</Tag>
+		<English>Giambattista Vico</English>
+		<French>Giambattista Vico</French>
+		<German>Giambattista Vico</German>
+		<Italian>Giambattista Vico</Italian>
+		<Spanish>Giambattista Vico</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_CANTU</Tag>
+		<English>Cesare Cant&#249;</English>
+		<French>Cesare Cant&#249;</French>
+		<German>Cesare Cant&#249;</German>
+		<Italian>Cesare Cant&#249;</Italian>
+		<Spanish>Cesare Cant&#249;</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DE_SANCTIS</Tag>
+		<English>Gaetano De Sanctis</English>
+		<French>Gaetano De Sanctis</French>
+		<German>Gaetano De Sanctis</German>
+		<Italian>Gaetano De Sanctis</Italian>
+		<Spanish>Gaetano De Sanctis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DEL_BOCA</Tag>
+		<English>Angelo Del Boca</English>
+		<French>Angelo Del Boca</French>
+		<German>Angelo Del Boca</German>
+		<Italian>Angelo Del Boca</Italian>
+		<Spanish>Angelo Del Boca</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_TOQTOA</Tag>
+		<English>Toqto'a</English>
+		<French>Toqto'a</French>
+		<German>Toqto'a</German>
+		<Italian>Toqto'a</Italian>
+		<Spanish>Toqto'a</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_HAMADANI</Tag>
+		<English>Rashid al-Din Hamadani</English>
+		<French>Rashid al-Din Hamadani</French>
+		<German>Rashid al-Din Hamadani</German>
+		<Italian>Rashid al-Din Hamadani</Italian>
+		<Spanish>Rashid al-Din Hamadani</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_BOLAD</Tag>
+		<English>Bolad</English>
+		<French>Bolad</French>
+		<German>Bolad</German>
+		<Italian>Bolad</Italian>
+		<Spanish>Bolad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_LUVSANDAZAN</Tag>
+		<English>Guush Luvsandanzan</English>
+		<French>Guush Luvsandanzan</French>
+		<German>Guush Luvsandanzan</German>
+		<Italian>Guush Luvsandanzan</Italian>
+		<Spanish>Guush Luvsandanzan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_RINCHEN</Tag>
+		<English>Byambyn Rinchen</English>
+		<French>Byambyn Rinchen</French>
+		<German>Byambyn Rinchen</German>
+		<Italian>Byambyn Rinchen</Italian>
+		<Spanish>Byambyn Rinchen</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_BHANDARI</Tag>
+		<English>Sujan Rai Bhandari</English>
+		<French>Sujan Rai Bhandari</French>
+		<German>Sujan Rai Bhandari</German>
+		<Italian>Sujan Rai Bhandari</Italian>
+		<Spanish>Sujan Rai Bhandari</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ABUL_FAZL</Tag>
+		<English>Abul Fazl</English>
+		<French>Abul Fazl</French>
+		<German>Abul Fazl</German>
+		<Italian>Abul Fazl</Italian>
+		<Spanish>Abul Fazl</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_LAHORI</Tag>
+		<English>Abdul Hamid Lahori</English>
+		<French>Abdul Hamid Lahori</French>
+		<German>Abdul Hamid Lahori</German>
+		<Italian>Abdul Hamid Lahori</Italian>
+		<Spanish>Abdul Hamid Lahori</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_KHAFI_KHAN</Tag>
+		<English>Khafi Khan</English>
+		<French>Khafi Khan</French>
+		<German>Khafi Khan</German>
+		<Italian>Khafi Khan</Italian>
+		<Spanish>Khafi Khan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ROSHAN_KHAN</Tag>
+		<English>Khan Roshan Khan</English>
+		<French>Khan Roshan Khan</French>
+		<German>Khan Roshan Khan</German>
+		<Italian>Khan Roshan Khan</Italian>
+		<Spanish>Khan Roshan Khan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_IKRAM</Tag>
+		<English>S. M. Ikram</English>
+		<French>S. M. Ikram</French>
+		<German>S. M. Ikram</German>
+		<Italian>S. M. Ikram</Italian>
+		<Spanish>S. M. Ikram</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ASHIKPASHAZADE</Tag>
+		<English>Ashikpashazade</English>
+		<French>Ashikpashazade</French>
+		<German>Ashikpashazade</German>
+		<Italian>Ashikpashazade</Italian>
+		<Spanish>Ashikpashazade</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_NESHRI</Tag>
+		<English>Neshri</English>
+		<French>Neshri</French>
+		<German>Neshri</German>
+		<Italian>Neshri</Italian>
+		<Spanish>Neshri</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_CHELEBI</Tag>
+		<English>Evliya Chelebi</English>
+		<French>Evliya Chelebi</French>
+		<German>Evliya Chelebi</German>
+		<Italian>Evliya Chelebi</Italian>
+		<Spanish>Evliya Chelebi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_PECHEVI</Tag>
+		<English>Ibrahim Pechevi</English>
+		<French>Ibrahim Pechevi</French>
+		<German>Ibrahim Pechevi</German>
+		<Italian>Ibrahim Pechevi</Italian>
+		<Spanish>Ibrahim Pechevi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_CEVDET_PASHA</Tag>
+		<English>Ahmed Cevdet Pasha</English>
+		<French>Ahmed Cevdet Pasha</French>
+		<German>Ahmed Cevdet Pasha</German>
+		<Italian>Ahmed Cevdet Pasha</Italian>
+		<Spanish>Ahmed Cevdet Pasha</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_INAN</Tag>
+		<English>Afet Inan</English>
+		<French>Afet Inan</French>
+		<German>Afet Inan</German>
+		<Italian>Afet Inan</Italian>
+		<Spanish>Afet Inan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_RAJANUBHAB</Tag>
+		<English>Damrong Rajanubhab</English>
+		<French>Damrong Rajanubhab</French>
+		<German>Damrong Rajanubhab</German>
+		<Italian>Damrong Rajanubhab</Italian>
+		<Spanish>Damrong Rajanubhab</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_WICHIWATHAKAN</Tag>
+		<English>Luang Wichitwathakan</English>
+		<French>Luang Wichitwathakan</French>
+		<German>Luang Wichitwathakan</German>
+		<Italian>Luang Wichitwathakan</Italian>
+		<Spanish>Luang Wichitwathakan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DE_JONGE</Tag>
+		<English>Johannes Cornelis de Jonge</English>
+		<French>Johannes Cornelis de Jonge</French>
+		<German>Johannes Cornelis de Jonge</German>
+		<Italian>Johannes Cornelis de Jonge</Italian>
+		<Spanish>Johannes Cornelis de Jonge</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_FRUIN</Tag>
+		<English>Robert Fruin</English>
+		<French>Robert Fruin</French>
+		<German>Robert Fruin</German>
+		<Italian>Robert Fruin</Italian>
+		<Spanish>Robert Fruin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SCHILLER</Tag>
+		<English>Friedrich Schiller</English>
+		<French>Friedrich Schiller</French>
+		<German>Friedrich Schiller</German>
+		<Italian>Friedrich Schiller</Italian>
+		<Spanish>Friedrich Schiller</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_VON_RANKE</Tag>
+		<English>Leopold von Ranke</English>
+		<French>Leopold von Ranke</French>
+		<German>Leopold von Ranke</German>
+		<Italian>Leopold von Ranke</Italian>
+		<Spanish>Leopold von Ranke</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_VON_SYBEL</Tag>
+		<English>Heinrich von Sybel</English>
+		<French>Heinrich von Sybel</French>
+		<German>Heinrich von Sybel</German>
+		<Italian>Heinrich von Sybel</Italian>
+		<Spanish>Heinrich von Sybel</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_MARX</Tag>
+		<English>Karl Marx</English>
+		<French>Karl Marx</French>
+		<German>Karl Marx</German>
+		<Italian>Karl Marx</Italian>
+		<Spanish>Karl Marx</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_MATHER</Tag>
+		<English>Cotton Mather</English>
+		<French>Cotton Mather</French>
+		<German>Cotton Mather</German>
+		<Italian>Cotton Mather</Italian>
+		<Spanish>Cotton Mather</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ADAMS</Tag>
+		<English>Henry Adams</English>
+		<French>Henry Adams</French>
+		<German>Henry Adams</German>
+		<Italian>Henry Adams</Italian>
+		<Spanish>Henry Adams</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_BEARD</Tag>
+		<English>Charles A. Beard</English>
+		<French>Charles A. Beard</French>
+		<German>Charles A. Beard</German>
+		<Italian>Charles A. Beard</Italian>
+		<Spanish>Charles A. Beard</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_SCHLESINGER</Tag>
+		<English>Arthur M. Schlesinger Sr.</English>
+		<French>Arthur M. Schlesinger Sr.</French>
+		<German>Arthur M. Schlesinger Sr.</German>
+		<Italian>Arthur M. Schlesinger Sr.</Italian>
+		<Spanish>Arthur M. Schlesinger Sr.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_MITRE</Tag>
+		<English>Bartolom&#233; Mitre</English>
+		<French>Bartolom&#233; Mitre</French>
+		<German>Bartolom&#233; Mitre</German>
+		<Italian>Bartolom&#233; Mitre</Italian>
+		<Spanish>Bartolom&#233; Mitre</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_LOPEZ</Tag>
+		<English>Vicente Fidel L&#243;pez</English>
+		<French>Vicente Fidel L&#243;pez</French>
+		<German>Vicente Fidel L&#243;pez</German>
+		<Italian>Vicente Fidel L&#243;pez</Italian>
+		<Spanish>Vicente Fidel L&#243;pez</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_LUNA</Tag>
+		<English>F&#233;lix Luna</English>
+		<French>F&#233;lix Luna</French>
+		<German>F&#233;lix Luna</German>
+		<Italian>F&#233;lix Luna</Italian>
+		<Spanish>F&#233;lix Luna</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_RESTREPO_VELEZ</Tag>
+		<English>Jos&#233; Manuel Restrepo V&#233;lez</English>
+		<French>Jos&#233; Manuel Restrepo V&#233;lez</French>
+		<German>Jos&#233; Manuel Restrepo V&#233;lez</German>
+		<Italian>Jos&#233; Manuel Restrepo V&#233;lez</Italian>
+		<Spanish>Jos&#233; Manuel Restrepo V&#233;lez</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_FRIEDE</Tag>
+		<English>Juan Friede</English>
+		<French>Juan Friede</French>
+		<German>Juan Friede</German>
+		<Italian>Juan Friede</Italian>
+		<Spanish>Juan Friede</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DE_VARNHAGEN</Tag>
+		<English>Francisco Adolfo de Varnhagen</English>
+		<French>Francisco Adolfo de Varnhagen</French>
+		<German>Francisco Adolfo de Varnhagen</German>
+		<Italian>Francisco Adolfo de Varnhagen</Italian>
+		<Spanish>Francisco Adolfo de Varnhagen</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_ROMERO</Tag>
+		<English>S&#237;lvio Romero</English>
+		<French>S&#237;lvio Romero</French>
+		<German>S&#237;lvio Romero</German>
+		<Italian>S&#237;lvio Romero</Italian>
+		<Spanish>S&#237;lvio Romero</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DE_ABREU</Tag>
+		<English>Capistrano de Abreu</English>
+		<French>Capistrano de Abreu</French>
+		<German>Capistrano de Abreu</German>
+		<Italian>Capistrano de Abreu</Italian>
+		<Spanish>Capistrano de Abreu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_FREYRE</Tag>
+		<English>Gilberto Freyre</English>
+		<French>Gilberto Freyre</French>
+		<German>Gilberto Freyre</German>
+		<Italian>Gilberto Freyre</Italian>
+		<Spanish>Gilberto Freyre</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_DE_HOLANDA</Tag>
+		<English>S&#233;rgio Buarque de Holanda</English>
+		<French>S&#233;rgio Buarque de Holanda</French>
+		<German>S&#233;rgio Buarque de Holanda</German>
+		<Italian>S&#233;rgio Buarque de Holanda</Italian>
+		<Spanish>S&#233;rgio Buarque de Holanda</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_PRADO_JUNIOR</Tag>
+		<English>Caio Prado J&#250;nior</English>
+		<French>Caio Prado J&#250;nior</French>
+		<German>Caio Prado J&#250;nior</German>
+		<Italian>Caio Prado J&#250;nior</Italian>
+		<Spanish>Caio Prado J&#250;nior</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_GARNEAU</Tag>
+		<English>Fran&#231;ois-Xavier Garneau</English>
+		<French>Fran&#231;ois-Xavier Garneau</French>
+		<German>Fran&#231;ois-Xavier Garneau</German>
+		<Italian>Fran&#231;ois-Xavier Garneau</Italian>
+		<Spanish>Fran&#231;ois-Xavier Garneau</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_GROULX</Tag>
+		<English>Lionel Groulx</English>
+		<French>Lionel Groulx</French>
+		<German>Lionel Groulx</German>
+		<Italian>Lionel Groulx</Italian>
+		<Spanish>Lionel Groulx</Spanish>
+	</TEXT>
+	
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_GENERIC</Tag>
+		<English>A great historian</English>
+		<French>A great historian</French>
+		<German>A great historian</German>
+		<Italian>A great historian</Italian>
+		<Spanish>A great historian</Spanish>
+	</TEXT>
+	
+	<TEXT>
+		<Tag>TXT_KEY_HISTORIAN_</Tag>
+		<English></English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+</Civ4GameText>

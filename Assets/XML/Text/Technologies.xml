@@ -87,11 +87,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_AESTHETICS_QUOTE</Tag>
-		<English>"I believe in the might of design, the mystery of colour, the redemption of all things by Beauty everlasting, and the message of Art that has made these hands blessed."[PARAGRAPH:2]- George Bernard Shaw, The Doctor's Dilemma</English>
-		<French>"Je crois &#224; la puissance du dessin, aux myst&#232;res de la couleur, &#224; la r&#233;demption de toutes choses par l'&#233;ternelle beaut&#233; et au message de l'art qui a b&#233;ni ces mains."[PARAGRAPH:2]- George Bernard Shaw, Le Dilemme du docteur</French>
-		<German>"I believe in the might of design, the mystery of colour, the redemption of all things by Beauty everlasting, and the message of Art that has made these hands blessed."[PARAGRAPH:2]- George Bernard Shaw, The Doctor's Dilemma</German>
-		<Italian>"I believe in the might of design, the mystery of colour, the redemption of all things by Beauty everlasting, and the message of Art that has made these hands blessed."[PARAGRAPH:2]- George Bernard Shaw, The Doctor's Dilemma</Italian>
-		<Spanish>"I believe in the might of design, the mystery of colour, the redemption of all things by Beauty everlasting, and the message of Art that has made these hands blessed."[PARAGRAPH:2]- George Bernard Shaw, The Doctor's Dilemma</Spanish>
+		<English>"We have art in order not to die of the truth."[PARAGRAPH:2]- Friedrich Nietzsche, The Will to Power</English>
+		<French>"We have art in order not to die of the truth."[PARAGRAPH:2]- Friedrich Nietzsche, The Will to Power</French>
+		<German>"We have art in order not to die of the truth."[PARAGRAPH:2]- Friedrich Nietzsche, The Will to Power</German>
+		<Italian>"We have art in order not to die of the truth."[PARAGRAPH:2]- Friedrich Nietzsche, The Will to Power</Italian>
+		<Spanish>"We have art in order not to die of the truth."[PARAGRAPH:2]- Friedrich Nietzsche, The Will to Power</Spanish>
 	</TEXT>
 
 
@@ -439,55 +439,24 @@
 
 
 	<TEXT>
-		<Tag>TXT_KEY_TECH_ATOMIC_PHYSICS</Tag>
-		<English>Atomic Physics</English>
-		<French>Physique atomique</French>
-		<German>Atomic Physics</German>
-		<Italian>Atomic Physics</Italian>
-		<Spanish>Atomic Physics</Spanish>
+		<Tag>TXT_KEY_TECH_CYBERNETICS</Tag>
+		<English>Cybernetics</English>
+		<French>Cybernetics</French>
+		<German>Cybernetics</German>
+		<Italian>Cybernetics</Italian>
+		<Spanish>Cybernetics</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_ATOMIC_PHYSICS_QUOTE</Tag>
-		<English>"By convention, sweet; by convention, bitter; by convention, colour; but, in reality, atoms and the void."[PARAGRAPH:2]- Democritus</English>
-		<French>"By convention, sweet; by convention, bitter; by convention, colour; but, in reality, atoms and the void."[PARAGRAPH:2]- Democritus</French>
-		<German>"By convention, sweet; by convention, bitter; by convention, colour; but, in reality, atoms and the void."[PARAGRAPH:2]- Democritus</German>
-		<Italian>"By convention, sweet; by convention, bitter; by convention, colour; but, in reality, atoms and the void."[PARAGRAPH:2]- Democritus</Italian>
-		<Spanish>"By convention, sweet; by convention, bitter; by convention, colour; but, in reality, atoms and the void."[PARAGRAPH:2]- Democritus</Spanish>
+		<Tag>TXT_KEY_TECH_CYBERNETICS_QUOTE</Tag>
+		<English>"The purpose of a system is what it does."[PARAGRAPH:2]- Stafford Beer</English>
+		<French>"The purpose of a system is what it does."[PARAGRAPH:2]- Stafford Beer</French>
+		<German>"The purpose of a system is what it does."[PARAGRAPH:2]- Stafford Beer</German>
+		<Italian>"The purpose of a system is what it does."[PARAGRAPH:2]- Stafford Beer</Italian>
+		<Spanish>"The purpose of a system is what it does."[PARAGRAPH:2]- Stafford Beer</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_ATOMIC_PHYSICS_PEDIA</Tag>
-			<English>Atomic theory is, in simplest form, the idea that all matter is made up of tiny, indivisible particles called "atoms." The first ancient form of this theory comes from the Greek philosopher Democritus. His atomic theory was founded on the Greek ideas of the geometric order of the universe and of the four elements, which led to some strange ideas. For instance, early supporters of the atomic theory suggested that water might flow because it was made up of icosahedral atoms which, being nearly round, tumbled over each other easily; fire was painful because it was made up of tetrahedral atoms which were sharp and thus damaging. Since there was no evidence for this theory at the time, and no obvious reason to prefer it to the alternatives, it was largely ignored for the following two thousand years.[PARAGRAPH:2]The atomic theory re-emerged around 1800, following early chemists' discovery of new types of chemical elements that seemed more fundamental than things like air and fire. The chemist John Dalton proposed again that all matter was made of atoms, which were neither created nor destroyed in chemical reactions, only reshuffled to form different substances. This theory proved fruitful for 19th century chemistry, although many scientists insisted that it was only a theory.[PARAGRAPH:2]Towards the end of the century, advances in the studies of the spectrum of light emitted by different elements, and the discovery of radioactivity, cast doubt on the premise that atoms were indivisible. Perhaps atoms had some kind of internal structure, and were themselves composed of smaller particles with new and intriguing properties of their own. The first of these particles to be discovered was the electron, a tiny and lightweight particle which carries a strong negative charge, and whose motions form the basis for nearly all electrical, magnetic, and chemical interactions.[PARAGRAPH:2]Further investigation into the structure of the atom using ever more precise and complex instruments and mathematical theories opened up broad vistas of scientific discovery. Various models of atomic structure, such as the "plum pudding" model, the Rutherford atom, and the Bohr atom, were considered, modified, or discarded. Scientists gained more understanding of the mechanisms behind atomic structure, and of how atoms could bind together to form molecules.[PARAGRAPH:2]This led to great advances in practical technology in the latter half of the 20th century. Once the atoms that made them up were understood, chemists could tailor-make molecules to suit their needs. Alloys with strange electrical properties could be used to build advanced calculating machines. And the immense forces locked within the atomic nucleus could be released, for good or for evil.</English>
-		<French>No Translation</French>
-		<German>No Translation</German>
-		<Italian>No Translation</Italian>
-		<Spanish>No Translation</Spanish>
-	</TEXT>
-
-
-
-	<TEXT>
-		<Tag>TXT_KEY_TECH_AUTOMATION</Tag>
-		<English>Automation</English>
-		<French>
-			<Text>Automatisation</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Automation</German>
-		<Italian>Automation</Italian>
-		<Spanish>Automation</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_AUTOMATION_QUOTE</Tag>
-		<English>"We are becoming the servants in thought, as in action, of the machine we have created to serve us."[PARAGRAPH:2]- John Kenneth Galbraith, The New Industrial State</English>
-		<French>"Nous devenons les serviteurs, en pens&#233;e comme en action, de la machine que nous avons cr&#233;&#233;e pour nous servir."[PARAGRAPH:2]- John Kenneth Galbraith, Le Nouvel &#201;tat industriel</French>
-		<German>"We are becoming the servants in thought, as in action, of the machine we have created to serve us."[PARAGRAPH:2]- John Kenneth Galbraith, The New Industrial State</German>
-		<Italian>"We are becoming the servants in thought, as in action, of the machine we have created to serve us."[PARAGRAPH:2]- John Kenneth Galbraith, The New Industrial State</Italian>
-		<Spanish>"We are becoming the servants in thought, as in action, of the machine we have created to serve us."[PARAGRAPH:2]- John Kenneth Galbraith, The New Industrial State</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_AUTOMATION_PEDIA</Tag>
-		<English>Automation is the art of making machines which perform tasks on their own, without active input or oversight from a human operator. Automatic constructs have existed as toys for the rich since ancient times, the products of individual craftsmanship, but widespread use of automation to control machines is a twentieth-century phenomenon.[PARAGRAPH:2]The demand for automation first came from the need to make machinery function where humans cannot or will not; be it in an extremely hostile environment, in a factory where machines ran faster than the human eye can follow, or in a job too menial and unstimulating for the average person to be content doing. Over time, automation has become more popular and flexible, especially with the rise of electronic computers.[PARAGRAPH:2]Automatic equipment invariably saves human labor, but it also displaces labour. The simple tasks involved in doing the machine's job are replaced by specialized jobs tending the machines. Or not replaced at all.</English>
+		<Tag>TXT_KEY_TECH_CYBERNETICS_PEDIA</Tag>
+		<English>Cybernetics is the transdisciplinary study of circular causal processes such as feedback and recursion, where the effects of a system's actions (its outputs) return as inputs to that system, influencing subsequent action. It is concerned with general principles that are relevant across multiple contexts, including in engineering, ecological, economic, biological, cognitive and social systems and also in practical activities such as designing, learning, and managing. Cybernetics' transdisciplinary character has meant that it intersects with a number of other fields, leading to it having both wide influence and diverse interpretations.[PARAGRAPH:2]Early focuses included purposeful behaviour, neural networks, heterarchy, information theory, and self-organising systems. As cybernetics developed, it became broader in scope to include work in design, family therapy, management and organisation, pedagogy, sociology, the creative arts and the counterculture.</English>
 		<French>No Translation</French>
 		<German>No Translation</German>
 		<Italian>No Translation</Italian>
@@ -599,11 +568,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BLOOMERY_QUOTE</Tag>
-		<English>"You should hammer your iron when it is glowing hot."[PARAGRAPH:2]- Publilius Syrus, Sentences</English>
-		<French>"Il faut battre le fer quand il est rouge au feu."[PARAGRAPH:2]- Publilius Syrus, Sentences</French>
-		<German>"Man muss das Eisen schmieden, solange es hei&#223; ist."[PARAGRAPH:2]- Publius Syrus</German>
-		<Italian>"Dovresti battere il ferro finch&#233; &#232; caldo."[PARAGRAPH:2]- Publilio Siro</Italian>
-		<Spanish>"Debes golpear el hierro cuando a&#250;n est&#225; al rojo vivo."[PARAGRAPH:2]- Publio Siro</Spanish>
+		<English>"The great questions of the day will not be settled by speeches and majority decisions, but by blood and iron."[PARAGRAPH:2]- Otto von Bismarck</English>
+		<French>"The great questions of the day will not be settled by speeches and majority decisions, but by blood and iron."[PARAGRAPH:2]- Otto von Bismarck</French>
+		<German>"The great questions of the day will not be settled by speeches and majority decisions, but by blood and iron."[PARAGRAPH:2]- Otto von Bismarck</German>
+		<Italian>"The great questions of the day will not be settled by speeches and majority decisions, but by blood and iron."[PARAGRAPH:2]- Otto von Bismarck</Italian>
+		<Spanish>"The great questions of the day will not be settled by speeches and majority decisions, but by blood and iron."[PARAGRAPH:2]- Otto von Bismarck</Spanish>
 	</TEXT>
 
 
@@ -735,11 +704,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CARTOGRAPHY_QUOTE</Tag>
-		<English>"Not all those who wander are lost."[PARAGRAPH:2]- J. R. R. Tolkien, The Lord of the Rings</English>
-		<French>"Tous ceux qui errent ne sont pas perdus."[PARAGRAPH:2]- J. R. R. Tolkien, Le Seigneur des anneaux</French>
-		<German>"Not all those who wander are lost."[PARAGRAPH:2]- J. R. R. Tolkien, The Lord of the Rings</German>
-		<Italian>"Not all those who wander are lost."[PARAGRAPH:2]- J. R. R. Tolkien, The Lord of the Rings</Italian>
-		<Spanish>"Not all those who wander are lost."[PARAGRAPH:2]- J. R. R. Tolkien, The Lord of the Rings</Spanish>
+		<English>"The map is not the territory."[PARAGRAPH:2]- Alfred Korzybski, Science and Sanity</English>
+		<French>"The map is not the territory."[PARAGRAPH:2]- Alfred Korzybski, Science and Sanity</French>
+		<German>"The map is not the territory."[PARAGRAPH:2]- Alfred Korzybski, Science and Sanity</German>
+		<Italian>"The map is not the territory."[PARAGRAPH:2]- Alfred Korzybski, Science and Sanity</Italian>
+		<Spanish>"The map is not the territory."[PARAGRAPH:2]- Alfred Korzybski, Science and Sanity</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CARTOGRAPHY_PEDIA</Tag>
@@ -890,11 +859,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CIVIL_RIGHTS_QUOTE</Tag>
-		<English>"I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character."[PARAGRAPH:2]- Martin Luther King Jr.</English>
-		<French>"Je r&#234;ve que mes quatre jeunes enfants vivront un jour dans une nation o&#249; ils ne seront pas jug&#233;s par la couleur de leur peau, mais &#224; la mesure de leur caract&#232;re."[PARAGRAPH:2]- Martin Luther King Jr.</French>
-		<German>"I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character."[PARAGRAPH:2]- Martin Luther King Jr.</German>
-		<Italian>"I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character."[PARAGRAPH:2]- Martin Luther King Jr.</Italian>
-		<Spanish>"I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character."[PARAGRAPH:2]- Martin Luther King Jr.</Spanish>
+		<English>"Injustice anywhere is a threat to justice everywhere."[PARAGRAPH:2]- Martin Luther King Jr., Letter from a Birmingham Jail</English>
+		<French>"Injustice anywhere is a threat to justice everywhere."[PARAGRAPH:2]- Martin Luther King Jr., Letter from a Birmingham Jail</French>
+		<German>"Injustice anywhere is a threat to justice everywhere."[PARAGRAPH:2]- Martin Luther King Jr., Letter from a Birmingham Jail</German>
+		<Italian>"Injustice anywhere is a threat to justice everywhere."[PARAGRAPH:2]- Martin Luther King Jr., Letter from a Birmingham Jail</Italian>
+		<Spanish>"Injustice anywhere is a threat to justice everywhere."[PARAGRAPH:2]- Martin Luther King Jr., Letter from a Birmingham Jail</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CIVIL_RIGHTS_PEDIA</Tag>
@@ -933,11 +902,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CIVIL_SERVICE_QUOTE</Tag>
-		<English>"The bureaucracy is expanding to meet the needs of the expanding bureaucracy."[PARAGRAPH:2]- Oscar Wilde</English>
-		<French>"La bureaucratie grandit pour r&#233;pondre aux besoins croissants de la bureaucratie grandissante."[PARAGRAPH:2]- Oscar Wilde</French>
-		<German>"Die B&#252;rokratie wurde erfunden, um die Bed&#252;rfnisse der B&#252;rokratie zu stillen."[PARAGRAPH:2]- Unbekannt</German>
-		<Italian>"La burocrazia si espande per soddisfare i bisogni di una burocrazia in espansione."[PARAGRAPH:2]- Anonimo</Italian>
-		<Spanish>"La burocracia se expande para satisfacer las necesidades de una burocracia en expansi&#243;n."[PARAGRAPH:2]- An&#243;nimo</Spanish>
+		<English>"A wise ruler must appoint men of talent, even if they are poor and humble. The welfare of the state depends on the officials, not on the wealth of the court."[PARAGRAPH:2]- Emperor Taizong of Tang, Zhenguan Zhengyao</English>
+		<French>"A wise ruler must appoint men of talent, even if they are poor and humble. The welfare of the state depends on the officials, not on the wealth of the court."[PARAGRAPH:2]- Emperor Taizong of Tang, Zhenguan Zhengyao</French>
+		<German>"A wise ruler must appoint men of talent, even if they are poor and humble. The welfare of the state depends on the officials, not on the wealth of the court."[PARAGRAPH:2]- Emperor Taizong of Tang, Zhenguan Zhengyao</German>
+		<Italian>"A wise ruler must appoint men of talent, even if they are poor and humble. The welfare of the state depends on the officials, not on the wealth of the court."[PARAGRAPH:2]- Emperor Taizong of Tang, Zhenguan Zhengyao</Italian>
+		<Spanish>"A wise ruler must appoint men of talent, even if they are poor and humble. The welfare of the state depends on the officials, not on the wealth of the court."[PARAGRAPH:2]- Emperor Taizong of Tang, Zhenguan Zhengyao</Spanish>
 	</TEXT>
 
 
@@ -1395,11 +1364,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ECOLOGY_QUOTE</Tag>
-		<English>"We do not inherit the Earth from our ancestors, we borrow it from our children."[PARAGRAPH:2]- Wendell Berry, The Unforeseen Wilderness</English>
-		<French>"Nous n'h&#233;ritons pas de la Terre de nos anc&#234;tres, nous l'empruntons &#224; nos enfants."[PARAGRAPH:2]- Wendell Berry, The Unforeseen Wilderness</French>
-		<German>"Wir haben die Erde nicht von unseren Vorfahren geerbt, sondern von unseren Kindern geliehen."[PARAGRAPH:2]- Indianerlied</German>
-		<Italian>"Non ereditiamo la terra dai nostri antenati, la prendiamo in prestito per i nostri figli."[PARAGRAPH:2]- Canzone dei Nativi Americani</Italian>
-		<Spanish>"La Tierra no es una herencia de nuestros padres, sino un pr&#233;stamo de nuestros hijos."[PARAGRAPH:2]- Canci&#243;n de los ind&#237;genas americanos</Spanish>
+		<English>"Nature does not hurry, yet everything is accomplished."[PARAGRAPH:2]- Laozi, Tao Te Ching</English>
+		<French>"Nature does not hurry, yet everything is accomplished."[PARAGRAPH:2]- Laozi, Tao Te Ching</French>
+		<German>"Nature does not hurry, yet everything is accomplished."[PARAGRAPH:2]- Laozi, Tao Te Ching</German>
+		<Italian>"Nature does not hurry, yet everything is accomplished."[PARAGRAPH:2]- Laozi, Tao Te Ching</Italian>
+		<Spanish>"Nature does not hurry, yet everything is accomplished."[PARAGRAPH:2]- Laozi, Tao Te Ching</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ECOLOGY_PEDIA</Tag>
@@ -2024,11 +1993,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENERALSHIP_QUOTE</Tag>
-		<English>"Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win."[PARAGRAPH:2]- Sun Tzu, The Art of War</English>
-		<French>"Le vainqueur triomphe avant m&#234;me de partir &#224; la guerre, le vaincu part &#224; la guerre puis r&#234;ve de triomphe."[PARAGRAPH:2]- Sun Tzu, L'Art de la guerre</French>
-		<German>"Der General, der eine Schlacht gewinnt, stellt vor dem Kampf viele Berechnungen an. Der General, der verliert, stellt vorher kaum Berechnungen an."[PARAGRAPH:2]- Sun-Tzu</German>
-		<Italian>"I guerrieri vittoriosi prima vincono e poi vanno in guerra; quelli sconfitti, prima vanno in guerra e poi cercano di vincere."[PARAGRAPH:2]- Sun-Tzu</Italian>
-		<Spanish>"Los guerreros vencedores ganan primero y luego van a la guerra, mientras que los perdedores van a la guerra primero y luego pretenden ganar."[PARAGRAPH:2]- Sun Tzu</Spanish>
+		<English>"I am not afraid of an army of lions led by a sheep; I am afraid of an army of sheep led by a lion."[PARAGRAPH:2]- Alexander the Great</English>
+		<French>"I am not afraid of an army of lions led by a sheep; I am afraid of an army of sheep led by a lion."[PARAGRAPH:2]- Alexander the Great</French>
+		<German>"I am not afraid of an army of lions led by a sheep; I am afraid of an army of sheep led by a lion."[PARAGRAPH:2]- Alexander the Great</German>
+		<Italian>"I am not afraid of an army of lions led by a sheep; I am afraid of an army of sheep led by a lion."[PARAGRAPH:2]- Alexander the Great</Italian>
+		<Spanish>"I am not afraid of an army of lions led by a sheep; I am afraid of an army of sheep led by a lion."[PARAGRAPH:2]- Alexander the Great</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GENERALSHIP_PEDIA</Tag>
@@ -2143,28 +2112,28 @@
 
 
 	<TEXT>
-		<Tag>TXT_KEY_TECH_GLOBALISM</Tag>
-		<English>Globalism</English>
+		<Tag>TXT_KEY_TECH_GEOPOLITICS</Tag>
+		<English>Geopolitics</English>
 		<French>
-			<Text>Mondialisme</Text>
+			<Text>G&#233;opolitique</Text>
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Globalism</German>
-		<Italian>Globalism</Italian>
-		<Spanish>Globalism</Spanish>
+		<German>Geopolitics</German>
+		<Italian>Geopolitics</Italian>
+		<Spanish>Geopolitics</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_GLOBALISM_QUOTE</Tag>
-		<English>"I am a citizen of the world."[PARAGRAPH:2]- Diogenes of Sinope</English>
-		<French>"Je suis citoyen du monde."[PARAGRAPH:2]- Diog&#232;ne de Sinope</French>
-		<German>"I am a citizen of the world."[PARAGRAPH:2]- Diogenes of Sinope</German>
-		<Italian>"I am a citizen of the world."[PARAGRAPH:2]- Diogenes of Sinope</Italian>
-		<Spanish>"I am a citizen of the world."[PARAGRAPH:2]- Diogenes of Sinope</Spanish>
+		<Tag>TXT_KEY_TECH_GEOPOLITICS_QUOTE</Tag>
+		<English>"To know a nation's geography is to know its foreign policy."[PARAGRAPH:2]- Napoleon Bonaparte</English>
+		<French>"To know a nation's geography is to know its foreign policy."[PARAGRAPH:2]- Napoleon Bonaparte</French>
+		<German>"To know a nation's geography is to know its foreign policy."[PARAGRAPH:2]- Napoleon Bonaparte</German>
+		<Italian>"To know a nation's geography is to know its foreign policy."[PARAGRAPH:2]- Napoleon Bonaparte</Italian>
+		<Spanish>"To know a nation's geography is to know its foreign policy."[PARAGRAPH:2]- Napoleon Bonaparte</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_GLOBALISM_PEDIA</Tag>
-		<English>Globalization is the process by which different peoples spread across the world become united by ties of ideology, economics, and politics. The first wave of globalization took place during the 19th century Age of Imperialism, when steam power and telegraphy allowed European empires to spread zones of influence across most of the world, creating a web of transport, communication, and government. However, access to these networks was limited and patchy and many people neither knew nor cared about events in far-off lands.[PARAGRAPH:2]The World Wars sped up the process. The staggering, apocalyptic scale of combat caught up many colonial possessions in Africa and Asia, permanently undermining European rule at the same time that people in economic backwaters were exposed to a wide variety of modern products and weapons. After World War Two, ideologies such as nationalism or communism spread into regions that had previously been dominated by traditional cultures that were less inclined to resist foreign rule. A wave of "decolonization" swept the world.[PARAGRAPH:2]But this was not the end. Direct imperial rule of poor nations by rich ones went out of fashion, the economic bonds between rich and poor were not so easily broken. The industrial giants of the developed world could easily produce enough goods to supply massive export markets, while needing to import raw materials on an ever-growing scale as their own supplies of timber, coal, ore, and oil became depleted. Along with these flows of goods came flows of popular products and the culture that came with them, particularly from the United States. Artifacts of American culture (Hollywood movies, blue jeans, Coca-Cola) became world-spanning; to a lesser extent this diffusion worked from other sources, and even worked the other way, with foreign customs being adopted in the former colonial metropoles.[PARAGRAPH:2]Along with these economic ties came an entangled world political stage. Dictators of small, remote countries could no longer count on isolation and control of the media to keep their people from becoming restless, or to keep large foreign powers from intruding on their business. The only security for small nations was to align themselves with the economic interests of the great power blocs, supplying cheap resources and labor and giving themselves a place in the new world order.[PARAGRAPH:2]Today the world is extensively globalized, a product of the capitalist triumph of the post-Cold War era. Whether this is socially desirable, economically sustainable, or even ecologically survivable remains to be seen, and is likely to become one of the great questions of the 21st century.</English>
+		<Tag>TXT_KEY_TECH_GEOPOLITICS_PEDIA</Tag>
+		<English>Geopolitics (from Ancient Greek ge 'earth, land' and politike 'politics') is the study of the effects of Earth's geography on politics and international relations. Geopolitics usually refers to countries and relations between them, it may also focus on two other kinds of states: de facto independent states with limited international recognition and relations between sub-national geopolitical entities, such as the federated states that make up a federation, confederation, or a quasi-federal system.[PARAGRAPH:2]At the level of international relations, geopolitics is a method of studying foreign policy to understand, explain, and predict international political behavior through geographical variables. These include area studies, climate, topography, demography, natural resources, and applied science of the region being evaluated.[PARAGRAPH:2]Geopolitics focuses on political power linked to geographic space, in particular, territorial waters and land territory in correlation with diplomatic history. Topics of geopolitics include relations between the interests of international political actors focused within an area, a space, or a geographical element, relations which create a geopolitical system. Critical geopolitics deconstructs classical geopolitical theories, by showing their political or ideological functions for great powers. There are some works that discuss the geopolitics of renewable energy. The relationship between geopolitics and geoeconomics is often analyzed by two main schools of thought: the strategic school and the political-economic school. According to Christopher Gogwilt and other researchers, the term is currently being used to describe a broad spectrum of concepts, in a general sense used as "a synonym for international political relations", but more specifically "to imply the global structure of such relations"; this usage builds on an "early-twentieth-century term for a pseudoscience of political geography" and other pseudoscientific theories of historical and geographic determinism.</English>
 		<French>No Translation</French>
 		<German>No Translation</German>
 		<Italian>No Translation</Italian>
@@ -2255,11 +2224,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HERITAGE_QUOTE</Tag>
-		<English>"And how can man die better, than facing fearful odds, for the ashes of his fathers, and the temples of his gods?"[PARAGRAPH:2]- Thomas Macaulay, Lays of Ancient Rome</English>
-		<French>"Comment mourir mieux qu'en affrontant un danger terrible pour les cendres de ses p&#232;res et l'autel de ses dieux ?"[PARAGRAPH:2]- Thomas Macaulay, Chants de l'Ancienne Rome</French>
-		<German>"And how can man die better, than facing fearful odds, for the ashes of his fathers, and the temples of his gods?"[PARAGRAPH:2]- Thomas Macaulay, Lays of Ancient Rome</German>
-		<Italian>"And how can man die better, than facing fearful odds, for the ashes of his fathers, and the temples of his gods?"[PARAGRAPH:2]- Thomas Macaulay, Lays of Ancient Rome</Italian>
-		<Spanish>"And how can man die better, than facing fearful odds, for the ashes of his fathers, and the temples of his gods?"[PARAGRAPH:2]- Thomas Macaulay, Lays of Ancient Rome</Spanish>
+		<English>"The longer you can look back, the farther you can look forward."[PARAGRAPH:2]- Winston Churchill</English>
+		<French>"The longer you can look back, the farther you can look forward."[PARAGRAPH:2]- Winston Churchill</French>
+		<German>"The longer you can look back, the farther you can look forward."[PARAGRAPH:2]- Winston Churchill</German>
+		<Italian>"The longer you can look back, the farther you can look forward."[PARAGRAPH:2]- Winston Churchill</Italian>
+		<Spanish>"The longer you can look back, the farther you can look forward."[PARAGRAPH:2]- Winston Churchill</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HERITAGE_PEDIA</Tag>
@@ -2414,11 +2383,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INFRASTRUCTURE_QUOTE</Tag>
-		<English>"Everything in life is somewhere else, and you get there in a car."[PARAGRAPH:2]- E. B. White</English>
-		<French>"Dans la vie, tout est ailleurs, et on ne peut y aller qu'en voiture !"[PARAGRAPH:2]- E. B. White</French>
-		<German>"Im Leben ist alles irgendwo anders. Und hin kommt man mit dem Auto."[PARAGRAPH:2]- E. B. White</German>
-		<Italian>"Ogni cosa della vita si trova da qualche parte ed &#232; raggiungibile in automobile."[PARAGRAPH:2]- E. B. White</Italian>
-		<Spanish>"Todo en la vida est&#225; en otra parte, y all&#237; se llega en coche."[PARAGRAPH:2]- E. B. White</Spanish>
+		<English>"Our unity as a nation is sustained by free communication of thought and by easy transportation of people and goods."[PARAGRAPH:2]- Dwight D. Eisenhower</English>
+		<French>"Our unity as a nation is sustained by free communication of thought and by easy transportation of people and goods."[PARAGRAPH:2]- Dwight D. Eisenhower</French>
+		<German>"Our unity as a nation is sustained by free communication of thought and by easy transportation of people and goods."[PARAGRAPH:2]- Dwight D. Eisenhower</German>
+		<Italian>"Our unity as a nation is sustained by free communication of thought and by easy transportation of people and goods."[PARAGRAPH:2]- Dwight D. Eisenhower</Italian>
+		<Spanish>"Our unity as a nation is sustained by free communication of thought and by easy transportation of people and goods."[PARAGRAPH:2]- Dwight D. Eisenhower</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_INFRASTRUCTURE_PEDIA</Tag>
@@ -2982,11 +2951,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MICROBIOLOGY_QUOTE</Tag>
-		<English>"The cause of nutrition and growth resides not in the organism as a whole but in the separate elementary parts - the cells."[PARAGRAPH:2]- Theodor Schwann, Microscopical Researches into the Accordance in the Structure and Growth of Animals and Plants</English>
-		<French>"Les parties &#233;l&#233;mentaires les plus diff&#233;rentes des animaux et des plantes ont un mode commun de d&#233;veloppement : leur origine est toujours une cellule."[PARAGRAPH:2]- Theodor Schwann, Recherches microscopiques sur la conformit&#233; de structure et d'accroissement des animaux et des plantes</French>
-		<German>"The cause of nutrition and growth resides not in the organism as a whole but in the separate elementary parts - the cells."[PARAGRAPH:2]- Theodor Schwann, Microscopic Researches into the Structure and Growth of Animals and Plants</German>
-		<Italian>"The cause of nutrition and growth resides not in the organism as a whole but in the separate elementary parts - the cells."[PARAGRAPH:2]- Theodor Schwann, Microscopic Researches into the Structure and Growth of Animals and Plants</Italian>
-		<Spanish>"The cause of nutrition and growth resides not in the organism as a whole but in the separate elementary parts - the cells."[PARAGRAPH:2]- Theodor Schwann, Microscopic Researches into the Structure and Growth of Animals and Plants</Spanish>
+		<English>"The role of the infinitely small in nature is infinitely great."[PARAGRAPH:2]- Louis Pasteur</English>
+		<French>"The role of the infinitely small in nature is infinitely great."[PARAGRAPH:2]- Louis Pasteur</French>
+		<German>"The role of the infinitely small in nature is infinitely great."[PARAGRAPH:2]- Louis Pasteur</German>
+		<Italian>"The role of the infinitely small in nature is infinitely great."[PARAGRAPH:2]- Louis Pasteur</Italian>
+		<Spanish>"The role of the infinitely small in nature is infinitely great."[PARAGRAPH:2]- Louis Pasteur</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_MICROBIOLOGY_PEDIA</Tag>
@@ -3402,11 +3371,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PAPER_QUOTE</Tag>
-		<English>"I cannot live without books."[PARAGRAPH:2]- Thomas Jefferson</English>
-		<French>"Je ne peux pas vivre sans livres."[PARAGRAPH:2]- Thomas Jefferson</French>
-		<German>"Ohne B&#252;cher kann ich nicht leben!"[PARAGRAPH:2]- Thomas Jefferson</German>
-		<Italian>"Non potrei vivere senza libri"[PARAGRAPH:2]- Thomas Jefferson</Italian>
-		<Spanish>"No puedo vivir sin libros."[PARAGRAPH:2]- Thomas Jefferson</Spanish>
+		<English>"You philosophers are lucky men. You write on paper, and paper is patient."[PARAGRAPH:2]- Catherine the Great</English>
+		<French>"You philosophers are lucky men. You write on paper, and paper is patient."[PARAGRAPH:2]- Catherine the Great</French>
+		<German>"You philosophers are lucky men. You write on paper, and paper is patient."[PARAGRAPH:2]- Catherine the Great</German>
+		<Italian>"You philosophers are lucky men. You write on paper, and paper is patient."[PARAGRAPH:2]- Catherine the Great</Italian>
+		<Spanish>"You philosophers are lucky men. You write on paper, and paper is patient."[PARAGRAPH:2]- Catherine the Great</Spanish>
 	</TEXT>
 
 
@@ -3561,11 +3530,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_PHYSICS_QUOTE</Tag>
-		<English>"To every action there is always opposed an equal reaction."[PARAGRAPH:2]- Isaac Newton, Philosophiae Naturalis Principia Mathematica</English>
-		<French>"&#192; chaque action correspond une r&#233;action &#233;gale."[PARAGRAPH:2]- Isaac Newton, Philosophiae Naturalis Principia Mathematica</French>
-		<German>"Jede Aktion erzeugt gleichzeitig eine Reaktion."[PARAGRAPH:2]- Isaac Newton, Philosophiae Naturalis Principia Mathematica</German>
-		<Italian>"Ad ogni azione, corrisponde una reazione uguale ma di segno opposto."[PARAGRAPH:2]- Isaac Newton, Philosophiae Naturalis Principia Mathematica</Italian>
-		<Spanish>"Para cada acci&#243;n existe siempre una reacci&#243;n igual y de sentido contrario."[PARAGRAPH:2]- Isaac Newton, Philosophiae Naturalis Principia Mathematica</Spanish>
+		<English>"We may brave human laws, but we cannot resist natural laws."[PARAGRAPH:2]- Jules Verne, 20,000 Leagues Under the Sea</English>
+		<French>"We may brave human laws, but we cannot resist natural laws."[PARAGRAPH:2]- Jules Verne, 20,000 Leagues Under the Sea</French>
+		<German>"We may brave human laws, but we cannot resist natural laws."[PARAGRAPH:2]- Jules Verne, 20,000 Leagues Under the Sea</German>
+		<Italian>"We may brave human laws, but we cannot resist natural laws."[PARAGRAPH:2]- Jules Verne, 20,000 Leagues Under the Sea</Italian>
+		<Spanish>"We may brave human laws, but we cannot resist natural laws."[PARAGRAPH:2]- Jules Verne, 20,000 Leagues Under the Sea</Spanish>
 	</TEXT>
 
 
@@ -3658,11 +3627,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_POTTERY_QUOTE</Tag>
-		<English>"Hath not the potter power over the clay, to make one vessel unto honor, and another unto dishonor?"[PARAGRAPH:2]- The Bible, Romans</English>
-		<French>"Le potier n'a-t-il pas pouvoir sur l'argile pour faire de la m&#234;me masse un vase &#224; honneur et un autre &#224; d&#233;shonneur ?"[PARAGRAPH:2]- La Bible, &#201;p&#238;tre aux Romains</French>
-		<German>"Hat nicht ein T&#246;pfer Macht &#252;ber den Ton, aus demselben Klumpen ein Gef&#228;&#223; zu ehrenvollem und ein anderes zu nicht ehrenvollem Gebrauch zu machen?"[PARAGRAPH:2]- Die Bibel, R&#246;mer</German>
-		<Italian>"Nelle mani dell'artigiano sta la capacit&#224; di creare vasi da giorno e vasi da notte."[PARAGRAPH:2]- La Bibbia, i Romani</Italian>
-		<Spanish>"&#191;O es que no puede el alfarero hacer del mismo barro un vaso de honor y uno indecoroso?"[PARAGRAPH:2]- La Biblia, San Mateo, Ep&#237;stola a los Romanos</Spanish>
+		<English>"Shape clay into a vessel; it is the space within that makes it useful."[PARAGRAPH:2]- Laozi, Tao Te Ching</English>
+		<French>"Shape clay into a vessel; it is the space within that makes it useful."[PARAGRAPH:2]- Laozi, Tao Te Ching</French>
+		<German>"Shape clay into a vessel; it is the space within that makes it useful."[PARAGRAPH:2]- Laozi, Tao Te Ching</German>
+		<Italian>"Shape clay into a vessel; it is the space within that makes it useful."[PARAGRAPH:2]- Laozi, Tao Te Ching</Italian>
+		<Spanish>"Shape clay into a vessel; it is the space within that makes it useful."[PARAGRAPH:2]- Laozi, Tao Te Ching</Spanish>
 	</TEXT>
 
 
@@ -3844,11 +3813,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_RADIO_QUOTE</Tag>
-		<English>"A world without radio is a deaf world."[PARAGRAPH:2] - Ernest Yeboah</English>
-		<French>"Un monde sans radio est un monde sourd."[PARAGRAPH:2] - Ernest Yeboah</French>
-		<German>"A world without radio is a deaf world."[PARAGRAPH:2] - Ernest Yeboah</German>
-		<Italian>"A world without radio is a deaf world."[PARAGRAPH:2] - Ernest Yeboah</Italian>
-		<Spanish>"A world without radio is a deaf world."[PARAGRAPH:2] - Ernest Yeboah</Spanish>
+		<English>"Unwittingly then had I discovered an Invisible Empire of the Air, intangible, yet solid as granite."[PARAGRAPH:2] - Lee De Forest</English>
+		<French>"Unwittingly then had I discovered an Invisible Empire of the Air, intangible, yet solid as granite."[PARAGRAPH:2] - Lee De Forest</French>
+		<German>"Unwittingly then had I discovered an Invisible Empire of the Air, intangible, yet solid as granite."[PARAGRAPH:2] - Lee De Forest</German>
+		<Italian>"Unwittingly then had I discovered an Invisible Empire of the Air, intangible, yet solid as granite."[PARAGRAPH:2] - Lee De Forest</Italian>
+		<Spanish>"Unwittingly then had I discovered an Invisible Empire of the Air, intangible, yet solid as granite."[PARAGRAPH:2] - Lee De Forest</Spanish>
 	</TEXT>
 
 
@@ -3945,11 +3914,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_REFRIGERATION_QUOTE</Tag>
-		<English>"Tell me what you eat, and I will tell you what you are."[PARAGRAPH:2]- Anthelme Brillat-Savarin, The Physiology of Taste</English>
-		<French>"Dis-moi ce que tu manges, je te dirai qui tu es."[PARAGRAPH:2]- Anthelme Brillat-Savarin, Physiologie du go&#251;t</French>
-		<German>"Der Mensch ist, was er isst."[PARAGRAPH:2]- Anthelme Brillat-Savarin</German>
-		<Italian>"Dimmi cosa mangi e ti dir&#242; chi sei."[PARAGRAPH:2]- Anthelme Brillat-Savarin</Italian>
-		<Spanish>"Dime lo que comes y te dir&#233; qui&#233;n eres."[PARAGRAPH:2]- Anthelme Brillat-Savarin</Spanish>
+		<English>"Refrigeration is not about cold - it is about keeping nature as it was, until we are ready for it again."[PARAGRAPH:2]- Nicola Twilley, Frostbite</English>
+		<French>"Refrigeration is not about cold - it is about keeping nature as it was, until we are ready for it again."[PARAGRAPH:2]- Nicola Twilley, Frostbite</French>
+		<German>"Refrigeration is not about cold - it is about keeping nature as it was, until we are ready for it again."[PARAGRAPH:2]- Nicola Twilley, Frostbite</German>
+		<Italian>"Refrigeration is not about cold - it is about keeping nature as it was, until we are ready for it again."[PARAGRAPH:2]- Nicola Twilley, Frostbite</Italian>
+		<Spanish>"Refrigeration is not about cold - it is about keeping nature as it was, until we are ready for it again."[PARAGRAPH:2]- Nicola Twilley, Frostbite</Spanish>
 	</TEXT>
 
 
@@ -4259,11 +4228,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SCHOLARSHIP_QUOTE</Tag>
-		<English>"There is no wealth like knowledge, no poverty like ignorance."[PARAGRAPH:2]- Ali ibn Abi-Talib, Regarding Knowledge and Wisdom</English>
-		<French>"Il n'y a pas de plus grande richesse que la science, pas de plus grande pauvret&#233; que l'ignorance."[PARAGRAPH:2]- Ali ibn Abi Talib</French>
-		<German>"There is no wealth like knowledge, no poverty like ignorance."[PARAGRAPH:2]- Ali ibn Abi-Talib, Regarding Knowledge and Wisdom</German>
-		<Italian>"There is no wealth like knowledge, no poverty like ignorance."[PARAGRAPH:2]- Ali ibn Abi-Talib, Regarding Knowledge and Wisdom</Italian>
-		<Spanish>"There is no wealth like knowledge, no poverty like ignorance."[PARAGRAPH:2]- Ali ibn Abi-Talib, Regarding Knowledge and Wisdom</Spanish>
+		<English>"If I have seen further it is by standing on the shoulders of giants."[PARAGRAPH:2]- Isaac Newton</English>
+		<French>"If I have seen further it is by standing on the shoulders of giants."[PARAGRAPH:2]- Isaac Newton</French>
+		<German>"If I have seen further it is by standing on the shoulders of giants."[PARAGRAPH:2]- Isaac Newton</German>
+		<Italian>"If I have seen further it is by standing on the shoulders of giants."[PARAGRAPH:2]- Isaac Newton</Italian>
+		<Spanish>"If I have seen further it is by standing on the shoulders of giants."[PARAGRAPH:2]- Isaac Newton</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SCHOLARSHIP_PEDIA</Tag>
@@ -4387,11 +4356,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMMUNE_QUOTE</Tag>
-		<English>"We shall be a single People of brethren, never to part in danger nor distress."[PARAGRAPH:2]- Friedrich Schiller, William Tell</English>
-		<French>"Nous serons un peuple de fr&#232;res que nul malheur et nul danger ne s&#233;parera."[PARAGRAPH:2]- Friedrich Schiller, Guillaume Tell</French>
-		<German>"We shall be a single People of brethren, never to part in danger nor distress."[PARAGRAPH:2]- Friedrich Schiller, William Tell</German>
-		<Italian>"We shall be a single People of brethren, never to part in danger nor distress."[PARAGRAPH:2]- Friedrich Schiller, William Tell</Italian>
-		<Spanish>"We shall be a single People of brethren, never to part in danger nor distress."[PARAGRAPH:2]- Friedrich Schiller, William Tell</Spanish>
+		<English>"Let each man be secure in his house, and let no lord demand labor without the consent of the commune."[PARAGRAPH:2]- Charter of Laon</English>
+		<French>"Let each man be secure in his house, and let no lord demand labor without the consent of the commune."[PARAGRAPH:2]- Charter of Laon</French>
+		<German>"Let each man be secure in his house, and let no lord demand labor without the consent of the commune."[PARAGRAPH:2]- Charter of Laon</German>
+		<Italian>"Let each man be secure in his house, and let no lord demand labor without the consent of the commune."[PARAGRAPH:2]- Charter of Laon</Italian>
+		<Spanish>"Let each man be secure in his house, and let no lord demand labor without the consent of the commune."[PARAGRAPH:2]- Charter of Laon</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_COMMUNE_PEDIA</Tag>
@@ -4763,11 +4732,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TELECOMMUNICATIONS_QUOTE</Tag>
-		<English>"The new electronic interdependence recreates the world in the image of a global village."[PARAGRAPH:2]- Marshall McLuhan, The Gutenberg Galaxy</English>
-		<French>"L'interd&#233;pendance nouvelle qu'impose l'&#233;lectronique recr&#233;e le monde &#224; l'image d'un village global."[PARAGRAPH:2]- Marshall McLuhan, La Galaxie Gutenberg</French>
-		<German>"The new electronic interdependence recreates the world in the image of a global village."[PARAGRAPH:2]- Marshall McLuhan, The Gutenberg Galaxy</German>
-		<Italian>"The new electronic interdependence recreates the world in the image of a global village."[PARAGRAPH:2]- Marshall McLuhan, The Gutenberg Galaxy</Italian>
-		<Spanish>"The new electronic interdependence recreates the world in the image of a global village."[PARAGRAPH:2]- Marshall McLuhan, The Gutenberg Galaxy</Spanish>
+		<English>"When wireless is fully applied, the earth will be converted into a huge brain, capable of response in every one of its parts."[PARAGRAPH:2]- Nikola Tesla</English>
+		<French>"When wireless is fully applied, the earth will be converted into a huge brain, capable of response in every one of its parts."[PARAGRAPH:2]- Nikola Tesla</French>
+		<German>"When wireless is fully applied, the earth will be converted into a huge brain, capable of response in every one of its parts."[PARAGRAPH:2]- Nikola Tesla</German>
+		<Italian>"When wireless is fully applied, the earth will be converted into a huge brain, capable of response in every one of its parts."[PARAGRAPH:2]- Nikola Tesla</Italian>
+		<Spanish>"When wireless is fully applied, the earth will be converted into a huge brain, capable of response in every one of its parts."[PARAGRAPH:2]- Nikola Tesla</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TELECOMMUNICATIONS_PEDIA</Tag>
@@ -4939,11 +4908,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRANSHUMANISM_QUOTE</Tag>
-		<English>"What has the future in store for this strange being, born of a breath, of perishable tissue, yet immortal, with his powers fearful and divine?"[PARAGRAPH:2]- Nikola Tesla, Man's Greatest Achievement</English>
-		<French>"Que r&#233;serve le futur &#224; cet &#234;tre &#233;trange, n&#233; d'un souffle, fait de tissus p&#233;rissables, et pourtant immortel et dot&#233; de pouvoirs dignes d'un dieu ?"[PARAGRAPH:2]- Nikola Tesla, La plus grande r&#233;ussite de l'Homme</French>
-		<German>"What has the future in store for this strange being, born of a breath, of perishable tissue, yet immortal, with his powers fearful and divine?"[PARAGRAPH:2]- Nikola Tesla, Man's Greatest Achievement</German>
-		<Italian>"What has the future in store for this strange being, born of a breath, of perishable tissue, yet immortal, with his powers fearful and divine?"[PARAGRAPH:2]- Nikola Tesla, Man's Greatest Achievement</Italian>
-		<Spanish>"What has the future in store for this strange being, born of a breath, of perishable tissue, yet immortal, with his powers fearful and divine?"[PARAGRAPH:2]- Nikola Tesla, Man's Greatest Achievement</Spanish>
+		<English>"The future of humanity is not decided, and we are capable of forging the next stage of our evolution. We are the bridge between what we are and what we can become."[PARAGRAPH:2]- Friedrich Nietzsche, Beyond Good and Evil</English>
+		<French>"The future of humanity is not decided, and we are capable of forging the next stage of our evolution. We are the bridge between what we are and what we can become."[PARAGRAPH:2]- Friedrich Nietzsche, Beyond Good and Evil</French>
+		<German>"The future of humanity is not decided, and we are capable of forging the next stage of our evolution. We are the bridge between what we are and what we can become."[PARAGRAPH:2]- Friedrich Nietzsche, Beyond Good and Evil</German>
+		<Italian>"The future of humanity is not decided, and we are capable of forging the next stage of our evolution. We are the bridge between what we are and what we can become."[PARAGRAPH:2]- Friedrich Nietzsche, Beyond Good and Evil</Italian>
+		<Spanish>"The future of humanity is not decided, and we are capable of forging the next stage of our evolution. We are the bridge between what we are and what we can become."[PARAGRAPH:2]- Friedrich Nietzsche, Beyond Good and Evil</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TRANSHUMANISM_PEDIA</Tag>

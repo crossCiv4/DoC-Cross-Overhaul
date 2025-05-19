@@ -2,6 +2,61 @@ from Core import *
 from BaseRequirements import *
 
 
+class AreaBlockadeGold(TrackRequirement):
+	
+	TYPES = (AREA, AMOUNT)
+	
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_ACQUIRE"
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_AREA_BLOCKADE_GOLD"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_AREA_BLOCKADE_GOLD"
+	
+	def __init__(self, area, iRequired, **options):
+		TrackRequirement.__init__(self, area, iRequired, **options)
+		
+		self.area = area
+		
+		self.handle("blockade", self.accumulate_blockade_gold)
+		self.handle("unitPillage", self.accumulate_pillage_gold)
+		self.handle("cityCaptureGold", self.accumulate_city_capture_gold)
+		
+	def accumulate_blockade_gold(self, goal, iGold, city):
+		if city in self.area:
+			self.accumulate(iGold)
+			goal.check()
+	
+	def accumulate_pillage_gold(self, goal, iGold, unit):
+		if unit in self.area:
+			self.accumulate(iGold)
+			goal.check()
+	
+	def accumulate_city_capture_gold(self, goal, iGold, city):
+		if city in self.area:
+			self.accumulate(iGold)
+			goal.check()
+
+
+class AreaReligionSpreadCount(TrackRequirement):
+
+	TYPES = (AREA, RELIGION, COUNT)
+	
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_SPREAD"
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_AREA_RELIGION_SPREAD_COUNT"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_AREA_RELIGION_SPREAD_COUNT"
+	
+	def __init__(self, area, iReligion, iCount, **options):
+		TrackRequirement.__init__(self, area, iReligion, iCount, **options)
+		
+		self.area = area
+		self.iReligion = iReligion
+		
+		self.handle("unitSpreadReligionAttempt", self.increment_religion_spread)
+	
+	def increment_religion_spread(self, goal, iReligion, unit):
+		if self.iReligion == iReligion and unit in self.area:
+			self.increment()
+			goal.check()
+
+
 # First Tibetan UHV goal
 class AcquiredCities(TrackRequirement):
 
@@ -199,7 +254,7 @@ class DefeatedUnits(TrackRequirement):
 		self.handle("combatResult", self.increment_defeated)
 	
 	def increment_defeated(self, goal, unit):
-		if unit.getOwner() in self.lCivs:
+		if unit.getVisualOwner() in self.lCivs:
 			self.increment()
 			goal.check()
 

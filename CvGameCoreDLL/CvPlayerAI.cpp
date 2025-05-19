@@ -19965,3 +19965,23 @@ bool CvPlayerAI::AI_willUseNukes(PlayerTypes eOtherPlayer, bool bOffensive) cons
 
 	return GET_TEAM(getTeam()).AI_endWarVal(GET_PLAYER(eOtherPlayer).getTeam()) >= GET_TEAM(GET_PLAYER(eOtherPlayer).getTeam()).AI_endWarVal(getTeam()) * 2;
 }
+
+int CvPlayerAI::AI_getEnemyPower(bool bIncludeMinors) const
+{
+	int iPower = 0;
+
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	{
+		CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
+
+		if (bIncludeMinors || !kPlayer.isMinorCiv())
+		{
+			if (GET_TEAM(kPlayer.getTeam()).isAtWar(getTeam()))
+			{
+				iPower += kPlayer.getPower();
+			}
+		}
+	}
+
+	return iPower;
+}

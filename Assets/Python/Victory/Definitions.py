@@ -129,6 +129,8 @@ FirstEnterEraX = GoalDefinition(req.FirstEnterEraX)
 
 ### TRACK REQUIREMENTS ###
 
+AreaBlockadeGold = GoalDefinition(req.AreaBlockadeGold)
+AreaReligionSpreadCount = GoalDefinition(req.AreaReligionSpreadCount)
 AcquiredCities = GoalDefinition(req.AcquiredCities)
 BrokeredPeace = GoalDefinition(req.BrokeredPeace)
 CelebrateTurns = GoalDefinition(req.CelebrateTurns)

@@ -146,7 +146,7 @@ public:
 	void tradeMission(UnitTypes unitID, PlayerTypes ePlayer, int iX, int iY, int iGold); // Leoreth
 	void playerSlaveTrade(PlayerTypes ePlayer, int iGold); // Leoreth
 	void releasedCivilization(PlayerTypes ePlayer, CivilizationTypes eReleasedCivilization); // Leoreth
-	void blockade(PlayerTypes ePlayer, int iGold); // Leoreth
+	void blockade(PlayerTypes ePlayer, CvCity* pCity, int iGold); // Leoreth
 	void peaceBrokered(PlayerTypes eBroker, PlayerTypes ePlayer1, PlayerTypes ePlayer2); // Leoreth
 	void xmlLoaded(); // Leoreth
 	void fontsLoaded(); // Leoreth

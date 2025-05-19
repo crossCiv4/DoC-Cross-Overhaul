@@ -2346,7 +2346,6 @@ public:
 
 	// Leoreth
 	int getLoadingTime(ScenarioTypes eScenario) const;
-	int getRating(RatingTypes eRating) const;
 	int getStartingYear() const;
 	const std::string getIdentifier() const;
 	int getPaganReligion() const;
@@ -2410,7 +2409,6 @@ protected:
 	int* m_piCivilizationInitialCivics;
 
 	int* m_piLoadingTime; // Leoreth
-	int* m_piRatings; // Leoreth
 
 	bool* m_pbLeaders;
 	bool* m_pbOriginalLeaders; // Leoreth

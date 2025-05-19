@@ -6416,9 +6416,17 @@ bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestV
 		}
 
 		// Leoreth
-		if (eBuilding == (BuildingTypes)TRAFALGAR_SQUARE)
+		if (eBuilding == TRAFALGAR_SQUARE)
 		{
 			if (getHighestNavalUnitLevel() < 3)
+			{
+				return false;
+			}
+		}
+
+		else if (eBuilding == OLD_SYNAGOGUE)
+		{
+			if (!isHuman() && countReligionCities(JUDAISM) < 3)
 			{
 				return false;
 			}
@@ -7175,12 +7183,6 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 	if (eBuilding == SALSAL_BUDDHA)
 	{
 		updatePlotGroups();
-	}
-
-	// Prambanan
-	if (eBuilding == PRAMBANAN)
-	{
-		updateYield();
 	}
 
 	// Great Adobe Mosque
@@ -20815,7 +20817,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 			for (CvCity* pLoopCity = firstCity(&iLoop); NULL != pLoopCity; pLoopCity = nextCity(&iLoop))
 			{
-				pLoopCity->changeHappinessTimer(kEvent.getHappyTurns());
+				pLoopCity->changeHappinessTimer(getTurns(kEvent.getHappyTurns())); // Leoreth: scaled by game speed
 			}
 		}
 

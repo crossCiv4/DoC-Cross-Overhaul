@@ -7113,7 +7113,7 @@
 			<Strategy>TXT_KEY_BUILDING_AUTOMATED_FACTORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AUTOMATED_FACTORY</ArtDefineTag>
-			<PrereqTech>TECH_AUTOMATION</PrereqTech>
+			<PrereqTech>TECH_CYBERNETICS</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_RARE_EARTHS</Bonus>
 			</PrereqBonuses>
@@ -11424,7 +11424,7 @@
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_ARTEMIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_ARTEMIS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_ARTEMIS_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_ARTEMIS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TEMPLE_OF_ARTEMIS</MovieDefineTag>
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
@@ -11433,6 +11433,7 @@
 				<PrereqTech>TECH_MATHEMATICS</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_THEOLOGY</ObsoleteTech>
+			<FreeBuilding>BUILDINGCLASS_HARBOR</FreeBuilding>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
@@ -11444,7 +11445,6 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iConquestProb>100</iConquestProb>
-			<iTradeRouteModifier>100</iTradeRouteModifier>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ObsoleteSafeCommerceChanges>
@@ -11457,12 +11457,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<FreeSpecialistCounts>
-				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
-					<iFreeSpecialistCount>1</iFreeSpecialistCount>
-				</FreeSpecialistCount>
-			</FreeSpecialistCounts>
 			<CommerceChangeOriginalOwners>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
@@ -11474,6 +11468,26 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
+			<BonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_FISH</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_CLAM</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_CRAB</BonusType>
+					<YieldChanges>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</BonusYieldChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -11493,7 +11507,6 @@
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
 			<PrereqTech>TECH_NAVIGATION</PrereqTech>
 			<ObsoleteTech>TECH_COMPASS</ObsoleteTech>
-			<FreeBuilding>BUILDINGCLASS_LIGHTHOUSE</FreeBuilding>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
@@ -11505,7 +11518,8 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMinAreaSize>15</iMinAreaSize>
 			<iConquestProb>100</iConquestProb>
-			<iTradeRoutes>2</iTradeRoutes>
+			<iTradeRouteModifier>100</iTradeRouteModifier>
+			<iTradeRoutes>4</iTradeRoutes>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ObsoleteSafeCommerceChanges>
@@ -12694,7 +12708,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_PRAMBANAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PRAMBANAN_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_PRAMBANAN_HELP</Help>
-			<Advisor>ADVISOR_GROWTH</Advisor>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PRAMBANAN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PRAMBANAN</MovieDefineTag>
 			<StateReligion>RELIGION_BUDDHISM</StateReligion>
@@ -15065,7 +15079,7 @@
 			<PrereqReligion>RELIGION_SHIA</PrereqReligion>
 			<MaxStartEra>ERA_INDUSTRIAL</MaxStartEra>
 			<PrereqTech>TECH_GEOGRAPHY</PrereqTech>
-			<ObsoleteTech>TECH_GLOBALISM</ObsoleteTech>
+			<ObsoleteTech>TECH_GEOPOLITICS</ObsoleteTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
@@ -17222,7 +17236,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNITED_NATIONS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNITED_NATIONS</MovieDefineTag>
 			<VictoryPrereq>VICTORY_DIPLOMATIC</VictoryPrereq>
-			<PrereqTech>TECH_GLOBALISM</PrereqTech>
+			<PrereqTech>TECH_GEOPOLITICS</PrereqTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
@@ -17363,7 +17377,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BERLAYMONT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BERLAYMONT</MovieDefineTag>
 			<MaxStartEra>ERA_DIGITAL</MaxStartEra>
-			<PrereqTech>TECH_GLOBALISM</PrereqTech>
+			<PrereqTech>TECH_GEOPOLITICS</PrereqTech>
 			<PrereqCivic>CIVIC_MULTILATERALISM</PrereqCivic>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -17411,7 +17425,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WORLD_TRADE_CENTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WORLD_TRADE_CENTER</MovieDefineTag>
 			<MaxStartEra>ERA_DIGITAL</MaxStartEra>
-			<PrereqTech>TECH_GLOBALISM</PrereqTech>
+			<PrereqTech>TECH_GEOPOLITICS</PrereqTech>
 			<PrereqCivic>CIVIC_FREE_ENTERPRISE</PrereqCivic>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_MERCHANT</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>

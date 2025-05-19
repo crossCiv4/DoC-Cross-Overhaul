@@ -2015,7 +2015,7 @@
 			<ImprovementUpgrade/>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_AUTOMATION</PrereqTech>
+					<PrereqTech>TECH_CYBERNETICS</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -2082,7 +2082,7 @@
 			<ImprovementUpgrade/>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_AUTOMATION</PrereqTech>
+					<PrereqTech>TECH_CYBERNETICS</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>

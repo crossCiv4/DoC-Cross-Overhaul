@@ -376,6 +376,8 @@ public:
 
 	bool AI_willUseNukes(PlayerTypes eTarget, bool bOffensive) const;
 
+	int AI_getEnemyPower(bool bIncludeMinors = false) const;
+
 	// for serialization
   virtual void read(FDataStreamBase* pStream);
   virtual void write(FDataStreamBase* pStream);

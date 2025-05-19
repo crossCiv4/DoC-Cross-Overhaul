@@ -3769,6 +3769,38 @@
 		<Spanish>[ICON_BULLET]%D1_Change slots for[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TOPCIVS_POPULATION</Tag>
+		<English>Most Populous</English>
+		<French>Most Populous</French>
+		<German>Most Populous</German>
+		<Italian>Most Populous</Italian>
+		<Spanish>Most Populous</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACE_STRENGTHS</Tag>
+		<English>Strengths</English>
+		<French>Strengths</French>
+		<German>Strengths</German>
+		<Italian>Strengths</Italian>
+		<Spanish>Strengths</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACE_CHALLENGES</Tag>
+		<English>Challenges</English>
+		<French>Challenges</French>
+		<German>Challenges</German>
+		<Italian>Challenges</Italian>
+		<Spanish>Challenges</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACE_SIGNIFICANCE</Tag>
+		<English>Significance</English>
+		<French>Significance</French>
+		<German>Significance</German>
+		<Italian>Significance</Italian>
+		<Spanish>Significance</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_</Tag>
 		<English></English>
 		<French></French>

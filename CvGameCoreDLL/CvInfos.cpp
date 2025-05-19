@@ -10785,11 +10785,6 @@ const std::string CvCivilizationInfo::getIdentifier() const
 	return m_szIdentifier;
 }
 
-int CvCivilizationInfo::getRating(RatingTypes eRating) const
-{
-	return m_piRatings[eRating];
-}
-
 void CvCivilizationInfo::read(FDataStreamBase* stream)
 {
 	CvInfoBase::read(stream);
@@ -10839,11 +10834,6 @@ void CvCivilizationInfo::read(FDataStreamBase* stream)
 	SAFE_DELETE_ARRAY(m_piLoadingTime);
 	m_piLoadingTime = new int[NUM_SCENARIO_TYPES];
 	stream->Read(NUM_SCENARIO_TYPES, m_piLoadingTime);
-
-	// Leoreth
-	SAFE_DELETE_ARRAY(m_piRatings);
-	m_piRatings = new int[NUM_RATING_TYPES];
-	stream->Read(NUM_RATING_TYPES, m_piRatings);
 
 	SAFE_DELETE_ARRAY(m_pbLeaders);
 	m_pbLeaders = new bool[GC.getNumLeaderHeadInfos()];
@@ -10899,7 +10889,6 @@ void CvCivilizationInfo::write(FDataStreamBase* stream)
 	stream->Write(GC.getNumUnitClassInfos(), m_piCivilizationFreeUnitsClass);
 	stream->Write(GC.getNumCivicOptionInfos(), m_piCivilizationInitialCivics);
 	stream->Write(NUM_SCENARIO_TYPES, m_piLoadingTime); // Leoreth
-	stream->Write(NUM_RATING_TYPES, m_piRatings); // Leoreth
 	stream->Write(GC.getNumLeaderHeadInfos(), m_pbLeaders);
 	stream->Write(GC.getNumBuildingClassInfos(), m_pbCivilizationFreeBuildingClass);
 	stream->Write(GC.getNumTechInfos(), m_pbCivilizationFreeTechs);
@@ -11082,20 +11071,6 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 		}
 
 		// set the current xml node to it's parent node
-		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
-	}
-
-	// Leoreth
-	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(), "Rating"))
-	{
-		pXML->InitList(&m_piRatings, NUM_RATING_TYPES, 0);
-
-		pXML->GetChildXmlValByName(&m_piRatings[RATING_TRADE], "Trade");
-		pXML->GetChildXmlValByName(&m_piRatings[RATING_PRODUCTION], "Production");
-		pXML->GetChildXmlValByName(&m_piRatings[RATING_CULTURE], "Culture");
-		pXML->GetChildXmlValByName(&m_piRatings[RATING_GROWTH], "Growth");
-		pXML->GetChildXmlValByName(&m_piRatings[RATING_START], "Start");
-
 		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
 	}
 

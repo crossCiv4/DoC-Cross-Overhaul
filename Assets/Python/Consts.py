@@ -1230,7 +1230,7 @@ iInfrastructure, iFlight, iSynthetics, iRadio, iPsychology, iMacroeconomics, iSo
 iAviation, iRocketry, iFission, iElectronics, iTelevision, iPowerProjection, iGlobalism,
 iRadar, iSpaceflight, iNuclearPower, iLaser, iComputers, iTourism, iEcology,
 iAerodynamics, iSatellites, iSuperconductors, iRobotics, iTelecommunications, iRenewableEnergy, iGenetics,
-iSupermaterials, iFusion, iNanotechnology, iAutomation, iBiotechnology,
+iSupermaterials, iFusion, iNanotechnology, iCybernetics, iBiotechnology,
 iUnifiedTheory, iArtificialIntelligence,
 iTranshumanism) = range(iNumTechs)
 

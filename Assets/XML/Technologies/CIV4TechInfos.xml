@@ -311,6 +311,10 @@
 					<FlavorType>FLAVOR_GOLD</FlavorType>
 					<iFlavor>2</iFlavor>
 				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
 			</Flavors>
 			<AndPreReqs>
 				<PrereqTech>TECH_POTTERY</PrereqTech>
@@ -4762,9 +4766,9 @@
 		</TechInfo>
 
 		<TechInfo>
-			<Type>TECH_GLOBALISM</Type>
-			<Description>TXT_KEY_TECH_GLOBALISM</Description>
-			<Civilopedia>TXT_KEY_TECH_GLOBALISM_PEDIA</Civilopedia>
+			<Type>TECH_GEOPOLITICS</Type>
+			<Description>TXT_KEY_TECH_GEOPOLITICS</Description>
+			<Civilopedia>TXT_KEY_TECH_GEOPOLITICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>5000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -4800,10 +4804,10 @@
 				<PrereqTech>TECH_MACROECONOMICS</PrereqTech>
 				<PrereqTech>TECH_SOCIAL_SERVICES</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_TECH_GLOBALISM_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_GEOPOLITICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
-			<Button>Art/Interface/Buttons/TechTree/Globalization.dds</Button>
+			<Button>Art/Interface/Buttons/TechTree/Geopolitics.dds</Button>
 		</TechInfo>
 
 <!-- #18 -->
@@ -5029,7 +5033,7 @@
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_TELEVISION</PrereqTech>
-				<PrereqTech>TECH_GLOBALISM</PrereqTech>
+				<PrereqTech>TECH_GEOPOLITICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_TOURISM_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -5072,7 +5076,7 @@
 				<PrereqTech>TECH_SYNTHETICS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_GLOBALISM</PrereqTech>
+				<PrereqTech>TECH_GEOPOLITICS</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ECOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
@@ -5477,9 +5481,9 @@
 		</TechInfo>
 
 		<TechInfo>
-			<Type>TECH_AUTOMATION</Type>
-			<Description>TXT_KEY_TECH_AUTOMATION</Description>
-			<Civilopedia>TXT_KEY_TECH_AUTOMATION_PEDIA</Civilopedia>
+			<Type>TECH_CYBERNETICS</Type>
+			<Description>TXT_KEY_TECH_CYBERNETICS</Description>
+			<Civilopedia>TXT_KEY_TECH_CYBERNETICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iCost>10000</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
@@ -5507,10 +5511,10 @@
 				<PrereqTech>TECH_ROBOTICS</PrereqTech>
 				<PrereqTech>TECH_TELECOMMUNICATIONS</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_TECH_AUTOMATION_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_CYBERNETICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
-			<Button>Art/Interface/Buttons/TechTree/Automation.dds</Button>
+			<Button>Art/Interface/Buttons/TechTree/Cybernetics.dds</Button>
 		</TechInfo>
 
 		<TechInfo>
@@ -5601,7 +5605,7 @@
 			</Flavors>
 			<AndPreReqs>
 				<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
-				<PrereqTech>TECH_AUTOMATION</PrereqTech>
+				<PrereqTech>TECH_CYBERNETICS</PrereqTech>
 				<PrereqTech>TECH_BIOTECHNOLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ARTIFICIAL_INTELLIGENCE_QUOTE</Quote>

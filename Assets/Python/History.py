@@ -238,6 +238,21 @@ def createSilkRoute():
 				plot.setRouteType(iRouteRoad)
 
 
+### BEGIN PLAYER TURN ###
+
+
+@handler("BeginPlayerTurn")
+def earlyArmies(iGameTurn, iPlayer):
+	if iGameTurn == year(-1200):
+		if not player(iPlayer).isHuman():
+			if civ(iPlayer) == iHittites:
+				createRoleUnit(iPlayer, capital(iPlayer), iShockCity, 2)
+			elif civ(iPlayer) == iAssyria:
+				createRoleUnit(iPlayer, capital(iPlayer), iDefend)
+				createRoleUnit(iPlayer, capital(iPlayer), iCityAttack)
+				createRoleUnit(iPlayer, capital(iPlayer), iSiege)
+
+
 ### FIRST CONTACT ###
 
 @handler("firstContact")
@@ -347,7 +362,7 @@ def conquistadors(iTeamX, iHasMetTeamY):
 @handler("firstContact")
 def firstContactMongolConquerors(iTeamX, iHasMetTeamY):
 	# only triggers if Mongols are not resurrected (Dzungaria etc), and at least 2 turns after birth
-	if not scenarioStartTurn() and civ(iHasMetTeamY) == iMongols and data.civs[iMongols].iResurrections == 0 and not player(iMongols).isHuman() and since(year(dBirth[iMongols])) >= 2:
+	if not scenarioStartTurn() and civ(iHasMetTeamY) == iMongols and civ() != iMongols and data.civs[iMongols].iResurrections == 0 and since(year(dBirth[iMongols])) >= 2:
 		mongolConquerors(iTeamX)
 
 

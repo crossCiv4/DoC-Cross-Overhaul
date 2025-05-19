@@ -121,6 +121,8 @@ public:
 
 	int getClosestAreaSize(int iSize) const;
 
+	int getEnemyPower(PlayerTypes ePlayer, bool bIncludeMinors = false) const;
+
 protected:
 
 	int m_iID;

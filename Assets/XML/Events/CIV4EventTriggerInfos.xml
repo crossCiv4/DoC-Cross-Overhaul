@@ -194,7 +194,7 @@
 				<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
 				<ObsoleteTech>TECH_TELEVISION</ObsoleteTech>
 				<ObsoleteTech>TECH_POWER_PROJECTION</ObsoleteTech>
-				<ObsoleteTech>TECH_GLOBALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_GEOPOLITICS</ObsoleteTech>
 			</ObsoleteTechs>
 			<bRecurring>0</bRecurring>
 			<bTeam>0</bTeam>
@@ -929,7 +929,7 @@
 				<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
 				<ObsoleteTech>TECH_TELEVISION</ObsoleteTech>
 				<ObsoleteTech>TECH_POWER_PROJECTION</ObsoleteTech>
-				<ObsoleteTech>TECH_GLOBALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_GEOPOLITICS</ObsoleteTech>
 			</ObsoleteTechs>
 			<bRecurring>0</bRecurring>
 			<bTeam>0</bTeam>
@@ -12126,7 +12126,7 @@
 				<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
 				<ObsoleteTech>TECH_TELEVISION</ObsoleteTech>
 				<ObsoleteTech>TECH_POWER_PROJECTION</ObsoleteTech>
-				<ObsoleteTech>TECH_GLOBALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_GEOPOLITICS</ObsoleteTech>
 			</ObsoleteTechs>
 			<bRecurring>0</bRecurring>
 			<bTeam>0</bTeam>
@@ -12218,7 +12218,7 @@
 				<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
 				<ObsoleteTech>TECH_TELEVISION</ObsoleteTech>
 				<ObsoleteTech>TECH_POWER_PROJECTION</ObsoleteTech>
-				<ObsoleteTech>TECH_GLOBALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_GEOPOLITICS</ObsoleteTech>
 			</ObsoleteTechs>
 			<bRecurring>0</bRecurring>
 			<bTeam>0</bTeam>
@@ -12832,7 +12832,7 @@
 				<ObsoleteTech>TECH_ELECTRONICS</ObsoleteTech>
 				<ObsoleteTech>TECH_TELEVISION</ObsoleteTech>
 				<ObsoleteTech>TECH_POWER_PROJECTION</ObsoleteTech>
-				<ObsoleteTech>TECH_GLOBALISM</ObsoleteTech>
+				<ObsoleteTech>TECH_GEOPOLITICS</ObsoleteTech>
 			</ObsoleteTechs>
 			<bRecurring>0</bRecurring>
 			<bTeam>0</bTeam>

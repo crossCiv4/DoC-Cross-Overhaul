@@ -2412,24 +2412,6 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVis
 		if (iNumWaterTiles < 20) return false;
 	}
 
-	// Leoreth: Prambanan requires islands in city radius
-	if (eBuilding == PRAMBANAN)
-	{
-		bool bFound = false;
-		for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
-		{
-			if (getCityIndexPlot(iI)->getFeatureType() == FEATURE_ISLANDS)
-			{
-				bFound = true;
-			}
-		}
-
-		if (!bFound)
-		{
-			return false;
-		}
-	}
-
 	// Leoreth: Guadalupe Basilica needs to be on different continent than Catholic holy city
 	if (eBuilding == GUADALUPE_BASILICA)
 	{
@@ -4754,6 +4736,12 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			}
 		}
 
+		// Prambanan
+		if (eBuilding == PRAMBANAN)
+		{
+			changeBuildingYieldChange((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType(), YIELD_PRODUCTION, getBonusGoodHappiness() * iChange);
+		}
+
 		// Louvre
 		if (eBuilding == LOUVRE)
 		{
@@ -5811,11 +5799,7 @@ int CvCity::happyLevel() const
 	iHappiness += std::max(0, (getExtraHappiness() + GET_PLAYER(getOwnerINLINE()).getExtraHappiness()));
 	iHappiness += std::max(0, GC.getHandicapInfo(getHandicapType()).getHappyBonusByID(getOwner()));
 	iHappiness += std::max(0, getVassalHappiness());
-
-	if (getHappinessTimer() > 0)
-	{
-		iHappiness += GC.getDefineINT("TEMP_HAPPY");
-	}
+	iHappiness += std::max(0, getTempHappiness()); // Leoreth: more than +1 temporary happiness
 
 	// Leoreth: Shalimar Gardens effect
 	if (isHasBuildingEffect((BuildingTypes)SHALIMAR_GARDENS))
@@ -8441,6 +8425,12 @@ void CvCity::changeBonusGoodHappiness(int iChange)
 		if (isHasBuildingEffect((BuildingTypes)PYRAMIDS))
 		{
 			changeBuildingGreatPeopleRateChange((BuildingClassTypes)GC.getBuildingInfo((BuildingTypes)PYRAMIDS).getBuildingClassType(), iChange);
+		}
+
+		// Leoreth: Prambanan effect
+		if (isHasBuildingEffect((BuildingTypes)PRAMBANAN))
+		{
+			changeBuildingYieldChange((BuildingClassTypes)GC.getBuildingInfo((BuildingTypes)PRAMBANAN).getBuildingClassType(), YIELD_PRODUCTION, iChange);
 		}
 	}
 }
@@ -17082,7 +17072,7 @@ void CvCity::applyEvent(EventTypes eEvent, const EventTriggeredData& kTriggeredD
 
 		if (kEvent.getHappyTurns() != 0)
 		{
-			changeHappinessTimer(kEvent.getHappyTurns());
+			changeHappinessTimer(getTurns(kEvent.getHappyTurns())); // Leoreth: scaled by game speed
 		}
 
 		if (kEvent.getFood() != 0 || kEvent.getFoodPercent() != 0)
@@ -19770,4 +19760,11 @@ bool CvCity::rebuild(EraTypes eEra)
 int CvCity::getRegionGroup() const
 {
 	return plot()->getRegionGroup();
+}
+
+int CvCity::getTempHappiness() const
+{
+	int iHappinessTurns = getTurns(GC.getDefineINT("TEMP_HAPPY_TURNS"));
+
+	return (getHappinessTimer() + iHappinessTurns - 1) / iHappinessTurns;
 }

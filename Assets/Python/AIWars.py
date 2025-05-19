@@ -368,7 +368,7 @@ def checkConquests():
 
 @handler("GameStart")
 def setup():
-	iTurn = year(-2000)
+	iTurn = year(-1200)
 	if scenario() == i600AD:  #late start condition
 		iTurn = year(900)
 	elif scenario() == i1700AD:
@@ -720,11 +720,15 @@ def targetMinors():
 
 
 def determineAttackingPlayer():
-	return players.major().existing().where(possibleTargets).maximum(lambda p: data.players[p].iAggressionLevel)
+	return players.major().existing().where(isNotPlanning).where(possibleTargets).maximum(lambda p: data.players[p].iAggressionLevel)
 
 
 def possibleTargets(iPlayer):
-	return players.major().without(iPlayer).where(lambda p: team(iPlayer).canDeclareWar(player(p).getTeam()))
+	return players.major().existing().without(iPlayer).where(lambda p: team(iPlayer).canDeclareWar(player(p).getTeam()))
+
+
+def isNotPlanning(iPlayer):
+	return players.major().existing().without(iPlayer).all(lambda p: team(iPlayer).AI_getWarPlan(player(p).getTeam()) == -1)
 
 
 sLargeContinentalPowers = set([iFrance, iHolyRome, iGermany])
