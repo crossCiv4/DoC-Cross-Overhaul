@@ -170,7 +170,7 @@
 					<UnitType>UNIT_ARABIAN_MOBILE_GUARD</UnitType>
 				</Unit>
 				<Unit>
-					<UnitClassType>UNITCLASS_HEAVY_SWORDSMAN</UnitClassType>
+					<UnitClassType>UNITCLASS_SWORDSMAN</UnitClassType>
 					<UnitType>UNIT_ARABIAN_GHAZI</UnitType>
 				</Unit>
 			</Units>

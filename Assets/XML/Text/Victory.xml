@@ -3318,6 +3318,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_SINDH</Tag>
+		<English>Sindh</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_SCANDINAVIA</Tag>
 		<English>Scandinavia</English>
 		<French></French>
@@ -3661,6 +3669,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_ARAB_LANDS</Tag>
 		<English>North Africa and the Levant</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_YEMEN_AND_OMAN</Tag>
+		<English>Yemen and Oman</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
