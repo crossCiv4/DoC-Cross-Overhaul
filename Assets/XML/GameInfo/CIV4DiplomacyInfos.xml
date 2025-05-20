@@ -1693,6 +1693,62 @@
 							<LeaderType>LEADER_DAWUD</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
+						<Leader>
+							<LeaderType>LEADER_NURHACI</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_CIXI</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_SHAKA</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_NELSON_MANDELA</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_ABI_BIN_OMAR</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_SAID_BIN_SULTAN</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_WILLIAM_CONQUEROR</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_NASIR_AL_DAWLA</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_ADUD_AL_DAWLA</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_AL_MUIZZ</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_HUMMAY</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_PHILIP_AUGUSTUS</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_SIMEON</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_BULAN</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
