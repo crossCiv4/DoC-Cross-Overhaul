@@ -2022,6 +2022,10 @@
 					<UnitClassType>UNITCLASS_SHIP_OF_THE_LINE</UnitClassType>
 					<UnitType>UNIT_ENGLISH_MAN_OF_WAR</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
+					<UnitType>UNIT_ENG_NEW_MODEL_ARMY</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -2960,6 +2964,10 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_GRENADIER</UnitClassType>
 					<UnitType>UNIT_HOLY_ROMAN_GRENZER</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
+					<UnitType>UNIT_GERMAN_ARQUEBUSIER</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>

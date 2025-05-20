@@ -3999,17 +3999,33 @@
 		<Tag>TXT_KEY_UNIT_FRENCH_MUSKETEER_ALT</Tag>
 		<English>Mousquetaire</English>
 		<French>
-            <Text>Mousquetaire</Text>
-            <Gender>Male</Gender>
-            <Plural>0</Plural>
-        </French>
+			<Text>Mousquetaire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
-            <Text>Französischer Musketier</Text>
-            <Gender>Male</Gender>
-            <Plural>0</Plural>
-        </German>
+			<Text>Französischer Musketier</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Mousquetaire</Italian>
 		<Spanish>Mousquetaire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GERMAN_ARQUEBUSIER</Tag>
+		<English>Free City Leaguesman</English>
+		<French>Free City Leaguesman</French>
+		<German>Free City Leaguesman</German>
+		<Italian>Free City Leaguesman</Italian>
+		<Spanish>Free City Leaguesman</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ENG_NEW_MODEL_ARMY</Tag>
+		<English>New Model Army</English>
+		<French>New Model Army</French>
+		<German>New Model Army</German>
+		<Italian>New Model Army</Italian>
+		<Spanish>New Model Army</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
