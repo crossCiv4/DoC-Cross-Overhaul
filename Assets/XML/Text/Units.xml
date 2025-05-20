@@ -3996,6 +3996,22 @@
 		<Spanish>Francisca Axeman</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_FRENCH_MUSKETEER_ALT</Tag>
+		<English>Mousquetaire</English>
+		<French>
+            <Text>Mousquetaire</Text>
+            <Gender>Male</Gender>
+            <Plural>0</Plural>
+        </French>
+		<German>
+            <Text>Französischer Musketier</Text>
+            <Gender>Male</Gender>
+            <Plural>0</Plural>
+        </German>
+		<Italian>Mousquetaire</Italian>
+		<Spanish>Mousquetaire</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
 		<English></English>
 		<French></French>
