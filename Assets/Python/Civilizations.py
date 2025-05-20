@@ -1172,7 +1172,10 @@ dStartingUnits = CivDict({
 		iSettle: 3,
 		iWork: 2,
 		iDefend: 3,
-		iMissionary: 1,
+		iShock: 2,
+		iAttack: 1,
+		iSkirmish: 1,
+		iMissionary: 2,
 	},
 	iBurma: {
 		iSettle: 2,
@@ -1387,8 +1390,6 @@ dStartingUnits = CivDict({
 		iSettle: 1,
 		iWork: 2,
 		iDefend: 3,
-		iAttack: 3,
-		iSiege: 1,
 		iMissionary: 3,
 	},
 	iNetherlands: {
@@ -1604,6 +1605,9 @@ dExtraAIUnits = CivDict({
 	iHolyRome: {
 		iSettle: 1,
 		iDefend: 1,
+		iShock: 1,
+		iAttack: 1,
+		iSkirmish: 1,
 	},
 	iPoland: {
 		iCounter: 2,

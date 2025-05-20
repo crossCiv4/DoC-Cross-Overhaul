@@ -526,6 +526,7 @@ minor_cities = [
 	MinorCity(800, iNative, (30, 34), u"Bacatá", iPopulation=1, iCiv=iInca, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_MUISCA"),
 	MinorCity(430, iIndependent, (56, 71), "Inbhir Nis", iPopulation=2, iCiv=iCelts, units={iDefend: 2, iHarass: 1, iCounter: 3}, buildings=[iWalls, iMenhir], condition=lambda: not player(iCelts).isExisting() and not player(iCelts).isHuman(), adjective="TXT_KEY_ADJECTIVE_PICTISH"),
 	MinorCity(820, iBarbarian, (70, 65), "Szczecin", iPopulation=2, iCiv=iPoland, units={iAttack: 2, iSkirmish: 2, iDefend: 3, iCounter: 1}, buildings=[iWalls, iMonument], adjective="TXT_KEY_ADJECTIVE_POMERANIAN"),
+	MinorCity(870, iIndependent2, (72, 62), "Wroclaw", iPopulation=2, iCiv=iPoland, units={iDefend: 3}, buildings=[iWalls, iMonument], adjective="TXT_KEY_CIV_POLAND_ADJECTIVE"),
 	MinorCity(530, iIndependent, (54, 65), u"Áth Cliath", iPopulation=1, iCiv=iCelts, units={iDefend: 2}, condition=lambda: not player(iCelts).isExisting() and not player(iCelts).isHuman(), adjective="TXT_KEY_ADJECTIVE_IRISH"),
 	MinorCity(860, iBarbarian, (76, 59), u"Kolozsvár", iPopulation=3, iCiv=iTurks, units={iHarass: 3}, bIgnoreRuins=True, adjective="TXT_KEY_ADJECTIVE_MAGYAR"),
 	MinorCity(860, iIndependent2, (82, 68), u"Holmgarðr", iPopulation=1, iCiv=iRus, units={iDefend: 2}, condition=lambda: not player(iRus).isExisting() and not player(iNorse).isHuman(), adjective="TXT_KEY_CIV_RUS_ADJECTIVE"),

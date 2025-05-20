@@ -850,7 +850,7 @@ dUnitCostMods = CivDict({
 	iThailand: 90,
 	iSweden: 80,
 	iRussia: 85,
-	iOttomans: 100,
+	iOttomans: 90,
 	iCongo: 75,
 	iIran: 90,
 	iNetherlands: 90,

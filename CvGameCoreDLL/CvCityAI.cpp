@@ -2693,7 +2693,6 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
 		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
-		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 3;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
 		break;
 	case OTTOMANS:
@@ -2729,6 +2728,14 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
         aiUnitAIVal[UNITAI_WORKER] *= 2;
         aiUnitAIVal[UNITAI_ATTACK_CITY] *= 3;
         aiUnitAIVal[UNITAI_ATTACK_CITY] /= 2;
+		break;
+	case ZULU:
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 4;
+		aiUnitAIVal[UNITAI_ATTACK_SEA] /= 4;
+		aiUnitAIVal[UNITAI_ESCORT_SEA] /= 4;
+		aiUnitAIVal[UNITAI_SETTLER_SEA] /= 4;
+		aiUnitAIVal[UNITAI_RESERVE_SEA] /= 4;
+		aiUnitAIVal[UNITAI_SETTLE] /= 2;
 		break;
 	case MONGOLS:
 		aiUnitAIVal[UNITAI_ATTACK] *= 2;
