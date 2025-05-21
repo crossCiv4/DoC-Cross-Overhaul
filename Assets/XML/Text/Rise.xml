@@ -387,7 +387,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_RISE_SPA</Tag>
-		<English>The last surviving Christian kingdom in Iberia is preparing to reconquer the peninsula from Muslim control.</English>
+		<English>The Visigoths are being granted lands in Aquitania and Hispania.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_RISE_VDL</Tag>
+		<English>Vandalic and Alan tribes are migrating to the south of Hispania and are poised to cross over into Africa.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
