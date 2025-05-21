@@ -1460,10 +1460,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_FRK</Tag>
-		<English>Extra commerce in your capital proportional to your city count</English>
-		<French>Extra commerce in your capital proportional to your city count</French>
-		<German>Extra commerce in your capital proportional to your city count</German>
-		<Italian>Extra commerce in your capital proportional to your city count</Italian>
-		<Spanish>Extra commerce in your capital proportional to your city count</Spanish>
+		<English>Extra [ICON_GOLD] in your capital proportional to your city count</English>
+		<French>Extra [ICON_GOLD] in your capital proportional to your city count</French>
+		<German>Extra [ICON_GOLD] in your capital proportional to your city count</German>
+		<Italian>Extra [ICON_GOLD] in your capital proportional to your city count</Italian>
+		<Spanish>Extra [ICON_GOLD] in your capital proportional to your city count</Spanish>
 	</TEXT>
 </Civ4GameText>
