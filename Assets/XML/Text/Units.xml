@@ -1407,7 +1407,31 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OTTOMAN_JANISSARY</Tag>
-		<English>Janissary</English>
+		<English>Arquebus Janissary</English>
+		<French>
+			<Text>Janissaire:Janissaires</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>
+			<Text>Janitschar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Giannizzero:Giannizzeri</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jen&#237;zaro:Jen&#237;zaros</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_OTTOMAN_JANISSARY_LATE</Tag>
+		<English>Musket Janissary</English>
 		<French>
 			<Text>Janissaire:Janissaires</Text>
 			<Gender>Male</Gender>
@@ -4030,6 +4054,38 @@
 		<German>New Model Army</German>
 		<Italian>New Model Army</Italian>
 		<Spanish>New Model Army</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DUTCH_MAURITIAN_ARQUEBUSIER</Tag>
+		<English>Mauritian Arquebusier</English>
+		<French>Mauritian Arquebusier</French>
+		<German>Mauritian Arquebusier</German>
+		<Italian>Mauritian Arquebusier</Italian>
+		<Spanish>Mauritian Arquebusier</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_POLISH_HADJUK</Tag>
+		<English>Hadjuk</English>
+		<French>Hadjuk</French>
+		<German>Hadjuk</German>
+		<Italian>Hadjuk</Italian>
+		<Spanish>Hadjuk</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_JANISSARY_BOWMAN</Tag>
+		<English>Bow Janissary</English>
+		<French>Bow Janissary</French>
+		<German>Bow Janissary</German>
+		<Italian>Bow Janissary</Italian>
+		<Spanish>Bow Janissary</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_JANISSARY_LATE</Tag>
+		<English>Musket Janissary</English>
+		<French>Musket Janissary</French>
+		<German>Musket Janissary</German>
+		<Italian>Musket Janissary</Italian>
+		<Spanish>Musket Janissary</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>

@@ -5417,6 +5417,10 @@
 					<UnitClassType>UNITCLASS_GALLEON</UnitClassType>
 					<UnitType>UNIT_DUTCH_FLUYT</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
+					<UnitType>UNIT_DUTCH_MAURITIAN_ARQUEBUSIER</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -5890,6 +5894,14 @@
 					<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
 					<UnitType>UNIT_OTTOMAN_GREAT_BOMBARD</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_LONGBOWMAN</UnitClassType>
+					<UnitType>UNIT_JANISSARY_BOWMAN</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_MUSKETEER</UnitClassType>
+					<UnitType>UNIT_JANISSARY_LATE</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
@@ -6228,6 +6240,10 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_CUIRASSIER</UnitClassType>
 					<UnitType>UNIT_POLISH_WINGED_HUSSAR</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
+					<UnitType>UNIT_POLISH_HADJUK</UnitType>
 				</Unit>
 			</Units>
 			<FreeUnitClasses>

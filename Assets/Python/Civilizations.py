@@ -1919,7 +1919,6 @@ dAlwaysTrain = CivDict({
 	iDravidia: [iWarElephant],
 	iArabia: [iMobileGuard, iGhazi],
 	iAztecs: [iJaguar],
-	iOttomans: [iJanissary, iGreatBombard],
 	iMexico: [iGrenadier],
 	iColombia: [iAlbionLegion],
 	iBrazil: [iGrenadier],
