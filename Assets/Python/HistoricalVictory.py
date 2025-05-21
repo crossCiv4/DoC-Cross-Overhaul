@@ -575,7 +575,7 @@ dGoals = {
 		AreaPercent(plots.regions(*lEuropeProper).named(EUROPE), 25, subject=VASSALS),
 		All(
 			BuildingCount((iCatholicShrine, 1)),
-			CityBuilding(city((65, 62)).named(AACHEN), iPalace, iCarolingianLibrary, iCatholicMonastery, iCatholicCathedral),
+			CityBuilding(city(tAachen).named(AACHEN), iPalace, iCarolingianLibrary, iCatholicMonastery, iCatholicCathedral),
 		),
 	),
 	iFrance: (

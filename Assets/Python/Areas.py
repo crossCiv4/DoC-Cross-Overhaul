@@ -122,7 +122,7 @@ iBuyids :	(89, 47),	# Baghdad
 iYamato :	(137, 53),	# Kyoto
 iTurks :	(92, 50),	# Hamadan
 iManchu :	(125, 56),	# Beijing
-iFranks :	(65, 62),	# Aachen (Cologne site)
+iFranks :	tAachen,	# Aachen (Cologne site)
 })
 
 # new capital locations on respawn

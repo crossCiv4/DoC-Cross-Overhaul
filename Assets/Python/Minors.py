@@ -509,7 +509,7 @@ minor_cities = [
 	MinorCity(400, iIndependent2, (118, 45), "Dali", iPopulation=4, iCiv=iChina, units={iDefend: 3, iShock: 1}, adjective="TXT_KEY_ADJECTIVE_BAI"),
 	MinorCity(400, iIndependent, (135, 52), "Dazaifu", iPopulation=2, iCiv=iYamato, units={iSkirmish: 1}, adjective="TXT_KEY_ADJECTIVE_YAYOI"),
 	MinorCity(400, iIndependent2, (135, 49), "Hayato", iPopulation=2, iCiv=iYamato, units={iSkirmish: 1}, adjective="TXT_KEY_ADJECTIVE_YAYOI"),
-	MinorCity(370, iBarbarian, (65, 62), "Eresburg", iPopulation=2, iCiv=iFranks, units={iDefend: 2, iAttack: 4}, adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
+	MinorCity(370, iBarbarian, tAachen, "Eresburg", iPopulation=2, iCiv=iFranks, units={iDefend: 2, iAttack: 4}, adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
 	MinorCity(500, iIndependent2, (123, 25), "Sunda Kelapa", iPopulation=3, iCiv=iMalays, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_SUNDANESE"),
 	MinorCity(500, iBarbarian, (69, 56), "Venesia", iPopulation=5, iCiv=iItaly, units={iDefend: 3}, bIgnoreRuins=True, adjective="TXT_KEY_ADJECTIVE_VENETIAN"),
 	MinorCity(700, iBarbarian, (69, 56), "Venesia", iPopulation=5, iCiv=iItaly, units={iDefend: 3}, bIgnoreRuins=True, adjective="TXT_KEY_ADJECTIVE_VENETIAN"),
