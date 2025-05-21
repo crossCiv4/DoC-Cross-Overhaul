@@ -1507,15 +1507,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROMAN_WORKER</Tag>
-		<English>Roman Worker</English>
+		<English>Plebeian</English>
 		<French>
-			<Text>Ouvrier romain</Text>
+			<Text>Plébéien</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Roman Worker</German>
-		<Italian>Roman Worker</Italian>
-		<Spanish>Roman Worker</Spanish>
+		<German>Plebeian</German>
+		<Italian>Plebeian</Italian>
+		<Spanish>Plebeian</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PHOENICIAN_BIREME</Tag>

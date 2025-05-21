@@ -1117,13 +1117,12 @@ dStartingUnits = CivDict({
 		iSettle: 3,
 		iWork: 1,
 		iDefend: 2,
-		iCounter: 3,
+		iCounter: 1,
 		iMissionary: 4,
 		iWorkerSea: 1,
 		iFerry: 1,
 		iEscort: 1,
 		iHarass: 2,
-		iSiege: 1,
 	},
 	iJava : {
 		iSettle: 1,
@@ -1598,8 +1597,8 @@ dExtraAIUnits = CivDict({
 		iWork: 2,
 	},
 	iMoors: {
-		iAttack: 2,
-		iHarass: 3,
+		iAttack: 1,
+		iHarass: 1,
 		iDefend: 1,
 	}, 
 	iHolyRome: {
