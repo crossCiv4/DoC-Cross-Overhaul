@@ -881,6 +881,19 @@ class Birth(object):
 			elif cities.regions(rKhorasan, rTransoxiana, rHinduKush).none(lambda city: iMongols in [city.getCivilizationType(), city.getPreviousCiv()]):
 				return False
 
+		if self.iCiv in [iFrance, iHolyRome]:
+			if player(iFranks).isExisting():
+				birthCities = plots.core(self.iCiv).cities()
+				if birthCities.owner(iFranks).any():
+					if player(iFranks).isHuman(): 
+						return stability(iFranks) < iStabilityStable
+					else:
+						return stability(iFranks) < iStabilitySolid
+				else:
+					return False
+			
+			return False # ignore the "independence civ" check for can spawn			
+
 		# independence civs require all players controlling cities in their area to be stable or worse
 		if self.isIndependence():
 			birthCities = plots.birth(self.iCiv).cities()

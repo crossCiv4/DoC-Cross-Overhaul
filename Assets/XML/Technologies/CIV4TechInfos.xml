@@ -2301,7 +2301,7 @@
 			<Description>TXT_KEY_TECH_RELIGIOUS_ORDERS</Description>
 			<Civilopedia>TXT_KEY_TECH_RELIGIOUS_ORDERS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<iCost>550</iCost>
+			<iCost>600</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_MEDIEVAL</Era>
 			<iAsset>32</iAsset>

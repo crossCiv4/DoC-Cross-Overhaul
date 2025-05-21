@@ -744,7 +744,7 @@ iVandals: 535,
 iYemen: 600,
 iBuyids : 1062,
 iYamato: 1192,
-iFranks: 843,
+iFranks: 820,
 }, 2020)
 
 # Leoreth: determine neighbour lists from pairwise neighbours for easier lookup

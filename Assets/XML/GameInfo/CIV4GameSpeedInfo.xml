@@ -235,12 +235,18 @@
 				
 				<!-- Medieval Era -->
 				<!-- 400 AD to 1400 AD -->
-				<!-- 180 turns -->
+				<!-- 185 turns -->
 				
-				<!-- 75 x 7 years = 525 years -> 925 AD -->
+				<!-- 45 x 7 years = 315 years -> 715 AD -->
 				<GameTurnInfo>
-					<iMonthIncrement>96</iMonthIncrement>
-					<iTurnsPerIncrement>75</iTurnsPerIncrement>
+					<iMonthIncrement>84</iMonthIncrement>
+					<iTurnsPerIncrement>45</iTurnsPerIncrement>
+				</GameTurnInfo>
+
+				<!-- 35 x 6 years = 210 years -> 925 AD -->
+				<GameTurnInfo>
+					<iMonthIncrement>72</iMonthIncrement>
+					<iTurnsPerIncrement>35</iTurnsPerIncrement>
 				</GameTurnInfo>
 				
 				<!-- 80 x 5 years = 400 years -> 1325 AD -->
@@ -315,12 +321,12 @@
 				
 				<!-- Ancient: 175 turns -->
 				<!-- Classical: 160 turns -->
-				<!-- Medieval: 180 turns -->
+				<!-- Medieval: 185 turns -->
 				<!-- Renaissance: 185 turns -->
 				<!-- Industrial: 105 turns -->
 				<!-- Global: 70 turns -->
 				<!-- Digital: 80 turns -->
-				<!-- TOTAL: 955	 turns -->
+				<!-- TOTAL: 960	 turns -->
 			</GameTurnInfos>
 		</GameSpeedInfo>
 		<GameSpeedInfo>
