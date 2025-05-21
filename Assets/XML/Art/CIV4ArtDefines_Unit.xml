@@ -9493,7 +9493,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SPANISH_TERCIO_MUSKET</Type>
-			<Button>Art/Units/Tercio/Button_Tercio.dds</Button>
+			<Button>Art/Units/Tercio/Spain_Musketman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>

@@ -7066,6 +7066,10 @@
 					<UnitType>UNIT_MOUNTED_CROSSBOWMAN</UnitType>
 				</Unit>
 				<Unit>
+					<UnitClassType>UNITCLASS_PIKEMAN</UnitClassType>
+					<UnitType>UNIT_EARLY_TERCIO</UnitType>
+				</Unit>
+				<Unit>
 					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
 					<UnitType>UNIT_SPANISH_TERCIO</UnitType>
 				</Unit>

@@ -3147,23 +3147,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPANISH_TERCIO</Tag>
-		<English>Tercio</English>
+		<English>Late Tercio</English>
 		<French>
-			<Text>Tercio</Text>
+			<Text>Late Tercio</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Tercio</German>
-		<Italian>Tercio</Italian>
-		<Spanish>Tercio</Spanish>
+		<German>Late Tercio</German>
+		<Italian>Late Tercio</Italian>
+		<Spanish>Late Tercio</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SPANISH_TERCIO_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Tercio[COLOR_REVERT], the Spanish replacement for the [COLOR_UNIT_TEXT]Arquebusier[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Pinch[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Formation[COLOR_REVERT] promotions.</English>
-		<French>The [COLOR_UNIT_TEXT]Tercio[COLOR_REVERT], the Spanish replacement for the [COLOR_UNIT_TEXT]Arquebusier[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Pinch[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Formation[COLOR_REVERT] promotions.</French>
-		<German>The [COLOR_UNIT_TEXT]Tercio[COLOR_REVERT], the Spanish replacement for the [COLOR_UNIT_TEXT]Arquebusier[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Pinch[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Formation[COLOR_REVERT] promotions.</German>
-		<Italian>The [COLOR_UNIT_TEXT]Tercio[COLOR_REVERT], the Spanish replacement for the [COLOR_UNIT_TEXT]Arquebusier[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Pinch[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Formation[COLOR_REVERT] promotions.</Italian>
-		<Spanish>The [COLOR_UNIT_TEXT]Tercio[COLOR_REVERT], the Spanish replacement for the [COLOR_UNIT_TEXT]Arquebusier[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Pinch[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Formation[COLOR_REVERT] promotions.</Spanish>
+		<Tag>TXT_KEY_UNIT_EARLY_TERCIO</Tag>
+		<English>Early Tercio</English>
+		<French>
+			<Text>Early Tercio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Early Tercio</German>
+		<Italian>Early Tercio</Italian>
+		<Spanish>Early Tercio</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FRENCH_GRIBEAUVAL</Tag>
