@@ -493,6 +493,7 @@ lCivilizations = [
 		iGold=200,
 		iAdvancedStartPoints=100,
 		iStateReligion=iIslam,
+		lEnemies=[iFranks, iRome, iIndependent, iIndependent2],
 		lCivics=[iDespotism, iTheocracy, iSlavery, iMerchantTrade, iClergy, iHegemony],
 		techs=techs.column(6).including(iLateenSails, iCivilService, iSpringSteel, iTheology)
 	),
