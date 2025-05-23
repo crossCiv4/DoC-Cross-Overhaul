@@ -330,6 +330,7 @@ dRemovedFeaturesDict = {
 	(80, 37)  : 550,  # Nubia
 	(81, 39)  : 550,  # Nubia
 	(81, 38)  : 550,  # Nubia
+	(58, 54)  : 850,  # Gap between Spain and France
 	(87, 48)  : 1050, # Mesopotamia
 	(89, 45)  : 1050, # Mesopotamia
 	(91, 45)  : 1050, # Mesopotamia

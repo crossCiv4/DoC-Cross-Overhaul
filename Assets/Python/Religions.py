@@ -60,8 +60,8 @@ def onBuildingBuilt(city, iBuilding):
 	elif iBuilding == iOrthodoxCathedral:
 		if game.isReligionFounded(iCatholicism): return
 
-		# if Cathedral is in Orthodox Core/Historical, don't found Catholicism
-		if plot(city).getSpreadFactor(iOrthodoxy) >= 3: return
+		# if Cathedral is not in Catholic Core/Historical, don't found Catholicism
+		if plot(city).getSpreadFactor(iCatholicism) < 3: return
 	
 		orthodoxHolyCity = game.getHolyCity(iOrthodoxy)
 	

@@ -493,7 +493,7 @@ lCivilizations = [
 		iGold=200,
 		iAdvancedStartPoints=100,
 		iStateReligion=iIslam,
-		lEnemies=[iFranks, iRome, iIndependent, iIndependent2],
+		lEnemies=[iFranks, iRome, iSpain, iIndependent, iIndependent2],
 		lCivics=[iDespotism, iTheocracy, iSlavery, iMerchantTrade, iClergy, iHegemony],
 		techs=techs.column(6).including(iLateenSails, iCivilService, iSpringSteel, iTheology)
 	),
@@ -1117,13 +1117,14 @@ dStartingUnits = CivDict({
 	iMoors: {
 		iSettle: 3,
 		iWork: 1,
-		iDefend: 2,
-		iCounter: 1,
+		iDefend: 3,
+		iCounter: 2,
 		iMissionary: 4,
 		iWorkerSea: 1,
 		iFerry: 1,
 		iEscort: 1,
 		iHarass: 2,
+		iSiege: 1,
 	},
 	iJava : {
 		iSettle: 1,
@@ -1557,6 +1558,7 @@ dExtraAIUnits = CivDict({
 		iAttack: 5,
 		iHarass: 2,
 		iSiege: 2,
+		iDefend: 3,
 	},
 	iVandals: {
 		iWork: 1,
@@ -1568,7 +1570,7 @@ dExtraAIUnits = CivDict({
 	iFranks: {
 		iAttack: 3,
 		iCounter: 2,
-		iDefend: 3,
+		iDefend: 4,
 		iShock: 2,
 		iSiege: 2,
 	},
@@ -1600,9 +1602,10 @@ dExtraAIUnits = CivDict({
 		iWork: 2,
 	},
 	iMoors: {
-		iAttack: 1,
-		iHarass: 1,
-		iDefend: 1,
+		iSiege: 1,
+		iCounter: 1,
+		iHarass: 3,
+		iDefend: 2,
 	}, 
 	iHolyRome: {
 		iSettle: 1,
@@ -1964,6 +1967,8 @@ def createSpecificUnits(iPlayer, tile):
 		makeUnits(iPlayer, iComitatus, tile, 4)
 	elif iCiv == iSpain:
 		makeUnits(iPlayer, iComitatus, tile, 2)
+	elif iCiv == iMoors:
+		makeUnits(iPlayer, iGhazi, tile, 3)
 	elif iCiv == iTimurids:
 		makeUnits(iPlayer, iKeshik, tile, 12)
 	elif iCiv == iRus:

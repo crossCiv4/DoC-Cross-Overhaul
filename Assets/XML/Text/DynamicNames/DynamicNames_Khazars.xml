@@ -2,7 +2,7 @@
 <!--  -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
-		<Tag>TXT_KEY_CIV_KHAZARS_DESC</Tag>
+		<Tag>TXT_KEY_CIV_KHAZARIA_DESC</Tag>
 		<English>The Khazars</English>
 		<French>The Khazars</French>
 		<German>The Khazars</German>
@@ -10,7 +10,7 @@
 		<Spanish>The Khazars</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_KHAZARS_PEOPLES</Tag>
+		<Tag>TXT_KEY_CIV_KHAZARIA_PEOPLES</Tag>
 		<English>West Turkic Tribes</English>
 		<French>West Turkic Tribes</French>
 		<German>West Turkic Tribes</German>
@@ -18,7 +18,7 @@
 		<Spanish>West Turkic Tribes</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_KHAZARS_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIV_KHAZARIA_ADJECTIVE</Tag>
 		<English>Khazar</English>
 		<French>Khazar</French>
 		<German>Khazar</German>
@@ -26,7 +26,7 @@
 		<Spanish>Khazar</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_KHAZARS_SHORT_DESC</Tag>
+		<Tag>TXT_KEY_CIV_KHAZARIA_SHORT_DESC</Tag>
 		<English>Khazaria</English>
 		<French>Khazaria</French>
 		<German>Khazaria</German>
@@ -34,7 +34,7 @@
 		<Spanish>Khazaria</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_KHAZARS_DEFAULT</Tag>
+		<Tag>TXT_KEY_CIV_KHAZARIA_DEFAULT</Tag>
 		<English>Khazar Khaganate</English>
 		<French>Khazar Khaganate</French>
 		<German>Khazar Khaganate</German>
@@ -99,7 +99,7 @@
 		<Spanish>Tartaria</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_KHAZARS_GENERIC_VASSAL_NAME</Tag>
+		<Tag>TXT_KEY_CIV_KHAZARIA_GENERIC_VASSAL_NAME</Tag>
 		<English>the Crimea</English>
 		<French>the Crimea</French>
 		<German>the Crimea</German>

@@ -3708,7 +3708,7 @@
 			<Button>Art/Structures/Buildings/Gudang/Button_Gudang.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KHAZARS_SILK_ROAD_TRADE_PORT</Type>
+			<Type>ART_DEF_BUILDING_KHAZARIA_SILK_ROAD_TRADE_PORT</Type>
 			<LSystem>LSYSTEM_COAST</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.7</fScale>

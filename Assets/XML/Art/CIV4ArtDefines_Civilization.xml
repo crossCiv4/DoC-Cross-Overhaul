@@ -457,9 +457,9 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_KHAZARS</Type>
+			<Type>ART_DEF_CIVILIZATION_KHAZARIA</Type>
 			<Button>Art/Interface/Buttons/Civilizations/khazars.dds</Button>
-			<Path>Art/Interface/TeamColor/FlagDECAL_Khazars.dds</Path>
+			<Path>Art/Interface/TeamColor/FlagDECAL_KHAZARS.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
