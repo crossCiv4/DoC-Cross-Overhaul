@@ -291,6 +291,8 @@ def greeceTitle(args):
 def macedonTitle(args):
 	if args.bEmpire:
 		return "TXT_KEY_EMPIRE_ADJECTIVE"
+	elif args.iLeader == iSeleucus:
+		return "TXT_KEY_KINGDOM_ADJECTIVE"
 
 def persiaTitle(args):
 	if args.bEmpire:

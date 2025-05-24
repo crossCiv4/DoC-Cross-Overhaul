@@ -481,7 +481,10 @@ def vassalName(iPlayer, iMaster):
 
 	if iMasterCiv == iRome and player(iPlayer).getPeriod() == iPeriodCarthage:
 		return "TXT_KEY_CIV_ROMAN_NAME_CARTHAGE"
-		
+
+	if iCiv == iMacedon and iMasterCiv == iRome and player(iPlayer).getCapitalCity().getRegionID() == rLevant:
+		return "TXT_KEY_CIV_ROMAN_NAME_SYRIA"
+
 	if iCiv == iNetherlands:
 		return short(iPlayer)
 
