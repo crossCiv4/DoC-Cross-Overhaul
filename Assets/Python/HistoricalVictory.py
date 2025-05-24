@@ -615,10 +615,10 @@ dGoals = {
 		CultureAmount(30000, by=1600),
 	),
 	iManchu: (
-		VassalCount(4, civs=group(iCivGroupAsia).named(ASIA), by=1800),
+		VassalCount(4, by=1800),
 		All(
 			BuildingCount(iManchuExaminationHall, 10),
-			CitySpecialistCount(city(tBeijing).named(BEIJING), great_people(), 6),
+			CitySpecialistCount(city(tBeijing).named(BEIJING), sum(iSpecialistGreatArtist, iSpecialistGreatStatesman, iSpecialistGreatEngineer), 6),
 			CityBuilding(city(tBeijing).named(BEIJING), iPalace),
 			by=1850,
 		),
