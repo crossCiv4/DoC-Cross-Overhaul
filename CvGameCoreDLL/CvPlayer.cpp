@@ -24585,12 +24585,6 @@ DenialTypes CvPlayer::AI_slaveTrade(PlayerTypes ePlayer) const
 		return DENIAL_NO_GAIN;
 	}
 
-	// AI needs to be able to use slaves
-	if (!GET_PLAYER(ePlayer).isHuman() && !GET_PLAYER(ePlayer).canUseSlaves())
-	{
-		return DENIAL_NO_GAIN;
-	}
-
 	if (GET_TEAM(getTeam()).AI_getWorstEnemy() == GET_PLAYER(ePlayer).getTeam())
 	{
 		return DENIAL_WORST_ENEMY;
@@ -25294,25 +25288,7 @@ bool CvPlayer::canBuySlaves() const
 		return false;
 	}
 
-	if (isSlavery())
-	{
-		if (getNumCities() > 0)
-		{
-			switch (getCapitalCity()->getRegionGroup())
-			{
-			case REGION_GROUP_NORTH_AMERICA:
-			case REGION_GROUP_SOUTH_AMERICA:
-				return true;
-			}
-		}
-	}
-
-	if (countColonies() > 0) 
-	{
-		return true;
-	}
-
-	return false;
+	return this->canUseSlaves();
 }
 
 void CvPlayer::checkCapitalCity()
