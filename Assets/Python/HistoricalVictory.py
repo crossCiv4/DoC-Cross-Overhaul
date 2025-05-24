@@ -624,7 +624,7 @@ dGoals = {
 		),
 		All(
 			LandPercent(5),
-			PopulationPercent(10),
+			PopulationPercent(12),
 			by=1900,
 		),
 	),
