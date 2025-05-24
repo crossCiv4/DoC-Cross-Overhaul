@@ -226,13 +226,14 @@ def mayanHolkanAbility(winningUnit, losingUnit):
 @handler("revolution")
 def validateSlaves(iPlayer):
 	if not player(iPlayer).canUseSlaves():
-		if player(iPlayer).getImprovementCount(iSlavePlantation) > 0:
-			for plot in plots.owner(iPlayer).where(lambda plot: plot.getImprovementType() == iSlavePlantation):
-				plot.setImprovementType(iPlantation)
+		# disabled because slave plantations and mines are no longer buildable
+		# if player(iPlayer).getImprovementCount(iSlavePlantation) > 0:
+		# 	for plot in plots.owner(iPlayer).where(lambda plot: plot.getImprovementType() == iSlavePlantation):
+		# 		plot.setImprovementType(iPlantation)
 		
-		if player(iPlayer).getImprovementCount(iSlaveMine) > 0:
-			for plot in plots.owner(iPlayer).where(lambda plot: plot.getImprovementType() == iSlaveMine):
-				plot.setImprovementType(iMine)
+		# if player(iPlayer).getImprovementCount(iSlaveMine) > 0:
+		# 	for plot in plots.owner(iPlayer).where(lambda plot: plot.getImprovementType() == iSlaveMine):
+		# 		plot.setImprovementType(iMine)
 		
 		for city in cities.owner(iPlayer):
 			city.setFreeSpecialistCount(iSpecialistSlave, 0)
