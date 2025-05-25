@@ -244,7 +244,7 @@ lCivilizations = [
 		iGold=200,
 		iAdvancedStartPoints=90,
 		lCivics=[iRepublic, iSlavery],
-		techs=techs.column(2).including(iAlloys, iWriting, iShipbuilding)
+		techs=techs.column(3).including(iContract).without(iRiding)
 	),
 	Civilization(
 		iPolynesia,
@@ -295,7 +295,7 @@ lCivilizations = [
 		iGold=50,
 		iAdvancedStartPoints=100,
 		lCivics=[iMonarchy, iRedistribution, iSlavery, iDeification, iStratocracy],
-		techs=techs.column(3).including(iBloomery, iMathematics).without(iShipbuilding)
+		techs=techs.column(4).without(iCement, iNavigation, iShipbuilding)
 	),
 	Civilization(
 		iChina,
