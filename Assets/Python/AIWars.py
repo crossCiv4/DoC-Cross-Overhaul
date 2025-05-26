@@ -318,6 +318,7 @@ lConquests = [
 ]
 
 dConquestChecker = {
+	tConquestMacedonAnatolia[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
 	tConquestMacedonLevant[0]: lambda tConquest: checkConquest(tConquest, tConquestMacedonAnatolia),
 	tConquestMacedonEgypt[0]: lambda tConquest: checkConquest(tConquest, tConquestMacedonLevant),
 	tConquestMacedonMesopotamia[0]: lambda tConquest: checkConquest(tConquest, tConquestMacedonLevant),

@@ -254,7 +254,7 @@ lCivilizations = [
 		iGreece,
 		iGold=100,
 		lCivics=[iRepublic, iSlavery, iDeification],
-		techs=techs.column(3).including(iBloomery)
+		techs=techs.column(3).including(iBloomery, iLiterature)
 	),
 	Civilization(
 		iYemen,
