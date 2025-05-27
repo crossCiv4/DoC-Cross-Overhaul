@@ -62,7 +62,8 @@ sIndependenceCivs = set([
 	iHolyRome,
 	iVandals,
 	iBuyids,
-	iRussia
+	iRussia,
+	iAmerica,
 ])
 
 sDynamicReligionCivs = set([
