@@ -12328,8 +12328,8 @@ void CvPlayer::applyCivilization(CivilizationTypes eCivilization, int iChange)
 		changeHurryCount((HurryTypes)1, iChange);
 	}
 
-	// Roman UP: +30% production for buildings already in capital
-	if (eCivilization == ROME)
+	// Frankish UP: +30% production for buildings already in capital
+	if (eCivilization == FRANKS)
 	{
 		changeCapitalBuildingProductionModifier(30 * iChange);
 	}

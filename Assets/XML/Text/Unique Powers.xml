@@ -947,19 +947,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ROM_TITLE</Tag>
-		<English>The Power of Infrastructure:</English>
-		<French>Le pouvoir de l'infrastructure :</French>
-		<German>Die Macht der Infrastruktur:</German>
-		<Italian>Il potere delle infrastrutture:</Italian>
-		<Spanish>El poder de la infraestructura:</Spanish>
+		<English>The Power of the provinciae:</English>
+		<French>Le pouvoir des provinces :</French>
+		<German>Die Macht der Provinzen:</German>
+		<Italian>Il potere delle province:</Italian>
+		<Spanish>El poder de las provincias:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ROM</Tag>
-		<English>+30% [ICON_PRODUCTION] for buildings already in the capital</English>
-		<French>Les b&#226;timents d&#233;j&#224; pr&#233;sents dans votre capitale sont construits 30 % plus vite</French>
-		<German>+30% [ICON_PRODUCTION] f&#252;r Geb&#228;ude, die bereits in der Hauptstadt sind</German>
-		<Italian>Le strade all'interno dei confini romani permettono movimento delle unit&#224; 4X invece di 2X</Italian>
-		<Spanish>Las carreteras dentro de las fronteras romanas permiten un movimiento de unidades multiplicado x4 en lugar de x2</Spanish>
+		<English>Vassals are integrated in your empire on their collapse</English>
+		<French>Les vassaux sont int&#233;gr&#233;s dans votre empire lors de leur effondrement</French>
+		<German>Vasallen werden bei ihrem Zusammenbruch in Ihr Reich integriert</German>
+		<Italian>I vassalli vengono integrati nel tuo impero al loro collasso</Italian>
+		<Spanish>Los vasallos se integran en tu imperio en su colapso</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_RUS_TITLE</Tag>
@@ -1147,19 +1147,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MAM_TITLE</Tag>
-		<English>The Power of Slave Soldiers:</English>
-		<French>The Power of Slave Soldiers:</French>
-		<German>The Power of Slave Soldiers:</German>
-		<Italian>The Power of Slave Soldiers:</Italian>
-		<Spanish>The Power of Slave Soldiers:</Spanish>
+		<English>The Power of the Rival Caliphate:</English>
+		<French>The Power of the Rival Caliphate:</French>
+		<German>The Power of the Rival Caliphate:</German>
+		<Italian>The Power of the Rival Caliphate:</Italian>
+		<Spanish>The Power of the Rival Caliphate:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MAM</Tag>
-		<English>All land units start with Combat I promotion, but have increased upkeep</English>
-		<French>All land units start with Combat I promotion, but have increased upkeep</French>
-		<German>All land units start with Combat I promotion, but have increased upkeep</German>
-		<Italian>All land units start with Combat I promotion, but have increased upkeep</Italian>
-		<Spanish>All land units start with Combat I promotion, but have increased upkeep</Spanish>
+		<English>Extra [ICON_GOLD] in your capital proportional to your city count</English>
+		<French>Extra [ICON_GOLD] in your capital proportional to your city count</French>
+		<German>Extra [ICON_GOLD] in your capital proportional to your city count</German>
+		<Italian>Extra [ICON_GOLD] in your capital proportional to your city count</Italian>
+		<Spanish>Extra [ICON_GOLD] in your capital proportional to your city count</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MCD_TITLE</Tag>
@@ -1452,18 +1452,18 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_FRK_TITLE</Tag>
-		<English>The Power of the New Roman Empire:</English>
-		<French>The Power of the New Roman Empire:</French>
-		<German>The Power of the New Roman Empire:</German>
-		<Italian>The Power of the New Roman Empire:</Italian>
-		<Spanish>The Power of the New Roman Empire:</Spanish>
+		<English>The Power of the Carolingian Renaissance:</English>
+		<French>The Power of the Carolingian Renaissance:</French>
+		<German>The Power of the Carolingian Renaissance:</German>
+		<Italian>The Power of the Carolingian Renaissance:</Italian>
+		<Spanish>The Power of the Carolingian Renaissance:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_FRK</Tag>
-		<English>Extra [ICON_GOLD] in your capital proportional to your city count</English>
-		<French>Extra [ICON_GOLD] in your capital proportional to your city count</French>
-		<German>Extra [ICON_GOLD] in your capital proportional to your city count</German>
-		<Italian>Extra [ICON_GOLD] in your capital proportional to your city count</Italian>
-		<Spanish>Extra [ICON_GOLD] in your capital proportional to your city count</Spanish>
+		<English>+30% [ICON_PRODUCTION] for buildings already in the capital</English>
+		<French>Les b&#226;timents d&#233;j&#224; pr&#233;sents dans votre capitale sont construits 30 % plus vite</French>
+		<German>+30% [ICON_PRODUCTION] f&#252;r Geb&#228;ude, die bereits in der Hauptstadt sind</German>
+		<Italian>+30% [ICON_PRODUCTION] for buildings already in the capital</Italian>
+		<Spanish>+30% [ICON_PRODUCTION] for buildings already in the capital</Spanish>
 	</TEXT>
 </Civ4GameText>
