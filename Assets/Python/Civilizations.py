@@ -882,7 +882,8 @@ dStartingUnits = CivDict({
 		iSettle: 3,
 		iWork: 2,
 		iDefend: 3,
-		iAttack: 4,
+		iAttack: 5,
+		iShock: 2,
 		iExplore: 1,
 	},
 	iChina: {
