@@ -3401,6 +3401,7 @@ dBuildingPreferences = {
 		iMetropolitain: 20,
 
 		iNarekavank: -30,
+		iEiffelTower: -20,
 	},
 	iOttomans : {
 		iTopkapiPalace: 60,
