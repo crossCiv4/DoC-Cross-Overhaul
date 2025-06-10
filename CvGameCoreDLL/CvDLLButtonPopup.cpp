@@ -313,7 +313,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			if (NULL != pCity)
 			{
 				// IROQUOIS UP: golden age from razing cities
-				if (pCity->getCivilizationType() == IROQUOIS)
+				if (pCity->getCivilizationType() == IROQUOIS && !kPlayer.isGoldenAge())
 				{
 					kPlayer.changeGoldenAgeTurns(kPlayer.getGoldenAgeLength());
 				}

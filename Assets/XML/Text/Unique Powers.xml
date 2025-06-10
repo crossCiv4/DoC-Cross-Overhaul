@@ -1187,11 +1187,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_IRO</Tag>
-		<English>Razing a city starts a Golden Age</English>
-		<French>Razing a city starts a Golden Age</French>
-		<German>Razing a city starts a Golden Age</German>
-		<Italian>Razing a city starts a Golden Age</Italian>
-		<Spanish>Razing a city starts a Golden Age</Spanish>
+		<English>Razing a city starts a Golden Age if not already in one</English>
+		<French>Razing a city starts a Golden Age if not already in one</French>
+		<German>Razing a city starts a Golden Age if not already in one</German>
+		<Italian>Razing a city starts a Golden Age if not already in one</Italian>
+		<Spanish>Razing a city starts a Golden Age if not already in one</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_PAR_TITLE</Tag>
