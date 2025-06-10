@@ -72,7 +72,7 @@ def isCommunist(iPlayer):
 		retValue = False
 	elif civic.iEconomy == iCentralPlanning:
 		retValue = True
-	elif civic.iGovernment == iStateParty and civic.iSociety != iTotalitarianism and civic.iEconomy not in set[iMerchantTrade, iFreeEnterprise]:
+	elif civic.iGovernment == iStateParty and civic.iSociety != iTotalitarianism and civic.iEconomy not in [iMerchantTrade, iFreeEnterprise]:
 		retValue = True
 		
 	# force Marxism on communist states
