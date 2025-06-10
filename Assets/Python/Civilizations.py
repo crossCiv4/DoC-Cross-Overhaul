@@ -2540,9 +2540,9 @@ dTechPreferences = {
 	iHolyRome : {
 		iSelectiveBreeding: 10,
 		iLimbProtection: 20,
-		iPrinting: 40,
-		iAcademia: 50,
-		iFirearms: 20,
+		iPrinting: 30,
+		iAcademia: 15,
+		iFirearms: 10,
 		iLogistics: 20,
 		iEducation: 15,
 		iGuilds: 15,
