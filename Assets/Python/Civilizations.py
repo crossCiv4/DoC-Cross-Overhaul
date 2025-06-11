@@ -1207,7 +1207,7 @@ dStartingUnits = CivDict({
 		iCounter: 3,
 		iShock: 1,
 		iHarass: 2,
-		iSiege: 3,
+		iSiege: 4,
 		iMissionary: 2,
 	},
 	iSwahili: {

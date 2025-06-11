@@ -3035,7 +3035,7 @@ int CvTeam::getShrineResearchModifier() const //Buyid UP: -5% tech cost for shri
 		ReligionTypes religion = static_cast<ReligionTypes>(religionInt);
 		if (GET_PLAYER(getLeaderID()).hasShrine(religion))
 		{
-			shrineModifier -= 5;
+			shrineModifier -= 3;
 		}
 	}
 	return shrineModifier;

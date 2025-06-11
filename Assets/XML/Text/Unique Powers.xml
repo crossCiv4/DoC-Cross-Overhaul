@@ -1412,11 +1412,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_BUY</Tag>
-		<English>Gain -5% tech cost reduction per each owned shrine</English>
-		<French>Gain -5% tech cost reduction per each owned shrine</French>
-		<German>Gain -5% tech cost reduction per each owned shrine</German>
-		<Italian>Gain -5% tech cost reduction per each owned shrine</Italian>
-		<Spanish>Gain -5% tech cost reduction per each owned shrine</Spanish>
+		<English>Gain -3% tech cost reduction per each owned shrine</English>
+		<French>Gain -3% tech cost reduction per each owned shrine</French>
+		<German>Gain -3% tech cost reduction per each owned shrine</German>
+		<Italian>Gain -3% tech cost reduction per each owned shrine</Italian>
+		<Spanish>Gain -3% tech cost reduction per each owned shrine</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_YMT_TITLE</Tag>

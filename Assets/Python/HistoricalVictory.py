@@ -1127,11 +1127,7 @@ dGoals = {
 		BrokeredPeace(12, by=2000),
 	),
 	iBuyids: (
-		All(
-			BestPopulationCity(city(tBabylon).named(BAGHDAD)),
-			BestCultureCity(city(tBabylon).named(BAGHDAD)),
-			by=1250,
-		),
+		CityBuildingCount(city(tBabylon).named(BAGHDAD), wonders(), 4, by=1250),
 		BuildingCount(religious_buildings(shrine).named(SHRINES), 5, by=1250),
 		FirstEnterEraX(iIndustrial),
 	),
