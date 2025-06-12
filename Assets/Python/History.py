@@ -430,7 +430,7 @@ def recordExplorationTurn(iTech, iTeam, iPlayer):
 				plot.setRevealed(iTeam, True, False, -1)
 			player(iPlayer).AI_updateFoundValues(False)
 
-@handler("techAcquired")
+#@handler("techAcquired")
 def spanishExplorers(iTech, iTeam, iPlayer):
 	if iTech == iCartography:
 		if civ(iPlayer) == iSpain and not player(iPlayer).isHuman():

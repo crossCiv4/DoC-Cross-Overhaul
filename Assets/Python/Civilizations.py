@@ -2426,7 +2426,6 @@ dTechPreferences = {
 		iCompass: 20,
 		iCombinedArms: 20,
 		iExploration: -10,
-		iFirearms: 5,
 	},
 	iArabia : {
 		iScholarship: 30,
@@ -2518,8 +2517,8 @@ dTechPreferences = {
 		iLimbProtection: 5,
 	},
 	iEngland : {
-		iExploration: 15,
-		iFirearms: 20,
+		iExploration: 10,
+		iFirearms: 5,
 		iPhysics: 10,
 		iMeasurement: 20,
 		iReplaceableParts: 15,
@@ -2603,7 +2602,7 @@ dTechPreferences = {
 		iGeography: 15,
 		iCompass: 30,
 		iGunpowder: 40,
-		iFirearms: 25,
+		iFirearms: 10,
 		iCompanies: 30,
 		iPatronage: 30,
 		iAssemblyLine: -5,
