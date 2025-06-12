@@ -2189,7 +2189,7 @@
 			<Description>TXT_KEY_TECH_COMPASS</Description>
 			<Civilopedia>TXT_KEY_TECH_COMPASS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<iCost>600</iCost>
+			<iCost>650</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_MEDIEVAL</Era>
 			<iAsset>32</iAsset>
@@ -2222,7 +2222,7 @@
 			<Description>TXT_KEY_TECH_PATRONAGE</Description>
 			<Civilopedia>TXT_KEY_TECH_PATRONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<iCost>650</iCost>
+			<iCost>700</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_MEDIEVAL</Era>
 			<iAsset>32</iAsset>
@@ -2266,7 +2266,7 @@
 			<Description>TXT_KEY_TECH_EDUCATION</Description>
 			<Civilopedia>TXT_KEY_TECH_EDUCATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<iCost>600</iCost>
+			<iCost>650</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<Era>ERA_MEDIEVAL</Era>
 			<iAsset>32</iAsset>
@@ -2323,7 +2323,7 @@
 				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_THEOLOGY</PrereqTech>
+				<PrereqTech>TECH_DOCTRINE</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_RELIGIOUS_ORDERS_QUOTE</Quote>
 			<Sound>AS2D_TECH_GENERIC</Sound>

@@ -7894,7 +7894,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_FIREARMS</PrereqTech>
+			<PrereqTech>TECH_COMBINED_ARMS</PrereqTech>
 			<iCost>70</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>

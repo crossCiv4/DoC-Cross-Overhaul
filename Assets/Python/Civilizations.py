@@ -585,7 +585,7 @@ lCivilizations = [
 		iAdvancedStartPoints=50,
 		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iVassalage, iManorialism, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(7).including(iDoctrine, iSelectiveBreeding, iMachinery, iGuilds, iReligiousOrders)
+		techs=techs.column(7).including(iDoctrine, iSelectiveBreeding, iMachinery, iReligiousOrders)
 	),
 	Civilization(
 		iTunis,
