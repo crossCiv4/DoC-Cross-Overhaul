@@ -2551,6 +2551,7 @@ dTechPreferences = {
 		iChemistry: 15,
 		iReplaceableParts: 5,
 		iSociology: 15,
+		iCartography: -5,
 	},
 	iBurma : {
 		iLogistics: 20,
