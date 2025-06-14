@@ -279,7 +279,7 @@ dResearchCostMods = CivDict({
 	iByzantium: 135,
 	iKhazars: 110,
 	iBulgaria: 100,
-	iFrance: 85,
+	iFrance: 90,
 	iFranks: 85,
 	iMalays: 120,
 	iJapan: 120,
@@ -301,10 +301,10 @@ dResearchCostMods = CivDict({
 	iRus: 90,
 	iVietnam: 150,
 	iSwahili: 110,
-	iPoland: 90,
-	iPortugal: 90,
+	iPoland: 95,
+	iPortugal: 95,
 	iInca: 85,
-	iItaly: 85,
+	iItaly: 90,
 	iMongols: 110,
 	iAztecs: 85,
 	iTimurids: 130,
@@ -333,7 +333,7 @@ dResearchCostMods = CivDict({
 	iOman: 110,
 	iBuyids: 105,
 	iManchu: 120,
-	iMorocco: 115,
+	iMorocco: 120,
 }, default=100)
 
 dDistanceMaintenanceMods = CivDict({
@@ -424,7 +424,7 @@ dDistanceMaintenanceMods = CivDict({
 	iOman: 100,
 	iBuyids: 120,
 	iManchu: 105,
-	iMorocco: 100,
+	iMorocco: 110,
 }, default=100)
 
 dColonyMaintenanceMods = CivDict({
@@ -461,8 +461,8 @@ dColonyMaintenanceMods = CivDict({
 	iKhazars: 100,
 	iBulgaria: 100,
 	iByzantium: 150,
-	iFrance: 70,
-	iFranks: 70,
+	iFrance: 85,
+	iFranks: 100,
 	iMalays: 100,
 	iJapan: 80,
 	iYamato: 150,
@@ -606,7 +606,7 @@ dCitiesMaintenanceMods = CivDict({
 	iOman: 100,
 	iBuyids: 120,
 	iManchu: 100,
-	iMorocco: 100,
+	iMorocco: 110,
 }, default=100)
 
 dCivicUpkeepMods = CivDict({
