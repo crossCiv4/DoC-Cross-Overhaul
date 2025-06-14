@@ -508,6 +508,7 @@ lCivilizations = [
 		iGold=150,
 		iAdvancedStartPoints=60,
 		iStateReligion=iCatholicism,
+		lEnemies=[iFranks],
 		lCivics=[iMonarchy, iVassalage, iManorialism, iMerchantTrade, iClergy, iHegemony],
 		techs=techs.column(6).including(iCivilService, iNobility, iTheology, iLateenSails)
 	),
@@ -516,6 +517,7 @@ lCivilizations = [
 		iGold=150,
 		iAdvancedStartPoints=150,
 		iStateReligion=iCatholicism,
+		lEnemies=[iFranks],
 		lCivics=[iElective, iVassalage, iManorialism, iMerchantTrade, iClergy, iHegemony],
 		techs=techs.column(6).including(iCivilService, iNobility, iTheology, iConsensus)
 	),
@@ -1034,7 +1036,7 @@ dStartingUnits = CivDict({
 		iWork: 2,
 		iDefend: 4,
 		iCounter: 3,
-		iShock: 5,
+		iShock: 6,
 	},
 	iMalays: {
 		iSettle: 1,
