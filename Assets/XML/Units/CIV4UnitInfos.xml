@@ -23315,6 +23315,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_THERMODYNAMICS</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_METALLURGY</PrereqTech>
+			</TechTypes>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON</BonusType>
