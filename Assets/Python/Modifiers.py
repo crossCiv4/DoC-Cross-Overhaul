@@ -151,6 +151,7 @@ dCultureMods = CivDict({
 	iOman: 100,
 	iBuyids: 95,
 	iManchu: 130,
+	iMorocco: 105,
 }, default=100)
 
 dUnitUpkeepMods = CivDict({
@@ -218,7 +219,7 @@ dUnitUpkeepMods = CivDict({
 	iTimurids: 120,
 	iGhorids: 120,
 	iThailand: 110,
-	iSweden: 90,
+	iSweden: 100,
 	iRussia: 55,
 	iOttomans: 120,
 	iCongo: 90,
@@ -241,6 +242,7 @@ dUnitUpkeepMods = CivDict({
 	iOman: 110,
 	iBuyids: 100,
 	iManchu: 110,
+	iMorocco: 110,
 }, default=100)
 
 dResearchCostMods = CivDict({
@@ -283,24 +285,24 @@ dResearchCostMods = CivDict({
 	iJapan: 120,
 	iYamato: 115,
 	iVandals: 110,
-	iSpain: 100,
-	iNorse: 90,
-	iTurks: 110,
+	iSpain: 95,
+	iNorse: 85,
+	iTurks: 120,
 	iArabia: 130,
 	iMamluks: 130,
 	iTunis: 125,
 	iTibet: 90,
-	iMoors: 110,
+	iMoors: 115,
 	iJava: 120, 
 	iEngland: 90,
 	iSaxons: 90,
-	iHolyRome: 80,
+	iHolyRome: 85,
 	iBurma: 160,
 	iRus: 90,
 	iVietnam: 150,
 	iSwahili: 110,
-	iPoland: 85,
-	iPortugal: 85,
+	iPoland: 90,
+	iPortugal: 90,
 	iInca: 85,
 	iItaly: 85,
 	iMongols: 110,
@@ -308,11 +310,11 @@ dResearchCostMods = CivDict({
 	iTimurids: 130,
 	iGhorids: 125,
 	iThailand: 140,
-	iSweden: 70,
+	iSweden: 85,
 	iRussia: 75,
 	iOttomans: 115,
 	iCongo: 90,
-	iIran: 105,
+	iIran: 110,
 	iNetherlands: 75,
 	iGermany: 65,
 	iAmerica: 60,
@@ -327,10 +329,11 @@ dResearchCostMods = CivDict({
 	iBarbarian: 110,
 	iIroquois: 70,
 	iArmenia: 110,
-	iYemen: 110,
-	iOman: 105,
+	iYemen: 115,
+	iOman: 110,
 	iBuyids: 105,
 	iManchu: 120,
+	iMorocco: 115,
 }, default=100)
 
 dDistanceMaintenanceMods = CivDict({
@@ -420,7 +423,8 @@ dDistanceMaintenanceMods = CivDict({
 	iYemen: 120,
 	iOman: 100,
 	iBuyids: 120,
-	iManchu: 100,
+	iManchu: 105,
+	iMorocco: 100,
 }, default=100)
 
 dColonyMaintenanceMods = CivDict({
@@ -511,6 +515,7 @@ dColonyMaintenanceMods = CivDict({
 	iOman: 90,
 	iBuyids: 150,
 	iManchu: 150,
+	iMorocco: 120,
 }, default=100)
 
 dCitiesMaintenanceMods = CivDict({
@@ -601,6 +606,7 @@ dCitiesMaintenanceMods = CivDict({
 	iOman: 100,
 	iBuyids: 120,
 	iManchu: 100,
+	iMorocco: 100,
 }, default=100)
 
 dCivicUpkeepMods = CivDict({
@@ -690,7 +696,8 @@ dCivicUpkeepMods = CivDict({
 	iYemen: 110,
 	iOman: 110,
 	iBuyids: 110,
-	iManchu: 100,
+	iManchu: 110,
+	iMorocco: 110,
 }, default=100)
 
 dHealthMods = CivDict({
@@ -781,6 +788,7 @@ dHealthMods = CivDict({
 	iOman: 2,
 	iBuyids: 2,
 	iManchu: 3,
+	iMorocco: 2,
 }, default=2)
 
 dUnitCostMods = CivDict({
@@ -871,6 +879,7 @@ dUnitCostMods = CivDict({
 	iOman: 110,
 	iBuyids: 90,
 	iManchu: 90,
+	iMorocco: 100,
 }, default=100)
 
 dWonderCostMods = CivDict({
@@ -961,6 +970,7 @@ dWonderCostMods = CivDict({
 	iOman: 100,
 	iBuyids: 90,
 	iManchu: 90,
+	iMorocco: 100,
 }, default=100)
 
 dBuildingCostMods = CivDict({
@@ -1051,6 +1061,7 @@ dBuildingCostMods = CivDict({
 	iOman: 100,
 	iBuyids: 90,
 	iManchu: 100,
+	iMorocco: 100,
 }, default=100)
 
 dInflationRateMods = CivDict({
@@ -1120,7 +1131,7 @@ dInflationRateMods = CivDict({
 	iThailand: 120,
 	iSweden: 70,
 	iRussia: 60,
-	iOttomans: 105,
+	iOttomans: 110,
 	iCongo: 85,
 	iIran: 90,
 	iNetherlands: 65,
@@ -1140,7 +1151,8 @@ dInflationRateMods = CivDict({
 	iYemen: 110,
 	iOman: 110,
 	iBuyids: 110,
-	iManchu: 95,
+	iManchu: 105,
+	iMorocco: 105,
 }, default=100)
 
 dGreatPeopleThresholdMods = CivDict({
@@ -1231,6 +1243,7 @@ dGreatPeopleThresholdMods = CivDict({
 	iOman: 100,
 	iBuyids: 85,
 	iManchu: 85,
+	iMorocco: 90,
 }, default=100)
 
 dGrowthThresholdMods = CivDict({
@@ -1321,6 +1334,7 @@ dGrowthThresholdMods = CivDict({
 	iOman: 105,
 	iBuyids: 90,
 	iManchu: 80,
+	iMorocco: 100,
 }, default=100)
 
 tModifiers = (dCultureMods, dUnitUpkeepMods, dResearchCostMods, dDistanceMaintenanceMods, dColonyMaintenanceMods, dCitiesMaintenanceMods, dCivicUpkeepMods, dHealthMods, dUnitCostMods, dWonderCostMods, dBuildingCostMods, dInflationRateMods, dGreatPeopleThresholdMods, dGrowthThresholdMods)
