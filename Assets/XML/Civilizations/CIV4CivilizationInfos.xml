@@ -4611,10 +4611,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_MANCHU</Type>
-			<Description>TXT_KEY_CIV_MANCHU_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_MANCHU_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_MANCHU_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_MANCHU_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIV_MANCHURIA_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_MANCHURIA_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_MANCHURIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_MANCHURIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_ORANGE_GOLD</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_MANCHU</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ASIAN</ArtStyleType>
@@ -4652,7 +4652,7 @@
 			<Buildings>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_UNIVERSITY</BuildingClassType>
-					<BuildingType>BUILDING_MANCHU_EXAMINATION_HALL</BuildingType>
+					<BuildingType>BUILDING_MANCHURIA_EXAMINATION_HALL</BuildingType>
 				</Building>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
@@ -4662,7 +4662,7 @@
 			<Units>
 				<Unit>
 					<UnitClassType>UNITCLASS_PISTOLIER</UnitClassType>
-					<UnitType>UNIT_MANCHU_HORSE_ARCHER</UnitType>
+					<UnitType>UNIT_MANCHURIA_HORSE_ARCHER</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_MUSKETEER</UnitClassType>

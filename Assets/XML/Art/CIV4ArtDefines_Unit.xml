@@ -10710,7 +10710,7 @@
 			<AudioRunSounds/>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_MANCHU_HORSE_ARCHER</Type>
+			<Type>ART_DEF_UNIT_MANCHURIA_HORSE_ARCHER</Type>
 			<Button>Art/Units/chinese horse archer/Mongol_HorseArcher.dds</Button>
 			<fScale>0.42</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>

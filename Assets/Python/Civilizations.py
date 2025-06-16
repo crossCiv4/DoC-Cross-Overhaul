@@ -610,7 +610,7 @@ lCivilizations = [
 		iStateReligion=iShia,
 		iAdvancedStartPoints=60,
 		lCivics=[iMonarchy, iSlavery, iMerchantTrade, iMonasticism, iTheocracy, iThalassocracy],
-		techs=techs.column(8).without(iLimbProtection)
+		techs=techs.column(8).without(iLimbProtection, iCropRotation, iGuilds)
 	),
 	Civilization(
 		iPortugal,
@@ -1118,7 +1118,7 @@ dStartingUnits = CivDict({
 		iMissionary: 2,
 	},
 	iMoors: {
-		iSettle: 3,
+		iSettle: 4,
 		iWork: 1,
 		iDefend: 3,
 		iCounter: 2,

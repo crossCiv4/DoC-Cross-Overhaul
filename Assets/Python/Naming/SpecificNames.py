@@ -6,9 +6,9 @@ from Core import name as short
 
 def manchuSpecificName(args):
 	if args.bEmpire:
-		return "TXT_KEY_CIV_MANCHU_GREAT_QING"
+		return "TXT_KEY_CIV_MANCHURIA_GREAT_QING"
 	elif year() < year(dBirth[iAmerica]):
-		return "TXT_KEY_CIV_MANCHU_JIN"
+		return "TXT_KEY_CIV_MANCHURIA_JIN"
 
 def chinaSpecificName(args):
 	if args.bMonarchy and (args.iEra >= iRenaissance or year() > year(dBirth[iJapan])):

@@ -16475,13 +16475,13 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Class>UNITCLASS_PISTOLIER</Class>
-			<Type>UNIT_MANCHU_HORSE_ARCHER</Type>
+			<Type>UNIT_MANCHURIA_HORSE_ARCHER</Type>
 			<Combat>UNITCOMBAT_LIGHT_CAVALRY</Combat>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MANCHU_HORSE_ARCHER</Description>
-			<Civilopedia>TXT_KEY_UNIT_MANCHU_HORSE_ARCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MANCHU_HORSE_ARCHER_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_MANCHURIA_HORSE_ARCHER</Description>
+			<Civilopedia>TXT_KEY_UNIT_MANCHURIA_HORSE_ARCHER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_MANCHURIA_HORSE_ARCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -16597,15 +16597,15 @@
 				<iRangedWaveSize>3</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MANCHU_HORSE_ARCHER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MANCHURIA_HORSE_ARCHER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MANCHU_HORSE_ARCHER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MANCHURIA_HORSE_ARCHER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MANCHU_HORSE_ARCHER</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_MANCHURIA_HORSE_ARCHER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>

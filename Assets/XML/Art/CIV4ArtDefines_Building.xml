@@ -4128,7 +4128,7 @@
 			<Button>Art/Structures/Wonders/Rustam/rustam_button.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MANCHU_EXAMINATION_HALL</Type>
+			<Type>ART_DEF_BUILDING_MANCHURIA_EXAMINATION_HALL</Type>
 			<LSystem>LSYSTEM_2x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.7</fScale>

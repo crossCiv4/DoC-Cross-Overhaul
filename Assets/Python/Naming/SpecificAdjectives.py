@@ -63,9 +63,9 @@ def yamatoSpecificAdjective(args):
 
 def manchuSpecificAdjective(args):
     if args.bEmpire:
-        return "TXT_KEY_CIV_MANCHU_QING"
+        return "TXT_KEY_CIV_MANCHURIA_QING"
     elif year() < year(dBirth[iAmerica]):
-        return "TXT_KEY_CIV_MANCHU_JIN"
+        return "TXT_KEY_CIV_MANCHURIA_JIN"
 
 def norseSpecificAdjective(args):
     if year() < year(dBirth[iSweden]):
