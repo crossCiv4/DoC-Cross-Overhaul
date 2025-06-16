@@ -285,7 +285,7 @@ dResearchCostMods = CivDict({
 	iJapan: 120,
 	iYamato: 115,
 	iVandals: 110,
-	iSpain: 95,
+	iSpain: 90,
 	iNorse: 100,
 	iTurks: 120,
 	iArabia: 130,
@@ -330,7 +330,7 @@ dResearchCostMods = CivDict({
 	iIroquois: 70,
 	iArmenia: 110,
 	iYemen: 120,
-	iOman: 120,
+	iOman: 130,
 	iBuyids: 110,
 	iManchu: 120,
 	iMorocco: 130,
@@ -558,7 +558,7 @@ dCitiesMaintenanceMods = CivDict({
 	iJapan: 120,
 	iYamato: 120,
 	iVandals: 90,
-	iSpain: 85,
+	iSpain: 80,
 	iNorse: 110,
 	iTurks: 90,
 	iArabia: 130,
@@ -693,11 +693,11 @@ dCivicUpkeepMods = CivDict({
 	iBarbarian: 70,
 	iIroquois: 80,
 	iArmenia: 90,
-	iYemen: 110,
-	iOman: 110,
+	iYemen: 120,
+	iOman: 120,
 	iBuyids: 110,
 	iManchu: 110,
-	iMorocco: 110,
+	iMorocco: 120,
 }, default=100)
 
 dHealthMods = CivDict({
@@ -1152,7 +1152,7 @@ dInflationRateMods = CivDict({
 	iOman: 110,
 	iBuyids: 110,
 	iManchu: 105,
-	iMorocco: 105,
+	iMorocco: 115,
 }, default=100)
 
 dGreatPeopleThresholdMods = CivDict({
