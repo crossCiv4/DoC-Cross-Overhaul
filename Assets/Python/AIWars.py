@@ -686,19 +686,25 @@ def planWars(iGameTurn):
 			data.iNextTurnAIWar = iGameTurn + getNextInterval(iGameTurn)
 			return
 
-	iAttackingPlayer = determineAttackingPlayer()
-	iTargetPlayer = determineTargetPlayer(iAttackingPlayer)
-	
-	if iAttackingPlayer is None:
-		return
+	# one war per civ group
+	for iCivGroup in range(iNumCivGroups):
+		# chance per civ group of a war not happening
+		if rand(100) >= 66:
+			continue
 
-	data.players[iAttackingPlayer].iAggressionLevel = 0
-	
-	if iTargetPlayer == -1:
-		return
+		iAttackingPlayer = determineAttackingPlayer(iCivGroup)
+		iTargetPlayer = determineTargetPlayer(iAttackingPlayer)
 		
-	if team(iAttackingPlayer).canDeclareWar(iTargetPlayer):
-		team(iAttackingPlayer).AI_setWarPlan(iTargetPlayer, WarPlanTypes.WARPLAN_PREPARING_LIMITED)
+		if iAttackingPlayer is None:
+			continue
+
+		data.players[iAttackingPlayer].iAggressionLevel = 0
+		
+		if iTargetPlayer == -1:
+			continue
+			
+		if team(iAttackingPlayer).canDeclareWar(iTargetPlayer):
+			team(iAttackingPlayer).AI_setWarPlan(iTargetPlayer, WarPlanTypes.WARPLAN_PREPARING_LIMITED)
 	
 	data.iNextTurnAIWar = iGameTurn + getNextInterval(iGameTurn)
 
@@ -720,8 +726,8 @@ def targetMinors():
 				break
 
 
-def determineAttackingPlayer():
-	return players.major().existing().where(isNotPlanning).where(possibleTargets).maximum(lambda p: data.players[p].iAggressionLevel)
+def determineAttackingPlayer(iCivGroup):
+	return players.major().existing().where(lambda p: civ(p) in dCivGroups[iCivGroup]).where(isNotPlanning).where(possibleTargets).maximum(lambda p: data.players[p].iAggressionLevel)
 
 
 def possibleTargets(iPlayer):

@@ -460,6 +460,7 @@ iFrance:	((56, 55),	(64, 61)),
 iNubia :	((78, 36),	(82, 39)),
 iArabia:	((84, 38),	(91, 43)), # Saudi core
 iMamluks :	((74, 39),	(83, 45)), # same as core, just in case respawn would use the "birth" area which is in Tunisia
+iEngland :	((55, 62),	(59, 67)), # England proper
 })
 
 dRespawnAreaExceptions = CivDict({

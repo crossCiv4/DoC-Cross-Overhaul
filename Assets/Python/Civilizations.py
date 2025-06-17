@@ -618,7 +618,7 @@ lCivilizations = [
 		iAdvancedStartPoints=60,
 		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iVassalage, iManorialism, iMerchantTrade, iMonasticism, iThalassocracy],
-		techs=techs.column(8).including(iEducation, iReligiousOrders)
+		techs=techs.column(8).including(iReligiousOrders)
 	),
 	Civilization(
 		iInca,
@@ -1118,7 +1118,7 @@ dStartingUnits = CivDict({
 		iMissionary: 2,
 	},
 	iMoors: {
-		iSettle: 5,
+		iSettle: 6,
 		iWork: 1,
 		iDefend: 3,
 		iCounter: 2,
@@ -1941,6 +1941,9 @@ dAIAlwaysTrain = CivDict({
 }, [])
 
 dNeverTrain = CivDict({
+	iYamato: [iCrossbowman],
+	iJapan: [iCrossbowman],
+	iOttomans: [iCrossbowman],
 	iCongo: [iCrossbowman],
 	iNigeria: [iCrossbowman],
 }, [])
@@ -2521,10 +2524,9 @@ dTechPreferences = {
 	},
 	iEngland : {
 		iExploration: 10,
-		iFirearms: 5,
 		iPhysics: 10,
 		iMeasurement: 20,
-		iReplaceableParts: 15,
+		iReplaceableParts: 10,
 		iLogistics: 15,
 		iAcademia: 25,
 		iCivilLiberties: 25,
@@ -2535,7 +2537,7 @@ dTechPreferences = {
 		iLabourUnions: 20,
 		iJournalism: 15,
 		iConstitution: 15,
-		iRepresentation: 10,
+		iRepresentation: 15,
 		iRefining: -5,
 		iMicrobiology: 5,
 	},
@@ -2554,6 +2556,7 @@ dTechPreferences = {
 		iReplaceableParts: 5,
 		iSociology: 15,
 		iCartography: -5,
+		iNationalism: -5,
 	},
 	iBurma : {
 		iLogistics: 20,
@@ -2694,6 +2697,7 @@ dTechPreferences = {
 		iFirearms: 40,
 		iCombinedArms: 20,
 		iJudiciary: 20,
+		iCartography: -10,
 	},
 	iThailand : {
 		iCartography: -50,
