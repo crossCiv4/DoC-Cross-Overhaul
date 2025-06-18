@@ -80,7 +80,7 @@ dResourcesDict = {
 	(76, 27)  : (600,   iBanana),   # Central Africa
 	(75, 31)  : (600,   iBanana),   # Central Africa
 	(0, 43)   : (600,   iSugar),	# Hawaii
-	(77, 57)  : (660,   iHorse),	# Bulgaria
+	(78, 57)  : (660,   iHorse),	# Bulgaria
 	(76, 56)  : (660,   iSheep),	# Bulgaria
 	(74, 57)  : (660,   iSheep),	# Bulgaria
 	(62, 48)  : (700,   iCitrus),   # Algeria
@@ -91,9 +91,12 @@ dResourcesDict = {
 	(78, 41)  : (700,   iSugar),	# Egypt
 	(113, 44) : (800,   iOpium),	# Bengal
 	(121, 40) : (800,   iPig),		# Vietnam
+	(75, 59)  : (890,   iCow),		# Hungary
+	(77, 58)  : (890,   iIron),		# Hungary
 	(82, 40)  : (900,   iIron),		# Egypt
 	(101, 50) : (900,   iHorse),	# Punjab
 	(67, 46)  : (900,   iHorse),	# Tunis
+	(74, 55)  : (1000,  iSheep),	# Bulgaria
 	(73, 25)  : (1000,  iBanana),   # Congo
 	(70, 30)  : (1000,  iBanana),   # Cameroon
 	(62, 32)  : (1000,  iBanana),   # West Africa
@@ -151,7 +154,7 @@ dResourcesDict = {
 	(37, 13)  : (1700,  iWheat),    # Argentina
 	(126, 52) : (1700,  iCorn),     # China
 	(104, 41) : (1700,  iCorn),     # Rajasthan
-	(78, 57)  : (1700,  iCorn),     # Romania
+	(77, 57)  : (1700,  iCorn),     # Romania
 	(60, 58)  : (1700,  iCorn),     # France
 	(64, 32)  : (1700,  iCorn),     # West Africa
 	(77, 16)  : (1700,  iCorn),     # South Africa
@@ -306,6 +309,7 @@ dRemovedResourcesDict = {
 	(79, 39)  : 1200, # Cotton in Nubia
 	(78, 56)  : 1300, # Silk in Thrace
 	(75, 58)  : 1400, # Gold in Transylvania
+	(76, 54)  : 1400, # Sheep near Thessaloniki
 	(92, 60)  : 1600, # Silk in the Volga Delta
 	(32, 42)  : 1650, # Gold in Hispaniola
 	(47, 24)  : 1650, # Dye (brazilwood) in Brazil

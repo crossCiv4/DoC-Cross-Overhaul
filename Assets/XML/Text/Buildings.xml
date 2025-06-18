@@ -3465,7 +3465,14 @@
 		<Italian>Carolingian Scriptorium</Italian>
 		<Spanish>Carolingian Scriptorium</Spanish>
 	</TEXT>
-
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OPERA_HOUSE</Tag>
+		<English>Opera House</English>
+		<French>Op&#233;ra</French>
+		<German>Opernhaus</German>
+		<Italian>Teatro dell'Opera</Italian>
+		<Spanish>Ópera</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_</Tag>
 		<English></English>

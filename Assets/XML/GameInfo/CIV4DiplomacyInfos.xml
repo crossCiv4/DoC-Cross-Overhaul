@@ -63,6 +63,38 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
+							<LeaderType>LEADER_STEPHEN</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes/>
+					<DiplomacyPowers/>
+					<DiplomacyText>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_STEPHEN_1</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_STEPHEN_2</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_STEPHEN_3</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_MATTHIAS</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes/>
+					<DiplomacyPowers/>
+					<DiplomacyText>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_MATTHIAS_1</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_MATTHIAS_2</Text>
+						<Text>AI_DIPLO_FIRST_CONTACT_LEADER_MATTHIAS_3</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
 							<LeaderType>LEADER_SCIPIO</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
@@ -1749,6 +1781,10 @@
 							<LeaderType>LEADER_BULAN</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
+						<Leader>
+							<LeaderType>LEADER_LUDWIG_I</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
@@ -1773,6 +1809,36 @@
 						<Text>AI_DIPLO_REFUSE_TO_TALK_4</Text>
 						<Text>AI_DIPLO_REFUSE_TO_TALK_5</Text>
 						<Text>AI_DIPLO_REFUSE_TO_TALK_6</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_STEPHEN</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes/>
+					<DiplomacyPowers/>
+					<DiplomacyText>
+						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_STEPHEN_1</Text>
+						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_STEPHEN_2</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_MATTHIAS</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes/>
+					<DiplomacyPowers/>
+					<DiplomacyText>
+						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_MATTHIAS_1</Text>
+						<Text>AI_DIPLO_REFUSE_TO_TALK_LEADER_MATTHIAS_2</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -2665,6 +2731,36 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
+							<LeaderType>LEADER_STEPHEN</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes/>
+					<DiplomacyPowers/>
+					<DiplomacyText>
+						<Text>AI_DIPLO_NO_PEACE_LEADER_STEPHEN_1</Text>
+						<Text>AI_DIPLO_NO_PEACE_LEADER_STEPHEN_2</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_MATTHIAS</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes/>
+					<DiplomacyPowers/>
+					<DiplomacyText>
+						<Text>AI_DIPLO_NO_PEACE_LEADER_MATTHIAS_1</Text>
+						<Text>AI_DIPLO_NO_PEACE_LEADER_MATTHIAS_2</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
 							<LeaderType>LEADER_SCIPIO</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
@@ -3521,6 +3617,62 @@
 						<Text>AI_DIPLO_GREETINGS_ATT_FR_14</Text>
 						<Text>AI_DIPLO_GREETINGS_ATT_FR_15</Text>
 						<Text>AI_DIPLO_GREETINGS_ATT_FR_16</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_STEPHEN</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes>
+						<Attitude>
+							<AttitudeType>ATTITUDE_FRIENDLY</AttitudeType>
+							<bAttitudeType>1</bAttitudeType>
+						</Attitude>
+						<Attitude>
+							<AttitudeType>ATTITUDE_PLEASED</AttitudeType>
+							<bAttitudeType>1</bAttitudeType>
+						</Attitude>
+						<Attitude>
+							<AttitudeType>ATTITUDE_CAUTIOUS</AttitudeType>
+							<bAttitudeType>1</bAttitudeType>
+						</Attitude>
+					</Attitudes>
+					<DiplomacyPowers/>
+					<DiplomacyText>
+						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_STEPHEN_1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_STEPHEN_2</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_MATTHIAS</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes>
+						<Attitude>
+							<AttitudeType>ATTITUDE_FRIENDLY</AttitudeType>
+							<bAttitudeType>1</bAttitudeType>
+						</Attitude>
+						<Attitude>
+							<AttitudeType>ATTITUDE_PLEASED</AttitudeType>
+							<bAttitudeType>1</bAttitudeType>
+						</Attitude>
+						<Attitude>
+							<AttitudeType>ATTITUDE_CAUTIOUS</AttitudeType>
+							<bAttitudeType>1</bAttitudeType>
+						</Attitude>
+					</Attitudes>
+					<DiplomacyPowers/>
+					<DiplomacyText>
+						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_MATTHIAS_1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FR_LEADER_MATTHIAS_2</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -5232,6 +5384,54 @@
 						<Text>AI_DIPLO_GREETINGS_ATT_FUR_14</Text>
 						<Text>AI_DIPLO_GREETINGS_ATT_FUR_15</Text>
 						<Text>AI_DIPLO_GREETINGS_ATT_FUR_16</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_STEPHEN</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes>
+						<Attitude>
+							<AttitudeType>ATTITUDE_ANNOYED</AttitudeType>
+							<bAttitudeType>1</bAttitudeType>
+						</Attitude>
+						<Attitude>
+							<AttitudeType>ATTITUDE_FURIOUS</AttitudeType>
+							<bAttitudeType>1</bAttitudeType>
+						</Attitude>
+					</Attitudes>
+					<DiplomacyPowers/>
+					<DiplomacyText>
+						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_STEPHEN_1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_STEPHEN_2</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_MATTHIAS</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes>
+						<Attitude>
+							<AttitudeType>ATTITUDE_ANNOYED</AttitudeType>
+							<bAttitudeType>1</bAttitudeType>
+						</Attitude>
+						<Attitude>
+							<AttitudeType>ATTITUDE_FURIOUS</AttitudeType>
+							<bAttitudeType>1</bAttitudeType>
+						</Attitude>
+					</Attitudes>
+					<DiplomacyPowers/>
+					<DiplomacyText>
+						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_MATTHIAS_1</Text>
+						<Text>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_MATTHIAS_2</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -7481,6 +7681,45 @@
 					<Civilizations/>
 					<Leaders>
 						<Leader>
+							<LeaderType>LEADER_STEPHEN</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes/>
+					<DiplomacyPowers>
+						<DiplomacyPower>
+							<DiplomacyPowerType>DIPLOMACYPOWER_WEAKER</DiplomacyPowerType>
+							<bDiplomacyPowerType>1</bDiplomacyPowerType>
+						</DiplomacyPower>
+					</DiplomacyPowers>
+					<DiplomacyText>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_STEPHEN_1</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_MATTHIAS</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes/>
+					<DiplomacyPowers>
+						<DiplomacyPower>
+							<DiplomacyPowerType>DIPLOMACYPOWER_WEAKER</DiplomacyPowerType>
+							<bDiplomacyPowerType>1</bDiplomacyPowerType>
+						</DiplomacyPower>
+					</DiplomacyPowers>
+					<DiplomacyText>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_MATTHIAS_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_MATTHIAS_2</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
 							<LeaderType>LEADER_SCIPIO</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
@@ -8563,6 +8802,46 @@
 						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_5</Text>
 						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_6</Text>
 						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_7</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_STEPHEN</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes/>
+					<DiplomacyPowers>
+						<DiplomacyPower>
+							<DiplomacyPowerType>DIPLOMACYPOWER_EQUAL</DiplomacyPowerType>
+							<bDiplomacyPowerType>1</bDiplomacyPowerType>
+						</DiplomacyPower>
+					</DiplomacyPowers>
+					<DiplomacyText>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_STEPHEN_1</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_MATTHIAS</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes/>
+					<DiplomacyPowers>
+						<DiplomacyPower>
+							<DiplomacyPowerType>DIPLOMACYPOWER_EQUAL</DiplomacyPowerType>
+							<bDiplomacyPowerType>1</bDiplomacyPowerType>
+						</DiplomacyPower>
+					</DiplomacyPowers>
+					<DiplomacyText>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_MATTHIAS_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_MATTHIAS_2</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_MATTHIAS_3</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>
@@ -9656,6 +9935,45 @@
 						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_6</Text>
 						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_7</Text>
 						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_8</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_STEPHEN</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes/>
+					<DiplomacyPowers>
+						<DiplomacyPower>
+							<DiplomacyPowerType>DIPLOMACYPOWER_STRONGER</DiplomacyPowerType>
+							<bDiplomacyPowerType>1</bDiplomacyPowerType>
+						</DiplomacyPower>
+					</DiplomacyPowers>
+					<DiplomacyText>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_STEPHEN_1</Text>
+					</DiplomacyText>
+				</Response>
+				<Response>
+					<Civilizations/>
+					<Leaders>
+						<Leader>
+							<LeaderType>LEADER_MATTHIAS</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+					</Leaders>
+					<Attitudes/>
+					<DiplomacyPowers>
+						<DiplomacyPower>
+							<DiplomacyPowerType>DIPLOMACYPOWER_STRONGER</DiplomacyPowerType>
+							<bDiplomacyPowerType>1</bDiplomacyPowerType>
+						</DiplomacyPower>
+					</DiplomacyPowers>
+					<DiplomacyText>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_MATTHIAS_1</Text>
+						<Text>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_MATTHIAS_2</Text>
 					</DiplomacyText>
 				</Response>
 				<Response>

@@ -8,10 +8,10 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 89
+iNumCivs = 90
 (iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iBuyids, iByzantium, iCanada, 
 iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iFranks, iGermany, iGhorids,
-iGreece, iHarappa, iHittites, iHolyRome, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, iKhazars,
+iGreece, iHarappa, iHittites, iHolyRome, iHungary, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, iKhazars,
 iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iManchu, iMaya, iMexico, iMinoans, iMongols, iMoors, iMorocco,
 iTimurids, iNetherlands, iNigeria, iNorse, iNubia, iOman, iOttomans, iParthia, iPersia, iPoland, iPolynesia, iPortugal, 
 iRome, iRus, iRussia, iSaxons, iShu, iSpain, iSwahili, iSweden, iThailand, iTibet, iToltecs, iTunis,
@@ -59,6 +59,7 @@ dCivNames = {
 	iGreece: "Greece",
 	iHarappa: "Harappa",
 	iHolyRome: "Holy_Rome",
+	iHungary: "Hungary",
 	iInca: "Inca",
 	iIndia: "India",
 	iMalays: "Malays",

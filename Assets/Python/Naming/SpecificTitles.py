@@ -235,10 +235,13 @@ def netherlandsTitle(args):
 		return "TXT_KEY_CIV_NETHERLANDS_UNITED_KINGDOM_OF"
 
 def germanyTitle(args):
-	if args.iEra >= iIndustrial and args.bEmpire:
-		if player(iHolyRome).isExisting() and team(iHolyRome).isExisting() and civ(master(iHolyRome)) == iGermany:
-			return "TXT_KEY_CIV_GERMANY_GREATER_EMPIRE"
-		return "TXT_KEY_EMPIRE_ADJECTIVE"
+	if getColumn(args.iPlayer) <= 13 or (player(iHolyRome).isExisting() and not civ(master(iHolyRome)) == iGermany):
+		return "TXT_KEY_KINGDOM_OF" # Prussia
+	else:
+		if args.bEmpire:
+			if not player(iHungary).isExisting() or (team(iHungary).isExisting() and civ(master(iHungary)) == iGermany):
+				return "TXT_KEY_CIV_GERMANY_GREATER_EMPIRE"
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
 
 def americaTitle(args):
 	if args.civic.iSociety in [iSlavery, iManorialism]:
@@ -536,17 +539,18 @@ def polandTitle(args):
 		return "TXT_KEY_CIV_POLAND_GRAND_DUCHY_OF"
 
 def holyRomeTitle(args):
-	if args.bCityStates and player(args.iPlayer).getPeriod() == -1:
-		return "TXT_KEY_CIV_HOLY_ROME_FREE_CITIES"
-
 	if args.bEmpire:
 		return "TXT_KEY_EMPIRE_ADJECTIVE"
 		
-	if isCurrentCapital(args.iPlayer, "Buda"):
+	if year() >= year(dBirth[iGermany]):
 		return "TXT_KEY_KINGDOM_OF"
-		
-	if player(iGermany).isExisting():
-		return "TXT_KEY_CIV_HOLY_ROME_ARCHDUCHY_OF"
+	
+	if args.bCityStates:
+		return "TXT_KEY_CIV_HOLY_ROME_FREE_CITIES"
+
+def hungaryTitle(args):
+	if args.bEmpire:
+		return "TXT_KEY_EMPIRE_ADJECTIVE"
 
 def saxonsTitle(args):
 	if args.tPlayer.isHasTech(iNobility):
@@ -616,6 +620,7 @@ dSpecificTitles = CivDict({
 	iHolyRome: holyRomeTitle,
 	iSaxons: saxonsTitle,
 	iFranks: franksTitle,
+	iHungary: hungaryTitle,
 })
 
 # Civs which are missing (never had specific titles):

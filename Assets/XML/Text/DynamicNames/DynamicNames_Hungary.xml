@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNGARY_DESC</Tag>
+		<English>The Hungarians</English>
+		<French>Les Hongrois</French>
+		<German>Die Ungarn</German>
+		<Italian>Gli Ungheresi</Italian>
+		<Spanish>Los Húngaros</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNGARY_PEOPLES</Tag>
+		<English>Magyar Peoples</English>
+		<French>Peuples magyars</French>
+		<German>Ungarische Völker</German>
+		<Italian>Popoli ungheresi</Italian>
+		<Spanish>Pueblos húngaros</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNGARY_ADJECTIVE</Tag>
+		<English>Hungarian</English>
+		<French>
+			<Text>hongrois:hongroise:hongrois:hongroises</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Hungarian</German>
+		<Italian>Hungarian</Italian>
+		<Spanish>Hungarian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNGARY_SHORT_DESC</Tag>
+		<English>Hungary</English>
+		<French>
+			<Text>Hongrie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Hungary</German>
+		<Italian>Hungary</Italian>
+		<Spanish>Hungary</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNGARY_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>
+			<Text>Royaume de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>K&#246;nigreich %s1:K&#246;nigreich %s1:K&#246;nigreich %s1</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Regno del %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Reino de %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNGARY_PRINCIPALITY</Tag>
+		<English>Principality of Hungary</English>
+		<French>Principauté de Hongrie</French>
+		<German>Fürstentum Ungarn</German>
+		<Italian>Principato di Ungheria</Italian>
+		<Spanish>Principado de Hungría</Spanish>
+	</TEXT>
+</Civ4GameText>

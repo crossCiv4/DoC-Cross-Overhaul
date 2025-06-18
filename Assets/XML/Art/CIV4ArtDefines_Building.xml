@@ -4147,5 +4147,15 @@
 			<KFM/>
 			<Button>Art/Structures/Buildings/Library and Mage College/btn_carolingianLibrary.dds</Button>
 		</BuildingArtInfo>
+			<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OPERA_HOUSE</Type>
+			 <LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>0.50</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Old_Opera_House/OldOpera.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Old_Opera_House/OldOpera_Button.dds</Button>
+		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

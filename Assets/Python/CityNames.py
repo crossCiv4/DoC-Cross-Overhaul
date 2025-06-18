@@ -8,7 +8,7 @@ from DynamicCivs import getColumn
 
 ### CONSTANTS ###
 
-iNumLanguages = 59
+iNumLanguages = 60
 (iLangAmerican, iLangArabic, iLangBabylonian, iLangBurmese, iLangByzantine, 
 iLangCeltic, iLangChinese, iLangCongolese, iLangDutch, iLangEgyptian, 
 iLangEgyptianArabic, iLangEnglish, iLangEthiopian, iLangFrench, iLangGerman, 
@@ -18,7 +18,7 @@ iLangMayan, iLangMongolian, iLangNahuatl, iLangNorse, iLangNubian,
 iLangPersian, iLangPhoenician, iLangPolish, iLangPolynesian, iLangPortuguese, 
 iLangQuechua, iLangRussian, iLangSpanish, iLangSwedish, iLangThai, 
 iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian, 
-iLangArmenian, iLangDanish, iLangParthian, iLangVedic, iLangUkrainian, iLangNanman, iLangAncientChinese, iLangSaxon, iLangPakistani, iLangBrazilPortuguese, iLangModernJapanese, iLangModernChinese, iLangModernGerman, iLangFrankish) = range(iNumLanguages)
+iLangArmenian, iLangDanish, iLangParthian, iLangVedic, iLangUkrainian, iLangNanman, iLangAncientChinese, iLangSaxon, iLangPakistani, iLangBrazilPortuguese, iLangModernJapanese, iLangModernChinese, iLangModernGerman, iLangFrankish, iLangHungarian) = range(iNumLanguages)
 
 dLanguages = CivDict({
 	iEgypt:	[iLangEgyptian],
@@ -105,6 +105,7 @@ dLanguages = CivDict({
 	iYamato: [iLangJapanese, iLangChinese],
 	iManchu: [iLangModernChinese, iLangChinese, iLangMongolian, iLangTurkish, iLangKorean],
     iFranks: [iLangFrankish, iLangFrench, iLangLatin, iLangSaxon, iLangGerman],
+    iHungary: [iLangHungarian, iLangGerman, iLangRuthenian, iLangByzantine],
 
 }, [])
 
@@ -175,6 +176,7 @@ dLanguageNames = {
 	iLangModernChinese: "ModernChinese",
     iLangModernGerman: "ModernGerman",
     iLangFrankish: "Frankish",
+    iLangHungarian: "Hungarian",
 }
 
 dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames[iLanguage])) for iLanguage in range(iNumLanguages))
@@ -340,6 +342,11 @@ def getSpanishLanguages(playerId):
 		return [iLangFrankish, iLangLatin, iLangByzantine, iLangSpanish]
 	return None
 
+def getHungarianLanguages(playerId):
+	if player(playerId).getPeriod() == iPeriodAustria:
+		return [iLangGerman, iLangHungarian, iLangRuthenian, iLangByzantine]
+	return None
+
 # Define a CivDict mapping civilizations to their special language logic
 dSpecialLanguages = CivDict({
     iInca: getIncaLanguages,
@@ -359,6 +366,7 @@ dSpecialLanguages = CivDict({
     iYamato: getYamatoLanguages,
     iGreece: getGreekLanguages,
     iSpain: getSpanishLanguages,
+    iHungary: getHungarianLanguages,
 })
 
 def getSpecialLanguages(playerId):

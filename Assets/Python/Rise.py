@@ -45,6 +45,7 @@ sExpansionCivs = set([
 	iEngland,
 	iBuyids,
 	iManchu,
+	iHungary,
 ])
 
 sIndependenceCivs = set([
@@ -107,6 +108,7 @@ sBirthWars = set([
 	(iArabia, iPersia),
 	(iArabia, iParthia),
 	(iArabia, iYemen),
+	(iArabia, iByzantium),
 	(iMongols, iChina),
 	(iMongols, iChinaS),
 	(iMongols, iShu),

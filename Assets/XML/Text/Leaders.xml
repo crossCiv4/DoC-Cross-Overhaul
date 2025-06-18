@@ -1767,6 +1767,45 @@
 	</TEXT>
 
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_STEPHEN</Tag>
+		<English>Istv&#225;n I</English>
+		<French>&#201;tienne Ier</French>
+		<German>Stephan I.</German>
+		<Italian>Stefano I</Italian>
+		<Spanish>Esteban I</Spanish>
+		<Portuguese>Istv&#225;n I</Portuguese>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MATTHIAS</Tag>
+		<English>Matthias Corvinus</English>
+		<French>Matthias Corvin</French>
+		<German>Matthias Corvinus</German>
+		<Italian>Mattia Corvino</Italian>
+		<Spanish>Mat&#237;as Corvino</Spanish>
+		<Portuguese>Matthias Corvinus</Portuguese>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_BELA_III</Tag>
+		<English>B&#233;la III</English>
+		<French>B&#233;la III</French>
+		<German>B&#233;la III</German>
+		<Italian>B&#233;la III</Italian>
+		<Spanish>B&#233;la III</Spanish>
+		<Portuguese>B&#233;la III</Portuguese>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_LUDWIG_I</Tag>
+		<English>Ludwig I</English>
+		<French>Ludwig I</French>
+		<German>Ludwig I</German>
+		<Italian>Ludwig I</Italian>
+		<Spanish>Ludwig I</Spanish>
+	</TEXT>
+
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>
 		<French></French>

@@ -1208,6 +1208,7 @@ enum CivilizationTypes		// Exposed to Python
 	HARAPPA,
 	HITTITES,
 	HOLY_ROME,
+	HUNGARY,
 	INCA,
 	INDIA,
 	IRAN,
@@ -1423,7 +1424,7 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	BARBAROSSA,
 	CHARLES,
-	FRANCIS,
+	LUDWIG_I,
 
 	ANAWRAHTA,
 	BAYINNAUNG,
@@ -1544,6 +1545,11 @@ enum LeaderHeadTypes			// Exposed to Python
 
 	NURHACI,
 	CIXI,
+
+	STEPHEN,
+	BELA_III,
+	MATTHIAS,
+	FRANCIS,
 
 	NUM_LEADERHEADS
 };

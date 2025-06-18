@@ -20,7 +20,7 @@ dPeriods1700AD = {
 	iNorse : iPeriodDenmark,
 	iTurks : iPeriodUzbeks,
 	iSpain : iPeriodSpain,
-	iHolyRome : iPeriodAustria,
+	iHungary : iPeriodAustria,
 	iEngland : iPeriodUnitedKingdom,
 	iInca : iPeriodPeru,
 	iOttomans : iPeriodOttomanConstantinople,
@@ -102,7 +102,7 @@ def onBirth(iPlayer):
 	if iCiv == iFranks:
 		setPeriod(iCelts, iPeriodInsularCelts)
 	elif iCiv == iGermany:
-		setPeriod(iHolyRome, iPeriodAustria)
+		setPeriod(iHungary, iPeriodAustria)
 	elif iCiv == iIran:
 		setPeriod(iTimurids, iPeriodMughals)
 		setPeriod(iTurks, iPeriodUzbeks)
@@ -171,7 +171,12 @@ def onCityAcquired(iOwner, iPlayer, city, bConquest):
 	if iCiv == iSpain:
 		if isSpainPeriod(iPlayer):
 			setPeriod(iSpain, iPeriodSpain)
-	
+
+	if iCiv == iHungary:
+		if city.at(*tVienna):
+			if period(iCiv) == iPeriodAustria:
+				relocateCapital(iPlayer, location(tVienna))
+
 	if iCiv == iEngland:
 		if player(iPlayer).getCurrentEra() == iIndustrial and city in cities.regions(rBritain, rIreland) and cities.regions(rBritain, rIreland).all(lambda city: city.getOwner() == iPlayer):
 			setPeriod(iEngland, iPeriodGreatBritain)

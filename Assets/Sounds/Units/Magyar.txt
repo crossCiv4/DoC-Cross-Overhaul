@@ -1,0 +1,23 @@
+
+MagyarOrder-000 - Igen! - Yes!
+MagyarOrder-001 - Már indulok is! - I'm leaving right now!
+MagyarOrder-002 - Elvégezve! - Done!
+MagyarOrder-003 - Rendben! - Alright!
+MagyarOrder-004 - Azonnal! - As soon as possible!
+MagyarOrder-005 - Feladat teljesítve! - Assigment completed!
+MagyarOrder-006 - Nem probléma! - It's no trouble!
+MagyarOrder-007 - Gond nélkül! - Without any problem!
+MagyarOrder-008 - Igenis! - Yes sir!
+MagyarOrder-009 - Ám legyen! - We are on it!
+
+MagyarSelect-000 - Igen? - Yes?
+MagyarSelect-001 - Parancs? - Order?
+MagyarSelect-002 - Készen állok! - I'm ready!
+MagyarSelect-003 - Mit tehetek? - What should I do?
+MagyarSelect-004 - Merre tovább? - Which direction?
+MagyarSelect-005 - Várom az utasítást! - Waiting for an order!
+MagyarSelect-006 - Teendõ? - What to do?
+MagyarSelect-007 - Szolgálatára! - Reporting for duty!
+MagyarSelect-008 - Állok rendelkezésre! - Reporting for duty!
+MagyarSelect-009 - Mondja! - Say it!
+

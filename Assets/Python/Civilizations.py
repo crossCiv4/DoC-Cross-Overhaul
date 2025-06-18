@@ -543,6 +543,14 @@ lCivilizations = [
 		techs=techs.column(6).including(iLateenSails, iConsensus, iNobility, iSpringSteel).without(iScholarship)
 	),
 	Civilization(
+		iHungary,
+		iGold=150,
+		iAdvancedStartPoints=60,
+		lEnemies=[iBulgaria],
+		lCivics=[iMonarchy, iVassalage, iManorialism, iMerchantTrade, iHegemony],
+		techs=techs.column(6).including(iCivilService, iNobility, iConsensus, iSpringSteel)
+	),
+	Civilization(
 		iBuyids,
 		iGold=150,
 		iAdvancedStartPoints=60,
@@ -1159,7 +1167,7 @@ dStartingUnits = CivDict({
 	iBulgaria: {
 		iSettle: 3,
 		iWork: 2,
-		iDefend: 4,
+		iDefend: 3,
 		iAttack: 1,
 		iHarass: 5,
 	},
@@ -1182,6 +1190,14 @@ dStartingUnits = CivDict({
 		iAttack: 1,
 		iSkirmish: 1,
 		iMissionary: 2,
+	},
+	iHungary: {
+		iSettle: 2,
+		iWork: 2,
+		iDefend: 2,
+		iSiege: 2,
+		iHarass: 7,
+		iAttack: 2,
 	},
 	iBurma: {
 		iSettle: 2,
@@ -1372,10 +1388,10 @@ dStartingUnits = CivDict({
 		iSettle: 3,
 		iWork: 3,
 		iAttack: 4,
-		iSkirmish: 4,
+		iSkirmish: 6,
 		iShock: 3,
 		iSiege: 4,
-		iMissionary: 2,
+		iMissionary: 4,
 		iHarass: 3,
 	},
 	iCongo: {
@@ -1418,6 +1434,7 @@ dStartingUnits = CivDict({
 		iDefend: 2,
 		iSiege: 3,
 		iMissionary: 2,
+		iCounter: 2,
 	},
 	iAmerica: {
 		iSettle: 6,
@@ -1647,6 +1664,10 @@ dExtraAIUnits = CivDict({
 		iHarass: 2,
 		iDefend: 1,
 	},
+	iRus: {
+		iSettle: 1,
+		iDefend: 1,
+	},
 	iRussia: {
 		iWork: 6,
 		iShock: 2,
@@ -1728,6 +1749,10 @@ dAdditionalUnits = CivDict({
 		iAttack: 2,
 	},
 	iManchu: {
+		iDefend: 2,
+		iHarass: 2,
+	},
+	iHungary: {
 		iDefend: 2,
 		iHarass: 2,
 	},
@@ -2558,6 +2583,23 @@ dTechPreferences = {
 		iCartography: -5,
 		iNationalism: -5,
 	},
+	iHungary : {
+		iSelectiveBreeding: 10,
+		iLimbProtection: 20,
+		iPrinting: 15,
+		iAcademia: 20,
+		iLogistics: 10,
+		iEducation: 15,
+		iGuilds: 15,
+		iFission: 12,
+		iEconomics: -10,
+		iRailroad: -10,
+		iChemistry: 15,
+		iReplaceableParts: 5,
+		iSociology: 15,
+		iCartography: -5,
+		iNationalism: -5,
+	},
 	iBurma : {
 		iLogistics: 20,
 		iCombinedArms: 20,
@@ -3340,6 +3382,15 @@ dBuildingPreferences = {
 		iNeuschwanstein: 20,
 		iPalaceOfNations: 20,
 		iNotreDame: 15,
+		iMountAthos: -20,
+		iHagiaSophia: -20,
+	},
+	iHungary : {
+		iSaintThomasChurch: 30,
+		iSaintPeters: 20,
+		iKrakDesChevaliers: 20,
+		iNeuschwanstein: 20,
+		iPalaceOfNations: 20,
 		iMountAthos: -20,
 		iHagiaSophia: -20,
 	},

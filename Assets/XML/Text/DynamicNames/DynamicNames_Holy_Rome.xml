@@ -110,6 +110,18 @@
 		<Spanish>Austro-Hungarian</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_AUSTRIA_HUNGARY</Tag>
+		<English>Austria-Hungary</English>
+		<French>
+			<Text>Autriche-Hongrie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Österreich-Ungarn</German>
+		<Italian>Austria-Ungheria</Italian>
+		<Spanish>Austria-Hungría</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_HOLY_ROME_ARCHDUCHY_OF</Tag>
 		<English>Archduchy of %s1</English>
 		<French>
@@ -313,28 +325,31 @@
 		<Italian>Grand Duchy of Tuscany</Italian>
 		<Spanish>Grand Duchy of Tuscany</Spanish>
 	</TEXT>
+
 	<TEXT>
-		<Tag>TXT_KEY_CIV_HOLY_ROME_HUNGARY</Tag>
-		<English>Hungary</English>
+		<Tag>TXT_KEY_CIV_HOLY_ROME_BAVARIA_ADJECTIVE</Tag>
+		<English>Bavarian</English>
 		<French>
-			<Text>Hongrie</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Hungary</German>
-		<Italian>Hungary</Italian>
-		<Spanish>Hungary</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_HOLY_ROME_HUNGARIAN</Tag>
-		<English>Hungarian</English>
-		<French>
-			<Text>hongrois:hongroise:hongrois:hongroises</Text>
+			<Text>bavarois:bavaroise:bavarois:bavaroises</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
-		<German>Hungarian</German>
-		<Italian>Hungarian</Italian>
-		<Spanish>Hungarian</Spanish>
+		<German>Bavarian</German>
+		<Italian>Bavarian</Italian>
+		<Spanish>Bavarian</Spanish>
 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HOLY_ROME_BAVARIA</Tag>
+		<English>Bavaria</English>
+		<French>
+			<Text>Bavi&#232;re</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Bavaria</German>
+		<Italian>Bavaria</Italian>
+		<Spanish>Bavaria</Spanish>
+	</TEXT>
+
 </Civ4GameText>

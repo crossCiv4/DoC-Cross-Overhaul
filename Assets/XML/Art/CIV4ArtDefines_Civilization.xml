@@ -540,5 +540,11 @@
 			<Path>Art/Interface/TeamColor/FlagDECAL_MalteseCross2.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_HUNGARY</Type>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_civilizations.dds,2,2</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Hungary2.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
 	</CivilizationArtInfos>
 </Civ4ArtDefines>

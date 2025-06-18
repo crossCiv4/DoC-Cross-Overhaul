@@ -91,6 +91,7 @@ iBuyids :		(94, 45), # Persepolis
 iYamato :		(137, 51), # Heijo-kyo
 iManchu :		(129, 61), # Daqing; not the actual first capital of the Qing but works for gameplay reasons
 iFranks :		(61, 63), # Tournai (Den Haag site)
+iHungary :		tBudapest,
 })
 
 dPeriodCapitals = {
@@ -99,7 +100,7 @@ iPeriodMaratha :		tDelhi,	# Delhi
 iPeriodCarthage : 		(67, 48),	# Carthage
 iPeriodInsularCelts :	(54, 65),	# Dublin
 iPeriodVijayanagara :	(106, 37),	# Vijayanagara
-iPeriodAustria :		(72, 59),	# Vienna
+iPeriodAustria :		tVienna,
 iPeriodMughals :		tDelhi,  # Delhi
 iPeriodUkraine :		(81, 62), # Kyiv
 iPeriodPakistan :		(102, 49), # Taxila / Islamabad
@@ -205,7 +206,7 @@ iJapan :		((136, 52),	(138, 54)),
 iYamato :		((137, 51),	(138, 54)),
 iManchu :		((127, 57),	(130, 63)),
 iFranks :		((60, 62),	(63, 65)),
-
+iHungary :		((73, 58),	(77, 60)),
 })
 
 dBirthAreaExceptions = CivDict({
@@ -239,7 +240,7 @@ iCanada :		set([(6, 68), (7, 65), (7, 66), (7, 67), (7, 68), (8, 59), (8, 60), (
 iGreece :		set([(120, 40)]),
 iVietnam:		set([(120, 45), (121, 45), (122, 45), (123, 45), (120, 46), (121, 46), (122, 46), (123, 46), (120, 47), (121, 47), (122, 47), (123, 47), (120, 48), (121, 48), (122, 48), (123, 48)]),
 iPortugal:		set([(54, 48), (55, 48)]),
-iMorocco :		set([(57, 48), (57, 49), (58, 48), (58, 49), (59, 48), (59, 49)]), 
+iMorocco :		set([(57, 48), (57, 49), (58, 48), (58, 49), (59, 48), (59, 49)]),
 }, set())
 
 dExtendedBirthArea = CivDict({
@@ -298,7 +299,7 @@ iSpain :		((54, 51),	(59, 54)),
 iFrance :		((56, 55),	(63, 62)),
 iEngland :		((55, 62),	(59, 71)),
 iSaxons :		((57, 62),	(59, 67)),
-iHolyRome :		((64, 59),	(70, 65)),
+iHolyRome :		((65, 59),	(68, 62)),
 iBurma :		((116, 38),	(117, 43)),
 iRus :			((80, 61),	(82, 69)),
 iSwahili :		((83, 19),	(85, 27)),
@@ -342,6 +343,7 @@ iOman :			((93, 36),  (96, 41)),
 iBuyids :		((92, 43),	(94, 48)),
 iManchu :		((122, 55),	(132, 63)),
 iFranks :		((60, 60),	(65, 63)),
+iHungary :		((72, 58),	(77, 60)),
 })
 
 dCoreAreaExceptions = CivDict({
@@ -392,6 +394,7 @@ iMacedon:		set([
     (84,53), (85,53), (86,53),
     (84,54), (85,54), (86,54),
     (84,55), (85,55), (86,55)]),
+iHungary:    set([(74, 60), (76, 57), (77, 57)]),
 }, set())
 
 dPeriodCoreArea = {
@@ -405,7 +408,7 @@ iPeriodMeiji : 						((134, 49),	(140, 59)),
 iPeriodSeljuks : 					((92, 48),	(98, 53)),
 iPeriodSaudi :						((84, 38),	(91, 43)),
 iPeriodSpain : 						((54, 48),	(59, 54)),
-iPeriodAustria : 					((69, 58),	(72, 61)),
+iPeriodAustria : 					((70, 58),	(75, 61)),
 iPeriodLateInca :					((28, 20),	(34, 25)),
 iPeriodModernItaly : 				((65, 53),	(70, 57)),
 iPeriodYuan : 						((117, 56),	(127, 62)),
@@ -429,7 +432,8 @@ iPeriodModernItaly :			set([(65, 53)]),
 iPeriodOttomanConstantinople :	set([(86, 50), (87, 50)]),
 iPeriodModernGermany :			set([(69, 61)]),
 iPeriodModernIndia :			set([(103, 43), (103, 44), (103, 45), (103, 46), (104, 46)]),
-iPeriodPakistan :				set([(102, 43), (103, 43), (103, 44)])
+iPeriodPakistan :				set([(102, 43), (103, 43), (103, 44)]),
+iPeriodAustria :				set([(73, 61), (74, 61), (75, 61)]),
 })
 
 ### Respawn area ###
@@ -459,8 +463,9 @@ iBulgaria:	((73, 55),	(78, 57)),
 iFrance:	((56, 55),	(64, 61)),
 iNubia :	((78, 36),	(82, 39)),
 iArabia:	((84, 38),	(91, 43)), # Saudi core
-iMamluks :	((74, 39),	(83, 45)), # same as core, just in case respawn would use the "birth" area which is in Tunisia
+iMamluks :	((74, 39),	(83, 45)), # same as core
 iEngland :	((55, 62),	(59, 67)), # England proper
+iHolyRome :		((65, 59),	(68, 62)), # Bavaria, Switzerland, some of Rhineland
 })
 
 dRespawnAreaExceptions = CivDict({

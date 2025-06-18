@@ -1478,5 +1478,37 @@
 			<NoShaderNIF>Art\Leaderheads\Alaric/alexander_bg.nif</NoShaderNIF>
 			<BackgroundKFM>Art\Leaderheads\Alaric/alexander_bg.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_STEPHEN</Type>
+			<Button>Art/Leaderheads/Stephen_I/Btn_LH_Hungary_Istvan.dds</Button>
+			<NIF>Art/Leaderheads/Stephen_I/Justinian.nif</NIF>
+			<KFM>Art/Leaderheads/Stephen_I/Justinian.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Stephen_I/Justinian.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Stephen_I/Justinian_Background.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_BELA_III</Type>
+			<Button>Art/Leaderheads/Bela_III/btn_lh_magyar_bela_iii.dds</Button>
+			<NIF>Art/Leaderheads/Bela_III/ragnar_lodbrok.nif</NIF>
+			<KFM>Art/Leaderheads/Bela_III/ragnar_lodbrok.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Bela_III/ragnar_lodbrok.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Bela_III/Ragnar_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MATTHIAS</Type>
+			<Button>Art/Leaderheads/Matthias_Corvinus/btn_LH_magyar_Matyas.dds</Button>
+			<NIF>Art/Leaderheads/Matthias_Corvinus/John II.nif</NIF>
+			<KFM>Art/Leaderheads/Matthias_Corvinus/John II.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Matthias_Corvinus/John II.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Matthias_Corvinus/JohnII_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_LUDWIG_I</Type>
+			<Button>Art/Leaderheads/Ludwig_I/btn_ludwig_I.dds</Button>
+			<NIF>Art/Leaderheads/Ludwig_I/Ludwig.nif</NIF>
+			<KFM>Art/Leaderheads/Ludwig_I/frederick_the_great.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/Ludwig_I/Ludwig.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/Ludwig_I/frederick_the_great_bg.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

@@ -312,19 +312,25 @@ def englandSpecificAdjective(args):
         return "TXT_KEY_CIV_ENGLAND_BRITISH"
 
 def holyRomeSpecificAdjective(args):
-    if isCurrentCapital(args.iPlayer, "Buda"):
-        return "TXT_KEY_CIV_HOLY_ROME_HUNGARIAN"
-    if player(iGermany).isExisting() and args.civic.iLegitimacy == iConstitution:
-        return "TXT_KEY_CIV_HOLY_ROME_AUSTRO_HUNGARIAN"
-    iVassals = 0
-    for iLoopCiv in dCivGroups[iCivGroupEurope]:
-        iLoopPlayer = slot(iLoopCiv)
-        if iLoopPlayer >= 0 and master(iLoopPlayer) == args.iPlayer:
-            iVassals += 1
-    if iVassals >= 2:
-        return "TXT_KEY_CIV_HOLY_ROME_HABSBURG"
-    if not args.bEmpire and year() < year(dBirth[iGermany]):
-        return "TXT_KEY_CIV_HOLY_ROME_GERMAN"
+	if year() >= year(dBirth[iGermany]):
+		if player(iGermany).isExisting():
+			return "TXT_KEY_CIV_HOLY_ROME_BAVARIA_ADJECTIVE"
+		else:
+			return "TXT_KEY_CIV_HOLY_ROME_GERMAN"
+	else:
+		if not args.bEmpire:
+			return "TXT_KEY_CIV_HOLY_ROME_GERMAN"
+
+def hungarianSpecificAdjective(args):
+    if player(args.iPlayer).getPeriod() == iPeriodAustria:
+        if args.civic.iLegitimacy == iConstitution or args.civic.iGovernment == iDemocracy or args.civic.iSociety == iEgalitarianism:
+            return "TXT_KEY_CIV_HOLY_ROME_AUSTRO_HUNGARIAN"
+        else:
+            return "TXT_KEY_CIV_AUSTRIA_ADJECTIVE"
+
+    if args.iEra >= iRenaissance:
+       if player(args.iPlayer).getCapitalCity().at(*tVienna):
+            return "TXT_KEY_CIV_HOLY_ROME_HABSBURG"
 
 def maliSpecificAdjective(args):
     if args.iEra >= iRenaissance and isCurrentCapital(args.iPlayer, "Gao"):
@@ -366,9 +372,9 @@ def netherlandsSpecificAdjective(args):
         return "TXT_KEY_CIV_NETHERLANDS_BELGIAN"
 
 def germanySpecificAdjective(args):
-    if getColumn(args.iPlayer) <= 13 and player(iHolyRome).isExisting() and not team(iHolyRome).isVassal(args.iPlayer):
-        return "TXT_KEY_CIV_GERMANY_PRUSSIAN"
-    
+	if getColumn(args.iPlayer) <= 13 or (player(iHolyRome).isExisting() and not civ(master(iHolyRome)) == iGermany):
+		return "TXT_KEY_CIV_GERMANY_PRUSSIAN"
+
 dSpecificAdjectives = CivDict({
     iChina: chinaSpecificAdjective,
     iChinaS: wuSpecificAdjective,
@@ -417,4 +423,5 @@ dSpecificAdjectives = CivDict({
     iOttomans: ottomansSpecificAdjective,
     iNetherlands: netherlandsSpecificAdjective,
     iGermany: germanySpecificAdjective,
+    iHungary: hungarianSpecificAdjective,
 })

@@ -2650,6 +2650,14 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_ATTACK_CITY] /= 2;
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 2;
 		break;
+	case BULGARIA:
+	case HUNGARY:
+		aiUnitAIVal[UNITAI_PILLAGE] *= 2;
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
+		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 2;
+		aiUnitAIVal[UNITAI_ATTACK_SEA] /= 2;
+		aiUnitAIVal[UNITAI_ESCORT_SEA] /= 2;
+		break;
 	case BURMA:
 		aiUnitAIVal[UNITAI_ATTACK] *= 3;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 5;

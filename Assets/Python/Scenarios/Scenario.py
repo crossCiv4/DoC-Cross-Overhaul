@@ -168,6 +168,9 @@ LEADER_DATES = {
 	iGaiseric: 428,
 	iConstantine: 330,
 	iMarcusAurelius: 161,
+	iStephen: 1000,
+	iBelaIII: 1172,
+	iMatthias: 1458,
 }
 
 RELIGION_FOUNDING_DATES = {

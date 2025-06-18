@@ -1466,4 +1466,20 @@
 		<Italian>+30% [ICON_PRODUCTION] for buildings already in the capital</Italian>
 		<Spanish>+30% [ICON_PRODUCTION] for buildings already in the capital</Spanish>
 	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_UP_HUN_TITLE</Tag>
+		<English>The Power of the Great Hungarian Plain:</English>
+		<French>Le Pouvoir of the Great Hungarian Plain:</French>
+		<German>The Power of the Great Hungarian Plain:</German>
+		<Italian>The Power of the Great Hungarian Plain:</Italian>
+		<Spanish>The Power of  the Great Hungarian Plain:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_HUN</Tag>
+		<English>+1[ICON_FOOD] from Pasture</English>
+		<French>+1[ICON_FOOD] from Pasture</French>
+		<German>+1[ICON_FOOD] from Pasture</German>
+		<Italian>+1[ICON_FOOD] from Pasture</Italian>
+		<Spanish>+1[ICON_FOOD] from Pasture</Spanish>
+	</TEXT>
 </Civ4GameText>

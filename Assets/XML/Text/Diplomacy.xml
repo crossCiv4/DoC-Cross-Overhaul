@@ -993,6 +993,298 @@
 		<Italian>[CT_NAME], it seems you are much weaker than us. Your only reason to exist is to shower [OUR_CIV_SHORT] with vast quantities of tribute. You can start with this.</Italian>
 		<Spanish>[CT_NAME], it seems you are much weaker than us. Your only reason to exist is to shower [OUR_CIV_SHORT] with vast quantities of tribute. You can start with this.</Spanish>
 	</TEXT>
+
+		<!-- Hungarian 1st leader - Istv&#225;n I -->
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_STEPHEN_1</Tag>
+		<English>I am [OUR_NAME] of [OUR_CIV_SHORT]! Welcome to my kingdom, [CT_NAME]. It is through divine will that I am here before you; to what do YOU owe your presence before me?</English>
+		<French>I am [OUR_NAME] of [OUR_CIV_SHORT]! Welcome to my kingdom, [CT_NAME]. It is through divine will that I am here before you; to what do YOU owe your presence before me?</French>
+		<German>Ich bin [OUR_NAME] von [OUR_CIV_SHORT]! Willkommen in meinem K&#246;nigreich, [CT_NAME]. Es ist der g&#246;ttliche Wille dass ich vor Euch hier bin; wem verdankt IHR eure Anwesenheit vor mir?</German>
+		<Italian>I am [OUR_NAME] of [OUR_CIV_SHORT]! Welcome to my kingdom, [CT_NAME]. It is through divine will that I am here before you; to what do YOU owe your presence before me?</Italian>
+		<Spanish>I am [OUR_NAME] of [OUR_CIV_SHORT]! Welcome to my kingdom, [CT_NAME]. It is through divine will that I am here before you; to what do YOU owe your presence before me?</Spanish>
+		<Portuguese>I am [OUR_NAME] of [OUR_CIV_SHORT]! Welcome to my kingdom, [CT_NAME]. It is through divine will that I am here before you; to what do YOU owe your presence before me?</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_STEPHEN_2</Tag>
+		<English>If you associate with wise men, you will become wise; if you deal with fools, you will become one of them. So, [CT_NAME], are you that wise that you come in peace?</English>
+		<French>If you associate with wise men, you will become wise; if you deal with fools, you will become one of them. So, [CT_NAME], are you that wise that you come in peace?</French>
+		<German>Wenn man sich mit den Weisen abgibt, so wird man selbst auch weise; wenn man sich mit Dummk&#246;pfen besch&#228;ftigt, wird man einer von ihnen. Also, [CT_NAME], seid Ihr so weise, dass Ihr in Frieden kommt?</German>
+		<Italian>Se tu frequenti uomini saggi, anche tu lo diventerai; se hai a che fare con gli stupidi, diventerai uno di loro; Quindi, [CT_NAME], sei tu uno di quei saggi che vengono qui in pace?</Italian>
+		<Spanish>If you associate with wise men, you will become wise; if you deal with fools, you will become one of them. So, [CT_NAME], are you that wise that you come in peace?</Spanish>
+		<Portuguese>If you associate with wise men, you will become wise; if you deal with fools, you will become one of them. So, [CT_NAME], are you that wise that you come in peace?</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_STEPHEN_3</Tag>
+		<English>Be strong lest prosperity lifts you up too much or adversity cast you down. Be humble in this life that God may raise you up in the next.</English>
+		<French>Be strong lest prosperity lifts you up too much or adversity cast you down. Be humble in this life that God may raise you up in the next.</French>
+		<German>Be strong lest prosperity lifts you up too much or adversity cast you down. Be humble in this life that God may raise you up in the next.</German>
+		<Italian>Be strong lest prosperity lifts you up too much or adversity cast you down. Be humble in this life that God may raise you up in the next.</Italian>
+		<Spanish>Be strong lest prosperity lifts you up too much or adversity cast you down. Be humble in this life that God may raise you up in the next.</Spanish>
+		<Portuguese>Be strong lest prosperity lifts you up too much or adversity cast you down. Be humble in this life that God may raise you up in the next.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_STEPHEN_1</Tag>
+		<English>Insubordination is a pestilence in the kingdom. I have nothing to say to you.</English>
+		<French>Insubordination is a pestilence in the kingdom. I have nothing to say to you.</French>
+		<German>Ungehorsamkeit ist wahrlich eine Pest im gesamten K&#246;nigreich. Ich habe Euch nichts zu sagen.</German>
+		<Italian>L'insubordinazione &#232; come una pestilenza per il regno. Io non ho niente da dirti.</Italian>
+		<Spanish>Insubordination is a pestilence in the kingdom. I have nothing to say to you.</Spanish>
+		<Portuguese>Insubordination is a pestilence in the kingdom. I have nothing to say to you.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_STEPHEN_2</Tag>
+		<English>Don't come back until you've converted, you pagan son of a badger!</English>
+		<French>Don't come back until you've converted, you pagan son of a badger!</French>
+		<German>Don't come back until you've converted, you pagan son of a badger!</German>
+		<Italian>Don't come back until you've converted, you pagan son of a badger!</Italian>
+		<Spanish>Don't come back until you've converted, you pagan son of a badger!</Spanish>
+		<Portuguese>Don't come back until you've converted, you pagan son of a badger!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_STEPHEN_1</Tag>
+		<English>A patient king reigns, but an impatient king is a tyrant. We can not have peace with tyrants.</English>
+		<French>A patient king reigns, but an impatient king is a tyrant. We can not have peace with tyrants.</French>
+		<German>Geduldige K&#246;nige herrschen, ungeduldige jedoch tyrannisieren. Mit Tyrannen k&#246;nnen wir keinen Frieden schlie&#223;en!</German>
+		<Italian>I re pazienti regnano, gli impazienti tiranneggiano. Coi tiranni noi non facciamo pace!</Italian>
+		<Spanish>A patient king reigns, but an impatient king is a tyrant. We can not have peace with tyrants.</Spanish>
+		<Portuguese>A patient king reigns, but an impatient king is a tyrant. We can not have peace with tyrants.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_STEPHEN_2</Tag>
+		<English>Talk to the Holy Right, [CT_NAME]!</English>
+		<French>Talk to the Holy Right, [CT_NAME]!</French>
+		<German>Talk to the Holy Right, [CT_NAME]!</German>
+		<Italian>Talk to the Holy Right, [CT_NAME]!</Italian>
+		<Spanish>Talk to the Holy Right, [CT_NAME]!</Spanish>
+		<Portuguese>Talk to the Holy Right, [CT_NAME]!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_STEPHEN_1</Tag>
+		<English>Welcome back to my palace, [CT_NAME]! I thank God that I can receive an honorable ruler like you in my kingdom.</English>
+		<French>Welcome back to my palace, [CT_NAME]! I thank God that I can receive an honorable ruler like you in my kingdom.</French>
+		<German>Welcome back to my palace, [CT_NAME]! I thank God that I can receive an honorable ruler like you in my kingdom.</German>
+		<Italian>Welcome back to my palace, [CT_NAME]! I thank God that I can receive an honorable ruler like you in my kingdom.</Italian>
+		<Spanish>Welcome back to my palace, [CT_NAME]! I thank God that I can receive an honorable ruler like you in my kingdom.</Spanish>
+		<Portuguese>Welcome back to my palace, [CT_NAME]! I thank God that I can receive an honorable ruler like you in my kingdom.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_STEPHEN_2</Tag>
+		<English>God with you, my friend [CT_NAME]!</English>
+		<French>God with you, my friend [CT_NAME]!</French>
+		<German>Gott mit Euch, mein Freund [CT_NAME]!</German>
+		<Italian>Dio sia con te e benedica la nostra amicizia, [CT_NAME]!</Italian>
+		<Spanish>God with you, my friend [CT_NAME]!</Spanish>
+		<Portuguese>God with you, my friend [CT_NAME]!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_STEPHEN_1</Tag>
+		<English>Go! Go with God, but go, [CT_NAME]!</English>
+		<French>Go! Go with God, but go, [CT_NAME]!</French>
+		<German>Geht! Geht mit Gott, aber geht, [CT_NAME]!</German>
+		<Italian>Vai via! Vai con Dio, ma vai via, [CT_NAME]!</Italian>
+		<Spanish>Go! Go with God, but go, [CT_NAME]!</Spanish>
+		<Portuguese>Go! Go with God, but go, [CT_NAME]!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_STEPHEN_2</Tag>
+		<English>Oh, it's you, [CT_NAME]. Did you postpone your weekly chat with the devil to talk to me?</English>
+		<French>Oh, it's you, [CT_NAME]. Did you postpone your weekly chat with the devil to talk to me?</French>
+		<German>Oh, it's you, [CT_NAME]. Did you postpone your weekly chat with the devil to talk to me?</German>
+		<Italian>Oh, it's you, [CT_NAME]. Did you postpone your weekly chat with the devil to talk to me?</Italian>
+		<Spanish>Oh, it's you, [CT_NAME]. Did you postpone your weekly chat with the devil to talk to me?</Spanish>
+		<Portuguese>Oh, it's you, [CT_NAME]. Did you postpone your weekly chat with the devil to talk to me?</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_STEPHEN_1</Tag>
+		<English>Even pagans like you can help the [OUR_EMPIRE] in times of need, [CT_NAME].</English>
+		<French>Even pagans like you can help the [OUR_EMPIRE] in times of need, [CT_NAME].</French>
+		<German>Even pagans like you can help the [OUR_EMPIRE] in times of need, [CT_NAME].</German>
+		<Italian>Even pagans like you can help the [OUR_EMPIRE] in times of need, [CT_NAME].</Italian>
+		<Spanish>Even pagans like you can help the [OUR_EMPIRE] in times of need, [CT_NAME].</Spanish>
+		<Portuguese>Even pagans like you can help the [OUR_EMPIRE] in times of need, [CT_NAME].</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_STEPHEN_1</Tag>
+		<English>I have the divine right to demand this, [CT_NAME]. If you don't pay up, God has a steamy pile of heavenly wrath in store for you.</English>
+		<French>I have the divine right to demand this, [CT_NAME]. If you don't pay up, God has a steamy pile of heavenly wrath in store for you.</French>
+		<German>I have the divine right to demand this, [CT_NAME]. If you don't pay up, God has a steamy pile of heavenly wrath in store for you.</German>
+		<Italian>I have the divine right to demand this, [CT_NAME]. If you don't pay up, God has a steamy pile of heavenly wrath in store for you.</Italian>
+		<Spanish>I have the divine right to demand this, [CT_NAME]. If you don't pay up, God has a steamy pile of heavenly wrath in store for you.</Spanish>
+		<Portuguese>I have the divine right to demand this, [CT_NAME]. If you don't pay up, God has a steamy pile of heavenly wrath in store for you.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_STEPHEN_1</Tag>
+		<English>Begad, give us what we want or you will know the wrath of God!</English>
+		<French>Begad, give us what we want or you will know the wrath of God!</French>
+		<German>Bei Gott, gebt uns, was wir fordern oder Ihr werdet den Zorn Gottes sp&#252;ren!</German>
+		<Italian>Dacci ci&#242; che chiediamo o conoscerai l'ira divina!</Italian>
+		<Spanish>Begad, give us what we want or you will know the wrath of God!</Spanish>
+		<Portuguese>Begad, give us what we want or you will know the wrath of God!</Portuguese>
+	</TEXT>
+		<!-- Hungarian 3rd leader - M&#225;ty&#225;s -->
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MATTHIAS_1</Tag>
+		<English>Welcome to this beautiful land, [CT_NAME]. I hope that you bring peace with you, for he who greets with a stick, will be answered with a club.</English>
+		<French>Bienvenue dans ce beau pays, [CT_NAME]. J'esp&#232;re que vous apporter la paix avec vous, car celui qui accueille avec un b&#226;ton, et il sera r&#233;pondu dans un club.</French>
+		<German>Willkommen in diesem wundersch&#246;nen Land, [CT_NAME]. Ich hoffe, Ihr bringt uns Frieden, denn wer uns mit dem Stock begr&#252;&#223;t, erh&#228;lt die Antwort durch die Keule.</German>
+		<Italian>Benvenuto in questa splendida terra, [CT_NAME]. Spero che tu porti la pace, perch&#233; a colui che saluta con una mazza verr&#224; risposto con una clava.</Italian>
+		<Spanish>Bienvenidos a esta hermosa tierra, [CT_NAME]. Espero que lograr la paz con usted, por el que saluda con un palo, ser&#225; respondido con un club.</Spanish>
+		<Portuguese>Welcome to this beautiful land, [CT_NAME]. I hope that you bring peace with you, for he who greets with a stick, will be answered with a club.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MATTHIAS_2</Tag>
+		<English>Welcome to [OUR_CIV_SHORT], [CT_NAME]. I am [OUR_NAME]! I hope to many years of peace and cooperation between the [OUR_CIV_ADJ] and [CT_CIV_ADJ] empires!</English>
+		<French>Welcome to [OUR_CIV_SHORT], [CT_NAME]. I am [OUR_NAME]! I hope to many years of peace and cooperation between the [OUR_CIV_ADJ] and [CT_CIV_ADJ] empires!</French>
+		<German>Welcome to [OUR_CIV_SHORT], [CT_NAME]. I am [OUR_NAME]! I hope to many years of peace and cooperation between the [OUR_CIV_ADJ] and [CT_CIV_ADJ] empires!</German>
+		<Italian>Welcome to [OUR_CIV_SHORT], [CT_NAME]. I am [OUR_NAME]! I hope to many years of peace and cooperation between the [OUR_CIV_ADJ] and [CT_CIV_ADJ] empires!</Italian>
+		<Spanish>Welcome to [OUR_CIV_SHORT], [CT_NAME]. I am [OUR_NAME]! I hope to many years of peace and cooperation between the [OUR_CIV_ADJ] and [CT_CIV_ADJ] empires!</Spanish>
+		<Portuguese>Welcome to [OUR_CIV_SHORT], [CT_NAME]. I am [OUR_NAME]! I hope to many years of peace and cooperation between the [OUR_CIV_ADJ] and [CT_CIV_ADJ] empires!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MATTHIAS_3</Tag>
+		<English>Welcome traveller. I am [OUR_NAME]. Do you have any books to contribute to my library?</English>
+		<French>Welcome traveller. I am [OUR_NAME]. Do you have any books to contribute to my library?</French>
+		<German>Willkommen Reisender. Ich bin [OUR_NAME]. Habt ihr irgendwelche B&#252;cher f&#252;r meine Bibliothek?</German>
+		<Italian>Welcome traveller. I am [OUR_NAME]. Do you have any books to contribute to my library?</Italian>
+		<Spanish>Welcome traveller. I am [OUR_NAME]. Do you have any books to contribute to my library?</Spanish>
+		<Portuguese>Welcome traveller. I am [OUR_NAME]. Do you have any books to contribute to my library?</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_MATTHIAS_1</Tag>
+		<English>I won't change a single word with you, [CT_NAME]!</English>
+		<French>I won't change a single word with you, [CT_NAME]!</French>
+		<German>Ich werde kein einziges Wort mit euch wechseln, [CT_Name]!</German>
+		<Italian>Non abbiamo nulla da dirci, [CT_NAME].</Italian>
+		<Spanish>I won't change a single word with you, [CT_NAME]!</Spanish>
+		<Portuguese>I won't change a single word with you, [CT_NAME]!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_MATTHIAS_2</Tag>
+		<English>We have absolutely nothing to discuss, so go away before I lock you in some cell!</English>
+		<French>We have absolutely nothing to discuss, so go away before I lock you in some cell!</French>
+		<German>We have absolutely nothing to discuss, so go away before I lock you in some cell!</German>
+		<Italian>We have absolutely nothing to discuss, so go away before I lock you in some cell!</Italian>
+		<Spanish>We have absolutely nothing to discuss, so go away before I lock you in some cell!</Spanish>
+		<Portuguese>We have absolutely nothing to discuss, so go away before I lock you in some cell!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_MATTHIAS_1</Tag>
+		<English>No peace in this time between us!</English>
+		<French>No peace in this time between us!</French>
+		<German>Es ist kein Frieden zwischen uns m&#246;glich in diesen Zeiten!</German>
+		<Italian>Niente pace nel nostro tempo!</Italian>
+		<Spanish>No peace in this time between us!</Spanish>
+		<Portuguese>No peace in this time between us!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_MATTHIAS_2</Tag>
+		<English>No way! We shall fight to the end!</English>
+		<French>No way! We shall fight to the end!</French>
+		<German>No way! We shall fight to the end!</German>
+		<Italian>No way! We shall fight to the end!</Italian>
+		<Spanish>No way! We shall fight to the end!</Spanish>
+		<Portuguese>No way! We shall fight to the end!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_MATTHIAS_1</Tag>
+		<English>Oh, szervusz, [CT_NAME]! Come, lets sit in the library and discuss the arts!</English>
+		<French>Oh, szervusz, [CT_NAME]! Come, lets sit in the library and discuss the arts!</French>
+		<German>Oh, szervusz, [CT_NAME]! Come, lets sit in the library and discuss the arts!</German>
+		<Italian>Oh, szervusz, [CT_NAME]! Come, lets sit in the library and discuss the arts!</Italian>
+		<Spanish>Oh, szervusz, [CT_NAME]! Come, lets sit in the library and discuss the arts!</Spanish>
+		<Portuguese>Oh, szervusz, [CT_NAME]! Come, lets sit in the library and discuss the arts!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_MATTHIAS_2</Tag>
+		<English>God with you, my friend [CT_NAME]!</English>
+		<French>God with you, my friend [CT_NAME]!</French>
+		<German>Gott mit Euch, mein Freund [CT_NAME]!</German>
+		<Italian>Dio sia con te e benedica la nostra amicizia, [CT_NAME]!</Italian>
+		<Spanish>God with you, my friend [CT_NAME]!</Spanish>
+		<Portuguese>God with you, my friend [CT_NAME]!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_MATTHIAS_1</Tag>
+		<English>You dare to bother me, [CT_NAME]?</English>
+		<French>You dare to bother me, [CT_NAME]?</French>
+		<German>Ihr wagt es mich zu bel&#228;stigen, [CT_NAME]?</German>
+		<Italian>Tu osi disturbare me, [CT_NAME]?</Italian>
+		<Spanish>You dare to bother me, [CT_NAME]?</Spanish>
+		<Portuguese>You dare to bother me, [CT_NAME]?</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_MATTHIAS_2</Tag>
+		<English>What, you again?!</English>
+		<French>What, you again?!</French>
+		<German>What, you again?!</German>
+		<Italian>What, you again?!</Italian>
+		<Spanish>What, you again?!</Spanish>
+		<Portuguese>What, you again?!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_MATTHIAS_1</Tag>
+		<English>I could use some good cheer, my friend [CT_NAME]. Such a gift would surely lift my spirits!</English>
+		<French>I could use some good cheer, my friend [CT_NAME]. Such a gift would surely lift my spirits!</French>
+		<German>Ich k&#246;nnte ein wenig Hilfe gebrauchen, mein Freund [CT_NAME]. So ein Geschenk w&#252;rde meine Stimmung erhellen!</German>
+		<Italian>I could use some good cheer, my friend [CT_NAME]. Such a gift would surely lift my spirits!</Italian>
+		<Spanish>I could use some good cheer, my friend [CT_NAME]. Such a gift would surely lift my spirits!</Spanish>
+		<Portuguese>I could use some good cheer, my friend [CT_NAME]. Such a gift would surely lift my spirits!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_MATTHIAS_2</Tag>
+		<English>I would really appreciate if you donated to [OUR_CIV_SHORT]. Any chance for that at all?</English>
+		<French>I would really appreciate if you donated to [OUR_CIV_SHORT]. Any chance for that at all?</French>
+		<German>I would really appreciate if you donated to [OUR_CIV_SHORT]. Any chance for that at all?</German>
+		<Italian>I would really appreciate if you donated to [OUR_CIV_SHORT]. Any chance for that at all?</Italian>
+		<Spanish>I would really appreciate if you donated to [OUR_CIV_SHORT]. Any chance for that at all?</Spanish>
+		<Portuguese>I would really appreciate if you donated to [OUR_CIV_SHORT]. Any chance for that at all?</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_MATTHIAS_1</Tag>
+		<English>Friendship between peoples is built on the share of resources; don't you think so, [CT_NAME]?</English>
+		<French>Friendship between peoples is built on the share of resources; don't you think so, [CT_NAME]?</French>
+		<German>Bei Freundschaft zwischen Menschen geht es um das Teilen von Ressourcen, findet ihr nicht [CT_NAME]?</German>
+		<Italian>L'amicizia tra due popoli si fonda sulla condivione delle risorse; non credi, [CT_NAME]?</Italian>
+		<Spanish>Friendship between peoples is built on the share of resources; don't you think so, [CT_NAME]?</Spanish>
+		<Portuguese>Friendship between peoples is built on the share of resources; don't you think so, [CT_NAME]?</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_MATTHIAS_2</Tag>
+		<English>You should try to keep me in humour, [CT_NAME].</English>
+		<French>You should try to keep me in humour, [CT_NAME].</French>
+		<German>Ihr solltet mich bei Laune halten, [CT_NAME].</German>
+		<Italian>Prova a farmi felice, [CT_NAME].</Italian>
+		<Spanish>You should try to keep me in humour, [CT_NAME].</Spanish>
+		<Portuguese>You should try to keep me in humour, [CT_NAME].</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_MATTHIAS_3</Tag>
+		<English>If you are a true friend you'll give me this!</English>
+		<French>If you are a true friend you'll give me this!</French>
+		<German>If you are a true friend you'll give me this!</German>
+		<Italian>If you are a true friend you'll give me this!</Italian>
+		<Spanish>If you are a true friend you'll give me this!</Spanish>
+		<Portuguese>If you are a true friend you'll give me this!</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_MATTHIAS_1</Tag>
+		<English>Give me this, and my armies will go spill the blood of some other heathen on the ground.</English>
+		<French>Give me this, and my armies will go spill the blood of some other heathen on the ground.</French>
+		<German>Give me this, and my armies will go spill the blood of some other heathen on the ground.</German>
+		<Italian>Give me this, and my armies will go spill the blood of some other heathen on the ground.</Italian>
+		<Spanish>Give me this, and my armies will go spill the blood of some other heathen on the ground.</Spanish>
+		<Portuguese>Give me this, and my armies will go spill the blood of some other heathen on the ground.</Portuguese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_MATTHIAS_2</Tag>
+		<English>If you won't give me this I'll use my army to get it, so what do you prefer?</English>
+		<French>If you won't give me this I'll use my army to get it, so what do you prefer?</French>
+		<German>If you won't give me this I'll use my army to get it, so what do you prefer?</German>
+		<Italian>If you won't give me this I'll use my army to get it, so what do you prefer?</Italian>
+		<Spanish>If you won't give me this I'll use my army to get it, so what do you prefer?</Spanish>
+		<Portuguese>If you won't give me this I'll use my army to get it, so what do you prefer?</Portuguese>
+	</TEXT>
+
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_</Tag>
 		<English></English>

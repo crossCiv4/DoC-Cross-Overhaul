@@ -96,7 +96,7 @@ lCivilizations = [
 		dAttitudes={iFrance: -4, iPortugal: 2, iTimurids: -2, iOttomans: -2}
 	),
 	Civilization(
-		iHolyRome, # Austria
+		iHungary, # Austria
 		iLeader=iFrancis,
 		iGold=150,
 		iStateReligion=iCatholicism,

@@ -772,7 +772,7 @@
 				</Building>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
-					<BuildingType>BUILDING_ANCESTOR_SHRINE</BuildingType>
+					<BuildingType>BUILDING_TENGRI_OBO</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>
@@ -2962,10 +2962,6 @@
 					<UnitType>UNIT_HOLY_ROMAN_LANDSKNECHT</UnitType>
 				</Unit>
 				<Unit>
-					<UnitClassType>UNITCLASS_GRENADIER</UnitClassType>
-					<UnitType>UNIT_HOLY_ROMAN_GRENZER</UnitType>
-				</Unit>
-				<Unit>
 					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
 					<UnitType>UNIT_GERMAN_ARQUEBUSIER</UnitType>
 				</Unit>
@@ -3002,13 +2998,97 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 				<Leader>
-					<LeaderName>LEADER_FRANCIS</LeaderName>
+					<LeaderName>LEADER_LUDWIG_I</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_GERMANY</DerivativeCiv>
-			<CivilizationSelectionSound>AS3D_HOLY_ROMAN_SELECT</CivilizationSelectionSound>
-			<CivilizationActionSound>AS3D_HOLY_ROMAN_ORDER</CivilizationActionSound>
+			<CivilizationSelectionSound>AS3D_GERMANY_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_GERMANY_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_HUNGARY</Type>
+			<Description>TXT_KEY_CIV_HUNGARY_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_HUNGARY_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_HUNGARY_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_HUNGARY_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_ORANGE_AND_WHITE</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_HUNGARY</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
+			<PaganReligion>PAGAN_RELIGION_TENGRI</PaganReligion>
+			<Impact>IMPACT_SIGNIFICANT</Impact>
+			<Identifier>HUN</Identifier>
+			<StartingYear>895</StartingYear>
+			<LoadingTimes>
+				<LoadingTime>6</LoadingTime>
+				<LoadingTime>2</LoadingTime>
+				<LoadingTime>0</LoadingTime>
+			</LoadingTimes>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Buda</City>
+			</Cities>
+			<Buildings>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_CINEMA</BuildingClassType>
+					<BuildingType>BUILDING_HUNGARY_OPERA_HOUSE</BuildingType>
+				</Building>
+				<Building>
+					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
+					<BuildingType>BUILDING_TENGRI_OBO</BuildingType>
+				</Building>
+			</Buildings>
+			<Units>
+				<Unit>
+					<UnitClassType>UNITCLASS_GRENADIER</UnitClassType>
+					<UnitType>UNIT_HOLY_ROMAN_GRENZER</UnitType>
+				</Unit>
+			</Units>
+			<FreeUnitClasses>
+				<FreeUnitClass>
+					<UnitClassType>UNITCLASS_SETTLER</UnitClassType>
+					<iFreeUnits>1</iFreeUnits>
+				</FreeUnitClass>
+			</FreeUnitClasses>
+			<FreeBuildingClasses>
+				<FreeBuildingClass>
+					<BuildingClassType>BUILDINGCLASS_PALACE</BuildingClassType>
+					<bFreeBuildingClass>1</bFreeBuildingClass>
+				</FreeBuildingClass>
+			</FreeBuildingClasses>
+			<FreeTechs/>
+			<DisableTechs/>
+			<InitialCivics>
+				<CivicType>CIVIC_CHIEFDOM</CivicType>
+				<CivicType>CIVIC_PERSONALISM</CivicType>
+				<CivicType>CIVIC_TRADITIONALISM</CivicType>
+				<CivicType>CIVIC_RECIPROCITY</CivicType>
+				<CivicType>CIVIC_ANIMISM</CivicType>
+				<CivicType>CIVIC_KINSHIP</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_STEPHEN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_BELA_III</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_MATTHIAS</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_FRANCIS</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_BULGARIA</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_MAGYAR_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_MAGYAR_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_INCA</Type>
@@ -3774,7 +3854,7 @@
 				</Building>
 				<Building>
 					<BuildingClassType>BUILDINGCLASS_PAGAN_TEMPLE</BuildingClassType>
-					<BuildingType>BUILDING_ANCESTOR_SHRINE</BuildingType>
+					<BuildingType>BUILDING_TENGRI_OBO</BuildingType>
 				</Building>
 			</Buildings>
 			<Units>

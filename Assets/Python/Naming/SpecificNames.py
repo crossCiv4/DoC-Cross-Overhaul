@@ -210,12 +210,14 @@ def englandSpecificName(args):
 		return "TXT_KEY_CIV_ENGLAND_GREAT_BRITAIN"
 
 def holyRomeSpecificName(args):
-	if isCurrentCapital(args.iPlayer, "Buda"):
-		return "TXT_KEY_CIV_HOLY_ROME_HUNGARY"
-	if not args.bEmpire:
-		if year() < year(dBirth[iGermany]):
+	if year() < year(dBirth[iGermany]):
+		if not args.bEmpire:
 			return "TXT_KEY_CIV_HOLY_ROME_GERMANY"
-		return "TXT_KEY_CIV_AUSTRIA_SHORT_DESC"
+
+	if player(iGermany).isExisting():
+		return "TXT_KEY_CIV_HOLY_ROME_BAVARIA"
+	else:
+		return "TXT_KEY_CIV_HOLY_ROME_GERMANY"
 
 def incaSpecificName(args):
 	if args.bResurrected:
@@ -247,8 +249,15 @@ def netherlandsSpecificName(args):
 		return "TXT_KEY_CIV_NETHERLANDS_BELGIUM"
 
 def germanySpecificName(args):
-	if getColumn(args.iPlayer) <= 13 and args.pPlayer.isExisting() and (not player(iHolyRome).isExisting() or not team(iHolyRome).isVassal(args.iPlayer)):
+	if getColumn(args.iPlayer) <= 13 or (player(iHolyRome).isExisting() and not civ(master(iHolyRome)) == iGermany):
 		return "TXT_KEY_CIV_GERMANY_PRUSSIA"
+
+def hungarySpecificName(args):
+	if player(args.iPlayer).getPeriod() == iPeriodAustria:
+		if args.civic.iLegitimacy == iConstitution or args.civic.iGovernment == iDemocracy or args.civic.iSociety == iEgalitarianism:
+			return "TXT_KEY_CIV_AUSTRIA_HUNGARY"
+		else:
+			return "TXT_KEY_CIV_AUSTRIA_SHORT_DESC"
 
 dSpecificNames =  CivDict({
 	iManchu : manchuSpecificName,
@@ -289,4 +298,5 @@ dSpecificNames =  CivDict({
 	iThailand: thailandSpecificName,
 	iNetherlands: netherlandsSpecificName,
 	iGermany: germanySpecificName,
+	iHungary: hungarySpecificName,
 })

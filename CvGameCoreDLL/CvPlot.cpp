@@ -7041,6 +7041,15 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 			}
 		}
 
+		// Hungarian UP: +1 food from Pastures
+		if (eCivilization == HUNGARY)
+		{
+			if (eYield == YIELD_FOOD && eImprovement == IMPROVEMENT_PASTURE)
+			{
+				iYield += 1;
+			}
+		}
+
 		// Leoreth: Shu UP: +1 commerce from Mines
 		else if (eCivilization == SHU)
 		{

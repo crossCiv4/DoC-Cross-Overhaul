@@ -131,6 +131,7 @@ ATTICA = "TXT_KEY_VICTORY_NAME_ATTICA"
 MEDITERRANEAN_COAST = "TXT_KEY_VICTORY_NAME_MEDITERRANEAN_COAST"
 ARAB_LANDS = "TXT_KEY_VICTORY_NAME_ARAB_LANDS"
 YEMEN_AND_OMAN = "TXT_KEY_VICTORY_NAME_YEMEN_AND_OMAN"
+GERMANY = "TXT_KEY_VICTORY_NAME_GERMANY"
 
 # area descriptors
 ANDEAN_COAST = "TXT_KEY_VICTORY_NAME_ANDEAN_COAST"
@@ -777,6 +778,15 @@ dGoals = {
 		),
 		EraFirstDiscover((iRenaissance, 8), (iIndustrial, 8)),
 	),
+	iHungary: (
+		AreaPercent(plots.regions(*lEuropeProper).named(EUROPE), 10, subject=VASSALS, by=1400),
+		FirstDiscover(iJudiciary),
+		All(
+			CitySpecialistCount(city(tVienna).named(VIENNA), sum(iSpecialistGreatArtist, iSpecialistGreatStatesman), 10),
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 8, civs=group(iCivGroupEurope).named(EUROPE), bIndependent=True),
+			by=1850,
+		),
+	),
 	iHolyRome: (
 		All(
 			BuildingCount(iCatholicShrine, 1, at=1050),
@@ -784,11 +794,7 @@ dGoals = {
 			BuildingCount(iProtestantShrine, 1, at=1550),
 		),
 		VassalCount(3, civs=group(iCivGroupEurope).named(EUROPE), iStateReligion=iCatholicism, by=1650),
-		All(
-			CitySpecialistCount(city(tVienna).named(VIENNA), sum(iSpecialistGreatArtist, iSpecialistGreatStatesman), 10),
-			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 8, civs=group(iCivGroupEurope).named(EUROPE), bIndependent=True),
-			by=1850,
-		),
+		Control(plots.regions(rLowerGermany, rCentralEurope).named(GERMANY), at=1871),
 	),
 	iBurma: (
 		GoldAmount(3000, by=1300),

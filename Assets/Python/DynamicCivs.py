@@ -43,10 +43,10 @@ dDefaultInsertAdjectives = {
 
 
 lRepublicOf = set([iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis, iMorocco, iYemen, iOman, iZulu, iMalays, iMoors, iFranks])
-lRepublicAdj = set([iBabylonia, iRome, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons, iYamato, iManchu])
+lRepublicAdj = set([iBabylonia, iRome, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons, iYamato, iManchu, iHungary])
 
 lSocialistRepublicOf = set([iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis, iMorocco, iYemen, iOman, iFranks])
-lSocialistRepublicAdj = set([iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina])
+lSocialistRepublicAdj = set([iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina, iHungary])
 
 lPeoplesRepublicOf = set([iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria, iMalays, iZulu])
 lPeoplesRepublicAdj = set([iDravidia, iByzantium, iMongols, iYamato, iManchu])
@@ -64,9 +64,10 @@ dEmpireThreshold = {
 	iChinaS: 9,
 	iShu: 7,
 	iXia: 5,
-	iTibet : 2,
+	iTibet : 3,
 	iMoors : 4,
-	iHolyRome : 3,
+	iHolyRome : 4,
+	iHungary: 4,
 	iInca : 3,
 	iMongols : 8,
 	iRussia : 8,
@@ -127,6 +128,7 @@ dStartingLeaders = [
 	iEngland : iWilliamConqueror,
 	iSaxons: iWidukind,
 	iHolyRome : iBarbarossa,
+	iHungary : iStephen,
 	iBurma : iAnawrahta,
 	iRus : iYaroslav,
 	iSwahili : iDawud,
@@ -187,7 +189,8 @@ dStartingLeaders = [
 	iSpain : iPhilip,
 	iFrance : iLouis,
 	iEngland : iVictoria,
-	iHolyRome : iFrancis,
+	iHungary : iFrancis,
+	iHolyRome: iLudwigI,
 	iBurma : iBayinnaung,
 	iVietnam : iLeLoi,
 	iPoland : iSobieski,
@@ -689,6 +692,11 @@ def vassalTitle(iPlayer, iMaster):
 
 	sSpecificTitle = dSpecificVassalTitles[iMasterCiv].get(iCiv)
 	if sSpecificTitle: return sSpecificTitle
+
+	# if no specific title for Hungary, use generic "principality of"
+	# if not a muslim civ (master can be muslim, but Hungary must not be)
+	if iCiv == iHungary and player(iPlayer).getPeriod() != iPeriodAustria and player(iPlayer).getStateReligion() not in [iIslam, iShia]:
+		return "TXT_KEY_CIV_HUNGARY_PRINCIPALITY"
 
 	# if no specific title and master is islamic, use the generic "emirate of"
 	if player(iMasterCiv).getStateReligion() == iIslam or player(iMasterCiv).getStateReligion() == iShia:

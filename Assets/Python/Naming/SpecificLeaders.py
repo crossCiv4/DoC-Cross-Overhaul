@@ -196,11 +196,9 @@ def englandLeader(args):
 
 def holyRomeLeader(args):
 	if args.iEra >= iIndustrial:
-		return iFrancis
+		return iLudwigI
 	if scenario() == i1700AD:
-		return iFrancis
-	if player(args.iCiv).getPeriod() == iPeriodAustria:
-		return iFrancis
+		return iLudwigI
 	if args.iEra >= iRenaissance:
 		return iCharles
 
@@ -340,6 +338,16 @@ def saxonsLeader(args):
 	if args.tPlayer.isHasTech(iNobility):
 		return iAlfred
 
+def hungarianLeader(args):
+	if player(args.iCiv).getPeriod() == iPeriodAustria:
+		return iFrancis
+	
+	if game.isReligionFounded(iProtestantism):
+		return iMatthias
+
+	if args.tPlayer.isHasTech(iCommune):
+		return iBelaIII
+
 dSpecificLeaders = CivDict({
 	iEgypt: egyptLeader,
 	iManchu: manchuLeader,
@@ -398,6 +406,7 @@ dSpecificLeaders = CivDict({
 	iOman: omanLeader,
 	iKhmer: khmerLeader,
 	iSaxons: saxonsLeader,
+	iHungary: hungarianLeader,
 })
 
 #####
