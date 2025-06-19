@@ -158,6 +158,14 @@
 		<Spanish>%s2 Free Cities</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_SOUTH_GERMAN_CONFEDERATION</Tag>
+		<English>South German Confederation</English>
+		<French>Confédération sud-allemande</French>
+		<German>Suddeutsche Konföderation</German>
+		<Italian>Confederazione tedesca meridionale</Italian>
+		<Spanish>Confederación Germánica del Sur</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_HOLY_ROME_GERMANY</Tag>
 		<English>Germany</English>
 		<French>

@@ -66,7 +66,7 @@ dEmpireThreshold = {
 	iXia: 5,
 	iTibet : 3,
 	iMoors : 4,
-	iHolyRome : 4,
+	iHolyRome : 3,
 	iHungary: 4,
 	iInca : 3,
 	iMongols : 8,

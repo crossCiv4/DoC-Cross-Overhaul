@@ -539,14 +539,19 @@ def polandTitle(args):
 		return "TXT_KEY_CIV_POLAND_GRAND_DUCHY_OF"
 
 def holyRomeTitle(args):
-	if args.bEmpire:
-		return "TXT_KEY_EMPIRE_ADJECTIVE"
-		
 	if year() >= year(dBirth[iGermany]):
-		return "TXT_KEY_KINGDOM_OF"
-	
-	if args.bCityStates:
-		return "TXT_KEY_CIV_HOLY_ROME_FREE_CITIES"
+		if args.bEmpire:
+			if not player(iGermany).isExisting():
+				return "TXT_KEY_EMPIRE_ADJECTIVE"
+			else:
+				return "TXT_KEY_SOUTH_GERMAN_CONFEDERATION"
+		else:	
+			return "TXT_KEY_KINGDOM_OF"
+	else:
+		if args.bEmpire:
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
+		if args.bCityStates:
+			return "TXT_KEY_CIV_HOLY_ROME_FREE_CITIES"
 
 def hungaryTitle(args):
 	if args.bEmpire:
