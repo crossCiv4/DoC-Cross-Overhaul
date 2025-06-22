@@ -10312,14 +10312,14 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_NAFFATUN</Type>
-			<Button>Art/Units/Naffatun_aka_Mamluk_Grenadier/India_Grenadier2.dds</Button>
+			<Button>Art/Units/Arabic Industrial Grenadier/India_Grenadier2.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Naffatun_aka_Mamluk_Grenadier/MamlukGrenadier.nif</NIF>
+			<NIF>Art/Units/Arabic Industrial Grenadier/ArabicGernadier.nif</NIF>
 			<KFM>Art/Units/Grenadier/Grenadier.kfm</KFM>
-			<SHADERNIF>Art/Units/Naffatun_aka_Mamluk_Grenadier/MamlukGrenadier.nif</SHADERNIF>
+			<SHADERNIF>Art/Units/Arabic Industrial Grenadier/ArabicGernadier.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
