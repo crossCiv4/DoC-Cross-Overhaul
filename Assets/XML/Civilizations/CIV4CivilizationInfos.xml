@@ -1059,6 +1059,10 @@
 					<UnitClassType>UNITCLASS_HEAVY_SPEARMAN</UnitClassType>
 					<UnitType>UNIT_THEMATIC_SPEARMAN</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_LONGBOWMAN</UnitClassType>
+					<UnitType>UNIT_BYZANTINE_THEMATIC_BOWMAN</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>

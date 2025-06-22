@@ -1256,7 +1256,7 @@ iTranshumanism) = range(iNumTechs)
 
 # initialise unit variables to unit indices from XML
 
-iNumUnits = 276
+iNumUnits = 277
 (iLion, iBear, iPanther, iWolf, iSettler, iCityBuilder, iPioneer, iWorker, iRomanWorker, iPunjabiWorker, iLabourer, 
 iMadeireiro, iScout, iIncenseMerchant, iExplorer, iBandeirante, iSpy, iReligiousPersecutor, iJewishMissionary, iOrthodoxMissionary, iCatholicMissionary, iProtestantMissionary, 
 iIslamicMissionary, iShiaMissionary, iHinduMissionary, iBuddhistMissionary, iConfucianMissionary, iShuConfucianMissionary, iTaoistMissionary, iZoroastrianMissionary, iMarxismMissionary, iWarrior, iNativeWarrior, iMilitia, iXiaLevy, iAxeman, 
@@ -1270,7 +1270,7 @@ iMusketeer, iBlueGuards, iFrenchGuards, iJanissaryLate, iHanBannerman, iRedcoat,
 iMehalSefari, iGrenadier, iRocketeer, iGrenzer, iAlbionLegion, iInfantry, iVietCong, iAssaultInfantry, iSamInfantry, iMobileSam, iMarine, 
 iNavySeal, iParatrooper, iMechanizedInfantry, iArcher, iNanmanArcher, iAsharittuBowman, iMedjay, iNativeArcher, iSkirmisher, iVishap, iHolkan, iAtlatl, 
 iKelebolo, 
-iLongbowman, iJanissaryBow, iPatiyodha, iRattanArcher, iCrossbowman, iNaffatun, iChokonu, iBalestriere, iGrenadineCrossbowman, iChariot, iWarChariot, iHuluganni, 
+iLongbowman, iThematicBowman, iJanissaryBow, iPatiyodha, iRattanArcher, iCrossbowman, iNaffatun, iChokonu, iBalestriere, iGrenadineCrossbowman, iChariot, iWarChariot, iHuluganni, 
 iCidainh, iHorseman, iHausaCavalry, iCompanion, iNumidianCavalry, iAsvaka, iBerberFaris, iCamelRider, iCamelLancer, iHorseArcher, iMountedCrossbowman, iKonnik, iMangudai, iKhampa, iOghuz, 
 iCamelArcher, iZaydiTribesman, iTemplar, iLancer, iKhazarNobleLancer, iMamlukCavalry, iSavaran, iFarari, iMobileGuard, iKeshik, iCataphract, iChangSuek, iPistolier, iManchuHorseArcher, 
 iHakkapeliitta, iMountedBrave, iCamelGunner, iZamburak, iCuirassier, iGendarme, iConquistador, iWingedHussar, iSowar, iHussar, iCossack, 

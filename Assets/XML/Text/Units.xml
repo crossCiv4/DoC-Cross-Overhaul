@@ -4119,6 +4119,14 @@
 		<Italian>A musketeer with Amphibious.</Italian>
 		<Spanish>A musketeer with Amphibious.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BYZANTINE_THEMATIC_BOWMAN</Tag>
+		<English>Thematic Archer</English>
+		<French>Archer thématique</French>
+		<German>Thematic Archer</German>
+		<Italian>Arciere tematico</Italian>
+		<Spanish>Arco temático</Spanish>
+	</TEXT>
 
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>

@@ -1961,7 +1961,6 @@ dAlwaysTrain = CivDict({
 }, [])
 
 dAIAlwaysTrain = CivDict({
-	iMoors: [iCrossbowman],
 	iTurks: [iMamlukCavalry],
 }, [])
 
@@ -1971,6 +1970,7 @@ dNeverTrain = CivDict({
 	iOttomans: [iCrossbowman],
 	iCongo: [iCrossbowman],
 	iNigeria: [iCrossbowman],
+	iByzantium: [iCrossbowman],
 }, [])
 
 def createSpecificUnits(iPlayer, tile):
