@@ -7118,6 +7118,15 @@ Your stability level can change during a stability check. As long it is higher t
 	</TEXT>
 
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_FRENCH_GUARDS_PEDIA</Tag>
+		<English>The French Guards (French: R&#233;giment des Gardes fran&#231;aises were an elite infantry regiment of the French Royal Army. They formed a constituent part of the maison militaire du roi de France ("military household of the king of France") under the Ancien R&#233;gime.[PARAGRAPH:2]The French Guards, who were located in Paris, played a major part in the French Revolution as most of the guardsmen defected to the revolutionary cause and ensured the collapse of absolute monarchy in France. French Guards led the Storming of the Bastille and formed the cadre for the National Guard.</English>
+		<French>TBD</French>
+		<German>TBD</German>
+		<Italian>TBD</Italian>
+		<Spanish>TBD</Spanish>
+	</TEXT>
+
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING__PEDIA</Tag>
 		<English></English>
 		<French></French>

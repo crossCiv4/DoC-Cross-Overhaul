@@ -4088,6 +4088,23 @@
 		<Spanish>Musket Janissary</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_FRENCH_GUARDS</Tag>
+		<English>French Guards</English>
+		<French>Gardes françaises</French>
+		<German>Französische Garde</German>
+		<Italian>Guardie francesi</Italian>
+		<Spanish>Guardias francesas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FRENCH_GUARDS_STRATEGY</Tag>
+		<English>A musketeer that can bombard city defenses.</English>
+		<French>A musketeer that can bombard city defenses.</French>
+		<German>A musketeer that can bombard city defenses.</German>
+		<Italian>A musketeer that can bombard city defenses.</Italian>
+		<Spanish>A musketeer that can bombard city defenses.</Spanish>
+	</TEXT>
+
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
 		<English></English>
 		<French></French>
