@@ -4103,6 +4103,22 @@
 		<Italian>A musketeer that can bombard city defenses.</Italian>
 		<Spanish>A musketeer that can bombard city defenses.</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DUTCH_BLUE_GUARDS</Tag>
+		<English>Blue Guards</English>
+		<French>Garde bleue</French>
+		<German>Blau-Garde</German>
+		<Italian>Guardia blu</Italian>
+		<Spanish>Guardia azul</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_DUTCH_BLUE_GUARDS_STRATEGY</Tag>
+		<English>A musketeer with Amphibious.</English>
+		<French>A musketeer with Amphibious.</French>
+		<German>A musketeer with Amphibious.</German>
+		<Italian>A musketeer with Amphibious.</Italian>
+		<Spanish>A musketeer with Amphibious.</Spanish>
+	</TEXT>
 
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>

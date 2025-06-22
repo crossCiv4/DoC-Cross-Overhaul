@@ -5505,6 +5505,10 @@
 					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
 					<UnitType>UNIT_DUTCH_MAURITIAN_ARQUEBUSIER</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_MUSKETEER</UnitClassType>
+					<UnitType>UNIT_DUTCH_BLUE_GUARDS</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
