@@ -4127,6 +4127,14 @@
 		<Italian>Arciere tematico</Italian>
 		<Spanish>Arco temático</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BYZANTINE_CROSSBOWMAN</Tag>
+		<English>Tzangratoroi</English>
+		<French>Tzangratoroi</French>
+		<German>Tzangratoroi</German>
+		<Italian>Tzangratoroi</Italian>
+		<Spanish>Tzangratoroi</Spanish>
+	</TEXT>
 
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
