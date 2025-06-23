@@ -1016,6 +1016,7 @@ dStartingUnits = CivDict({
 		iSiege: 1,
 		iFerry: 2,
 		iEscort: 2,
+		iShock: 3,
 	},
 	iSaxons: {
 		iSettle: 1,
@@ -2368,14 +2369,18 @@ dTechPreferences = {
 	iByzantium : {
 		iRecurveBow: 10,
 		iAlchemy: 20,
+		iCivilService: 20,
+		iCompanies: 5,
+		iNobility: 10,
 
+		iMachinery: -10,
+		iGuilds: -10,
+		iCompass: -5,
 		iFinance: -50,
 		iOptics: -20,
 		iFirearms: -20,
 		iExploration: -20,
-		iNobility: 5,
 		iSpringSteel: -10,
-		iCivilService: 10,
 	},
 	iMali : {
 		iScholarship: 40,

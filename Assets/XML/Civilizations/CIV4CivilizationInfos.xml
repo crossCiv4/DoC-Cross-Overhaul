@@ -1067,7 +1067,10 @@
 					<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
 					<UnitType>UNIT_BYZANTINE_CROSSBOWMAN</UnitType>
 				</Unit>
-				
+				<Unit>
+					<UnitClassType>UNITCLASS_ARCHER</UnitClassType>
+					<UnitType>UNIT_BYZANTINE_ARCHER</UnitType>
+				</Unit>
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>

@@ -4135,6 +4135,14 @@
 		<Italian>Tzangratoroi</Italian>
 		<Spanish>Tzangratoroi</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BYZANTINE_ARCHER</Tag>
+		<English>Sagittarius</English>
+		<French>Sagittarius</French>
+		<German>Sagittarius</German>
+		<Italian>Sagittarius</Italian>
+		<Spanish>Sagittarius</Spanish>
+	</TEXT>
 
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
