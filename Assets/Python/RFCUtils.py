@@ -658,14 +658,14 @@ def isUnitOfRole(iUnit, iRole):
 	raise Exception("Unexpected unit role: %d" % iRole)
 	
 def canCreateUnit(iPlayer, iUnit):
-	if iUnit in dNeverTrain[iPlayer]:
-		return False
+	# if iUnit in dNeverTrain[civ(iPlayer)]:
+	# 	return False
 	
-	if iUnit in dAlwaysTrain[iPlayer]:
-		return True
+	# if iUnit in dAlwaysTrain[civ(iPlayer)]:
+	# 	return True
 	
-	if not player(iPlayer).isHuman() and iUnit in dAIAlwaysTrain[iPlayer]:
-		return True
+	# if not player(iPlayer).isHuman() and iUnit in dAIAlwaysTrain[civ(iPlayer)]:
+	# 	return True
 	
 	return player(iPlayer).canTrain(iUnit, False, False)
 

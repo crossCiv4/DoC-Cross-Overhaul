@@ -1946,22 +1946,22 @@ dStartingExperience = CivDict({
 }, {})
 
 dAlwaysTrain = CivDict({
-	iGreece: [iHoplite],
-	iMacedon: [iPhalanx],
-	iPhoenicia: [iNumidianCavalry],
-	iDravidia: [iWarElephant],
-	iArabia: [iMobileGuard, iGhazi],
-	iAztecs: [iJaguar],
-	iMexico: [iGrenadier],
-	iColombia: [iAlbionLegion],
-	iBrazil: [iGrenadier],
-	iNigeria: [iHausaCavalry],
-	iZulu: [iImpi],
-	iMorocco: [iCamelLancer],
+	# iGreece: [iHoplite],
+	# iMacedon: [iPhalanx],
+	# iPhoenicia: [iNumidianCavalry],
+	# iDravidia: [iWarElephant],
+	# iArabia: [iMobileGuard, iGhazi],
+	# iAztecs: [iJaguar],
+	# iMexico: [iGrenadier],
+	# iColombia: [iAlbionLegion],
+	# iBrazil: [iGrenadier],
+	# iNigeria: [iHausaCavalry],
+	# iZulu: [iImpi],
+	# iMorocco: [iCamelLancer],
 }, [])
 
 dAIAlwaysTrain = CivDict({
-	iTurks: [iMamlukCavalry],
+	# iTurks: [iMamlukCavalry],
 }, [])
 
 dNeverTrain = CivDict({
@@ -1969,8 +1969,9 @@ dNeverTrain = CivDict({
 	iJapan: [iCrossbowman],
 	iOttomans: [iCrossbowman],
 	iCongo: [iCrossbowman],
-	iNigeria: [iCrossbowman],
 	iByzantium: [iCrossbowman],
+	iIndia: [iCrossbowman],
+	iDravidia: [iCrossbowman],
 }, [])
 
 def createSpecificUnits(iPlayer, tile):
@@ -2366,12 +2367,15 @@ dTechPreferences = {
 	},
 	iByzantium : {
 		iRecurveBow: 10,
-		iAlchemy: 15,
+		iAlchemy: 20,
 
 		iFinance: -50,
 		iOptics: -20,
 		iFirearms: -20,
 		iExploration: -20,
+		iNobility: 5,
+		iSpringSteel: -10,
+		iCivilService: 10,
 	},
 	iMali : {
 		iScholarship: 40,
