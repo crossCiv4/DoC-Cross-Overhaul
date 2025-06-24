@@ -2314,6 +2314,7 @@ dTechPreferences = {
 		iAesthetics: 5,
 		iEngineering: 15,
 		iArchitecture: 15,
+		iGeneralship: 15,
 
 		iNobility: -10,
 		iSpringSteel: -10,
