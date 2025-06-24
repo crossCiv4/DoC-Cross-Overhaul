@@ -309,7 +309,7 @@ lCivilizations = [
 		iGold=200,
 		iAdvancedStartPoints=300,
 		lCivics=[iRepublic, iSlavery, iCitizenship, iRedistribution, iHegemony],
-		techs=techs.column(4).including(iGeneralship, iLaw).without(iRiding, iShipbuilding, iNavigation)
+		techs=techs.column(4).including(iLaw).without(iRiding, iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iArmenia,

@@ -495,7 +495,7 @@ minor_cities = [
 	MinorCity(-750, iBarbarian, (128, 48), "Kuaiji", iPopulation=2, iCiv=iShu, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_NANYUE"),
 	MinorCity(-600, iBarbarian, (60, 50), "Mastia", iPopulation=2, iCiv=iCelts, units={iDefend: 1, iCounter:1}, adjective="TXT_KEY_ADJECTIVE_CELTIBERIAN"),
 	MinorCity(-580, iIndependent2, (123, 39), "Indrapura", iPopulation=2, iCiv=iShu, units={iDefend: 2, iSkirmish: 1}, adjective="TXT_KEY_ADJECTIVE_CHAM"),
-	MinorCity(-500, iIndependent2, (68, 53), "Roma", iPopulation=3, iCiv=iGreece, units={iDefend: 1, iCounter: 2, iWork: 1}, adjective="TXT_KEY_CIV_ROME_ADJECTIVE"),
+	MinorCity(-500, iIndependent2, (68, 53), "Roma", iPopulation=3, iCiv=iRome, units={iCounter: 2, iWork: 1}, adjective="TXT_KEY_CIV_ROME_ADJECTIVE"),
 	MinorCity(-500, iNative, (19, 41), "Danibaan", iPopulation=2, iCiv=iMaya, units={iSkirmish: 1}, adjective="TXT_KEY_ADJECTIVE_ZAPOTEC"),
 	MinorCity(-600, iBarbarian, (121, 42), "Thang Long", iPopulation=2, iCiv=iVietnam, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_NANYUE"),
 	MinorCity(-490, iBarbarian, (66, 57), "Melpum", iPopulation=2, iCiv=iCelts, units={iHarass: 2}, adjective="TXT_KEY_ADJECTIVE_CELTIC"),

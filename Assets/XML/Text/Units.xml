@@ -4143,6 +4143,30 @@
 		<Italian>Sagittarius</Italian>
 		<Spanish>Sagittarius</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_PRINCIPES</Tag>
+		<English>Principes</English>
+		<French>Principes</French>
+		<German>Principes</German>
+		<Italian>Principes</Italian>
+		<Spanish>Principes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TRIARII</Tag>
+		<English>Triarii</English>
+		<French>Triarii</French>
+		<German>Triarii</German>
+		<Italian>Triarii</Italian>
+		<Spanish>Triarii</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WEST_EURO_ARCHER</Tag>
+		<English>Arcarii</English>
+		<French>Arcarii</French>
+		<German>Arcarii</German>
+		<Italian>Arcarii</Italian>
+		<Spanish>Arcarii</Spanish>
+	</TEXT>
 
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_</Tag>
