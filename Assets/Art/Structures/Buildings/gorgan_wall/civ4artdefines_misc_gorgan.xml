@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Misc art path information -->
+<Civ4ArtDefines xmlns="x-schema:CIV4ArtDefinesSchema.xml">
+	<MiscArtInfos>
+		<MiscArtInfo>
+			<Type>ART_GREAT_WALL_POST</Type>
+			<Path>Art/Buildings/Gorgan Wall/Great_Wall_Tower.nif</Path>
+			<fScale>1.0</fScale>
+			<NIF/>
+			<KFM/>
+		</MiscArtInfo>
+		<MiscArtInfo>
+			<Type>ART_GREAT_WALL_SEGMENT</Type>
+			<Path>Art/Buildings/Gorgan Wall/Great_Wall_1Unit.nif</Path>
+			<fScale>1.0</fScale>
+			<NIF/>
+			<KFM/>
+		</MiscArtInfo>
+		<MiscArtInfo>
+			<Type>ART_GREAT_WALL_SHADOW_TEXTURE</Type>
+			<Path>Art/Structures/Buildings/Great_Wall/poopshadow.dds</Path>
+			<fScale>1.0</fScale>
+			<NIF/>
+			<KFM/>
+		</MiscArtInfo>
+        </MiscArtInfos>
+</Civ4ArtDefines>
+	

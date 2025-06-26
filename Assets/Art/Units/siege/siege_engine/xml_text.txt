@@ -1,0 +1,20 @@
+by MightyToad
+I did the testing using the Trebuchets scale. (0.40)
+The Warlords Siegetower uses 0.20 for the scale.
+So keep that in mind when setting the scale. You may like it bigger or smaller than me. I found that 0.30 looks OK.
+
+<fScale>0.30</fScale>
+
+Also, you will want to set ranged attack to "0"
+
+<bActAsRanged>0</bActAsRanged>
+
+Don't forget to make sure damagestates is set to "4", or the damage textures won't work.
+
+<iDamageStates>4</iDamageStates>
+
+KFM.....
+
+<NIF>Art/Units/Siege_Engine/Siege_Engine.nif</NIF>
+			<KFM>Art/Units/Siege_Engine/Siege_Engine.kfm</KFM>
+			<SHADERNIF>Art/Units/Siege_Engine/Siege_Engine.nif</SHADERNIF>

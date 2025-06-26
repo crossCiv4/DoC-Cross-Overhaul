@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Unit art path information -->
+<Civ4ArtDefines xmlns="x-schema:CIV4ArtDefinesSchema.xml">
+	<UnitArtInfos>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_FLAMINGPIG</Type>
+			<Button>modules/custom units/siege/Flaming Pig/Btn_SIE_FlamingPig.dds</Button>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>modules/custom units/siege/Flaming Pig/flaming_pig.nif</NIF>
+			<KFM>Art/Units/Bear/Bear.kfm</KFM>
+			<SHADERNIF>modules/custom units/siege/Flaming Pig/flaming_pig.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/BearShadow.nif</ShadowNIF>
+				<ShadowAttachNode>LionBip Spine</ShadowAttachNode>
+				<fShadowScale>0.6</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.28</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
+			</AudioRunSounds>
+			<SelectionSound>AS3D_IMPROV_PIG_RES_GRUNT</SelectionSound>
+			<ActionSound>AS3D_IMPROV_PIG_RES_SQUEAL</ActionSound>
+		</UnitArtInfo>
+	</UnitArtInfos>
+</Civ4ArtDefines>

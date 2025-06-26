@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Building art path information -->
+<Civ4ArtDefines xmlns="x-schema:CIV4ArtDefinesSchema.xml">
+	<BuildingArtInfos>
+	   <BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GREAT_WALL</Type>
+			<LSystem>LSYSTEM_GREAT_WALL</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Buildings/Gorgan Wall/Great_Wall_civlopedia.nif</NIF>
+			<KFM/>
+			<Button>Art/Buildings/Gorgan Wall/Gorgan_button.dds</Button>
+		</BuildingArtInfo>
+	<BuildingArtInfos>
+<Civ4ArtDefines>

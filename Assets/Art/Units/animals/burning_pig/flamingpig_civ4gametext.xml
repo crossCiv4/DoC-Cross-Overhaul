@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text Infos -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FLAMINGPIG</Tag>
+		<English>War Pigs</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FLAMINGPIG_PEDIA</Tag>
+		<English>War pigs, also known as incendiary pigs, are those pigs speculated to have been used at most rarely in ancient warfare as a countermeasure to war elephants. The pigs were allegedly covered with tar, pitch, olive oil, or other flammable materials, set on fire, and driven towards enemy war elephants, with the intention that the elephants, terrified by the piercing squeals and oncoming flames, would flee in panic through the lines of their drivers' own army. Obviously, a burning pig is difficult to command and thus easily could quickly turn into a loose cannon and cause harm to friendly soldiers in addition to this. However, the hope of stopping war elephants made this a tactic used in war.
+Pliny the Elder reported that "elephants are scared by the smallest squeal of a pig" (book VIII ch. 9). Antipater's siege of Megara during the Wars of the Diadochi was reportedly broken when the Megarians poured oil on a herd of pigs, set them alight, and drove them towards the enemy's massed war elephants. The elephants bolted in terror from the flaming squealing pigs often killing great numbers of the army the elephant was part of (Aelian, de Natura Animalium book XVI, ch. 36). The Romans would later use the squeals of pigs to frighten Pyrrhus' elephants, thus winning a great victory (ibid., book I ch. 38). Procopius, in book VIII of his History of the Wars, records the defenders of Edessa using a pig suspended from the walls to frighten away Khosrau's siege elephants.
+Related military concepts include the concept of incendiary monkeys in China as a battlefield weapon, the use of anti-tank dogs used by the Soviet Union to combat invading German tanks at close range, and the supposed proposal of military dolphins for mine-laying as an anti-ship weapon, and as anti-diver weapons (although these usages have been denied by the US military, the use of military dolphins for mine-hunting is well documented.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FLAMINGPIG_STRATEGY</Tag>
+		<English>Use the [COLOR_UNIT_TEXT]War Pigs[COLOR_REVERT] to cause collateral damage to a stack of units. The [COLOR_UNIT_TEXT]War Pig[COLOR_REVERT] will die after combat. Use them against [COLOR_UNIT_TEXT]War Elephants[COLOR_REVERT] for an added bonus.</English>
+	</TEXT>
+</Civ4GameText>

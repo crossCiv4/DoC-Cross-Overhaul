@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jason Winokur (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Building art path information -->
+<Civ4ArtDefines xmlns="x-schema:Building_CIV4ArtDefinesSchema.xml">
+	<BuildingArtInfos>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_HAMMURABI_CODE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.65</fInterfaceScale>
+			<NIF>modules/custom buildings/national wonders/unique/babylon/code of hammurabi/codeofhammurabi.nif</NIF>
+			<KFM/>
+			<Button>modules/Custom Buildings/National Wonders/unique/babylon/code of hammurabi/codeofhammurabi_button.dds</Button>
+		</BuildingArtInfo>
+	</BuildingArtInfos>
+</Civ4ArtDefines>

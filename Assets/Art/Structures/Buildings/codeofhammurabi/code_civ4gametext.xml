@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text Infos -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAMMURABI_CODE</Tag>
+		<English>Code of Hammurabi</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAMMURABI_CODE_PEDIA</Tag>
+		<English>[TAB]The Code of Hammurabi (Codex Hammurabi ) is a well-preserved ancient law code, created ca. 1760 BC (middle chronology) in ancient Babylon. It was enacted by the sixth Babylonian king, Hammurabi.[1] Only one example of the Code survives today, inscribed on a seven foot, four inch tall basalt stone slab or stele. Originally, several stelae would have been displayed in temples around the empire.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAMMURABI_CODE_STRATEGY</Tag>
+		<English>[COLOR_BUILDING_TEXT]Hammurabi's Code[COLOR_REVERT] is the Babylonian replacement for the [COLOR_BUILDING_TEXT]Senate[COLOR_REVERT]. Building [COLOR_BUILDING_TEXT]Hammurabi's Code[COLOR_REVERT] increases the cities [ICON_GOLD], [ICON_RESEARCH], [ICON_CULTURE], and [ICON_ESPIONAGE] by 25% at the expense of +25% Maintenance. It also makes its city more likley to generate a [COLOR_UNIT_TEXT]Great Spy[COLOR_REVERT]</English>
+	</TEXT>
+</Civ4GameText>
