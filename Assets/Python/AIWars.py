@@ -693,10 +693,11 @@ def planWars(iGameTurn):
 			continue
 
 		iAttackingPlayer = determineAttackingPlayer(iCivGroup)
-		iTargetPlayer = determineTargetPlayer(iAttackingPlayer)
-		
+
 		if iAttackingPlayer is None:
 			continue
+
+		iTargetPlayer = determineTargetPlayer(iAttackingPlayer)
 
 		data.players[iAttackingPlayer].iAggressionLevel = 0
 		
