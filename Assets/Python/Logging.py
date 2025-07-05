@@ -10,9 +10,29 @@ RISE_LOG = "Rise.log"
 TECH_LOG = "Tech.log"
 RELATIONS_LOG = "Relations.log"
 CIVICS_LOG = "Civics.log"
+GW_LOG = "GlobalWarming.log"
 
 TIMER = None
 TECHS = None
+
+
+#@handler("changeWar")
+def stopOnFrenchSpanishWar(bWar, iTeam, iOtherTeam):
+	if bWar and iFrance in [civ(iTeam), civ(iOtherTeam)] and iSpain in [civ(iTeam), civ(iOtherTeam)]:
+		log_with_trace("%s declares war on %s" % (name(iTeam), name(iOtherTeam)))
+		breakObserverMode("%s declares war on %s" % (name(iTeam), name(iOtherTeam)))
+
+
+#@handler("globalWarming")
+def logGlobalWarming(iValue, iDefense):
+	global_warming("Turn = %d, Year = %d, Value = %d, Defense = %d", turn(), game.getGameTurnYear(), iValue, iDefense)
+
+
+#@handler("globalWarmingEffect")
+def stopOnGlobalWarmingEffect(plot, bChanged, iPreviousTerrain, iNewTerrain, iPreviousFeature):
+	if bChanged:
+		#breakObserverMode("Global warming effect on %s" % (location(plot),))
+		global_warming("Turn = %d, Year = %d, Global Warming effect on %s: changed %s to %s, removed feature %s", turn(), game.getGameTurnYear(), location(plot), infos.terrain(iPreviousTerrain).getText(), infos.terrain(iNewTerrain).getText(), iPreviousFeature >= 0 and infos.feature(iPreviousFeature).getText() or "NO_FEATURE")
 
 
 class Timer(object):
@@ -225,3 +245,7 @@ def relations(message, *format):
 
 def civics(message, *format):
 	log(CIVICS_LOG, message, *format)
+
+
+def global_warming(message, *format):
+	log(GW_LOG, message, *format)

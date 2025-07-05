@@ -9090,6 +9090,7 @@ std::pair<CvPlot*, CvPlot*> CvUnitAI::AI_spreadTarget(ReligionTypes eReligion, b
 	CvCity* pLoopCity;
 	CvPlot* pBestPlot;
 	CvPlot* pBestSpreadPlot;
+	ReligionSpreadTypes eReligionSpread;
 	int iPathTurns;
 	int iValue;
 	int iBestValue;
@@ -9191,88 +9192,93 @@ std::pair<CvPlot*, CvPlot*> CvUnitAI::AI_spreadTarget(ReligionTypes eReligion, b
 							{
 								if (GET_PLAYER(getOwnerINLINE()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_SPREAD, getGroup()) == 0)
 								{
-									if (generatePath(pLoopCity->plot(), 0, true, &iPathTurns))
+									eReligionSpread = GET_PLAYER(getOwnerINLINE()).getSpreadType(pLoopCity->plot(), eReligion);
+									if (eReligionSpread != RELIGION_SPREAD_NONE)
 									{
-										iValue = (7 + (pLoopCity->getPopulation() * 4));
+										if (generatePath(pLoopCity->plot(), 0, true, &iPathTurns))
+										{
+											iValue = (7 + (pLoopCity->getPopulation() * 4));
 
-										bool bOurCity = false;
-										if (pLoopCity->getOwnerINLINE() == getOwnerINLINE())
-										{
-											iValue *= (bCultureVictory ? 16 : 4);
-											bOurCity = true;
-										}
-										else if (pLoopCity->getTeam() == getTeam())
-										{
-											iValue *= 3;
-											bOurCity = true;
-										}
-										else
-										{
-											iValue *= iPlayerMultiplierPercent;
-											iValue /= 100;
-										}
-
-										int iCityReligionCount = pLoopCity->getReligionCount();
-										int iReligionCountFactor = iCityReligionCount;
-
-										if (bOurCity)
-										{
-											// count cities with no religion the same as cities with 2 religions
-											// prefer a city with exactly 1 religion already
-											if (iCityReligionCount == 0)
+											bool bOurCity = false;
+											if (pLoopCity->getOwnerINLINE() == getOwnerINLINE())
 											{
-												iReligionCountFactor = 2;
+												iValue *= (bCultureVictory ? 16 : 4);
+												bOurCity = true;
 											}
-											else if (iCityReligionCount == 1)
+											else if (pLoopCity->getTeam() == getTeam())
 											{
-												iValue *= 2;
+												iValue *= 3;
+												bOurCity = true;
 											}
-										}
-										else
-										{
-											// absolutely prefer cities with zero religions
-											if (iCityReligionCount == 0)
+											else
 											{
-												iValue *= 2;
+												iValue *= iPlayerMultiplierPercent;
+												iValue /= 100;
 											}
 
-											// not our city, so prefer the lowest number of religions (increment so no divide by zero)
-											iReligionCountFactor++;
-										}
+											int iCityReligionCount = pLoopCity->getReligionCount();
+											int iReligionCountFactor = iCityReligionCount;
 
-										iValue /= iReligionCountFactor;
-
-										FAssert(iPathTurns > 0);
-
-										bool bForceMove = false;
-										if (isHuman())
-										{
-											//If human, prefer to spread to the player where automated from.
-											if (plot()->getOwnerINLINE() == pLoopCity->getOwnerINLINE())
+											if (bOurCity)
 											{
-												iValue *= 10;
-												if (pLoopCity->isRevealed(getTeam(), false))
+												// count cities with no religion the same as cities with 2 religions
+												// prefer a city with exactly 1 religion already
+												if (iCityReligionCount == 0)
 												{
-													bForceMove = true;
+													iReligionCountFactor = 2;
+												}
+												else if (iCityReligionCount == 1)
+												{
+													iValue *= 2;
 												}
 											}
-										}
+											else
+											{
+												// absolutely prefer cities with zero religions
+												if (iCityReligionCount == 0)
+												{
+													iValue *= 2;
+												}
 
-										// AI prefers spreading in core areas
-										if (!isHuman())
-										{
-											if (pLoopCity->plot()->getSpreadFactor(eReligion) == REGION_SPREAD_CORE) iValue *= 10;
-										}
+												// not our city, so prefer the lowest number of religions (increment so no divide by zero)
+												iReligionCountFactor++;
+											}
 
-										iValue *= 1000;
+											iValue /= iReligionCountFactor;
 
-										iValue /= (iPathTurns + 2);
+											FAssert(iPathTurns > 0);
 
-										if (iValue > iBestValue)
-										{
-											iBestValue = iValue;
-											pBestPlot = bForceMove ? pLoopCity->plot() : getPathEndTurnPlot();
-											pBestSpreadPlot = pLoopCity->plot();
+											bool bForceMove = false;
+											if (isHuman())
+											{
+												//If human, prefer to spread to the player where automated from.
+												if (plot()->getOwnerINLINE() == pLoopCity->getOwnerINLINE())
+												{
+													iValue *= 10;
+													if (pLoopCity->isRevealed(getTeam(), false))
+													{
+														bForceMove = true;
+													}
+												}
+											}
+
+											// AI prefers spreading in core areas
+											if (!isHuman())
+											{
+												if (pLoopCity->plot()->getSpreadFactor(eReligion) == REGION_SPREAD_CORE) iValue *= 10;
+												else if (pLoopCity->plot()->getSpreadFactor(eReligion) == REGION_SPREAD_HISTORICAL) iValue *= 2;
+											}
+
+											iValue *= 1000;
+
+											iValue /= (iPathTurns + 2);
+
+											if (iValue > iBestValue)
+											{
+												iBestValue = iValue;
+												pBestPlot = bForceMove ? pLoopCity->plot() : getPathEndTurnPlot();
+												pBestSpreadPlot = pLoopCity->plot();
+											}
 										}
 									}
 								}

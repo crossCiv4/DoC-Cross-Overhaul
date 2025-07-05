@@ -7089,7 +7089,8 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 				{
 					iRoll += 25;
 				}
-				else if (!kTeam.hasHolyCity(eReligion) && !(kPlayer.getStateReligion() == eReligion))
+				// Leoreth: religious leaders don't require holy cities to focus on missionaries
+				else if (!kTeam.hasHolyCity(eReligion) && !(kPlayer.getStateReligion() == eReligion) && GC.getLeaderHeadInfo(getPersonalityType()).getFlavorValue((FlavorTypes)1) < 2)
 				{
 					iRoll /= 2;
 					if (kPlayer.isNoNonStateReligionSpread())

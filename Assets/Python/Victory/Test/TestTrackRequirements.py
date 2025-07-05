@@ -1,6 +1,241 @@
 from TrackRequirements import *
 
 from TestVictoryCommon import *
+		
+
+
+class TestAreaBlockadeGold(ExtendedTestCase):
+	
+	def setUp(self):
+		self.area = AreaArgumentFactory().of(TestCities.CITY_LOCATIONS[:1]).named("Test Area")
+		self.requirement = AreaBlockadeGold(self.area, 100).create()
+		self.goal = TestGoal()
+		
+		self.requirement.register_handlers(self.goal)
+		
+		self.inside_city, self.outside_city = TestCities.owners(1, 1)
+		
+		self.inside_unit = makeUnit(0, iSwordsman, TestCities.CITY_LOCATIONS[0])
+		self.outside_unit = makeUnit(0, iSwordsman, (25, 25))
+	
+	def tearDown(self):
+		self.requirement.deregister_handlers()
+		
+		self.inside_city.kill()
+		self.outside_city.kill()
+		
+		self.inside_unit.kill(False, -1)
+		self.outside_unit.kill(False, -1)
+	
+	def test_str(self):
+		self.assertEqual(str(self.requirement), "AreaBlockadeGold(Test Area, 100)")
+	
+	def test_repr(self):
+		self.assertEqual(repr(self.requirement), "AreaBlockadeGold(Test Area, 100)")
+
+	def test_description(self):
+		self.assertEqual(self.requirement.description(), "100 gold through blockading, pillaging, and capturing cities in Test Area")
+	
+	def test_areas(self):
+		self.assertEqual(self.requirement.areas(), {"Test Area": plots.of(TestCities.CITY_LOCATIONS[:1])})
+	
+	def test_pickle(self):
+		self.assertPickleable(self.requirement)
+	
+	def test_unit_pillage(self):
+		events.fireEvent("unitPillage", self.inside_unit, iHamlet, -1, self.iPlayer, 100)
+		
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 100)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), True)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.SUCCESS + "Gold from blockading, pillaging, and capturing cities in Test Area: 100 / 100")
+		self.assertEqual(self.goal.checked, True)
+	
+	def test_unit_pillage_outside(self):
+		events.fireEvent("unitPillage", self.outside_unit, iHamlet, -1, self.iPlayer, 100)
+		
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Gold from blockading, pillaging, and capturing cities in Test Area: 0 / 100")
+		self.assertEqual(self.goal.checked, False)
+	
+	def test_unit_pillage_other(self):
+		events.fireEvent("unitPillage", self.inside_unit, iHamlet, -1, 1, 100)
+		
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Gold from blockading, pillaging, and capturing cities in Test Area: 0 / 100")
+		self.assertEqual(self.goal.checked, False)
+	
+	def test_blockade(self):
+		events.fireEvent("blockade", 0, self.inside_city, 100)
+		
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 100)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), True)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.SUCCESS + "Gold from blockading, pillaging, and capturing cities in Test Area: 100 / 100")
+		self.assertEqual(self.goal.checked, True)
+	
+	def test_blockade_outside(self):
+		events.fireEvent("blockade", 0, self.outside_city, 100)
+		
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Gold from blockading, pillaging, and capturing cities in Test Area: 0 / 100")
+		self.assertEqual(self.goal.checked, False)
+	
+	def test_blockade_other(self):
+		events.fireEvent("blockade", 1, self.inside_city, 100)
+		
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Gold from blockading, pillaging, and capturing cities in Test Area: 0 / 100")
+		self.assertEqual(self.goal.checked, False)
+	
+	def test_conquest(self):
+		events.fireEvent("cityCaptureGold", self.inside_city, self.iPlayer, 100)
+		
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 100)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), True)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.SUCCESS + "Gold from blockading, pillaging, and capturing cities in Test Area: 100 / 100")
+		self.assertEqual(self.goal.checked, True)
+	
+	def test_conquest_outside(self):
+		events.fireEvent("cityCaptureGold", self.outside_city, self.iPlayer, 100)
+		
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Gold from blockading, pillaging, and capturing cities in Test Area: 0 / 100")
+		self.assertEqual(self.goal.checked, False)
+	
+	def test_conquest_other(self):
+		events.fireEvent("cityCaptureGold", self.inside_city, 1, 100)
+		
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Gold from blockading, pillaging, and capturing cities in Test Area: 0 / 100")
+		self.assertEqual(self.goal.checked, False)
+	
+	def test_other_evaluator(self):
+		evaluator = VassalsEvaluator(self.iPlayer)
+		self.goal.evaluator = evaluator
+		
+		team(2).setVassal(0, True, False)
+		
+		try:
+			events.fireEvent("cityCaptureGold", self.inside_city, 2, 100)
+			
+			self.assertEqual(self.requirement.evaluate(evaluator), 100)
+			self.assertEqual(self.requirement.fulfilled(evaluator), True)
+			self.assertEqual(self.requirement.progress(evaluator), self.SUCCESS + "Gold from blockading, pillaging, and capturing cities in Test Area: 100 / 100")
+		finally:
+			team(2).setVassal(0, False, False)
+	
+	def test_not_check_turnly(self):
+		events.fireEvent("BeginPlayerTurn", 0, self.iPlayer)
+		
+		self.assertEqual(self.goal.checked, False)
+
+
+class TestAreaReligionSpreadCount(ExtendedTestCase):
+
+	def setUp(self):
+		self.area = AreaArgumentFactory().of(TestCities.CITY_LOCATIONS[:1]).named("Test Area")
+		self.requirement = AreaReligionSpreadCount(self.area, iBuddhism, 2).create()
+		self.goal = TestGoal()
+		
+		self.requirement.register_handlers(self.goal)
+		
+		self.inside_unit = makeUnit(0, iBuddhistMissionary, TestCities.CITY_LOCATIONS[0])
+		self.outside_unit = makeUnit(0, iBuddhistMissionary, TestCities.CITY_LOCATIONS[1])
+	
+	def tearDown(self):
+		self.requirement.deregister_handlers()
+		
+		self.inside_unit.kill(False, -1)
+		self.outside_unit.kill(False, -1)
+	
+	def test_str(self):
+		self.assertEqual(str(self.requirement), "AreaReligionSpreadCount(Test Area, Buddhism, 2)")
+	
+	def test_repr(self):
+		self.assertEqual(repr(self.requirement), "AreaReligionSpreadCount(Test Area, Buddhism, 2)")
+	
+	def test_description(self):
+		self.assertEqual(self.requirement.description(), "Buddhism to two cities in Test Area")
+	
+	def test_areas(self):
+		self.assertEqual(self.requirement.areas(), {"Test Area": plots.of(TestCities.CITY_LOCATIONS[:1])})
+	
+	def test_pickle(self):
+		self.assertPickleable(self.requirement)
+	
+	def test_none(self):
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Buddhism spread in Test Area: 0 / 2")
+		self.assertEqual(self.goal.checked, False)
+	
+	def test_insufficient(self):
+		events.fireEvent("unitSpreadReligionAttempt", self.inside_unit, iBuddhism, True)
+			
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 1)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Buddhism spread in Test Area: 1 / 2")
+		self.assertEqual(self.goal.checked, True)
+	
+	def test_sufficient(self):
+		for _ in range(2):
+			events.fireEvent("unitSpreadReligionAttempt", self.inside_unit, iBuddhism, True)
+			
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 2)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), True)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.SUCCESS + "Buddhism spread in Test Area: 2 / 2")
+		self.assertEqual(self.goal.checked, True)
+	
+	def test_outside(self):
+		for _ in range(2):
+			events.fireEvent("unitSpreadReligionAttempt", self.outside_unit, iBuddhism, True)
+		
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Buddhism spread in Test Area: 0 / 2")
+		self.assertEqual(self.goal.checked, False)
+	
+	def test_different_owner(self):
+		unit = makeUnit(1, iBuddhistMissionary, (20, 20))
+		
+		try:
+			for _ in range(2):
+				events.fireEvent("unitSpreadReligionAttempt", unit, iBuddhism, True)
+			
+			self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+			self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+			self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Buddhism spread in Test Area: 0 / 2")
+			self.assertEqual(self.goal.checked, False)
+		finally:
+			unit.kill(-1, False)
+	
+	def test_different_religion(self):
+		for _ in range(2):
+			events.fireEvent("unitSpreadReligionAttempt", self.inside_unit, iHinduism, True)
+		
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Buddhism spread in Test Area: 0 / 2")
+		self.assertEqual(self.goal.checked, False)
+	
+	def test_unsuccessful(self):
+		for _ in range(2):
+			events.fireEvent("unitSpreadReligionAttempt", self.inside_unit, iBuddhism, False)
+		
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Buddhism spread in Test Area: 0 / 2")
+		self.assertEqual(self.goal.checked, False)
+	
+	def test_not_checked_turnly(self):
+		events.fireEvent("BeginPlayerTurn", 0, self.iPlayer)
+		
+		self.assertEqual(self.goal.checked, False)
 
 
 class TestAcquiredCities(ExtendedTestCase):
@@ -1780,7 +2015,7 @@ class TestPiracyGold(ExtendedTestCase):
 		self.assertEqual(self.goal.checked, False)
 	
 	def test_blockade(self):
-		events.fireEvent("blockade", 0, 100)
+		events.fireEvent("blockade", 0, self.city, 100)
 		
 		self.assertEqual(self.requirement.evaluate(self.evaluator), 100)
 		self.assertEqual(self.requirement.fulfilled(self.evaluator), True)
@@ -1788,7 +2023,7 @@ class TestPiracyGold(ExtendedTestCase):
 		self.assertEqual(self.goal.checked, True)
 	
 	def test_blockade_other(self):
-		events.fireEvent("blockade", 1, 100)
+		events.fireEvent("blockade", 1, self.city, 100)
 		
 		self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
 		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
@@ -2148,9 +2383,13 @@ class TestReligionSpreadCount(ExtendedTestCase):
 		self.goal = TestGoal()
 		
 		self.requirement.register_handlers(self.goal)
+		
+		self.unit = makeUnit(0, iBuddhistMissionary, (20, 20))
 	
 	def tearDown(self):
 		self.requirement.deregister_handlers()
+		
+		self.unit.kill(False, -1)
 	
 	def test_str(self):
 		self.assertEqual(str(self.requirement), "ReligionSpreadCount(Buddhism, 2)")
@@ -2173,29 +2412,21 @@ class TestReligionSpreadCount(ExtendedTestCase):
 		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Buddhism spread: 0 / 2")
 	
 	def test_insufficient(self):
-		unit = makeUnit(0, iBuddhistMissionary, (20, 20))
-	
-		try:
-			events.fireEvent("unitSpreadReligionAttempt", unit, iBuddhism, True)
-			
-			self.assertEqual(self.requirement.evaluate(self.evaluator), 1)
-			self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
-			self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Buddhism spread: 1 / 2")
-		finally:
-			unit.kill(-1, False)
+		events.fireEvent("unitSpreadReligionAttempt", self.unit, iBuddhism, True)
+		
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 1)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Buddhism spread: 1 / 2")
+		self.assertEqual(self.goal.checked, True)
 	
 	def test_sufficient(self):
-		unit = makeUnit(0, iBuddhistMissionary, (20, 20))
-		
-		try:
-			for _ in range(2):
-				events.fireEvent("unitSpreadReligionAttempt", unit, iBuddhism, True)
-				
-			self.assertEqual(self.requirement.evaluate(self.evaluator), 2)
-			self.assertEqual(self.requirement.fulfilled(self.evaluator), True)
-			self.assertEqual(self.requirement.progress(self.evaluator), self.SUCCESS + "Buddhism spread: 2 / 2")
-		finally:
-			unit.kill(-1, False)
+		for _ in range(2):
+			events.fireEvent("unitSpreadReligionAttempt", self.unit, iBuddhism, True)
+			
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 2)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), True)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.SUCCESS + "Buddhism spread: 2 / 2")
+		self.assertEqual(self.goal.checked, True)
 	
 	def test_different_owner(self):
 		unit = makeUnit(1, iBuddhistMissionary, (20, 20))
@@ -2207,34 +2438,32 @@ class TestReligionSpreadCount(ExtendedTestCase):
 			self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
 			self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
 			self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Buddhism spread: 0 / 2")
+			self.assertEqual(self.goal.checked, False)
 		finally:
 			unit.kill(-1, False)
 	
 	def test_different_religion(self):
-		unit = makeUnit(0, iBuddhistMissionary, (20, 20))
-		
-		try:
 			for _ in range(2):
-				events.fireEvent("unitSpreadReligionAttempt", unit, iHinduism, True)
+				events.fireEvent("unitSpreadReligionAttempt", self.unit, iHinduism, True)
 			
 			self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
 			self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
 			self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Buddhism spread: 0 / 2")
-		finally:
-			unit.kill(-1, False)
+			self.assertEqual(self.goal.checked, False)
 	
 	def test_unsuccessful(self):
-		unit = makeUnit(0, iBuddhistMissionary, (20, 20))
+		for _ in range(2):
+			events.fireEvent("unitSpreadReligionAttempt", self.unit, iBuddhism, False)
 		
-		try:
-			for _ in range(2):
-				events.fireEvent("unitSpreadReligionAttempt", unit, iBuddhism, False)
-			
-			self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
-			self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
-			self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Buddhism spread: 0 / 2")
-		finally:
-			unit.kill(-1, False)
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Buddhism spread: 0 / 2")
+		self.assertEqual(self.goal.checked, False)
+	
+	def test_not_checked_turnly(self):
+		events.fireEvent("BeginPlayerTurn", 0, self.iPlayer)
+		
+		self.assertEqual(self.goal.checked, False)
 
 
 class TestReligionSpreadPopulationCount(ExtendedTestCase):
@@ -3203,9 +3432,93 @@ class TestTradeMissionCount(ExtendedTestCase):
 		events.fireEvent("BeginPlayerTurn", 0, self.iPlayer)
 		
 		self.assertEqual(self.goal.checked, False)
+
+
+class TestTradeRouteCommerce(ExtendedTestCase):
+
+	def setUp(self):
+		self.requirement = TradeRouteCommerce(100).create()
+		self.goal = TestGoal()
+		
+		self.requirement.register_handlers(self.goal)
+	
+	def tear_down(self):
+		self.requirement.deregister_handlers()
+	
+	def test_str(self):
+		self.assertEqual(str(self.requirement), "TradeRouteCommerce(100)")
+	
+	def test_repr(self):
+		self.assertEqual(repr(self.requirement), "TradeRouteCommerce(100)")
+	
+	def test_description(self):
+		self.assertEqual(self.requirement.description(), "100 commerce from city trade routes")
+	
+	def test_areas(self):
+		self.assertEqual(self.requirement.areas(), {})
+	
+	def test_pickle(self):
+		self.assertPickleable(self.requirement)
+	
+	def test_trade_route(self):
+		city1, city2 = cities = TestCities.num(2)
+		
+		plot(58, 35).setRouteType(iRouteRoad)
+		
+		player(0).setCivics(iCivicsEconomy, iFreeEnterprise)
+		
+		try:
+			self.assertEqual(city1.getTradeYield(YieldTypes.YIELD_COMMERCE) > 0, True)
+			self.assertEqual(city2.getTradeYield(YieldTypes.YIELD_COMMERCE) > 0, True)
+			
+			iExpectedCommerce = city1.getTradeYield(YieldTypes.YIELD_COMMERCE) + city2.getTradeYield(YieldTypes.YIELD_COMMERCE)
+			
+			self.assertEqual(iExpectedCommerce > 0, True)
+			
+			events.fireEvent("BeginPlayerTurn", self.iPlayer, 0)
+			
+			self.assertEqual(self.requirement.evaluate(self.evaluator), iExpectedCommerce)
+			self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+			self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Commerce from city trade routes: %d / 100" % iExpectedCommerce)
+			
+			self.assertEqual(self.goal.checked, True)
+		finally:
+			player(0).setCivics(iCivicsEconomy, iReciprocity)
+			
+			plot(62, 31).setRouteType(-1)
+			
+			cities.kill()
+			
+	def test_trade_route_other(self):
+		city1, city2 = cities = TestCities.owners(1, 1)
+		
+		plot(62, 31).setRouteType(iRouteRoad)
+		
+		player(1).setCivics(iCivicsEconomy, iFreeEnterprise)
+		
+		try:
+			self.assertEqual(city1.getTradeYield(YieldTypes.YIELD_COMMERCE) > 0, True)
+			self.assertEqual(city2.getTradeYield(YieldTypes.YIELD_COMMERCE) > 0, True)
+			
+			events.fireEvent("BeginPlayerTurn", 0, 0)
+			events.fireEvent("BeginPlayerTurn", 0, 1)
+			
+			self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+			self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+			self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Commerce from city trade routes: 0 / 100")
+			
+			self.assertEqual(self.goal.checked, True)
+		finally:
+			player(1).setCivics(iCivicsEconomy, iReciprocity)
+			
+			plot(62, 31).setRouteType(-1)
+			
+			cities.kill()
 			
 
 test_cases = [
+	TestAreaBlockadeGold,
+	TestAreaReligionSpreadCount,
 	TestAcquiredCities,
 	TestBrokeredPeace,
 	TestCelebrateTurns,
@@ -3242,4 +3555,5 @@ test_cases = [
 	TestSunkShips,
 	TestTradeGold,
 	TestTradeMissionCount,
+	TestTradeRouteCommerce,
 ]

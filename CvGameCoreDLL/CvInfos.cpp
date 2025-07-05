@@ -14477,6 +14477,7 @@ m_iDefenseModifier(0),
 m_iCultureCostModifier(0), // Leoreth
 m_iAdvancedStartRemoveCost(0),
 m_iTurnDamage(0),
+m_iGlobalWarmingDefense(0), // Leoreth
 m_bNoCoast(false),
 m_bNoRiver(false),
 m_bNoAdjacent(false),
@@ -14565,14 +14566,11 @@ int CvFeatureInfo::getTurnDamage() const
 	return m_iTurnDamage;
 }
 
-// BUG - Global Warming Mod - start
-#ifdef _MOD_GWARM
-int CvFeatureInfo::getWarmingDefense() const
+// Leoreth
+int CvFeatureInfo::getGlobalWarmingDefense() const
 {
-	return m_iWarmingDefense; 
+	return m_iGlobalWarmingDefense;
 }
-#endif
-// BUG - Global Warming Mod - end
 
 bool CvFeatureInfo::isNoCoast() const
 {
@@ -14783,6 +14781,7 @@ bool CvFeatureInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_iCultureCostModifier, "iCultureCost");
 	pXML->GetChildXmlValByName(&m_iAdvancedStartRemoveCost, "iAdvancedStartRemoveCost");
 	pXML->GetChildXmlValByName(&m_iTurnDamage, "iTurnDamage");
+	pXML->GetChildXmlValByName(&m_iGlobalWarmingDefense, "iGlobalWarmingDefense");
 // BUG - Global Warming Mod - start
 #ifdef _MOD_GWARM
 	pXML->GetChildXmlValByName(&m_iWarmingDefense, "iWarmingDefense");
@@ -15098,6 +15097,7 @@ m_iSeeThroughLevel(0),
 m_iBuildModifier(0),
 m_iDefenseModifier(0),
 m_iCultureCostModifier(0),
+m_iGlobalWarmingTerrainType(NO_TERRAIN),
 m_bWater(false),
 m_bImpassable(false),
 m_bFound(false),
@@ -15203,6 +15203,12 @@ int CvTerrainInfo::getWorldSoundscapeScriptId() const
 	return m_iWorldSoundscapeScriptId;
 }
 
+// Leoreth
+int CvTerrainInfo::getGlobalWarmingTerrainType() const
+{
+	return m_iGlobalWarmingTerrainType;
+}
+
 // Arrays
 
 int CvTerrainInfo::getYield(int i) const
@@ -15295,6 +15301,16 @@ bool CvTerrainInfo::read(CvXMLLoadUtility* pXML)
 		m_iWorldSoundscapeScriptId = gDLL->getAudioTagIndex( szTextVal.GetCString(), AUDIOTAG_SOUNDSCAPE );
 	else
 		m_iWorldSoundscapeScriptId = -1;
+
+	return true;
+}
+
+bool CvTerrainInfo::readPass2(CvXMLLoadUtility* pXML)
+{
+	CvString szTextVal;
+
+	pXML->GetChildXmlValByName(szTextVal, "GlobalWarmingTerrainType");
+	m_iGlobalWarmingTerrainType = GC.getInfoTypeForString(szTextVal);
 
 	return true;
 }

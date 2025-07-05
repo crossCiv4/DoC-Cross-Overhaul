@@ -127,6 +127,8 @@ public:
 	void reportPlayerSwitch(PlayerTypes eOldPlayer, PlayerTypes eNewPlayer); // Leoreth
 	void reportTechTraded(PlayerTypes eFrom, PlayerTypes eTo, TechTypes eTech); // Leoreth
 	void reportTribute(PlayerTypes eFrom, PlayerTypes eTo); // Leoreth
+	void reportGlobalWarming(int iGlobalWarmingValue, int iGlobalWarmingDefense); // Leoreth
+	void reportGlobalWarmingEffect(CvPlot* pPlot, bool bChanged, TerrainTypes ePreviousTerrain, TerrainTypes eNewTerrain, FeatureTypes ePreviousFeature); // Leoreth
 
 	void reportSetPlayerAlive(PlayerTypes ePlayerID, bool bNewValue);
 	void reportPlayerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion);

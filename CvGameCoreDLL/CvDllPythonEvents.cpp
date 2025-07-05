@@ -1552,6 +1552,36 @@ void CvDllPythonEvents::reportTribute(PlayerTypes eFrom, PlayerTypes eTo)
 	}
 }
 
+void CvDllPythonEvents::reportGlobalWarming(int iGlobalWarmingValue, int iGlobalWarmingDefense)
+{
+	if (preEvent())
+	{
+		CyArgsList eventData;
+		eventData.add("globalWarming");
+		eventData.add(iGlobalWarmingValue);
+		eventData.add(iGlobalWarmingDefense);
+		postEvent(eventData);
+	}
+}
+
+void CvDllPythonEvents::reportGlobalWarmingEffect(CvPlot* pPlot, bool bChanged, TerrainTypes ePreviousTerrain, TerrainTypes eNewTerrain, FeatureTypes ePreviousFeature)
+{
+	if (preEvent())
+	{
+		CyArgsList eventData;
+		eventData.add("globalWarmingEffect");
+
+		CyPlot* pCyPlot = new CyPlot(pPlot);
+		eventData.add(gDLL->getPythonIFace()->makePythonObject(pCyPlot));
+
+		eventData.add(bChanged);
+		eventData.add((int)ePreviousTerrain);
+		eventData.add((int)eNewTerrain);
+		eventData.add((int)ePreviousFeature);
+		postEvent(eventData);
+	}
+}
+
 void CvDllPythonEvents::reportGenericEvent(const char* szEventName, void *pyArgs)
 {
 	if (preEvent())

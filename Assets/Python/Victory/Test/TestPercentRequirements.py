@@ -831,6 +831,84 @@ class TestRevealedPercent(ExtendedTestCase):
 		events.fireEvent("BeginPlayerTurn", 0, self.iPlayer)
 		
 		self.assertEqual(self.goal.checked, True)
+
+
+class TestWaterAreaPercent(ExtendedTestCase):
+	
+	def setUp(self):
+		self.water = [(70, 23), (70, 24)]
+		self.land = [(71, 23), (71, 24)]
+		self.area = AreaArgumentFactory().of(self.water + self.land).named("Test Area")
+		self.requirement = WaterAreaPercent(self.area, 50).create()
+		self.goal = TestGoal()
+		
+		self.requirement.register_handlers(self.goal)
+	
+	def tearDown(self):
+		self.requirement.deregister_handlers()
+	
+	def test_str(self):
+		self.assertEqual(str(self.requirement), "WaterAreaPercent(Test Area, 50%)")
+	
+	def test_repr(self):
+		self.assertEqual(repr(self.requirement), "WaterAreaPercent(Test Area, 50%)")
+	
+	def test_description(self):
+		self.assertEqual(self.requirement.description(), "half of Test Area")
+	
+	def test_areas(self):
+		self.assertEqual(self.requirement.areas(), {"Test Area": plots.of(self.water + self.land)})
+	
+	def test_pickle(self):
+		self.assertPickleable(self.requirement)
+	
+	def test_insufficient(self):
+		self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+		self.assertEqual(self.requirement.percentage(self.evaluator), 0.0)
+		self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+		self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Territory in Test Area: 0.00% / 50%")
+	
+	def test_sufficient(self):
+		plot(self.water[0]).setOwner(0)
+		
+		try:
+			self.assertEqual(self.requirement.evaluate(self.evaluator), 1)
+			self.assertEqual(self.requirement.percentage(self.evaluator), 50.0)
+			self.assertEqual(self.requirement.fulfilled(self.evaluator), True)
+			self.assertEqual(self.requirement.progress(self.evaluator), self.SUCCESS + "Territory in Test Area: 50.00% / 50%")
+		finally:
+			plot(self.water[0]).setOwner(-1)
+	
+	def test_land_insufficient(self):
+		plot(self.land[0]).setOwner(0)
+		
+		try:
+			self.assertEqual(self.requirement.evaluate(self.evaluator), 0)
+			self.assertEqual(self.requirement.percentage(self.evaluator), 0.0)
+			self.assertEqual(self.requirement.fulfilled(self.evaluator), False)
+			self.assertEqual(self.requirement.progress(self.evaluator), self.FAILURE + "Territory in Test Area: 0.00% / 50%")
+		finally:
+			plot(self.land[0]).setOwner(-1)
+	
+	def test_other_evaluator(self):
+		evaluator = VassalsEvaluator(0)
+		team(1).setVassal(0, True, False)
+		
+		plot(self.water[0]).setOwner(1)
+		
+		try:
+			self.assertEqual(self.requirement.evaluate(evaluator), 1)
+			self.assertEqual(self.requirement.percentage(evaluator), 50.0)
+			self.assertEqual(self.requirement.fulfilled(evaluator), True)
+			self.assertEqual(self.requirement.progress(evaluator), self.SUCCESS + "Territory in Test Area: 50.00% / 50%")
+		finally:
+			plot(self.water[0]).setOwner(-1)
+			team(1).setVassal(0, False, False)
+	
+	def test_check_turnly(self):
+		events.fireEvent("BeginPlayerTurn", 0, self.iPlayer)
+		
+		self.assertEqual(self.goal.checked, True)
 		
 
 
@@ -844,4 +922,5 @@ test_cases = [
 	TestReligionSpreadPercent,
 	TestReligiousVotePercent,
 	TestRevealedPercent,
+	TestWaterAreaPercent,
 ]

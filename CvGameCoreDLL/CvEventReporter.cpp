@@ -571,6 +571,16 @@ void CvEventReporter::tribute(PlayerTypes eFrom, PlayerTypes eTo)
 	m_kPythonEventMgr.reportTribute(eFrom, eTo);
 }
 
+void CvEventReporter::globalWarming(int iGlobalWarmingValue, int iGlobalWarmingDefense)
+{
+	m_kPythonEventMgr.reportGlobalWarming(iGlobalWarmingValue, iGlobalWarmingDefense);
+}
+
+void CvEventReporter::globalWarmingEffect(CvPlot* pPlot, bool bChanged, TerrainTypes ePreviousTerrain, TerrainTypes eNewTerrain, FeatureTypes ePreviousFeature)
+{
+	m_kPythonEventMgr.reportGlobalWarmingEffect(pPlot, bChanged, ePreviousTerrain, eNewTerrain, ePreviousFeature);
+}
+
 void CvEventReporter::preSave()
 {
 	m_kPythonEventMgr.preSave();

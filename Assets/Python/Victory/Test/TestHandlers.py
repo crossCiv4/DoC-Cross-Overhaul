@@ -165,8 +165,7 @@ class TestEventHandlerRegistryFunctions(ExtendedTestCase):
 	def increment(self, *args):
 		self.iCount += 1
 	
-	def accumulate(self, goal, *args):
-		iChange = args[-1]
+	def accumulate(self, goal, iChange, *args):
 		self.iCount += iChange
 	
 	def capture(self, *args):
@@ -184,11 +183,16 @@ class TestEventHandlerRegistryFunctions(ExtendedTestCase):
 	def test_blockade(self):
 		onBlockade = self.get("blockade", self.accumulate)
 		
-		onBlockade((1, 100))
-		self.assertEqual(self.iCount, 0)
+		city = TestCities.one()
 		
-		onBlockade((0, 100))
-		self.assertEqual(self.iCount, 100)
+		try:
+			onBlockade((1, city, 100))
+			self.assertEqual(self.iCount, 0)
+		
+			onBlockade((0, city, 100))
+			self.assertEqual(self.iCount, 100)
+		finally:
+			city.kill()
 		
 	def test_building_built(self):
 		onBuildingBuilt = self.get("buildingBuilt", self.capture)

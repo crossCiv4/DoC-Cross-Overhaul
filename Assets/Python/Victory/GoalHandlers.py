@@ -255,7 +255,7 @@ class EventHandlerRegistry(object):
 	def tradeMission(self, goal, applicable, func):
 		def tradeMission((iUnit, iPlayer, iX, iY, iGold)):
 			if applicable(goal, iPlayer):
-				func(goal, (iX, iY), iGold)
+				func(goal, iGold, (iX, iY))
 		
 		return tradeMission
 	

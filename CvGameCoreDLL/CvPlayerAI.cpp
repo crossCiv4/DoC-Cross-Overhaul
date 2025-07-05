@@ -9615,6 +9615,8 @@ int CvPlayerAI::AI_missionaryValue(CvArea* pArea, ReligionTypes eReligion, Playe
 	CvTeam& kTeam = GET_TEAM(getTeam());
 	CvGame& kGame = GC.getGame();
 
+	int iReligionFlavor = GC.getLeaderHeadInfo(getPersonalityType()).getFlavorValue((FlavorTypes)1);
+
 	int iSpreadInternalValue = 100;
 	int iSpreadExternalValue = 0;
 /************************************************************************************************/
@@ -9653,6 +9655,7 @@ int CvPlayerAI::AI_missionaryValue(CvArea* pArea, ReligionTypes eReligion, Playe
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
 	bool bStateReligion = (getStateReligion() == eReligion);
+	bool bProselytizing = GC.getReligionInfo(eReligion).isProselytizing();
 	if (bStateReligion)
 	{
 		iSpreadInternalValue += 1000;
@@ -9662,17 +9665,21 @@ int CvPlayerAI::AI_missionaryValue(CvArea* pArea, ReligionTypes eReligion, Playe
 		iSpreadInternalValue += (500 * getHasReligionCount(eReligion)) / std::max(1, getNumCities());
 	}
 
-	if (kTeam.hasHolyCity(eReligion))
+	// let religious leaders spread abroad even without holy city, account for proselytizing religions
+	if (kTeam.hasHolyCity(eReligion) || (bStateReligion && iReligionFlavor >= 2))
 	{
 		iSpreadInternalValue += bStateReligion ? 1000 : 200;
-		iSpreadExternalValue += bStateReligion ? 1000 : 0;
-		if (kTeam.hasShrine(eReligion))
+		iSpreadExternalValue += (bStateReligion && bProselytizing) ? 1000 : 0;
+		if (kTeam.hasShrine(eReligion) || (bStateReligion && iReligionFlavor >= 5))
 		{
 			iSpreadInternalValue += bStateReligion ? 1000 : 500;
-			iSpreadExternalValue += bStateReligion ? 600 : 100;
-			int iGoldMultiplier = kGame.getHolyCity(eReligion)->getTotalCommerceRateModifier(COMMERCE_GOLD);
-			iSpreadInternalValue += 10 * std::max(0, (iGoldMultiplier - 100));
-			iSpreadExternalValue += 5 * std::max(0, (iGoldMultiplier - 150));
+			iSpreadExternalValue += (bStateReligion && bProselytizing) ? 600 : 100;
+			if (kTeam.hasShrine(eReligion))
+			{
+				int iGoldMultiplier = kGame.getHolyCity(eReligion)->getTotalCommerceRateModifier(COMMERCE_GOLD);
+				iSpreadInternalValue += 10 * std::max(0, (iGoldMultiplier - 100));
+				iSpreadExternalValue += 5 * std::max(0, (iGoldMultiplier - 150));
+			}
 		}
 	}
 
@@ -9716,7 +9723,25 @@ int CvPlayerAI::AI_missionaryValue(CvArea* pArea, ReligionTypes eReligion, Playe
 						int iCitiesCount = 0;
 						int iCitiesHave = 0;
 						int iMultiplier = AI_isDoStrategy(AI_STRATEGY_MISSIONARY) ? 60 : 25;
-						if (!kLoopPlayer.isNoNonStateReligionSpread() || (kLoopPlayer.getStateReligion() == eReligion))
+
+						// Leoreth: account for spread chances to each city
+						int iLoop;
+						for (CvCity* pLoopCity = kLoopPlayer.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kLoopPlayer.nextCity(&iLoop))
+						{
+							if (NULL == pArea || pLoopCity->getArea() == pArea->getID())
+							{
+								if (getSpreadType(pLoopCity->plot(), eReligion) != RELIGION_SPREAD_NONE)
+								{
+									iCitiesCount += 1;
+									if (pLoopCity->isHasReligion(eReligion))
+									{
+										iCitiesHave += 1;
+									}
+								}
+							}
+						}
+
+						/*if (!kLoopPlayer.isNoNonStateReligionSpread() || (kLoopPlayer.getStateReligion() == eReligion))
 						{
 							if (NULL == pArea)
 							{
@@ -9729,7 +9754,7 @@ int CvPlayerAI::AI_missionaryValue(CvArea* pArea, ReligionTypes eReligion, Playe
 								iCitiesCount += pArea->getCitiesPerPlayer((PlayerTypes)iPlayer);
 								iCitiesHave += std::min(iCitiesCount, (iCitiesCount * iPlayerSpreadPercent) / 75);
 							}
-						}
+						}*/
 
 						if (kLoopPlayer.getStateReligion() == NO_RELIGION)
 						{
@@ -16028,7 +16053,7 @@ int CvPlayerAI::AI_getStrategyHash() const
                 //Missionary
                 iMissionary += AI_getFlavorValue(AI_FLAVOR_GROWTH) * 2; // up to 10
                 iMissionary += AI_getFlavorValue(AI_FLAVOR_CULTURE) * 4; // up to 40
-                iMissionary += AI_getFlavorValue(AI_FLAVOR_RELIGION) * 6; // up to 60
+                iMissionary += AI_getFlavorValue(AI_FLAVOR_RELIGION) * 12; // up to 120 // Leoreth: doubled impact
 
                 CivicTypes eCivic = (CivicTypes)GC.getLeaderHeadInfo(getPersonalityType()).getFavoriteCivic();
                 if ((eCivic != NO_CIVIC) && (GC.getCivicInfo(eCivic).isNoNonStateReligionSpread()))
@@ -16039,6 +16064,12 @@ int CvPlayerAI::AI_getStrategyHash() const
                 iMissionary += (iHolyCityCount - 1) * 5;
 
                 iMissionary += iMetCount * 7;
+
+				// Leoreth: let proselytizing religions lean into missionaries more
+				if (GC.getReligionInfo(getStateReligion()).isProselytizing())
+				{
+					iMissionary += 10;
+				}
 
                 for (iI = 0; iI < MAX_PLAYERS; iI++)
                 {

@@ -157,6 +157,8 @@ public:
 	void playerSwitch(PlayerTypes eOldPlayer, PlayerTypes eNewPlayer); // Leoreth
 	void techTraded(PlayerTypes eFrom, PlayerTypes eTo, TechTypes eTech); // Leoreth
 	void tribute(PlayerTypes eFrom, PlayerTypes eTo); // Leoreth
+	void globalWarming(int iGlobalWarmingValue, int iGlobalWarmingDefense); // Leoreth
+	void globalWarmingEffect(CvPlot* pPlot, bool bChanged, TerrainTypes ePreviousTerrain, TerrainTypes eNewTerrain, FeatureTypes ePreviousFeature); // Leoreth
 
 	DllExport void preSave();
 

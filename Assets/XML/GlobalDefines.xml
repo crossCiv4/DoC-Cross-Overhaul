@@ -743,7 +743,7 @@
 	</Define>
 	<Define>
 		<DefineName>GLOBAL_WARMING_UNHEALTH_WEIGHT</DefineName>
-		<iDefineIntVal>20</iDefineIntVal>
+		<iDefineIntVal>130</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>GLOBAL_WARMING_NUKE_WEIGHT</DefineName>

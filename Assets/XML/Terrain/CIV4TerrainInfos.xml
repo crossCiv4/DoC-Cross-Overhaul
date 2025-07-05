@@ -30,6 +30,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iBuildModifier>0</iBuildModifier>
 			<iDefense>0</iDefense>
+			<GlobalWarmingTerrainType>TERRAIN_PLAINS</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Grass.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -185,6 +186,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iBuildModifier>0</iBuildModifier>
 			<iDefense>0</iDefense>
+			<GlobalWarmingTerrainType>TERRAIN_SEMIDESERT</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Plains.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -338,6 +340,7 @@
 			<iBuildModifier>25</iBuildModifier>
 			<iDefense>0</iDefense>
 			<iCultureCost>15</iCultureCost>
+			<GlobalWarmingTerrainType>NONE</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Desert.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -491,6 +494,7 @@
 			<iBuildModifier>25</iBuildModifier>
 			<iDefense>0</iDefense>
 			<iCultureCost>10</iCultureCost>
+			<GlobalWarmingTerrainType>TERRAIN_MOORLAND</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Tundra.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -640,6 +644,7 @@
 			<iBuildModifier>50</iBuildModifier>
 			<iDefense>0</iDefense>
 			<iCultureCost>20</iCultureCost>
+			<GlobalWarmingTerrainType>TERRAIN_TUNDRA</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Ice.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -792,6 +797,7 @@
 			<iSeeThrough>0</iSeeThrough>
 			<iBuildModifier>0</iBuildModifier>
 			<iDefense>10</iDefense>
+			<GlobalWarmingTerrainType>NONE</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Coast.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -945,6 +951,7 @@
 			<iBuildModifier>0</iBuildModifier>
 			<iDefense>0</iDefense>
 			<iCultureCost>10</iCultureCost>
+			<GlobalWarmingTerrainType>NONE</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Ocean.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -1093,6 +1100,7 @@
 			<iSeeThrough>0</iSeeThrough>
 			<iBuildModifier>0</iBuildModifier>
 			<iDefense>0</iDefense>
+			<GlobalWarmingTerrainType>NONE</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Peak.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -1240,6 +1248,7 @@
 			<iSeeThrough>0</iSeeThrough>
 			<iBuildModifier>0</iBuildModifier>
 			<iDefense>0</iDefense>
+			<GlobalWarmingTerrainType>NONE</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Hill.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -1388,6 +1397,7 @@
 			<iBuildModifier>0</iBuildModifier>
 			<iDefense>0</iDefense>
 			<iCultureCost>5</iCultureCost>
+			<GlobalWarmingTerrainType>TERRAIN_PLAINS</GlobalWarmingTerrainType>
 			<Button>Art/Interface/Buttons/BaseTerrain/Marsh.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -1540,6 +1550,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iBuildModifier>50</iBuildModifier>
 			<iDefense>50</iDefense>
+			<GlobalWarmingTerrainType>NONE</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Coast.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -1693,6 +1704,7 @@
 			<iBuildModifier>0</iBuildModifier>
 			<iDefense>10</iDefense>
 			<iCultureCost>5</iCultureCost>
+			<GlobalWarmingTerrainType>NONE</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Coast.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -1849,6 +1861,7 @@
 			<iBuildModifier>25</iBuildModifier>
 			<iDefense>0</iDefense>
 			<iCultureCost>5</iCultureCost>
+			<GlobalWarmingTerrainType>TERRAIN_DESERT</GlobalWarmingTerrainType>
 			<Button>Art/Interface/Buttons/BaseTerrain/Semidesert.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -2002,6 +2015,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iBuildModifier>25</iBuildModifier>
 			<iDefense>0</iDefense>
+			<GlobalWarmingTerrainType>TERRAIN_DESERT</GlobalWarmingTerrainType>
 			<Button>Art/Interface/Buttons/BaseTerrain/Steppe.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -2157,6 +2171,7 @@
 			<iBuildModifier>0</iBuildModifier>
 			<iDefense>0</iDefense>
 			<iCultureCost>5</iCultureCost>
+			<GlobalWarmingTerrainType>TERRAIN_PLAINS</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Plains.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -2311,6 +2326,7 @@
 			<iBuildModifier>25</iBuildModifier>
 			<iDefense>0</iDefense>
 			<iCultureCost>20</iCultureCost>
+			<GlobalWarmingTerrainType>NONE</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_SaltFlat.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -2464,6 +2480,7 @@
 			<iSeeThrough>0</iSeeThrough>
 			<iBuildModifier>0</iBuildModifier>
 			<iDefense>0</iDefense>
+			<GlobalWarmingTerrainType>NONE</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\BaseTerrain\SaltLake.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -2616,6 +2633,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iBuildModifier>100</iBuildModifier>
 			<iDefense>0</iDefense>
+			<GlobalWarmingTerrainType>NONE</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Coast.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>
@@ -2770,6 +2788,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iBuildModifier>0</iBuildModifier>
 			<iDefense>0</iDefense>
+			<GlobalWarmingTerrainType>TERRAIN_SEMIDESERT</GlobalWarmingTerrainType>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Grass.dds</Button>
 			<FootstepSounds>
 				<FootstepSound>

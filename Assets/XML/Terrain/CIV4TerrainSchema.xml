@@ -33,6 +33,7 @@
 	<ElementType name="iDefense" content="textOnly" dt:type="int"/>
 	<ElementType name="iCultureCost" content="textOnly" dt:type="int"/>
 	<ElementType name="Button" content="textOnly"/>
+	<ElementType name="GlobalWarmingTerrainType" content="textOnly"/> <!-- Leoreth -->
 	<ElementType name="FootstepAudioType" content="textOnly"/>
 	<ElementType name="FootstepAudioScript" content="textOnly"/>
 	<ElementType name="FootstepSound" content="eltOnly">
@@ -65,6 +66,7 @@
 		<element type="iBuildModifier"/>
 		<element type="iDefense"/>
 		<element type="iCultureCost" minOccurs="0"/>
+		<element type="GlobalWarmingTerrainType"/> <!-- Leoreth -->
 		<element type="Button"/>
 		<element type="FootstepSounds"/>
 		<element type="WorldSoundscapeAudioScript" minOccurs="0"/>
@@ -121,6 +123,7 @@
 	<ElementType name="iDisappearance" content="textOnly" dt:type="int"/>
 	<ElementType name="iGrowth" content="textOnly" dt:type="int"/>
 	<ElementType name="iTurnDamage" content="textOnly" dt:type="int"/>
+	<ElementType name="iGlobalWarmingDefense" content="textOnly" dt:type="int"/> <!-- Leoreth -->
 	<ElementType name="bNoCoast" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoRiver" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoAdjacent" content="textOnly" dt:type="boolean"/>
@@ -161,6 +164,7 @@
 		<element type="iDisappearance"/>
 		<element type="iGrowth"/>
 		<element type="iTurnDamage"/>
+		<element type="iGlobalWarmingDefense" minOccurs="0"/> <!-- Leoreth -->
 		<element type="bMakesPassable" minOccurs="0"/> <!-- Leoreth -->
 		<element type="bNoCoast"/>
 		<element type="bNoRiver"/>

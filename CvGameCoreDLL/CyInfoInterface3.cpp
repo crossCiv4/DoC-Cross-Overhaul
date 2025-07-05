@@ -33,6 +33,7 @@ void CyInfoPythonInterface3()
 		.def("getSeeThroughLevel", &CvTerrainInfo::getSeeThroughLevel, "int ()")
 		.def("getBuildModifier", &CvTerrainInfo::getBuildModifier, "int ()")
 		.def("getDefenseModifier", &CvTerrainInfo::getDefenseModifier, "int ()")
+		.def("getGlobalWarmingTerrainType", &CvTerrainInfo::getGlobalWarmingTerrainType, "int ()")
 
 		.def("isWater", &CvTerrainInfo::isWater, "bool ()")
 		.def("isImpassable", &CvTerrainInfo::isImpassable, "bool ()")
