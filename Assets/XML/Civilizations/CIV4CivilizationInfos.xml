@@ -1500,6 +1500,10 @@
 					<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
 					<UnitType>UNIT_CHINESE_CHOKONU</UnitType>
 				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_HORSEMAN</UnitClassType>
+					<UnitType>UNIT_QIN_HORSEMAN</UnitType>
+				</Unit>	
 			</Units>
 			<FreeUnitClasses>
 				<FreeUnitClass>
