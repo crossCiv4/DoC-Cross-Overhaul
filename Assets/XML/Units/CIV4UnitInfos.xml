@@ -13472,7 +13472,7 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_RANGED</FormationType>
 		</UnitInfo>
-			<UnitInfo>
+		<UnitInfo>
 			<Class>UNITCLASS_CROSSBOWMAN</Class>
 			<Type>UNIT_BYZANTINE_CROSSBOWMAN</Type>
 			<Combat>UNITCOMBAT_ARCHER</Combat>
