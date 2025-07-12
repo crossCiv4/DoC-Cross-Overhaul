@@ -1608,6 +1608,10 @@
 			</Buildings>
 			<Units>
 				<Unit>
+					<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
+					<UnitType>UNIT_CHINESE_CHOKONU</UnitType>
+				</Unit>
+				<Unit>
 					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
 					<UnitType>UNIT_CHINESE_FIRELANCER</UnitType>
 				</Unit>
