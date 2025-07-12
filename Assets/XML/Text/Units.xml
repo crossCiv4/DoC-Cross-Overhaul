@@ -3977,11 +3977,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAPANESE_ASHIGARU</Tag>
-		<English>Ashigaru</English>
-		<French>Ashigaru</French>
-		<German>Ashigaru</German>
-		<Italian>Ashigaru</Italian>
-		<Spanish>Ashigaru</Spanish>
+		<English>Naginata Ashigaru</English>
+		<French>Naginata Ashigaru</French>
+		<German>Naginata Ashigaru</German>
+		<Italian>Naginata Ashigaru</Italian>
+		<Spanish>Naginata Ashigaru</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAN_BANNERMAN_MUSKETEER</Tag>
@@ -4182,6 +4182,14 @@
 		<German>Hiya Taihou</German>
 		<Italian>Hiya Taihou</Italian>
 		<Spanish>Hiya Taihou</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_JAPAN_ARQUEBUSIER</Tag>
+		<English>Matchlock Ashigaru</English>
+		<French>Matchlock Ashigaru</French>
+		<German>Matchlock Ashigaru</German>
+		<Italian>Matchlock Ashigaru</Italian>
+		<Spanish>Matchlock Ashigaru</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAPAN_LONGBOWMAN</Tag>

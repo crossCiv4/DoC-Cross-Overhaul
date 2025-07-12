@@ -1256,7 +1256,7 @@ iTranshumanism) = range(iNumTechs)
 
 # initialise unit variables to unit indices from XML
 
-iNumUnits = 285
+iNumUnits = 286
 (iLion, iBear, iPanther, iWolf, iSettler, iCityBuilder, iPioneer, iWorker, iRomanWorker, iPunjabiWorker, iLabourer, 
 iMadeireiro, iScout, iIncenseMerchant, iExplorer, iBandeirante, iSpy, iReligiousPersecutor, iJewishMissionary, iOrthodoxMissionary, iCatholicMissionary, iProtestantMissionary, 
 iIslamicMissionary, iShiaMissionary, iHinduMissionary, iBuddhistMissionary, iConfucianMissionary, iShuConfucianMissionary, iTaoistMissionary, iZoroastrianMissionary, iMarxismMissionary, iWarrior, iNativeWarrior, iMilitia, iXiaLevy, iAxeman, 
@@ -1264,7 +1264,7 @@ iLightSwordsman, iPrincipes, iMycenaeanMyrmidon, iVulture, iDogSoldier, iOathswo
 iShotelai, iHeavySwordsman, iGallowglass, iSamurai, iHuscarl, iDruzhina, iPombos, iSpearman, iTriarii, iPhalanx, iAzmaru, iHoplite, 
 iSacredBand, iImmortal, iNativeRaider, iImpi, iHeavySpearman, iGhuridVeteranSpears, iThematicSpearman, iTagmata, iKyundaw, 
 iPikeman, iEarlyTercio, iNaginataAshigaru, iLandsknecht, 
-iArquebusier, iHadjuk, iMauritianArquebusier, iNewModelArmy, iFreeCityLeaguesman, iMousquetaire, iFirelancer, iTercio, 
+iArquebusier, iMatchlockAshigaru, iHadjuk, iMauritianArquebusier, iNewModelArmy, iFreeCityLeaguesman, iMousquetaire, iFirelancer, iTercio, 
 iStrelets, iJanissary, iOromoWarrior, iQizilbash, iMohawkCatholic, iMohawkProtestant, iOmaniSlaver, 
 iMusketeer, iBlueGuards, iFrenchGuards, iJanissaryLate, iHanBannerman, iRedcoat, iCarolean, iFusilier, iRifleman, 
 iMehalSefari, iGrenadier, iRocketeer, iGrenzer, iAlbionLegion, iInfantry, iVietCong, iAssaultInfantry, iSamInfantry, iMobileSam, iMarine, 

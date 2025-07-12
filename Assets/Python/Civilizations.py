@@ -1970,7 +1970,7 @@ dAIAlwaysTrain = CivDict({
 }, [])
 
 dNeverTrain = CivDict({
-	iYamato: [iCrossbowman],
+	iYamato: [iCrossbowman, iArquebusier],
 	iJapan: [iCrossbowman],
 	iOttomans: [iCrossbowman],
 	iCongo: [iCrossbowman],
