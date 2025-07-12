@@ -4175,13 +4175,13 @@
 		<Italian>Tiger and Leopard Cavalry</Italian>
 		<Spanish>Tiger and Leopard Cavalry</Spanish>
 	</TEXT>
-
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_</Tag>
-		<English></English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
+		<Tag>TXT_KEY_UNIT_JAPAN_LONGBOWMAN</Tag>
+		<English>Samurai Longbowman</English>
+		<French>Archer samouraï</French>
+		<German>Samurai-Langbogenschütze</German>
+		<Italian>Arciere samurai</Italian>
+		<Spanish>Arqueros samuráis</Spanish>
 	</TEXT>
+
 </Civ4GameText>

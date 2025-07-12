@@ -1256,7 +1256,7 @@ iTranshumanism) = range(iNumTechs)
 
 # initialise unit variables to unit indices from XML
 
-iNumUnits = 283
+iNumUnits = 284
 (iLion, iBear, iPanther, iWolf, iSettler, iCityBuilder, iPioneer, iWorker, iRomanWorker, iPunjabiWorker, iLabourer, 
 iMadeireiro, iScout, iIncenseMerchant, iExplorer, iBandeirante, iSpy, iReligiousPersecutor, iJewishMissionary, iOrthodoxMissionary, iCatholicMissionary, iProtestantMissionary, 
 iIslamicMissionary, iShiaMissionary, iHinduMissionary, iBuddhistMissionary, iConfucianMissionary, iShuConfucianMissionary, iTaoistMissionary, iZoroastrianMissionary, iMarxismMissionary, iWarrior, iNativeWarrior, iMilitia, iXiaLevy, iAxeman, 
@@ -1270,7 +1270,7 @@ iMusketeer, iBlueGuards, iFrenchGuards, iJanissaryLate, iHanBannerman, iRedcoat,
 iMehalSefari, iGrenadier, iRocketeer, iGrenzer, iAlbionLegion, iInfantry, iVietCong, iAssaultInfantry, iSamInfantry, iMobileSam, iMarine, 
 iNavySeal, iParatrooper, iMechanizedInfantry, iArcher, iWestEuroArcher, iByzantineArcher, iNanmanArcher, iAsharittuBowman, iMedjay, iNativeArcher, iSkirmisher, iVishap, iHolkan, iAtlatl, 
 iKelebolo, 
-iLongbowman, iThematicBowman, iJanissaryBow, iPatiyodha, iRattanArcher, iCrossbowman, iByzantineCrossbowman, iNaffatun, iChokonu, iBalestriere, iGrenadineCrossbowman, iChariot, iWarChariot, iHuluganni, 
+iLongbowman, iSamuraiLongbowman, iThematicBowman, iJanissaryBow, iPatiyodha, iRattanArcher, iCrossbowman, iByzantineCrossbowman, iNaffatun, iChokonu, iBalestriere, iGrenadineCrossbowman, iChariot, iWarChariot, iHuluganni, 
 iCidainh, iHorseman, iTigerLeopardCavalry, iHausaCavalry, iCompanion, iNumidianCavalry, iAsvaka, iBerberFaris, iCamelRider, iCamelLancer, iHorseArcher, iMountedCrossbowman, iKonnik, iMangudai, iKhampa, iOghuz, 
 iCamelArcher, iZaydiTribesman, iTemplar, iLancer, iKhazarNobleLancer, iMamlukCavalry, iSavaran, iFarari, iMobileGuard, iKeshik, iCataphract, iChangSuek, iPistolier, iManchuHorseArcher, 
 iHakkapeliitta, iMountedBrave, iCamelGunner, iZamburak, iCuirassier, iGendarme, iConquistador, iWingedHussar, iSowar, iHussar, iCossack, 
