@@ -4176,6 +4176,14 @@
 		<Spanish>Tiger and Leopard Cavalry</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_FIRE_CANNON</Tag>
+		<English>Hiya Taihou</English>
+		<French>Hiya Taihou</French>
+		<German>Hiya Taihou</German>
+		<Italian>Hiya Taihou</Italian>
+		<Spanish>Hiya Taihou</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAPAN_LONGBOWMAN</Tag>
 		<English>Samurai Longbowman</English>
 		<French>Archer samouraï</French>

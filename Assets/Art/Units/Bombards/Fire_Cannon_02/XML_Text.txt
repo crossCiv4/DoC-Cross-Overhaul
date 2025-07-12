@@ -1,0 +1,23 @@
+For the Fire Arrow effect this goes in the effects XML file.
+
+Assets\XML\Misc\CIV4EffectInfos.xml:
+----------------------------------------------------------------------------
+
+		<!-- Japanese_Fire_Arrow:-->
+		<EffectInfo>
+			<Type>EFFECT_FIRE_ARROW</Type>
+			<Description>Japanese Fire Arrow</Description>
+			<fScale>1.0</fScale>
+			<fUpdateRate>1.0</fUpdateRate>
+			<Path>Art/Units/Fire_Cannon_02/Fire_Arrow.kfm</Path>
+			<bIsProjectile>1</bIsProjectile>
+			<fSpeed>350.0</fSpeed>
+			<fArcValue>2.0</fArcValue>
+		</EffectInfo>
+
+----------------------------------------------------------------------------
+And the art defines....
+
+<NIF>Art/Units/Fire_Cannon/Fire_Cannon.nif</NIF>
+			<KFM>Art/Units/Fire_Cannon_02/Fire_Cannon.kfm</KFM>
+			<SHADERNIF>Art/Units/Fire_Cannon_02/Fire_Cannon.nif</SHADERNIF>
