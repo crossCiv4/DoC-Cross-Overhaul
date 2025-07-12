@@ -2647,7 +2647,7 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
-			<UnitInfo>
+		<UnitInfo>
 			<Class>UNITCLASS_MILITIA</Class>
 			<Type>UNIT_XIA_LEVY</Type>
 			<Combat>UNITCOMBAT_MELEE</Combat>
