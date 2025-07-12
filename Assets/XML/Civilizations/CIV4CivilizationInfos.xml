@@ -3732,6 +3732,10 @@
 					<UnitType>UNIT_JAPAN_LONGBOWMAN</UnitType>
 				</Unit>
 				<Unit>
+					<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
+				<Unit>
 					<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
 					<UnitType>UNIT_FIRE_CANNON</UnitType>
 				</Unit>
@@ -8427,6 +8431,14 @@
 				<Unit>
 					<UnitClassType>UNITCLASS_LONGBOWMAN</UnitClassType>
 					<UnitType>UNIT_JAPAN_LONGBOWMAN</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_CROSSBOWMAN</UnitClassType>
+					<UnitType>NONE</UnitType>
+				</Unit>
+				<Unit>
+					<UnitClassType>UNITCLASS_ARQUEBUSIER</UnitClassType>
+					<UnitType>NONE</UnitType>
 				</Unit>
 				<Unit>
 					<UnitClassType>UNITCLASS_BOMBARD</UnitClassType>
