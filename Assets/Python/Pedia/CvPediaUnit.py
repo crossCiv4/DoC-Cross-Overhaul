@@ -152,7 +152,7 @@ class CvPediaUnit:
 		iUnitClass = gc.getUnitInfo(self.iUnit).getUnitClassType()
 		iBaseUnit = gc.getUnitClassInfo(iUnitClass).getDefaultUnitIndex()
 		
-		if self.iUnit != iBaseUnit:
+		if self.iUnit != iBaseUnit and self.iUnit != iUnitNone:
 			screen.attachImageButton(panel, "", gc.getUnitInfo(iBaseUnit).getButton(), GenericButtonSizes.BUTTON_SIZE_CUSTOM, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, iBaseUnit, 1, False)
 			return
 		

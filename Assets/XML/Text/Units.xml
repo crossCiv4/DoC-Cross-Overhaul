@@ -4192,6 +4192,15 @@
 		<Spanish>Matchlock Ashigaru</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_NO_UNIT</Tag>
+		<English>No Unit</English>
+		<French>No Unit</French>
+		<German>No Unit</German>
+		<Italian>No Unit</Italian>
+		<Spanish>No Unit</Spanish>
+	</TEXT>
+	
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAPAN_LONGBOWMAN</Tag>
 		<English>Samurai Longbowman</English>
 		<French>Archer samouraï</French>
