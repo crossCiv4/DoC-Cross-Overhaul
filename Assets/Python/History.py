@@ -210,6 +210,8 @@ def checkEarlyColonists():
 		elif year() == year(-750) - offset:
 			giveEarlyColonists(iGreece)
 			giveEarlyColonists(iPhoenicia, tGades)
+		elif year() == year(-700) - offset:
+			giveEarlyColonists(iGreece)
 		
 @handler("BeginGameTurn")
 def checkLateColonists():
