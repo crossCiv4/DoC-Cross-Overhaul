@@ -302,7 +302,7 @@ lCivilizations = [
 		iGold=250,
 		iAdvancedStartPoints=100,
 		lCivics=[iDespotism, iSlavery, iRedistribution, iDeification],
-		techs=techs.column(4).without(iShipbuilding, iNavigation, iCement)
+		techs=techs.column(4).without(iShipbuilding, iNavigation, iCement, iRiding)
 	),
 	Civilization(
 		iRome,
