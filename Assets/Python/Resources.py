@@ -330,7 +330,7 @@ dFeaturesDict = {
 dRemovedFeaturesDict = {
 	(90, 44)  : -550, # Mesopotamia
 	(90, 45)  : -550, # Mesopotamia
-	(69, 56)  : 400,  # Venice
+	#(69, 56)  : 400,  # Venice
 	(80, 37)  : 550,  # Nubia
 	(81, 39)  : 550,  # Nubia
 	(81, 38)  : 550,  # Nubia

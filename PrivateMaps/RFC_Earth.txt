@@ -30865,7 +30865,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=56
-	FeatureType=FEATURE_MARSH, FeatureVariety=0
 	TerrainType=TERRAIN_LAGOON
 	PlotType=2
 EndPlot
