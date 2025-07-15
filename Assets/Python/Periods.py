@@ -144,7 +144,7 @@ def onResurrection(iPlayer):
 		setPeriod(iCiv, iPeriodUkraine)
 
 	elif iCiv == iZulu:
-		if year() >= year(1950):
+		if year() >= year(1950) or player(iPlayer).getCurrentEra() >= iGlobal:
 			setPeriod(iCiv, iPeriodSouthAfrica)
 
 	elif iCiv == iTimurids:

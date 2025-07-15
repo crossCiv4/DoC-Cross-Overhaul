@@ -130,7 +130,7 @@ tConquestSuiUnification = (18, iChina, iChinaS, tSouthChinaTL, tSouthChinaBR, 5,
 
 iArabCarthageConquestYear = 670
 tTunisiaTL = (66, 44)
-tTunisiaBR = (75, 48)
+tTunisiaBR = (75, 47)
 
 # now includes Benghazi
 tConquestArabiaCarthage = (23, iArabia, iPhoenicia, tTunisiaTL, tTunisiaBR, 3, iArabCarthageConquestYear, 15)

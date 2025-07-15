@@ -811,7 +811,7 @@ dUnitCostMods = CivDict({
 	iMinoans: 120,
 	iMacedon: 95,
 	iAssyria: 120,
-	iIndia: 120,
+	iIndia: 140,
 	iPhoenicia: 125,
 	iPolynesia: 100,
 	iPersia: 125,

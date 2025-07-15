@@ -65,7 +65,7 @@ def zuluSpecificName(args):
 		if year() >= year(1950):
 			return "TXT_KEY_CIV_ZULU_SOUTH_AFRICA"
 		else:
-			return "TXT_KEY_CIV_ZULU_SHORT_DESC"
+			return "TXT_KEY_CIV_ZULU_NAME"
 	else:
 		return "TXT_KEY_CIV_ZULU_ZIMBABWE"
 
