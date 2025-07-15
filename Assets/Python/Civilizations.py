@@ -292,7 +292,7 @@ lCivilizations = [
 	),
 	Civilization(
 		iMacedon,
-		iGold=50,
+		iGold=100,
 		iAdvancedStartPoints=100,
 		lCivics=[iMonarchy, iRedistribution, iSlavery, iDeification, iStratocracy],
 		techs=techs.column(4).without(iCement, iNavigation, iShipbuilding)
@@ -306,7 +306,7 @@ lCivilizations = [
 	),
 	Civilization(
 		iRome,
-		iGold=200,
+		iGold=300,
 		iAdvancedStartPoints=300,
 		lCivics=[iRepublic, iSlavery, iCitizenship, iRedistribution, iHegemony],
 		techs=techs.column(4).including(iLaw).without(iRiding, iShipbuilding, iNavigation)
@@ -881,11 +881,12 @@ dStartingUnits = CivDict({
 		iCounter: 6,
 	},
 	iMacedon: {
-		iSettle: 1,
+		iSettle: 2,
 		iWork: 2,
 		iDefend: 3,
+		iSkirmish: 2,
 		iCounter: 3,
-		iShock: 2,
+		iShock: 3,
 		iSiege: 1,
 	},
 	iCelts: {
@@ -908,8 +909,8 @@ dStartingUnits = CivDict({
 	iRome: {
 		iSettle: 3,
 		iWork: 3,
-		iCounter: 2,
-		iSkirmish: 2,
+		iCounter: 3,
+		iSkirmish: 3,
 		iAttack: 8,
 		iSiege: 4,
 		iFerry: 1,
@@ -966,7 +967,7 @@ dStartingUnits = CivDict({
 		iSettle: 3,
 		iWork: 3,
 		iDefend: 2,
-		iShockCity: 5,
+		iShockCity: 4,
 		iCityAttack: 2,
 		iSkirmish: 2,
 		iCitySiege: 2,

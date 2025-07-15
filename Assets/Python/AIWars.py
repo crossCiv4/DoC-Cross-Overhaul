@@ -15,8 +15,8 @@ iThreshold = 100
 iMinValue = 30
 
 iRomeCarthageYear = -200
-tRomeCarthageTL = (60, 44)
-tRomeCarthageBR = (70, 49)
+tRomeCarthageTL = (66, 44)
+tRomeCarthageBR = (69, 49)
 
 tRomeSpainTL = (56, 48)
 tRomeSpainBR = (61, 53)
@@ -265,9 +265,15 @@ tChinaMiddleTL = (126, 48)
 tChinaMiddleBR = (129, 51)
 tConquestManchuCentralCoastalChina = (51, iManchu, iChinaS, tChinaMiddleTL, tChinaMiddleBR, 2, iManchuTaiwanYear, 10)
 
+tRomeNumidiaYear = -150
+tRomeNumidiaTL = (59, 45)
+tRomeNumidiaBR = (65, 49)
+tConquestRomeNumidia = (52, iRome, iPhoenicia, tRomeNumidiaTL, tRomeNumidiaBR, 2, tRomeNumidiaYear, 10)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
+	tConquestRomeNumidia,
 	tConquestRomeGreece, 
 	tConquestRomeAnatolia,
 	tConquestRomeLevant, 
@@ -327,6 +333,7 @@ dConquestChecker = {
 	tConquestRomeLevant[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeGreece),
 	tConquestRomeEgypt[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeGreece),
 	tConquestRomeCarthage[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeCarthageInSpain),
+	tConquestRomeNumidia[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeCarthage),
 	tConquestRomeBritain[0]: lambda tConquest: checkConquest(tConquest, tConquestRomeCelts),
 	tConquestArabiaSind[0]: lambda tConquest: checkConquest(tConquest, tConquestArabiaPersia),
 	tConquestByzantiumCarthage[0]: lambda tConquest: checkByzantiumConquestOfCarthage(tConquest),
@@ -630,10 +637,17 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 			lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
 
 		elif iCiv == iRome:
-			lUnits  = makeUnits(iPlayer, iLegion, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
-			lUnits += makeUnits(iPlayer, iBallista, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
-			lUnits += makeUnits(iPlayer, iHorseman, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
-			lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
+			if team(iPlayer).isHasTech(iGeneralship):
+				lUnits = makeUnits(iPlayer, iLegion, tPlot, 3, UnitAITypes.UNITAI_ATTACK_CITY)
+				lUnits += makeUnits(iPlayer, iBallista, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+				lUnits += makeUnits(iPlayer, iHorseman, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+				lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
+			else:
+				lUnits = makeUnits(iPlayer, iPrincipes, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+				lUnits += makeUnits(iPlayer, iTriarii, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+				lUnits += makeUnits(iPlayer, iBallista, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+				lUnits += makeUnits(iPlayer, iSkirmisher, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+				lUnits.promotion(infos.type("PROMOTION_CITY_RAIDER1"))
 
 		else:
 			dConquestUnits = {

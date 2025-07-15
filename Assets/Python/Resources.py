@@ -96,6 +96,7 @@ dResourcesDict = {
 	(82, 40)  : (900,   iIron),		# Egypt
 	(101, 50) : (900,   iHorse),	# Punjab
 	(67, 46)  : (900,   iHorse),	# Tunis
+	(58, 44)  : (1060,  iDates),	# Morocco
 	(74, 55)  : (1000,  iSheep),	# Bulgaria
 	(73, 25)  : (1000,  iBanana),   # Congo
 	(70, 30)  : (1000,  iBanana),   # Cameroon
@@ -363,12 +364,13 @@ dConquerorPlotTypesDict = {
 }
 
 dCivGroupResourcesDict = {
-	(63, 56) : (iCivGroupMediterranean, iOlives, 600),
-	(62, 55) : (iCivGroupMediterranean, iWine, 600),
-	(60, 56) : (iCivGroupMediterranean, iWine, 600),
-	(63, 59) : (iCivGroupMediterranean, iWine, 600),
-	(65, 60) : (iCivGroupMediterranean, iWine, 600),
-	(71, 59) : (iCivGroupMediterranean, iWine, 600),
+	(56, 44) : (iCivGroupMediterranean, iWine, 450),
+	(63, 56) : (iCivGroupMediterranean, iOlives, 450),
+	(62, 55) : (iCivGroupMediterranean, iWine, 450),
+	(60, 56) : (iCivGroupMediterranean, iWine, 450),
+	(63, 59) : (iCivGroupMediterranean, iWine, 450),
+	(65, 60) : (iCivGroupMediterranean, iWine, 450),
+	(71, 59) : (iCivGroupMediterranean, iWine, 450),
 }
 
 
