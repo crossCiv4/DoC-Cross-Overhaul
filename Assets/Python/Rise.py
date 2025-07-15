@@ -24,7 +24,7 @@ MainOpt = BugCore.game.MainInterface
 # ]
 
 sExpansionCivs = set([
-	#iPersia,
+	iPersia,
 	#iIndia,
 	#iMacedon,
 	iRome,
@@ -40,10 +40,10 @@ sExpansionCivs = set([
 	iAztecs,
 	iGhorids,
 	#iChina,
-	#iAssyria,
+	iAssyria,
 	iFranks,
 	iEngland,
-	#iBuyids,
+	iBuyids,
 	#iManchu,
 	#iHungary,
 ])
@@ -120,6 +120,7 @@ sBirthWars = set([
 	(iBuyids, iArabia),
 	(iManchu, iChina),
 	(iManchu, iChinaS),
+	(iKushans, iIndia),
 ])
 
 
@@ -312,10 +313,16 @@ def createExpansionArmies(bWar, iAttacker, iDefender):
 
 
 def createExpansionUnits(iAttacker, iDefender, tile, closest, iExtraAI, iExtraTargets):
-		dExpansionUnits = {
-			iAttack: 2 + iExtraAI + iExtraTargets,
-			iSiege: 1 + 2*iExtraAI + iExtraTargets,
-		}
+		if civ(iAttacker) in sOffensiveSpearCivs:
+			dExpansionUnits = {
+				iCounter: 2 + iExtraAI + iExtraTargets,
+				iSiege: 1 + 2*iExtraAI + iExtraTargets,
+			}
+		else:
+			dExpansionUnits = {
+				iAttack: 2 + iExtraAI + iExtraTargets,
+				iSiege: 1 + 2*iExtraAI + iExtraTargets,
+			}
 		createRoleUnits(iAttacker, tile, dExpansionUnits.items())
 		
 		message(iDefender, "TXT_KEY_MESSAGE_EXPANSION_UNITS", player(iAttacker).getCivilizationDescription(0), closest.getName(), color=iRed, location=tile, button=infos.civ(player(iAttacker).getCivilizationType()).getButton())
