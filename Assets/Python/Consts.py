@@ -15,6 +15,7 @@ iNumPlayers = gc.getMAX_PLAYERS()
 # civilizations, not players
 # also increment iNUmCivs in DrawMaps.py (and add the civ identifier in the list as well)
 # also increment NUM_CIVS in CvRhyes.h
+# NUM_CIVS is iNumCivs - 5 (the 5 are indy1, indy2, native, minor, barbarian)
 iNumCivs = 90
 (iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iBuyids, iByzantium, iCanada, 
 iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iFranks, iGermany, iGhorids,
