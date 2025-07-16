@@ -57,7 +57,7 @@ iMongols :		(119, 61), # Karakorum
 iAztecs :		(17, 43), # Tenochtitlan
 iTimurids:       (100, 55), # Samarkand
 iRussia :		(85, 66), # Moscow
-iOttomans : 	(80, 53), # Sogut
+iOttomans : 	(81, 53), # Sogut
 iThailand : 	(119, 37), # Ayutthaya
 iSweden : 		(73, 71), # Birka
 iCongo : 		(71, 25), # Mbanza Kongo

@@ -1390,7 +1390,6 @@ dStartingUnits = CivDict({
 		iMissionary: 3,
 	},
 	iOttomans: {
-		iSettle: 3,
 		iWork: 3,
 		iAttack: 4,
 		iSkirmish: 6,
