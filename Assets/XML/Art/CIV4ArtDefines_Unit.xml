@@ -11267,7 +11267,7 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_FIRE_CANNON</Type>
 			<Button>Art/Units/Bombards/Fire_Cannon_02/btn_fire_cannon.dds</Button>
-			<fScale>0.40</fScale>
+			<fScale>0.53</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
