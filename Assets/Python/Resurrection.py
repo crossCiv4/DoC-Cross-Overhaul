@@ -326,13 +326,19 @@ def getResurrectionTechs(iPlayer):
 		
 	for iTech in range(iNumTechs):
 			
-		# at least half of the source civs know this technology
+		# usually requires half of the civs to have the tech
+		# but some civs have different ratios
+		iCountRatio = 2
+		# colonial western civs should be more advanced
+		if iCiv in [iSpain, iFrance, iEngland, iNetherlands, iPortugal]:
+			iCountRatio = 3
+
 		iCount = 0
 		for iOtherPlayer in sSourcePlayers:
 			if team(iOtherPlayer).isHasTech(iTech):
 				iCount += 1
 				
-		if 2 * iCount >= len(sSourcePlayers):
+		if iCountRatio * iCount >= len(sSourcePlayers):
 			lTechList.append(iTech)
 			
 	return lTechList
