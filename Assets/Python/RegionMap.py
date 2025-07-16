@@ -32,7 +32,7 @@ def init():
 tSpreadFactors = (
 # Judaism
 {
-	iMinority :	set([rBritain, rFrance, rIberia, rItaly, rLowerGermany, rCentralEurope, rBalkans, rGreece, rPoland, rRuthenia, rLevant, rMesopotamia, rAnatolia, rCaucasus, rArabia, rEgypt, rMaghreb, rPersia, rEthiopia, rAtlanticSeaboard, rMidwest, rCalifornia, rOntario, rQuebec, rMaritimes, rYemenOman])
+	iMinority :	set([rBritain, rFrance, rIberia, rItaly, rLowerGermany, rCentralEurope, rBalkans, rGreece, rPoland, rRuthenia, rLevant, rMesopotamia, rAnatolia, rCaucasus, rArabia, rEgypt, rMaghreb, rPersia, rEthiopia, rAtlanticSeaboard, rMidwest, rCalifornia, rOntario, rQuebec, rMaritimes, rYemenOman]),
 },
 # Orthodoxy
 {
@@ -53,7 +53,7 @@ tSpreadFactors = (
 	iCore :			set([rBritain, rLowerGermany, rDenmark, rNorway, rSweden, rAtlanticSeaboard, rMidwest, rOntario, rGreatPlains, rDeepSouth, rMaritimes]),
 	iHistorical :	set([rBaltics, rCalifornia, rCascadia, rAmericanArctic, rAustralia]),
 	iPeriphery :	set([rFrance, rOceania, rCape, rZambezi, rSahel, rSwahiliCoast]),
-	iMinority : 	set([rPoland, rCentralEurope, rBrazil, rKorea, rSouthChina])
+	iMinority : 	set([rPoland, rCentralEurope, rBrazil, rKorea, rSouthChina]),
 },
 # Islam
 {
@@ -103,8 +103,8 @@ tSpreadFactors = (
 # Marxism
 {
 	iCore : 		set([rLowerGermany, rRuthenia, rRussia]),
-	iHistorical : 	set([rFrance, rBritain, rIreland, rCentralEurope, rBalkans, rDenmark, rBaltics, rBrazil, rNewGranada, rQuebec, rSwahiliCoast, rNorthChina, rSouthChina, rManchuria, rSiberia, rIberia, rMongolia, rCaucasus, rGreatLakes, rPoland, rDravida, rCrimea]),
-	iPeriphery : 	set([rNorway, rSweden, rCaribbean, rAtlanticSeaboard, rCalifornia, rMidwest, rOntario, rSahel, rHornOfAfrica, rHindustan, rAndes, rCongo, rGreece, rPunjab, rSindh, rAridoamerica, rMaghreb, rIndonesia, rKhorasan, rDeccan, rLevant, rCascadia]),
-	iMinority : 	set([rJapan, rPhilippines, rPersia, rHinduKush, rEgypt, rAnatolia, rAustralia, rMesoamerica, rDeepSouth, rTarimBasin, rArabia, rTibet, rYemenOman, rRajputana, rNubia, rMaritimes, rAmericanArctic, rCape]),
+	iHistorical : 	set([rFrance, rBritain, rIreland, rCentralEurope, rBalkans, rDenmark, rBaltics, rBrazil, rNewGranada, rQuebec, rSwahiliCoast, rNorthChina, rSouthChina, rManchuria, rIberia, rMongolia, rCaucasus, rGreatLakes, rPoland, rDravida, rCrimea, rIndochina, rMesoamerica, rCentralAmerica]),
+	iPeriphery : 	set([rNorway, rSweden, rCaribbean, rAtlanticSeaboard, rCalifornia, rMidwest, rOntario, rSahel, rHornOfAfrica, rHindustan, rAndes, rCongo, rGreece, rPunjab, rSindh, rAridoamerica, rMaghreb, rIndonesia, rKhorasan, rDeccan, rLevant, rCascadia, rBengal, rUrals, rSiberia, rVolga, rItaly, rKorea, rAmazonia, rAmur, rPonticSteppe, rEuropeanArctic]),
+	iMinority : 	set([rJapan, rPhilippines, rPersia, rHinduKush, rEgypt, rAnatolia, rAustralia, rTarimBasin, rArabia, rTibet, rYemenOman, rRajputana, rNubia, rMaritimes, rAmericanArctic, rCape, rMesopotamia, rCentralAsianSteppe, rTransoxiana]),
 },
 )

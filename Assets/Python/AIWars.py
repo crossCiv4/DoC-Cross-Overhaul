@@ -164,7 +164,7 @@ tConquestByzantiumCarthage = (29, iByzantium, iBarbarian, tCarthageTL, tCarthage
 
 tSicilyTL = (69, 48)
 tSicilyBR = (71, 52)
-tConquestByzantiumSicily = (30, iByzantium, iBarbarian, tSicilyTL, tSicilyBR, 2, iByzantiumCarthageConquestYear + 5, 5)
+tConquestByzantiumSicily = (30, iByzantium, iBarbarian, tSicilyTL, tSicilyBR, 1, iByzantiumCarthageConquestYear + 5, 5)
 
 tConquestByzantiumAndalusia = (31, iByzantium, iBarbarian, tSpainMoorsTL, tSpainMoorsBR, 1, iByzantiumCarthageConquestYear + 5, 5)
 

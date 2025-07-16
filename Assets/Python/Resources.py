@@ -108,6 +108,7 @@ dResourcesDict = {
 	(83, 19)  : (1100,  iSugar),	# Mozambique
 	(92, 60)  : (1200,  iSilk),     # Volga Delta
 	(121, 47) : (1200,  iOpium),    # Sichuan
+	(56, 52)  : (1200,  iPig),      # Spain (Madrid)
 	(52, 44)  : (1400,  iSugar),	# Madeira
 	(112, 43) : (1400,  iCotton),   # Bengal
 	(63, 65)  : (1500,  iCow),      # Netherlands

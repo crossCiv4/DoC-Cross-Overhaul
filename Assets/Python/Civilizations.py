@@ -1018,7 +1018,7 @@ dStartingUnits = CivDict({
 		iSiege: 1,
 		iFerry: 2,
 		iEscort: 2,
-		iShock: 3,
+		iShock: 2,
 	},
 	iSaxons: {
 		iSettle: 1,
@@ -1103,12 +1103,12 @@ dStartingUnits = CivDict({
 	},
 	iArabia: {
 		iSettle: 2,
-		iWork: 5,
-		iDefend: 2,
-		iShock: 7,
+		iWork: 3,
+		iDefend: 3,
+		iShock: 8,
 		iAttack: 9,
 		iSiege: 6,
-		iCounter: 3,
+		iCounter: 4,
 		iEscort: 1,
 		iFerry: 1,
 	},
@@ -1171,7 +1171,8 @@ dStartingUnits = CivDict({
 		iSettle: 3,
 		iWork: 2,
 		iDefend: 3,
-		iAttack: 1,
+		iAttack: 2,
+		iSkirmish: 2,
 		iHarass: 5,
 	},
 	iEngland: {
@@ -1584,10 +1585,9 @@ dExtraAIUnits = CivDict({
 		iDefend: 2,
 	},
 	iByzantium: {
-		iAttack: 5,
-		iHarass: 2,
-		iSiege: 2,
-		iDefend: 3,
+		iAttack: 3,
+		iHarass: 1,
+		iSiege: 1,
 	},
 	iVandals: {
 		iWork: 1,
@@ -1620,7 +1620,6 @@ dExtraAIUnits = CivDict({
 		iCityAttack: 2,
 	},
 	iArabia: {
-		iWork: 3,
 		iEscort: 2,
 	},
 	iBulgaria: {

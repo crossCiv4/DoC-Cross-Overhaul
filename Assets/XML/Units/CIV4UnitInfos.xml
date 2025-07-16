@@ -11788,7 +11788,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_POLITICS</PrereqTech>
-			<iCost>35</iCost>
+			<iCost>40</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iMoves>1</iMoves>

@@ -52,7 +52,16 @@ def updateLateModifiers(iGameTurn):
 	if scenario() == i3000BC and iGameTurn == year(600):
 		for iPlayer in players.major().where(lambda p: dBirth[civ(p)] < dBirth[iArabia]):
 			adjustInflationModifier(iPlayer)
-		
+
+	# here we adjust modifiers based on historical events
+	# Crisis of Third Century: Roman military production tanks and never recovers
+	if iGameTurn == year(200) and player(iRome).isAlive():
+		setModifier(player(iRome), iModifierUnitCost, 133)
+		message(active(), 'TXT_KEY_EVENT_MILITARY_RECRUITMENT_DECLINE', adjective(iRome), color=iYellow, force=True)
+	if iGameTurn == year(1050) and player(iByzantium).isAlive():
+		setModifier(player(iByzantium), iModifierUnitCost, 150)
+		message(active(), 'TXT_KEY_EVENT_MILITARY_RECRUITMENT_DECLINE', adjective(iByzantium), color=iYellow, force=True)
+
 
 ### Modifier types ###
 
@@ -830,7 +839,7 @@ dUnitCostMods = CivDict({
 	iMali: 120,
 	iNigeria: 90,
 	iZulu: 120,
-	iByzantium: 125,
+	iByzantium: 130,
 	iKhazars: 100,
 	iBulgaria: 85,
 	iFrance: 85,
