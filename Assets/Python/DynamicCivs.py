@@ -268,7 +268,7 @@ def onCityRazed(city):
 def onCityBuilt(city):
 	checkName(city.getOwner())
 
-def handleHolyRome(iPlayer, iCiv, iPeriod):
+def handleHungary(iPlayer, iCiv, iPeriod):
 	if iPeriod == -1:
 		setShort(iPlayer, infos.civ(iCiv).getShortDescription(0))
 		setAdjective(iPlayer, infos.civ(iCiv).getAdjective(0))
@@ -324,7 +324,7 @@ def handleAztecs(iPlayer, iCiv, iPeriod):
 		setAdjective(iPlayer, text("TXT_KEY_CIV_MEXICO_ADJECTIVE"))
 
 dCivPeriodNameChanges = {
-	iHolyRome: handleHolyRome,
+	iHungary: handleHungary,
 	iPhoenicia: handlePhoenicia,
 	iNorse: handleNorse,
 	iTurks: handleTurks,

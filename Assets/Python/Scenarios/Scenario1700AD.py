@@ -264,7 +264,7 @@ scenario1700AD = Scenario(
 	dCivilizationDescriptions = {
 		iTurks: "TXT_KEY_CIV_UZBEKS_DESC",
 		iNorse: "TXT_KEY_CIV_DENMARK_DESC",
-		iHolyRome: "TXT_KEY_CIV_AUSTRIA_DESC",
+		iHungary: "TXT_KEY_CIV_AUSTRIA_DESC",
 		iEngland: "TXT_KEY_CIV_BRITAIN_DESC",
 		iGermany: "TXT_KEY_CIV_HOLY_ROMAN_DESC",
 	},

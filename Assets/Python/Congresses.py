@@ -167,9 +167,10 @@ class Congress:
 			iOttomans: 3,
 			iItaly: 3,
 			iGermany: 3,
-			iHolyRome: 3,
 			iRussia: 3,
+			iHungary: 3,
 			
+			iHolyRome: 2,
 			iSweden: 2,
 			iRome: 2,
 			iJapan: 2,

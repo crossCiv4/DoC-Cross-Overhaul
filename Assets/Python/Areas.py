@@ -110,7 +110,6 @@ iPeriodPtolemaicEgypt :	(77, 44), # Alexandria
 # new capital locations if changed during the game
 dNewCapitals = CivDict({
 iJapan :	(140, 54),	# Tokyo
-iHolyRome :	(72, 59),	# Vienna
 iItaly :	(68, 53),	# Rome
 iMongols :	(125, 56),	# Khanbaliq
 iOttomans :	(79, 55),	# Istanbul
@@ -135,7 +134,6 @@ iCelts :	(54, 65),	# Dublin
 iEthiopia :	(84, 32),	# Addis Ababa
 iJapan :	(140, 54),	# Tokyo
 iTurks : 	(97, 49),	# Herat
-iHolyRome :	(72, 59),	# Vienna
 iInca :		(28, 25),	# Lima
 iItaly :	(68, 53),	# Rome
 iTimurids :	(99, 43),	# Karachi --> Pakistan period
@@ -166,7 +164,7 @@ iByzantium :	((72, 48),	(87, 57)),
 iSpain :		((56, 50),	(63, 56)),
 iFrance :		((57, 57),	(63, 63)),
 iMalays :		((115, 26),	(121, 33)),
-iJapan : 		((134, 49),	(140, 56)),
+iJapan :		((134, 49),	(140, 56)),
 iTurks :		((96, 52),	(115, 60)),
 iArabia :		((76, 35),	(96, 50)),
 iTibet :		((105, 47),	(117, 53)),
@@ -465,7 +463,7 @@ iNubia :	((78, 36),	(82, 39)),
 iArabia:	((84, 38),	(91, 43)), # Saudi core
 iMamluks :	((74, 39),	(83, 45)), # same as core
 iEngland :	((55, 62),	(59, 67)), # England proper
-iHolyRome :		((65, 59),	(68, 62)), # Bavaria, Switzerland, some of Rhineland
+iHolyRome :	((65, 59),	(68, 62)), # Bavaria, Switzerland, some of Rhineland
 })
 
 dRespawnAreaExceptions = CivDict({

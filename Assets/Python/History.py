@@ -545,7 +545,7 @@ def chineseRelations(iPlayer):
 		player(iChinaPlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 4)
 
 @handler("birth")
-def stabilizeAustria(iPlayer):
+def stabilizeBavaria(iPlayer):
 	if civ(iPlayer) == iGermany:
 		iHolyRomanPlayer = slot(iHolyRome)
 
@@ -616,7 +616,7 @@ def flipMoorishMaghreb(iPlayer):
 			makeUnit(iPlayer, iWorker, city)
 
 @handler("flip")
-def stabilizeAustriaAfterGermany(iPlayer):
+def stabilizeBavariaAfterGermany(iPlayer):
 	if civ(iPlayer) == iGermany:
 		if player(iHolyRome).isExisting():
 			data.players[iHolyRome].iNumPreviousCities = player(iHolyRome).getNumCities()

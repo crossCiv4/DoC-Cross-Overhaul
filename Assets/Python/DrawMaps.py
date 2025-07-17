@@ -295,14 +295,14 @@ tSpreadFactors = (
 {
 	iCore :		[rFrance, rCentralEurope, rPoland, rIreland, rItaly, rIberia],
 	iHistorical :	[rBritain, rLowerGermany, rQuebec, rMaritimes, rAtlanticSeaboard, rCaribbean, rAridoamerica, rMesoamerica, rCentralAmerica, rNewGranada, rAndes, rAmazonia, rBrazil, rSouthernCone, rCape, rPhilippines, rNorway, rDenmark, rSweden],
-	iPeriphery :	[rBalkans, rGreece, rAmericanArctic, rOntario, rMidwest, rDeepSouth, rGreatPlains, rCalifornia, rAustralia, rOceania, rGuinea, rCongo, rSwahiliCoast, rMadagascar],
+	iPeriphery :	[rBalkans, rGreece, rAmericanArctic, rOntario, rMidwest, rDeepSouth, rGreatPlains, rCalifornia, rAustralia, rOceania, rGuinea, rSahel, rCongo, rSwahiliCoast, rMadagascar],
 	iMinority: [rJapan],
 },
 # Protestantism
 {
 	iCore :			[rBritain, rLowerGermany, rDenmark, rNorway, rSweden, rAtlanticSeaboard, rMidwest, rOntario, rGreatPlains, rDeepSouth, rMaritimes],
 	iHistorical :	[rBaltics, rCalifornia, rCascadia, rAmericanArctic, rAustralia],
-	iPeriphery :	[rFrance, rOceania, rCape, rZambezi, rSahel, rSwahiliCoast],
+	iPeriphery :	[rFrance, rOceania, rCape, rZambezi, rSahel, rSwahiliCoast, rGuinea, rKalahari],
 	iMinority : 	[rPoland, rCentralEurope, rBrazil, rKorea, rSouthChina]
 },
 # Islam

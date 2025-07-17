@@ -45,14 +45,14 @@ tSpreadFactors = (
 {
 	iCore :		set([rFrance, rCentralEurope, rPoland, rIreland, rItaly, rIberia]),
 	iHistorical :	set([rBritain, rLowerGermany, rQuebec, rMaritimes, rAtlanticSeaboard, rCaribbean, rAridoamerica, rMesoamerica, rCentralAmerica, rNewGranada, rAndes, rAmazonia, rBrazil, rSouthernCone, rCape, rPhilippines, rNorway, rDenmark, rSweden]),
-	iPeriphery :	set([rBalkans, rGreece, rAmericanArctic, rOntario, rMidwest, rDeepSouth, rGreatPlains, rCalifornia, rAustralia, rOceania, rGuinea, rCongo, rSwahiliCoast, rMadagascar]),
+	iPeriphery :	set([rBalkans, rGreece, rAmericanArctic, rOntario, rMidwest, rDeepSouth, rGreatPlains, rCalifornia, rAustralia, rOceania, rGuinea, rSahel, rCongo, rSwahiliCoast, rMadagascar]),
 	iMinority: set([rJapan]),
 },
 # Protestantism
 {
 	iCore :			set([rBritain, rLowerGermany, rDenmark, rNorway, rSweden, rAtlanticSeaboard, rMidwest, rOntario, rGreatPlains, rDeepSouth, rMaritimes]),
 	iHistorical :	set([rBaltics, rCalifornia, rCascadia, rAmericanArctic, rAustralia]),
-	iPeriphery :	set([rFrance, rOceania, rCape, rZambezi, rSahel, rSwahiliCoast]),
+	iPeriphery :	set([rFrance, rOceania, rCape, rZambezi, rSahel, rSwahiliCoast, rGuinea, rKalahari]),
 	iMinority : 	set([rPoland, rCentralEurope, rBrazil, rKorea, rSouthChina]),
 },
 # Islam

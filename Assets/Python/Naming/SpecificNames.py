@@ -202,7 +202,7 @@ def spainSpecificName(args):
 		return "TXT_KEY_CIV_SPAIN_CASTILE"
 
 def franksSpecificName(args):
-    if year() >= year(dBirth[iHolyRome]) and player(iHolyRome).isExisting() and player(iFrance).isExisting():
+    if year() >= year(dBirth[iHolyRome]) and player(iHolyRome).isExisting() or player(iFrance).isExisting():
         return "TXT_KEY_CIV_FRANCIA_LOTHARINGIA"
 
 def englandSpecificName(args):
