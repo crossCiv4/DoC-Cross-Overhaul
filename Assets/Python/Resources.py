@@ -305,8 +305,9 @@ dRemovedResourcesDict = {
 	(67, 49)  :  600, # Fish in Tunis
 	(66, 48)  :  600, # Wine in Tunis
 	(68, 45)  :  600, # Wheat in Tripoli
-	(74, 52)  :  600, # Olives in NW Greece
-	(78, 55)  :  600, # Wine in Thrace
+	(74, 52)  :  650, # Olives in NW Greece
+	(78, 55)  :  650, # Wine in Thrace
+	(74, 48)  :  650, # Fish in Morea
 	(100, 50) : 1100, # Silver in Bactria
 	(99, 52)  : 1200, # Millet in Bactria
 	(79, 39)  : 1200, # Cotton in Nubia
