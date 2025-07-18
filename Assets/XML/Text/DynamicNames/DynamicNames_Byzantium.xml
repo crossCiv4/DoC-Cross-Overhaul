@@ -211,15 +211,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTINE_PERSIA</Tag>
-		<English>Exarchate of Parthia</English>
+		<English>Exarchate of Persia</English>
 		<French>
-			<Text>Exarchat de Parthie</Text>
+			<Text>Exarchat de Perse</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Exarchate of Parthia</German>
-		<Italian>Exarchate of Parthia</Italian>
-		<Spanish>Exarchate of Parthia</Spanish>
+		<German>Exarchate of Persia</German>
+		<Italian>Exarchate of Persia</Italian>
+		<Spanish>Exarchate of Persia</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTINE_ROME</Tag>
