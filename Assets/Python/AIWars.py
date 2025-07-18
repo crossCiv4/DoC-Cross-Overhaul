@@ -234,11 +234,11 @@ tDaciaBR = (77, 59)
 
 tConquestRomeDacia = (45, iRome, iBarbarian, tDaciaTL, tDaciaBR, 1, iRomeDaciaYear, 10)
 
-iItalyCreteYear = 1205
-tCreteTL = (77, 48)
-tCreteBR = (79, 48)
+iItalyCreteAndMoreaYear = 1205
+tCreteTL = (75, 48)
+tCreteBR = (79, 49)
 
-tConquestItalyCrete = (46, iItaly, iByzantium, tCreteTL, tCreteBR, 1, iItalyCreteYear, 10)
+tConquestItalyCreteAndMorea = (46, iItaly, iByzantium, tCreteTL, tCreteBR, 2, iItalyCreteAndMoreaYear, 10)
 
 iSwedenPomeraniaYear = 1630
 tPomeraniaTL = (67, 63)
@@ -316,7 +316,7 @@ lConquests = [
 	tConquestAssyriaEgypt,
 	#tConquestChinaShu,
 	#tConquestRomeDacia,
-	tConquestItalyCrete,
+	tConquestItalyCreteAndMorea,
 	tConquestSwedenPomerania,
 	tConquestCharlemagne,
 	#tConquestArabiaEgypt, --> not useful since Arabia flips Egypt, but used as a check for the conquest of Carthage, so Byz can block it by conquering a city in Egypt

@@ -306,6 +306,7 @@ dRemovedResourcesDict = {
 	(66, 48)  :  600, # Wine in Tunis
 	(68, 45)  :  600, # Wheat in Tripoli
 	(74, 52)  :  600, # Olives in NW Greece
+	(78, 55)  :  600, # Wine in Thrace
 	(100, 50) : 1100, # Silver in Bactria
 	(99, 52)  : 1200, # Millet in Bactria
 	(79, 39)  : 1200, # Cotton in Nubia
@@ -365,6 +366,7 @@ dConquerorPlotTypesDict = {
 }
 
 dCivGroupResourcesDict = {
+	(78, 55) : (iCivGroupMediterranean, iWine, 320),
 	(56, 44) : (iCivGroupMediterranean, iWine, 450),
 	(63, 56) : (iCivGroupMediterranean, iOlives, 450),
 	(62, 55) : (iCivGroupMediterranean, iWine, 450),

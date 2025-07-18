@@ -8,7 +8,7 @@ from DynamicCivs import getColumn
 
 ### CONSTANTS ###
 
-iNumLanguages = 60
+iNumLanguages = 61
 (iLangAmerican, iLangArabic, iLangBabylonian, iLangBurmese, iLangByzantine, 
 iLangCeltic, iLangChinese, iLangCongolese, iLangDutch, iLangEgyptian, 
 iLangEgyptianArabic, iLangEnglish, iLangEthiopian, iLangFrench, iLangGerman, 
@@ -18,7 +18,7 @@ iLangMayan, iLangMongolian, iLangNahuatl, iLangNorse, iLangNubian,
 iLangPersian, iLangPhoenician, iLangPolish, iLangPolynesian, iLangPortuguese, 
 iLangQuechua, iLangRussian, iLangSpanish, iLangSwedish, iLangThai, 
 iLangTibetan, iLangTurkish, iLangVietnamese, iLangFarsi, iLangRuthenian, 
-iLangArmenian, iLangDanish, iLangParthian, iLangVedic, iLangUkrainian, iLangNanman, iLangAncientChinese, iLangSaxon, iLangPakistani, iLangBrazilPortuguese, iLangModernJapanese, iLangModernChinese, iLangModernGerman, iLangFrankish, iLangHungarian) = range(iNumLanguages)
+iLangArmenian, iLangDanish, iLangParthian, iLangVedic, iLangUkrainian, iLangNanman, iLangAncientChinese, iLangSaxon, iLangPakistani, iLangBrazilPortuguese, iLangModernJapanese, iLangModernChinese, iLangModernGerman, iLangFrankish, iLangHungarian, iLangMycenean) = range(iNumLanguages)
 
 dLanguages = CivDict({
 	iEgypt:	[iLangEgyptian],
@@ -91,7 +91,7 @@ dLanguages = CivDict({
 	iIroquois: [iLangNahuatl, iLangAmerican, iLangEnglish, iLangFrench],
 	iArmenia: [iLangArmenian, iLangByzantine, iLangRussian],
 	iParthia: [iLangParthian, iLangGreek, iLangPersian],
-	iMinoans: [iLangGreek],
+	iMinoans: [iLangMycenean, iLangGreek],
 	iGhorids: [iLangFarsi, iLangTurkish, iLangArabic, iLangIndian],
 	iKhazars: [iLangTurkish, iLangRussian, iLangMongolian, iLangByzantine, iLangGreek],
 	iNigeria: [iLangMande, iLangArabic],
@@ -177,6 +177,7 @@ dLanguageNames = {
     iLangModernGerman: "ModernGerman",
     iLangFrankish: "Frankish",
     iLangHungarian: "Hungarian",
+    iLangMycenean: "Mycenean",
 }
 
 dTranslations = dict((iLanguage, FileDict("Translations/%s.csv" % dLanguageNames[iLanguage])) for iLanguage in range(iNumLanguages))
