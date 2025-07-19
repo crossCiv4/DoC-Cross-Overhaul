@@ -214,6 +214,22 @@
 		<Spanish>Magna Graecia</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_ROMAN_NAME_IONIANS</Tag>
+		<English>Ionian Free Cities</English>
+		<French>Ionian Free Cities</French>
+		<German>Ionian Free Cities</German>
+		<Italian>Ionian Free Cities</Italian>
+		<Spanish>Ionian Free Cities</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ROMAN_NAME_DORIANS</Tag>
+		<English>Achaean League</English>
+		<French>Achaean League</French>
+		<German>Achaean League</German>
+		<Italian>Achaean League</Italian>
+		<Spanish>Achaean League</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_ROMAN_NAME_PERSIA</Tag>
 		<English>Persis</English>
 		<French>Persis</French>

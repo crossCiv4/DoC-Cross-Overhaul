@@ -208,7 +208,10 @@ def checkEarlyColonists():
 			giveEarlyColonists(iPhoenicia, tGades)
 		elif year() == year(-700) - offset:
 			giveEarlyColonists(iGreece)
-		
+			giveEarlyColonists(iDorians)
+		elif year() == year(-500) - offset:
+			giveEarlyColonists(iDorians, tTanais)
+
 @handler("BeginGameTurn")
 def checkLateColonists():
 	if year().between(1350, 1918) and any(data.dFirstContactConquerors.values()):

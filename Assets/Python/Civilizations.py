@@ -857,7 +857,7 @@ dStartingUnits = CivDict({
 		iWorkerSea: 1,
 	},
 	iDorians: {
-		iSettle: 1,
+		iSettle: 2,
 		iWork: 1,
 		iSettleSea: 2,
 		iCounter: 2,
@@ -1602,9 +1602,9 @@ dExtraAIUnits = CivDict({
 		iDefend: 2,
 	},
 	iByzantium: {
-		iDefend: 2,
-		iAttack: 5,
-		iCounter: 2,
+		iDefend: 1,
+		iAttack: 4,
+		iCounter: 1,
 		iHarass: 2,
 		iSiege: 2,
 	},
@@ -2045,6 +2045,8 @@ def createSpecificUnits(iPlayer, tile):
 			makeUnits(iPlayer, iCamelLancer, tile, 5)
 	elif iCiv == iArabia:
 		makeUnits(iPlayer, iCamelArcher, tile, 8)
+	elif iCiv == iDorians:
+		makeUnits(iPlayer, iSlave, tile, 3)
 	elif iCiv == iVandals and not player(iPlayer).isHuman():
 		landingPlot = (59,46)
 		makeUnits(iPlayer, iArcher, landingPlot, 4)

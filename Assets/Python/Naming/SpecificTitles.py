@@ -567,8 +567,9 @@ def holyRomeTitle(args):
 			return "TXT_KEY_CIV_HOLY_ROME_FREE_CITIES"
 
 def hungaryTitle(args):
-	if args.bEmpire:
-		return "TXT_KEY_EMPIRE_ADJECTIVE"
+	if args.pPlayer.getPeriod() == iPeriodAustria:
+		if args.bEmpire:
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
 
 def saxonsTitle(args):
 	if args.tPlayer.isHasTech(iNobility):

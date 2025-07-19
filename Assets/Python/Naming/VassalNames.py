@@ -38,7 +38,7 @@ dSpecificVassalTitles = deepdict({
 		iPersia : "TXT_KEY_CIV_MACEDON_PERSIA",
 		iRome : "TXT_KEY_CIV_GREEK_ROME",
 		iGreece: "TXT_KEY_CIV_MACEDON_GREECE",
-        iDorians: "TXT_KEY_CIV_CITY_STATE_VASSAL_ADJECTIVE",
+        iDorians: "TXT_KEY_CIV_ROMAN_NAME_DORIANS",
 	},
 	iGreece : {
 		iRome : "TXT_KEY_CIV_GREEK_ROME",
@@ -245,8 +245,8 @@ dSpecificVassalTitles = deepdict({
 	},
 	iRome : {
 		iVandals: "TXT_KEY_CIV_ROMAN_VANDALS",
-        iGreece: "TXT_KEY_CIV_CITY_STATE_VASSAL_ADJECTIVE",
-        iDorians: "TXT_KEY_CIV_CITY_STATE_VASSAL_ADJECTIVE",
+        iGreece: "TXT_KEY_CIV_ROMAN_NAME_IONIANS",
+        iDorians: "TXT_KEY_CIV_ROMAN_NAME_DORIANS",
 	},
 })
 
@@ -414,6 +414,8 @@ dForeignNames = deepdict({
 		iTurks : "TXT_KEY_CIV_PERSIAN_NAME_TURKS",
 		iOttomans: "TXT_KEY_CIV_PERSIAN_NAME_OTTOMANS",
 		iHittites: "TXT_KEY_CIV_PERSIAN_NAME_HITTITES",
+		iGreece: "TXT_KEY_CIV_PERSIAN_NAME_IONIANS",
+		iDorians: "TXT_KEY_CIV_PERSIAN_NAME_DORIANS",
 	},
 	iRome : {
 		iEgypt : "TXT_KEY_CIV_ROMAN_NAME_EGYPT",

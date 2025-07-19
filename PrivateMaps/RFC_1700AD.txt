@@ -4971,10 +4971,6 @@ BeginPlot
 	ImprovementType=IMPROVEMENT_ORCHARD
 EndPlot
 BeginPlot
-	x=72,y=53
-	ImprovementType=IMPROVEMENT_FISHING_BOATS
-EndPlot
-BeginPlot
 	x=72,y=57
 	ImprovementType=IMPROVEMENT_HAMLET
 EndPlot

@@ -272,6 +272,7 @@ dResourcesDict = {
 
 dSpawnResourcesDict = {
 	(82, 54)  : (iHittites,    iIron),
+	tAthens   : (iGreece,      iCopper), # Copper on Athens tile
 	(107, 60) : (iTurks,       iHorse),
 	(113, 47) : (iTibet,       iWheat),
 	(115, 49) : (iTibet,       iHorse),
@@ -291,6 +292,7 @@ dRemovedResourcesDict = {
 	(59, 51)  :  400, # Silver near Cartagena
 	(55, 53)  :  1500, # Gold in Spain
 	(56, 50)  :  400, # Silver in Andalusia
+	tAthens   :  500, # Copper in Athens
 	(84, 48)  :  500, # Clams in Phoenicia
 	(83, 47)  :  500, # Dye (murex) in Phoenicia
 	(73, 46)  :  500, # Dye (murex) in Cyrenaica

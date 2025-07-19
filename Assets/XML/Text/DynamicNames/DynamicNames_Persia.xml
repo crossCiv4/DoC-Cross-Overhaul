@@ -178,6 +178,22 @@
 		<Spanish>Cappadocia</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_PERSIAN_NAME_IONIANS</Tag>
+		<English>Ionia</English>
+		<French>Ionia</French>
+		<German>Ionia</German>
+		<Italian>Ionia</Italian>
+		<Spanish>Ionia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PERSIAN_NAME_DORIANS</Tag>
+		<English>the Peloponnese</English>
+		<French>the Peloponnese</French>
+		<German>the Peloponnese</German>
+		<Italian>the Peloponnese</Italian>
+		<Spanish>the Peloponnese</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_PERSIAN_NAME_OTTOMANS</Tag>
 		<English>Lydia</English>
 		<French>Lydia</French>
