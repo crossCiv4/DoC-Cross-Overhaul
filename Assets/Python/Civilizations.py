@@ -257,6 +257,13 @@ lCivilizations = [
 		techs=techs.column(3).including(iBloomery, iLiterature)
 	),
 	Civilization(
+		iDorians,
+		iGold=100,
+		iAdvancedStartPoints=50,
+		lCivics=[iMonarchy, iSlavery, iDeification, iRedistribution],
+		techs=techs.column(3).including(iBloomery, iLiterature)
+	),
+	Civilization(
 		iYemen,
 		iGold=50,
 		iStateReligion=iJudaism,
@@ -844,10 +851,16 @@ dStartingUnits = CivDict({
 	},
 	iGreece: {
 		iSettle: 1,
-		iWork: 2,
+		iWork: 1,
 		iSettleSea: 2,
-		iDefend: 1,
 		iCounter: 1,
+		iWorkerSea: 1,
+	},
+	iDorians: {
+		iSettle: 1,
+		iWork: 1,
+		iSettleSea: 2,
+		iCounter: 2,
 		iWorkerSea: 1,
 	},
 	iIndia: {
@@ -1548,9 +1561,13 @@ dExtraAIUnits = CivDict({
 		iWorkerSea: 1,
 	},
 	iGreece: {
-		iSettleSea: 2,
-		iWorkerSea: 4,
+		iSettleSea: 1,
+		iWorkerSea: 1,
 		iEscort: 1,
+	},
+	iDorians: {
+		iSettleSea: 1,
+		iWorkerSea: 1,
 	},
 	iIndia : {
 		iShock: 1,
@@ -1749,6 +1766,9 @@ dHumanStartingUnits = CivDict({
 
 dAdditionalUnits = CivDict({
 	iGreece: {
+		iCounter: 2,
+	},
+	iDorians: {
 		iCounter: 2,
 	},
 	iRome: {
@@ -2232,6 +2252,25 @@ dTechPreferences = {
 		iEthics: 20,
 	},
 	iGreece : {
+		iPhilosophy: 50,
+		iPriesthood: 40,
+		iLiterature: 40,
+		iMathematics: 40,
+		iNavigation: 40,
+		iBloomery: 40,
+		iCalendar: 20,
+		iWriting: 20,
+		iShipbuilding: 20,
+		iMedicine: 20,
+		iAesthetics: 20,
+		
+		iMachinery: -20,
+		iPaper: -20,
+		iPrinting: -20,
+		iTheology: -15,
+		iArtisanry: -20,
+	},
+	iDorians : {
 		iPhilosophy: 50,
 		iPriesthood: 40,
 		iLiterature: 40,
@@ -2826,6 +2865,7 @@ dDefaultWonderPreferences = {
 	iEgypt: -15,
 	iBabylonia: -15,
 	iGreece: -15,
+	iDorians: -15,
 	iMacedon: -15,
 	iIndia: -15,
 	iRome: -20,
@@ -2976,9 +3016,24 @@ dBuildingPreferences = {
 		iGreatCothon: -50,
 	},
 	iGreece : {
-		iColossus: 30,
+		iColossus: 5,
 		iOracle: 30,
 		iParthenon: 30,
+		iTempleOfArtemis: 30,
+		iStatueOfZeus: 30,
+		iGreatMausoleum: 20,
+		iMountAthos: 20,
+		iHagiaSophia: 20,
+		iAlKhazneh: 15,
+
+		iPyramids: -100,
+		iGreatCothon: -100,
+	},
+
+	iDorians : {
+		iColossus: 30,
+		iOracle: 20,
+		iParthenon: 10,
 		iTempleOfArtemis: 30,
 		iStatueOfZeus: 30,
 		iGreatMausoleum: 20,

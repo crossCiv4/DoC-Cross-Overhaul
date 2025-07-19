@@ -525,7 +525,7 @@ def getRoleLocation(iRole, location):
 	return location
 
 # specific civs are offensive with their spear units
-sOffensiveSpearCivs = set([iAssyria, iGreece, iMacedon, iPersia, iPhoenicia, iGhorids])
+sOffensiveSpearCivs = set([iAssyria, iGreece, iDorians, iMacedon, iPersia, iPhoenicia, iGhorids])
 dRolesToAi = {
 	iDefend: UnitAITypes.UNITAI_CITY_DEFENSE,
 	iAttack: UnitAITypes.UNITAI_ATTACK,
@@ -859,6 +859,10 @@ def canRespawn(iCiv):
 	if exclusive(iCiv, iRome, iItaly):
 		return False
 	
+	# Greece cannot respawn when Byzantium is alive and vice versa
+	if exclusive(iCiv, iDorians, iByzantium):
+		return False
+
 	# Greece cannot respawn when Byzantium is alive and vice versa
 	if exclusive(iCiv, iGreece, iByzantium):
 		return False

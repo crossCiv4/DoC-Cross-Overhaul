@@ -97,6 +97,7 @@ dStartingLeaders = [
 	iHittites : iMursili,
 	iNubia : iTaharqa,
 	iGreece : iPericles,
+	iDorians: iLeonidas,
 	iPersia : iCyrus,
 	iPhoenicia : iHiram,
 	iPolynesia : iAhoeitu,

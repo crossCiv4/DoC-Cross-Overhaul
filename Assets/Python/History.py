@@ -193,22 +193,18 @@ def checkEarlyColonists():
 
 				if not pPlayer.isHuman():
 					makeUnit(iPhoenicia, iSettler, tGades)
-					makeUnits(iPhoenicia, iSacredBand, tGades, 2)
-					makeUnits(iPhoenicia, iNumidianCavalry, tGades, 2)
-					makeUnits(iPhoenicia, iWorker, tGades, 2, UnitAITypes.UNITAI_WORKER)
+					makeUnits(iPhoenicia, iSacredBand, tGades, 1)
+					makeUnits(iPhoenicia, iNumidianCavalry, tGades, 1)
 
 				# even the player gets the Carthage part of this event!
-				makeUnits(iPhoenicia, iSacredBand, tCarthage, 3)
+				makeUnits(iPhoenicia, iSacredBand, tCarthage, 1)
 				makeUnits(iPhoenicia, iWorker, tCarthage, 2, UnitAITypes.UNITAI_WORKER)
-				makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
+				makeUnits(iPhoenicia, iWarElephant, tCarthage, 1)
 				makeUnits(iPhoenicia, iNumidianCavalry, tCarthage, 2)
 
 		elif year() == year(-825) - offset:
 			giveEarlyColonists(iGreece)
-		elif year() == year(-800) - offset:
-			giveEarlyColonists(iGreece)
 		elif year() == year(-750) - offset:
-			giveEarlyColonists(iGreece)
 			giveEarlyColonists(iPhoenicia, tGades)
 		elif year() == year(-700) - offset:
 			giveEarlyColonists(iGreece)

@@ -546,5 +546,11 @@
 			<Path>Art/Interface/TeamColor/FlagDECAL_Hungary2.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_DORIANS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/flag_sparta.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Sparta_Lambda.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
 	</CivilizationArtInfos>
 </Civ4ArtDefines>

@@ -561,7 +561,7 @@
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
-			<Type>COLOR_PLAYER_DARK_RED_TEXT</Type>
+			<Type>COLOR_PLAYER_BRIGHT_RED_TEXT</Type>
 			<fRed>0.90</fRed>
 			<fGreen>0.25</fGreen>
 			<fBlue>0.25</fBlue>
@@ -1443,7 +1443,7 @@
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 		<ColorVal>
-			<Type>COLOR_PLAYER_BRIGHT_RED_TEXT</Type>
+			<Type>COLOR_PLAYER_DARK_RED_TEXT</Type>
 			<fRed>0.67</fRed>
 			<fGreen>0</fGreen>
 			<fBlue>0</fBlue>

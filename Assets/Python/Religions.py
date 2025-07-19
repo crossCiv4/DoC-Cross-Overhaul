@@ -17,6 +17,7 @@ dCatholicPreference = CivDict({
 iEgypt		: 80,
 iNubia		: 80,
 iGreece		: 80,
+iDorians	: 80,
 iMacedon	: 80,
 iCelts		: 90,
 iRome		: 95,

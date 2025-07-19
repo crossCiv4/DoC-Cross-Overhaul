@@ -1806,6 +1806,19 @@
 	</TEXT>
 
 	<TEXT>
+		<Tag>TXT_KEY_LEADER_LEONIDAS</Tag>
+		<English>Leonidas</English>
+		<French>
+			<Text>Leonidas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Leonidas</German>
+		<Italian>Leonidas</Italian>
+		<Spanish>Leonidas</Spanish>
+	</TEXT>
+
+	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>
 		<French></French>

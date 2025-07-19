@@ -703,6 +703,14 @@
 		<Spanish>Client Kingdom of %s1</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_CITY_STATE_VASSAL_ADJECTIVE</Tag>
+		<English>%s2 Client City-States</English>
+		<French>%s2 Client City-States</French>
+		<German>%s2 Client City-States</German>
+		<Italian>%s2 Client City-States</Italian>
+		<Spanish>%s2 Client City-States</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_SHOGUNATE_ADJECTIVE</Tag>
 		<English>%s2 Shogunate</English>
 		<French>

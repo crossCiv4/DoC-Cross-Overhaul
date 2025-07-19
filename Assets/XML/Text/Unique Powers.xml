@@ -1466,7 +1466,7 @@
 		<Italian>+30% [ICON_PRODUCTION] for buildings already in the capital</Italian>
 		<Spanish>+30% [ICON_PRODUCTION] for buildings already in the capital</Spanish>
 	</TEXT>
-		<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UP_HUN_TITLE</Tag>
 		<English>The Power of the Great Hungarian Plain:</English>
 		<French>Le Pouvoir of the Great Hungarian Plain:</French>
@@ -1481,5 +1481,21 @@
 		<German>+1[ICON_FOOD] from Pasture</German>
 		<Italian>+1[ICON_FOOD] from Pasture</Italian>
 		<Spanish>+1[ICON_FOOD] from Pasture</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_UP_DOR_TITLE</Tag>
+		<English>The Power of the Helots:</English>
+		<French>Le pouvoir des h&#233;lots :</French>
+		<German>The Power of the Helots:</German>
+		<Italian>The Power of the Helots:</Italian>
+		<Spanish>The Power of the Helots:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_DOR</Tag>
+		<English>Slave specialists produce +2 [ICON_PRODUCTION] and +1 [ICON_COMMERCE]</English>
+		<French>Les sp&#233;cialistes esclaves produisent +2 [ICON_PRODUCTION] et +1 [ICON_COMMERCE]</French>
+		<German>Slave specialists produce +2 [ICON_PRODUCTION] and +1 [ICON_COMMERCE]</German>
+		<Italian>Slave specialists produce +2 [ICON_PRODUCTION] and +1 [ICON_COMMERCE]</Italian>
+		<Spanish>Slave specialists produce +2 [ICON_PRODUCTION] and +1 [ICON_COMMERCE]</Spanish>
 	</TEXT>
 </Civ4GameText>

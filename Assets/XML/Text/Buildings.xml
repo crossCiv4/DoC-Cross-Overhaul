@@ -3474,6 +3474,15 @@
 		<Spanish>Ópera</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GYMNASION</Tag>
+		<English>Gymnasion</English>
+		<French>Gymnasion</French>
+		<German>Gymnasion</German>
+		<Italian>Ginnasion</Italian>
+		<Spanish>Gymnasion</Spanish>
+	</TEXT>
+
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_</Tag>
 		<English></English>
 		<French></French>

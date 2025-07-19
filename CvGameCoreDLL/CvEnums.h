@@ -1195,6 +1195,7 @@ enum CivilizationTypes		// Exposed to Python
 	CHINA, 
 	YANGTZE_CHINA,
 	COLOMBIA,
+	DORIANS,
 	DRAVIDIA,
 	EGYPT,
 	ENGLAND,
@@ -1550,6 +1551,8 @@ enum LeaderHeadTypes			// Exposed to Python
 	BELA_III,
 	MATTHIAS,
 	FRANCIS,
+
+	LEONIDAS,
 
 	NUM_LEADERHEADS
 };

@@ -8,9 +8,9 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 90
+iNumCivs = 91
 (iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iBuyids, iByzantium, iCanada, 
-iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iFranks, iGermany, iGhorids,
+iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDorians, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iFranks, iGermany, iGhorids,
 iGreece, iHarappa, iHittites, iHolyRome, iHungary, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, iKhazars,
 iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iManchu, iMaya, iMexico, iMinoans, iMongols, iMoors, iMorocco,
 iTimurids, iNetherlands, iNigeria, iNorse, iNubia, iOman, iOttomans, iParthia, iPersia, iPoland, iPolynesia, iPortugal, 
@@ -57,6 +57,7 @@ dCivNames = {
 	iFranks: "Francia",
 	iGermany: "Germany",
 	iGreece: "Greece",
+	iDorians: "Dorians",
 	iHarappa: "Harappa",
 	iHolyRome: "Holy_Rome",
 	iHungary: "Hungary",
@@ -152,7 +153,8 @@ iShu :			((117, 48),	(122, 49)),
 iXia :			((120, 51), (126, 54)),
 iHittites :		((82, 52),	(85, 54)),
 iNubia :		((80, 37),	(81, 39)),
-iGreece :		((74, 48),	(80, 53)),
+iGreece :		((75, 51),	(80, 53)),
+iDorians :      ((70, 48),	(79, 50)),
 iIndia :		((107, 44),	(111, 46)),
 iPhoenicia :	((84, 47),	(85, 49)),
 iPolynesia :	((3, 20),	(5, 23)),
@@ -235,7 +237,7 @@ iBabylonia: [(88, 45)],
 iHarappa :	[(102, 46)],
 iChina :	[(127, 47), (128, 47), (127, 48), (128, 48), (127, 49), (128, 49), (127, 50), (128, 50), (128, 56)],
 iChina :	[(120, 54), (120, 55), (120, 56), (121, 54), (121, 55), (121, 56), (126, 51)],
-iGreece :	[(74, 53), (80, 53)],
+iGreece :	[(80, 53)],
 iPersia :	[(94, 48), (94, 49), (94, 50), (95, 46), (95, 47), (95, 48), (95, 49), (95, 50)],
 iRome :		[(66, 51), (66, 52), (70, 57), (71, 56), (71, 57), (72, 55), (72, 56), (72, 57)],
 iToltecs :  [(17, 42), (18, 42)],

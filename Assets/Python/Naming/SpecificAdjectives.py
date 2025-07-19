@@ -372,8 +372,22 @@ def netherlandsSpecificAdjective(args):
         return "TXT_KEY_CIV_NETHERLANDS_BELGIAN"
 
 def germanySpecificAdjective(args):
-	if getColumn(args.iPlayer) <= 13 or (player(iHolyRome).isExisting() and not civ(master(iHolyRome)) == iGermany):
-		return "TXT_KEY_CIV_GERMANY_PRUSSIAN"
+    if getColumn(args.iPlayer) <= 13 or (player(iHolyRome).isExisting() and not civ(master(iHolyRome)) == iGermany):
+        return "TXT_KEY_CIV_GERMANY_PRUSSIAN"
+
+def greeceSpecificAdjective(args):
+    if args.bResurrected or not player(iDorians).isExisting() and year() > year(dBirth[iDorians]):
+        return "TXT_KEY_CIV_GREECE_ADJECTIVE"
+    else:
+        return "TXT_KEY_CIV_GREECE_IONIAN_ADJECTIVE"
+
+def doriansSpecificAdjective(args):
+    if not player(iGreece).isExisting():
+        return "TXT_KEY_CIV_GREECE_ADJECTIVE"
+    else:
+        if isCurrentCapital(args.iPlayer, "Lakedaimon"):
+            return "TXT_KEY_CIV_DORIANS_LACEDAEMONIAN_ADJECTIVE"
+        return "TXT_KEY_CIV_DORIANS_ADJECTIVE"
 
 dSpecificAdjectives = CivDict({
     iChina: chinaSpecificAdjective,
@@ -424,4 +438,6 @@ dSpecificAdjectives = CivDict({
     iNetherlands: netherlandsSpecificAdjective,
     iGermany: germanySpecificAdjective,
     iHungary: hungarianSpecificAdjective,
+    iGreece: greeceSpecificAdjective,
+    iDorians: doriansSpecificAdjective,
 })

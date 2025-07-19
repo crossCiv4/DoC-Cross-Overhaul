@@ -12344,6 +12344,13 @@ void CvPlayer::applyCivilization(CivilizationTypes eCivilization, int iChange)
 		changeSpecialistExtraCommerce(COMMERCE_CULTURE, 2 * iChange);
 	}
 
+	// Dorian UP: +2 production and +1 commerce per slave specialist
+	if (eCivilization == DORIANS)
+	{
+		changeSpecialistExtraYield(SPECIALIST_SLAVE, YIELD_PRODUCTION, 2 * iChange);
+		changeSpecialistExtraYield(SPECIALIST_SLAVE, YIELD_COMMERCE, iChange);
+	}
+
 	// Mande UP: can trade across desert
 	if (eCivilization == MALI)
 	{

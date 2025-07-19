@@ -69,6 +69,7 @@ dGreatPeopleAliases = CivDict({
 	iBuyids: iPersia,
 	iMinoans: iGreece,
 	iMacedon: iGreece,
+	iDorians: iGreece,
 	iChinaS: iChina,
 	iShu: iChina,
 	iXia: iChina,

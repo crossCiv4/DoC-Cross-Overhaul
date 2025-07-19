@@ -409,6 +409,12 @@
 			<TextColorType>COLOR_SILVER</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_BRIGHT_RED_WHITE</Type> <!-- Dorians -->
+			<ColorTypePrimary>COLOR_PLAYER_BRIGHT_RED</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_BRIGHT_RED_TEXT</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_MIDDLE_PINK</Type> <!-- Poland -->
 			<ColorTypePrimary>COLOR_PLAYER_MIDDLE_PINK</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
@@ -614,9 +620,9 @@
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_ARMENIA_RED</Type> <!-- Armenia -->
-			<ColorTypePrimary>COLOR_PLAYER_BRIGHT_RED</ColorTypePrimary>
-			<ColorTypeSecondary>COLOR_PLAYER_VERYDARK_BLUE</ColorTypeSecondary>
-			<TextColorType>COLOR_PLAYER_BRIGHT_RED_TEXT</TextColorType>
+			<ColorTypePrimary>COLOR_PLAYER_VERYDARK_BLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_BRIGHT_RED</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_VERYDARK_BLUE_TEXT</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_KHAZARIA</Type> <!-- Khazars -->

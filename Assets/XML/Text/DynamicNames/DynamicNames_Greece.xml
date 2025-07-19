@@ -3,7 +3,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GREECE_DESC</Tag>
-		<English>The Greeks</English>
+		<English>The Ionian Greeks</English>
 		<French>
 			<Text>Les Grecs</Text>
 			<Gender>Male</Gender>
@@ -123,9 +123,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GREECE_LEAGUE</Tag>
-		<English>%s2 League</English>
+		<English>Delian League</English>
 		<French>
-			<Text>Ligue %s2</Text>
+			<Text>Ligue de D&#233;los</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -147,15 +147,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GREEK_ROME</Tag>
-		<English>Magna Graecia</English>
+		<English>Megale Hellas</English>
 		<French>
-			<Text>Grande-Gr&#232;ce</Text>
+			<Text>Megale Hellas</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Magna Graecia</German>
-		<Italian>Magna Graecia</Italian>
-		<Spanish>Magna Graecia</Spanish>
+		<German>Megale Hellas</German>
+		<Italian>Megale Hellas</Italian>
+		<Spanish>Megale Hellas</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_GREEK_NAME_HITTITES</Tag>
@@ -197,6 +197,30 @@
 		</Italian>
 		<Spanish>
 			<Text>griego:griega:griegos:griegas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GREECE_IONIAN_ADJECTIVE</Tag>
+		<English>Ionian</English>
+		<French>
+			<Text>ionien:ionienne:ioniens:ioniennes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>
+			<Text>Ionisch:ionischen:ionische</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>ionico:ionica:ionici:ioniche</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>ionico:ionica:ionicos:ionicas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>

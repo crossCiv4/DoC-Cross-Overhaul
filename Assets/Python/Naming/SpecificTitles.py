@@ -284,12 +284,25 @@ def yemenTitle(args):
 		return "TXT_KEY_EMIRATE_OF"
 	
 def greeceTitle(args):
-	if args.bCityStates and period(args.iCiv) == -1:
+	if period(args.iCiv) == -1 and not team(iGreece).isAVassal():
 		if isAtWar(args.iPlayer):
 			return "TXT_KEY_CIV_GREECE_LEAGUE"
-		return "TXT_KEY_CITY_STATES_ADJECTIVE"
+		elif args.bCityStates: 
+			return "TXT_KEY_CITY_STATES_ADJECTIVE"
 	if args.bEmpire:
 		return "TXT_KEY_EMPIRE_ADJECTIVE"
+
+def doriansTitle(args):
+	if not team(iDorians).isAVassal():
+		if isCurrentCapital(args.iPlayer, "Syrakousai") and not args.bCityStates:
+			return "TXT_KEY_KINGDOM_OF_SYRACUSE"
+
+		if isAtWar(args.iPlayer):
+			return "TXT_KEY_CIV_DORIANS_LEAGUE"
+		if args.bCityStates:
+			return "TXT_KEY_CITY_STATES_ADJECTIVE"
+		if args.bEmpire:
+			return "TXT_KEY_EMPIRE_ADJECTIVE"
 
 def macedonTitle(args):
 	if args.bEmpire:
@@ -594,6 +607,7 @@ dSpecificTitles = CivDict({
 	iOman: omanTitle,
 	iYemen: yemenTitle,
 	iGreece: greeceTitle,
+	iDorians: doriansTitle,
 	iMacedon: macedonTitle,
 	iPersia: persiaTitle,
 	iParthia: parthiaTitle,

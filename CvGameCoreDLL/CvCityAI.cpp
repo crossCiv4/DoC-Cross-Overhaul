@@ -2442,13 +2442,18 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 	case MINOANS:
 	case GREECE:
 		aiUnitAIVal[UNITAI_SETTLE] *= 2;
-		aiUnitAIVal[UNITAI_EXPLORE] *= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 3;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
 		break;
+	case DORIANS:
+		aiUnitAIVal[UNITAI_SETTLE] *= 2;
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 3;
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
+		aiUnitAIVal[UNITAI_COUNTER] *= 2;
+		break;
 	case MACEDON:
 		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
-		aiUnitAIVal[UNITAI_ATTACK] *= 2;
+		aiUnitAIVal[UNITAI_COUNTER] *= 2;
 		break;
 	case CHINA:
 	case YANGTZE_CHINA:

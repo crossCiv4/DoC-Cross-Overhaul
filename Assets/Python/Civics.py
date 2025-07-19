@@ -1,7 +1,7 @@
 from Core import *
 from RFCUtils import createMissionaries
 
-sCityStatesStart = set([iRome, iPhoenicia, iGreece, iIndia, iMaya, iAztecs, iMinoans])
+sCityStatesStart = set([iRome, iPhoenicia, iGreece, iDorians, iIndia, iMaya, iAztecs, iMinoans])
 
 class Civics(object):
 

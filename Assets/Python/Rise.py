@@ -58,6 +58,7 @@ sIndependenceCivs = set([
 	iFrance,
 	iSpain,
 	iGreece,
+	iDorians,
 	iGhorids,
 	iByzantium,
 	iHolyRome,
@@ -643,7 +644,7 @@ class Birth(object):
 			region_plots = plots.all().land().where(lambda p: p.getRegionGroup() == plot_(self.location).getRegionGroup())
 			# pre-medieval colonizer civs get a buff to the range at which cities are revealed
 			# and see plots on all continents
-			if self.iCiv in [iPhoenicia, iGreece]:
+			if self.iCiv in [iPhoenicia, iGreece, iDorians]:
 				iRevealRange = 50
 				region_plots = plots.all().land()
 
@@ -820,6 +821,8 @@ class Birth(object):
 			elif cities.regions(rGreece, rAnatolia).owner(iRome).count() == 0 and cities.regions(rGreece, rAnatolia).where(lambda city: city.getCivilizationType() in [iIndependent, iIndependent2, iBarbarian, iNative] and city.getPreviousCiv() == iRome).count() == 0:
 				return False
 			elif player(iGreece).isExisting() and (player(iGreece).isHuman() or stability(iGreece) == iStabilitySolid):
+				return False
+			elif player(iDorians).isExisting() and (player(iDorians).isHuman() or stability(iDorians) == iStabilitySolid):
 				return False
 			elif player(iMacedon).isExisting() and (player(iMacedon).isHuman() or stability(iMacedon) == iStabilitySolid):
 				return False

@@ -67,7 +67,7 @@ dPeriodNames = {
 	iPeriodAztecMexico:				"Aztec_Mexico",
 }
 
-sGraecoRomans = set([iGreece, iMacedon, iRome, iByzantium])
+sGraecoRomans = set([iGreece, iDorians, iMacedon, iRome, iByzantium])
 
 def setPeriod(iCiv, iPeriod):
 	if game.getPeriod(iCiv) == iPeriod:

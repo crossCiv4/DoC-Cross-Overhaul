@@ -304,12 +304,25 @@ dGoals = {
 		CityCount(
 			(plots.region(rIberia), 1),
 			(plots.region(rItaly), 2),
-			(plots.regions(rAnatolia).named(ANATOLIA), 1),
+			(plots.region(rGreece), 2),
+			(plots.regions(rAnatolia).named(ANATOLIA), 2),
 			(plots.region(rMaghreb).named(MAGHREB), 1),
 			(plots.regions(rCrimea).named(CRIMEA), 1),
-			at=-400,
+			by=-350,
 		),
 		Wonders(iParthenon, iColossus, iStatueOfZeus, iTempleOfArtemis, by=-250),
+	),
+	iDorians: (
+		FirstDiscover(iGeneralship),
+		CityCount(
+			(plots.region(rItaly), 2),
+			(plots.region(rGreece), 2),
+			(plots.regions(rAnatolia).named(ANATOLIA), 2),
+			(plots.region(rMaghreb).named(MAGHREB), 1),
+			(plots.regions(rCrimea).named(CRIMEA), 1),
+			at=-350,
+		),
+		DefeatedUnits(civs(iRome, iGreece, iMacedon, iPersia), 20),
 	),
 	iMacedon: (
 		All(
