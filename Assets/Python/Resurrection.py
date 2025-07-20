@@ -331,7 +331,7 @@ def getResurrectionTechs(iPlayer):
 		iCountRatio = 2
 		# colonial western civs should be more advanced
 		if iCiv in [iSpain, iFrance, iEngland, iNetherlands, iPortugal]:
-			iCountRatio = 3
+			iCountRatio = 4
 
 		iCount = 0
 		for iOtherPlayer in sSourcePlayers:
