@@ -46,6 +46,7 @@ sExpansionCivs = set([
 	iBuyids,
 	iManchu,
 	#iHungary,
+	iByzantium,
 ])
 
 sIndependenceCivs = set([

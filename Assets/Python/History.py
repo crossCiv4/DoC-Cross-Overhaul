@@ -198,9 +198,9 @@ def checkEarlyColonists():
 
 				# even the player gets the Carthage part of this event!
 				makeUnits(iPhoenicia, iSacredBand, tCarthage, 1)
-				makeUnits(iPhoenicia, iWorker, tCarthage, 2, UnitAITypes.UNITAI_WORKER)
+				makeUnits(iPhoenicia, iWorker, tCarthage, 1, UnitAITypes.UNITAI_WORKER)
 				makeUnits(iPhoenicia, iWarElephant, tCarthage, 1)
-				makeUnits(iPhoenicia, iNumidianCavalry, tCarthage, 2)
+				makeUnits(iPhoenicia, iNumidianCavalry, tCarthage, 1)
 
 		elif year() == year(-825) - offset:
 			giveEarlyColonists(iGreece)
@@ -210,6 +210,8 @@ def checkEarlyColonists():
 			giveEarlyColonists(iGreece)
 			giveEarlyColonists(iDorians)
 		elif year() == year(-650) - offset:	
+			giveEarlyColonists(iGreece, (66, 53)) # near Rome / Marseille
+		elif year() == year(-600) - offset:
 			giveEarlyColonists(iGreece, (66, 53)) # near Rome / Marseille
 		elif year() == year(-500) - offset:
 			giveEarlyColonists(iDorians, tTanais)
