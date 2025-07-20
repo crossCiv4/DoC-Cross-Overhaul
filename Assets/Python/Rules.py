@@ -162,6 +162,10 @@ def captureSlaves(winningUnit, losingUnit):
 	if losingCiv == iNative and winningUnit.getUnitType() in [iBandeirante, iOmaniSlaver]:
 		captureUnit(losingUnit, winningUnit, iSlave, 100)
 		return
+	
+	if winningUnit.getUnitType() in [iPeriokoi]:
+		captureUnit(losingUnit, winningUnit, iSlave, 33)
+		return
 
 	if winningCiv == iAztecs:
 		captureUnit(losingUnit, winningUnit, iAztecSlave, 50)

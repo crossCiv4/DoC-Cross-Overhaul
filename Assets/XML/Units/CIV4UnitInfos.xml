@@ -5943,6 +5943,7 @@
 			<Description>TXT_KEY_UNIT_HOPLITE_SPARTA</Description>
 			<Civilopedia>TXT_KEY_UNIT_HOPLITE_SPARTA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_HOPLITE_SPARTA_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_HOPLITE_SPARTA_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
