@@ -39,7 +39,7 @@ sExpansionCivs = set([
 	iParthia,
 	iAztecs,
 	iGhorids,
-	#iChina,
+	iChina,
 	iAssyria,
 	iFranks,
 	iEngland,

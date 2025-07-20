@@ -1761,6 +1761,12 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		return 0;
 	}
 
+	// for very high values, simply override the rest of the calculations
+	if (iSettlerMapValue >= 100)
+	{
+		return iSettlerMapValue * 30;
+	}
+
 	// Leoreth: only consider value 1 sites if no desired sites are available and if important enough
 	if (iSettlerMapValue == 1)
 	{

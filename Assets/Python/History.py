@@ -183,7 +183,7 @@ def macedonSpawnGreatGeneral(iPlayer):
 
 @handler("BeginGameTurn")
 def checkEarlyColonists():
-	if year().between(-1000, -700): # early exit
+	if year().between(-1000, -200): # early exit
 		offset = turns(data.iSeed % 3)
 		# the foundation of Carthage
 		if year() == year(-800) - offset:
@@ -209,6 +209,8 @@ def checkEarlyColonists():
 		elif year() == year(-700) - offset:
 			giveEarlyColonists(iGreece)
 			giveEarlyColonists(iDorians)
+		elif year() == year(-650) - offset:	
+			giveEarlyColonists(iGreece, (66, 53)) # near Rome / Marseille
 		elif year() == year(-500) - offset:
 			giveEarlyColonists(iDorians, tTanais)
 
@@ -731,7 +733,7 @@ def giveEarlyColonists(iCiv, overridePlot = None):
 			if tSeaPlot:
 				makeUnit(iCiv, iGalley, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
 				makeUnit(iCiv, iSettler, tSeaPlot)
-				makeUnit(iCiv, iArcher, tSeaPlot)
+				makeUnit(iCiv, unique_unit(iCiv, iSpearman), tSeaPlot, UnitAITypes.UNITAI_CITY_DEFENSE)
 			else:
 				message(active(), 'WARNING: could not find sea plot for early colonizers')
 
