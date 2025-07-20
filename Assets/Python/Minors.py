@@ -574,7 +574,7 @@ barbarians = [
 	Barbarians(-1500, -500, {iArcher: 1}, ((105, 39), (111, 43)), 10, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_GIRIJAN"),
 	Barbarians(-1600, -1100, {iChariot: 4}, ((98, 49), (102, 52)), 4, INVADERS, target_area=((99, 41), (105, 48)), adjective="TXT_KEY_ADJECTIVE_VEDIC", promotions=(iMobility, iDesertAdaptation)),
 	Barbarians(-1400, -800, {iChariot: 2}, ((115, 54), (129, 59)), 12, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_HU", promotions=(iDesertAdaptation, iSteppeAdaptation,)),
-	Barbarians(-1280, -1170, {iGalley: 1, iAxeman: 1, iSacredBand: 1, iMycenaeanMyrmidon: 1}, ((66, 45), (70, 52)), 1, SEA_INVADERS, target_area=((75, 44), (85, 54)), adjective="TXT_KEY_ADJECTIVE_SEA_PEOPLES"),
+	Barbarians(-1240, -1170, {iGalley: 1, iAxeman: 1, iSacredBand: 1, iMycenaeanMyrmidon: 1}, ((66, 45), (70, 52)), 1, SEA_INVADERS, target_area=((75, 41), (84, 52)), adjective="TXT_KEY_ADJECTIVE_SEA_PEOPLES"),
 	Barbarians(-1270, -1160, {iVulture: 2}, ((90, 47), (93, 51)), 7, INVADERS, adjective="TXT_KEY_ADJECTIVE_KASSITE"),
 	Barbarians(-900, -650, {iChariot: 1, iWarrior: 2}, ((117, 53), (119, 56)), 7, INVADERS, target_area=((118, 52), (121, 54)), adjective="TXT_KEY_ADJECTIVE_QIANG"),
 	#Barbarians(-1000, -100, {iSkirmisher: 1, iAxeman: 1}, ((120, 42), (129, 50)), 7, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"),

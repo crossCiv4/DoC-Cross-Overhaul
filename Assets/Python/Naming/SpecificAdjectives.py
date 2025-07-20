@@ -100,10 +100,10 @@ def macedonSpecificAdjective(args):
         return "TXT_KEY_CIV_MACEDON_SELEUCID_AJECTIVE"
 
 def buyidsSpecificAdjective(args):
-    if args.iReligion == iZoroastrianism:
-        return "TXT_KEY_CIV_PERSIA_ADJECTIVE"
     if args.iEra >= iRenaissance:
         return "TXT_KEY_CIV_BUYIDS_FARSI"
+    if args.iReligion == iZoroastrianism or args.bCapitulated:
+        return "TXT_KEY_CIV_PERSIA_ADJECTIVE"
 
 def yemenSpecificAdjective(args):
     if not args.iReligion in sMuslimReligions and args.iEra < iIndustrial:

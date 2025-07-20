@@ -38,7 +38,7 @@ def celtsSpecificName(args):
 def buyidsSpecificName(args):
 	if args.iReligion == iZoroastrianism:
 		return "TXT_KEY_CIV_PERSIA_SHORT_DESC"
-	if args.iEra >= iRenaissance:
+	if args.iEra >= iRenaissance or args.bCapitulated:
 		return "TXT_KEY_CIV_BUYIDS_FARS"
 
 def vandalsSpecificName(args):
