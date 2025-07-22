@@ -347,12 +347,12 @@ def italySpecificAdjective(args):
             return "TXT_KEY_CIV_ITALY_LOMBARD"
 
 def mongolsSpecificAdjective(args):
-    if not args.bEmpire and args.iEra <= iRenaissance:
-        if args.capital.getRegionID() in lMiddleEast:
+    if args.iEra <= iIndustrial:
+        if args.capital.getRegionID() in lMiddleEast and not args.bEmpire:
             return "TXT_KEY_CIV_MONGOLIA_HULAGU"
         if location(args.capital) != location(plots.capital(iMongols)) and args.capital.getRegionID() in [rCentralAsianSteppe, rTarimBasin, rKhorasan]:
             return "TXT_KEY_CIV_MONGOLIA_CHAGATAI"
-        if 2 * cities.regions(rNorthChina, rSouthChina).owner(args.iPlayer).count() >= cities.regions(rNorthChina, rSouthChina).count():
+        if args.capital.getRegionID() in [rNorthChina, rSouthChina] and args.iReligion in [iBuddhism, iTaoism, iConfucianism]:
             return "TXT_KEY_CIV_MONGOLIA_YUAN"
     if args.bMonarchy:
         return "TXT_KEY_CIV_MONGOLIA_MONGOL"
