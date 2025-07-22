@@ -9,7 +9,13 @@
     ],
     "python.analysis.extraPaths": [
         "./Assets/Python/Naming",
-        "./Assets/Python/Victory"
+        "./Assets/Python/Victory",
+        "./Assets/Python",
+        "./Assets/Python/pyWB",
+        "./Assets/Python/pyHelper",
+        "./Assets/Python/BUG"
     ],
     "python.defaultInterpreterPath": "C:\\Python27\\python.exe",
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": [],
 }
