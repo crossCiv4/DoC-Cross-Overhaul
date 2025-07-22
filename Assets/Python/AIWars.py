@@ -270,6 +270,11 @@ tRomeNumidiaTL = (59, 45)
 tRomeNumidiaBR = (65, 49)
 tConquestRomeNumidia = (52, iRome, iPhoenicia, tRomeNumidiaTL, tRomeNumidiaBR, 2, tRomeNumidiaYear, 10)
 
+tNorseEnglandYear = 850
+tNorseEnglandTL = (57, 65)
+tNorseEnglandBR = (59, 68)
+tConquestNorseEngland = (53, iNorse, iSaxons, tNorseEnglandTL, tNorseEnglandBR, 1, tNorseEnglandYear, 10)
+
 lConquests = [
 	tConquestRomeCarthageInSpain,
 	tConquestRomeCarthage, 
@@ -321,6 +326,7 @@ lConquests = [
 	tConquestCharlemagne,
 	#tConquestArabiaEgypt, --> not useful since Arabia flips Egypt, but used as a check for the conquest of Carthage, so Byz can block it by conquering a city in Egypt
 	tConquestManchuTaiwan,
+	tConquestNorseEngland,
 ]
 
 dConquestChecker = {
