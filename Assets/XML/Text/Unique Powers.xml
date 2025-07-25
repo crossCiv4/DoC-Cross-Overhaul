@@ -1482,7 +1482,7 @@
 		<Italian>+1[ICON_FOOD] from Pasture</Italian>
 		<Spanish>+1[ICON_FOOD] from Pasture</Spanish>
 	</TEXT>
-		<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UP_DOR_TITLE</Tag>
 		<English>The Power of the Helots:</English>
 		<French>Le pouvoir des h&#233;lots :</French>
@@ -1497,5 +1497,21 @@
 		<German>Slave specialists produce +2 [ICON_PRODUCTION] and +1 [ICON_COMMERCE]</German>
 		<Italian>Slave specialists produce +2 [ICON_PRODUCTION] and +1 [ICON_COMMERCE]</Italian>
 		<Spanish>Slave specialists produce +2 [ICON_PRODUCTION] and +1 [ICON_COMMERCE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_IRE_TITLE</Tag>
+		<English>The Power of Irish Monasticism:</English>
+		<French>The Power of Irish Monasticism:</French>
+		<German>The Power of Irish Monasticism:</German>
+		<Italian>The Power of Irish Monasticism:</Italian>
+		<Spanish>The Power of Irish Monasticism:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_IRE</Tag>
+		<English>Priest specialists produce +3 [ICON_COMMERCE]</English>
+		<French>Les sp&#233;cialistes pr&#233;tres produisent +3 [ICON_COMMERCE]</French>
+		<German>Priester-Spezialisten produzieren +3 [ICON_COMMERCE]</German>
+		<Italian>I specialisti sacerdoti producono +3 [ICON_COMMERCE]</Italian>
+		<Spanish>Los especialistas sacerdotes producen +3 [ICON_COMMERCE]</Spanish>
 	</TEXT>
 </Civ4GameText>

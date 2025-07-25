@@ -1817,7 +1817,22 @@
 		<Italian>Leonidas</Italian>
 		<Spanish>Leonidas</Spanish>
 	</TEXT>
-
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_COLLINS</Tag>
+		<English>Michael Collins</English>
+		<French>Michael Collins</French>
+		<German>Michael Collins</German>
+		<Italian>Michael Collins</Italian>
+		<Spanish>Michael Collins</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NOMINOE</Tag>
+		<English>Nominoe</English>
+		<French>Nominoe</French>
+		<German>Nominoe</German>
+		<Italian>Nominoe</Italian>
+		<Spanish>Nominoe</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_</Tag>
 		<English></English>

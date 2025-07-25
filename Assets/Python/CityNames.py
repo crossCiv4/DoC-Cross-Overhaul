@@ -107,6 +107,7 @@ dLanguages = CivDict({
 	iManchu: [iLangModernChinese, iLangChinese, iLangMongolian, iLangTurkish, iLangKorean],
     iFranks: [iLangFrankish, iLangFrench, iLangLatin, iLangSaxon, iLangGerman],
     iHungary: [iLangHungarian, iLangGerman, iLangRuthenian, iLangByzantine],
+    iIreland: [iLangCeltic, iLangEnglish],
 
 }, [])
 

@@ -12351,6 +12351,12 @@ void CvPlayer::applyCivilization(CivilizationTypes eCivilization, int iChange)
 		changeSpecialistExtraYield(SPECIALIST_SLAVE, YIELD_COMMERCE, iChange);
 	}
 
+	// Irish UP: +3 commerce per priest specialist
+	if (eCivilization == IRELAND)
+	{
+		changeSpecialistExtraYield(SPECIALIST_PRIEST, YIELD_COMMERCE, 3 * iChange);
+	}
+
 	// Mande UP: can trade across desert
 	if (eCivilization == MALI)
 	{

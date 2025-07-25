@@ -29,9 +29,15 @@ def rusSpecificName(args):
 	if not args.bCapitulated and period(iRus) != iPeriodUkraine:
 		return capitalName(args.iPlayer)
 
+def irelandSpecificName(args):
+	if args.capital in plots.regions(rBritain):
+		return "TXT_KEY_CIV_SCOTLAND"
+	else:
+		return "TXT_KEY_CIV_IRELAND_SHORT_DESC"
+
 def celtsSpecificName(args):
-	if args.bResurrected:
-		return "TXT_KEY_CIV_CELTS_IRELAND"
+	if player(args.iPlayer).getPeriod() == iPeriodBrittany:
+		return "TXT_KEY_CIV_CELTS_BRITTANY"
 	else:
 		return "TXT_KEY_CIV_CELT_THE_CELTS"
 
@@ -299,4 +305,5 @@ dSpecificNames =  CivDict({
 	iNetherlands: netherlandsSpecificName,
 	iGermany: germanySpecificName,
 	iHungary: hungarySpecificName,
+	iIreland: irelandSpecificName,
 })

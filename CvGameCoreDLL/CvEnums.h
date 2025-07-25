@@ -1213,6 +1213,7 @@ enum CivilizationTypes		// Exposed to Python
 	INCA,
 	INDIA,
 	IRAN,
+	IRELAND,
 	IROQUOIS,
 	ITALY,
 	JAPAN,
@@ -1337,7 +1338,9 @@ enum LeaderHeadTypes			// Exposed to Python
 	SHAPUR,
 
 	BRENNUS,
-	BRIAN_BORUS,
+
+	BRIAN_BORU,
+	COLLINS,
 
 	SCIPIO,
 	JULIUS_CAESAR,

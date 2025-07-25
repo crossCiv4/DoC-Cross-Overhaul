@@ -86,14 +86,6 @@
 		<Spanish>%s2 Commune</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CELTS_REPUBLIC</Tag>
-		<English>%s2 Republic</English>
-		<French>%s2 Republic</French>
-		<German>%s2 Republic</German>
-		<Italian>%s2 Republic</Italian>
-		<Spanish>%s2 Republic</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_CELTS_DEFAULT</Tag>
 		<English>%s2 Chiefdoms</English>
 		<French>%s2 Chiefdoms</French>
@@ -102,27 +94,19 @@
 		<Spanish>%s2 Chiefdoms</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CELTS_PETTY_KINGDOMS</Tag>
-		<English>%s2 Petty Kingdoms</English>
-		<French>%s2 Petty Kingdoms</French>
-		<German>%s2 Petty Kingdoms</German>
-		<Italian>%s2 Petty Kingdoms</Italian>
-		<Spanish>%s2 Petty Kingdoms</Spanish>
+		<Tag>TXT_KEY_CIV_CELTS_BRITTANY</Tag>
+		<English>Brittany</English>
+		<French>Bretagne</French>
+		<German>Bretagne</German>
+		<Italian>Bretagna</Italian>
+		<Spanish>Bretagne</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_CELTS_IRISH_ADJECTIVE</Tag>
-		<English>Irish</English>
-		<French>Irish</French>
-		<German>Irish</German>
-		<Italian>Irish</Italian>
-		<Spanish>Irish</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_CELTS_IRELAND</Tag>
-		<English>Ireland</English>
-		<French>Irlande</French>
-		<German>Irland</German>
-		<Italian>Irlanda</Italian>
-		<Spanish>Irlanda</Spanish>
+		<Tag>TXT_KEY_CIV_CELTS_BRITTANY_ADJECTIVE</Tag>
+		<English>Breton</English>
+		<French>Breton</French>
+		<German>Breton</German>
+		<Italian>Breton</Italian>
+		<Spanish>Breton</Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_DESC</Tag>
+		<English>The Irish</English>
+		<French>Les Irlandais</French>
+		<German>Die Iren</German>
+		<Italian>Gli Irlandesi</Italian>
+		<Spanish>Los Irlandeses</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_PEOPLES</Tag>
+		<English>Irish Peoples</English>
+		<French>Irish Peoples</French>
+		<German>Irish Peoples</German>
+		<Italian>Irish Peoples</Italian>
+		<Spanish>Irish Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_ADJECTIVE</Tag>
+		<English>Irish</English>
+		<French>Irish</French>
+		<German>Irish</German>
+		<Italian>Irish</Italian>
+		<Spanish>Irish</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_SHORT_DESC</Tag>
+		<English>Ireland</English>
+		<French>Irlande</French>
+		<German>Irland</German>
+		<Italian>Irlanda</Italian>
+		<Spanish>Irlanda</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_DEFAULT</Tag>
+		<English>%s2 Chiefdoms</English>
+		<French>%s2 Chiefdoms</French>
+		<German>%s2 Chiefdoms</German>
+		<Italian>%s2 Chiefdoms</Italian>
+		<Spanish>%s2 Chiefdoms</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PETTY_KINGDOMS</Tag>
+		<English>%s2 Petty Kingdoms</English>
+		<French>%s2 Petty Kingdoms</French>
+		<German>%s2 Petty Kingdoms</German>
+		<Italian>%s2 Petty Kingdoms</Italian>
+		<Spanish>%s2 Petty Kingdoms</Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_COMMUNIST</Tag>
+		<English>%s2 Commune</English>
+		<French>%s2 Commune</French>
+		<German>%s2 Commune</German>
+		<Italian>%s2 Commune</Italian>
+		<Spanish>%s2 Commune</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCOTLAND_ADJECTIVE</Tag>
+		<English>Scottish</English>
+		<French>Scottish</French>
+		<German>Scottish</German>
+		<Italian>Scottish</Italian>
+		<Spanish>Scottish</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCOTLAND</Tag>
+		<English>Scotland</English>
+		<French>Écosse</French>
+		<German>Schottland</German>
+		<Italian>Scotland</Italian>
+		<Spanish>Escocia</Spanish>
+	</TEXT>
+</Civ4GameText>

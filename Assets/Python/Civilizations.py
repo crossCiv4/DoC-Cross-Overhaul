@@ -433,6 +433,13 @@ lCivilizations = [
 		techs=techs.column(5).including(iPolitics, iEthics, iArtisanry, iConsensus, iSteel)
 	),
 	Civilization(
+		iIreland,
+		iGold=100,
+		iStateReligion=iOrthodoxy,
+		lCivics=[iElective, iSlavery, iMerchantTrade, iMonasticism],
+		techs=techs.column(5).including(iPolitics, iEthics, iScholarship, iConsensus, iArtisanry)
+	),
+	Civilization(
 		iMalays,
 		iGold=200,
 		iAdvancedStartPoints=100,
@@ -1043,6 +1050,14 @@ dStartingUnits = CivDict({
 		iSettleSea: 1,
 		iAssaultSea: 1,
 		iWorkerSea: 1,
+	},
+	iIreland: {
+		iSettle: 1,
+		iWork: 2,
+		iAssaultSea: 1,
+		iSkirmish: 2,
+		iAttack: 1,
+		iMissionary: 3,
 	},
 	iFranks: {
 		iSettle: 1,
@@ -1769,6 +1784,9 @@ dAdditionalUnits = CivDict({
 	iDorians: {
 		iCounter: 2,
 	},
+	iCelts: {
+
+	},
 	iRome: {
 		iAttack: 4,
 	},
@@ -2351,8 +2369,10 @@ dTechPreferences = {
 		iTheology: -40,
 	},
 	iCelts : {
-		iEthics: 20,
 		iBloomery: 20,
+	},
+	iIreland : {
+		iCartography: -10,
 	},
 	iRome : {	
 		iCurrency: 30,
@@ -2886,6 +2906,7 @@ dDefaultWonderPreferences = {
 	iMorocco: -15,
 	iYemen: -15,
 	iOman: -15,
+	iIreland: -15,
 }
 
 dBuildingPreferences = {

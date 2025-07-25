@@ -525,10 +525,10 @@ minor_cities = [
 	#MinorCity(700, iIndependent2, (71, 36), "Njimi", iPopulation=1, iCiv=iArabia, units={iHarass: 1}, adjective="TXT_KEY_ADJECTIVE_KANURI"),
 	#MinorCity(750, iIndependent, (91, 60), "Atil", iPopulation=2, iCiv=iTurks, units={iHarass: 3}, adjective="TXT_KEY_ADJECTIVE_KHAZAR"),
 	MinorCity(800, iNative, (30, 34), u"Bacatá", iPopulation=1, iCiv=iInca, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_MUISCA"),
-	MinorCity(430, iIndependent, (56, 71), "Inbhir Nis", iPopulation=2, iCiv=iCelts, units={iDefend: 2, iHarass: 1, iCounter: 3}, buildings=[iWalls, iMenhir], condition=lambda: not player(iCelts).isExisting() and not player(iCelts).isHuman(), adjective="TXT_KEY_ADJECTIVE_PICTISH"),
+	MinorCity(400, iIndependent, (56, 71), "Inbhir Nis", iPopulation=2, iCiv=iCelts, units={iDefend: 2, iHarass: 1, iCounter: 3}, buildings=[iWalls, iMenhir], condition=lambda: not player(iCelts).isHuman(), adjective="TXT_KEY_ADJECTIVE_PICTISH"),
 	MinorCity(820, iBarbarian, (70, 65), "Szczecin", iPopulation=2, iCiv=iPoland, units={iAttack: 2, iSkirmish: 2, iDefend: 3, iCounter: 1}, buildings=[iWalls, iMonument], adjective="TXT_KEY_ADJECTIVE_POMERANIAN"),
 	MinorCity(870, iIndependent2, (72, 62), "Wroclaw", iPopulation=2, iCiv=iPoland, units={iDefend: 3}, buildings=[iWalls, iMonument], adjective="TXT_KEY_CIV_POLAND_ADJECTIVE"),
-	MinorCity(530, iIndependent, (54, 65), u"Áth Cliath", iPopulation=1, iCiv=iCelts, units={iDefend: 2}, condition=lambda: not player(iCelts).isExisting() and not player(iCelts).isHuman(), adjective="TXT_KEY_ADJECTIVE_IRISH"),
+	#MinorCity(530, iIndependent, (54, 65), u"Áth Cliath", iPopulation=1, iCiv=iCelts, units={iDefend: 2}, condition=lambda: not player(iCelts).isExisting() and not player(iCelts).isHuman(), adjective="TXT_KEY_ADJECTIVE_IRISH"),
 	#MinorCity(860, iBarbarian, (76, 59), u"Kolozsvár", iPopulation=3, iCiv=iTurks, units={iHarass: 3}, bIgnoreRuins=True, adjective="TXT_KEY_ADJECTIVE_MAGYAR"),
 	MinorCity(860, iIndependent2, (82, 68), u"Holmgarðr", iPopulation=1, iCiv=iRus, units={iDefend: 2}, condition=lambda: not player(iRus).isExisting() and not player(iNorse).isHuman(), adjective="TXT_KEY_CIV_RUS_ADJECTIVE"),
 	MinorCity(860, iIndependent, (68, 60), u"Regensburg", iPopulation=3, iCiv=iHolyRome, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
@@ -636,8 +636,8 @@ barbarians = [
 	Barbarians(330, 430, {iSwordsman: 3, iSavaran: 2, iCatapult: 1}, ((64, 59), (75, 65)), 3, INVADERS, target_area=((59, 55), (62, 53)), iAlternativeCiv=iVandals, adjective="TXT_KEY_ADJECTIVE_VANDAL"),
 	Barbarians(350, 470, {iSwordsman: 2, iHorseArcher: 1, iAxeman: 1, iHorseman: 2, iCatapult: 2}, ((70, 58), (72, 61)), 3, INVADERS, target_area=((65, 51), (70, 57)), adjective="TXT_KEY_ADJECTIVE_OSTROGOTHIC"),
 	Barbarians(340, 420, {iSwordsman: 3, iAxeman: 2, iCatapult: 2}, ((65, 60), (70, 64)), 2, INVADERS, target_area=((59, 55), (62, 53)), iAlternativeCiv=iSpain, adjective="TXT_KEY_ADJECTIVE_VISIGOTHIC"),
-	Barbarians(350, 450, {iOghuz: 5, iCatapult: 2, iSwordsman: 3}, ((61, 57), (77, 62)), 3, INVADERS, target_area=((57, 51), (71, 61)), adjective="TXT_KEY_ADJECTIVE_HUNNIC", promotions=(iMobility,)),
-	Barbarians(350, 540, {iOghuz: 5}, ((93, 53), (100, 60)), 1, INVADERS, target_area=((92, 44), (102, 52)), adjective="TXT_KEY_ADJECTIVE_HUNA", iAlternativeCiv=iTurks, promotions=(iMobility, iDesertAdaptation, iSteppeAdaptation)), # Hephtalites
+	Barbarians(350, 450, {iOghuz: 5, iCatapult: 2, iSwordsman: 2}, ((61, 57), (77, 62)), 3, INVADERS, target_area=((57, 51), (71, 61)), adjective="TXT_KEY_ADJECTIVE_HUNNIC", promotions=(iMobility,)),
+	Barbarians(350, 540, {iOghuz: 4}, ((93, 53), (100, 60)), 1, INVADERS, target_area=((94, 49), (102, 53)), adjective="TXT_KEY_ADJECTIVE_HUNA", iAlternativeCiv=iTurks, promotions=(iMobility, iDesertAdaptation, iSteppeAdaptation)), # Hephtalites
 	Barbarians(350, 600, {iDogSoldier: 1}, ((11, 44), (19, 51)), 10, NOMADS, iOwner=iNative, target_area=((14, 40), (23, 45)), adjective="TXT_KEY_ADJECTIVE_NAHUA"),
 	#Barbarians(400, 550, {iGalley: 2, iSwordsman: 4}, ((62, 46), (71, 50)), 2, SEA_INVADERS, target_area=((62, 46), (71, 55)), adjective="TXT_KEY_ADJECTIVE_VANDAL"),
 	Barbarians(400, 1000, {iSkirmisher: 2, iSwordsman: 1}, ((120, 42), (129, 48)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"),

@@ -90,11 +90,11 @@ tTurksPersiaTL = (91, 48)
 tTurksPersiaBR = (98, 53)
 
 iTurksAnatoliaYear = 1100
-tTurksAnatoliaTL = (81, 51)
+tTurksAnatoliaTL = (82, 51)
 tTurksAnatoliaBR = (92, 55)
 
 tConquestTurksPersia = (10, iTurks, iArabia, tTurksPersiaTL, tTurksPersiaBR, 4, iTurksPersiaYear, 20)
-tConquestTurksAnatolia = (11, iTurks, iByzantium, tTurksAnatoliaTL, tTurksAnatoliaBR, 4, iTurksAnatoliaYear, 20)
+tConquestTurksAnatolia = (11, iTurks, iByzantium, tTurksAnatoliaTL, tTurksAnatoliaBR, 3, iTurksAnatoliaYear, 20)
 
 iEnglandIrelandYear = 1200
 tEnglandIrelandTL = (52, 64)
@@ -270,10 +270,11 @@ tRomeNumidiaTL = (59, 45)
 tRomeNumidiaBR = (65, 49)
 tConquestRomeNumidia = (52, iRome, iPhoenicia, tRomeNumidiaTL, tRomeNumidiaBR, 2, tRomeNumidiaYear, 10)
 
+# includes Ireland too
 tNorseEnglandYear = 850
-tNorseEnglandTL = (57, 65)
+tNorseEnglandTL = (54, 65)
 tNorseEnglandBR = (59, 68)
-tConquestNorseEngland = (53, iNorse, iSaxons, tNorseEnglandTL, tNorseEnglandBR, 1, tNorseEnglandYear, 10)
+tConquestNorseEngland = (53, iNorse, iSaxons, tNorseEnglandTL, tNorseEnglandBR, 2, tNorseEnglandYear, 10)
 
 lConquests = [
 	tConquestRomeCarthageInSpain,

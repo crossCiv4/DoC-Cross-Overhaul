@@ -1518,5 +1518,13 @@
 			<NoShaderNIF>Art/Leaderheads/Leonidas/Leonidas_noshader.nif</NoShaderNIF>
 			<BackgroundKFM>Art/Leaderheads/Leonidas/shaka_BG.kfm</BackgroundKFM>
 		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_COLLINS</Type>
+			<Button>Art/Leaderheads/collins/collins.dds</Button>
+			<NIF>Art/Leaderheads/collins/halis.nif</NIF>
+			<KFM>Art/Leaderheads/collins/gilgamesh.kfm</KFM>
+			<NoShaderNIF>Art/Leaderheads/collins/halis_nonshader.nif</NoShaderNIF>
+			<BackgroundKFM>Art/Leaderheads/collins/gilgamesh_backgrnd.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
 	</LeaderheadArtInfos>
 </Civ4ArtDefines>

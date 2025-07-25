@@ -1289,7 +1289,7 @@
 			<iDefense>50</iDefense>
 			<iBombardDefense>50</iBombardDefense>
 			<iAsset>1</iAsset>
-			<iPower>2</iPower>
+			<iPower>3</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_WALLS</ConstructSound>
 			<BonusProductionModifiers>
@@ -1339,7 +1339,6 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildingInfo>
 		<BuildingInfo>
 			<BuildingClass>BUILDINGCLASS_WALLS</BuildingClass>

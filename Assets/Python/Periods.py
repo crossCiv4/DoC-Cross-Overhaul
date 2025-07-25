@@ -9,13 +9,12 @@ dEvacuatePeriods = {
 }
 
 dPeriods600AD = {
-	iCelts : iPeriodInsularCelts,
+	iCelts : iPeriodBrittany,
 }
 
 dPeriods1700AD = {
 	iChina : iPeriodMing,
 	iIndia : iPeriodMaratha,
-	iCelts : iPeriodInsularCelts,
 	iDravidia : iPeriodVijayanagara,
 	iNorse : iPeriodDenmark,
 	iTurks : iPeriodUzbeks,
@@ -39,7 +38,7 @@ dPeriodNames = {
 	iPeriodMaratha:					"Maratha",
 	iPeriodModernGreece:			"Modern_Greece",
 	iPeriodCarthage:				"Carthage",
-	iPeriodInsularCelts:			"Insular_Celts",
+	iPeriodBrittany:				"Brittany",
 	iPeriodVijayanagara:			"Vijayanagara",
 	iPeriodByzantineConstantinople:	"Byzantine_Constantinople",
 	iPeriodSeljuks:					"Seljuks",
@@ -100,7 +99,7 @@ def onBirth(iPlayer):
 	iCiv = civ(iPlayer)
 
 	if iCiv == iFranks:
-		setPeriod(iCelts, iPeriodInsularCelts)
+		setPeriod(iCelts, iPeriodBrittany)
 	elif iCiv == iGermany:
 		setPeriod(iHungary, iPeriodAustria)
 	elif iCiv == iIran:
@@ -131,7 +130,7 @@ def onResurrection(iPlayer):
 			setPeriod(iIndia, -1)
 	
 	elif iCiv == iCelts:
-		setPeriod(iCelts, iPeriodInsularCelts)
+		setPeriod(iCelts, iPeriodBrittany)
 	
 	elif iCiv == iArabia:
 		setPeriod(iArabia, iPeriodSaudi)
@@ -203,7 +202,7 @@ def onCityAcquired(iOwner, iPlayer, city, bConquest):
 	
 	if iOwnerCiv == iCelts or city.getPreviousCiv() == iCelts:
 		if player(iCelts).getNumCities() > 0 and cities.core(iCelts).owner(iCelts).count() == 0:
-			setPeriod(iCelts, iPeriodInsularCelts)
+			setPeriod(iCelts, iPeriodBrittany)
 
 	
 @handler("firstCity")

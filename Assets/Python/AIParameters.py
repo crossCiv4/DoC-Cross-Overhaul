@@ -90,4 +90,5 @@ iCanada : 4,
 iMamluks: 2,
 iNigeria: 2,
 iBuyids: 3,
+iIreland: 2,
 }, default=3)

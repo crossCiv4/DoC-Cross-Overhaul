@@ -659,22 +659,22 @@ def removeBarbariansForMongols(iPlayer):
 ### PERIOD CHANGE ###
 
 
-@handler("playerPeriodChange")
-def relocateCelts(iPlayer, iPeriod):
-	if iPeriod == iPeriodInsularCelts:
-		newCapital = cities.owner(iCelts).matching(lambda city: city.getRegionID() == rIreland, lambda city: city.getRegionID() == rBritain, lambda city: city not in cities.birth(iFrance)).random()
+#@handler("playerPeriodChange")
+# def relocateCelts(iPlayer, iPeriod):
+# 	if iPeriod == iPeriodInsularCelts:
+# 		newCapital = cities.owner(iCelts).matching(lambda city: city.getRegionID() == rIreland, lambda city: city.getRegionID() == rBritain, lambda city: city not in cities.birth(iFrance)).random()
 		
-		if not newCapital and not player(iPlayer).isHuman():
-			completeCollapse(iPlayer)
-			return
+# 		if not newCapital and not player(iPlayer).isHuman():
+# 			completeCollapse(iPlayer)
+# 			return
 		
-		relocateCapital(iPlayer, newCapital)
+# 		relocateCapital(iPlayer, newCapital)
 		
-		ahistoricalCities = cities.owner(iCelts).where(lambda city: plot(city).getPlayerSettlerValue(iPlayer) == 0)
-		if ahistoricalCities:
-			secedeCities(iPlayer, ahistoricalCities)
+# 		ahistoricalCities = cities.owner(iCelts).where(lambda city: plot(city).getPlayerSettlerValue(iPlayer) == 0)
+# 		if ahistoricalCities:
+# 			secedeCities(iPlayer, ahistoricalCities)
 		
-		data.players[iPlayer].resetStability()
+# 		data.players[iPlayer].resetStability()
 
 
 ### PREPARE BIRTH ###

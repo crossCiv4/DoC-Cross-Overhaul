@@ -8,10 +8,10 @@ from pathlib import Path
 iWorldX = 150
 iWorldY = 80
 
-iNumCivs = 91
+iNumCivs = 92
 (iAmerica, iArabia, iArgentina, iArmenia, iAssyria, iAztecs, iBabylonia, iBrazil, iBulgaria, iBurma, iBuyids, iByzantium, iCanada, 
 iPhoenicia, iCelts, iChina, iChinaS, iColombia, iDorians, iDravidia, iEgypt, iEngland, iEthiopia, iFrance, iFranks, iGermany, iGhorids,
-iGreece, iHarappa, iHittites, iHolyRome, iHungary, iInca, iIndia, iIran, iIroquois, iItaly, iJapan, iJava, iKhazars,
+iGreece, iHarappa, iHittites, iHolyRome, iHungary, iInca, iIndia, iIran, iIreland, iIroquois, iItaly, iJapan, iJava, iKhazars,
 iKhmer, iCongo, iKorea, iKushans, iMacedon, iMalays, iMali, iMamluks, iManchu, iMaya, iMexico, iMinoans, iMongols, iMoors, iMorocco,
 iTimurids, iNetherlands, iNigeria, iNorse, iNubia, iOman, iOttomans, iParthia, iPersia, iPoland, iPolynesia, iPortugal, 
 iRome, iRus, iRussia, iSaxons, iShu, iSpain, iSwahili, iSweden, iThailand, iTibet, iToltecs, iTunis,
@@ -161,6 +161,7 @@ iPolynesia :	((3, 20),	(5, 23)),
 iPersia :		((92, 43),	(95, 50)),
 iRome :			((66, 50),	(72, 57)),
 iCelts :		((59, 56),	(63, 61)),
+iIreland :		((52, 64),	(56, 67)),
 iMaya :			((21, 41),	(23, 44)),
 iDravidia :		((105, 31),	(108, 35)),
 iEthiopia :		((82, 33),	(85, 36)),

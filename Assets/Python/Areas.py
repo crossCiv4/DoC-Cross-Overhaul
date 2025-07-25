@@ -93,13 +93,14 @@ iYamato :		(137, 51), # Heijo-kyo
 iManchu :		(129, 61), # Daqing; not the actual first capital of the Qing but works for gameplay reasons
 iFranks :		(61, 63), # Tournai (Den Haag site)
 iHungary :		tBudapest,
+iIreland :      (54, 65),	# Dublin
 })
 
 dPeriodCapitals = {
 iPeriodMing :			(125, 56), # Beijing
 iPeriodMaratha :		tDelhi,	# Delhi
 iPeriodCarthage : 		(67, 48),	# Carthage
-iPeriodInsularCelts :	(54, 65),	# Dublin
+#iPeriodBrittany :	(XX, YY),	# Nantes
 iPeriodVijayanagara :	(106, 37),	# Vijayanagara
 iPeriodAustria :		tVienna,
 iPeriodMughals :		tDelhi,  # Delhi
@@ -343,6 +344,7 @@ iBuyids :		((92, 43),	(94, 48)),
 iManchu :		((122, 55),	(132, 63)),
 iFranks :		((60, 60),	(65, 63)),
 iHungary :		((72, 58),	(77, 60)),
+iIreland :		((52, 64),	(56, 67)),
 })
 
 dCoreAreaExceptions = CivDict({
@@ -401,7 +403,7 @@ iPeriodMing : 						((120, 49),	(129, 56)),
 iPeriodModernGreece :				((74, 49),	(76, 54)),
 iPeriodMaratha : 					((102, 38),	(107, 47)),
 iPeriodCarthage:					((64, 45),	(70, 48)),
-iPeriodInsularCelts :				((52, 64),	(56, 67)),
+iPeriodBrittany :					((56, 59),	(58, 61)),
 iPeriodByzantineConstantinople :	((75, 50),	(79, 55)),
 iPeriodMeiji : 						((134, 49),	(140, 59)),
 iPeriodSeljuks : 					((92, 48),	(98, 53)),

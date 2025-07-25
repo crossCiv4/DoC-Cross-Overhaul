@@ -304,9 +304,12 @@ def zuluLeader(args):
 	if args.bResurrected and year() >= year(1950):
 		return iNelsonMandela
 
+def irelandLeader(args):
+	if args.iEra >= iIndustrial:
+		return iCollins
+
 def celtsLeader(args):
-	if args.bResurrected:
-		return iBrianBoru
+	return iBrennus
 
 def vietnamLeader(args):
 	if args.iEra >= iIndustrial:
@@ -407,6 +410,7 @@ dSpecificLeaders = CivDict({
 	iKhmer: khmerLeader,
 	iSaxons: saxonsLeader,
 	iHungary: hungarianLeader,
+	iIreland: irelandLeader,
 })
 
 #####
@@ -486,6 +490,13 @@ def rusLeaderName(args):
 		else:
 			return "TXT_KEY_LEADER_OLEG"
 
+def celtsLeaderName(args):
+	if args.iLeader == iBrennus:
+		if period(args.iCiv) == iPeriodBrittany:
+			return "TXT_KEY_LEADER_NOMINOE"
+		else:
+			return "TXT_KEY_LEADER_BRENNUS"
+
 dSpecificLeaderNames = CivDict({
 	iManchu: manchuLeaderName,
 	iShu: shuLeaderName,
@@ -499,4 +510,5 @@ dSpecificLeaderNames = CivDict({
 	iYamato: yamatoLeaderName,
 	iChina: chinaLeaderName,
 	iRus: rusLeaderName,
+	iCelts: celtsLeaderName,
 })

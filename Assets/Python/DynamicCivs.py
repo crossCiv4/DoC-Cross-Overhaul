@@ -42,8 +42,8 @@ dDefaultInsertAdjectives = {
 }
 
 
-lRepublicOf = set([iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis, iMorocco, iYemen, iOman, iZulu, iMalays, iMoors, iFranks])
-lRepublicAdj = set([iBabylonia, iRome, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons, iYamato, iManchu, iHungary])
+lRepublicOf = set([iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis, iMorocco, iYemen, iOman, iZulu, iMalays, iMoors, iFranks, iIreland])
+lRepublicAdj = set([iBabylonia, iRome, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons, iYamato, iManchu, iHungary, iCelts])
 
 lSocialistRepublicOf = set([iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis, iMorocco, iYemen, iOman, iFranks])
 lSocialistRepublicAdj = set([iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina, iHungary])
@@ -103,6 +103,7 @@ dStartingLeaders = [
 	iPolynesia : iAhoeitu,
 	iRome : iScipio,
 	iCelts : iBrennus,
+	iIreland: iBrianBoru,
 	iMaya : iPacal,
 	iYamato : iKammu,
 	iJapan: iTokugawa,

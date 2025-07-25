@@ -414,6 +414,18 @@ dGoals = {
 			),
 			by=-150,
 		),
+		CityCount(plots.region(rFrance), 2, at=1000),
+	),
+	iIreland: (
+		All(
+			CityCount(
+                (plots.region(rIreland), 2),
+                (plots.region(rBritain), 2),
+			),
+			BuildingCount((iCatholicCathedral, 1), (iCatholicMonastery, 4)),
+			by=1150,
+		),
+		FirstDiscover(iEducation),
 		ReligionSpreadCount(sum(iOrthodoxy, iCatholicism).separated(OR), 12, by=1000),
 	),
 	iRome: (

@@ -154,9 +154,15 @@ def zuluSpecificAdjective(args):
     else:
         return "TXT_KEY_CIV_ZULU_SHONA"
 
+def irelandSpecificAdjective(args):
+    if args.capital in plots.regions(rBritain):
+        return "TXT_KEY_CIV_SCOTLAND_ADJECTIVE"
+    else:
+        return "TXT_KEY_CIV_IRELAND_ADJECTIVE"
+
 def celtsSpecificAdjective(args):
-    if args.bResurrected:
-        return "TXT_KEY_CIV_CELTS_IRISH_ADJECTIVE"
+    if player(args.iPlayer).getPeriod() == iPeriodBrittany:
+        return "TXT_KEY_CIV_CELTS_BRITTANY_ADJECTIVE"
 
 def armeniaSpecificAdjective(args):
     if args.bResurrected and args.iEra == iMedieval:
@@ -440,4 +446,5 @@ dSpecificAdjectives = CivDict({
     iHungary: hungarianSpecificAdjective,
     iGreece: greeceSpecificAdjective,
     iDorians: doriansSpecificAdjective,
+    iIreland: irelandSpecificAdjective,
 })

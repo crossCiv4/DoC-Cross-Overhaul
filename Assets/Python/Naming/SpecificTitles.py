@@ -108,16 +108,20 @@ def assyriaTitle(args):
 	if args.bResurrected and args.iReligion in sChristianity:
 		return "TXT_KEY_CIV_ASSYRIA_PRINCIPALITY_OF"
 
+def irelandTitle(args):
+	if args.tPlayer.isHasTech(iNobility):
+		return "TXT_KEY_KINGDOM_ADJECTIVE"
+	return "TXT_KEY_PETTY_KINGDOMS"
+
 def celtsTitle(args):
-	if args.bResurrected:
-		if args.tPlayer.isHasTech(iNobility):
-			return "TXT_KEY_KINGDOM_ADJECTIVE"
-		return "TXT_KEY_CIV_CELTS_PETTY_KINGDOMS"
 	if args.tPlayer.isHasTech(iLaw):
 		if args.bEmpire:
 			return "TXT_KEY_EMPIRE_ADJECTIVE"
 		if args.bCityStates:
-			return "TXT_KEY_CITY_STATES_ADJECTIVE"
+			if args.bResurrected:
+				return "TXT_KEY_PETTY_KINGDOMS"
+			else:
+				return "TXT_KEY_CITY_STATES_ADJECTIVE"
 
 def swedenTitle(args):
 	if team(iNorse).isAVassal() and civ(master(iNorse)) == iSweden:
@@ -641,6 +645,7 @@ dSpecificTitles = CivDict({
 	iSaxons: saxonsTitle,
 	iFranks: franksTitle,
 	iHungary: hungaryTitle,
+	iIreland: irelandTitle,
 })
 
 # Civs which are missing (never had specific titles):
