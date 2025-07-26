@@ -147,7 +147,7 @@ def norseLeader(args):
 		return iGerhardsen
 	if args.iEra >= iRenaissance:
 		return iChristian
-	if args.iReligion in sChristianity or year() >= year(1000):
+	if args.iReligion in sChristianity and year() >= year(1000):
 		return iChristian
 
 def turksLeader(args):

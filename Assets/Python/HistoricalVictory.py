@@ -426,7 +426,7 @@ dGoals = {
 			by=1150,
 		),
 		FirstDiscover(iEducation),
-		ReligionSpreadCount(sum(iOrthodoxy, iCatholicism).separated(OR), 12, by=1000),
+		ReligionSpreadCount(sum(iOrthodoxy, iCatholicism).separated(OR), 12, by=1200),
 	),
 	iRome: (
 		BuildingCount((iBarracks, 8), (iAqueduct, 6), (iArena, 5), (iForum, 4), by=200),
