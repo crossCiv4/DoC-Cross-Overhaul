@@ -3555,7 +3555,7 @@
 			<ShortDescription>TXT_KEY_CIV_IRELAND_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_IRELAND_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_IRELAND_PEDIA</Civilopedia>
-			<DefaultPlayerColor>PLAYERCOLOR_BLUE_GREEN</DefaultPlayerColor>
+			<DefaultPlayerColor>PLAYERCOLOR_DARK_GREEN_AND_ORANGE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_IRELAND</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
