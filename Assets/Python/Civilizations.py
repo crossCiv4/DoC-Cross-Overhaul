@@ -2842,6 +2842,8 @@ dTechPreferences = {
 		iRepresentation: 10,
 		iJournalism: 10,
 		iBallistics: -5,
+		iPneumatics: -10,
+		iMicrobiology: 10,
 	},
 	iGermany : {
 		iEngine: 10,
