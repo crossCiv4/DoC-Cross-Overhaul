@@ -1707,7 +1707,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROMAN_LEGION</Tag>
-		<English>Legion</English>
+		<English>Legionarius</English>
 		<French>
 			<Text>L&#233;gion</Text>
 			<Gender>Female</Gender>
@@ -4057,11 +4057,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENG_NEW_MODEL_ARMY</Tag>
-		<English>New Model Army</English>
-		<French>New Model Army</French>
-		<German>New Model Army</German>
-		<Italian>New Model Army</Italian>
-		<Spanish>New Model Army</Spanish>
+		<English>New Model Soldier</English>
+		<French>New Model Soldier</French>
+		<German>New Model Soldier</German>
+		<Italian>New Model Soldier</Italian>
+		<Spanish>New Model Soldier</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DUTCH_MAURITIAN_ARQUEBUSIER</Tag>
@@ -4097,11 +4097,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FRENCH_GUARDS</Tag>
-		<English>French Guards</English>
-		<French>Gardes françaises</French>
+		<English>French Guard</English>
+		<French>Garde française</French>
 		<German>Französische Garde</German>
-		<Italian>Guardie francesi</Italian>
-		<Spanish>Guardias francesas</Spanish>
+		<Italian>Guardia francese</Italian>
+		<Spanish>Guardia francesa</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FRENCH_GUARDS_STRATEGY</Tag>
@@ -4113,7 +4113,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DUTCH_BLUE_GUARDS</Tag>
-		<English>Blue Guards</English>
+		<English>Blue Guard</English>
 		<French>Garde bleue</French>
 		<German>Blau-Garde</German>
 		<Italian>Guardia blu</Italian>
@@ -4153,27 +4153,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PRINCIPES</Tag>
-		<English>Principes</English>
-		<French>Principes</French>
-		<German>Principes</German>
-		<Italian>Principes</Italian>
-		<Spanish>Principes</Spanish>
+		<English>Princeps </English>
+		<French>Princeps</French>
+		<German>Princeps</German>
+		<Italian>Princeps</Italian>
+		<Spanish>Princeps</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRIARII</Tag>
-		<English>Triarii</English>
-		<French>Triarii</French>
-		<German>Triarii</German>
-		<Italian>Triarii</Italian>
-		<Spanish>Triarii</Spanish>
+		<English>Triarius</English>
+		<French>Triarius</French>
+		<German>Triarius</German>
+		<Italian>Triarius</Italian>
+		<Spanish>Triarius</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WEST_EURO_ARCHER</Tag>
-		<English>Arcarii</English>
-		<French>Arcarii</French>
-		<German>Arcarii</German>
-		<Italian>Arcarii</Italian>
-		<Spanish>Arcarii</Spanish>
+		<English>Arcarius</English>
+		<French>Arcarius</French>
+		<German>Arcarius</German>
+		<Italian>Arcarius</Italian>
+		<Spanish>Arcarius</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QIN_HORSEMAN</Tag>

@@ -3,19 +3,19 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_CIV_IRELAND_DESC</Tag>
-		<English>The Irish</English>
-		<French>Les Irlandais</French>
-		<German>Die Iren</German>
-		<Italian>Gli Irlandesi</Italian>
-		<Spanish>Los Irlandeses</Spanish>
+		<English>The Gaels</English>
+		<French>The Gaels</French>
+		<German>The Gaels</German>
+		<Italian>The Gaels</Italian>
+		<Spanish>The Gaels</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_IRELAND_PEOPLES</Tag>
-		<English>Irish Peoples</English>
-		<French>Irish Peoples</French>
-		<German>Irish Peoples</German>
-		<Italian>Irish Peoples</Italian>
-		<Spanish>Irish Peoples</Spanish>
+		<English>Gaelic Peoples</English>
+		<French>Peuples gaéliques</French>
+		<German>Gälische Völker</German>
+		<Italian>Popoli gaelici</Italian>
+		<Spanish>Pueblos gaélicos</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_IRELAND_ADJECTIVE</Tag>
