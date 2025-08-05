@@ -1127,7 +1127,6 @@ class Birth(object):
 	def checkSwitch(self):
 		if self.bSwitch:
 			self.switch()
-
 		elif not self.isHuman():
 			self.setupWithoutSwitch()
 		
@@ -1177,6 +1176,13 @@ class Birth(object):
 		data.dUnitsLost = dict((iUnit, iNumUnits) for iUnit, iNumUnits in dUnitsLost.items() if iNumUnits > 0)
 		data.dBuildingsBuilt = dict((iBuilding, iNumBuildings) for iBuilding, iNumBuildings in dBuildingsBuilt.items() if iNumBuildings > 0)
 	
+	def setupWithoutSwitch(self):
+		if not self.isHuman():
+			self.assignAdditionalTechs()
+			createRoleUnits(self.iPlayer, self.location, getAIStartingUnits(self.iPlayer))
+		
+		createSpecificUnits(self.iPlayer, self.location)	
+
 	def birth(self):
 		# initial save
 		if self.isHuman():

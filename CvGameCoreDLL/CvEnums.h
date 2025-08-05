@@ -1366,6 +1366,7 @@ enum LeaderHeadTypes			// Exposed to Python
 	NEANG_NEAK,
 	SURYAVARMAN,
 
+	DINGA,
 	MANSA_MUSA,
 
 	CONSTANTINE,

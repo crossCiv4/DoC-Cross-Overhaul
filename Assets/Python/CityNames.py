@@ -34,7 +34,7 @@ dLanguages = CivDict({
 	iGreece: [iLangGreek],
 	iDorians: [iLangGreek],
 	iIndia: [iLangVedic],
-	iPhoenicia: [iLangPhoenician, iLangGreek, iLangCeltic, iLangLatin],
+	iPhoenicia: [iLangPhoenician, iLangGreek, iLangBabylonian, iLangCeltic, iLangLatin],
 	iPolynesia: [iLangPolynesian],
 	iPersia: [iLangPersian],
 	iRome: [iLangLatin, iLangGreek],

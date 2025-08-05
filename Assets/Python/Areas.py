@@ -399,6 +399,7 @@ iHungary:    set([(74, 60), (76, 57), (77, 57)]),
 }, set())
 
 dPeriodCoreArea = {
+iPeriodMakuria :					((78, 37),	(80, 39)),
 iPeriodMing : 						((120, 49),	(129, 56)),
 iPeriodModernGreece :				((74, 49),	(76, 54)),
 iPeriodMaratha : 					((102, 38),	(107, 47)),
@@ -423,6 +424,7 @@ iPeriodSouthAfrica : 				((71, 11),  (81, 17)),
 }
 
 dPeriodCoreAreaExceptions = appenddict({
+iPeriodMakuria :				set([(78, 37)]),
 iPeriodMing :					set([(120, 49), (120, 50), (120, 54), (120, 55), (120, 56), (121, 49), (121, 50), (121, 54), (121, 55), (121, 56), (122, 49), (122, 50), (123, 49), (123, 50), (128, 56)]),
 iPeriodModernGreece :			set([(74, 54)]),
 iPeriodMaratha :				set([(102, 43), (102, 44), (102, 45), (102, 46), (102, 47), (103, 43), (103, 44), (103, 45), (103, 46), (103, 47), (106, 38), (106, 39), (106, 40), (107, 38), (107, 39), (107, 40)]),

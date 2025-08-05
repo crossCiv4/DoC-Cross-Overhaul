@@ -126,7 +126,7 @@ lCivOrder = lBirthOrder + [
 
 # used in: Congresses, DynamicCivs, Plague, RFCUtils, UniquePowers, Victory
 # a civilisation can be in multiple civ groups
-iNumCivGroups = 6
+iNumCivGroups = 7
 (iCivGroupEurope, iCivGroupEastAsia, iCivGroupSouthAsia, iCivGroupMiddleEast, iCivGroupMediterranean, iCivGroupAfrica, iCivGroupAmerica) = range(iNumCivGroups)
 
 dCivGroups = {
@@ -1481,11 +1481,12 @@ rRweru, rTanganyika, rMweru, rBangweulu, rRukwa, rMalawi, rGreatBear, rTidee, rA
 rDubawt, rBaker, rWinnipeg, rSuperior, rMichigan, rHuron, rErie, rLakeOntario, rMistassini, rLobstick, 
 rGreatSalt, rNicaragua, rTiticaca, rMarChiquita, rKhanka) = range(100, 100 + iNumWaterRegions)
 
-lEuropeProper = set([rBritain, rIreland, rFrance, rIberia, rItaly, rLowerGermany, rCentralEurope, rBalkans, rGreece, rPoland, rBaltics, rDenmark, rNorway, rSweden, rRuthenia, rCrimea ])
-lEuropeAsia = set([rEuropeanArctic, rUrals, rSiberia, rPonticSteppe])
+lMediterranean = set([rItaly, rIberia, rGreece, rCrimea, rAnatolia, rLevant, rEgypt, rMaghreb])
+lEuropeProper = set([rBritain, rIreland, rFrance, rIberia, rItaly, rLowerGermany, rCentralEurope, rBalkans, rGreece, rPoland, rBaltics, rDenmark, rNorway, rSweden, rRuthenia, rCrimea])
+lEuropeAsia = set([rEuropeanArctic, rUrals, rSiberia, rPonticSteppe, rRussia, rVolga])
 lMiddleEast = set([rAnatolia, rCaucasus, rLevant, rMesopotamia, rArabia, rPersia, rKhorasan, rTransoxiana, rYemenOman, rHinduKush])
 lIndia = set([rSindh, rPunjab, rRajputana, rHindustan, rBengal, rDeccan, rDravida])
-lEastAsia = set([rIndochina, rIndonesia, rPhilippines, rSouthChina, rNorthChina, rKorea, rJapan, rTibet, rTarimBasin, rMongolia, rManchuria, rAmur, rCentralAsianSteppe])
+lEastAsia = set([rSouthChina, rNorthChina, rKorea, rJapan, rTibet, rTarimBasin, rMongolia, rManchuria, rAmur, rCentralAsianSteppe])
 lSouthEastAsia = set([rIndochina, rIndonesia, rPhilippines])
 lNorthAfrica = set([rEgypt, rNubia, rMaghreb])
 lSubSaharanAfrica = set([rEthiopia, rHornOfAfrica, rSwahiliCoast, rGreatLakes, rZambezi, rMadagascar, rCape, rKalahari, rCongo, rGuinea, rSahel, rSahara])
@@ -1496,8 +1497,8 @@ lOceania = set([rAustralia, rOceania])
 
 lEurope = lEuropeProper | lEuropeAsia
 lAfrica = lNorthAfrica | lSubSaharanAfrica
-lSouthAsia = lIndia + lSouthEastAsia
-lAsia = lMiddleEast | lIndia | lEastAsia
+lSouthAsia = lIndia | lSouthEastAsia
+lAsia = lMiddleEast | lSouthAsia | lEastAsia
 lAmerica = lSouthAmerica | lCentralAmerica | lNorthAmerica
 
 lNewWorld = lAmerica | lOceania
@@ -1509,6 +1510,7 @@ dCivGroupRegions = {
 	iCivGroupMiddleEast: lMiddleEast,
 	iCivGroupAfrica: lAfrica,
 	iCivGroupAmerica: lAmerica,
+    iCivGroupMediterranean: lMediterranean,
 }
 
 #Projects
