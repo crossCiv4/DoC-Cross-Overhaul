@@ -65,6 +65,8 @@ LEADER_DATES = {
 	iSuryavarman: 1120,
 	iJustinian: 530,
 	iBasil: 980,
+	iDinga: 700,
+	iMansaMusa: 1320,
 	iSriJayanasa: 700,
 	iTunPerak: 1450,
 	iKammu: 790,
@@ -109,7 +111,6 @@ LEADER_DATES = {
 	iBayinnaung: 1550,
 	iYaroslav: 1050,
 	iDawud: 1300,
-	iMansaMusa: 1320,
 	iCasimir: 1340,
 	iSobieski: 1680,
 	iPilsudski: 1930,
@@ -506,6 +507,7 @@ class Scenario(object):
 		self.restoreLeaders()
 		
 		self.updateData()
+		self.updateLastTurnAlive()
 		self.updateNames()
 		self.updateCityWork()
 	
@@ -571,6 +573,14 @@ class Scenario(object):
 		for iCiv in range(iNumCivs):
 			for iLeader in range(iNumLeaders):
 				infos.civ(iCiv).setLeader(iLeader, infos.civ(iCiv).isOriginalLeader(iLeader))
+	
+	def updateLastTurnAlive(self):
+		for iCiv in lBirthOrder:
+			if self.iStartYear > dBirth[iCiv]:
+				if self.iStartYear <= dFall[iCiv] or any(civ.iCiv == iCiv for civ in self.lCivilizations):
+					data.civs[iCiv].iLastTurnAlive = game.getStartTurn()
+				else:
+					data.civs[iCiv].iLastTurnAlive = year(dFall[iCiv])
 	
 	def updateNames(self):
 		for iPlayer in players.major():

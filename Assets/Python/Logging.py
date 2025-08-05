@@ -18,7 +18,7 @@ TECHS = None
 
 #@handler("changeWar")
 def stopOnFrenchSpanishWar(bWar, iTeam, iOtherTeam):
-	if bWar and iFrance in [civ(iTeam), civ(iOtherTeam)] and iSpain in [civ(iTeam), civ(iOtherTeam)]:
+	if bWar and ((civ(iTeam) == iFrance and civ(iOtherTeam) == iSpain) or (civ(iTeam) == iSpain and civ(iOtherTeam) == iFrance)):
 		log_with_trace("%s declares war on %s" % (name(iTeam), name(iOtherTeam)))
 		breakObserverMode("%s declares war on %s" % (name(iTeam), name(iOtherTeam)))
 
@@ -48,7 +48,8 @@ class TechLog(object):
 
 	GROUP_NAMES = {
 		iCivGroupEurope: "Europe",
-		iCivGroupAsia: "Asia",
+		iCivGroupEastAsia: "East Asia",
+		iCivGroupSouthAsia: "South Asia",
 		iCivGroupMiddleEast: "Middle East", 
 		iCivGroupAfrica: "Africa",
 		iCivGroupAmerica: "America",

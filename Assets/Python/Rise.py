@@ -245,11 +245,11 @@ def balanceMilitary(bWar, iAttacker, iDefender, bFromDefensivePact):
 		iAdditionalUnitsRequired = iUnitsPower > 0 and iPowerRequired / iUnitsPower or 1
 		
 		for _ in range(iAdditionalUnitsRequired):
-			createRoleUnits(iDefender, capital(iDefender), additionalUnits)
+			createRoleUnits(iDefender, capital(iDefender), additionalUnits).promotion(iVolunteer)
 			for iUnit, iAmount in specificAdditionalUnits:
 				lExperiences = [iRoleExperience for iRole, iRoleExperience in dStartingExperience[iDefender].items() if isUnitOfRole(iUnit, iRole)]
 				iExperience = lExperiences and max(lExperiences) or 0
-				makeUnits(iDefender, iUnit, capital(iDefender), iAmount).experience(iExperience)
+				makeUnits(iDefender, iUnit, capital(iDefender), iAmount).experience(iExperience).promotion(iVolunteer)
 
 
 @handler("changeWar")
@@ -325,9 +325,20 @@ def createExpansionUnits(iAttacker, iDefender, tile, closest, iExtraAI, iExtraTa
 				iAttack: 2 + iExtraAI + iExtraTargets,
 				iSiege: 1 + 2*iExtraAI + iExtraTargets,
 			}
-		createRoleUnits(iAttacker, tile, dExpansionUnits.items())
+		createRoleUnits(iAttacker, tile, dExpansionUnits.items()).promotion(iVolunteer)
 		
 		message(iDefender, "TXT_KEY_MESSAGE_EXPANSION_UNITS", player(iAttacker).getCivilizationDescription(0), closest.getName(), color=iRed, location=tile, button=infos.civ(player(iAttacker).getCivilizationType()).getButton())
+
+
+def deleteExpansionUnits(iPlayer):
+	if players.major().existing().any(lambda p: team(player(iPlayer)).isAtWar(player(p).getTeam())):
+		return
+	
+	if players.minor().cities().any(lambda city: plot_(city).getExpansion() == iPlayer):
+		return
+	
+	for unit in units.owner(iPlayer).where(lambda u: u.isHasPromotion(iVolunteer)):
+		unit.kill(False, -1)
 
 
 @handler("changeWar")
@@ -338,6 +349,9 @@ def endExpansionOnPeace(bWar, iPlayer1, iPlayer2):
 		
 		for plot in plots.owner(iPlayer2).where(lambda plot: plot.getExpansion() == iPlayer1):
 			plot.resetExpansion()
+		
+		deleteExpansionUnits(iPlayer1)
+		deleteExpansionUnits(iPlayer2)
 
 
 @handler("collapse")
@@ -435,6 +449,10 @@ class Birth(object):
 		if self.iPlayer is None:
 			return "Unassigned civ: %s" % infos.civ(self.iCiv).getText()
 		return name(self.iPlayer)
+	
+	@property
+	def spawn(self):
+		return plot_(self.location)
 		
 	@property
 	def flipPopup(self):
@@ -641,16 +659,12 @@ class Birth(object):
 		
 		# for AI, reveal nearby settler targets to improve settler AI
 		if not self.isHuman():
-			iRevealRange = 15
-			region_plots = plots.all().land().where(lambda p: p.getRegionGroup() == plot_(self.location).getRegionGroup())
-			# pre-medieval colonizer civs get a buff to the range at which cities are revealed
-			# and see plots on all continents
+			iRevealRange= 15
 			if self.iCiv in [iPhoenicia, iGreece, iDorians]:
 				iRevealRange = 50
-				region_plots = plots.all().land()
 
+			region_plots = plots.all().land().where(lambda p: (p.getRegionID() in lNewWorld) == (self.spawn.getRegionID in lNewWorld))
 			revealed += region_plots.where(lambda p: p.getSettlerValue(self.iCiv) >= 10).where(lambda p: distance(self.location, p) <= iRevealRange).expand(2)
-			revealed += region_plots.where(lambda p: p.getExpansion() == self.iPlayer).expand(1)
 		
 		# reveal tiles
 		for plot in revealed:
@@ -980,11 +994,26 @@ class Birth(object):
 		if self.iCiv in sExpansionCivs:
 			capital_continent = plot_(self.location).getContinentArea()
 			
-			for plot in plots.all().without(self.area).where(lambda p: p.getPlayerWarValue(self.iPlayer) >= 5).where(lambda p: p.getContinentArea() == capital_continent or distance(self.location, p) <= 32).land().where(lambda p: not p.isPeak()):
+			for plot in plots.all().without(self.area).land().where(self.isExpansionPlot):
 				plot.setExpansion(self.iPlayer)
 
 			self.iExpansionDelay = rand(turns(5)) + 1
 			self.iExpansionTurns = turns(30)
+	
+	def isExpansionPlot(self, plot):
+		if plot.isPeak():
+			return False
+		
+		if plot.getPlayerWarValue(self.iPlayer) < 5:
+			return False
+		
+		if plot.getContinentArea() == self.spawn.getContinentArea():
+			return True
+		
+		if distance(plot, self.location) > 32:
+			return False
+		
+		return (plot.getRegionID() in lNewWorld) == (self.spawn.getRegionID() in lNewWorld)
 	
 	def checkExpansion(self):
 		if not self.player.isExisting():
@@ -1005,6 +1034,8 @@ class Birth(object):
 		if self.iExpansionTurns == 0:
 			for plot in expansionPlots:
 				plot.resetExpansion()
+				
+				deleteExpansionUnits(self.iPlayer)
 		
 		self.iExpansionDelay -= 1
 		self.iExpansionTurns -= 1
@@ -1096,6 +1127,9 @@ class Birth(object):
 	def checkSwitch(self):
 		if self.bSwitch:
 			self.switch()
+
+		elif not self.isHuman():
+			self.setupWithoutSwitch()
 		
 		self.bSwitch = False
 	

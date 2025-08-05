@@ -10,7 +10,7 @@ iTurkicEastWestBorder = 106
 
 # History
 
-lSilkRoute = set([(102, 55), (103, 55), (104, 56), (106, 55), (107, 56), (108, 56), (109, 56), (110, 56), (111, 57), (113, 56), (114, 56), (115, 56), (116, 56), (117, 55), (118, 54)])
+lSilkRoute = set([(102, 55), (103, 55), (104, 55), (106, 55), (107, 56), (108, 56), (109, 56), (110, 56), (111, 57), (113, 56), (114, 56), (115, 56), (116, 56), (117, 55), (118, 54)])
 lKushanRoad = set([(99, 51), (100, 50), (101, 49)])
 lHejazRoad = set([(84, 44), (84, 43), (85, 42), (85, 41), (86, 40)])
 
@@ -34,7 +34,7 @@ tEasterIsland = ((20, 18),	(20, 18))
 tAttica = ((75, 51), (76, 52))
 
 # second Dravidian goal: control or vassalize the Deccan and Srivijaya in 1000 AD
-tSrivijaya = ((115, 26), (121, 32))
+tSrivijaya = ((115, 26), (121, 34))
 
 # third Byzantine goal: control Greece, the Balkans, Anatolia, the Caucasus, the Levant, Egypt, Africa, Andalusia and Italy in 1450 AD
 tAndalusia = ((54, 48), (60, 50))

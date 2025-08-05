@@ -9694,7 +9694,6 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			}
 			iExperience = kPlayer.getFreeExperience();
 			iExperience += kPlayer.getDomainFreeExperience((DomainTypes)kUnit.getDomainType()); // Leoreth: free experience per domain
-			if (kPlayer.isStateReligion() && kPlayer.isHasBuildingEffect((BuildingTypes)HARMANDIR_SAHIB) && pCity->isHasReligion(kPlayer.getStateReligion())) iExperience += 2; // Leoreth: Harmandir Sahib effect
 			if (iExperience != 0)
 			{
 				szBuffer.append(NEWLINE);
@@ -9754,12 +9753,6 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_NO_STATE_RELIGION_FREE_EXPERIENCE", iExperience));
 					}
-				}
-
-				if (pCity->isHasBuildingEffect((BuildingTypes)HARMANDIR_SAHIB))
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText(pCity->isHasReligion(kPlayer.getStateReligion()) ? "TXT_KEY_BUILDING_FREE_EXPERIENCE" : "TXT_KEY_NO_BUILDING_FREE_EXPERIENCE", 2, GC.getBuildingInfo((BuildingTypes)HARMANDIR_SAHIB).getText()));
 				}
 			}
 

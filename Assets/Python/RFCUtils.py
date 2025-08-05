@@ -301,6 +301,8 @@ def colonialConquest(iPlayer, tPlot):
 		team(iPlayer).declareWar(target.getID(), True, WarPlanTypes.WARPLAN_TOTAL)
 			
 	targetPlot = plots.surrounding(tPlot).where(lambda p: not p.isCity() and not p.isPeak() and not p.isWater()).random()
+	if not targetPlot:
+		return
 	
 	if iCiv in [iSpain, iPortugal, iNetherlands]:
 		iNumUnits = 2
@@ -309,8 +311,6 @@ def colonialConquest(iPlayer, tPlot):
 	else:
 		iNumUnits = 2
 		
-
-	# before replaceable parts (pikemen, musketeers)
 	dConquerorUnits = {
 		iDefend: 1,
 		iCounter: iNumUnits,
@@ -409,7 +409,8 @@ def getColonialTargets(iPlayer, iNumCities=1, bEmpty=False):
 		# can also declare colonial war against Europeans
 		targetCities = cityPlots.where(lambda p: p.getWarValue(iCiv) > 1).highest(iNumCities, metric=lambda p: p.getWarValue(iCiv) + getCoastalValueBonus(p))
 	else:
-		targetCities = cityPlots.notowners(players.group(iCivGroupEurope)).where(lambda p: p.getWarValue(iCiv) > 1).highest(iNumCities, metric=lambda p: p.getWarValue(iCiv) + getCoastalValueBonus(p))
+		targetCities = cityPlots.notowner(iPlayer).where(lambda p: not isIsland(p) and p.getWarValue(iCiv) > 1).highest(iNumCities, metric=lambda p: p.getWarValue(iCiv))
+
 	
 	if bEmpty:
 		nearbyCityPlots, settlePlots = emptyPlots.split(lambda p: plots.surrounding(p).any(CyPlot.isCity))
@@ -1291,7 +1292,7 @@ def breakObserverMode(message = None):
 	if message:
 		show(message)
 
-# used: Congresses
+# used: Congresses, RFCUtils
 def isIsland(tile):
 	return plot(tile).area().getNumTiles() == 1
 
@@ -1325,7 +1326,7 @@ def possibleSpawnsBetween(origin, target, iDistance):
 # used: Slots, Collapse
 def resetRevealedOwner(iPlayer):
 	for plot in plots.all():
-		if not plot.isRevealed(game.getActiveTeam(), False) and plot.getRevealedOwner(game.getActiveTeam(), False) == iPlayer:
+		if plot.getRevealedOwner(game.getActiveTeam(), False) == iPlayer:
 			plot.setRevealedOwner(game.getActiveTeam(), slot(iIndependent))
 
 

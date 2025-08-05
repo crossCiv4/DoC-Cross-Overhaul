@@ -127,11 +127,12 @@ lCivOrder = lBirthOrder + [
 # used in: Congresses, DynamicCivs, Plague, RFCUtils, UniquePowers, Victory
 # a civilisation can be in multiple civ groups
 iNumCivGroups = 6
-(iCivGroupEurope, iCivGroupAsia, iCivGroupMiddleEast, iCivGroupMediterranean, iCivGroupAfrica, iCivGroupAmerica) = range(iNumCivGroups)
+(iCivGroupEurope, iCivGroupEastAsia, iCivGroupSouthAsia, iCivGroupMiddleEast, iCivGroupMediterranean, iCivGroupAfrica, iCivGroupAmerica) = range(iNumCivGroups)
 
 dCivGroups = {
 iCivGroupEurope : set([iGreece, iDorians, iRome, iCelts, iByzantium, iFrance, iFranks, iNorse, iSpain, iEngland, iHolyRome, iRus, iItaly, iPoland, iPortugal, iSweden, iRussia, iNetherlands, iGermany, iBulgaria, iMacedon, iArmenia, iSaxons, iVandals, iHungary, iIreland]),
-iCivGroupAsia : set([iIndia, iChina, iChinaS, iShu, iXia, iHarappa, iPolynesia, iPersia, iJapan, iYamato, iDravidia, iKushans, iKorea, iKhmer, iMalays, iJava, iTibet, iBurma, iVietnam, iMongols, iTimurids, iThailand, iRussia, iTurks, iGhorids, iKhazars, iManchu]),
+iCivGroupEastAsia : set([iChina, iChinaS, iShu, iXia, iJapan, iKorea, iTibet, iVietnam, iMongols, iRussia, iTurks, iManchu, iKhazars]),
+iCivGroupSouthAsia : set([iIndia, iHarappa, iPolynesia, iDravidia, iKushans, iKhmer, iMalays, iJava, iBurma, iVietnam, iTimurids, iThailand, iGhorids]),
 iCivGroupMiddleEast : set([iEgypt, iBabylonia, iAssyria, iHittites, iPersia, iKushans, iArabia, iMoors, iOttomans, iPhoenicia, iTurks, iIran, iMamluks, iParthia, iTunis, iMorocco, iOman, iYemen, iBuyids]),
 iCivGroupMediterranean : set([iEgypt, iGreece, iDorians, iPhoenicia, iRome, iByzantium, iFrance, iArabia, iMoors, iSpain, iPortugal, iItaly, iOttomans, iMamluks, iMacedon, iMinoans, iTunis, iMorocco]),
 iCivGroupAfrica : set([iEgypt, iNubia, iPhoenicia, iEthiopia, iMali, iNigeria, iMoors, iSwahili, iCongo, iMamluks, iZulu, iTunis, iMorocco]),
@@ -1342,9 +1343,11 @@ iAttackSea, iAssaultSea, iFerry, iEscort, iExplore, iShockCity, iSiege, iCitySie
 iLightEscort, iWork, iMissionary) = range(iNumUnitRoles)
 
 # Promotions
+iMercenary = 81
 iDesertAdaptation = 82
 iSteppeAdaptation = 83
 iMobility = 47
+iVolunteer = 84
 
 iNumBonuses = 54
 (iAluminium, iAmber, iCamel, iCitrus, iCoal, iCopper, iDates, iHorse, iIron, iMarble,
@@ -1483,6 +1486,7 @@ lEuropeAsia = set([rEuropeanArctic, rUrals, rSiberia, rPonticSteppe])
 lMiddleEast = set([rAnatolia, rCaucasus, rLevant, rMesopotamia, rArabia, rPersia, rKhorasan, rTransoxiana, rYemenOman, rHinduKush])
 lIndia = set([rSindh, rPunjab, rRajputana, rHindustan, rBengal, rDeccan, rDravida])
 lEastAsia = set([rIndochina, rIndonesia, rPhilippines, rSouthChina, rNorthChina, rKorea, rJapan, rTibet, rTarimBasin, rMongolia, rManchuria, rAmur, rCentralAsianSteppe])
+lSouthEastAsia = set([rIndochina, rIndonesia, rPhilippines])
 lNorthAfrica = set([rEgypt, rNubia, rMaghreb])
 lSubSaharanAfrica = set([rEthiopia, rHornOfAfrica, rSwahiliCoast, rGreatLakes, rZambezi, rMadagascar, rCape, rKalahari, rCongo, rGuinea, rSahel, rSahara])
 lSouthAmerica = set([rNewGranada, rAndes, rAmazonia, rBrazil, rSouthernCone])
@@ -1492,10 +1496,20 @@ lOceania = set([rAustralia, rOceania])
 
 lEurope = lEuropeProper | lEuropeAsia
 lAfrica = lNorthAfrica | lSubSaharanAfrica
+lSouthAsia = lIndia + lSouthEastAsia
 lAsia = lMiddleEast | lIndia | lEastAsia
 lAmerica = lSouthAmerica | lCentralAmerica | lNorthAmerica
 
 lNewWorld = lAmerica | lOceania
+
+dCivGroupRegions = {
+	iCivGroupEurope: lEurope,
+	iCivGroupEastAsia: lEastAsia,
+	iCivGroupSouthAsia: lSouthAsia,
+	iCivGroupMiddleEast: lMiddleEast,
+	iCivGroupAfrica: lAfrica,
+	iCivGroupAmerica: lAmerica,
+}
 
 #Projects
 
@@ -1546,8 +1560,8 @@ iVictoryPaganism = 10
 iVictorySecularism = 11
 
 
-#leaders
-iNumLeaders = 188
+#leaders 
+iNumLeaders = 189
 (
 iLeaderBarbarian, iNativeLeader, iIndependentLeader, 
 iDjoser, iHatshepsut, iRamesses, iPtolemy, 
@@ -1576,7 +1590,7 @@ iTopiltzin,
 iKanishka, 
 iWangKon, iSejong, 
 iNeangNeak, iSuryavarman, 
-iMansaMusa, 
+iDinga, iMansaMusa, 
 iConstantine, iJustinian, iBasil,
 iCharlemagne, 
 iPhilipAugustus, iLouis, iNapoleon, iDeGaulle, 
@@ -1647,8 +1661,8 @@ dResurrectionLeaders = CivDict({
 })
 
 # update DLL constants when this changes
-iNumPeriods = 30
-(iPeriodMing, iPeriodMaratha, iPeriodModernGreece, iPeriodCarthage, iPeriodBrittany,
+iNumPeriods = 31
+(iPeriodMakuria, iPeriodMing, iPeriodMaratha, iPeriodModernGreece, iPeriodCarthage, iPeriodBrittany,
 iPeriodVijayanagara, iPeriodByzantineConstantinople, iPeriodSeljuks, iPeriodMeiji, iPeriodDenmark, 
 iPeriodNorway, iPeriodUzbeks, iPeriodSaudi, iPeriodSpain, 
 iPeriodAustria, iPeriodUnitedKingdom, iPeriodGreatBritain,iPeriodYuan, iPeriodPeru, 

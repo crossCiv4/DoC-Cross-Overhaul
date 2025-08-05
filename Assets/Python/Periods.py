@@ -10,6 +10,8 @@ dEvacuatePeriods = {
 
 dPeriods600AD = {
 	iCelts : iPeriodBrittany,
+	iNubia : iPeriodMakuria,
+	iPhoenicia : iPeriodCarthage,
 }
 
 dPeriods1700AD = {
@@ -34,6 +36,8 @@ dScenarioPeriods = {
 
 
 dPeriodNames = {
+	iPeriodPtolemaicEgypt:			"Ptolemaic_Egypt",
+	iPeriodMakuria:					"Makuria",
 	iPeriodMing:					"Ming",
 	iPeriodMaratha:					"Maratha",
 	iPeriodModernGreece:			"Modern_Greece",
@@ -62,7 +66,6 @@ dPeriodNames = {
 	iPeriodModernIndia:				"Modern_India",
 	iPeriodUkraine:					"Ukraine",
 	iPeriodSouthAfrica:				"South_Africa",
-	iPeriodPtolemaicEgypt:			"Ptolemaic_Egypt",
 	iPeriodAztecMexico:				"Aztec_Mexico",
 }
 
@@ -255,6 +258,10 @@ def onCapitalMoved(city):
 def onTechAcquired(iTech, iTeam, iPlayer):
 	iCiv = civ(iPlayer)
 	iEra = infos.tech(iTech).getEra()
+	
+	if iCiv == iNubia:
+		if iEra == iMedieval:
+			setPeriod(iNubia, iPeriodMakuria)
 	
 	if iCiv == iDravidia:
 		if iEra == iMedieval:

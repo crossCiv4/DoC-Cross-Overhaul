@@ -369,6 +369,7 @@
 			<iCost>60</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
+			<iHealth>1</iHealth>
 			<iConquestProb>80</iConquestProb>
 			<iFoodKept>25</iFoodKept>
 			<iAsset>3</iAsset>
@@ -538,7 +539,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TANNERY</ArtDefineTag>
 			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
 			<PrereqTech>TECH_TANNING</PrereqTech>
-			<iCost>60</iCost>
+			<iCost>40</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iConquestProb>80</iConquestProb>
@@ -4947,7 +4948,7 @@
 			<Strategy>TXT_KEY_BUILDING_DRAVIDIAN_GOPURAM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DRAVIDIAN_GOPURAM</ArtDefineTag>
-			<PrereqTech>TECH_STATECRAFT</PrereqTech>
+			<PrereqTech>TECH_COMMUNE</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<iCost>150</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -13785,19 +13786,22 @@
 			<Description>TXT_KEY_BUILDING_SAINT_SOPHIA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAINT_SOPHIA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SAINT_SOPHIA_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<Help>TXT_KEY_BUILDING_SAINT_SOPHIA_HELP</Help>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SAINT_SOPHIA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SAINT_SOPHIA</MovieDefineTag>
 			<StateReligion>RELIGION_ORTHODOXY</StateReligion>
 			<PrereqReligion>RELIGION_ORTHODOXY</PrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
-			<PrereqTech>TECH_COMPASS</PrereqTech>
-			<ObsoleteTech>TECH_SOCIAL_CONTRACT</ObsoleteTech>
+			<PrereqTech>TECH_GUILDS</PrereqTech>
+			<ObsoleteTech>TECH_STATECRAFT</ObsoleteTech>
+			<PrereqBonuses>BONUS_DEER</PrereqBonuses>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_STATESMAN</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>400</iCost>
+			<iCost>200</iCost>
+			<iAIWeight>200</iAIWeight>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -13819,25 +13823,15 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<SpecialistYieldChanges>
-				<SpecialistYieldChange>
-					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-					<YieldChanges>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</SpecialistYieldChange>
-			</SpecialistYieldChanges>
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_STONE</BonusType>
-					<iProductonModifier>100</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<Flavors>
 				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>10</iFlavor>
+					<FlavorType>FLAVOR_RELIGION</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
 		</BuildingInfo>
@@ -14429,7 +14423,7 @@
 			<PrereqReligion>RELIGION_ISLAM</PrereqReligion>
 			<OrPrereqReligion>RELIGION_SHIA</OrPrereqReligion>
 			<MaxStartEra>ERA_RENAISSANCE</MaxStartEra>
-			<PrereqTech>TECH_PATRONAGE</PrereqTech>
+			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<ObsoleteTech>TECH_SOCIOLOGY</ObsoleteTech>
 			<PrereqBonuses>BONUS_GEMS</PrereqBonuses>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_ARTIST</GreatPeopleUnitClass>

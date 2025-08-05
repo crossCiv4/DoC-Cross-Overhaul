@@ -335,7 +335,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	{
 		for (iI = 0; iI < NUM_CITY_PLOTS_3; iI++)
 		{
-			if (plotCity3(getX(), getY(), iI)->getArea() != getArea())
+			if (!plotCity3(getX(), getY(), iI)->isWater() && plotCity3(getX(), getY(), iI)->getArea() != getArea())
 			{
 				changeExtraTradeRoutes(2);
 				break;
@@ -6213,6 +6213,7 @@ int CvCity::getHurryGold(HurryTypes eHurry, int iHurryCost) const
 	}
 
 	iGold = (iHurryCost * GC.getHurryInfo(eHurry).getGoldPerProduction());
+	iGold /= 100; // Leoreth: hurry gold is times 100 now
 	
 	return std::max(1, iGold);
 }
@@ -17854,6 +17855,8 @@ void CvCity::liberate(bool bConquest)
 
 	if (NO_PLAYER != ePlayer)
 	{
+		CvEventReporter::getInstance().cityLiberated(this);
+
 		int iOldOwnerCulture = getCultureTimes100(eOwner);
 		int iOldMasterLand = 0;
 		int iOldVassalLand = 0;

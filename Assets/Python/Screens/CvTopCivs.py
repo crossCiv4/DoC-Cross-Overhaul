@@ -11,8 +11,6 @@ from Core import *
 
 NUM_CIVILIZATIONS = 8
 
-"TXT_KEY_HISTORIAN_"
-
 HISTORIANS = {
 	iEgypt: {
 		iAncient: (
@@ -694,7 +692,7 @@ class CvTopCivs:
 	def printList(self):
 		for iRank, iPlayer in enumerate(self.topPlayers.limit(8)):
 			if iPlayer == active() or team().isHasMet(player(iPlayer).getTeam()):
-				szCivText = name(iPlayer)
+				szCivText = fullname(iPlayer)
 			else:
 				szCivText = text("TXT_KEY_TOPCIVS_UNKNOWN")
 			
@@ -713,13 +711,14 @@ class CvTopCivs:
 		if not tHistorianNames:
 			return "TXT_KEY_HISTORIAN_GENERIC"
 		
-		print "historian names are %s" % (tHistorianNames,)
-		
 		return random_entry(tHistorianNames)
 	
 	def getHistorianNames(self, iPlayer):
 		iCiv = civ(iPlayer)
 		iCurrentEra = player(iPlayer).getCurrentEra()
+		
+		if iCiv not in HISTORIANS:
+			return tuple()
 		
 		for iEra in reversed(range(iCurrentEra+1)):
 			if iEra in HISTORIANS[iCiv]:

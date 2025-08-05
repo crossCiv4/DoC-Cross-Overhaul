@@ -101,10 +101,8 @@ def triggerCrisis(iPlayer):
 	
 	changeCrisisCountdown(iPlayer, turns(10))
 	
-	bFall = since(year(dFall[civ(iPlayer)])) >= 0
-	
 	# help AI to not immediately collapse
-	if not player(iPlayer).isHuman() and not bFall:
+	if not player(iPlayer).isHuman() and not isDecline(iPlayer):
 		# with no overexpansion at all, just have a domestic crisis (once until back at shaky again)
 		if not data.players[iPlayer].bDomesticCrisis and data.players[iPlayer].lStabilityCategoryValues[0] >= 0:
 			domesticCrisis(iPlayer)
@@ -350,7 +348,6 @@ def checkStability(iPlayer, bPositive = False, iMaster = -1):
 	iStability, lStabilityTypes, lParameters = calculateStability(iPlayer)
 	iStabilityLevel = stability(iPlayer)
 	bHuman = player(iPlayer).isHuman()
-	bFall = isDecline(iPlayer)
 	
 	iNewStabilityLevel = determineStabilityLevel(iPlayer, iStabilityLevel, iStability)
 	
@@ -407,7 +404,7 @@ def calculateAdministration(city):
 
 	iAdministration = iAdministrationModifier * iPopulation / 100
 	
-	if city.isCapital():
+	if city.isCapital() and not isDecline(iPlayer):
 		iAdministration += iPopulation
 	
 	return iAdministration
@@ -422,9 +419,9 @@ def getSeparatismModifier(iPlayer, city):
 	
 	bHistorical = plot.getPlayerSettlerValue(iPlayer) > 0
 	bConquest = plot.getPlayerWarValue(iPlayer) > 1
-	bFall = since(year(dFall[iCiv])) >= 0
+
 	bTotalitarianism = civic.iSociety == iTotalitarianism
-	bExpansionExceptions = (bHistorical and iCiv == iMongols and not bFall) or bTotalitarianism
+	bExpansionExceptions = (bHistorical and iCiv == iMongols and not isDecline(iPlayer)) or bTotalitarianism
 	
 	iTotalCulture = civs.major().sum(lambda c: plot.isCore(c) and 2 * plot.getCivCulture(c) or plot.getCivCulture(c))
 	iCulturePercent = iTotalCulture != 0 and 100 * plot.getCulture(iPlayer) / iTotalCulture or 0
@@ -519,6 +516,8 @@ def calculateStability(iPlayer):
 	iAdministration = cities.owner(iPlayer).sum(calculateAdministration) + 10
 	iSeparatism = cities.owner(iPlayer).sum(calculateSeparatism)
 	
+	bDecline = isDecline(iPlayer)
+	
 	iRecentConquestTurns = 20
 	if iElective in civics:
 		iRecentConquestTurns = 30
@@ -588,11 +587,12 @@ def calculateStability(iPlayer):
 	if iHegemony in civics: iConquestModifier += 1
 	if iCiv == iParthia: iConquestModifier += 1 # iParthia UP
 	
-	iFoundedModifier = 1
-	if iColonialism in civics: iFoundedModifier += 1
+	if not bDecline:
+		iFoundedModifier = 1
+		if iColonialism in civics: iFoundedModifier += 1
 
-	iRecentExpansionStability += iFoundedModifier * iRecentlyFounded
-	iRecentExpansionStability += iConquestModifier * iRecentlyConquered
+		iRecentExpansionStability += iFoundedModifier * iRecentlyFounded
+		iRecentExpansionStability += iConquestModifier * iRecentlyConquered
 		
 	lParameters[iParameterRecentExpansion] = iRecentExpansionStability
 	
@@ -699,6 +699,7 @@ def calculateStability(iPlayer):
 	if tPlayer.isHasTech(iStatecraft):
 		if (iPersonalism, iCitizenship, iVassalage) not in civics: iCivicEraTechStability += 5
 	
+	
 	if iStateReligion == iHinduism:
 		if iCasteSystem in civics: iCivicEraTechStability += 3
 		
@@ -719,6 +720,12 @@ def calculateStability(iPlayer):
 		if iStateParty in civics: iCivicEraTechStability += 2
 		if iCentralPlanning in civics: iCivicEraTechStability += 2
 		
+		
+	if iThalassocracy in civics:
+		if cities.owner(iPlayer).coastal().count() * 2 < player(iPlayer).getNumCities():
+			iCivicEraTechStability -= 4
+		
+		
 	if not player(iPlayer).isHuman() and iCivicEraTechStability < 0: iCivicEraTechStability /= 2
 	
 	lParameters[iParameterCivicsEraTech] = iCivicEraTechStability
@@ -732,9 +739,15 @@ def calculateStability(iPlayer):
 		iHeathenRatio = 100 * iDifferentReligionPopulation / iTotalPopulation
 		iHeathenThreshold = 30
 		iBelieverThreshold = 75
+		iOnlyStateReligionThreshold = 50
 		
 		if iHeathenRatio > iHeathenThreshold:
-			iReligionStability -= (iHeathenRatio - iHeathenThreshold) / 10
+			iHeathenStability = (iHeathenRatio - iHeathenThreshold) / 10
+			
+			if iFanaticism in civics:
+				iHeathenStability *= 2
+			
+			iReligionStability -= iHeathenStability
 			
 		if iStateReligion >= 0:
 			iStateReligionRatio = 100 * iStateReligionPopulation / iTotalPopulation
@@ -754,7 +767,7 @@ def calculateStability(iPlayer):
 			
 			if iTheocracy in civics:
 				iOnlyStateReligionRatio = 100 * iOnlyStateReligionPopulation / iTotalPopulation
-				iReligionStability += iOnlyStateReligionRatio / 20
+				iReligionStability += (iOnlyStateReligionRatio - iOnlyStateReligionThreshold) / 10
 	
 	lParameters[iParameterReligion] = iReligionStability
 		
@@ -978,17 +991,13 @@ def getCivicStability(iPlayer, civics=None):
 			if iSlavery in civics: iStability += 2
 		
 	if iVassalage in civics:
-		if iIndividualism in civics: iStability -= 5
-		if iEgalitarianism in civics: iStability -= 5
-	
-		if iFreeEnterprise in civics: iStability -= 3
-		if iCentralPlanning in civics: iStability -= 3
-		if iPublicWelfare in civics: iStability -= 3
-
-		if iCurrentEra < iRenaissance:
+		if (iIndividualism, iEgalitarianism) in civics: iStability -= 5
+		if (iFreeEnterprise, iCentralPlanning, iPublicWelfare) in civics: iStability -= 3
+		
+		if iCurrentEra == iMedieval:
 			if iMonarchy in civics: iStability += 2
 			if iElective in civics: iStability += 3
-			if iManorialism in civics: iStability += 3
+			if iManorialism in civics: iStability += 2
 			
 	if iRepublic in civics:
 		if iCitizenship in civics: iStability += 2
@@ -1000,7 +1009,7 @@ def getCivicStability(iPlayer, civics=None):
 		if iDemocracy in civics: iStability -= 5
 		if iDeification in civics: iStability += 2
 		if iSyncretism in civics: iStability -= 3
-		if iFanaticism in civics: iStability += 5
+		if iFanaticism in civics: iStability += 3
 		if iSecularism in civics: iStability -= 5
 		
 	if iBureaucracy in civics:
@@ -1035,10 +1044,8 @@ def getCivicStability(iPlayer, civics=None):
 		if iEgalitarianism in civics: iStability += 2
 		if iFanaticism in civics: iStability -= 3
 		
-	if iMonarchy in civics:
-		if iClergy in civics: iStability += 2
-		if iMonasticism in civics: iStability += 2
-		if iVassalage in civics: iStability += 2
+	#if iMonarchy in civics:
+	#	if (iClergy, iMonasticism) in civics: iStability += 2
 		
 	if iElective in civics:
 		if iBureaucracy in civics: iStability -= 5
@@ -1065,6 +1072,9 @@ def getCivicStability(iPlayer, civics=None):
 	if iPublicWelfare in civics:
 		if iDemocracy in civics: iStability += 2
 		if iSlavery in civics: iStability -= 2
+	
+	if iThalassocracy in civics:
+		if notcivics(iReciprocity, iMerchantTrade) in civics: iStability -= 2
 	
 	if iHegemony in civics:
 		if iMonarchy in civics: iStability += 2

@@ -2327,7 +2327,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
                         if (pLoopPlot->isWater())
                         {
-                            iValue += (bIsCoastal ? 100 : -800);
+                            iValue += (bIsCoastal ? 100 : ((iSettlerMapValue < 10) ? -800 : 0));
                         }
                     }
 				}
@@ -10732,7 +10732,9 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 
 				if (iGoldRate > 0)
 				{
-					iTempValue += AI_yieldWeight(YIELD_PRODUCTION) * (GC.getHurryInfo((HurryTypes)iI).isUnits() && bWarPlan ? 2 : 1) * iGoldRate / GC.getHurryInfo((HurryTypes)iI).getGoldPerProduction() / 100;
+					// Leoreth: gold per production is times 100 now
+					//iTempValue += AI_yieldWeight(YIELD_PRODUCTION) * (GC.getHurryInfo((HurryTypes)iI).isUnits() && bWarPlan ? 2 : 1) * iGoldRate / GC.getHurryInfo((HurryTypes)iI).getGoldPerProduction() / 100;
+					iTempValue += AI_yieldWeight(YIELD_PRODUCTION) * (GC.getHurryInfo((HurryTypes)iI).isUnits() && bWarPlan ? 2 : 1) * iGoldRate / GC.getHurryInfo((HurryTypes)iI).getGoldPerProduction();
 				}
 			}
 			//iTempValue += (GC.getHurryInfo((HurryTypes)iI).getProductionPerPopulation() * getNumCities() * (bWarPlan ? 2 : 1)) / 5;

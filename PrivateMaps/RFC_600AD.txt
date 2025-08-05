@@ -192,11 +192,10 @@ BeginPlot
 	EndUnit
 	BeginCity
 		CityOwner=CIVILIZATION_INDEPENDENT
-		CityName=Marrakus
+		CityName=Aghmat
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_HARBOR
-		ReligionType=RELIGION_CATHOLICISM
 		BeginCulture
 			Civilization=CIVILIZATION_INDEPENDENT, Culture=10
 		EndCulture
@@ -1875,7 +1874,7 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
-	x=104,y=56
+	x=104,y=55
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot

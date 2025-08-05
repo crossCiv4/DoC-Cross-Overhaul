@@ -2424,23 +2424,23 @@ void CvUnitAI::AI_attackCityMove()
 		}
 	}
 
-	//XXX more sophisticated logic for attacking is long overdue here
-	if (bReadyToAttack)
+	if (AI_targetBarbCity(bHuntBarbs && bReadyToAttack))
 	{
-		if (bHuntBarbs && AI_targetBarbCity())
+		return;
+	}
+
+	// Leoreth: target minors
+	for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
+	{
+		if (AI_targetMinorCity(iI, bHuntPlayer[iI] && bReadyToAttack))
 		{
 			return;
 		}
+	}
 
-		// Leoreth: target minors
-		for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
-		{
-			if (bHuntPlayer[iI] && AI_targetMinorCity(iI))
-			{
-				return;
-			}
-		}
-
+	//XXX more sophisticated logic for attacking is long overdue here
+	if (bReadyToAttack)
+	{
 		if (bLandWar)
 		{
 			if (AI_targetCity())
@@ -11607,7 +11607,7 @@ bool CvUnitAI::AI_targetCity(int iFlags)
 
 
 // Returns true if a mission was pushed...
-bool CvUnitAI::AI_targetBarbCity()
+bool CvUnitAI::AI_targetBarbCity(bool bTarget)
 {
 	PROFILE_FUNC();
 
@@ -11635,20 +11635,23 @@ bool CvUnitAI::AI_targetBarbCity()
 		{
 			if (pLoopCity->isRevealed(getTeam(), false))
 			{
-				if (!atPlot(pLoopCity->plot()) && generatePath(pLoopCity->plot(), 0, true, &iPathTurns))
+				if (bTarget || pLoopCity->plot()->getExpansion() == getOwnerINLINE())
 				{
-					if (iPathTurns < 10)
+					if (!atPlot(pLoopCity->plot()) && generatePath(pLoopCity->plot(), 0, true, &iPathTurns))
 					{
-						iValue = GET_PLAYER(getOwnerINLINE()).AI_targetCityValue(pLoopCity, false);
-
-						iValue *= 1000;
-
-						iValue /= (iPathTurns + 1);
-
-						if (iValue > iBestValue)
+						if (iPathTurns < 10)
 						{
-							iBestValue = iValue;
-							pBestCity = pLoopCity;
+							iValue = GET_PLAYER(getOwnerINLINE()).AI_targetCityValue(pLoopCity, false);
+
+							iValue *= 1000;
+
+							iValue /= (iPathTurns + 1);
+
+							if (iValue > iBestValue)
+							{
+								iBestValue = iValue;
+								pBestCity = pLoopCity;
+							}
 						}
 					}
 				}
@@ -11718,7 +11721,7 @@ bool CvUnitAI::AI_targetBarbCity()
 
 //Rhye - start
 // Returns true if a mission was pushed...
-bool CvUnitAI::AI_targetMinorCity(int iMinorCiv)
+bool CvUnitAI::AI_targetMinorCity(int iMinorCiv, bool bTarget)
 {
 	PROFILE_FUNC();
 
@@ -11737,6 +11740,11 @@ bool CvUnitAI::AI_targetMinorCity(int iMinorCiv)
 		return false;
 	}
 
+	if (!GET_PLAYER((PlayerTypes)iMinorCiv).isMinorCiv())
+	{
+		return false;
+	}
+
 	iBestValue = 0;
 	pBestCity = NULL;
 
@@ -11746,20 +11754,23 @@ bool CvUnitAI::AI_targetMinorCity(int iMinorCiv)
 		{
 			if (pLoopCity->isRevealed(getTeam(), false))
 			{
-				if (!atPlot(pLoopCity->plot()) && generatePath(pLoopCity->plot(), 0, true, &iPathTurns))
+				if (bTarget || pLoopCity->plot()->getExpansion() == getOwnerINLINE())
 				{
-					if (iPathTurns < 10)
+					if (!atPlot(pLoopCity->plot()) && generatePath(pLoopCity->plot(), 0, true, &iPathTurns))
 					{
-						iValue = GET_PLAYER(getOwnerINLINE()).AI_targetCityValue(pLoopCity, false);
-
-						iValue *= 1000;
-
-						iValue /= (iPathTurns + 1);
-
-						if (iValue > iBestValue)
+						if (iPathTurns < 10)
 						{
-							iBestValue = iValue;
-							pBestCity = pLoopCity;
+							iValue = GET_PLAYER(getOwnerINLINE()).AI_targetCityValue(pLoopCity, false);
+
+							iValue *= 1000;
+
+							iValue /= (iPathTurns + 1);
+
+							if (iValue > iBestValue)
+							{
+								iBestValue = iValue;
+								pBestCity = pLoopCity;
+							}
 						}
 					}
 				}
