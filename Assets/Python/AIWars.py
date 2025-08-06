@@ -580,7 +580,9 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iWarPlan =
 		iRenaissanceExtras = 1
 
 	iNomadExtras = 0
-	if iCiv == iTurks or iCiv == iMongols:
+	if iCiv == iTurks:
+		iNomadExtras = 2
+	elif iCiv == iMongols:
 		iNomadExtras = 1
 	elif iCiv == iTimurids:
 		# timurids get a little bit of everything

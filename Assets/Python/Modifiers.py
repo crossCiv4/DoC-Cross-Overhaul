@@ -913,7 +913,7 @@ dUnitCostMods = CivDict({
 	iArmenia: 110,
 	iYemen: 120,
 	iOman: 110,
-	iBuyids: 90,
+	iBuyids: 105,
 	iManchu: 90,
 	iMorocco: 100,
 }, default=100)

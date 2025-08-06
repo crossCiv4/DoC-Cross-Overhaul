@@ -277,6 +277,7 @@ lCivilizations = [
 		iAdvancedStartPoints=200,
 		iStateReligion=iZoroastrianism,
 		lCivics=[iMonarchy, iManorialism, iRedistribution, iClergy],
+		lEnemies=[iAssyria],
 		techs=techs.column(3).including(iBloomery, iPriesthood, iMathematics, iContract).without(iSeafaring, iShipbuilding)
 	),
 	Civilization(
@@ -1608,9 +1609,9 @@ dExtraAIUnits = CivDict({
 	},
 	iKushans: {
 		iDefend: 2,
-		iShockCity: 3,
-		iCityAttack: 2,
-		iSiege: 3,
+		iShockCity: 1,
+		iCityAttack: 1,
+		iSiege: 2,
 	},
 	iKorea: {
 		iCounter: 2,

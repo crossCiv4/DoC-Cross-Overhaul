@@ -795,8 +795,8 @@ class TradeGold(TrackRequirement):
 	def accumulate_trade_gold(self, goal, iGold):
 		self.accumulate(iGold * 100)
 		goal.check()
-	
-	def accumulate_trade_mission_gold(self, goal, iGold, tile):
+
+	def accumulate_trade_mission_gold(self, goal, (x, y), iGold):
 		self.accumulate(iGold * 100)
 		goal.check()
 	
@@ -830,7 +830,7 @@ class TradeMissionCount(TrackRequirement):
 		
 		self.handle("tradeMission", self.check_trade_mission)
 		
-	def check_trade_mission(self, goal, iGold, (x, y)):
+	def check_trade_mission(self, goal, x, y, iGold):
 		if at(self.city.get(goal.evaluator.iPlayer), (x, y)):
 			self.increment()
 			goal.check()
@@ -856,7 +856,7 @@ class GlobalTradeMissionCount(TrackRequirement):
 		
 		self.handle("tradeMission", self.check_trade_mission)
 		
-	def check_trade_mission(self, goal, (x, y), iGold):
+	def check_trade_mission(self, goal, x, y, iGold):
 		self.increment()
 		goal.check()
 	
