@@ -216,7 +216,7 @@ class Barbarians(object):
 		PIRATES: "TXT_KEY_BARBARIAN_NOTIFICATION_PIRATES"
 	}
 
-	def __init__(self, iStart, iEnd, units, area, iInterval, pattern, iOwner=iBarbarian, target_area=None, adjective=None, iAlternativeCiv=None, promotions=None, condition=None):
+	def __init__(self, iStart, iEnd, units, area, iInterval, pattern, iOwner=iBarbarian, target_area=None, adjective=None, iAlternativeCiv=None, promotions=None, condition=lambda: True):
 		self.iStart = iStart
 		self.iEnd = iEnd
 		self.units = units
@@ -252,11 +252,11 @@ class Barbarians(object):
 	def can_spawn(self):
 		if self.iAlternativeCiv is not None and player(self.iAlternativeCiv).isExisting():
 			return False
-		
-		if self.condition is not None and not self.condition(self):
-			return False
 	
 		if not (year(self.iStart) <= year() <= year(self.iEnd)):
+			return False
+		
+		if not self.condition():
 			return False
 		
 		if not self.every():
@@ -580,8 +580,8 @@ barbarians = [
 	Barbarians(-900, -650, {iChariot: 1, iWarrior: 2}, ((117, 53), (119, 56)), 7, INVADERS, target_area=((118, 52), (121, 54)), adjective="TXT_KEY_ADJECTIVE_QIANG"),
 	#Barbarians(-1000, -100, {iSkirmisher: 1, iAxeman: 1}, ((120, 42), (129, 50)), 7, MINORS, adjective="TXT_KEY_ADJECTIVE_YUE"),
 	Barbarians(-1200, -600, {iSkirmisher: 1}, ((84, 44), (88, 52)), 7, NOMADS, target_area=((84, 44), (91, 52)), adjective="TXT_KEY_ADJECTIVE_ARAMEAN"),
-	Barbarians(-1250, -950, {iAxeman: 1, iSpearman: 1, iCatapult: 1}, ((79, 51), (82, 54)), 6, CLOSE_INVADERS, target_area=((79, 51), (84, 55)), adjective="TXT_KEY_ADJECTIVE_PHRYGIAN"),
-	Barbarians(-1100, -780, {iHorseman: 1, iAxeman: 1}, ((85, 54), (92, 60)), 9, INVADERS, target_area=((79, 51), (84, 55)), adjective="TXT_KEY_ADJECTIVE_CIMMERIAN"),
+	Barbarians(-1250, -950, {iAxeman: 1, iSpearman: 1, iCatapult: 1}, ((79, 51), (82, 54)), 6, CLOSE_INVADERS, target_area=((79, 51), (84, 55)), condition=lambda: player(iHittites).isExisting(), adjective="TXT_KEY_ADJECTIVE_PHRYGIAN"),
+	Barbarians(-1100, -850, {iHorseman: 1, iSpearman: 1}, ((85, 54), (92, 60)), 9, INVADERS, target_area=((79, 51), (84, 55)), adjective="TXT_KEY_ADJECTIVE_CIMMERIAN"),
 	Barbarians(-1000, 400, {iMedjay: 1}, ((78, 35),	(82, 40)), 8, MINORS, iAlternativeCiv=iNubia, adjective="TXT_KEY_ADJECTIVE_NUBIAN"),
 	Barbarians(-800, -300, {iChariot: 2}, ((115, 54), (129, 59)), 12, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_HU", promotions=(iDesertAdaptation, iSteppeAdaptation,)),
 	Barbarians(-800, -400, {iSpearman: 2}, ((68, 59), (72, 62)), 7, INVADERS, target_area=((71, 53), (77, 56)), adjective="TXT_KEY_ADJECTIVE_CELTIC"),

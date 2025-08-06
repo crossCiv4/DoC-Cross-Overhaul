@@ -860,9 +860,9 @@ dStartingUnits = CivDict({
 	iGreece: {
 		iSettle: 1,
 		iWork: 1,
-		iSettleSea: 2,
-		iCounter: 1,
-		iWorkerSea: 1,
+		iSettleSea: 3,
+		iCounter: 2,
+		iWorkerSea: 2,
 	},
 	iDorians: {
 		iSettle: 2,
@@ -1577,8 +1577,6 @@ dExtraAIUnits = CivDict({
 		iWorkerSea: 1,
 	},
 	iGreece: {
-		iSettleSea: 1,
-		iWorkerSea: 1,
 		iEscort: 1,
 	},
 	iDorians: {
