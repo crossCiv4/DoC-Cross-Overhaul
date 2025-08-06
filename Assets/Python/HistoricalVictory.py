@@ -305,7 +305,7 @@ dGoals = {
 			(plots.region(rIberia), 1),
 			(plots.region(rItaly), 2),
 			(plots.region(rGreece), 2),
-			(plots.regions(rAnatolia).named(ANATOLIA), 2),
+			(plots.regions(rAnatolia).named(ANATOLIA), 1),
 			(plots.region(rMaghreb).named(MAGHREB), 1),
 			(plots.regions(rCrimea).named(CRIMEA), 1),
 			by=-350,
