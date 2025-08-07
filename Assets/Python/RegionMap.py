@@ -104,7 +104,7 @@ tSpreadFactors = (
 {
 	iCore : 		set([rLowerGermany, rRuthenia, rRussia]),
 	iHistorical : 	set([rFrance, rBritain, rIreland, rCentralEurope, rBalkans, rDenmark, rBaltics, rBrazil, rNewGranada, rQuebec, rSwahiliCoast, rNorthChina, rSouthChina, rManchuria, rIberia, rMongolia, rCaucasus, rGreatLakes, rPoland, rDravida, rCrimea, rIndochina, rMesoamerica, rCentralAmerica]),
-	iPeriphery : 	set([rNorway, rSweden, rCaribbean, rAtlanticSeaboard, rCalifornia, rMidwest, rOntario, rSahel, rHornOfAfrica, rHindustan, rAndes, rCongo, rGreece, rPunjab, rSindh, rAridoamerica, rMaghreb, rIndonesia, rKhorasan, rDeccan, rLevant, rCascadia, rBengal, rUrals, rSiberia, rVolga, rItaly, rKorea, rAmazonia, rAmur, rPonticSteppe, rEuropeanArctic]),
-	iMinority : 	set([rJapan, rPhilippines, rPersia, rHinduKush, rEgypt, rAnatolia, rAustralia, rTarimBasin, rArabia, rTibet, rYemenOman, rRajputana, rNubia, rMaritimes, rAmericanArctic, rCape, rMesopotamia, rCentralAsianSteppe, rTransoxiana]),
+	iPeriphery : 	set([rNorway, rSweden, rCaribbean, rAtlanticSeaboard, rCalifornia, rMidwest, rOntario, rSahel, rHornOfAfrica, rHindustan, rAndes, rCongo, rGreece, rPunjab, rSindh, rAridoamerica, rMaghreb, rIndonesia, rKhorasan, rDeccan, rRajputana, rLevant, rCascadia, rBengal, rUrals, rSiberia, rVolga, rItaly, rKorea, rAmazonia, rAmur, rPonticSteppe, rEuropeanArctic, rZambezi]),
+	iMinority : 	set([rJapan, rPhilippines, rPersia, rHinduKush, rEgypt, rAnatolia, rAustralia, rTarimBasin, rArabia, rTibet, rYemenOman, rNubia, rMaritimes, rAmericanArctic, rCape, rMesopotamia, rCentralAsianSteppe, rTransoxiana, rGuinea, rSouthernCone]),
 },
 )
