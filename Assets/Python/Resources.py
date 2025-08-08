@@ -289,6 +289,7 @@ dRemovedResourcesDict = {
 	(74, 44)  :  200, # Spices (silphium) in Cyrenaica
 	(87, 49)  :  200, # Horses in Syria
 	(59, 51)  :  400, # Silver near Cartagena
+	(71, 50)  :  450, # Marble in Sicily
 	(55, 53)  :  1500, # Gold in Spain
 	(56, 50)  :  400, # Silver in Andalusia
 	tAthens   :  500, # Copper in Athens

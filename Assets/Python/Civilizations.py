@@ -2966,6 +2966,7 @@ dBuildingPreferences = {
 		iHimejiCastle: -30,
 		iBorobudur: -30,
 		iBrandenburgGate: -30,
+		iOracle: -30,
 	},
 	iChinaS : {
 		iForbiddenPalace: 20,
@@ -2979,6 +2980,7 @@ dBuildingPreferences = {
 		iHimejiCastle: -30,
 		iBorobudur: -30,
 		iBrandenburgGate: -30,
+		iOracle: -30,
 	},
 	iShu : {
 		iForbiddenPalace: 20,
@@ -2992,6 +2994,7 @@ dBuildingPreferences = {
 		iHimejiCastle: -30,
 		iBorobudur: -30,
 		iBrandenburgGate: -30,
+		iOracle: -30,
 	},
 	iXia : {
 		iForbiddenPalace: 20,
@@ -3006,6 +3009,7 @@ dBuildingPreferences = {
 		iBorobudur: -30,
 		iBrandenburgGate: -30,
 		iIshtarGate: -30,
+		iOracle: -30,
 	},
 	iManchu : {
 		iGreatWall: 80,
@@ -3078,6 +3082,7 @@ dBuildingPreferences = {
 		iAlKhazneh: 15,
 		iGreatLibrary: 30,
 		iGreatLighthouse: 30,
+		iOracle: 10,
 		
 		iPyramids: -100,
 		iGreatCothon: -100,
@@ -3101,6 +3106,7 @@ dBuildingPreferences = {
 		iParthenon: -30,
 		iStatueOfZeus: -20,
 		iIyanuwo: -30,
+		iOracle: -30,
 	},
 	iPhoenicia : {
 		iGreatCothon: 30,
@@ -3109,6 +3115,7 @@ dBuildingPreferences = {
 		
 		iPyramids: -50,
 		iIyanuwo: -30,
+		iOracle: -30,
 	},
 	iPolynesia : {
 		iMoaiStatues: 30,
@@ -3121,7 +3128,7 @@ dBuildingPreferences = {
 		iAlamut: 30,
 		iHangingGardens: 15,
 		iColossus: 15,
-		iOracle: 15,
+		iOracle: -20,
 	},
 	iRome : {
 		iSaintPeters: 40,
@@ -3131,6 +3138,7 @@ dBuildingPreferences = {
 		iSistineChapel: 30,
 		iSanMarcoBasilica: 30,
 		iAlKhazneh: 20,
+		iOracle: 10,
 		
 		iTheodosianWalls: -20,
 		iGreatWall: -100,
@@ -3143,12 +3151,15 @@ dBuildingPreferences = {
 		iKhajuraho: 20,
 
 		iIyanuwo: -30,
+		iOracle: -30,
 	},
 	iEthiopia : {
 		iMonolithicChurch: 40,
+		iOracle: -30,
 	},
 	iToltecs : {
 		iPyramidOfTheSun: 30,
+		iOracle: -30,
 	},
 	iKushans : {
 		iSalsalBuddha: 30,
@@ -3161,6 +3172,7 @@ dBuildingPreferences = {
 		iShwedagonPaya: 0,
 		iPrambanan: 0,
 		iBorobudur: 0,
+		iOracle: -30,
 	},
 	iKhmer : {
 		iWatPreahPisnulok: 30,

@@ -31755,6 +31755,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=50
+	BonusType=BONUS_MARBLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1

@@ -10692,7 +10692,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PYRAMIDS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PYRAMIDS</MovieDefineTag>
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
-			<PrereqTech>TECH_POTTERY</PrereqTech>
+			<PrereqTech>TECH_DIVINATION</PrereqTech>
 			<ObsoleteTech>TECH_ARCHITECTURE</ObsoleteTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_ENGINEER</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -10757,8 +10757,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ORACLE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ORACLE</MovieDefineTag>
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
-			<PrereqTech>TECH_DIVINATION</PrereqTech>
+			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			<ObsoleteTech>TECH_ETHICS</ObsoleteTech>
+			<FreePromotion>PROMOTION_SENTRY</FreePromotion>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_PROPHET</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
@@ -10769,7 +10770,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iConquestProb>100</iConquestProb>
-			<iFreeTechs>2</iFreeTechs>
+			<iFreeTechs>1</iFreeTechs>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ObsoleteSafeCommerceChanges>
@@ -10883,6 +10884,7 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iConquestProb>100</iConquestProb>
+			<iFreeTechs>2</iFreeTechs>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ObsoleteSafeCommerceChanges>
@@ -11554,10 +11556,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_ARTEMIS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TEMPLE_OF_ARTEMIS</MovieDefineTag>
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
-			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_MATHEMATICS</PrereqTech>
-			</TechTypes>
+			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<ObsoleteTech>TECH_THEOLOGY</ObsoleteTech>
 			<FreeBuilding>BUILDINGCLASS_HARBOR</FreeBuilding>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_MERCHANT</GreatPeopleUnitClass>
@@ -18860,7 +18859,7 @@
 			<MaxStartEra>ERA_CLASSICAL</MaxStartEra>
 			<StateReligion>RELIGION_ZOROASTRIANISM</StateReligion>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
-			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
+			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<ObsoleteTech>TECH_RELIGIOUS_ORDERS</ObsoleteTech>
 			<GreatPeopleUnitClass>UNITCLASS_GREAT_ARTIST</GreatPeopleUnitClass>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
