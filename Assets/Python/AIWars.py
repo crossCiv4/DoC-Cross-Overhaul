@@ -149,7 +149,7 @@ tConquestArabiaSind = (25, iArabia, iKushans, tArabsSindTL, tArabsSindBR, 2, iAr
 
 iAssyriaLevantConquestYear = -800
 
-tConquestAssyriaLevant = (26, iAssyria, iPhoenicia, tLevantTL, tLevantBR, 3, iAssyriaLevantConquestYear, 5)
+tConquestAssyriaLevant = (26, iAssyria, iPhoenicia, tLevantTL, tLevantBR, 1, iAssyriaLevantConquestYear, 5)
 
 iPersiaLydiaConquestYear = -550
 tPersiaLydiaTL = (80, 51)
@@ -220,7 +220,7 @@ tConquestTimuridsPunjab = (41, iTimurids, iGhorids, tTimuridsPunjabTL, tTimurids
 tConquestMacedonPunjab = (42, iMacedon, iIndia, tTimuridsPunjabTL, tTimuridsPunjabBR, 1, iAlexanderYear, 20)
 
 iAssyriaEgyptConquestYear = -680
-tConquestAssyriaEgypt = (43, iAssyria, iEgypt, tEgyptTL, tEgyptBR, 2, iAssyriaEgyptConquestYear, 5)
+tConquestAssyriaEgypt = (43, iAssyria, iEgypt, tEgyptTL, tEgyptBR, 1, iAssyriaEgyptConquestYear, 5)
 
 iChinaShuYear = -320
 tChinaShuTL = (117, 45)

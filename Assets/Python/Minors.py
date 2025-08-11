@@ -28,7 +28,7 @@ def add_city_buildings(tile, iCiv):
 			city(tile).setHasRealBuilding(iDefensiveBuilding, True)
 
 
-def is_new_world_discovered(_):
+def is_new_world_discovered():
 	return True in data.dFirstContactConquerors.values()
 
 
@@ -554,6 +554,9 @@ minor_cities = [
 ]
 
 barbarians = [
+	# this is to validate the is_new_world_discovered function early
+	Barbarians(-3000, -2600, {iWolf: 1}, ((65, 62), (132, 73)), 1, ANIMALS, condition=lambda: is_new_world_discovered()),
+
 	Barbarians(-3000, -850, {iBear: 1}, ((65, 62), (132, 73)), 5, ANIMALS),
 	Barbarians(-3000, -850, {iWolf: 1}, ((65, 62), (132, 73)), 5, ANIMALS),
 	Barbarians(-3000, -1500, {iPanther: 1}, ((54, 11), (84, 41)), 8, ANIMALS),
