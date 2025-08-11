@@ -1661,9 +1661,7 @@ dExtraAIUnits = CivDict({
 		iWork: 2,
 	},
 	iMoors: {
-		iSiege: 1,
-		iCounter: 1,
-		iHarass: 3,
+		iHarass: 1,
 		iDefend: 2,
 	}, 
 	iHolyRome: {
