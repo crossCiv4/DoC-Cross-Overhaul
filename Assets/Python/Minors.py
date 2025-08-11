@@ -32,11 +32,10 @@ def is_new_world_discovered(_):
 	return True in data.dFirstContactConquerors.values()
 
 
-def is_free_of_civ(iCiv):
-	def func(barbarians):
-		return iCiv not in cities.rectangle(barbarians.area).owners()
-	
-	return func
+# def is_free_of_civ(iCiv):
+# 	def func(barbarians):
+# 		return iCiv not in cities.rectangle(barbarians.area).owners()
+# 	return func
 
 
 class MinorCity(object):
@@ -665,7 +664,7 @@ barbarians = [
 	Barbarians(760, 820, {iLongship: 1, iHuscarl: 1}, ((53, 51), (61, 69)), 4, SEA_INVADERS, target_area=((55, 55), (62, 65)), adjective="TXT_KEY_ADJECTIVE_VIKING"),
 	Barbarians(830, 1030, {iLongship: 1, iHuscarl: 3}, ((53, 51), (61, 69)), 6, SEA_INVADERS, target_area=((55, 55), (62, 65)), adjective="TXT_KEY_ADJECTIVE_VIKING"),
 	Barbarians(800, 1200, {iPatiyodha: 2, iWarElephant: 1}, ((116, 37), (119, 43)), 8, INVADERS, target_area=((118, 34), (124, 39)), adjective="TXT_KEY_ADJECTIVE_TAI"),
-	Barbarians(800, 1100, {iHeavySwordsman: 1}, ((113, 50), (120, 56)), 8, INVADERS, target_area=((112, 57), (123, 56)), adjective="TXT_KEY_ADJECTIVE_TANGUT", condition=is_free_of_civ(iTibet)),
+	Barbarians(800, 1100, {iHeavySwordsman: 1}, ((113, 50), (120, 56)), 8, INVADERS, target_area=((112, 57), (123, 56)), adjective="TXT_KEY_ADJECTIVE_TANGUT"),
 	Barbarians(820, 870, {iHorseArcher: 4}, ((78, 58), (82, 62)), 2, INVADERS, target_area=((70, 54), (77, 60)), iAlternativeCiv=iHungary, adjective="TXT_KEY_ADJECTIVE_MAGYAR", promotions=(iMobility,)),
 	Barbarians(850, 1100, {iHorseArcher: 5, iMamlukCavalry: 2}, ((82, 60), (95, 64)), 5, NOMADS, target_area=((76, 56), (91, 61)), adjective="TXT_KEY_ADJECTIVE_PECHENEG"),
 	Barbarians(900, 1100, {iKeshik: 4, iOghuz: 4}, ((117, 56), (131, 63)), 3, INVADERS, target_area=((118, 49), (129, 61)), adjective="TXT_KEY_ADJECTIVE_JURCHEN", promotions=(iDesertAdaptation, iSteppeAdaptation)),
@@ -711,7 +710,7 @@ barbarians = [
 	Barbarians(1450, 1700, {iGalleass: 2}, ((125, 44), (134, 57)), 12, PIRATES, adjective="TXT_KEY_ADJECTIVE_WOKOU"),
 	Barbarians(1450, 1600, {iArcher: 2}, ((29, 58), (33, 62)), 8, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_ALGONQUIN"),
 	Barbarians(1490, 1600, {iKeshik: 4}, ((92, 58), (103, 65)), 5, NOMADS, target_area=((94, 52), (101, 57)), adjective="TXT_KEY_CIV_UZBEKS_ADJECTIVE", iAlternativeCiv=iTurks, promotions=(iDesertAdaptation, iSteppeAdaptation)),
-	Barbarians(1500, 1650, {iDogSoldier: 2}, ((29, 58), (33, 62)), 8, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_ALGONQUIN", condition=is_new_world_discovered),
+	Barbarians(1500, 1650, {iDogSoldier: 2}, ((29, 58), (33, 62)), 8, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_ALGONQUIN", condition=lambda: is_new_world_discovered()),
 	Barbarians(1450, 1650, {iGalleass: 1}, ((114, 27), (128, 35)), 8, PIRATES),
 	# make Oromo Warriors barbarian so that they fight with any Swahili or Zimbabwe natives
 	Barbarians(1480, 1650, {iOromoWarrior: 2}, ((80, 29), (88, 32)), 6, CLOSE_INVADERS, target_area=((80, 32), (85, 36)), promotions=(iDesertAdaptation,)),
@@ -721,7 +720,7 @@ barbarians = [
 	Barbarians(1500, 1800, {iCamelGunner: 2}, ((56, 39), (76, 44)), 9, NOMADS, target_area=((54, 34), (76, 48)), adjective="TXT_KEY_ADJECTIVE_BERBER"),
 	Barbarians(1500, 1800, {iCamelGunner: 2}, ((86, 38), (91, 45)), 10, NOMADS, target_area=((77, 39), (91, 50)), adjective="TXT_KEY_ADJECTIVE_BEDOUIN"),
 	Barbarians(1550, 1800, {iCuirassier: 1}, ((96, 62), (108, 69)), 10, NOMADS, target_area=((80, 59), (95, 70)), adjective="TXT_KEY_ADJECTIVE_TATAR", promotions=(iSteppeAdaptation,), iAlternativeCiv=iKhazars),
-	Barbarians(1500, 1650, {iLongbowman: 1, iDogSoldier: 2}, ((21, 49), (27, 54)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_MUSCOGEE", condition=is_new_world_discovered),
+	Barbarians(1500, 1650, {iLongbowman: 1, iDogSoldier: 2}, ((21, 49), (27, 54)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_MUSCOGEE", condition=lambda: is_new_world_discovered()),
 	Barbarians(1500, 1850, {iCuirassier: 2}, ((92, 57), (109, 64)), 10, NOMADS, target_area=((92, 60), (113, 70)), adjective="TXT_KEY_ADJECTIVE_KAZAKH", promotions=(iSteppeAdaptation,), iAlternativeCiv=iTurks),
 	Barbarians(1550, 1900, {iArquebusier: 2}, ((58, 31), (64, 35)), 10, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_ASHANTI"),
 	Barbarians(1530, 1600, {iManchuHorseArcher: 4}, ((124, 58), (132, 64)), 6, INVADERS, target_area=((117, 46), (129, 59))),
@@ -730,12 +729,12 @@ barbarians = [
 	Barbarians(1600, 1800, {iPombos: 2}, ((70, 20), (77, 25)), 10, INVADERS, iOwner=iNative, target_area=((69, 21), (77, 30)), adjective="TXT_KEY_ADJECTIVE_CHOKWE"),
 	Barbarians(1600, 1800, {iPrivateer: 1}, ((23, 39), (38, 47)), 5, PIRATES),
 	Barbarians(1600, 1850, {iCorsair: 1}, ((54, 42), (69, 50)), 8, PIRATES, adjective="TXT_KEY_ADJECTIVE_BARBARY"),
-	Barbarians(1600, 1900, {iPistolier: 1}, ((32, 10), (37, 15)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_MAPUCHE", condition=is_new_world_discovered),
+	Barbarians(1600, 1900, {iPistolier: 1}, ((32, 10), (37, 15)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_MAPUCHE", condition=lambda: is_new_world_discovered()),
 	# Barbarians(1600, 1850, {iMohawk: 1}, ((23, 55), (32, 61)), 8, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_IROQUOIS", condition=is_new_world_discovered),
 	Barbarians(1650, 1900, {iPrivateer: 1}, ((114, 27), (128, 35)), 8, PIRATES),
-	Barbarians(1650, 1850, {iArquebusier: 2}, ((21, 49), (27, 54)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_MUSCOGEE", condition=is_new_world_discovered),
+	Barbarians(1650, 1850, {iArquebusier: 2}, ((21, 49), (27, 54)), 12, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_MUSCOGEE", condition=lambda: is_new_world_discovered()),
 	Barbarians(1650, 1740, {iCuirassier: 4}, ((105, 53), (116, 62)), 10, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_DZUNGAR", iAlternativeCiv=iMongols, promotions=(iDesertAdaptation, iSteppeAdaptation,)),
-	Barbarians(1700, 1900, {iMountedBrave: 2}, ((14, 56), (23, 62)), 12, NOMADS, iOwner=iNative, target_area=((15, 51), (26, 62)), adjective="TXT_KEY_ADJECTIVE_SIOUX", condition=is_new_world_discovered),
+	Barbarians(1700, 1900, {iMountedBrave: 2}, ((14, 56), (23, 62)), 12, NOMADS, iOwner=iNative, target_area=((15, 51), (26, 62)), adjective="TXT_KEY_ADJECTIVE_SIOUX", condition=lambda: is_new_world_discovered()),
 	Barbarians(1720, 1850, {iCuirassier: 2}, ((58, 33), (69, 38)), 8, INVADERS, adjective="TXT_KEY_ADJECTIVE_FULA"),
 	Barbarians(1740, 1800, {iHussar: 4}, ((105, 53), (116, 62)), 10, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_DZUNGAR", iAlternativeCiv=iMongols, promotions=(iDesertAdaptation, iSteppeAdaptation,)),
 	#Barbarians(1800, 1900, {iPikeman: 2}, ((71, 11), (81, 17)), 10, NATIVES, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_ZULU"),
