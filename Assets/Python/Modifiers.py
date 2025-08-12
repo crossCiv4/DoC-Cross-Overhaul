@@ -61,6 +61,9 @@ def updateLateModifiers(iGameTurn):
 	if iGameTurn == year(1050) and player(iByzantium).isAlive():
 		setModifier(player(iByzantium), iModifierUnitCost, 150)
 		message(active(), 'TXT_KEY_EVENT_MILITARY_RECRUITMENT_DECLINE', adjective(iByzantium), color=iYellow, force=True)
+	if iGameTurn == year(dBirth[iFrance]) and player(iFranks).isAlive():
+		setModifier(player(iFranks), iModifierUnitCost, 125)
+		message(active(), 'TXT_KEY_EVENT_MILITARY_RECRUITMENT_DECLINE', adjective(iFranks), color=iYellow, force=True)
 
 
 ### Modifier types ###
@@ -886,7 +889,7 @@ dUnitCostMods = CivDict({
 	iPoland: 85,
 	iPortugal: 90,
 	iInca: 100,
-	iItaly: 110,
+	iItaly: 120,
 	iMongols: 70,
 	iAztecs: 100,
 	iTimurids: 90,
@@ -1143,7 +1146,7 @@ dInflationRateMods = CivDict({
 	iKhazars: 100,
 	iBulgaria: 100,
 	iFrance: 75,
-	iFranks: 75,
+	iFranks: 90,
 	iMalays: 100,
 	iJapan: 80,
 	iYamato: 100,

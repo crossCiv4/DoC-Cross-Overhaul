@@ -350,6 +350,10 @@ def getHungarianLanguages(playerId):
 		return [iLangGerman, iLangHungarian, iLangRuthenian, iLangByzantine]
 	return None
 
+def getFrankishLanguages(playerId):
+	if year() > year(dBirth[iEngland]):
+		return [iLangDutch, iLangFrench, iLangGerman, iLangEnglish]
+
 # Define a CivDict mapping civilizations to their special language logic
 dSpecialLanguages = CivDict({
     iInca: getIncaLanguages,
@@ -370,6 +374,7 @@ dSpecialLanguages = CivDict({
     iGreece: getGreekLanguages,
     iSpain: getSpanishLanguages,
     iHungary: getHungarianLanguages,
+    iFranks: getFrankishLanguages,
 })
 
 def getSpecialLanguages(playerId):

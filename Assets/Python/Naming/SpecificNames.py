@@ -208,8 +208,11 @@ def spainSpecificName(args):
 		return "TXT_KEY_CIV_SPAIN_CASTILE"
 
 def franksSpecificName(args):
-    if year() >= year(dBirth[iHolyRome]) and player(iHolyRome).isExisting() or player(iFrance).isExisting():
-        return "TXT_KEY_CIV_FRANCIA_LOTHARINGIA"
+	if args.iEra >= iRenaissance:
+		return "TXT_KEY_CIV_NETHERLANDS_BELGIUM"
+
+	if year() >= year(dBirth[iHolyRome]) and player(iHolyRome).isExisting() or player(iFrance).isExisting():
+		return "TXT_KEY_CIV_FRANCIA_LOTHARINGIA"
 
 def englandSpecificName(args):
 	if getColumn(args.iPlayer) >= 12 and 1 < cities.region(rBritain) <= cities.region(rBritain).owner(args.iPlayer):
@@ -251,8 +254,6 @@ def thailandSpecificName(args):
 def netherlandsSpecificName(args):
 	if args.bCityStates:
 		return short(args.iPlayer)
-	if isCurrentCapital(args.iPlayer, "Brussels", "Antwerpen"):
-		return "TXT_KEY_CIV_NETHERLANDS_BELGIUM"
 
 def germanySpecificName(args):
 	if getColumn(args.iPlayer) <= 13 or (player(iHolyRome).isExisting() and not civ(master(iHolyRome)) == iGermany):

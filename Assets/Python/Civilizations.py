@@ -1698,8 +1698,8 @@ dExtraAIUnits = CivDict({
 		iAttack: 4,
 		iShock: 1,
 		iSiege: 3,
-		iHarass: 2,
-		iDefend: 1,
+		iHarass: 4,
+		iSkirmish: 2,
 	},
 	iRus: {
 		iSettle: 1,
@@ -1711,9 +1711,9 @@ dExtraAIUnits = CivDict({
 	},
 	iTimurids: {
 		iWork: 2,
-		iCityAttack: 6,
-		iHarass: 6,
-		iSiege: 8,
+		iCityAttack: 4,
+		iHarass: 4,
+		iSiege: 5,
 		iMissionary: 1,
 	},
 	iAztecs: {
@@ -3399,6 +3399,7 @@ dBuildingPreferences = {
 	iTibet : {
 		iPotalaPalace: 40,
 		iLouvre: -10,
+		iIyanuwo: -30,
 	},
 	iMoors : {
 		iMezquita: 100,

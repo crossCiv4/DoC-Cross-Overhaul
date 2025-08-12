@@ -7028,7 +7028,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MILITARY_RECRUITMENT_DECLINE</Tag>
-		<English>%s1 enthusiasm for military recruitment has declined and their units are more expensive to train.</English>
+		<English>%s1 enthusiasm for military recruitment has declined and their units have become more expensive to train.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>

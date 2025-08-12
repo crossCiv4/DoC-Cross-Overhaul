@@ -302,6 +302,8 @@ def spainSpecificAdjective(args):
         return "TXT_KEY_CIV_SPAIN_CASTILIAN"
 
 def franksSpecificAdjective(args):
+    if args.iEra >= iRenaissance:
+        return "TXT_KEY_CIV_NETHERLANDS_BELGIAN"
     if year() >= year(dBirth[iHolyRome]) and player(iHolyRome).isExisting() or player(iFrance).isExisting():
         return "TXT_KEY_CIV_FRANCIA_LOTHARINGIAN"
     elif args.tPlayer.isHasTech(iNobility):
@@ -373,10 +375,6 @@ def ghoridsSpecificAdjective(args):
 def ottomansSpecificAdjective(args):
     return "TXT_KEY_CIV_OTTOMANS_OTTOMAN"
 
-def netherlandsSpecificAdjective(args):
-    if isCurrentCapital(args.iPlayer, "Brussels", "Antwerpen"):
-        return "TXT_KEY_CIV_NETHERLANDS_BELGIAN"
-
 def germanySpecificAdjective(args):
     if getColumn(args.iPlayer) <= 13 or (player(iHolyRome).isExisting() and not civ(master(iHolyRome)) == iGermany):
         return "TXT_KEY_CIV_GERMANY_PRUSSIAN"
@@ -441,7 +439,7 @@ dSpecificAdjectives = CivDict({
     iMongols: mongolsSpecificAdjective,
     iGhorids: ghoridsSpecificAdjective,
     iOttomans: ottomansSpecificAdjective,
-    iNetherlands: netherlandsSpecificAdjective,
+    #iNetherlands: netherlandsSpecificAdjective,
     iGermany: germanySpecificAdjective,
     iHungary: hungarianSpecificAdjective,
     iGreece: greeceSpecificAdjective,
