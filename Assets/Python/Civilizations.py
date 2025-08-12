@@ -1061,9 +1061,9 @@ dStartingUnits = CivDict({
 		iMissionary: 3,
 	},
 	iFranks: {
-		iSettle: 1,
+		iSettle: 3,
 		iWork: 2,
-		iDefend: 3,
+		iDefend: 4,
 		iSkirmish: 2,
 		iSiege: 2,
 		iShock: 3,
@@ -1218,7 +1218,7 @@ dStartingUnits = CivDict({
 	iHolyRome: {
 		iSettle: 3,
 		iWork: 2,
-		iDefend: 3,
+		iDefend: 2,
 		iShock: 2,
 		iAttack: 1,
 		iSkirmish: 1,

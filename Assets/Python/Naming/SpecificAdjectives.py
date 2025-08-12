@@ -201,9 +201,9 @@ def iranSpecificAdjective(args):
         return "TXT_KEY_CIV_PERSIA_PAHLAVI"
 
 def assyriaSpecificAdjective(args):
-    if args.bResurrected or args.iReligion in sMuslimReligions:
+    if game.isReligionFounded(iShia) and (args.bResurrected or args.iReligion in sMuslimReligions):
         return "TXT_KEY_CIV_ASSYRIA_HAMDANID"
-    if args.bResurrected or args.iReligion in sChristianity:
+    if game.isReligionFounded(iShia) and (args.bResurrected or args.iReligion in sChristianity):
         return "TXT_KEY_CIV_ASSYRIA_ANTIOCHENE"
 
 def persiaSpecificAdjective(args):

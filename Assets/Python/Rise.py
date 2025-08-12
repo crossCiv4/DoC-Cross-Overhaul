@@ -554,8 +554,9 @@ class Birth(object):
 			self.area = self.area.unique()
 
 		# idem but HRE with Franks. We use the mid-right of France as the comparison point
+		# Cologne always flips to HRE
 		elif self.iCiv == iHolyRome:
-			closerCities = cities.owner(iFranks).where(lambda city: real_distance(city, self.location) <= real_distance(city, (63, 60)))
+			closerCities = cities.owner(iFranks).where(lambda city: (city.getX(), city.getY()) == (65, 62) or real_distance(city, self.location) <= real_distance(city, (63, 60)))
 			additionalPlots = closerCities.plots().expand(1).where(lambda p: p.getOwner() == player(iFranks).getID())
 
 			self.area += additionalPlots

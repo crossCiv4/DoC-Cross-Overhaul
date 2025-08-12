@@ -82,7 +82,7 @@ def armeniaSpecificName(args):
 		return "TXT_KEY_CIV_ARMENIA_SHORT_DESC"
 
 def assyriaSpecificName(args):
-	if args.bResurrected:
+	if game.isReligionFounded(iShia) and args.bResurrected:
 		return capitalName(args.iPlayer)
 
 def mamluksSpecificName(args):

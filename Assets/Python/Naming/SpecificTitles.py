@@ -105,7 +105,7 @@ def zuluTitle(args):
 		return "TXT_KEY_KINGDOM_OF"
 
 def assyriaTitle(args):
-	if args.bResurrected and args.iReligion in sChristianity:
+	if game.isReligionFounded(iShia) and args.bResurrected and args.iReligion in sChristianity:
 		return "TXT_KEY_CIV_ASSYRIA_PRINCIPALITY_OF"
 
 def irelandTitle(args):
