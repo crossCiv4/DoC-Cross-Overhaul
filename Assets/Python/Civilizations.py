@@ -1694,10 +1694,6 @@ dExtraAIUnits = CivDict({
 		iHarass: 4,
 		iSkirmish: 2,
 	},
-	iRus: {
-		iSettle: 1,
-		iDefend: 1,
-	},
 	iRussia: {
 		iWork: 6,
 		iShock: 2,
@@ -2618,7 +2614,8 @@ dTechPreferences = {
 		iLimbProtection: 5,
 	},
 	iEngland : {
-		iExploration: 10,
+		iExploration: 15,
+		iCartography: 5,
 		iPhysics: 10,
 		iMeasurement: 20,
 		iReplaceableParts: 10,
