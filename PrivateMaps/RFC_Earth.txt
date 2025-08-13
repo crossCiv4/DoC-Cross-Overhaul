@@ -21705,6 +21705,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=50
+	BonusType=BONUS_SHEEP
 	FeatureType=FEATURE_FOREST, FeatureVariety=5
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -22115,6 +22116,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=50
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
