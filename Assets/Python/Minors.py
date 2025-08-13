@@ -539,7 +539,7 @@ minor_cities = [
 	MinorCity(900, iIndependent, (87, 29), "Muqdisho", iPopulation=3, iCiv=iSwahili, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_SOMALI"),
 	#MinorCity(900, iNative, (79, 18), "Zimbabwe", iPopulation=2, units={iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_SHONA"),
 	MinorCity(1000, iBarbarian, (92, 66), "Qazan", iPopulation=2, iCiv=iTurks, units={iHarass: 2}, adjective="TXT_KEY_ADJECTIVE_BULGAR"),
-	MinorCity(1000, iBarbarian, (78, 65), "Vil'na", iPopulation=2, iCiv=iPoland, units={iHarass: 3, iDefend: 1}, adjective="TXT_KEY_ADJECTIVE_LITHUANIAN"),
+	MinorCity(1000, iBarbarian, (78, 65), "Vil'na", iPopulation=2, iCiv=iPoland, units={iHarass: 3, iDefend: 1, iAttack: 2}, adjective="TXT_KEY_ADJECTIVE_LITHUANIAN"),
 	#MinorCity(1000, iNative, (67, 34), "Kano", iPopulation=2, iCiv=iMali, units={iDefend: 2}, adjective="TXT_KEY_ADJECTIVE_HAUSA"),
 	MinorCity(1060, iBarbarian, (57, 44), "Merrakesh", iPopulation=2, units={iSkirmish: 1, iCounter: 1}, adjective="TXT_KEY_ADJECTIVE_ALMORAVID"),
 	MinorCity(1100, iIndependent, (144, 33), "Nan Madol", iPopulation=1),

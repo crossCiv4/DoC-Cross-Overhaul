@@ -205,11 +205,11 @@ tEgyptIncludingCyreneTL = (73, 40)
 tConquestFatimidEgypt = (39, iMamluks, iArabia, tEgyptIncludingCyreneTL, tEgyptBR, 3, iFatimidEgyptYear, 10)
 
 
-iMongolsKievYear = 1240
-tMongolsKievTL = (80, 60)
-tMongolsKievBR = (82, 64)
+iMongolsPonticSteppeYear = 1240
+tMongolsPonticSteppeTL = (86, 58)
+tMongolsPonticSteppeBR = (96, 63)
 
-tConquestMongolsKiev = (40, iMongols, iRus, tMongolsKievTL, tMongolsKievBR, 1, iMongolsKievYear, 5)
+tConquestMongolsPonticSteppe = (40, iMongols, iRus, tMongolsPonticSteppeTL, tMongolsPonticSteppeBR, 3, iMongolsPonticSteppeYear, 5)
 
 iTimuridsPunjabYear = 1400
 tTimuridsPunjabTL = (99, 46)
@@ -316,7 +316,7 @@ lConquests = [
 	tConquestParthiaMesopotamia,
 	tConquestFatimidEgypt,
 	#tConquestMongolsBaghdad,
-	#tConquestMongolsKiev, # shouldn't need this since the Mongols will conquer the Khazars and then attack the Rus
+	tConquestMongolsPonticSteppe,
 	tConquestTimuridsPunjab,
 	tConquestMacedonPunjab,
 	tConquestAssyriaEgypt,

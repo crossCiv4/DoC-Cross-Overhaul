@@ -43,13 +43,13 @@ dDefaultInsertAdjectives = {
 
 
 lRepublicOf = set([iEgypt, iIndia, iChina, iChinaS, iShu, iXia, iPersia, iJapan, iEthiopia, iKorea, iNorse, iTurks, iTibet, iKhmer, iHolyRome, iMali, iPoland, iTimurids, iOttomans, iThailand, iIran, iNigeria, iBulgaria, iTunis, iMorocco, iYemen, iOman, iZulu, iMalays, iMoors, iFranks, iIreland])
-lRepublicAdj = set([iBabylonia, iRome, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons, iYamato, iManchu, iHungary, iCelts])
+lRepublicAdj = set([iBabylonia, iRome, iSpain, iFrance, iPortugal, iInca, iItaly, iAztecs, iArgentina, iSaxons, iYamato, iManchu, iHungary, iCelts, iRus])
 
 lSocialistRepublicOf = set([iEgypt, iMamluks, iMoors, iHolyRome, iBrazil, iNorse, iColombia, iTunis, iMorocco, iYemen, iOman, iFranks])
 lSocialistRepublicAdj = set([iPersia, iTurks, iItaly, iAztecs, iIran, iArgentina, iHungary])
 
 lPeoplesRepublicOf = set([iIndia, iChina, iChinaS, iShu, iXia, iPolynesia, iJapan, iTibet, iMali, iPoland, iTimurids, iThailand, iCongo, iNigeria, iMalays, iZulu])
-lPeoplesRepublicAdj = set([iDravidia, iByzantium, iMongols, iYamato, iManchu])
+lPeoplesRepublicAdj = set([iDravidia, iByzantium, iMongols, iYamato, iManchu, iRus])
 
 # prefer all islamic republics to use the "islamic republic" name; if some names don't fit, add them as exceptions
 # lIslamicRepublicOf = set([iIndia, iPersia, iMali, iTimurids, iIran])
