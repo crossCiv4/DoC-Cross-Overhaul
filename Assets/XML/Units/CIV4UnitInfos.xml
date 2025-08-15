@@ -7518,7 +7518,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_DISCIPLINE</PrereqTech>
+			<PrereqTech>TECH_COMPANIES</PrereqTech>
 			<BonusType>BONUS_IRON</BonusType>
 			<iCost>80</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>

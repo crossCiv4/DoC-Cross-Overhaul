@@ -1491,6 +1491,7 @@ enum LeaderHeadTypes			// Exposed to Python
 	WILLEM,
 	WILLIAM,
 
+	HERMANN_VON_SALZA,
 	FREDERICK,
 	BISMARCK,
 	HITLER,

@@ -239,6 +239,9 @@ def netherlandsTitle(args):
 		return "TXT_KEY_CIV_NETHERLANDS_UNITED_KINGDOM_OF"
 
 def germanyTitle(args):
+	if args.iReligion == iCatholicism and args.civic.iLegitimacy == iTheocracy:
+		return "TXT_KEY_CIV_GERMANY_TEUTONIC_ORDER"
+
 	if getColumn(args.iPlayer) <= 13 or (player(iHolyRome).isExisting() and not civ(master(iHolyRome)) == iGermany):
 		return "TXT_KEY_KINGDOM_OF" # Prussia
 	else:
@@ -556,9 +559,9 @@ def polandTitle(args):
 		return "TXT_KEY_CIV_POLAND_GRAND_DUCHY_OF"
 
 def holyRomeTitle(args):
-	if year() >= year(dBirth[iGermany]):
+	if args.tPlayer.isHasTech(iNationalism):
 		if args.bEmpire:
-			if not player(iGermany).isExisting():
+			if plots.regions(rLowerGermany).area.cities().owner(args.iPlayer).count() >= 1:
 				return "TXT_KEY_EMPIRE_ADJECTIVE"
 			else:
 				return "TXT_KEY_SOUTH_GERMAN_CONFEDERATION"

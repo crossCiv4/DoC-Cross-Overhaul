@@ -679,7 +679,7 @@ barbarians = [
 	#Barbarians(950, 1100, {iLongship: 1, iHuscarl: 2}, ((53, 51), (63, 72)), 8, SEA_INVADERS, adjective="TXT_KEY_ADJECTIVE_VIKING"),
 	Barbarians(900, 1500, {iCamelArcher: 1}, ((74, 36), (77, 42)), 9, NOMADS, target_area=((78, 35), (81, 40)), adjective="TXT_KEY_ADJECTIVE_BEDOUIN"),
 	Barbarians(1000, 1200, {iHorseArcher: 2}, ((101, 41), (105, 46)), 8, MINORS, adjective="TXT_KEY_ADJECTIVE_RAJPUT"),
-	Barbarians(1000, 1280, {iAxeman: 2}, ((74, 64), (80, 69)), 10, MINORS, adjective="TXT_KEY_ADJECTIVE_BALTIC"),
+	Barbarians(1000, 1280, {iAxeman: 2, iSkirmisher: 1, iHorseArcher: 1}, ((74, 64), (80, 69)), 7, MINORS, adjective="TXT_KEY_ADJECTIVE_BALTIC"),
 	Barbarians(1050, 1400, {iAxeman: 1}, ((75, 17), (80, 23)), 10, MINORS, iOwner=iNative, adjective="TXT_KEY_ADJECTIVE_SHONA"),
 	#Barbarians(1050, 1180, {iCamelArcher: 3, iHeavySwordsman: 3, iTrebuchet: 1}, ((56, 39), (58, 49)), 2, CLOSE_INVADERS, target_area=((56, 44), (58, 49)), adjective="TXT_KEY_ADJECTIVE_ALMORAVID", promotions=(iDesertAdaptation,)),
 	Barbarians(1100, 1350, {iHorseArcher: 2}, ((115, 38), (120, 45)), 12, INVADERS, adjective="TXT_KEY_ADJECTIVE_SHAN"),

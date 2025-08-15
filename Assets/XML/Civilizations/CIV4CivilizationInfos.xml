@@ -2550,10 +2550,10 @@
 			<PaganReligion>PAGAN_RELIGION_ASATRU</PaganReligion>
 			<Impact>IMPACT_CRITICAL</Impact>
 			<Identifier>GER</Identifier>
-			<StartingYear>1700</StartingYear>
+			<StartingYear>1230</StartingYear>
 			<LoadingTimes>
-				<LoadingTime>30</LoadingTime>
 				<LoadingTime>20</LoadingTime>
+				<LoadingTime>10</LoadingTime>
 				<LoadingTime>0</LoadingTime>
 			</LoadingTimes>
 			<bPlayable>1</bPlayable>
@@ -2641,6 +2641,10 @@
 				<CivicType>CIVIC_KINSHIP</CivicType>
 			</InitialCivics>
 			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_HERMANN_VON_SALZA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 				<Leader>
 					<LeaderName>LEADER_FREDERICK</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>

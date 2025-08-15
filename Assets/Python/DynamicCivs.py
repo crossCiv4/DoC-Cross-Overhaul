@@ -149,7 +149,7 @@ dStartingLeaders = [
 	iCongo : iMbemba,
 	iIran : iAbbas,
 	iNetherlands : iWillemVanOranje,
-	iGermany : iFrederick,
+	iGermany : iHermannVonSalza,
 	iAmerica : iWashington,
 	iArgentina : iSanMartin,
 	iMexico : iJuarez,

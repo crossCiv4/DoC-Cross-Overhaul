@@ -64,7 +64,7 @@ iSweden : 		(73, 71), # Birka
 iCongo : 		(71, 25), # Mbanza Kongo
 iIran : 		(93, 48), # Esfahan
 iNetherlands :	(62, 65), # Amsterdam
-iGermany : 		(69, 63), # Berlin
+iGermany : 		(75, 65), # Konigsberg
 iAmerica :		(29, 54), # Washington
 iArgentina :	(38, 13), # Buenos Aires
 iMexico :		(17, 43), # Mexico City
@@ -124,6 +124,7 @@ iBuyids :	(89, 47),	# Baghdad
 iYamato :	(137, 53),	# Kyoto
 iTurks :	(92, 50),	# Hamadan
 iManchu :	(125, 56),	# Beijing
+iGermany : 	(69, 63), # Berlin
 })
 
 # new capital locations on respawn
@@ -146,6 +147,7 @@ iSaxons :	(58, 64),	# London
 iMorocco :	(57, 44),	# Merrakesh
 iYemen :	(89, 35),	# Adan
 iVietnam :	(121, 42),	# Hanoi
+iGermany : 	(69, 63), # Berlin
 })
 
 ### Birth Area ###
@@ -206,6 +208,7 @@ iYamato :		((137, 51),	(138, 54)),
 iManchu :		((127, 57),	(130, 63)),
 iFranks :		((60, 62),	(63, 65)),
 iHungary :		((73, 58),	(77, 60)),
+iGermany :		((72, 65),	(76, 67)),
 })
 
 dBirthAreaExceptions = CivDict({

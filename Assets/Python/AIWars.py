@@ -358,6 +358,7 @@ dConquestChecker = {
 	tConquestArabiaCarthage[0]: lambda tConquest: checkConquest(tConquest, tConquestArabiaEgypt),
 	tConquestManchuTaiwan[0]: lambda tConquest: checkConquest(tConquest, tConquestManchuCentralCoastalChina),
 	tConquestSuiUnification[0]: lambda tConquest: checkConquest(tConquest, tConquestChinaYellowRiver),
+	tConquestSwedenPomerania[0]: lambda tConquest: checkConquest(tConquest, bOnlyPreferred=True),
 }
 
 def checkByzantiumConquestOfCarthage(tConquest):

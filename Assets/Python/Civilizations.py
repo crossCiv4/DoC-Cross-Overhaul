@@ -672,6 +672,14 @@ lCivilizations = [
 		techs=techs.column(4).including(iGeneralship, iAesthetics, iCurrency, iLaw).without(iSeafaring, iRiding, iShipbuilding, iCement, iNavigation)
 	),
 	Civilization(
+		iGermany,
+		iGold=100,
+		iAdvancedStartPoints=50,
+		iStateReligion=iProtestantism,
+		lCivics=[iElective, iTheocracy, iCasteSystem, iRegulatedTrade, iMonasticism, iHegemony],
+		techs=techs.column(9).without(iDiscipline, iPatronage)
+	),
+	Civilization(
 		iThailand,
 		iGold=200,
 		iStateReligion=iBuddhism,
@@ -750,14 +758,6 @@ lCivilizations = [
 		iAdvancedStartPoints=100,
 		lCivics=[iDespotism, iBureaucracy, iCasteSystem, iHegemony, iSyncretism, iRegulatedTrade],
 		techs=techs.column(11).including(iCombinedArms).without(iExploration, iOptics, iAcademia)
-	),
-	Civilization(
-		iGermany,
-		iGold=800,
-		iAdvancedStartPoints=200,
-		iStateReligion=iProtestantism,
-		lCivics=[iMonarchy, iBureaucracy, iManorialism, iRegulatedTrade, iClergy, iHegemony],
-		techs=techs.column(12).including(iReplaceableParts, iMeasurement)
 	),
 	Civilization(
 		iAmerica,
@@ -1461,14 +1461,15 @@ dStartingUnits = CivDict({
 		iExploreSea: 2,
 	},
 	iGermany: {
-		iSettle: 4,
+		iSettle: 2,
 		iWork: 2,
-		iAttack: 4,
-		iShock: 2,
-		iDefend: 2,
-		iSiege: 3,
+		iAttack: 2,
+		iShock: 3,
+		iSiege: 1,
 		iMissionary: 2,
-		iCounter: 2,
+		iCounter: 1,
+		iDefend: 4,
+		iWorkerSea: 1,
 	},
 	iAmerica: {
 		iSettle: 6,
@@ -1716,8 +1717,8 @@ dExtraAIUnits = CivDict({
 		iDefend: 3,
 	},
 	iGermany: {
-		iAttack: 10,
-		iSiege: 5,
+		iShock: 1,
+		iSiege: 1,
 	},
 	iAmerica: {
 		iDefend: 4,
@@ -1889,8 +1890,8 @@ dAdditionalUnits = CivDict({
 		iCounter: 3,
 	},
 	iGermany: {
-		iAttack: 5,
-		iSiege: 3,
+		iAttack: 3,
+		iSiege: 2,
 	},
 	iAmerica: {
 		iAttack: 3,
@@ -1949,8 +1950,7 @@ dStartingExperience = CivDict({
 		iSiege: 2,
 	},
 	iGermany: {
-		iAttack: 2,
-		iDefend: 2,
+		iShock: 2,
 		iSiege: 2,
 	},
 	iArgentina: {
@@ -2835,6 +2835,7 @@ dTechPreferences = {
 		iMicrobiology: 10,
 	},
 	iGermany : {
+		iAcademia: 20,
 		iEngine: 10,
 		iBallistics: 10,
 		iThermodynamics: 5,
@@ -2847,6 +2848,10 @@ dTechPreferences = {
 		iSynthetics: 20,
 		iFission: 12,
 		iLabourUnions: 25,
+		iCartography: -10,
+		iExploration: -10,
+		iOptics: -10,
+		iGeography: -10,
 	},
 	iAmerica : {
 		iBallistics: 5,
@@ -3480,7 +3485,7 @@ dBuildingPreferences = {
 		iKrakDesChevaliers: 20,
 		iNeuschwanstein: 20,
 		iPalaceOfNations: 20,
-		iNotreDame: 15,
+		iNotreDame: -5,
 		iMountAthos: -20,
 		iHagiaSophia: -20,
 	},

@@ -320,14 +320,14 @@ def englandSpecificAdjective(args):
         return "TXT_KEY_CIV_ENGLAND_BRITISH"
 
 def holyRomeSpecificAdjective(args):
-	if year() >= year(dBirth[iGermany]):
-		if player(iGermany).isExisting():
-			return "TXT_KEY_CIV_HOLY_ROME_BAVARIA_ADJECTIVE"
-		else:
-			return "TXT_KEY_CIV_HOLY_ROME_GERMAN"
-	else:
-		if not args.bEmpire:
-			return "TXT_KEY_CIV_HOLY_ROME_GERMAN"
+    if args.tPlayer.isHasTech(iNationalism):
+        if plots.regions(rLowerGermany).area.cities().owner(args.iPlayer).count() == 0:
+            return "TXT_KEY_CIV_HOLY_ROME_BAVARIA_ADJECTIVE"
+        else:
+            return "TXT_KEY_CIV_HOLY_ROME_GERMAN"
+    else:
+        if not args.bEmpire:
+            return "TXT_KEY_CIV_HOLY_ROME_GERMAN"
 
 def hungarianSpecificAdjective(args):
     if player(args.iPlayer).getPeriod() == iPeriodAustria:

@@ -806,6 +806,10 @@
 							<LeaderType>LEADER_FREDERICK</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
+						<Leader>
+							<LeaderType>LEADER_HERMANN_VON_SALZA</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
@@ -2111,6 +2115,10 @@
 							<LeaderType>LEADER_FREDERICK</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
+						<Leader>
+							<LeaderType>LEADER_HERMANN_VON_SALZA</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers/>
@@ -3053,6 +3061,10 @@
 						</Leader>
 						<Leader>
 							<LeaderType>LEADER_FREDERICK</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_HERMANN_VON_SALZA</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -4300,6 +4312,10 @@
 						</Leader>
 						<Leader>
 							<LeaderType>LEADER_FREDERICK</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_HERMANN_VON_SALZA</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -5979,6 +5995,10 @@
 						</Leader>
 						<Leader>
 							<LeaderType>LEADER_FREDERICK</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_HERMANN_VON_SALZA</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>
@@ -9315,6 +9335,10 @@
 							<LeaderType>LEADER_FREDERICK</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
+						<Leader>
+							<LeaderType>LEADER_HERMANN_VON_SALZA</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
 					</Leaders>
 					<Attitudes/>
 					<DiplomacyPowers>
@@ -10483,6 +10507,10 @@
 						</Leader>
 						<Leader>
 							<LeaderType>LEADER_FREDERICK</LeaderType>
+							<bLeaderType>1</bLeaderType>
+						</Leader>
+						<Leader>
+							<LeaderType>LEADER_HERMANN_VON_SALZA</LeaderType>
 							<bLeaderType>1</bLeaderType>
 						</Leader>
 					</Leaders>

@@ -279,6 +279,8 @@ def netherlandsLeader(args):
 def germanyLeader(args):
 	if isFascist(args.iPlayer):
 		return iHitler
+	if getColumn(args.iPlayer) >= 12:
+		return iFrederick
 	if getColumn(args.iPlayer) >= 15:
 		return iBismarck
 
