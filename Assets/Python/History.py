@@ -515,44 +515,27 @@ def removeSeaPeopleBoatsOnPhoenicianSpawn(iPlayer):
 		for unit in plots.regions(*lRegions).units().owner(iBarbarian).domain(DomainTypes.DOMAIN_SEA):
 			unit.kill(False, -1)
 
+# TODO: transform birth event to dictionary to avoid elif iteration
 @handler("birth")
-def romanRelations(iPlayer):
-	# Rome should dislike Celts on spawn, due to perception of barbarian status + their historical sack of Rome
-	if civ(iPlayer) == iRome and player(iCelts).isExisting():
-		iRomePlayer = slot(iRome)
-		player(iRomePlayer).AI_changeMemoryCount(iCelts, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 4)
-
-	if civ(iPlayer) == iByzantium and player(iRome).isExisting():
-		iRomePlayer = slot(iRome)
-		player(iRomePlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 4)
-		player(iPlayer).AI_changeMemoryCount(iRomePlayer, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 4)
-
-@handler("birth")
-def frankishRelations(iPlayer):
-	# Rome has positive initial relations with Franks
-	if civ(iPlayer) == iFranks and player(iRome).isExisting():
-		iRomePlayer = slot(iRome)
-		player(iRomePlayer).AI_changeMemoryCount(iFranks, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 2)
-
-# Northern China is upset at the south for rejecting imperial rule in Chang'an / Luoyang
-# This is to prevent the two Chinas from getting friendly and tech trading etc
-# Idem for Shu / Shu-Han
-@handler("birth")
-def chineseRelations(iPlayer):
+def initialRelations(iPlayer):
+	# Northern China is upset at the south for rejecting imperial rule in Chang'an / Luoyang
+	# This is to prevent the two Chinas from getting friendly and tech trading etc
 	if civ(iPlayer) == iChinaS and player(iChina).isExisting():
-		iChinaPlayer = slot(iChina)
-		player(iChinaPlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 4)
-	if civ(iPlayer) == iChina and player(iShu).isExisting():
-		iChinaPlayer = slot(iChina)
-		player(iChinaPlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 4)
+		player(iChina).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_BAD_TO_US, 4)
 
-@handler("birth")
-def stabilizeBavaria(iPlayer):
-	if civ(iPlayer) == iGermany:
-		iHolyRomanPlayer = slot(iHolyRome)
+	# Rome should dislike Celts on spawn, due to perception of barbarian status + their historical sack of Rome
+	elif civ(iPlayer) == iRome and player(iCelts).isExisting():
+		player(iPlayer).AI_changeMemoryCount(slot(iCelts), MemoryTypes.MEMORY_EVENT_BAD_TO_US, 4)
 
-		if iHolyRomanPlayer >= 0 and stability(iHolyRomanPlayer) < iStabilityShaky:
-			data.setStabilityLevel(iHolyRomanPlayer, iStabilityShaky)
+	elif civ(iPlayer) == iFranks and player(iRome).isExisting():
+		player(iRome).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 2)
+
+	elif civ(iPlayer) == iByzantium and player(iRome).isExisting():
+		player(iRome).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 4)
+		player(iPlayer).AI_changeMemoryCount(slot(iRome), MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 4)
+
+	if civ(iPlayer) == iGermany and player(iPoland).isExisting():
+		player(iPoland).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 2)
 
 @handler("birth")
 def normanInvasionOfBritain(iPlayer):

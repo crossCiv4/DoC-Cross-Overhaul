@@ -16,7 +16,7 @@ dCompanyTechs = {
 	iLuxuryIndustry   : [iEconomics, iConsumerism],
 	iComputerIndustry : [iEconomics, iComputers],
 	iHanseaticLeague  : [iCompass],
-	iKnightsTemplar   : [iNobility],
+	iKnightsTemplar   : [iReligiousOrders],
 }
 
 tCompaniesLimit = (16, 20, 24, 16, 20, 20, 10, 16, 20, 11, 9) # kind of arbitrary currently, see how this plays out

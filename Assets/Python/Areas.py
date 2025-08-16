@@ -147,7 +147,7 @@ iSaxons :	(58, 64),	# London
 iMorocco :	(57, 44),	# Merrakesh
 iYemen :	(89, 35),	# Adan
 iVietnam :	(121, 42),	# Hanoi
-iGermany : 	(69, 63), # Berlin
+iGermany : 	(69, 63),	# Berlin
 })
 
 ### Birth Area ###

@@ -103,7 +103,7 @@ def onBirth(iPlayer):
 
 	if iCiv == iFranks:
 		setPeriod(iCelts, iPeriodBrittany)
-	elif iCiv == iGermany:
+	elif iCiv == iManchu:
 		setPeriod(iHungary, iPeriodAustria)
 	elif iCiv == iIran:
 		setPeriod(iTimurids, iPeriodMughals)

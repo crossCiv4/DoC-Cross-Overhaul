@@ -64,6 +64,9 @@ def updateLateModifiers(iGameTurn):
 	if iGameTurn == year(dBirth[iFrance]) and player(iFranks).isAlive():
 		setModifier(player(iFranks), iModifierUnitCost, 125)
 		message(active(), 'TXT_KEY_EVENT_MILITARY_RECRUITMENT_DECLINE', adjective(iFranks), color=iYellow, force=True)
+	if iGameTurn == year(1200) and player(iGhorids).isAlive():
+		setModifier(player(iGhorids), iModifierUnitCost, 150)
+		message(active(), 'TXT_KEY_EVENT_MILITARY_RECRUITMENT_DECLINE', adjective(iGhorids), color=iYellow, force=True)
 
 
 ### Modifier types ###
@@ -895,7 +898,7 @@ dUnitCostMods = CivDict({
 	iTimurids: 90,
 	iGhorids: 120,
 	iThailand: 90,
-	iSweden: 80,
+	iSweden: 95,
 	iRussia: 95,
 	iOttomans: 80,
 	iCongo: 75,
@@ -1081,9 +1084,9 @@ dBuildingCostMods = CivDict({
 	iMongols: 80,
 	iAztecs: 80,
 	iTimurids: 90,
-	iGhorids: 100,
+	iGhorids: 105,
 	iThailand: 90,
-	iSweden: 80,
+	iSweden: 85,
 	iRussia: 90,
 	iOttomans: 90,
 	iCongo: 85,
@@ -1160,7 +1163,7 @@ dInflationRateMods = CivDict({
 	iTibet: 130,
 	iMoors: 130,
 	iJava: 100, 
-	iEngland: 80,
+	iEngland: 85,
 	iSaxons: 85,
 	iHolyRome: 80,
 	iHungary: 80,
@@ -1363,9 +1366,9 @@ dGrowthThresholdMods = CivDict({
 	iMongols: 75,
 	iAztecs: 70,
 	iTimurids: 75,
-	iGhorids: 80,
+	iGhorids: 95,
 	iThailand: 80,
-	iSweden: 80,
+	iSweden: 90,
 	iRussia: 80,
 	iOttomans: 70,
 	iCongo: 75,
