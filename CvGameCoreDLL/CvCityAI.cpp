@@ -2793,6 +2793,11 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_DEFENSE_AIR] *= 2;
 		aiUnitAIVal[UNITAI_RESERVE_SEA] *= 2;
 		aiUnitAIVal[UNITAI_ICBM] *= 2;
+		aiUnitAIVal[UNITAI_SETTLER_SEA] /= 2;
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
+		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 2;
+		aiUnitAIVal[UNITAI_ATTACK_SEA] /= 2;
+		aiUnitAIVal[UNITAI_ESCORT_SEA] /= 2;
 		break;
 	case AMERICA:
 		aiUnitAIVal[UNITAI_SETTLE] *= 5;

@@ -17333,7 +17333,7 @@ int CvCity::getBuildingYieldChange(BuildingClassTypes eBuildingClass, YieldTypes
 			// Leoreth: we have an overflow issue here, so clean out the affected entry and log an error until it is fixed
 			if (iChange < 0 || iChange >= 1000)
 			{
-				logMajorError(CvWString::format(L"removed invalid entry - getBuildingYieldChange(%s, %s) - %s (%d, %d)", GC.getBuildingClassInfo(eBuildingClass).getText(), GC.getYieldInfo(eYield).getText(), getNameKey(), getX(), getY()), getX(), getY());
+				logMajorError(CvWString::format(L"removed invalid entry - change %d for getBuildingYieldChange(%s, %s) - %s (%d, %d)", iChange, GC.getBuildingClassInfo(eBuildingClass).getText(), GC.getYieldInfo(eYield).getText(), getNameKey(), getX(), getY()), getX(), getY());
 				return 0;
 			}
 
