@@ -488,8 +488,9 @@ def checkConquest(tConquest, tPrereqConquest = (), bInvertPrereqConquestConditio
 		
 	iPreferredTarget = slot(iPreferredTargetCiv)
 
-	if iPreferredTarget < 0 and bOnlyPreferred:
-		return
+	if bOnlyPreferred:
+		if iPreferredTarget < 0 or cities.rectangle(tTL, tBR).owner(iPreferredTarget).count() == 0:
+			return
 
 	if iPreferredTarget >= 0 and player(iPreferredTarget).isExisting() and team(iPreferredTarget).isVassal(iPlayer):
 		return

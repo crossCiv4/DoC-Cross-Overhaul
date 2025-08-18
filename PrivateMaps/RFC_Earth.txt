@@ -21705,7 +21705,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=50
-	BonusType=BONUS_SHEEP
 	FeatureType=FEATURE_FOREST, FeatureVariety=5
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
