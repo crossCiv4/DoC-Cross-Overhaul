@@ -205,6 +205,8 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 		iNewStateReligion = iShia
 	elif iCiv == iAssyria and game.isReligionFounded(iShia):
 		iNewStateReligion = iShia
+	elif iCiv == iGermany and game.isReligionFounded(iProtestantism):
+		iNewStateReligion = iProtestantism
 
 	# set state religion based on religions in the area
 	if iNewStateReligion >= 0:
@@ -279,6 +281,8 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 
 	if iCiv == iAssyria and game.isReligionFounded(iShia):
 		makeUnits(iAssyria, iShiaMissionary, plot(capital), 2)
+	elif iCiv == iGermany and game.isReligionFounded(iProtestantism):
+		makeUnits(iGermany, iProtestantMissionary, plot(capital), 2)
 	
 	switchCivics(iPlayer)
 		
@@ -329,8 +333,8 @@ def getResurrectionTechs(iPlayer):
 		# usually requires half of the civs to have the tech
 		# but some civs have different ratios
 		iCountRatio = 2
-		# colonial western civs should be more advanced
-		if iCiv in [iSpain, iFrance, iEngland, iNetherlands, iPortugal]:
+		# future great powers civs should be more advanced
+		if iCiv in [iSpain, iFrance, iEngland, iNetherlands, iPortugal, iGermany]:
 			iCountRatio = 4
 
 		iCount = 0
