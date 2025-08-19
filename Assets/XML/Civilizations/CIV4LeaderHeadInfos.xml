@@ -79589,12 +79589,12 @@
 			<iTechTradeKnownPercent>40</iTechTradeKnownPercent>
 			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
-			<iMaxWarRand>200</iMaxWarRand>
-			<iMaxWarNearbyPowerRatio>100</iMaxWarNearbyPowerRatio>
+			<iMaxWarRand>250</iMaxWarRand>
+			<iMaxWarNearbyPowerRatio>90</iMaxWarNearbyPowerRatio>
 			<iMaxWarDistantPowerRatio>50</iMaxWarDistantPowerRatio>
-			<iMaxWarMinAdjacentLandPercent>1</iMaxWarMinAdjacentLandPercent>
-			<iLimitedWarRand>100</iLimitedWarRand>
-			<iLimitedWarPowerRatio>100</iLimitedWarPowerRatio>
+			<iMaxWarMinAdjacentLandPercent>3</iMaxWarMinAdjacentLandPercent>
+			<iLimitedWarRand>120</iLimitedWarRand>
+			<iLimitedWarPowerRatio>85</iLimitedWarPowerRatio>
 			<iDogpileWarRand>100</iDogpileWarRand>
 			<iMakePeaceRand>40</iMakePeaceRand>
 			<iDeclareWarTradeRand>40</iDeclareWarTradeRand>
