@@ -334,7 +334,7 @@ def getResurrectionTechs(iPlayer):
 		# but some civs have different ratios
 		iCountRatio = 2
 		# future great powers civs should be more advanced
-		if iCiv in [iSpain, iFrance, iEngland, iNetherlands, iPortugal, iGermany]:
+		if iCiv in [iSpain, iFrance, iEngland, iNetherlands, iPortugal, iGermany, iHungary]:
 			iCountRatio = 4
 
 		iCount = 0
