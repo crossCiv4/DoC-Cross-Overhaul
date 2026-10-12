@@ -144,6 +144,47 @@ supplemental runtime. The three adapter sources are byte-identical to the
 validated upstream change. DoC gameplay/save/UI and multiplayer were not
 retested by this port.
 
+### Parallel worker improvement scoring
+
+Worker improvement scoring evaluates a city's surrounding plots concurrently
+using a reusable pool of native Windows threads and the calling game thread.
+Build legality, unit missions, bonus values, city finances, and feature production
+are prepared on the game thread. Results are published in plot order before the
+existing city ranking and pruning pass. Cities with fewer than four eligible
+plots, games with build/train/construct Python callbacks, and debug/profiler
+builds use the original serial calculation.
+
+Controls are in `Assets/XML/GlobalDefinesAlt.xml`. They can also be changed for
+the current session through `CyGlobalContext().setDefineINT(name, value)`:
+
+| Define | Values |
+| --- | --- |
+| `WORKER_BUILD_SCORING_THREADS` | `0` (default): up to four total threads; `1`: the prepared calculation on one thread; `2`–`8`: requested total threads, limited by processor and plot counts; `-1`: original serial calculation. |
+| `WORKER_BUILD_SCORING_LOG` | `1`: write per-city timings to `WorkerBuildScoring.log`; default `0`. |
+| `WORKER_BUILD_SCORING_VERIFY` | `1`: compare each prepared result with the original scorer; default `0`. A mismatch is logged, reference results are used, and prepared scoring is disabled until the DLL is reloaded. |
+
+For a comparison, load the same save and advance the same turns with thread
+counts `1`, `2`, and `4`, then compare against `-1` to include the preparation
+overhead relative to the original code. Keep verification off during timing
+runs. The log records `prepare_ms`, `score_ms` (including dispatch and waiting),
+and `update_ms` (the complete city's best-build update). Compare total time
+between turns separately; faster scoring does not guarantee an equal reduction
+in whole-turn time. Warm up the pool before recording repeated measurements.
+
+For correctness runs, enable verification and look for `verified` plot counts
+with `mismatches=0`. Verification time is excluded from `score_ms` and included
+in `update_ms`. Thread creation failure falls back to the available workers,
+including the game thread; `threads` records the count used for the batch.
+
+Rebased static-adapter validation: all 102 DoC/worker units and two adapter
+units build with the original 2,450 exports and no modern CRT imports. All
+11,031 exception descriptors pass the audit. The original-reference Python
+API/lifetime/exception/finalization/unload checks pass again. The existing
+1,000-batch pool test passes exactly-once jobs, synchronized results, changing
+thread counts and four shutdown/restart cycles. Parallelism source and XML
+are unchanged from the original parallelism commit. Real-save scoring parity
+and turn-time improvement remain unmeasured by this rebase.
+
 ## Main Features
 
 The main goals of DoC are:

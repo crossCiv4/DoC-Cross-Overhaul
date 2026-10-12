@@ -5,6 +5,22 @@
 <!-- -->
 <!-- Global Defines -->
 <Civ4Defines xmlns="x-schema:CIV4GlobalDefinesSchema.xml">
+	<!-- Worker improvement scoring: -1 uses the original scorer, 1 is serial,
+	     0 selects up to four threads, and positive values request a thread count
+	     (including the game thread).
+	     LOG writes phase timings; VERIFY compares against the original scorer. -->
+	<Define>
+		<DefineName>WORKER_BUILD_SCORING_THREADS</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>WORKER_BUILD_SCORING_LOG</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>WORKER_BUILD_SCORING_VERIFY</DefineName>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
 	<Define>
 		<!-- edead: change this to 0 if you want autosaves work during AI autoplay for some reason -->
 		<DefineName>NO_AUTOSAVE_DURING_AUTOPLAY</DefineName>

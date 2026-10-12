@@ -20,3 +20,6 @@ UpgradeLog.XML
 /build-*/
 __pycache__/
 /CMakeUserPresets.json
+
+# Local assessments and implementation plans.
+/.planning/
