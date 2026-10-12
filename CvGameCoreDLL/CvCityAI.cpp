@@ -4,6 +4,7 @@
 #include "CvGlobals.h"
 #include "CvGameCoreUtils.h"
 #include "CvCityAI.h"
+#include "CvWorkerBuildScoring.h"
 #include "CvGameAI.h"
 #include "CvPlot.h"
 #include "CvArea.h"
@@ -39,6 +40,99 @@
 #define BUILDINGFOCUS_CAPITAL				(1 << 17)
 
 
+
+// The snapshot redirects getters that allocate, populate shared caches, or
+// inspect unit missions to values prepared by the game thread. Remaining plot
+// and XML reads stay immutable until the synchronous batch has finished.
+struct CvWorkerBuildInputs
+{
+	CvPlot* pPlot;
+	int iCityPlot;
+	const byte* pbCanBuild;
+	const int* piFeatureProduction;
+	BuildTypes eForcedBuild;
+	int iClearFeatureValue;
+	int iBonusValue;
+	int iHappyLevel;
+	int iHealthLevel;
+	int iHealthRate;
+	bool bDagger;
+	bool bFinancialTrouble;
+	int iValue;
+	BuildTypes eBuild;
+};
+
+struct CvWorkerBuildBatch
+{
+	CvCityAI* pCity;
+	CvWorkerBuildInputs plots[NUM_CITY_PLOTS];
+	int iPlots;
+	int iFoodMultiplier;
+	int iProductionMultiplier;
+	int iCommerceMultiplier;
+	bool bChop;
+	int iHappyAdjust;
+	int iHealthAdjust;
+	int iDesiredFoodChange;
+};
+
+namespace
+{
+bool g_bWorkerBuildScoringMismatch = false;
+
+// All timers and engine logging execute on the game thread, including the
+// destructor after the city's original ranking and pruning pass.
+struct WorkerBuildTiming
+{
+	CvCityAI& city;
+	bool bLog;
+	int iRequested;
+	int iThreads;
+	int iPlots;
+	bool bPrepared;
+	int iVerified;
+	int iMismatches;
+	LARGE_INTEGER frequency;
+	LARGE_INTEGER updateStart;
+	LARGE_INTEGER prepareStart;
+	LARGE_INTEGER scoreStart;
+	LARGE_INTEGER scoreEnd;
+
+	WorkerBuildTiming(CvCityAI& kCity) : city(kCity),
+		bLog(GC.getDefineINT("WORKER_BUILD_SCORING_LOG") != 0),
+		iRequested(GC.getDefineINT("WORKER_BUILD_SCORING_THREADS")),
+		iThreads(1), iPlots(0), bPrepared(false), iVerified(0), iMismatches(0)
+	{
+		frequency.QuadPart = 0;
+		if (bLog && QueryPerformanceFrequency(&frequency))
+		{
+			QueryPerformanceCounter(&updateStart);
+			prepareStart = scoreStart = scoreEnd = updateStart;
+		}
+		else bLog = false;
+	}
+
+	double milliseconds(LARGE_INTEGER start, LARGE_INTEGER end) const
+	{
+		return 1000.0 * static_cast<double>(end.QuadPart - start.QuadPart) /
+			static_cast<double>(frequency.QuadPart);
+	}
+
+	~WorkerBuildTiming()
+	{
+		if (!bLog) return;
+		LARGE_INTEGER updateEnd;
+		QueryPerformanceCounter(&updateEnd);
+		CvString line = CvString::format(
+			"turn=%d player=%d city=%d plots=%d requested=%d threads=%d prepared=%d prepare_ms=%.3f score_ms=%.3f update_ms=%.3f verified=%d mismatches=%d",
+			GC.getGameINLINE().getGameTurn(), city.getOwnerINLINE(), city.getID(),
+			iPlots, iRequested, iThreads, bPrepared, milliseconds(prepareStart, scoreStart),
+			milliseconds(scoreStart, scoreEnd), milliseconds(updateStart, updateEnd),
+			iVerified, iMismatches);
+		gDLL->logMsg("WorkerBuildScoring.log", line.c_str(), false, false);
+	}
+};
+}
 
 // Public Functions...
 
@@ -5782,6 +5876,7 @@ int CvCityAI::AI_countBestBuilds(CvArea* pArea)
 void CvCityAI::AI_updateBestBuild()
 {
 	PROFILE_FUNC();
+	WorkerBuildTiming timing(*this);
 
 	CvPlot* pLoopPlot;
 	int iI, iJ;
@@ -6150,35 +6245,186 @@ void CvCityAI::AI_updateBestBuild()
     	iHealthAdjust += getBuildingHealth(getProductionBuilding());
     }
 
-	int x = getX();
-	int y = getY();
-	
-	for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+	CvWorkerBuildBatch batch;
+	batch.pCity = this;
+	batch.iPlots = 0;
+	batch.iFoodMultiplier = iFoodMultiplier;
+	batch.iProductionMultiplier = iProductionMultiplier;
+	batch.iCommerceMultiplier = iCommerceMultiplier;
+	batch.bChop = bChop;
+	batch.iHappyAdjust = iHappyAdjust;
+	batch.iHealthAdjust = iHealthAdjust;
+	batch.iDesiredFoodChange = iDesiredFoodChange;
+	if (timing.bLog) QueryPerformanceCounter(&timing.prepareStart);
+
+	for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 	{
-		m_aiBestBuildValue[iI] = 0;
-		m_aeBestBuild[iI] = NO_BUILD;
-
-		if (iI != CITY_HOME_PLOT)
+		pLoopPlot = getCityIndexPlot(iI);
+		if (iI != CITY_HOME_PLOT && pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this)
 		{
-			pLoopPlot = plotCity(getX_INLINE(), getY_INLINE(), iI);
+			CvWorkerBuildInputs& inputs = batch.plots[batch.iPlots++];
+			inputs.pPlot = pLoopPlot;
+			inputs.iCityPlot = iI;
+			inputs.iValue = 0;
+			inputs.eBuild = NO_BUILD;
+		}
+	}
+	timing.iPlots = batch.iPlots;
 
-			if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this)
+	// Python build callbacks retain their original call order. The engine
+	// profiler and debug assertion UI also remain confined to the game thread.
+	bool bPrepared = batch.iPlots >= 4 && GC.getNumBuildInfos() > 0 &&
+		timing.iRequested >= 0 && !GC.getUSE_CAN_BUILD_CALLBACK() &&
+		!GC.getUSE_CAN_TRAIN_CALLBACK() && !GC.getUSE_CANNOT_TRAIN_CALLBACK() &&
+		!GC.getUSE_CAN_CONSTRUCT_CALLBACK() && !GC.getUSE_CANNOT_CONSTRUCT_CALLBACK() &&
+		!g_bWorkerBuildScoringMismatch;
+#if defined(FP_PROFILE_ENABLE) || defined(_DEBUG)
+	bPrepared = false;
+#endif
+	timing.bPrepared = bPrepared;
+	std::vector<byte> canBuild;
+	std::vector<int> featureProduction;
+	if (bPrepared)
+	{
+		for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+		{
+			m_aiBestBuildValue[iI] = 0;
+			m_aeBestBuild[iI] = NO_BUILD;
+		}
+		int iBuilds = GC.getNumBuildInfos();
+		canBuild.resize(batch.iPlots * iBuilds);
+		featureProduction.resize(batch.iPlots * iBuilds);
+		int iHappyLevel = happyLevel() - unhappyLevel();
+		int iHealthLevel = goodHealth() - badHealth();
+		int iHealthRate = healthRate();
+		bool bFinancialTrouble = kPlayer.AI_isFinancialTrouble();
+		bool bDagger = kPlayer.AI_isDoStrategy(AI_STRATEGY_DAGGER);
+
+		// Irrigation looks two neighbors away, and fresh water inspects one
+		// additional neighbor. Populate overlapping area caches before dispatch.
+		const int iCacheRadius = CITY_PLOTS_RADIUS + 3;
+		for (int iDX = -iCacheRadius; iDX <= iCacheRadius; ++iDX)
+		{
+			for (int iDY = -iCacheRadius; iDY <= iCacheRadius; ++iDY)
 			{
-				AI_bestPlotBuild(pLoopPlot, &(m_aiBestBuildValue[iI]), &(m_aeBestBuild[iI]), iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, bChop, iHappyAdjust, iHealthAdjust, iDesiredFoodChange);
-				m_aiBestBuildValue[iI] *= 4;
-				m_aiBestBuildValue[iI] += 3 + iWorkerCount;  // to round up
-				m_aiBestBuildValue[iI] /= (4 + iWorkerCount);
+				CvPlot* pCachePlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
+				if (pCachePlot != NULL) pCachePlot->area();
+			}
+		}
 
-				if (m_aiBestBuildValue[iI] > 0)
+		for (int iPlot = 0; iPlot < batch.iPlots; ++iPlot)
+		{
+			CvWorkerBuildInputs& inputs = batch.plots[iPlot];
+			pLoopPlot = inputs.pPlot;
+			inputs.pbCanBuild = &canBuild[iPlot * iBuilds];
+			inputs.piFeatureProduction = &featureProduction[iPlot * iBuilds];
+			inputs.iHappyLevel = iHappyLevel;
+			inputs.iHealthLevel = iHealthLevel;
+			inputs.iHealthRate = iHealthRate;
+			inputs.bFinancialTrouble = bFinancialTrouble;
+			inputs.bDagger = bDagger;
+			inputs.iClearFeatureValue = pLoopPlot->getFeatureType() == NO_FEATURE ? 0 :
+				AI_clearFeatureValue(inputs.iCityPlot);
+			BonusTypes ePlotBonus = pLoopPlot->getNonObsoleteBonusType(getTeam());
+			inputs.iBonusValue = ePlotBonus == NO_BONUS ? 0 : kPlayer.AI_bonusVal(ePlotBonus);
+			inputs.eForcedBuild = NO_BUILD;
+			for (CLLNode<IDInfo>* pUnitNode = pLoopPlot->headUnitNode(); pUnitNode != NULL;
+				pUnitNode = pLoopPlot->nextUnitNode(pUnitNode))
+			{
+				BuildTypes eUnitBuild = ::getUnit(pUnitNode->m_data)->getBuildType();
+				if (eUnitBuild != NO_BUILD && GC.getBuildInfo(eUnitBuild).getImprovement() != NO_IMPROVEMENT)
 				{
-					FAssert(m_aeBestBuild[iI] != NO_BUILD);
+					inputs.eForcedBuild = eUnitBuild;
+					break;
 				}
-				if (m_aeBestBuild[iI] != NO_BUILD)
+			}
+			for (int iBuild = 0; iBuild < iBuilds; ++iBuild)
+			{
+				BuildTypes ePlotBuild = static_cast<BuildTypes>(iBuild);
+				canBuild[iPlot * iBuilds + iBuild] = kPlayer.canBuild(pLoopPlot, ePlotBuild, false);
+				if (pLoopPlot->getFeatureType() != NO_FEATURE &&
+					GC.getBuildInfo(ePlotBuild).isFeatureRemove(pLoopPlot->getFeatureType()))
 				{
-					FAssert(m_aiBestBuildValue[iI] > 0);
+					CvCity* pFeatureCity = NULL;
+					featureProduction[iPlot * iBuilds + iBuild] =
+						pLoopPlot->getFeatureProduction(ePlotBuild, getTeam(), &pFeatureCity);
 				}
 			}
 		}
+	}
+	if (timing.bLog) QueryPerformanceCounter(&timing.scoreStart);
+	if (bPrepared)
+	{
+		timing.iThreads = scoreWorkerBuildPlots(batch.iPlots,
+			workerBuildScoringThreads(timing.iRequested), AI_scoreWorkerBuildPlot, &batch);
+	}
+	else
+	{
+		// Preserve incremental clearing and publication for the original path,
+		// including callbacks that inspect another plot's existing best build.
+		timing.iPlots = 0;
+		for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+		{
+			m_aiBestBuildValue[iI] = 0;
+			m_aeBestBuild[iI] = NO_BUILD;
+			pLoopPlot = getCityIndexPlot(iI);
+			if (iI != CITY_HOME_PLOT && pLoopPlot != NULL && pLoopPlot->getWorkingCity() == this)
+			{
+				++timing.iPlots;
+				AI_bestPlotBuild(pLoopPlot, &m_aiBestBuildValue[iI], &m_aeBestBuild[iI],
+					iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier,
+					bChop, iHappyAdjust, iHealthAdjust, iDesiredFoodChange);
+				m_aiBestBuildValue[iI] *= 4;
+				m_aiBestBuildValue[iI] += 3 + iWorkerCount;
+				m_aiBestBuildValue[iI] /= (4 + iWorkerCount);
+				FAssert(m_aiBestBuildValue[iI] <= 0 || m_aeBestBuild[iI] != NO_BUILD);
+				FAssert(m_aeBestBuild[iI] == NO_BUILD || m_aiBestBuildValue[iI] > 0);
+			}
+		}
+	}
+	if (timing.bLog) QueryPerformanceCounter(&timing.scoreEnd);
+
+	// Optional in-game comparison with the original getter path. On a
+	// mismatch use reference results and disable prepared scoring for this DLL
+	// session. Verification time is excluded from score_ms, but in update_ms.
+	if (bPrepared && GC.getDefineINT("WORKER_BUILD_SCORING_VERIFY") != 0)
+	{
+		timing.iVerified = batch.iPlots;
+		for (int iPlot = 0; iPlot < batch.iPlots; ++iPlot)
+		{
+			CvWorkerBuildInputs& inputs = batch.plots[iPlot];
+			int iReferenceValue;
+			BuildTypes eReferenceBuild;
+			AI_bestPlotBuild(inputs.pPlot, &iReferenceValue, &eReferenceBuild,
+				iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier,
+				bChop, iHappyAdjust, iHealthAdjust, iDesiredFoodChange);
+			if (inputs.iValue != iReferenceValue || inputs.eBuild != eReferenceBuild)
+			{
+				++timing.iMismatches;
+				g_bWorkerBuildScoringMismatch = true;
+				CvString line = CvString::format(
+					"MISMATCH turn=%d player=%d city=%d plot=%d value=%d reference_value=%d build=%d reference_build=%d",
+					GC.getGameINLINE().getGameTurn(), getOwnerINLINE(), getID(), inputs.iCityPlot,
+					inputs.iValue, iReferenceValue, inputs.eBuild, eReferenceBuild);
+				gDLL->logMsg("WorkerBuildScoring.log", line.c_str(), false, false);
+			}
+			inputs.iValue = iReferenceValue;
+			inputs.eBuild = eReferenceBuild;
+		}
+	}
+
+	// Publish in the original plot order only after all worker reads finish.
+	for (int iPlot = 0; bPrepared && iPlot < batch.iPlots; ++iPlot)
+	{
+		const CvWorkerBuildInputs& inputs = batch.plots[iPlot];
+		iI = inputs.iCityPlot;
+		m_aiBestBuildValue[iI] = inputs.iValue;
+		m_aeBestBuild[iI] = inputs.eBuild;
+		m_aiBestBuildValue[iI] *= 4;
+		m_aiBestBuildValue[iI] += 3 + iWorkerCount;
+		m_aiBestBuildValue[iI] /= (4 + iWorkerCount);
+		FAssert(m_aiBestBuildValue[iI] <= 0 || m_aeBestBuild[iI] != NO_BUILD);
+		FAssert(m_aeBestBuild[iI] == NO_BUILD || m_aiBestBuildValue[iI] > 0);
 	}
 
 
@@ -8379,6 +8625,22 @@ int CvCityAI::AI_buildUnitProb()
 // Improved worker AI provided by Blake - thank you!
 void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peBestBuild, int iFoodPriority, int iProductionPriority, int iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange)
 {
+	AI_scorePlotBuild(pPlot, piBestValue, peBestBuild, iFoodPriority,
+		iProductionPriority, iCommercePriority, bChop, iHappyAdjust,
+		iHealthAdjust, iFoodChange, NULL);
+}
+
+void CvCityAI::AI_scoreWorkerBuildPlot(void* pContext, int iPlot)
+{
+	CvWorkerBuildBatch& batch = *static_cast<CvWorkerBuildBatch*>(pContext);
+	CvWorkerBuildInputs& inputs = batch.plots[iPlot];
+	batch.pCity->AI_scorePlotBuild(inputs.pPlot, &inputs.iValue, &inputs.eBuild,
+		batch.iFoodMultiplier, batch.iProductionMultiplier, batch.iCommerceMultiplier,
+		batch.bChop, batch.iHappyAdjust, batch.iHealthAdjust, batch.iDesiredFoodChange, &inputs);
+}
+
+void CvCityAI::AI_scorePlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peBestBuild, int iFoodPriority, int iProductionPriority, int iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange, const CvWorkerBuildInputs* pInputs)
+{
 	PROFILE_FUNC();
 
 	CvCity* pCity;
@@ -8467,6 +8729,11 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 
 	BuildTypes eForcedBuild = NO_BUILD;
 
+	if (pInputs != NULL)
+	{
+		eForcedBuild = pInputs->eForcedBuild;
+	}
+	else
 	{	//If a worker is already building a build, force that Build.
 		CLLNode<IDInfo>* pUnitNode;
 		CvUnit* pLoopUnit;
@@ -8496,7 +8763,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 
 	if (pPlot->getFeatureType() != NO_FEATURE)
 	{
-		iClearFeatureValue = AI_clearFeatureValue(getCityPlotIndex(pPlot));
+		iClearFeatureValue = pInputs != NULL ? pInputs->iClearFeatureValue : AI_clearFeatureValue(getCityPlotIndex(pPlot));
 	}
 
 	if (!bHasBonusImprovement)
@@ -8622,7 +8889,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 						// Leoreth: exclude graphical only as shortcut to prevent focus on slave improvements that cannot be built
 						if (GC.getBuildInfo(eBuild).getImprovement() == eImprovement && !GC.getBuildInfo(eBuild).isGraphicalOnly())
 						{
-							if (GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild, false))
+							if (pInputs != NULL ? pInputs->pbCanBuild[eBuild] != 0 : GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild, false))
 							{
 								iValue = 10000;
 
@@ -8667,7 +8934,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 									{
 										bValid = false;
 									}
-									else if (healthRate() < 0 && GC.getFeatureInfo(pPlot->getFeatureType()).getHealthPercent() > 0)
+									else if ((pInputs != NULL ? pInputs->iHealthRate : healthRate()) < 0 && GC.getFeatureInfo(pPlot->getFeatureType()).getHealthPercent() > 0)
 									{
 										bValid = false;
 									}
@@ -8699,7 +8966,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 					{
 						if (GC.getImprovementInfo(eFinalImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
 						{
-							iValue += (GET_PLAYER(getOwnerINLINE()).AI_bonusVal(eNonObsoleteBonus) * 10);
+							iValue += ((pInputs != NULL ? pInputs->iBonusValue : GET_PLAYER(getOwnerINLINE()).AI_bonusVal(eNonObsoleteBonus)) * 10);
 							//iValue += 200;
 							iValue += 500;
 							if (eBestBuild != NO_BUILD)
@@ -8852,12 +9119,12 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 					int iHappiness =  getImprovementHappinessPercentChange(eFinalImprovement) / 100;
 					if ((iHappiness != 0) && !(GET_PLAYER(getOwnerINLINE()).getAdvancedStartPoints() >= 0))
 					{
-						int iHappyLevel = iHappyAdjust + (happyLevel() - unhappyLevel(0));
+						int iHappyLevel = iHappyAdjust + (pInputs != NULL ? pInputs->iHappyLevel : happyLevel() - unhappyLevel(0));
 						if (eImprovement == pPlot->getImprovementType())
 						{
 							iHappyLevel -= iHappiness;
 						}
-						int iHealthLevel = (goodHealth() - badHealth());
+						int iHealthLevel = (pInputs != NULL ? pInputs->iHealthLevel : goodHealth() - badHealth());
 
 						int iHappyValue = 0;
 						if (iHappyLevel <= 0)
@@ -8903,8 +9170,8 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 							{
 								if (GC.getBuildInfo(eBestTempBuild).isFeatureRemove(pPlot->getFeatureType()))
 								{
-									iValue += pPlot->getFeatureProduction(eBestTempBuild, getTeam(), &pCity) * 2;
-									FAssert(pCity == this);
+									iValue += (pInputs != NULL ? pInputs->piFeatureProduction[eBestTempBuild] : pPlot->getFeatureProduction(eBestTempBuild, getTeam(), &pCity)) * 2;
+									FAssert(pInputs != NULL || pCity == this);
 
 									iValue += iClearFeatureValue;
 								}
@@ -8982,10 +9249,10 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 					{
 						if (GC.getBuildInfo(eBuild).isFeatureRemove(pPlot->getFeatureType()))
 						{
-							if (GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild))
+							if (pInputs != NULL ? pInputs->pbCanBuild[eBuild] != 0 : GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild))
 							{
 								iValue = iClearFeatureValue;
-								iValue += (pPlot->getFeatureProduction(eBuild, getTeam(), &pCity) * 10);
+								iValue += ((pInputs != NULL ? pInputs->piFeatureProduction[eBuild] : pPlot->getFeatureProduction(eBuild, getTeam(), &pCity)) * 10);
 
 								iValue *= 400;
                                 iValue /= std::max(1, (GC.getBuildInfo(eBuild).getFeatureTime(pPlot->getFeatureType()) + 100));
@@ -9015,10 +9282,10 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
             {
                 if (GC.getBuildInfo(eBuild).isFeatureRemove(pPlot->getFeatureType()))
                 {
-                    if (GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild))
+                    if (pInputs != NULL ? pInputs->pbCanBuild[eBuild] != 0 : GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild))
                     {
-                        iValue = (pPlot->getFeatureProduction(eBuild, getTeam(), &pCity)) * 10;
-                        FAssert(pCity == this);
+                        iValue = ((pInputs != NULL ? pInputs->piFeatureProduction[eBuild] : pPlot->getFeatureProduction(eBuild, getTeam(), &pCity))) * 10;
+                        FAssert(pInputs != NULL || pCity == this);
 
                         if (iValue > 0)
                         {
@@ -9026,7 +9293,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 
                             if (iValue > 0)
                             {
-								if (GET_PLAYER(getOwnerINLINE()).AI_isDoStrategy(AI_STRATEGY_DAGGER))
+								if (pInputs != NULL ? pInputs->bDagger : GET_PLAYER(getOwnerINLINE()).AI_isDoStrategy(AI_STRATEGY_DAGGER))
 								{
 									iValue += 20;
 									iValue *= 2;
@@ -9083,7 +9350,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 					eBuild = ((BuildTypes)iJ);
 					if (GC.getBuildInfo(eBuild).getRoute() == eRoute)
 					{
-						if (GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild, false))
+						if (pInputs != NULL ? pInputs->pbCanBuild[eBuild] != 0 : GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild, false))
 						{
 							//the value multiplier is based on the default time...
 							iValue = iTempValue * 5 * 300;
@@ -9108,7 +9375,7 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 		FAssertMsg(iBestValue > 0, "iBestValue is expected to be greater than 0");
 
 		//Now modify the priority for this build.
-		if (GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble())
+		if (pInputs != NULL ? pInputs->bFinancialTrouble : GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble())
 		{
 			if (GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT)
 			{

@@ -4,6 +4,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvRandom.h"
+#include "CvWorkerBuildScoring.h"
 #include "CvGameAI.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvMap.h"
@@ -419,6 +420,8 @@ void CvGlobals::init()
 //
 void CvGlobals::uninit()
 {
+	shutdownWorkerBuildScoring();
+
 	//
 	// See also CvXMLLoadUtilityInit.cpp::CleanUpGlobalVariables()
 	//

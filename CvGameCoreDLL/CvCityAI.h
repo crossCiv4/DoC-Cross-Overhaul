@@ -7,6 +7,8 @@
 
 #include "CvCity.h"
 
+struct CvWorkerBuildInputs;
+
 typedef std::vector<std::pair<UnitAITypes, int> > UnitTypeWeightArray;
 
 class CvCityAI : public CvCity
@@ -188,6 +190,8 @@ protected:
 	int AI_buildUnitProb();
 
 	void AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peBestBuild, int iFoodPriority, int iProductionPriority, int iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange);
+	void AI_scorePlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peBestBuild, int iFoodPriority, int iProductionPriority, int iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange, const CvWorkerBuildInputs* pInputs);
+	static void AI_scoreWorkerBuildPlot(void* pContext, int iPlot);
 	
 	void AI_buildGovernorChooseProduction();
 	
